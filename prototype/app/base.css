@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+.reference-root { display: contents; }
+
+.reference-loading {
+  min-height: 100vh;
+  padding: 48px 7vw;
+  background: #f6f5ee;
+}
+
+.reference-loading__bar,
+.reference-loading__line,
+.reference-loading__card {
+  background: linear-gradient(90deg, #e2e5dc 25%, #f2f3ed 50%, #e2e5dc 75%);
+  background-size: 200% 100%;
+  animation: reference-shimmer 1.35s linear infinite;
+}
+
+.reference-loading__bar { height: 54px; margin-bottom: 12vh; }
+.reference-loading__line { height: 18px; width: 46%; margin: 16px 0; }
+.reference-loading__line--title { height: 72px; width: 66%; }
+.reference-loading__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 70px; }
+.reference-loading__card { height: 300px; border-radius: 16px; }
+
+@keyframes reference-shimmer { to { background-position: -200% 0; } }
+
+@media (max-width: 720px) {
+  .reference-loading__line,
+  .reference-loading__line--title { width: 88%; }
+  .reference-loading__grid { grid-template-columns: 1fr; }
+  .reference-loading__card:not(:first-child) { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reference-loading__bar,
+  .reference-loading__line,
+  .reference-loading__card { animation: none; }
+}
