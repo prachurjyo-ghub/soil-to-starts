@@ -14,11 +14,9 @@ export default function Page() {
       <link rel="stylesheet" href="/reference/polish.css" />
       <link rel="stylesheet" href="/reference/bengali-fonts.css" />
       <link rel="stylesheet" href="/reference/i18n.css" />
-      <link rel="stylesheet" href="/reference/cursor-effects.css" />
       <div className="reference-root" dangerouslySetInnerHTML={{ __html: html }} />
       <Script src="/reference/script.js" strategy="afterInteractive" />
       <Script src="/reference/polish.js" strategy="afterInteractive" />
-      <Script src="/reference/cursor-effects.js" strategy="afterInteractive" />
       <Script src="/reference/i18n.js" strategy="afterInteractive" />
     </>
   );
