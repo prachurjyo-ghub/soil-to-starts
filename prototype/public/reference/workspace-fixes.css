@@ -1,0 +1,59 @@
+/* Keep the workspace chrome fixed while allowing the complete route list to scroll. */
+#sidebar {
+  overflow: hidden;
+}
+
+#nav {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+  padding-right: 6px;
+  margin-right: -6px;
+}
+
+#nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+#nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#nav::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 999px;
+}
+
+#nav::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+.side-bottom {
+  flex: 0 0 auto;
+}
+
+@media (max-height: 720px) {
+  #sidebar {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  .field-switch {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    margin-top: 12px;
+  }
+
+  .side-bottom {
+    padding: 14px 13px;
+  }
+
+  .side-bottom p {
+    margin: 8px 0;
+  }
+}
