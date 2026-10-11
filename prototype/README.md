@@ -1,5 +1,7 @@
 # Soil to Stars — Next.js prototype
 
+This is the working frontend for the [Field Shift project](../README.md). The root README describes the challenge scope, planned data architecture, source status, and validation work.
+
 A Next.js port of the supplied Soil to Stars reference. The original markup, layered styling, motion system, video behavior, branch cursor, language controls, and workspace interactions remain the visual and behavioral source of truth.
 
 ## Run locally
