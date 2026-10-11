@@ -27,6 +27,6 @@ The guide splits 2001–2012 and 2013–2025 for a statistical comparison. That 
 
 - `prototype/` serves as the guide's `web/` layer; keeping its path avoids disturbing the working app and its reference assets.
 - `src/acquire/`, `src/compute/`, and `src/api/` mark the future boundaries. No placeholder backend is presented as working.
-- No agent, MCP server, or skill files were copied. The current product has no need for an LLM to calculate or narrate results. Add one only for a concrete use case with a constrained output contract.
+- No executable agent, MCP server, or skill files were copied. The possible agent role is documented in [ARCHITECTURE.md](ARCHITECTURE.md); add one only for a concrete use case with a constrained output contract.
 - The guide's proposed event schedule and judging details are not carried into project instructions. Check the [official event site](https://www.spaceappschallenge.org/2026/) for current dates and submission requirements.
 - The guide recommends Apache-2.0. The repository has no license yet; the team must select an OSI-approved license and review the supplied media's reuse terms before publication.

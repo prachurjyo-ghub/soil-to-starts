@@ -27,17 +27,19 @@ Open `http://localhost:3000` for the landing page and `http://localhost:3000/wor
 ├── demo_fixtures/            Future committed, sourced offline samples
 ├── docs/
 │   ├── AI_USE.md             AI contribution log
+│   ├── ARCHITECTURE.md       End-to-end data and decision pipeline
 │   ├── BUILD_GUIDE_REVIEW.md What we adopted from the supplied guide
 │   ├── DATA_SOURCES.md       Planned datasets and provenance requirements
 │   └── METHODOLOGY.md        Decision logic and validation plan
 ├── src/
 │   ├── acquire/              Planned data acquisition boundary
 │   ├── compute/              Planned deterministic analysis boundary
+│   ├── agents/               Optional future explanation/orchestration layer
 │   └── api/                  Planned local API boundary
 └── prototype/                Existing Next.js frontend (the guide's web layer)
 ```
 
-The `src/` directories describe the intended data path; they are **not an implemented backend**. The existing frontend remains in `prototype/` to preserve its working commands and supplied reference assets. A separate `src/agents/` or MCP service would only be added if the product needs one.
+The `src/` directories describe the intended data path; they are **not an implemented backend**. The existing frontend remains in `prototype/` to preserve its working commands and supplied reference assets. An agent or MCP service would only be built if the product needs one. The complete proposed flow is in [ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## Product path
 
