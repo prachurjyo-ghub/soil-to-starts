@@ -10,7 +10,7 @@ Generated from `docs/tasks/*.json`; update a record or use the helper, then rend
 
 | Done | Task | Owner | State | Depends on | Next action |
 | --- | --- | --- | --- | --- | --- |
-| [ ] | [DELIVERY-INTAKE](tasks/DELIVERY-INTAKE.json): Verify, commit and push the intake-location feature delivery | Fardin | in_progress | none | Verify and explicitly stage the authorized completed project work on feature/intake-location; keep review and physical-phone testing pending. |
+| [ ] | [DELIVERY-INTAKE](tasks/DELIVERY-INTAKE.json): Verify, commit and push the intake-location feature delivery | Fardin | in_review | none | Prachurjo independently reviews the delivered feature branch and performs pending browser/physical-phone checks; Fardin coordinates later accepted G0/scientific work. |
 | [ ] | [DOC-FOUNDATION](tasks/DOC-FOUNDATION.json): Team onboarding and root execution rules | Fardin | in_review | none | Arrange a teammate review of the concise onboarding and canonical specifications; record accepted merge only afterward. |
 | [ ] | [OPS-LICENSE](tasks/OPS-LICENSE.json): Choose license and complete source/asset rights review | Fardin | blocked | none | Nadim/Prachurjo resolve exact font/media rights; Fardin records release review. This does not block G0 drafting. |
 | [ ] | [OPS-LINT](tasks/OPS-LINT.json): Configure frontend ESLint and verify it | Prachurjo | in_review | none | Review the bounded lint/state-initialization changes and record accepted delivery; full usability testing remains G3. |
@@ -44,7 +44,7 @@ Generated from `docs/tasks/*.json`; update a record or use the helper, then rend
 
 | Member | Available now / next dependency |
 | --- | --- |
-| Fardin | DELIVERY-INTAKE: Verify and explicitly stage the authorized completed project work on feature/intake-location; keep review and physical-phone testing pending.; DOC-FOUNDATION: Arrange a teammate review of the concise onboarding and canonical specifications; record accepted merge only afterward.; OPS-SECURITY: Prachurjo reviews the targeted patch; Fardin records actual main-branch delivery only after approval.; OPS-WORKFLOW: Request independent review of the board/helper/PR checks; publish only when authorized.; PLAN-SCOPE: Arrange independent teammate review of the scope changes. Fardin can draft G0 contracts while that review is pending; no product work is accepted by these documentation ticks.; G0-CONTRACT: Draft bounded contracts and obtain agreement from Saim, Maruf and Prachurjo.; INTAKE-MAP: Prachurjo independently verifies both full browser submissions, real WebGL/worker/tile and touch behavior, phone layout and persistence; Fardin coordinates later G0/API integration.; INTAKE-UI: Prachurjo independently reviews both location methods and all six questions, including full browser submissions, persistence and physical-phone behavior; Fardin coordinates accepted contracts/API later. |
+| Fardin | DELIVERY-INTAKE: Prachurjo independently reviews the delivered feature branch and performs pending browser/physical-phone checks; Fardin coordinates later accepted G0/scientific work.; DOC-FOUNDATION: Arrange a teammate review of the concise onboarding and canonical specifications; record accepted merge only afterward.; OPS-SECURITY: Prachurjo reviews the targeted patch; Fardin records actual main-branch delivery only after approval.; OPS-WORKFLOW: Request independent review of the board/helper/PR checks; publish only when authorized.; PLAN-SCOPE: Arrange independent teammate review of the scope changes. Fardin can draft G0 contracts while that review is pending; no product work is accepted by these documentation ticks.; G0-CONTRACT: Draft bounded contracts and obtain agreement from Saim, Maruf and Prachurjo.; INTAKE-MAP: Prachurjo independently verifies both full browser submissions, real WebGL/worker/tile and touch behavior, phone layout and persistence; Fardin coordinates later G0/API integration.; INTAKE-UI: Prachurjo independently reviews both location methods and all six questions, including full browser submissions, persistence and physical-phone behavior; Fardin coordinates accepted contracts/API later. |
 | Saim | Collaborate on G0-CONTRACT |
 | Maruf | Collaborate on G0-CONTRACT |
 | Prachurjo | OPS-LINT: Review the bounded lint/state-initialization changes and record accepted delivery; full usability testing remains G3.; Collaborate on G0-CONTRACT, MEDIA-STORYBOARD |
@@ -55,7 +55,7 @@ Generated from `docs/tasks/*.json`; update a record or use the helper, then rend
 
 ### DELIVERY-INTAKE — Verify, commit and push the intake-location feature delivery
 
-Owner: **Fardin** · State: `in_progress` · Updated UTC: `2026-10-30T16:48:13Z`
+Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:49:54Z`
 
 **Why:** Fardin explicitly authorized branch creation, committing and pushing the completed documentation/workflow/intake/location work, including supporting check configuration. This delivery does not require or grant scientific, review or main-branch acceptance.
 
@@ -64,17 +64,18 @@ Owner: **Fardin** · State: `in_progress` · Updated UTC: `2026-10-30T16:48:13Z`
   - Files: docs/, prototype/, scripts/, tests/, data/admin/, .github/
   - Verify: All staged paths belong to this delivery; build/cache/credentials are excluded and any unrelated changes remain untouched.
   - Evidence: Reviewed and explicitly staged all 105 intended documentation/workflow/intake/map/supporting-check files (~3 MB). Staged paths exactly match the reviewed manifest, caches are excluded and historical unassigned logs are unchanged. No unrelated working-tree paths were found.
-- [ ] **a2 · Fardin · in_progress:** Pass delivery checks and inspect the staged changes before creating scoped commits.
+- [x] **a2 · Fardin · done:** Pass delivery checks and inspect the staged changes before creating scoped commits.
   - How: Run intake/location, workflow, validation, syntax, lint, build and diff checks; inspect the staged diff and create descriptive commits.
   - Files: docs/tasks/DELIVERY-INTAKE.json, docs/prompt_logs/fardin-0001.md
   - Verify: Actual check outputs and actual commit hashes are recorded, without self-referential commit identities or invented review.
   - Before: a1
-  - Evidence: 31 intake/location tests, 46 workflow tests, five Node syntax checks, lint, production build, workflow validation and git diff/staged whitespace checks pass. Staged source, CI, dependency/license and record diffs inspected; commit is the next action.
-- [ ] **a3 · Fardin · planned:** Push the authorized feature branch and verify the remote revision without accepting review/science gates.
+  - Evidence: Created source commit 7f79196ba7f7b876ca017614c8cc574626a9be78 after reviewing the 105-path staged diff. All required local checks passed. The source commit includes completed docs/workflow, intake/location, licensed assets/tests and supporting lint/security changes; no approval/scientific validation inferred.
+- [x] **a3 · Fardin · done:** Push the authorized feature branch and verify the remote revision without accepting review/science gates.
   - How: Push without force to the requested origin branch and verify its advertised revision and upstream tracking.
   - Files: docs/tasks/DELIVERY-INTAKE.json, docs/prompt_logs/fardin-0001.md
   - Verify: Remote ref matches the pushed commit; tasks remain in_review and physical-phone/Prachurjo review stays pending.
   - Before: a2
+  - Evidence: git push --set-upstream origin feature/intake-location succeeded. Independent git ls-remote readback advertised 7f79196ba7f7b876ca017614c8cc574626a9be78 for refs/heads/feature/intake-location. No force push, merge or deployment; independent review and physical-phone/browser testing remain pending.
 - Check **passed**: `npm run test:intake` — 31 intake/location tests passed. summary (1.67975ms) ✔ English/Bangla render keeps IDs unchanged and escapes restored user text (0.715ms) ✔ actual UI submit handler requires pin confirmation and supports either method without stale data (10.521958ms) ✔ pinned source/license/checksums and all 64 exact boundary mappings agree (10.876042ms) ✔ Polygon, holes, MultiPolygon and numerical border handling (0.179584ms) ✔ outside, unresolved holes/gaps, overlap and shared borders never snap to a district (0.182458ms) ✔ invalid, non-finite and reversed longitude/latitude inputs are rejected (0.121166ms) ✔ 64 independent source-derived interiors resolve and normalize to their explicit district IDs (16.62825ms) ✔ new/moved pin needs confirmation and stale district, source version or geometry cannot pass (0.641042ms) ✔ method switching clears inactive coordinates/districts and district search needs no boundaries (0.152833ms) ✔ genuine v1 district answers migrate to v2 without coordinates or demo defaults (0.344417ms) ✔ boundary loader rejects missing/duplicate mappings and unsupported or broken rings (12.659125ms) ✔ map rerenders reuse one instance/listeners and preserve pin/answers; leaving removes resources (16.5455ms) ✔ WebGL and boundary-network failure retain answers and leave district fallback independent (7.887667ms) ✔ tile errors and lost WebGL context surface fallback without destroying other answers (8.887459ms) ℹ tests 31 ℹ suites 0 ℹ pass 31 ℹ fail 0 ℹ cancelled 0 ℹ skipped 0 ℹ todo 0 ℹ duration_ms 218.883167
 - Check **passed**: `python3 -B -m unittest discover -s tests -p 'test_*.py' -v` — 46 workflow/contribution tests passed. st_workflow.WorkflowTests) ... ok test_member_logs_are_separate_and_pipe_safe (test_workflow.WorkflowTests) ... ok test_passing_check_does_not_automatically_accept_task (test_workflow.WorkflowTests) ... ok test_pending_or_self_review_cannot_be_done (test_workflow.WorkflowTests) ... ok test_professional_docs_have_small_entrypoint_budgets (test_workflow.WorkflowTests) ... ok test_prompt_amend_updates_outcome_without_extra_entry (test_workflow.WorkflowTests) ... ok test_prompt_rotation_at_fifty (test_workflow.WorkflowTests) ... ok test_readonly_check_detects_stale_view (test_workflow.WorkflowTests) ... ok test_real_git_ancestry_proof (test_workflow.WorkflowTests) ... ok test_render_is_idempotent (test_workflow.WorkflowTests) ... ok test_reopening_checklist_prerequisite_reopens_done_children (test_workflow.WorkflowTests) ... ok test_start_blocked_task_does_not_modify_records (test_workflow.WorkflowTests) ... ok test_unchecked_acceptance_cannot_be_done (test_workflow.WorkflowTests) ... ok test_unknown_dependency_rejected (test_workflow.WorkflowTests) ... ok test_unmerged_commit_cannot_be_done (test_workflow.WorkflowTests) ... ok test_verify_accepts_explicit_project_subdirectory (test_workflow.WorkflowTests) ... ok test_verify_executes_check_and_records_real_failure (test_workflow.WorkflowTests) ... ok test_verify_refuses_directory_outside_project (test_workflow.WorkflowTests) ... ok ---------------------------------------------------------------------- Ran 46 tests in 0.379s OK
 - Check **passed**: `python3 scripts/workflow.py check` — Records and generated views valid. Workflow records valid: 29 tasks, 9 prompts. Recorded failed product checks remain visible; this is not a product test pass.
@@ -92,7 +93,7 @@ Owner: **Fardin** · State: `in_progress` · Updated UTC: `2026-10-30T16:48:13Z`
 
 ### DOC-FOUNDATION — Team onboarding and root execution rules
 
-Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T10:03:22Z`
+Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:49:54Z`
 
 **Why:** Give every teammate accurate onboarding and preserve shared rules without loading them all for every task.
 
@@ -122,7 +123,7 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T10:03:22Z`
 - Check **passed**: `python3 scripts/doctor.py` — Local prerequisite/path checks passed; science/API status remains planned.
 - Check **passed**: `python3 scripts/workflow.py check` — Task, log, generated view and relative-link validation passed.
 - Review: pending — no approval recorded
-- Delivery: no accepted merge recorded; branch: not recorded; issue/PR: not created/recorded
+- Delivery: no accepted merge recorded; branch: feature/intake-location; issue/PR: not created/recorded
 - Handoff: All six members use the board/playbook; Fardin coordinates G0 contract drafting after reading the specifications.
 
 ### OPS-LICENSE — Choose license and complete source/asset rights review
@@ -156,7 +157,7 @@ Owner: **Fardin** · State: `blocked` · Updated UTC: `2026-10-29T17:25:20Z`
 
 ### OPS-LINT — Configure frontend ESLint and verify it
 
-Owner: **Prachurjo** · State: `in_review` · Updated UTC: `2026-10-29T17:25:20Z`
+Owner: **Prachurjo** · State: `in_review` · Updated UTC: `2026-10-30T16:49:54Z`
 
 **Why:** Make frontend checks reproducible and expose real code problems before integration.
 
@@ -190,12 +191,12 @@ Owner: **Prachurjo** · State: `in_review` · Updated UTC: `2026-10-29T17:25:20Z
 - Check **passed**: `npm run build -- --webpack` — Exit 0; /, /_not-found and /workspace statically built.
 - Check **passed**: `Local production HTTP smoke checks` — Homepage, workspace and reference/workspace.js returned 200; illustrative labels present. No browser-interaction/science validation claimed.
 - Review: pending — no approval recorded
-- Delivery: no accepted merge recorded; branch: not recorded; issue/PR: not created/recorded
+- Delivery: no accepted merge recorded; branch: feature/intake-location; issue/PR: not created/recorded
 - Handoff: Fardin reviews the bounded changes; Prachurjo uses the verified frontend commands for G1D/G3.
 
 ### OPS-SECURITY — Verify and patch the Next.js security advisory
 
-Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-29T17:25:20Z`
+Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:49:54Z`
 
 **Why:** Resolve the verified dependency advisory with a bounded patch and reproducible checks.
 
@@ -228,12 +229,12 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-29T17:25:20Z`
 - Check **passed**: `npm run lint -- --no-cache` — Exit 0; no lint warnings/errors.
 - Check **passed**: `npm run build -- --webpack` — Exit 0 on Next.js 16.4.3.
 - Review: pending — no approval recorded
-- Delivery: no accepted merge recorded; branch: not recorded; issue/PR: not created/recorded
+- Delivery: no accepted merge recorded; branch: feature/intake-location; issue/PR: not created/recorded
 - Handoff: Prachurjo reviews the patch; Fardin records accepted delivery. No deployment or scientific approval is inferred.
 
 ### OPS-WORKFLOW — Prompt logging and evidence-based progress tracking
 
-Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T10:03:22Z`
+Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:49:54Z`
 
 **Why:** Keep actual work, dependencies, errors and next actions understandable across manual and AI-assisted contributors.
 
@@ -272,12 +273,12 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T10:03:22Z`
 - Check **passed**: `python3 -B -m unittest discover -s tests -p 'test_*.py' -v` — Exit 0. sts) ... ok test_failed_or_unrun_checks_cannot_be_done (test_workflow.WorkflowTests) ... ok test_focused_member_status_succeeds (test_workflow.WorkflowTests) ... ok test_log_refuses_long_or_multiline_summary (test_workflow.WorkflowTests) ... ok test_manual_active_status_cannot_bypass_dependencies (test_workflow.WorkflowTests) ... ok test_member_logs_are_separate_and_pipe_safe (test_workflow.WorkflowTests) ... ok test_passing_check_does_not_automatically_accept_task (test_workflow.WorkflowTests) ... ok test_pending_or_self_review_cannot_be_done (test_workflow.WorkflowTests) ... ok test_professional_docs_have_small_entrypoint_budgets (test_workflow.WorkflowTests) ... ok test_prompt_amend_updates_outcome_without_extra_entry (test_workflow.WorkflowTests) ... ok test_prompt_rotation_at_fifty (test_workflow.WorkflowTests) ... ok test_readonly_check_detects_stale_view (test_workflow.WorkflowTests) ... ok test_real_git_ancestry_proof (test_workflow.WorkflowTests) ... ok test_render_is_idempotent (test_workflow.WorkflowTests) ... ok test_reopening_checklist_prerequisite_reopens_done_children (test_workflow.WorkflowTests) ... ok test_start_blocked_task_does_not_modify_records (test_workflow.WorkflowTests) ... ok test_unchecked_acceptance_cannot_be_done (test_workflow.WorkflowTests) ... ok test_unknown_dependency_rejected (test_workflow.WorkflowTests) ... ok test_unmerged_commit_cannot_be_done (test_workflow.WorkflowTests) ... ok test_verify_accepts_explicit_project_subdirectory (test_workflow.WorkflowTests) ... ok test_verify_executes_check_and_records_real_failure (test_workflow.WorkflowTests) ... ok test_verify_refuses_directory_outside_project (test_workflow.WorkflowTests) ... ok ---------------------------------------------------------------------- Ran 44 tests in 0.260s OK
 - Check **passed**: `python3 -B -m unittest discover -s tests -p 'test_*.py'` — Exit 0. .............................................. ---------------------------------------------------------------------- Ran 46 tests in 0.253s OK
 - Review: pending — no approval recorded
-- Delivery: no accepted merge recorded; branch: not recorded; issue/PR: not created/recorded
+- Delivery: no accepted merge recorded; branch: feature/intake-location; issue/PR: not created/recorded
 - Handoff: All owners use the focused task/checklist helpers and PR declaration. A different teammate reviews this tooling before accepted delivery.
 
 ### PLAN-SCOPE — Document strengthened mandatory MVP and gated future roadmap
 
-Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T10:06:38Z`
+Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:49:54Z`
 
 **Why:** Implement planning documents and task handoffs only; do not claim scientific product work is completed.
 
@@ -307,7 +308,7 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T10:06:38Z`
 - Check **passed**: `python3 -B -m unittest discover -s tests -p 'test_*.py'` — Exit 0. .............................................. ---------------------------------------------------------------------- Ran 46 tests in 0.270s OK
 - Check **passed**: `python3 scripts/workflow.py check` — Exit 0. Workflow records valid: 26 tasks, 5 prompts. Recorded failed product checks remain visible; this is not a product test pass.
 - Review: pending — no approval recorded
-- Delivery: no accepted merge recorded; branch: not recorded; issue/PR: not created/recorded
+- Delivery: no accepted merge recorded; branch: feature/intake-location; issue/PR: not created/recorded
 - Handoff: All six members read the two scope contexts and assigned task. G0 remains planned until implementation is started; no product feature is accepted by this documentation change.
 
 ### G0-CONTRACT — Agree source, crop, field and API contracts
@@ -422,7 +423,7 @@ Owner: **Nadim** · State: `ready` · Updated UTC: `2026-10-30T10:00:13Z`
 
 ### INTAKE-MAP — Add independent confirmed map-pin and district-search intake locations
 
-Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:46:46Z`
+Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:49:54Z`
 
 **Why:** Explicitly authorized independent local map/intake extension. INTAKE-UI local work exists and is reopened for regression; neither accepted G0 nor science is a prerequisite for this bounded administrative-location UI.
 
@@ -461,7 +462,7 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:46:46Z`
 
 ### INTAKE-UI — Implement nationwide required farmer intake without scientific recommendations
 
-Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:46:46Z`
+Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:49:54Z`
 
 **Why:** Fardin explicitly authorized independent local intake UI/validation in the current mounted reference route. Shared scientific API/schema agreement, source acquisition and G1D/G3 integration remain separate unaccepted work.
 

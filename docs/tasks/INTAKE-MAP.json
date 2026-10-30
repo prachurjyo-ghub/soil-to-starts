@@ -6,7 +6,7 @@
   "phase": "G0-PREP",
   "status": "in_review",
   "depends_on": [],
-  "updated_at": "2026-10-30T16:46:46Z",
+  "updated_at": "2026-10-30T16:49:54Z",
   "acceptance": [
     {
       "id": "a1",
@@ -277,6 +277,10 @@
     {
       "at": "2026-10-30T16:46:46Z",
       "note": "Fardin authorized feature-branch commit/push delivery through DELIVERY-INTAKE. Branch feature/intake-location; independent review, browser/physical-phone testing and scientific gates remain pending."
+    },
+    {
+      "at": "2026-10-30T16:49:54Z",
+      "note": "Source delivery 7f79196 verified on origin/feature/intake-location through DELIVERY-INTAKE. Status stays in_review; physical-phone/browser and independent review remain pending."
     }
   ],
   "review": {
@@ -289,5 +293,12 @@
   "next_action": "Prachurjo independently verifies both full browser submissions, real WebGL/worker/tile and touch behavior, phone layout and persistence; Fardin coordinates later G0/API integration.",
   "handoff": "Prachurjo independently reviews both complete browser submissions, secure phone-width/physical-device map behavior, keyboard/EN-BN and failure fallbacks; Fardin coordinates later G0/API integration. Scientific gates remain pending.",
   "scope": "mvp",
-  "purpose": "Explicitly authorized independent local map/intake extension. INTAKE-UI local work exists and is reopened for regression; neither accepted G0 nor science is a prerequisite for this bounded administrative-location UI."
+  "purpose": "Explicitly authorized independent local map/intake extension. INTAKE-UI local work exists and is reopened for regression; neither accepted G0 nor science is a prerequisite for this bounded administrative-location UI.",
+  "delivery": {
+    "source_commit": "7f79196ba7f7b876ca017614c8cc574626a9be78",
+    "remote_ref": "refs/heads/feature/intake-location",
+    "remote_source_commit_verified": "7f79196ba7f7b876ca017614c8cc574626a9be78",
+    "observed_at_utc": "2026-10-30T16:49:54Z",
+    "note": "Source commit pushed and read back from origin; no accepted main-branch merge or independent human approval."
+  }
 }

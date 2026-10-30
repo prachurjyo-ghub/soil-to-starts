@@ -33,3 +33,9 @@ OpenAI Codex refined the onboarding instructions and canonical product/team/sour
 ## 30 October 2026: implemented scope and task-documentation update
 
 OpenAI Codex implemented the current command to strengthen mandatory-now planning, retain a separately gated future roadmap, align root/scoped instructions and canonical product/API/UI/method/validation/source/team/release documents, and rebase ordered task handoffs. Only that implementation instruction is summarized in the command log; preceding discussions are not backfilled. No NASA data, agricultural computation, app feature or deployment was implemented by this documentation update. Actual checks and independent-review limits are recorded in PLAN-SCOPE.
+
+## 30 October 2026: authorized feature-branch delivery
+
+Fardin explicitly authorized Codex to review, verify, commit and push the completed documentation/workflow and intake/location changes. Source commit `7f79196ba7f7b876ca017614c8cc574626a9be78` was pushed to `origin/feature/intake-location` with upstream tracking and verified by remote-ref readback. The local delivery checks passed: 31 intake/location tests, 46 workflow tests, five reference-script syntax checks, lint, webpack build, record validation and whitespace checks. A subsequent metadata commit records this prior source delivery without a self-referential hash.
+
+Actual command records are `P-cdb46ce6bcaa` (commit) and `P-8321080ab708` (push), under `DELIVERY-INTAKE`. Earlier unassigned entries remain unchanged. Independent Prachurjo review, full browser/physical-phone testing, main-branch acceptance and scientific integration remain pending; no merge or deployment was performed.

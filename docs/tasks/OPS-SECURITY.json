@@ -8,7 +8,7 @@
   "phase": "FOUNDATION",
   "status": "in_review",
   "depends_on": [],
-  "updated_at": "2026-10-29T17:25:20Z",
+  "updated_at": "2026-10-30T16:49:54Z",
   "acceptance": [
     {
       "id": "s01",
@@ -112,6 +112,10 @@
     {
       "at": "2026-10-29T17:25:20Z",
       "note": "Professional foundation refinement: small-item evidence updated from actual files/checks; independent review remains pending."
+    },
+    {
+      "at": "2026-10-30T16:49:54Z",
+      "note": "Source delivery 7f79196 verified on origin/feature/intake-location through DELIVERY-INTAKE. Status stays in_review; physical-phone/browser and independent review remain pending."
     }
   ],
   "review": {
@@ -119,7 +123,7 @@
     "evidence": ""
   },
   "merge_ref": null,
-  "branch": null,
+  "branch": "feature/intake-location",
   "issue": null,
   "next_action": "Prachurjo reviews the targeted patch; Fardin records actual main-branch delivery only after approval.",
   "handoff": "Prachurjo reviews the patch; Fardin records accepted delivery. No deployment or scientific approval is inferred.",
@@ -127,5 +131,12 @@
   "resolved_issues": [
     "Next.js 16.4.0 advisories resolved with the verified 16.4.3 patch and matching internal/config packages.",
     "Zod development dependency moved in-range from 4.6.5 to 4.6.7; final npm audit reported zero advisories."
-  ]
+  ],
+  "delivery": {
+    "source_commit": "7f79196ba7f7b876ca017614c8cc574626a9be78",
+    "remote_ref": "refs/heads/feature/intake-location",
+    "remote_source_commit_verified": "7f79196ba7f7b876ca017614c8cc574626a9be78",
+    "observed_at_utc": "2026-10-30T16:49:54Z",
+    "note": "Source commit pushed and read back from origin; no accepted main-branch merge or independent human approval."
+  }
 }

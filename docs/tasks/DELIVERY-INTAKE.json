@@ -4,9 +4,9 @@
   "owner": "Fardin",
   "collaborators": [],
   "phase": "DELIVERY",
-  "status": "in_progress",
+  "status": "in_review",
   "depends_on": [],
-  "updated_at": "2026-10-30T16:48:13Z",
+  "updated_at": "2026-10-30T16:49:54Z",
   "acceptance": [
     {
       "id": "a1",
@@ -31,8 +31,8 @@
     {
       "id": "a2",
       "text": "Pass delivery checks and inspect the staged changes before creating scoped commits.",
-      "met": false,
-      "evidence": "31 intake/location tests, 46 workflow tests, five Node syntax checks, lint, production build, workflow validation and git diff/staged whitespace checks pass. Staged source, CI, dependency/license and record diffs inspected; commit is the next action.",
+      "met": true,
+      "evidence": "Created source commit 7f79196ba7f7b876ca017614c8cc574626a9be78 after reviewing the 105-path staged diff. All required local checks passed. The source commit includes completed docs/workflow, intake/location, licensed assets/tests and supporting lint/security changes; no approval/scientific validation inferred.",
       "owner": "Fardin",
       "depends_on": [
         "a1"
@@ -44,13 +44,13 @@
         "docs/prompt_logs/fardin-0001.md"
       ],
       "verification": "Actual check outputs and actual commit hashes are recorded, without self-referential commit identities or invented review.",
-      "state": "in_progress"
+      "state": "done"
     },
     {
       "id": "a3",
       "text": "Push the authorized feature branch and verify the remote revision without accepting review/science gates.",
-      "met": false,
-      "evidence": "",
+      "met": true,
+      "evidence": "git push --set-upstream origin feature/intake-location succeeded. Independent git ls-remote readback advertised 7f79196ba7f7b876ca017614c8cc574626a9be78 for refs/heads/feature/intake-location. No force push, merge or deployment; independent review and physical-phone/browser testing remain pending.",
       "owner": "Fardin",
       "depends_on": [
         "a2"
@@ -61,7 +61,8 @@
         "docs/tasks/DELIVERY-INTAKE.json",
         "docs/prompt_logs/fardin-0001.md"
       ],
-      "verification": "Remote ref matches the pushed commit; tasks remain in_review and physical-phone/Prachurjo review stays pending."
+      "verification": "Remote ref matches the pushed commit; tasks remain in_review and physical-phone/Prachurjo review stays pending.",
+      "state": "done"
     }
   ],
   "checks": [
@@ -166,6 +167,26 @@
       "at": "2026-10-30T16:48:13Z",
       "note": "Checklist a2: in_progress",
       "evidence": "31 intake/location tests, 46 workflow tests, five Node syntax checks, lint, production build, workflow validation and git diff/staged whitespace checks pass. Staged source, CI, dependency/license and record diffs inspected; commit is the next action."
+    },
+    {
+      "at": "2026-10-30T16:49:54Z",
+      "note": "Checklist a2: done",
+      "evidence": "Created source commit 7f79196ba7f7b876ca017614c8cc574626a9be78 after reviewing the 105-path staged diff. All required local checks passed. The source commit includes completed docs/workflow, intake/location, licensed assets/tests and supporting lint/security changes; no approval/scientific validation inferred."
+    },
+    {
+      "at": "2026-10-30T16:49:54Z",
+      "note": "Checklist a3: done",
+      "evidence": "git push --set-upstream origin feature/intake-location succeeded. Independent git ls-remote readback advertised 7f79196ba7f7b876ca017614c8cc574626a9be78 for refs/heads/feature/intake-location. No force push, merge or deployment; independent review and physical-phone/browser testing remain pending."
+    },
+    {
+      "at": "2026-10-30T16:49:54Z",
+      "from": "in_progress",
+      "to": "in_review",
+      "note": "The source commit was created and its successful origin push/readback verified. Delivery evidence references that actual prior commit, not the identity of this forthcoming metadata commit. Main-branch acceptance, independent review and scientific validation remain pending."
+    },
+    {
+      "at": "2026-10-30T16:49:54Z",
+      "note": "Source delivery 7f79196 verified on origin/feature/intake-location through DELIVERY-INTAKE. Status stays in_review; physical-phone/browser and independent review remain pending."
     }
   ],
   "review": {
@@ -175,8 +196,15 @@
   "merge_ref": null,
   "branch": "feature/intake-location",
   "issue": null,
-  "next_action": "Verify and explicitly stage the authorized completed project work on feature/intake-location; keep review and physical-phone testing pending.",
+  "next_action": "Prachurjo independently reviews the delivered feature branch and performs pending browser/physical-phone checks; Fardin coordinates later accepted G0/scientific work.",
   "handoff": "Prachurjo reviews the feature branch, completes both browser/phone location submissions and confirms usability; Fardin coordinates later accepted G0/API/science gates. Pushes are delivery only, not approval.",
   "scope": "mvp",
-  "purpose": "Fardin explicitly authorized branch creation, committing and pushing the completed documentation/workflow/intake/location work, including supporting check configuration. This delivery does not require or grant scientific, review or main-branch acceptance."
+  "purpose": "Fardin explicitly authorized branch creation, committing and pushing the completed documentation/workflow/intake/location work, including supporting check configuration. This delivery does not require or grant scientific, review or main-branch acceptance.",
+  "delivery": {
+    "source_commit": "7f79196ba7f7b876ca017614c8cc574626a9be78",
+    "remote_ref": "refs/heads/feature/intake-location",
+    "remote_source_commit_verified": "7f79196ba7f7b876ca017614c8cc574626a9be78",
+    "observed_at_utc": "2026-10-30T16:49:54Z",
+    "note": "Source commit pushed and read back from origin; no accepted main-branch merge or independent human approval."
+  }
 }

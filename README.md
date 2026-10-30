@@ -15,11 +15,11 @@ The development workflow is implemented locally: task checklists, generated prog
 
 Generated from task records; the detailed board is the team's daily starting point.
 
-**Accepted work packages: 0/29 · Implemented checklist items: 30/134.** Checked items can still await independent review and merge.
+**Accepted work packages: 0/29 · Implemented checklist items: 32/134.** Checked items can still await independent review and merge.
 
 | Member | First available action |
 | --- | --- |
-| Fardin | DELIVERY-INTAKE / a2: Pass delivery checks and inspect the staged changes before creating scoped commits. |
+| Fardin | G0-CONTRACT / s01: Draft stable field, crop and source identifiers |
 | Saim | Review/collaborate on G0-CONTRACT |
 | Maruf | Review/collaborate on G0-CONTRACT |
 | Prachurjo | Review/collaborate on G0-CONTRACT, MEDIA-STORYBOARD |

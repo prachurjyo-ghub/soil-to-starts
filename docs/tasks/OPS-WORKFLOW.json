@@ -8,7 +8,7 @@
   "phase": "FOUNDATION",
   "status": "in_review",
   "depends_on": [],
-  "updated_at": "2026-10-30T10:03:22Z",
+  "updated_at": "2026-10-30T16:49:54Z",
   "acceptance": [
     {
       "id": "s01",
@@ -214,6 +214,10 @@
     {
       "at": "2026-10-30T10:03:22Z",
       "note": "Updated planning evidence for two scope contexts and expanded task records; earlier check history retained. No product implementation or independent approval claimed."
+    },
+    {
+      "at": "2026-10-30T16:49:54Z",
+      "note": "Source delivery 7f79196 verified on origin/feature/intake-location through DELIVERY-INTAKE. Status stays in_review; physical-phone/browser and independent review remain pending."
     }
   ],
   "review": {
@@ -221,9 +225,16 @@
     "evidence": ""
   },
   "merge_ref": null,
-  "branch": null,
+  "branch": "feature/intake-location",
   "issue": null,
   "next_action": "Request independent review of the board/helper/PR checks; publish only when authorized.",
   "handoff": "All owners use the focused task/checklist helpers and PR declaration. A different teammate reviews this tooling before accepted delivery.",
-  "purpose": "Keep actual work, dependencies, errors and next actions understandable across manual and AI-assisted contributors."
+  "purpose": "Keep actual work, dependencies, errors and next actions understandable across manual and AI-assisted contributors.",
+  "delivery": {
+    "source_commit": "7f79196ba7f7b876ca017614c8cc574626a9be78",
+    "remote_ref": "refs/heads/feature/intake-location",
+    "remote_source_commit_verified": "7f79196ba7f7b876ca017614c8cc574626a9be78",
+    "observed_at_utc": "2026-10-30T16:49:54Z",
+    "note": "Source commit pushed and read back from origin; no accepted main-branch merge or independent human approval."
+  }
 }

@@ -8,7 +8,7 @@
   "phase": "FOUNDATION",
   "status": "in_review",
   "depends_on": [],
-  "updated_at": "2026-10-29T17:25:20Z",
+  "updated_at": "2026-10-30T16:49:54Z",
   "acceptance": [
     {
       "id": "s01",
@@ -108,6 +108,10 @@
     {
       "at": "2026-10-29T17:25:20Z",
       "note": "Professional foundation refinement: small-item evidence updated from actual files/checks; independent review remains pending."
+    },
+    {
+      "at": "2026-10-30T16:49:54Z",
+      "note": "Source delivery 7f79196 verified on origin/feature/intake-location through DELIVERY-INTAKE. Status stays in_review; physical-phone/browser and independent review remain pending."
     }
   ],
   "review": {
@@ -115,7 +119,7 @@
     "evidence": ""
   },
   "merge_ref": null,
-  "branch": null,
+  "branch": "feature/intake-location",
   "issue": null,
   "next_action": "Review the bounded lint/state-initialization changes and record accepted delivery; full usability testing remains G3.",
   "handoff": "Fardin reviews the bounded changes; Prachurjo uses the verified frontend commands for G1D/G3.",
@@ -124,5 +128,12 @@
     "Missing ESLint flat configuration caused exit 2; added the matching Next.js flat config.",
     "Synchronous React effect-state initialization caused errors; replaced preference synchronization and deferred workspace hydration at its loading boundary.",
     "React navigation/image and anonymous-config warnings were corrected; public reference loading keeps narrow documented exceptions."
-  ]
+  ],
+  "delivery": {
+    "source_commit": "7f79196ba7f7b876ca017614c8cc574626a9be78",
+    "remote_ref": "refs/heads/feature/intake-location",
+    "remote_source_commit_verified": "7f79196ba7f7b876ca017614c8cc574626a9be78",
+    "observed_at_utc": "2026-10-30T16:49:54Z",
+    "note": "Source commit pushed and read back from origin; no accepted main-branch merge or independent human approval."
+  }
 }

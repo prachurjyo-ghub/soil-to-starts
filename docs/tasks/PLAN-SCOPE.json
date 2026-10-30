@@ -10,7 +10,7 @@
   "phase": "FOUNDATION",
   "status": "in_review",
   "depends_on": [],
-  "updated_at": "2026-10-30T10:06:38Z",
+  "updated_at": "2026-10-30T16:49:54Z",
   "acceptance": [
     {
       "id": "s01",
@@ -144,6 +144,10 @@
       "from": "in_review",
       "to": "in_review",
       "note": "Arrange independent teammate review of the scope changes. Fardin can draft G0 contracts while that review is pending; no product work is accepted by these documentation ticks."
+    },
+    {
+      "at": "2026-10-30T16:49:54Z",
+      "note": "Source delivery 7f79196 verified on origin/feature/intake-location through DELIVERY-INTAKE. Status stays in_review; physical-phone/browser and independent review remain pending."
     }
   ],
   "review": {
@@ -151,10 +155,17 @@
     "evidence": ""
   },
   "merge_ref": null,
-  "branch": null,
+  "branch": "feature/intake-location",
   "issue": null,
   "next_action": "Arrange independent teammate review of the scope changes. Fardin can draft G0 contracts while that review is pending; no product work is accepted by these documentation ticks.",
   "handoff": "All six members read the two scope contexts and assigned task. G0 remains planned until implementation is started; no product feature is accepted by this documentation change.",
   "purpose": "Implement planning documents and task handoffs only; do not claim scientific product work is completed.",
-  "scope": "foundation"
+  "scope": "foundation",
+  "delivery": {
+    "source_commit": "7f79196ba7f7b876ca017614c8cc574626a9be78",
+    "remote_ref": "refs/heads/feature/intake-location",
+    "remote_source_commit_verified": "7f79196ba7f7b876ca017614c8cc574626a9be78",
+    "observed_at_utc": "2026-10-30T16:49:54Z",
+    "note": "Source commit pushed and read back from origin; no accepted main-branch merge or independent human approval."
+  }
 }
