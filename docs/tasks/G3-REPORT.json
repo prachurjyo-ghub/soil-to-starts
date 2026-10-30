@@ -1,0 +1,102 @@
+{
+  "id": "G3-REPORT",
+  "title": "Deliver the reproducible print and JSON receipt",
+  "owner": "Prachurjo",
+  "collaborators": [
+    "Fardin",
+    "Hla",
+    "Saim",
+    "Maruf"
+  ],
+  "phase": "G3",
+  "status": "planned",
+  "depends_on": [
+    "G3"
+  ],
+  "updated_at": "2026-10-30T10:00:13Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Preserve result and evidence identities",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Confirm canonical input/source/catalogue/method fingerprints and timestamp separation from G2.",
+      "files": [
+        "src/api/",
+        "tests/"
+      ],
+      "verification": "Identical scientific inputs reproduce identities; changed evidence changes them.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Implement JSON download and basic print",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Render current comparison, windows, check labels, versions, unknowns and limits from the actual response.",
+      "files": [
+        "prototype/"
+      ],
+      "verification": "No separate PDF service, cloud account or illustrative export fallback.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Check export parity, layout and privacy",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Compare exported/printed result with screen/API; check incomplete states and phone print layout; avoid public field URLs.",
+      "files": [
+        "tests/",
+        "prototype/"
+      ],
+      "verification": "Versions/status/units/limitations survive; no client-side science recomputation.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s04",
+      "text": "Review and hand off the farmer receipt",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Hla checks language; Saim/Maruf check evidence labels; Fardin checks reproduction.",
+      "files": [
+        "docs/tasks/G3-REPORT.json"
+      ],
+      "verification": "Actual output and independent review/merge evidence recorded.",
+      "depends_on": [
+        "s03"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Preserve result and evidence identities",
+  "handoff": "Record reviewed outputs, exact revision and next consumer before acceptance.",
+  "purpose": "Give farmers and reviewers a compact takeaway from the same API result rather than a second calculation."
+}

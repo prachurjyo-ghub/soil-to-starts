@@ -1,0 +1,182 @@
+{
+  "id": "DELIVERY-INTAKE",
+  "title": "Verify, commit and push the intake-location feature delivery",
+  "owner": "Fardin",
+  "collaborators": [],
+  "phase": "DELIVERY",
+  "status": "in_progress",
+  "depends_on": [],
+  "updated_at": "2026-10-30T16:48:13Z",
+  "acceptance": [
+    {
+      "id": "a1",
+      "text": "Review intended documentation, workflow, intake, map and supporting check files; preserve unrelated work.",
+      "met": true,
+      "evidence": "Reviewed and explicitly staged all 105 intended documentation/workflow/intake/map/supporting-check files (~3 MB). Staged paths exactly match the reviewed manifest, caches are excluded and historical unassigned logs are unchanged. No unrelated working-tree paths were found.",
+      "state": "done",
+      "blockers": [],
+      "owner": "Fardin",
+      "depends_on": [],
+      "how": "Inspect the actual diffs, source/task/license evidence and a fixed explicit path manifest; stage only reviewed project files.",
+      "files": [
+        "docs/",
+        "prototype/",
+        "scripts/",
+        "tests/",
+        "data/admin/",
+        ".github/"
+      ],
+      "verification": "All staged paths belong to this delivery; build/cache/credentials are excluded and any unrelated changes remain untouched."
+    },
+    {
+      "id": "a2",
+      "text": "Pass delivery checks and inspect the staged changes before creating scoped commits.",
+      "met": false,
+      "evidence": "31 intake/location tests, 46 workflow tests, five Node syntax checks, lint, production build, workflow validation and git diff/staged whitespace checks pass. Staged source, CI, dependency/license and record diffs inspected; commit is the next action.",
+      "owner": "Fardin",
+      "depends_on": [
+        "a1"
+      ],
+      "blockers": [],
+      "how": "Run intake/location, workflow, validation, syntax, lint, build and diff checks; inspect the staged diff and create descriptive commits.",
+      "files": [
+        "docs/tasks/DELIVERY-INTAKE.json",
+        "docs/prompt_logs/fardin-0001.md"
+      ],
+      "verification": "Actual check outputs and actual commit hashes are recorded, without self-referential commit identities or invented review.",
+      "state": "in_progress"
+    },
+    {
+      "id": "a3",
+      "text": "Push the authorized feature branch and verify the remote revision without accepting review/science gates.",
+      "met": false,
+      "evidence": "",
+      "owner": "Fardin",
+      "depends_on": [
+        "a2"
+      ],
+      "blockers": [],
+      "how": "Push without force to the requested origin branch and verify its advertised revision and upstream tracking.",
+      "files": [
+        "docs/tasks/DELIVERY-INTAKE.json",
+        "docs/prompt_logs/fardin-0001.md"
+      ],
+      "verification": "Remote ref matches the pushed commit; tasks remain in_review and physical-phone/Prachurjo review stays pending."
+    }
+  ],
+  "checks": [
+    {
+      "command": "npm run test:intake",
+      "cwd": "prototype",
+      "result": "passed",
+      "evidence": "31 intake/location tests passed. summary (1.67975ms)\n✔ English/Bangla render keeps IDs unchanged and escapes restored user text (0.715ms)\n✔ actual UI submit handler requires pin confirmation and supports either method without stale data (10.521958ms)\n✔ pinned source/license/checksums and all 64 exact boundary mappings agree (10.876042ms)\n✔ Polygon, holes, MultiPolygon and numerical border handling (0.179584ms)\n✔ outside, unresolved holes/gaps, overlap and shared borders never snap to a district (0.182458ms)\n✔ invalid, non-finite and reversed longitude/latitude inputs are rejected (0.121166ms)\n✔ 64 independent source-derived interiors resolve and normalize to their explicit district IDs (16.62825ms)\n✔ new/moved pin needs confirmation and stale district, source version or geometry cannot pass (0.641042ms)\n✔ method switching clears inactive coordinates/districts and district search needs no boundaries (0.152833ms)\n✔ genuine v1 district answers migrate to v2 without coordinates or demo defaults (0.344417ms)\n✔ boundary loader rejects missing/duplicate mappings and unsupported or broken rings (12.659125ms)\n✔ map rerenders reuse one instance/listeners and preserve pin/answers; leaving removes resources (16.5455ms)\n✔ WebGL and boundary-network failure retain answers and leave district fallback independent (7.887667ms)\n✔ tile errors and lost WebGL context surface fallback without destroying other answers (8.887459ms)\nℹ tests 31\nℹ suites 0\nℹ pass 31\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 218.883167\n",
+      "recorded_at_utc": "2026-10-30T16:46:46Z"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tests -p 'test_*.py' -v",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "46 workflow/contribution tests passed. st_workflow.WorkflowTests) ... ok\ntest_member_logs_are_separate_and_pipe_safe (test_workflow.WorkflowTests) ... ok\ntest_passing_check_does_not_automatically_accept_task (test_workflow.WorkflowTests) ... ok\ntest_pending_or_self_review_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_professional_docs_have_small_entrypoint_budgets (test_workflow.WorkflowTests) ... ok\ntest_prompt_amend_updates_outcome_without_extra_entry (test_workflow.WorkflowTests) ... ok\ntest_prompt_rotation_at_fifty (test_workflow.WorkflowTests) ... ok\ntest_readonly_check_detects_stale_view (test_workflow.WorkflowTests) ... ok\ntest_real_git_ancestry_proof (test_workflow.WorkflowTests) ... ok\ntest_render_is_idempotent (test_workflow.WorkflowTests) ... ok\ntest_reopening_checklist_prerequisite_reopens_done_children (test_workflow.WorkflowTests) ... ok\ntest_start_blocked_task_does_not_modify_records (test_workflow.WorkflowTests) ... ok\ntest_unchecked_acceptance_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_unknown_dependency_rejected (test_workflow.WorkflowTests) ... ok\ntest_unmerged_commit_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_verify_accepts_explicit_project_subdirectory (test_workflow.WorkflowTests) ... ok\ntest_verify_executes_check_and_records_real_failure (test_workflow.WorkflowTests) ... ok\ntest_verify_refuses_directory_outside_project (test_workflow.WorkflowTests) ... ok\n\n----------------------------------------------------------------------\nRan 46 tests in 0.379s\n\nOK\n",
+      "recorded_at_utc": "2026-10-30T16:46:46Z"
+    },
+    {
+      "command": "python3 scripts/workflow.py check",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Records and generated views valid. Workflow records valid: 29 tasks, 9 prompts. Recorded failed product checks remain visible; this is not a product test pass.\n",
+      "recorded_at_utc": "2026-10-30T16:46:46Z"
+    },
+    {
+      "command": "git diff --check",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "No whitespace errors. ",
+      "recorded_at_utc": "2026-10-30T16:46:46Z"
+    },
+    {
+      "command": "npm run lint -- --no-cache",
+      "cwd": "prototype",
+      "result": "passed",
+      "evidence": "Exit 0. ",
+      "recorded_at_utc": "2026-10-30T16:46:46Z"
+    },
+    {
+      "command": "npm run build -- --webpack",
+      "cwd": "prototype",
+      "result": "passed",
+      "evidence": "Exit 0. ✓ Compiled successfully in 665ms\n  Running TypeScript ...\n  Finished TypeScript in 1ms ...\n  Collecting page data using 5 workers ...\n  Generating static pages using 5 workers (0/4) ...\n  Generating static pages using 5 workers (1/4) \r\n  Generating static pages using 5 workers (2/4) \r\n  Generating static pages using 5 workers (3/4) \r\n✓ Generating static pages using 5 workers (4/4) in 293ms\n  Finalizing page optimization ...\n  Collecting build traces ...\n\nRoute (app)\n┌ ○ /\n├ ○ /_not-found\n└ ○ /workspace\n\n\n○  (Static)  prerendered as static content\n\n",
+      "recorded_at_utc": "2026-10-30T16:46:46Z"
+    },
+    {
+      "command": "node --check prototype/public/reference/location.js",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0; executed by the delivery syntax-check loop.",
+      "recorded_at_utc": "2026-10-30T16:46:46Z"
+    },
+    {
+      "command": "node --check prototype/public/reference/intake-map.js",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0; executed by the delivery syntax-check loop.",
+      "recorded_at_utc": "2026-10-30T16:46:46Z"
+    },
+    {
+      "command": "node --check prototype/public/reference/intake.js",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0; executed by the delivery syntax-check loop.",
+      "recorded_at_utc": "2026-10-30T16:46:46Z"
+    },
+    {
+      "command": "node --check prototype/public/reference/intake-ui.js",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0; executed by the delivery syntax-check loop.",
+      "recorded_at_utc": "2026-10-30T16:46:46Z"
+    },
+    {
+      "command": "node --check prototype/public/reference/workspace.js",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0; executed by the delivery syntax-check loop.",
+      "recorded_at_utc": "2026-10-30T16:46:46Z"
+    }
+  ],
+  "blockers": [],
+  "issues": [],
+  "evidence": [
+    "Base checkout: a2b4dc7bd4bb5a289bca46466d3bb9a8e3a98612",
+    "Local and origin branch checks found no feature/intake-location before branch creation.",
+    "Reviewed 105 intended files (~3 MB); no file above 5 MB and no credential-pattern findings. GitHub Actions checkout/setup-node v7 tags were verified to exist.",
+    "Complete browser submissions, physical-phone testing, Prachurjo review and scientific integration remain pending."
+  ],
+  "history": [
+    {
+      "at": "2026-10-30T16:43:10Z",
+      "note": "Checklist a1: in_progress",
+      "evidence": ""
+    },
+    {
+      "at": "2026-10-30T16:48:13Z",
+      "note": "Checklist a1: done",
+      "evidence": "Reviewed and explicitly staged all 105 intended documentation/workflow/intake/map/supporting-check files (~3 MB). Staged paths exactly match the reviewed manifest, caches are excluded and historical unassigned logs are unchanged. No unrelated working-tree paths were found."
+    },
+    {
+      "at": "2026-10-30T16:48:13Z",
+      "note": "Checklist a2: in_progress",
+      "evidence": "31 intake/location tests, 46 workflow tests, five Node syntax checks, lint, production build, workflow validation and git diff/staged whitespace checks pass. Staged source, CI, dependency/license and record diffs inspected; commit is the next action."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": "feature/intake-location",
+  "issue": null,
+  "next_action": "Verify and explicitly stage the authorized completed project work on feature/intake-location; keep review and physical-phone testing pending.",
+  "handoff": "Prachurjo reviews the feature branch, completes both browser/phone location submissions and confirms usability; Fardin coordinates later accepted G0/API/science gates. Pushes are delivery only, not approval.",
+  "scope": "mvp",
+  "purpose": "Fardin explicitly authorized branch creation, committing and pushing the completed documentation/workflow/intake/location work, including supporting check configuration. This delivery does not require or grant scientific, review or main-branch acceptance."
+}

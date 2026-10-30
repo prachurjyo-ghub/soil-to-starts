@@ -1,0 +1,139 @@
+{
+  "id": "G1D",
+  "title": "Extend required farmer intake and API/error-state shell",
+  "owner": "Prachurjo",
+  "collaborators": [],
+  "phase": "G1",
+  "status": "planned",
+  "depends_on": [
+    "G0-CONTRACT"
+  ],
+  "updated_at": "2026-10-30T15:07:08Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Implement nationwide Bangladesh district selection",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Use all 64 sourced districts with stable application IDs and searchable text selection; retain district-level provenance and distinguish intake selection from scientific coverage. INTAKE-UI is independent local preparation, not acceptance of this gate.",
+      "files": [
+        "prototype/"
+      ],
+      "verification": "Selecting a national location does not imply validated advice there.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Integrate the six required intake questions",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Keep all six visible in order: current crop, availability, dated previous history, usual upcoming baseline, water and priority. Require meaningful answers or explicit domain absence/fallow states; no demo prefill, soil/fertilizer form or general unknown bypass.",
+      "files": [
+        "prototype/"
+      ],
+      "verification": "Invalid/dependent answers and contradictory dates fail with accessible errors; drafts remain separate from submitted answers.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Connect documented priorities",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Require an explicit choice among the three priority presets, with no new-farmer default. Keep underlying evidence and hard constraints unchanged.",
+      "files": [
+        "prototype/"
+      ],
+      "verification": "UI copy does not imply yield or calibrated success probabilities.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s04",
+      "text": "Implement the agreed API adapter and states",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Create loading/error/unavailable/incomplete views against the accepted contract.",
+      "files": [
+        "prototype/"
+      ],
+      "verification": "A failed/missing API never returns fictional chart/plan constants.",
+      "depends_on": [
+        "s03"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s05",
+      "text": "Check bilingual and accessible input flows",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Review Bangla/English meaning, focus, keyboard, phone layout and reduced motion.",
+      "files": [
+        "prototype/"
+      ],
+      "verification": "Record screenshots/manual checks and actual automated checks where implemented.",
+      "depends_on": [
+        "s04"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s06",
+      "text": "Review and hand off the shell",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Fardin reviews transport assumptions; preserve illustrative labels until real G2 results arrive.",
+      "files": [
+        "docs/tasks/G1D.json"
+      ],
+      "verification": "An independent reviewer can reproduce the bounded shell behavior.",
+      "depends_on": [
+        "s05"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-10-30T10:00:13Z",
+      "note": "Rebased planned work to the mandatory-now/future specifications. No product feature, review or delivery is marked complete."
+    },
+    {
+      "at": "2026-10-30T15:07:08Z",
+      "note": "Latest Fardin-authorized INTAKE-UI implements independent local form/validation preparation. G0 and all G1D acceptance remain pending; no scientific API adapter or integration is accepted."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Extend the current app against accepted G0 contracts; do not create a second frontend.",
+  "handoff": "Prachurjo connects G3 only after G2 and this shell are accepted; Fardin reviews transport behavior.",
+  "purpose": "Make field inputs and failure states usable before connecting scientific results.",
+  "scope": "mvp"
+}

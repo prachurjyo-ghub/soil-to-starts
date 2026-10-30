@@ -44,16 +44,19 @@ export default function WorkspaceApp() {
   const [simWeights, setSimWeights] = useState({ water: 30, soil: 25, climate: 25, stability: 20 });
 
   useEffect(() => {
-    const fromHash = window.location.hash.slice(1);
-    if (routes.some(([key]) => key === fromHash)) setRoute(fromHash);
-    try {
-      const persisted = JSON.parse(localStorage.getItem("sts-workspace") || "null");
-      const starter = JSON.parse(localStorage.getItem("sts-starter") || "null");
-      if (persisted?.field) setField(persisted.field);
-      else if (starter) setField((current) => ({ ...current, region: starter.region?.split(",")[0] || current.region, water: starter.water || current.water, priority: starter.priority || current.priority }));
-      if (persisted?.saved) setSaved(persisted.saved);
-    } catch {}
-    const timer = setTimeout(() => setLoading(false), 700);
+    // Hydrate persisted client state at the existing loading boundary, in one callback.
+    const timer = setTimeout(() => {
+      const fromHash = window.location.hash.slice(1);
+      if (routes.some(([key]) => key === fromHash)) setRoute(fromHash);
+      try {
+        const persisted = JSON.parse(localStorage.getItem("sts-workspace") || "null");
+        const starter = JSON.parse(localStorage.getItem("sts-starter") || "null");
+        if (persisted?.field) setField(persisted.field);
+        else if (starter) setField((current) => ({ ...current, region: starter.region?.split(",")[0] || current.region, water: starter.water || current.water, priority: starter.priority || current.priority }));
+        if (persisted?.saved) setSaved(persisted.saved);
+      } catch {}
+      setLoading(false);
+    }, 700);
     return () => clearTimeout(timer);
   }, []);
 

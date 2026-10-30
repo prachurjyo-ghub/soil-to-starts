@@ -1,0 +1,121 @@
+{
+  "id": "MEDIA-STORYBOARD",
+  "title": "Prepare storyboard, capture plan and asset ledger",
+  "owner": "Nadim",
+  "collaborators": [
+    "Hla",
+    "Prachurjo"
+  ],
+  "phase": "G0",
+  "status": "planned",
+  "depends_on": [],
+  "updated_at": "2026-10-30T10:00:13Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Plan the shots and visual sequence",
+      "owner": "Nadim",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Coordinate with Hla; identify which shots need real G3/G4 behavior.",
+      "files": [
+        "media/storyboard.md"
+      ],
+      "verification": "Shot list distinguishes illustrative treatment from measured data/app footage.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Maintain source and rights records",
+      "owner": "Nadim",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Record every photo, video, font, sound and generated asset and its reuse terms.",
+      "files": [
+        "media/asset-ledger.md"
+      ],
+      "verification": "Nadim/Prachurjo can trace each asset and flag missing permissions.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Prepare the verified-app capture checklist",
+      "owner": "Nadim",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Plan shots and test capture tools against labelled current demo; final scientific footage waits for G5.",
+      "files": [
+        "media/shot-list.md",
+        "agreed media storage"
+      ],
+      "verification": "Preparation does not imply unbuilt scientific UI was captured.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s04",
+      "text": "Prepare editing and subtitle templates",
+      "owner": "Nadim",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Create clearly labelled draft title/subtitle/edit templates; final edit follows G5 approved narration and actual footage.",
+      "files": [
+        "media/edit-plan.md",
+        "agreed media storage"
+      ],
+      "verification": "Draft media never claims accepted agricultural outputs.",
+      "depends_on": [
+        "s03"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s05",
+      "text": "Verify export preparation and formats",
+      "owner": "Nadim",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Test export workflow with labelled sample material; confirm actual portal formats before final G5 export.",
+      "files": [
+        "media/export-checklist.md"
+      ],
+      "verification": "Preparation evidence is separate from final submitted files.",
+      "depends_on": [
+        "s04"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-10-30T10:00:13Z",
+      "note": "Rebased planned work to the mandatory-now/future specifications. No product feature, review or delivery is marked complete."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Draft storyboard and rights ledger with Hla; defer final footage to accepted app behavior.",
+  "handoff": "Preparation can run in parallel. G5 owns approved final narration, actual scientific captures, edit, subtitles and exports after G4 acceptance.",
+  "purpose": "Make actual app evidence understandable and keep every media asset attributable.",
+  "scope": "mvp"
+}

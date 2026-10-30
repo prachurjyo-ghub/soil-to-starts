@@ -1,0 +1,127 @@
+{
+  "id": "DOC-FOUNDATION",
+  "title": "Team onboarding and root execution rules",
+  "owner": "Fardin",
+  "collaborators": [],
+  "phase": "FOUNDATION",
+  "status": "in_review",
+  "depends_on": [],
+  "updated_at": "2026-10-30T10:03:22Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Keep root instructions concise",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "Root AGENTS is 764 words with scope routing and hard science/offline/authorization rules; README remains below its configured word budget.",
+      "how": "Route agents to the assigned task and relevant specifications; preserve all hard product/science rules.",
+      "files": [
+        "AGENTS.md"
+      ],
+      "verification": "Root stays under 800 words and source/module boundaries remain explicit.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Provide a working quick start",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "README.md, Makefile and read-only doctor exist; doctor passed on Python 3.9.6/Node 26.12.1/npm 12.2.1.",
+      "how": "Document only actual frontend/helper commands and current implementation limits.",
+      "files": [
+        "README.md",
+        "Makefile",
+        "scripts/doctor.py"
+      ],
+      "verification": "A teammate can follow the commands; no backend capability is invented.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Publish the detailed team and product rules",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "Canonical product/UI/API/team/validation/source/submission specifications now link the mandatory-now and future-only contexts.",
+      "how": "Move full product, UI, source, validation, contribution and submission requirements into linked canonical documents.",
+      "files": [
+        "docs/TEAM_PLAYBOOK.md",
+        "docs/PRODUCT_SPEC.md",
+        "docs/UI_UX_SPEC.md",
+        "docs/VALIDATION.md"
+      ],
+      "verification": "All six roles, future/MVP scope, evidence and handoff requirements remain present.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s04",
+      "text": "Validate onboarding and request independent review",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "46 helper tests, record/link validation, lint and production build pass locally; independent review is pending.",
+      "how": "Run diagnostics, record/link validation and helper tests, then obtain another member review.",
+      "files": [
+        "docs/PROGRESS.md",
+        "docs/WORKFLOW.md"
+      ],
+      "verification": "Checks are recorded; local implementation is distinguished from human approval.",
+      "depends_on": [
+        "s03"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [
+    {
+      "command": "python3 scripts/doctor.py",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Local prerequisite/path checks passed; science/API status remains planned.",
+      "run_at_utc": "2026-10-29T17:25:20Z"
+    },
+    {
+      "command": "python3 scripts/workflow.py check",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Task, log, generated view and relative-link validation passed.",
+      "run_at_utc": "2026-10-29T17:25:20Z"
+    }
+  ],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-10-29T17:25:20Z",
+      "note": "Professional foundation refinement: small-item evidence updated from actual files/checks; independent review remains pending."
+    },
+    {
+      "at": "2026-10-29T17:41:26Z",
+      "note": "Previous documentation baseline: 882294a49652229d70d4d5a2b01713e135645762. Current refinement has no accepted merge or review."
+    },
+    {
+      "at": "2026-10-30T10:03:22Z",
+      "note": "Updated planning evidence for two scope contexts and expanded task records; earlier check history retained. No product implementation or independent approval claimed."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Arrange a teammate review of the concise onboarding and canonical specifications; record accepted merge only afterward.",
+  "handoff": "All six members use the board/playbook; Fardin coordinates G0 contract drafting after reading the specifications.",
+  "purpose": "Give every teammate accurate onboarding and preserve shared rules without loading them all for every task."
+}

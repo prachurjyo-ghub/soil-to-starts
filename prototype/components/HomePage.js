@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import {
   FiArrowDown, FiArrowUpRight, FiBarChart2, FiCheck, FiCloudRain,
@@ -32,6 +34,7 @@ const presets = {
 };
 
 export default function HomePage() {
+  const router = useRouter();
   const [menu, setMenu] = useState(false);
   const [scenario, setScenario] = useState("balanced");
   const [playing, setPlaying] = useState(true);
@@ -64,7 +67,7 @@ export default function HomePage() {
     event.preventDefault();
     const data = Object.fromEntries(new FormData(event.currentTarget));
     localStorage.setItem("sts-starter", JSON.stringify(data));
-    window.location.href = "/workspace#profile";
+    router.push("/workspace#profile");
   }
 
   return (
@@ -173,7 +176,7 @@ export default function HomePage() {
               <Reveal className="evidence-copy"><p className="kicker">NOT MAGIC. NOT GUESSWORK.</p><h2>From distant orbit<br />to <em>down-to-earth</em><br />decisions.</h2><p>Environmental observations reveal regional trends. Your field knowledge adds context. Clear rules connect the two—so each example suggestion comes with a reason, not a mystery.</p><Link className="text-link" href="/workspace#methodology">Explore the data methodology <FiArrowUpRight /></Link></Reveal>
               <Reveal className="atlas" delay={100}>
                 <div className="atlas-head"><span>FIELD SIGNALS / EXPLAINED</span><b>ILLUSTRATIVE VIEW</b></div>
-                <div className="atlas-photo"><img src="/assets/mustard-landscape.jpg" alt="Mustard field landscape" /><div className="field-shape" /><FiRadio className="satellite-icon" /><span>24.37° N / 88.60° E<small>EXAMPLE FIELD FOOTPRINT</small></span><b>Your field<small>Local knowledge at the center</small></b></div>
+                <div className="atlas-photo"><Image src="/assets/mustard-landscape.jpg" alt="Mustard field landscape" fill sizes="(max-width: 768px) 100vw, 50vw" unoptimized /><div className="field-shape" /><FiRadio className="satellite-icon" /><span>24.37° N / 88.60° E<small>EXAMPLE FIELD FOOTPRINT</small></span><b>Your field<small>Local knowledge at the center</small></b></div>
                 <div className="atlas-tabs">{[['rain','Rainfall'],['soil','Soil context'],['crop','Crop knowledge']].map(([key,label]) => <button onClick={() => setLayer(key)} className={layer === key ? "active" : ""} key={key}>{label}</button>)}</div>
                 <div className="atlas-readout"><span>{layer === 'rain' ? '01' : layer === 'soil' ? '02' : '03'}</span><div><b>{layer === 'rain' ? 'Look for patterns, not promises.' : layer === 'soil' ? 'Your soil tells its own story.' : 'Connect one season to the next.'}</b><p>{layer === 'rain' ? 'Regional rainfall history adds context to water decisions.' : layer === 'soil' ? 'Texture, drainage, and measured pH help narrow feasible options.' : 'Crop families and planting windows connect context to a plan.'}</p></div></div>
               </Reveal>
@@ -200,5 +203,5 @@ function SectionLine({ number, label, light = false }) {
 }
 
 function JourneyCard({ number, tag, image, category, title, copy, href, icon, sequence }) {
-  return <article className="journey-card"><div className={`journey-media ${sequence ? "sequence" : ""}`}>{image && <img src={image} alt="" />}<div className="media-grade"/><div className="journey-media-top"><span>{number} / {tag}</span><b>ILLUSTRATIVE</b></div>{sequence ? <div className="season-stack"><div><span>01 / KHARIF I</span><b>Maize 🌽</b></div><div><span>02 / KHARIF II</span><b>Mungbean 🌱</b></div><div><span>03 / RABI</span><b>Mustard 🌼</b></div></div> : <div className="media-icon">{icon}</div>}</div><div className="journey-copy"><span>{category}</span><h3>{title}</h3><p>{copy}</p><Link href={href}>Explore the patterns <FiArrowUpRight /></Link></div></article>;
+  return <article className="journey-card"><div className={`journey-media ${sequence ? "sequence" : ""}`}>{image && <Image src={image} alt="" fill sizes="(max-width: 768px) 100vw, 33vw" unoptimized />}<div className="media-grade"/><div className="journey-media-top"><span>{number} / {tag}</span><b>ILLUSTRATIVE</b></div>{sequence ? <div className="season-stack"><div><span>01 / KHARIF I</span><b>Maize 🌽</b></div><div><span>02 / KHARIF II</span><b>Mungbean 🌱</b></div><div><span>03 / RABI</span><b>Mustard 🌼</b></div></div> : <div className="media-icon">{icon}</div>}</div><div className="journey-copy"><span>{category}</span><h3>{title}</h3><p>{copy}</p><Link href={href}>Explore the patterns <FiArrowUpRight /></Link></div></article>;
 }

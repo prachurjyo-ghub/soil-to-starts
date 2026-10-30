@@ -1,23 +1,17 @@
-# Soil to Stars — Next.js prototype
+# Soil to Stars frontend
 
-This is the working frontend for the [Field Shift project](../README.md). The root README describes the challenge scope, planned data architecture, source status, and validation work.
+Existing Next.js frontend demonstration. Current routes `/` and `/workspace` load supplied reference HTML/static scripts; additional React components are present but not all are mounted. Scores, traits, soil defaults and climate series are illustrative.
 
-A Next.js port of the supplied Soil to Stars reference. The original markup, layered styling, motion system, video behavior, branch cursor, language controls, and workspace interactions remain the visual and behavioral source of truth.
+Run `npm ci` then `npm run dev`. Check with `npm run lint` and `npm run build -- --webpack`; after a successful build use `npm run start`. Keep the lockfile. See the [root quick start](../README.md), [task board](../docs/PROGRESS.md) and nearest [instructions](AGENTS.md).
 
-## Run locally
+The targeted dependency patch is documented in [SECURITY.md](../SECURITY.md). Data/API/scientific behavior and fully offline browser support remain planned; no NASA key is required for this demo. Existing asset credits and rights-review work remain in the repository.
 
-```bash
-npm install
-npm run dev
-```
+## Required farmer intake
 
-Open `http://localhost:3000` for the presentation site and `http://localhost:3000/workspace` for the field-planning studio.
+The mounted `/workspace` starts with independent confirmed map-pin or nationwide district selection and six required questions in `public/reference/intake-ui.js`; `intake.js` provides the shared validator and local sourced district directory. Genuine intake drafts/submissions are separate from the explicitly opened illustrative demo. A validated submission shows planning unavailable: scientific data, reviewed crop rules and the API/rotation engine are not connected.
 
-## Production check
+Run `npm run test:intake` for validation and UI-controller tests. Public reference scripts are excluded from ESLint: directly run `node --check public/reference/intake.js`, `node --check public/reference/intake-ui.js` and `node --check public/reference/workspace.js` as well as lint/build. [Intake evidence and limits](../docs/INTAKE_QA.md) records actual checks.
 
-```bash
-npm run build
-npm run start
-```
+The map extension uses MapLibre GL JS 6.16.0 through `components/IntakeMapRuntime.js`, plus local versioned district geometry. The default is OpenFreeMap Liberty street/reference mapping. Configure `NEXT_PUBLIC_BASEMAP_STYLE_URL` and `NEXT_PUBLIC_BASEMAP_LABEL` at build time if changing providers; keep style-source attribution. The library/worker and boundary geometry are lazy; district search stays independent. No field polygon/area tools or scientific API is added. See [location QA and browser checks still required](../docs/LOCATION_QA.md) and [schema/migration](../docs/API_CONTRACT.md).
 
-All supplied media and fonts are stored locally in `public/assets`. Field preferences, the selected theme, and saved plans use browser local storage. Crop scores and environmental series are illustrative prototype data, not agricultural advice or live NASA observations.
+Also syntax-check `public/reference/location.js` and `public/reference/intake-map.js`; `npm run test:intake` now includes geometry, migration and map-controller regression tests. Reproduce the administrative asset with `python3 scripts/prepare_district_boundaries.py` from the root, using the checked-in licensed source snapshot without network.

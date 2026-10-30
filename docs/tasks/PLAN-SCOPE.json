@@ -1,0 +1,160 @@
+{
+  "id": "PLAN-SCOPE",
+  "title": "Document strengthened mandatory MVP and gated future roadmap",
+  "owner": "Fardin",
+  "collaborators": [
+    "Saim",
+    "Maruf",
+    "Prachurjo"
+  ],
+  "phase": "FOUNDATION",
+  "status": "in_review",
+  "depends_on": [],
+  "updated_at": "2026-10-30T10:06:38Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Write the two scope contexts",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "MVP_SCOPE.md defines 12 mandatory capabilities and FUTURE_ROADMAP.md defines seven separately gated optional tracks.",
+      "how": "Define strengthened mandatory acceptance and explicitly gated optional future tracks.",
+      "files": [
+        "docs/MVP_SCOPE.md",
+        "docs/FUTURE_ROADMAP.md"
+      ],
+      "verification": "Scope is concrete; fertilizer/runtime AI remain excluded from MVP.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Align canonical specs and execution instructions",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "README/AGENTS and product/API/UI/method/validation/source/architecture/team/release instructions align on pilot, baseline/alternatives, equal crop history, structured checks and exclusions.",
+      "how": "Update README/AGENTS/product/API/UI/method/validation/source/team/submission boundaries without changing app code.",
+      "files": [
+        "README.md",
+        "AGENTS.md",
+        "docs/"
+      ],
+      "verification": "No contradictory baseline, same-crop-history or completion semantics.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Rebase ordered task records and handoffs",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "26 packages contain 125 ordered items; story/receipt follow G3, G4 precedes G5, media preparation is separate and all seven future tracks retain explicit blockers.",
+      "how": "Preserve previous local evidence, add receipt/story/future work and make media preparation distinct from final delivery.",
+      "files": [
+        "docs/tasks/",
+        "docs/PROGRESS.md"
+      ],
+      "verification": "Dependencies are acyclic, future starts blocked and product steps stay unticked.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s04",
+      "text": "Validate documents and record real outcome",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "46 existing helper tests passed; record/generated-view/link validation passed; scope audit confirmed seven blocked future tracks, no product ticks and no application/helper/test code edits.",
+      "how": "Run existing helper tests and record/link/generated-view checks; inspect final changes.",
+      "files": [
+        "tests/",
+        "docs/PROGRESS.md",
+        "docs/PROMPT_LOG.md"
+      ],
+      "verification": "Only actual implementation command is logged; human review/merge remain pending.",
+      "depends_on": [
+        "s03"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [
+    {
+      "command": "python3 -B -m unittest discover -s tests -p 'test_*.py'",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. ..............................................\n----------------------------------------------------------------------\nRan 46 tests in 0.270s\n\nOK",
+      "run_at_utc": "2026-10-30T10:03:22Z"
+    },
+    {
+      "command": "python3 scripts/workflow.py check",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. Workflow records valid: 26 tasks, 5 prompts. Recorded failed product checks remain visible; this is not a product test pass.",
+      "run_at_utc": "2026-10-30T10:03:22Z"
+    }
+  ],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-10-30T10:03:22Z",
+      "note": "Checklist s01: done",
+      "evidence": "MVP_SCOPE.md defines 12 mandatory capabilities and FUTURE_ROADMAP.md defines seven separately gated optional tracks."
+    },
+    {
+      "at": "2026-10-30T10:03:22Z",
+      "note": "Checklist s02: done",
+      "evidence": "README/AGENTS and product/API/UI/method/validation/source/architecture/team/release instructions align on pilot, baseline/alternatives, equal crop history, structured checks and exclusions."
+    },
+    {
+      "at": "2026-10-30T10:03:22Z",
+      "note": "Checklist s03: done",
+      "evidence": "26 packages contain 125 ordered items; story/receipt follow G3, G4 precedes G5, media preparation is separate and all seven future tracks retain explicit blockers."
+    },
+    {
+      "at": "2026-10-30T10:03:22Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p 'test_*.py'"
+    },
+    {
+      "at": "2026-10-30T10:03:22Z",
+      "note": "Check passed: python3 scripts/workflow.py check"
+    },
+    {
+      "at": "2026-10-30T10:05:13Z",
+      "note": "Checklist s04: done",
+      "evidence": "46 existing helper tests passed; record/generated-view/link validation passed; scope audit confirmed seven blocked future tracks, no product ticks and no application/helper/test code edits."
+    },
+    {
+      "at": "2026-10-30T10:05:13Z",
+      "from": "in_progress",
+      "to": "in_review",
+      "note": "Planning implementation validated locally; independent human review and main-branch delivery are pending. Product tasks remain planned."
+    },
+    {
+      "at": "2026-10-30T10:06:38Z",
+      "from": "in_review",
+      "to": "in_review",
+      "note": "Arrange independent teammate review of the scope changes. Fardin can draft G0 contracts while that review is pending; no product work is accepted by these documentation ticks."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Arrange independent teammate review of the scope changes. Fardin can draft G0 contracts while that review is pending; no product work is accepted by these documentation ticks.",
+  "handoff": "All six members read the two scope contexts and assigned task. G0 remains planned until implementation is started; no product feature is accepted by this documentation change.",
+  "purpose": "Implement planning documents and task handoffs only; do not claim scientific product work is completed.",
+  "scope": "foundation"
+}

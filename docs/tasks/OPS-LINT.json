@@ -1,0 +1,128 @@
+{
+  "id": "OPS-LINT",
+  "title": "Configure frontend ESLint and verify it",
+  "owner": "Prachurjo",
+  "collaborators": [
+    "Fardin"
+  ],
+  "phase": "FOUNDATION",
+  "status": "in_review",
+  "depends_on": [],
+  "updated_at": "2026-10-29T17:25:20Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Configure Next.js flat ESLint",
+      "owner": "Prachurjo",
+      "state": "done",
+      "met": true,
+      "evidence": "ESLint flat config uses the matching installed Next.js config, with narrow documented reference-page/static-asset exceptions.",
+      "how": "Use the installed Next.js ESLint config and preserve static reference assets with documented narrow exceptions.",
+      "files": [
+        "prototype/eslint.config.mjs"
+      ],
+      "verification": "ESLint finds its configuration and checks maintained application source.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Fix client-state initialization errors",
+      "owner": "Prachurjo",
+      "state": "done",
+      "met": true,
+      "evidence": "Client preferences use useSyncExternalStore; workspace hydration runs at the existing loading boundary.",
+      "how": "Synchronize preferences as external state and hydrate demo workspace at its loading boundary.",
+      "files": [
+        "prototype/components/ThemeLanguage.js",
+        "prototype/components/WorkspaceApp.js"
+      ],
+      "verification": "React hook errors disappear without hiding the rule globally.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Run lint and record residual warnings",
+      "owner": "Prachurjo",
+      "state": "done",
+      "met": true,
+      "evidence": "npm run lint -- --no-cache passed with zero reported warnings/errors after router/Image/config fixes.",
+      "how": "Run the actual npm lint command; record exact warnings or fix them.",
+      "files": [
+        "prototype/"
+      ],
+      "verification": "npm run lint -- --no-cache exits zero; any warnings are explicitly listed.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s04",
+      "text": "Verify the production app build",
+      "owner": "Prachurjo",
+      "state": "done",
+      "met": true,
+      "evidence": "Next.js 16.4.3 production webpack build succeeded; /, /workspace and the referenced script returned HTTP 200 in a local smoke check.",
+      "how": "Build the current app using the patched locked dependencies and inspect the routes.",
+      "files": [
+        "prototype/"
+      ],
+      "verification": "npm run build -- --webpack succeeds; browser interaction checks remain a separate UI gate.",
+      "depends_on": [
+        "s03"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [
+    {
+      "command": "npm run lint -- --no-cache",
+      "cwd": "prototype",
+      "result": "passed",
+      "evidence": "Exit 0; no lint warnings/errors reported.",
+      "run_at_utc": "2026-10-29T17:25:20Z"
+    },
+    {
+      "command": "npm run build -- --webpack",
+      "cwd": "prototype",
+      "result": "passed",
+      "evidence": "Exit 0; /, /_not-found and /workspace statically built.",
+      "run_at_utc": "2026-10-29T17:25:20Z"
+    },
+    {
+      "command": "Local production HTTP smoke checks",
+      "cwd": "prototype",
+      "result": "passed",
+      "evidence": "Homepage, workspace and reference/workspace.js returned 200; illustrative labels present. No browser-interaction/science validation claimed.",
+      "run_at_utc": "2026-10-29T17:25:20Z"
+    }
+  ],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-10-29T17:25:20Z",
+      "note": "Professional foundation refinement: small-item evidence updated from actual files/checks; independent review remains pending."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Review the bounded lint/state-initialization changes and record accepted delivery; full usability testing remains G3.",
+  "handoff": "Fardin reviews the bounded changes; Prachurjo uses the verified frontend commands for G1D/G3.",
+  "purpose": "Make frontend checks reproducible and expose real code problems before integration.",
+  "resolved_issues": [
+    "Missing ESLint flat configuration caused exit 2; added the matching Next.js flat config.",
+    "Synchronous React effect-state initialization caused errors; replaced preference synchronization and deferred workspace hydration at its loading boundary.",
+    "React navigation/image and anonymous-config warnings were corrected; public reference loading keeps narrow documented exceptions."
+  ]
+}

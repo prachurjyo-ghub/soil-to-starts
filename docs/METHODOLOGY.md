@@ -1,53 +1,39 @@
 # Field Shift methodology plan
 
-This is a design plan. The current frontend has illustrative ranking logic; it does not run the scientific workflow below.
+Status: proposed methods. The current frontend's illustrative logic is not this scientific engine. Read [MVP_SCOPE](MVP_SCOPE.md), [API_CONTRACT](API_CONTRACT.md) and [VALIDATION](VALIDATION.md) for release and contract requirements.
 
-## Decision and evidence
+## Deterministic sequence
 
-The target decision is: **which crop rotation is feasible and preferable for this field under the farmer's constraints and priorities, and why?** A useful result names at least one rotation, shows what excluded alternatives, and explains the water, soil, and climate trade-offs. The user can inspect provenance and change priorities without changing the underlying observations.
+1. Separate measured soil reports, farmer observations, regional estimates, NASA environmental context, reviewed crop rules and preferences. Record provenance and preserve unknowns. Crop history alone cannot establish remaining nutrients.
+2. Validate location, dates, units, field availability, baseline and priority. Previous/current crop IDs may match.
+3. Select applicable reviewed catalogue and checked local POWER evidence. Validate fill values, expected dates, units, time standard, scale and versions.
+4. Compute justified seasonal rainfall/temperature indicators. Add onset/dry-spell/crop-stage checks only after defining and reviewing their parameters.
+5. Assess the baseline over the common horizon, retaining repeats/fallow and conflicts. Generate regional crop windows with duration/preparation intervals.
+6. Apply sourced hard calendar/water/known-soil/sequence exclusions before ranking. Distinguish conflict, caution and missing essential evidence. A family change does not prove every pest disappears.
+7. Search exactly three future main-crop steps, carrying dates and relevant family/host history. Do not independently choose three high-scoring crops. Unsupported long-duration/perennial paths remain unavailable.
+8. Compare baseline and distinct water/soil-focused alternatives with common assumptions. Fewer supported alternatives means an incomplete comparison.
+9. Reuse the checks for intended-crop assessment. Return fixed translated reason keys, source/rule IDs and useful missing-information actions; no runtime-generated prose.
 
-Inputs should be separated by type:
+## Indicators and ranking
 
-1. **Measured or documented local inputs:** soil tests, irrigation access, crop calendars, field history, and crop requirements, each with source and date.
-2. **NASA regional context:** rainfall, temperature, soil moisture, and vegetation products with product/version, scale, and quality information.
-3. **Farmer preferences:** explicit weights or priorities. These affect ranking, not the observed data or agronomic feasibility rules.
+Freeze preset orders, indicator definitions, units/categories and stable tie-breaking in G0. Save water prioritizes supported water compatibility; Soil protection / rotation diversity prioritizes reviewed sequence/cover/residue characteristics; Balanced uses an agreed transparent rule. Optional totals require documented normalization/weights and uncertainty. Do not score critical unknowns zero or silently reweight around them. Preferences never change observations or override exclusions.
 
-## Proposed deterministic pipeline
+Soil output describes known compatibility and supported management potential, including host/family breaks, diversity, calendar gaps and explicit cover/residue assumptions. A legume is not an automatic nutrient cure. Essential unknown soil requirements leave checks incomplete. Fertilizer rates, nutrient budgets, NPK depletion, soil-carbon trajectories and numerical restoration percentages are excluded from MVP.
 
-```text
-Raw NASA/local inputs → quality checks → season indicators
-                    → feasible rotation generation → comparison
-                    → explanation + assumptions + provenance
-```
+Seasonal rainfall or categorical irrigation access alone cannot justify exact irrigation volume. Use qualified categories until adequate inputs and a reviewed water-balance method exist. [FAO evapotranspiration](https://www.fao.org/4/x0490e/x0490e0a.htm) and [irrigation guidance](https://www.fao.org/4/S2022E/s2022e08.htm) are method references, not copied local calibration; paddy management needs appropriate additional terms.
 
-- **Quality checks:** missing dates, fill values, units, time standard, spatial coverage, and product quality flags. Fail visibly if an essential input is absent.
-- **Season indicators:** rainfall onset, rainfall totals and dry spells, growing degree days, and possibly soil moisture/vegetation checks. Define crop and district seasons before calculating.
-- **Feasibility:** apply locally reviewed crop calendar, water, soil, and sequence constraints. Do not allow a high preference score to override an infeasible rotation.
-- **Comparison:** normalize and document criteria, show the contribution of each criterion and the impact of changing farmer weights. Avoid a single unexplained “best” score.
-- **Uncertainty:** evaluate threshold sensitivity, grid-to-field mismatch, missing data, and rank stability. Use local observations or historical replay where available.
+## Historical replay and story
 
-## Rainfall-onset method to specify before implementation
+Predeclare historical stress selection and periods, usable-year counts, missingness, effect-size and uncertainty reporting. Define calendar-day/cross-year alignment and leap-day handling. Hold non-climate inputs fixed and rerun the same engine. Report changed checks, feasibility and rank stability. This is model behavior under recorded climate, not a forecast, yield estimate or actual observed harvest outcome.
 
-The supplied guide suggests the first seven-day rainfall window reaching 20 mm, followed by a dry-spell check. These numbers are **candidate parameters**, not agreed local thresholds. Its code does not implement the dry-spell condition stated in its docstring. Before adding `src/compute/agro.py`, agree and document:
+Export verified temperature/rainfall arrays and statistics for the four-scene story with units, period, sources and method. Use consistent scales and show no clear shift when supported. Do not cherry-pick periods, infer climate causation from one local series or invent climate-induced nutrient changes. Respect product-specific temporal/spatial coverage.
 
-- search season and how a calendar year is assigned;
-- rainfall threshold, rolling-window length, dry-day threshold, maximum subsequent dry spell, and follow-up length;
-- behavior for incomplete follow-up windows and missing days;
-- treatment of multiple apparent onsets and district/grid variation;
-- sensitivity at nearby thresholds and comparison with ground observations.
+## Conditional timing methods
 
-If comparing historical onset distributions, show the year-level points, period definitions, sample sizes, and a defensible effect size. A significance test alone does not establish a safe planting-window change. Do not display the guide's example “11 days later” as a measured result.
+The independent guide's seven-day/20-mm onset values are examples, not validated Bangladesh thresholds; its sample function omits the stated dry-spell condition. Before using onset, define season/year, thresholds, windows, follow-up/dry-spell criteria, missingness, incomplete follow-up, multiple onsets and local observation/sensitivity tests. The example 11-day shift is not a finding.
 
-## Growing degree days
+GDD needs crop/variety base temperature, stage convention and missingness rules. max(0, (Tmax + Tmin) / 2 - Tbase), in degree-days, is a candidate convention rather than an approved local rule. Neither onset nor GDD is compulsory just to appear advanced.
 
-Specify the crop-specific base temperature and temperature convention with an agronomist. A common candidate calculation is `max(0, (Tmax + Tmin) / 2 − Tbase)` for each day, accumulated over a defined crop stage; this is not yet a validated rice or rotation rule for the pilot. Units are degree-days (°C·day). Compare against local phenology and state how missing temperatures are handled.
+## Reproduction and review
 
-## Minimum validation before connecting the frontend
-
-- Unit tests for science functions, including missing data and seasonal boundaries.
-- Sensitivity results for chosen thresholds and preference weights.
-- A sourced pilot dataset with a reproducible acquisition/processing command and manifest.
-- At least one comparison against local agronomic knowledge or observations.
-- Bangla and English review of the resulting advice on a phone.
-
-The current `prototype/` scores are useful for testing interface flows, but no one should treat them as validated crop recommendations.
+Version evidence, executable rules, transforms and ranking. Canonical inputs plus those identities produce stable fingerprints; timestamps are separate. Receipts preserve limitations and reproduce results. Test actual science/source gates; obtain appropriate local review of active rules. Workflow-helper tests are not agronomic validation. Wider soil modeling needs new inputs and review under [future scope](FUTURE_ROADMAP.md).

@@ -1,0 +1,5 @@
+# Source pipeline rules
+
+Follow root AGENTS. These folders currently contain design documentation, not a working service. Acquisition owns network/QA/manifests; compute owns deterministic science; API owns validation/transport/source gating. No MVP runtime AI in `agents/`.
+
+For source work read DATA_SOURCES; for science read METHODOLOGY and VALIDATION; for transport read the draft API_CONTRACT. Read MVP_SCOPE for mandatory work and FUTURE_ROADMAP only for an activated future task. Read only the assigned task and relevant sections. Keep unknowns, hard constraints, provenance, chronological three-future-step semantics and offline scientific boundaries. No fertilizer/nutrient-depletion model or runtime AI in MVP. Baseline/fallow, two distinct alternatives, equal previous/current IDs, quick-check parity and result receipts follow API_CONTRACT. No invented data, thresholds, yields or confidence. Add meaningful tests with the implementation; do not claim backend launch commands or datasets exist early.

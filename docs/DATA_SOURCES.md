@@ -1,6 +1,6 @@
 # Data sources and provenance
 
-**Integration status: planned.** The current app uses illustrative values, not the datasets below. Listing a dataset here does not mean it has been downloaded, processed, or used in a result.
+**Integration status: planned.** [MVP_SCOPE](MVP_SCOPE.md) requires one reviewed pilot POWER record; [FUTURE_ROADMAP](FUTURE_ROADMAP.md) defers extra products until separately activated. The current app uses illustrative values, not the datasets below. Listing a dataset here does not mean it has been downloaded, processed, or used in a result.
 
 | Source | Intended role | Current status and caveat |
 | --- | --- | --- |
@@ -24,4 +24,20 @@ quality_flags_and_missing_values, processing_steps, code_revision
 license_or_reuse_terms, checksum
 ```
 
-Carry source IDs and a `data_mode` (`cache` or `fixture`) into every API result and the visible interface. Never label an illustrative UI constant as `fixture` or `NASA data`.
+Carry source IDs and a `data_mode` (`cache`, `verified_fixture`, or `unavailable`) into every API result and the visible interface. Never label an illustrative UI constant as `fixture` or `NASA data`.
+
+## Pilot catalogue and useful unknowns
+
+Convert exact permitted BAMIS/BARC/BARI/BRRI/DAE/SRDI/FAO references into reviewed regional crop-season rules, with essentiality and pass/fail/caution/unknown semantics. Source names alone are not validated rules. Obtain appropriate local review; record source dates, measurement versus estimate, units and applicability. Current and previous crop IDs may match. No compulsory fertilizer history, nutrient-depletion model or measured soil-restoration percentage in MVP.
+
+Story arrays and the historical replay reuse versioned source evidence, period definitions and missingness. Fingerprints use normalized input and source/catalogue/method identities; a hash is not scientific certification. Extra missions are not first-release dependencies.
+
+## Administrative intake directory (not scientific evidence)
+
+The mounted intake uses the [Bangladesh National Portal district list](https://bangladesh.gov.bd/views/district-list), checked on 30 October 2026, for 64 district memberships/Bangla names across eight divisions. Local directory version: `bd-national-portal-districts-2026-10-30`, in `prototype/public/reference/intake.js`. English labels are transliterations; `bd-district-*` identifiers are application-owned, not official geocodes. Division counts: Dhaka 13, Khulna 10, Chattogram 11, Rajshahi 8, Sylhet 4, Rangpur 8, Mymensingh 4, Barishal 6. The directory includes no boundaries, centroids, field coordinates, crop calendars or evidence-coverage claims. It is embedded locally so district selection needs no map or scientific network call. Review source changes before changing IDs; names are reference facts, and no map tiles or government logos are copied. This administrative integration does not change the planned status of NASA/agronomic sources above.
+
+## Integrated administrative boundaries (location only)
+
+[geoBoundaries gbOpen BGD ADM2 metadata](https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM2/) identifies `BGD-ADM2-16705992`, BBS / OCHA ROAP sources and CC BY 3.0 IGO. The downloaded simplified geometry is pinned to upstream revision `9469f09`; metadata declares represented year 2020, while its source link says as of 2015. This discrepancy and unknown positional accuracy remain explicit. [Local snapshot, aliases and rebuild](../data/admin/README.md) retain the source, retrieval timestamp, license and checksums. [Runtime manifest](../prototype/public/reference/data/district-boundaries.manifest.json) records processing, version `BGD-ADM2-16705992@9469f09-local1`, 64 features and 38,112 vertices.
+
+The runtime asset is 1,494,403 bytes (507,697 bytes with deterministic gzip). Loading and integrity checking are lazy for map selection/saved point rechecking; district-only intake needs neither geometry nor the MapLibre code chunk. Coordinates are unchanged from upstream simplified geometry. No scientific network acquisition runs on intake. OpenFreeMap supplies remote street/reference tiles with visible OpenFreeMap, OpenMapTiles and OpenStreetMap attribution; it is not satellite imagery or a local offline map. Administrative geometry gives location context only, never national advice coverage or surveyed field precision.

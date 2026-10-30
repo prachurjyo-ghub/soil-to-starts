@@ -1,33 +1,40 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
 
+function subscribePreferences(callback) {
+  window.addEventListener("storage", callback);
+  window.addEventListener("sts-preferences", callback);
+  return () => {
+    window.removeEventListener("storage", callback);
+    window.removeEventListener("sts-preferences", callback);
+  };
+}
+
+function storedPreference(key) {
+  try { return localStorage.getItem(key); } catch { return null; }
+}
+
 export default function ThemeLanguage({ compact = false }) {
-  const [dark, setDark] = useState(false);
-  const [bangla, setBangla] = useState(false);
+  const dark = useSyncExternalStore(subscribePreferences, () => storedPreference("sts-theme") === "dark", () => false);
+  const bangla = useSyncExternalStore(subscribePreferences, () => storedPreference("sts-lang") === "bn", () => false);
 
   useEffect(() => {
-    const stored = localStorage.getItem("sts-theme");
-    const next = stored === "dark";
-    setDark(next);
-    document.documentElement.dataset.theme = next ? "dark" : "light";
-    setBangla(localStorage.getItem("sts-lang") === "bn");
-  }, []);
+    document.documentElement.dataset.theme = dark ? "dark" : "light";
+    document.documentElement.lang = bangla ? "bn" : "en";
+  }, [dark, bangla]);
 
   function toggleTheme() {
-    const next = !dark;
-    setDark(next);
-    document.documentElement.dataset.theme = next ? "dark" : "light";
-    localStorage.setItem("sts-theme", next ? "dark" : "light");
+    localStorage.setItem("sts-theme", dark ? "light" : "dark");
+    window.dispatchEvent(new Event("sts-preferences"));
   }
 
   function toggleLanguage() {
-    const next = !bangla;
-    setBangla(next);
-    document.documentElement.lang = next ? "bn" : "en";
-    localStorage.setItem("sts-lang", next ? "bn" : "en");
-    window.dispatchEvent(new CustomEvent("sts-language", { detail: next ? "bn" : "en" }));
+    const language = bangla ? "en" : "bn";
+    localStorage.setItem("sts-lang", language);
+    window.dispatchEvent(new Event("sts-preferences"));
+    window.dispatchEvent(new CustomEvent("sts-language", { detail: language }));
   }
 
   return (

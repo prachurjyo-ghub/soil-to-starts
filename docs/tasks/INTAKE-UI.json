@@ -1,0 +1,249 @@
+{
+  "id": "INTAKE-UI",
+  "title": "Implement nationwide required farmer intake without scientific recommendations",
+  "owner": "Fardin",
+  "collaborators": [],
+  "phase": "G0-PREP",
+  "status": "in_review",
+  "depends_on": [],
+  "updated_at": "2026-10-30T16:46:46Z",
+  "acceptance": [
+    {
+      "id": "a1",
+      "text": "Verify the 64-district directory and implement testable required-answer normalization.",
+      "met": true,
+      "evidence": "Local National Portal directory checked on 2026-10-30: 64 distinct application IDs across 8 divisions, EN/BN names and source version; intake.js validates and normalizes required/dependent inputs with 17 passing Node tests.",
+      "state": "done",
+      "blockers": [],
+      "owner": "Fardin",
+      "depends_on": [],
+      "how": "Verify National Portal district membership/names; create stable application IDs and shared validation/normalization with explicit absence states. No coordinate or scientific defaults.",
+      "files": [
+        "prototype/public/reference/intake.js",
+        "tests/intake.test.cjs",
+        "docs/DATA_SOURCES.md"
+      ],
+      "verification": "Reject every missing/malformed required/dependent answer; verify 64 unique districts, date consistency, chronology and separate normalized history/baseline/provenance."
+    },
+    {
+      "id": "a2",
+      "text": "Replace the mounted wizard with bilingual accessible intake and honest summary, preserving drafts and separate demo mode.",
+      "met": true,
+      "evidence": "Mounted static workspace imports the shared intake modules. Six-question EN/BN form, adjacent/summary errors, genuine draft/submission separation, input-only unavailable summary and explicit separate demo are implemented. UI-controller submit tests pass; native Chrome checked blank errors, district search/keyboard selection, language switching and 400x748 mobile layout. Detailed limits in docs/INTAKE_QA.md.",
+      "state": "done",
+      "blockers": [],
+      "owner": "Fardin",
+      "depends_on": [
+        "a1"
+      ],
+      "how": "Use the actual reference-script workspace, six ordered questions, explicit priority, accessible errors, local genuine drafts and submitted summary. Keep demo mode separate.",
+      "files": [
+        "prototype/public/reference/intake-ui.js",
+        "prototype/public/reference/workspace.js",
+        "prototype/public/reference/workspace-fixes.css",
+        "prototype/reference/workspace-preview.html"
+      ],
+      "verification": "Mounted form uses shared validator; no mock rankings for intake. Check EN/BN, keyboard/native selection, error focus and mobile wrapping."
+    },
+    {
+      "id": "a3",
+      "text": "Verify intake behavior, lint, build and workflow records; document scientific dependencies.",
+      "met": true,
+      "evidence": "18 Node intake/UI-controller tests, 46 Python workflow tests, three changed-script Node syntax checks, npm lint, webpack production build and workflow check pass. Latest contract/UI/source/task records updated, one Fardin command logged; scientific gates and human review remain unaccepted. Browser checks and not-claimed checks recorded in docs/INTAKE_QA.md.",
+      "owner": "Fardin",
+      "depends_on": [
+        "a2"
+      ],
+      "blockers": [],
+      "how": "Run targeted Node tests/syntax checks, configured lint/build and workflow tests/check; update intake specifications and record the one authorized Fardin instruction.",
+      "files": [
+        "docs/API_CONTRACT.md",
+        "docs/UI_UX_SPEC.md",
+        "docs/MVP_SCOPE.md",
+        "docs/PRODUCT_SPEC.md",
+        "docs/INTAKE_QA.md",
+        "docs/tasks/INTAKE-UI.json",
+        "docs/tasks/G1D.json",
+        "prototype/package.json",
+        "prototype/README.md"
+      ],
+      "verification": "Actual results and limits are recorded, views regenerated, pending G0/G1D/scientific gates stay unaccepted and no commit/push/deploy occurs.",
+      "state": "done"
+    }
+  ],
+  "checks": [
+    {
+      "command": "node --check prototype/public/reference/intake.js",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. ",
+      "run_at_utc": "2026-10-30T16:03:04Z"
+    },
+    {
+      "command": "node --check prototype/public/reference/intake-ui.js",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. ",
+      "run_at_utc": "2026-10-30T16:09:52Z"
+    },
+    {
+      "command": "node --check prototype/public/reference/workspace.js",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. ",
+      "run_at_utc": "2026-10-30T16:03:04Z"
+    },
+    {
+      "command": "npm run test:intake",
+      "cwd": "prototype",
+      "result": "passed",
+      "evidence": "Exit 0. t; invalid edits never replace the last valid submission (0.52ms)\n✔ live form submission uses shared validation, persists only valid answers and renders unavailable summary (0.91575ms)\n✔ English/Bangla render keeps IDs unchanged and escapes restored user text (0.722333ms)\n✔ actual UI submit handler requires pin confirmation and supports either method without stale data (9.707583ms)\n✔ pinned source/license/checksums and all 64 exact boundary mappings agree (9.455375ms)\n✔ Polygon, holes, MultiPolygon and numerical border handling (0.190958ms)\n✔ outside, unresolved holes/gaps, overlap and shared borders never snap to a district (0.188958ms)\n✔ invalid, non-finite and reversed longitude/latitude inputs are rejected (0.061709ms)\n✔ 64 independent source-derived interiors resolve and normalize to their explicit district IDs (15.358375ms)\n✔ new/moved pin needs confirmation and stale district, source version or geometry cannot pass (0.394875ms)\n✔ method switching clears inactive coordinates/districts and district search needs no boundaries (0.127417ms)\n✔ genuine v1 district answers migrate to v2 without coordinates or demo defaults (0.34ms)\n✔ boundary loader rejects missing/duplicate mappings and unsupported or broken rings (12.853708ms)\n✔ map rerenders reuse one instance/listeners and preserve pin/answers; leaving removes resources (14.140958ms)\n✔ WebGL and boundary-network failure retain answers and leave district fallback independent (7.372625ms)\n✔ tile errors and lost WebGL context surface fallback without destroying other answers (7.753334ms)\nℹ tests 31\nℹ suites 0\nℹ pass 31\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 184.246083\nnpm notice run soil-to-stars-prototype@1.0.0 test:intake\nnpm notice run node --test ../tests/intake.test.cjs ../tests/location.test.cjs",
+      "run_at_utc": "2026-10-30T16:08:31Z"
+    },
+    {
+      "command": "npm run lint",
+      "cwd": "prototype",
+      "result": "passed",
+      "evidence": "Exit 0. npm notice run soil-to-stars-prototype@1.0.0 lint\nnpm notice run eslint .",
+      "run_at_utc": "2026-10-30T16:03:06Z"
+    },
+    {
+      "command": "npm run build -- --webpack",
+      "cwd": "prototype",
+      "result": "passed",
+      "evidence": "Exit 0. ▲ Next.js 16.4.3 (webpack)\n✓ Running next.config.mjs took 7ms\n\n  Creating an optimized production build ...\n✓ Compiled successfully in 721ms\n  Running TypeScript ...\n  Finished TypeScript in 1ms ...\n  Collecting page data using 5 workers ...\n  Generating static pages using 5 workers (0/4) ...\n  Generating static pages using 5 workers (1/4) \n  Generating static pages using 5 workers (2/4) \n  Generating static pages using 5 workers (3/4) \n✓ Generating static pages using 5 workers (4/4) in 273ms\n  Finalizing page optimization ...\n  Collecting build traces ...\n\nRoute (app)\n┌ ○ /\n├ ○ /_not-found\n└ ○ /workspace\n\n\n○  (Static)  prerendered as static content\n\nnpm notice run soil-to-stars-prototype@1.0.0 build\nnpm notice run next build --webpack",
+      "run_at_utc": "2026-10-30T16:03:12Z"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tests -p 'test_*.py' -v",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. sts) ... ok\ntest_failed_or_unrun_checks_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_focused_member_status_succeeds (test_workflow.WorkflowTests) ... ok\ntest_log_refuses_long_or_multiline_summary (test_workflow.WorkflowTests) ... ok\ntest_manual_active_status_cannot_bypass_dependencies (test_workflow.WorkflowTests) ... ok\ntest_member_logs_are_separate_and_pipe_safe (test_workflow.WorkflowTests) ... ok\ntest_passing_check_does_not_automatically_accept_task (test_workflow.WorkflowTests) ... ok\ntest_pending_or_self_review_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_professional_docs_have_small_entrypoint_budgets (test_workflow.WorkflowTests) ... ok\ntest_prompt_amend_updates_outcome_without_extra_entry (test_workflow.WorkflowTests) ... ok\ntest_prompt_rotation_at_fifty (test_workflow.WorkflowTests) ... ok\ntest_readonly_check_detects_stale_view (test_workflow.WorkflowTests) ... ok\ntest_real_git_ancestry_proof (test_workflow.WorkflowTests) ... ok\ntest_render_is_idempotent (test_workflow.WorkflowTests) ... ok\ntest_reopening_checklist_prerequisite_reopens_done_children (test_workflow.WorkflowTests) ... ok\ntest_start_blocked_task_does_not_modify_records (test_workflow.WorkflowTests) ... ok\ntest_unchecked_acceptance_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_unknown_dependency_rejected (test_workflow.WorkflowTests) ... ok\ntest_unmerged_commit_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_verify_accepts_explicit_project_subdirectory (test_workflow.WorkflowTests) ... ok\ntest_verify_executes_check_and_records_real_failure (test_workflow.WorkflowTests) ... ok\ntest_verify_refuses_directory_outside_project (test_workflow.WorkflowTests) ... ok\n\n----------------------------------------------------------------------\nRan 46 tests in 0.326s\n\nOK",
+      "run_at_utc": "2026-10-30T16:08:32Z"
+    },
+    {
+      "command": "python3 scripts/workflow.py check",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. Workflow records valid: 28 tasks, 7 prompts. Recorded failed product checks remain visible; this is not a product test pass.",
+      "run_at_utc": "2026-10-30T16:08:33Z"
+    }
+  ],
+  "blockers": [],
+  "issues": [],
+  "evidence": [
+    "docs/INTAKE_QA.md records repeatable checks and observed browser behavior; no independent human approval or main-branch delivery is claimed."
+  ],
+  "history": [
+    {
+      "at": "2026-10-30T14:57:12Z",
+      "note": "Checklist a1: in_progress",
+      "evidence": ""
+    },
+    {
+      "at": "2026-10-30T15:04:53Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p 'test_*.py' -v"
+    },
+    {
+      "at": "2026-10-30T15:04:58Z",
+      "note": "Check passed: npm run build -- --webpack"
+    },
+    {
+      "at": "2026-10-30T15:07:08Z",
+      "note": "Check passed: npm run lint"
+    },
+    {
+      "at": "2026-10-30T15:07:08Z",
+      "note": "Check passed: npm run test:intake"
+    },
+    {
+      "at": "2026-10-30T15:09:35Z",
+      "note": "Checklist a1: done",
+      "evidence": "Local National Portal directory checked on 2026-10-30: 64 distinct application IDs across 8 divisions, EN/BN names and source version; intake.js validates and normalizes required/dependent inputs with 17 passing Node tests."
+    },
+    {
+      "at": "2026-10-30T15:09:35Z",
+      "note": "Checklist a2: in_progress",
+      "evidence": ""
+    },
+    {
+      "at": "2026-10-30T15:15:43Z",
+      "note": "Check passed: node --check prototype/public/reference/intake.js"
+    },
+    {
+      "at": "2026-10-30T15:15:44Z",
+      "note": "Check passed: node --check prototype/public/reference/intake-ui.js"
+    },
+    {
+      "at": "2026-10-30T15:15:44Z",
+      "note": "Check passed: node --check prototype/public/reference/workspace.js"
+    },
+    {
+      "at": "2026-10-30T15:15:44Z",
+      "note": "Check passed: npm run test:intake"
+    },
+    {
+      "at": "2026-10-30T15:15:46Z",
+      "note": "Check passed: npm run lint"
+    },
+    {
+      "at": "2026-10-30T15:15:51Z",
+      "note": "Check passed: npm run build -- --webpack"
+    },
+    {
+      "at": "2026-10-30T15:16:13Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p 'test_*.py' -v"
+    },
+    {
+      "at": "2026-10-30T15:16:13Z",
+      "note": "Check passed: python3 scripts/workflow.py check"
+    },
+    {
+      "at": "2026-10-30T15:17:02Z",
+      "note": "Checklist a2: done",
+      "evidence": "Mounted static workspace imports the shared intake modules. Six-question EN/BN form, adjacent/summary errors, genuine draft/submission separation, input-only unavailable summary and explicit separate demo are implemented. UI-controller submit tests pass; native Chrome checked blank errors, district search/keyboard selection, language switching and 400x748 mobile layout. Detailed limits in docs/INTAKE_QA.md."
+    },
+    {
+      "at": "2026-10-30T15:17:03Z",
+      "note": "Checklist a3: done",
+      "evidence": "18 Node intake/UI-controller tests, 46 Python workflow tests, three changed-script Node syntax checks, npm lint, webpack production build and workflow check pass. Latest contract/UI/source/task records updated, one Fardin command logged; scientific gates and human review remain unaccepted. Browser checks and not-claimed checks recorded in docs/INTAKE_QA.md."
+    },
+    {
+      "at": "2026-10-30T15:17:03Z",
+      "from": "in_progress",
+      "to": "in_review",
+      "note": "Bounded local intake implementation and recorded checks are ready for independent review. No G0, broader G1D, scientific validation or delivery acceptance is claimed; no commit, push or deployment."
+    },
+    {
+      "at": "2026-10-30T15:34:40Z",
+      "from": "in_review",
+      "to": "in_progress",
+      "note": "Fardin authorized a shared-file location extension. Reopening local readiness for regression verification; prior evidence is retained and no human review is invented."
+    },
+    {
+      "at": "2026-10-30T16:09:55Z",
+      "note": "Shared-file regression uses the actual INTAKE-MAP command executions copied above: 31 intake/location and 46 workflow tests, syntax/lint/build/record checks pass. No separate run or independent approval is claimed. Full browser/map mobile review remains pending."
+    },
+    {
+      "at": "2026-10-30T16:09:55Z",
+      "from": "in_progress",
+      "to": "in_review",
+      "note": "Shared intake regression passed using recorded INTAKE-MAP executions; previous evidence retained. Independent human browser/mobile review remains outstanding and broader scientific gates remain pending."
+    },
+    {
+      "at": "2026-10-30T16:46:46Z",
+      "note": "Fardin authorized feature-branch commit/push delivery through DELIVERY-INTAKE. Branch feature/intake-location; independent review, browser/physical-phone testing and scientific gates remain pending."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": "feature/intake-location",
+  "issue": null,
+  "next_action": "Prachurjo independently reviews both location methods and all six questions, including full browser submissions, persistence and physical-phone behavior; Fardin coordinates accepted contracts/API later.",
+  "handoff": "Prachurjo independently reviews the mounted intake and EN/BN usability; Fardin coordinates G0/G1C transport integration only after accepted contracts. Saim/Maruf supply scientific evidence/rules through their existing gates.",
+  "scope": "mvp",
+  "purpose": "Fardin explicitly authorized independent local intake UI/validation in the current mounted reference route. Shared scientific API/schema agreement, source acquisition and G1D/G3 integration remain separate unaccepted work."
+}

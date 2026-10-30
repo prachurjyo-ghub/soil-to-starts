@@ -1,0 +1,173 @@
+{
+  "id": "G1B",
+  "title": "Source Bangladesh crop, soil and rotation rules",
+  "owner": "Maruf",
+  "collaborators": [],
+  "phase": "G1",
+  "status": "planned",
+  "depends_on": [
+    "G0-CONTRACT"
+  ],
+  "updated_at": "2026-10-30T10:00:13Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Select exact local agronomy sources",
+      "owner": "Maruf",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Identify Bangladesh-relevant BARC/BAMIS/BARI/BRRI/DAE/SRDI/FAO publications and rights.",
+      "files": [
+        "docs/DATA_SOURCES.md"
+      ],
+      "verification": "Exact documents, region/version/rights and limitations are recorded.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Create stable diverse crop metadata",
+      "owner": "Maruf",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Choose one pilot and a small reviewed crop-season catalogue; preserve category/family and annual/perennial metadata. Target 6–10 supported records without inventing any.",
+      "files": [
+        "data/catalog/"
+      ],
+      "verification": "Active records are source-gated; wider diversity/coverage remains a future expansion.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Encode regional sowing and harvest windows",
+      "owner": "Maruf",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Use cited windows/durations including cross-year seasons; do not guess dates.",
+      "files": [
+        "data/catalog/"
+      ],
+      "verification": "Every active calendar/duration has region applicability and source evidence.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s04",
+      "text": "Encode soil and water constraints",
+      "owner": "Maruf",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Preserve unknown soil values and validate any pH/drainage/salinity/water thresholds.",
+      "files": [
+        "data/catalog/"
+      ],
+      "verification": "Unsupported crop-region/soil conditions do not silently pass advice gates.",
+      "depends_on": [
+        "s03"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s05",
+      "text": "Encode sequence/family rules",
+      "owner": "Maruf",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Encode locally applicable host/family cautions and qualified soil-management traits with source/essentiality; no fertilizer, NPK depletion or numerical restoration model.",
+      "files": [
+        "data/catalog/",
+        "docs/METHODOLOGY.md"
+      ],
+      "verification": "A family change does not automatically certify disease removal; repeated historical crops remain representable.",
+      "depends_on": [
+        "s04"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s06",
+      "text": "Test executable rule behavior",
+      "owner": "Maruf",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Review rule parsing, seasons, unknowns and conflicting inputs with Fardin/Saim.",
+      "files": [
+        "tests/",
+        "data/catalog/"
+      ],
+      "verification": "Reference cases prove unsupported/infeasible candidates are not rescued by preferences.",
+      "depends_on": [
+        "s05"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s07",
+      "text": "Review, merge and hand off catalog",
+      "owner": "Maruf",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Record validation status for each active crop-region rule and the contract revision.",
+      "files": [
+        "docs/tasks/G1B.json"
+      ],
+      "verification": "G2 receives a reviewed catalog, exclusions and explicit evidence gaps.",
+      "depends_on": [
+        "s06",
+        "s08"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s08",
+      "text": "Obtain appropriate local review of active pilot rules",
+      "owner": "Maruf",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Arrange documented review by an appropriately qualified local agronomic reviewer; resolve gaps or keep affected rules inactive. Do not equate student code review with certification.",
+      "files": [
+        "data/catalog/",
+        "docs/VALIDATION.md"
+      ],
+      "verification": "Reviewer scope/evidence is genuine; unavailable review remains a visible release dependency.",
+      "depends_on": [
+        "s06"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-10-30T10:00:13Z",
+      "note": "Rebased planned work to the mandatory-now/future specifications. No product feature, review or delivery is marked complete."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Review G0 rules/schema now; source the minimum crop catalog after G0 is accepted.",
+  "handoff": "Fardin consumes active rules in G2; Saim reviews climate alignment; unsupported cases remain explicit.",
+  "purpose": "Make recommended crops and exclusions depend on documented local agronomy rather than plausible guesses.",
+  "scope": "mvp"
+}

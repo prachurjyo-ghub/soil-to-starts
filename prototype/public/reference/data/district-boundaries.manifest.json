@@ -1,0 +1,38 @@
+{
+  "id": "geoboundaries-bgd-adm2",
+  "version": "BGD-ADM2-16705992@9469f09-local1",
+  "boundary_id": "BGD-ADM2-16705992",
+  "represented_year": "2020",
+  "upstream_revision": "9469f09",
+  "metadata_url": "https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM2/",
+  "download_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGD/ADM2/geoBoundaries-BGD-ADM2_simplified.geojson",
+  "lfs_download_url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/BGD/ADM2/geoBoundaries-BGD-ADM2_simplified.geojson",
+  "source_providers": "Bangladesh Bureau of Statistics (BBS), OCHA ROAP",
+  "upstream_source_url": "https://data.humdata.org/dataset/administrative-boundaries-of-bangladesh-as-of-2015",
+  "source_build_date": "Dec 12, 2023",
+  "retrieved_at_utc": "2026-10-30T15:35:12Z",
+  "source_sha256": "7dbdb186f3b8af10417147a99859196fcd89c619fb5c6ac3804251fb6b449b6a",
+  "source_bytes": 1686112,
+  "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/igo/",
+  "attribution": "geoBoundaries gbOpen Bangladesh ADM2; Bangladesh Bureau of Statistics (BBS), OCHA ROAP; CC BY 3.0 IGO",
+  "processed_sha256": "9503a358ddcb99714db5866ef049e7ddea0d5fd6e05a0d3719a6553b3953c01a",
+  "processed_bytes": 1494403,
+  "gzip_bytes": 507697,
+  "feature_count": 64,
+  "vertex_count": 38112,
+  "coordinate_order": "longitude, latitude (GeoJSON)",
+  "processing": [
+    "Use pinned upstream simplified geometry; verify its Git LFS SHA-256.",
+    "Map every source shape ID/name through the explicit 64-row alias ledger; no fuzzy matching.",
+    "Preserve all coordinate values, polygons, multipolygons and holes; no further simplification/rounding.",
+    "Replace properties with source identity/application ID, add per-feature bbox, sort by ID, minify JSON.",
+    "Use the SAME local geometry for display and containment; no separate coarse country mask."
+  ],
+  "limitations": [
+    "Administrative reference, not a field survey or scientific coverage.",
+    "Upstream metadata says represented year 2020; its source URL refers to boundaries as of 2015. Current legal alignment is not established.",
+    "Upstream simplification tolerance/positional accuracy is unspecified here; coastal gaps/islands and border uncertainty can remain.",
+    "Border/overlap/unresolved points require correction or district search; never snap to the nearest district."
+  ]
+}

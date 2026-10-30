@@ -1,0 +1,101 @@
+{
+  "id": "G3-STORY",
+  "title": "Add the compact verified climate story",
+  "owner": "Prachurjo",
+  "collaborators": [
+    "Saim",
+    "Maruf",
+    "Hla",
+    "Nadim"
+  ],
+  "phase": "G3",
+  "status": "planned",
+  "depends_on": [
+    "G3"
+  ],
+  "updated_at": "2026-10-30T10:00:13Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Agree four scenes and source-backed captions",
+      "owner": "Hla",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Use place/record, heat/rain, reviewed calendar implication and Plan My Field; Saim/Maruf review each claim.",
+      "files": [
+        "docs/UI_UX_SPEC.md",
+        "prototype/"
+      ],
+      "verification": "No invented climate trend or nutrient change; conceptual illustrations are labelled.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Consume verified climate-story payloads",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Use G1A arrays/statistics with units, periods, missingness and source IDs; preserve no-clear-shift findings.",
+      "files": [
+        "prototype/"
+      ],
+      "verification": "No on-scroll scientific calculations or direct NASA calls.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Implement accessible motion and location handoff",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Keep CTA/skip/sources, EN/BN, static reduced-motion path and selected location across workspace entry; Nadim supports motion.",
+      "files": [
+        "prototype/"
+      ],
+      "verification": "Phone/keyboard/reduced-motion paths remain usable without watching the full story.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s04",
+      "text": "Review real story behavior and hand off",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Saim checks values; Hla checks meaning; Fardin checks status and reproduction.",
+      "files": [
+        "docs/tasks/G3-STORY.json"
+      ],
+      "verification": "Record actual evidence/review/merge; no claim that planned data were measured.",
+      "depends_on": [
+        "s03"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Agree four scenes and source-backed captions",
+  "handoff": "Record reviewed outputs, exact revision and next consumer before acceptance.",
+  "purpose": "Connect observed regional changes to the same field-planning evidence without delaying the first scientific slice."
+}

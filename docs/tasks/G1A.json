@@ -1,0 +1,176 @@
+{
+  "id": "G1A",
+  "title": "Acquire and validate the first NASA POWER evidence sample",
+  "owner": "Saim",
+  "collaborators": [],
+  "phase": "G1",
+  "status": "planned",
+  "depends_on": [
+    "G0-CONTRACT"
+  ],
+  "updated_at": "2026-10-30T10:00:13Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Select the first POWER subset",
+      "owner": "Saim",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Agree one supported pilot, exact POWER rainfall/temperature parameters, suitable historical period and story/replay needs; no additional mission required.",
+      "files": [
+        "src/acquire/",
+        "docs/DATA_SOURCES.md"
+      ],
+      "verification": "Selection and limitations are documented; 2001–2025 is conditional on coverage.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Save the authentic raw response",
+      "owner": "Saim",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Implement bounded timeout/error handling and a reproducible acquisition command.",
+      "files": [
+        "src/acquire/",
+        "cache/"
+      ],
+      "verification": "Raw bytes are authentic; no credential is committed.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Validate dates, units and missingness",
+      "owner": "Saim",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Check fill codes, time standard, expected/leap-day counts and native/output grid scale.",
+      "files": [
+        "src/acquire/",
+        "tests/"
+      ],
+      "verification": "QA tests and an actual quality report identify gaps without silently filling them.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s04",
+      "text": "Normalize and manifest the subset",
+      "owner": "Saim",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Write a versioned normalized table plus checksum/source/license/processing metadata.",
+      "files": [
+        "cache/",
+        "docs/DATA_SOURCES.md"
+      ],
+      "verification": "Another teammate can reproduce the exact normalized bytes.",
+      "depends_on": [
+        "s03"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s05",
+      "text": "Compute baseline climate aggregates",
+      "owner": "Saim",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Use deterministic daily/monthly/seasonal methods with documented missingness.",
+      "files": [
+        "src/compute/",
+        "tests/"
+      ],
+      "verification": "Reference cases verify units, sums/means and missing-day behavior.",
+      "depends_on": [
+        "s04"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s06",
+      "text": "Freeze a permitted demo fixture",
+      "owner": "Saim",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Commit only a small redistribution-permitted subset with source manifest.",
+      "files": [
+        "demo_fixtures/"
+      ],
+      "verification": "Fixture bytes/source/checksum and replay commands are reviewable.",
+      "depends_on": [
+        "s05"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s07",
+      "text": "Cross-review and hand off evidence",
+      "owner": "Saim",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Fardin reproduces outputs; Maruf checks agricultural applicability.",
+      "files": [
+        "docs/tasks/G1A.json"
+      ],
+      "verification": "Reviewed/merged evidence and schema version are recorded for G2/G3.",
+      "depends_on": [
+        "s06",
+        "s08"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s08",
+      "text": "Prepare versioned chart and replay payloads",
+      "owner": "Saim",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Predeclare comparison periods/stress selection; export real arrays, units, sample counts, missingness and method/source identities.",
+      "files": [
+        "src/compute/",
+        "docs/DATA_SOURCES.md"
+      ],
+      "verification": "Charts/replay refer to the same verified evidence; no trend or forecast is invented.",
+      "depends_on": [
+        "s05"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-10-30T10:00:13Z",
+      "note": "Rebased planned work to the mandatory-now/future specifications. No product feature, review or delivery is marked complete."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Review G0 contracts now; acquire the first evidence slice after G0 is accepted.",
+  "handoff": "Fardin consumes evidence in G2; Prachurjo consumes approved chart arrays in G3; Maruf reviews applicability.",
+  "purpose": "Provide authentic reproducible NASA climate context rather than illustrative frontend values.",
+  "scope": "mvp"
+}

@@ -1,0 +1,202 @@
+{
+  "id": "G2",
+  "title": "Deliver the sourced baseline/alternatives engine and API",
+  "owner": "Fardin",
+  "collaborators": [
+    "Saim",
+    "Maruf"
+  ],
+  "phase": "G2",
+  "status": "planned",
+  "depends_on": [
+    "G1A",
+    "G1B",
+    "G1C"
+  ],
+  "updated_at": "2026-10-30T10:00:13Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Apply deterministic hard exclusions",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Consume accepted climate/rules and field inputs; preserve unknown evidence.",
+      "files": [
+        "src/compute/"
+      ],
+      "verification": "Water/soil/season exclusions precede every preference score.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Generate feasible next-season windows",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Start after current harvest and handle cross-year seasons/duration/overlap.",
+      "files": [
+        "src/compute/",
+        "tests/"
+      ],
+      "verification": "Boundary cases reject impossible chronology.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Search three-step future sequences",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Search exactly three future main-crop steps after current harvest where supported; retain distinct alternatives and stop honestly when evidence is insufficient.",
+      "files": [
+        "src/compute/"
+      ],
+      "verification": "Insufficient evidence returns incomplete without invented filler crops.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s04",
+      "text": "Rank and explain feasible alternatives",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Apply G0-approved preset orders and stable tie-breaking over supported indicators; compare baseline and two distinct alternatives on the same horizon. Totals are optional.",
+      "files": [
+        "src/compute/",
+        "docs/METHODOLOGY.md"
+      ],
+      "verification": "No missing criterion is silently scored/reweighted; priorities never bypass exclusions.",
+      "depends_on": [
+        "s03",
+        "s07"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s05",
+      "text": "Serve the sourced result through the API",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Serve bundle/plan statuses, common horizon, indicator/check ledger and method/source/catalogue identities with canonical input/result fingerprints.",
+      "files": [
+        "src/api/",
+        "tests/"
+      ],
+      "verification": "A provenance gate rejects unsupported success and no NASA fetch occurs during requests.",
+      "depends_on": [
+        "s04",
+        "s08"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s06",
+      "text": "Reproduce and obtain domain review",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Saim/Maruf check real inputs and outputs; record relevant tests and merge.",
+      "files": [
+        "docs/tasks/G2.json"
+      ],
+      "verification": "One scientific vertical slice is reproducible before G3 integration.",
+      "depends_on": [
+        "s05",
+        "s09"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s07",
+      "text": "Assess the existing-practice baseline",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Evaluate usual crop/fallow segments on the common horizon; retain infeasible baseline findings and separate baseline from past history.",
+      "files": [
+        "src/compute/",
+        "tests/"
+      ],
+      "verification": "Baseline repeats/fallow remain visible; fewer than two supported alternatives leaves comparison incomplete.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s08",
+      "text": "Return source-linked checks and why-not ledger",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Emit stable rule/source IDs, pass/fail/caution/unknown and missing-information actions with translated label keys.",
+      "files": [
+        "src/compute/",
+        "src/api/"
+      ],
+      "verification": "No generated prose or fabricated numeric cause; every exclusion traces to a reviewed rule.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s09",
+      "text": "Expose the same-engine intended-crop check",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Reuse validation, calendars and constraint functions; assess a proposed crop/window without building a classifier or diagnosing growing crops.",
+      "files": [
+        "src/compute/",
+        "src/api/",
+        "tests/"
+      ],
+      "verification": "The same crop/input receives the same checks in planner and quick assessment.",
+      "depends_on": [
+        "s02",
+        "s08"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-10-30T10:00:13Z",
+      "note": "Rebased planned work to the mandatory-now/future specifications. No product feature, review or delivery is marked complete."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Wait for accepted G1 evidence, rules and API contracts; then integrate one vertical slice.",
+  "handoff": "Prachurjo consumes the reviewed API in G3; Saim/Maruf retain the evidence/domain review trail.",
+  "purpose": "Turn authentic climate and local agronomy into a tested feasible three-future-crop decision.",
+  "scope": "mvp"
+}

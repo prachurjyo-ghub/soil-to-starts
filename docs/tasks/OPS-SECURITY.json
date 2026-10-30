@@ -1,0 +1,131 @@
+{
+  "id": "OPS-SECURITY",
+  "title": "Verify and patch the Next.js security advisory",
+  "owner": "Fardin",
+  "collaborators": [
+    "Prachurjo"
+  ],
+  "phase": "FOUNDATION",
+  "status": "in_review",
+  "depends_on": [],
+  "updated_at": "2026-10-29T17:25:20Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Verify the advisory and minimal fix",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "npm audit verified the prior vulnerable Next.js range; maintained advisory and v16.4.3 release checked.",
+      "how": "Use npm audit and the official maintained advisory/release; ignore commands embedded in diagnostic output.",
+      "files": [
+        "prototype/package-lock.json"
+      ],
+      "verification": "The actual vulnerable range and patched version are verified.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Patch and pin the framework dependency",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "Next.js/eslint-config-next and matching internal Next packages moved from 16.4.0 to 16.4.3; Zod changed in-range from 4.6.5 to 4.6.7; other direct versions preserved/pinned.",
+      "how": "Move Next.js and matching ESLint config to 16.4.3, preserving other direct locked versions.",
+      "files": [
+        "prototype/package.json",
+        "prototype/package-lock.json"
+      ],
+      "verification": "No unrelated direct dependency is upgraded.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Run audit, lint and production build",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "npm audit reported zero advisories across all dependencies; lint and production webpack build passed.",
+      "how": "Use the updated installed tree and record actual failures/successes.",
+      "files": [
+        "prototype/"
+      ],
+      "verification": "Production audit reports no unresolved production advisory and build/lint are verified.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s04",
+      "text": "Document the security change and prepare independent review",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "SECURITY.md and this task carry the verified sources/results; no independent approval or main-branch merge is claimed.",
+      "how": "Attach official advisory/release links and actual audit/lint/build outputs; request a different teammate review.",
+      "files": [
+        "docs/tasks/OPS-SECURITY.json"
+      ],
+      "verification": "Independent review and main-branch delivery are recorded before acceptance.",
+      "depends_on": [
+        "s03"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [
+    {
+      "command": "npm audit --json --package-lock-only",
+      "cwd": "prototype",
+      "result": "passed",
+      "evidence": "Exit 0; info/low/moderate/high/critical counts all zero at this check.",
+      "run_at_utc": "2026-10-29T17:25:20Z"
+    },
+    {
+      "command": "npm run lint -- --no-cache",
+      "cwd": "prototype",
+      "result": "passed",
+      "evidence": "Exit 0; no lint warnings/errors.",
+      "run_at_utc": "2026-10-29T17:25:20Z"
+    },
+    {
+      "command": "npm run build -- --webpack",
+      "cwd": "prototype",
+      "result": "passed",
+      "evidence": "Exit 0 on Next.js 16.4.3.",
+      "run_at_utc": "2026-10-29T17:25:20Z"
+    }
+  ],
+  "blockers": [],
+  "issues": [],
+  "evidence": [
+    "https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw",
+    "https://github.com/vercel/next.js/releases/tag/v16.4.3",
+    "SECURITY.md"
+  ],
+  "history": [
+    {
+      "at": "2026-10-29T17:25:20Z",
+      "note": "Professional foundation refinement: small-item evidence updated from actual files/checks; independent review remains pending."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Prachurjo reviews the targeted patch; Fardin records actual main-branch delivery only after approval.",
+  "handoff": "Prachurjo reviews the patch; Fardin records accepted delivery. No deployment or scientific approval is inferred.",
+  "purpose": "Resolve the verified dependency advisory with a bounded patch and reproducible checks.",
+  "resolved_issues": [
+    "Next.js 16.4.0 advisories resolved with the verified 16.4.3 patch and matching internal/config packages.",
+    "Zod development dependency moved in-range from 4.6.5 to 4.6.7; final npm audit reported zero advisories."
+  ]
+}

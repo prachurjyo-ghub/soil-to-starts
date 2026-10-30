@@ -3,8 +3,10 @@ import { fileURLToPath } from "node:url";
 
 const projectRoot = path.dirname(fileURLToPath(import.meta.url));
 
-export default {
+const nextConfig = {
   turbopack: {
     root: projectRoot,
   },
 };
+
+export default nextConfig;

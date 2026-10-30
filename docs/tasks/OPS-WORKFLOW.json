@@ -1,0 +1,229 @@
+{
+  "id": "OPS-WORKFLOW",
+  "title": "Prompt logging and evidence-based progress tracking",
+  "owner": "Fardin",
+  "collaborators": [
+    "Prachurjo"
+  ],
+  "phase": "FOUNDATION",
+  "status": "in_review",
+  "depends_on": [],
+  "updated_at": "2026-10-30T10:03:22Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Provide detailed ordered checklist items",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "125 ordered items across 26 packages include explicit owners/how/files/verification/dependencies/evidence; seven future tracks retain activation blockers.",
+      "how": "Each small item has an owner, prerequisites, how-to, files, verification and explicit errors/evidence.",
+      "files": [
+        "docs/tasks/",
+        "scripts/workflow.py"
+      ],
+      "verification": "Checklist state and dependencies validate; false completion is rejected.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Generate one human-readable team board",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "README summary and detailed PROGRESS board are generated; focused member/task commands and checklist updates exist.",
+      "how": "Keep detailed steps on PROGRESS and a short member/next-action summary on README.",
+      "files": [
+        "docs/PROGRESS.md",
+        "README.md"
+      ],
+      "verification": "Regeneration is deterministic and current next actions reflect actual prerequisites.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Keep command logs action-only",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "Command-only classification, discussion rejection, batch rollover and outcome amendment tests pass.",
+      "how": "Require implementation/commit/push kind; exclude discussion and preserve short batches.",
+      "files": [
+        "docs/PROMPT_LOG.md",
+        "docs/prompt_logs/"
+      ],
+      "verification": "Discussion calls fail without writes; 50-entry rollover and amendments pass tests.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s04",
+      "text": "Support tool-neutral contribution handoffs",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "Three-field PR template, event verifier and six-member unconfirmed registry exist; account/tool/approval inference is rejected by tests.",
+      "how": "Use a three-field PR declaration and observed GitHub account evidence; never infer AI tools or human names.",
+      "files": [
+        ".github/pull_request_template.md",
+        "scripts/verify_pr.py",
+        "docs/team.json"
+      ],
+      "verification": "Manual and AI declarations validate; unmapped identity remains unconfirmed.",
+      "depends_on": [
+        "s03"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s05",
+      "text": "Test the workflow and hand it off",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "46 helper tests pass; local checks are recorded. Remote CI and human review have not run.",
+      "how": "Run all helper tests and record/link checks; document local/remote CI and review limits.",
+      "files": [
+        "tests/",
+        ".github/workflows/workflow-records.yml"
+      ],
+      "verification": "Tests pass; independent review/main-branch delivery remain explicit.",
+      "depends_on": [
+        "s04"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [
+    {
+      "command": "python3 -B -m unittest discover -s tests -p test_workflow.py -v",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. ow.WorkflowTests) ... ok\ntest_cycle_rejected (test_workflow.WorkflowTests) ... ok\ntest_dependency_regression_reopens_active_and_done_consumers (test_workflow.WorkflowTests) ... ok\ntest_discussion_categories_are_rejected_without_writes (test_workflow.WorkflowTests) ... ok\ntest_failed_or_unrun_checks_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_log_refuses_long_or_multiline_summary (test_workflow.WorkflowTests) ... ok\ntest_manual_active_status_cannot_bypass_dependencies (test_workflow.WorkflowTests) ... ok\ntest_member_logs_are_separate_and_pipe_safe (test_workflow.WorkflowTests) ... ok\ntest_passing_check_does_not_automatically_accept_task (test_workflow.WorkflowTests) ... ok\ntest_pending_or_self_review_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_prompt_amend_updates_outcome_without_extra_entry (test_workflow.WorkflowTests) ... ok\ntest_prompt_rotation_at_fifty (test_workflow.WorkflowTests) ... ok\ntest_readonly_check_detects_stale_view (test_workflow.WorkflowTests) ... ok\ntest_real_git_ancestry_proof (test_workflow.WorkflowTests) ... ok\ntest_render_is_idempotent (test_workflow.WorkflowTests) ... ok\ntest_start_blocked_task_does_not_modify_records (test_workflow.WorkflowTests) ... ok\ntest_unchecked_acceptance_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_unknown_dependency_rejected (test_workflow.WorkflowTests) ... ok\ntest_unmerged_commit_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_verify_accepts_explicit_project_subdirectory (test_workflow.WorkflowTests) ... ok\ntest_verify_executes_check_and_records_real_failure (test_workflow.WorkflowTests) ... ok\ntest_verify_refuses_directory_outside_project (test_workflow.WorkflowTests) ... ok\n\n----------------------------------------------------------------------\nRan 27 tests in 0.242s\n\nOK",
+      "run_at_utc": "2026-10-29T16:29:02Z"
+    },
+    {
+      "command": "git diff --exit-code -- prototype src cache demo_fixtures .env.example",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. ",
+      "run_at_utc": "2026-10-29T16:29:02Z"
+    },
+    {
+      "command": "python3 scripts/workflow.py check",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. Workflow records valid: 15 tasks, 3 prompts. Recorded failed product checks remain visible; this is not a product test pass.",
+      "run_at_utc": "2026-10-29T16:29:02Z"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tests -p 'test_*.py' -v",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. sts) ... ok\ntest_failed_or_unrun_checks_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_focused_member_status_succeeds (test_workflow.WorkflowTests) ... ok\ntest_log_refuses_long_or_multiline_summary (test_workflow.WorkflowTests) ... ok\ntest_manual_active_status_cannot_bypass_dependencies (test_workflow.WorkflowTests) ... ok\ntest_member_logs_are_separate_and_pipe_safe (test_workflow.WorkflowTests) ... ok\ntest_passing_check_does_not_automatically_accept_task (test_workflow.WorkflowTests) ... ok\ntest_pending_or_self_review_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_professional_docs_have_small_entrypoint_budgets (test_workflow.WorkflowTests) ... ok\ntest_prompt_amend_updates_outcome_without_extra_entry (test_workflow.WorkflowTests) ... ok\ntest_prompt_rotation_at_fifty (test_workflow.WorkflowTests) ... ok\ntest_readonly_check_detects_stale_view (test_workflow.WorkflowTests) ... ok\ntest_real_git_ancestry_proof (test_workflow.WorkflowTests) ... ok\ntest_render_is_idempotent (test_workflow.WorkflowTests) ... ok\ntest_reopening_checklist_prerequisite_reopens_done_children (test_workflow.WorkflowTests) ... ok\ntest_start_blocked_task_does_not_modify_records (test_workflow.WorkflowTests) ... ok\ntest_unchecked_acceptance_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_unknown_dependency_rejected (test_workflow.WorkflowTests) ... ok\ntest_unmerged_commit_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_verify_accepts_explicit_project_subdirectory (test_workflow.WorkflowTests) ... ok\ntest_verify_executes_check_and_records_real_failure (test_workflow.WorkflowTests) ... ok\ntest_verify_refuses_directory_outside_project (test_workflow.WorkflowTests) ... ok\n\n----------------------------------------------------------------------\nRan 44 tests in 0.260s\n\nOK",
+      "run_at_utc": "2026-10-29T17:30:01Z"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tests -p 'test_*.py'",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. ..............................................\n----------------------------------------------------------------------\nRan 46 tests in 0.253s\n\nOK",
+      "run_at_utc": "2026-10-29T17:41:13Z"
+    }
+  ],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-10-28T19:38:44Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p test_workflow.py -v"
+    },
+    {
+      "at": "2026-10-28T19:39:59Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p test_workflow.py -v"
+    },
+    {
+      "at": "2026-10-28T19:40:00Z",
+      "note": "Check passed: python3 scripts/workflow.py check"
+    },
+    {
+      "at": "2026-10-28T19:40:58Z",
+      "from": "in_progress",
+      "to": "in_review",
+      "note": "Technical checks passed locally; no human approval or accepted merge is claimed."
+    },
+    {
+      "at": "2026-10-28T19:42:45Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p test_workflow.py -v"
+    },
+    {
+      "at": "2026-10-28T19:42:45Z",
+      "note": "Check passed: git diff --exit-code -- prototype src cache demo_fixtures .env.example"
+    },
+    {
+      "at": "2026-10-28T19:42:45Z",
+      "note": "Check passed: python3 scripts/workflow.py check"
+    },
+    {
+      "at": "2026-10-29T16:27:43Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p test_workflow.py -v"
+    },
+    {
+      "at": "2026-10-29T16:27:43Z",
+      "note": "Check passed: python3 scripts/workflow.py check"
+    },
+    {
+      "at": "2026-10-29T16:28:57Z",
+      "note": "Implemented command-only logging, removed non-implementation entries and passed 27 workflow tests; independent review/delivery remain pending."
+    },
+    {
+      "at": "2026-10-29T16:29:02Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p test_workflow.py -v"
+    },
+    {
+      "at": "2026-10-29T16:29:02Z",
+      "note": "Check passed: git diff --exit-code -- prototype src cache demo_fixtures .env.example"
+    },
+    {
+      "at": "2026-10-29T16:29:02Z",
+      "note": "Check passed: python3 scripts/workflow.py check"
+    },
+    {
+      "at": "2026-10-29T17:22:37Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p 'test_*.py' -v"
+    },
+    {
+      "at": "2026-10-29T17:25:20Z",
+      "note": "Professional foundation refinement: small-item evidence updated from actual files/checks; independent review remains pending."
+    },
+    {
+      "at": "2026-10-29T17:30:01Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p 'test_*.py' -v"
+    },
+    {
+      "at": "2026-10-29T17:41:13Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p 'test_*.py'"
+    },
+    {
+      "at": "2026-10-30T10:03:22Z",
+      "note": "Updated planning evidence for two scope contexts and expanded task records; earlier check history retained. No product implementation or independent approval claimed."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Request independent review of the board/helper/PR checks; publish only when authorized.",
+  "handoff": "All owners use the focused task/checklist helpers and PR declaration. A different teammate reviews this tooling before accepted delivery.",
+  "purpose": "Keep actual work, dependencies, errors and next actions understandable across manual and AI-assisted contributors."
+}

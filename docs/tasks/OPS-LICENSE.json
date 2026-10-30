@@ -1,0 +1,89 @@
+{
+  "id": "OPS-LICENSE",
+  "title": "Choose license and complete source/asset rights review",
+  "owner": "Fardin",
+  "collaborators": [
+    "Nadim",
+    "Prachurjo"
+  ],
+  "phase": "FOUNDATION",
+  "status": "blocked",
+  "depends_on": [],
+  "updated_at": "2026-10-29T17:25:20Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Add the planned code license",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "Official Apache-2.0 text added for original team-owned code/documentation; third-party terms remain separate.",
+      "how": "Use the official Apache-2.0 text for original team-owned code/documentation.",
+      "files": [
+        "LICENSE"
+      ],
+      "verification": "License text matches the official distribution; external assets retain their own terms.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Inventory third-party material",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "THIRD_PARTY_NOTICES.md inventories dependencies, media, fonts, cursor and future datasets; exact asset clearance remains pending.",
+      "how": "List dependencies, photo/video/font/cursor sources and current rights status.",
+      "files": [
+        "THIRD_PARTY_NOTICES.md"
+      ],
+      "verification": "Every known asset category has a review action; no blanket clearance is claimed.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Resolve rights and obtain release sign-off",
+      "owner": "Fardin",
+      "state": "blocked",
+      "met": false,
+      "evidence": "",
+      "how": "Nadim/Prachurjo identify font/media licenses and Fardin records reviewer approval before submission.",
+      "files": [
+        "THIRD_PARTY_NOTICES.md",
+        "prototype/public/reference/assets/credits.txt"
+      ],
+      "verification": "Exact licenses, redistribution permissions and unresolved items are documented.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": [
+        "Font/media license and redistribution clearance has not been supplied."
+      ]
+    }
+  ],
+  "checks": [],
+  "blockers": [
+    "Exact font/media reuse and redistribution clearance is still pending."
+  ],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-10-29T17:25:20Z",
+      "note": "Professional foundation refinement: small-item evidence updated from actual files/checks; independent review remains pending."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Nadim/Prachurjo resolve exact font/media rights; Fardin records release review. This does not block G0 drafting.",
+  "handoff": "Nadim/Prachurjo supply exact media/font rights; Fardin records clearance before G5.",
+  "purpose": "Keep original code and third-party material suitable for public reuse and a rights-reviewed submission."
+}

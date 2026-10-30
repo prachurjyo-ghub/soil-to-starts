@@ -1,0 +1,293 @@
+{
+  "id": "INTAKE-MAP",
+  "title": "Add independent confirmed map-pin and district-search intake locations",
+  "owner": "Fardin",
+  "collaborators": [],
+  "phase": "G0-PREP",
+  "status": "in_review",
+  "depends_on": [],
+  "updated_at": "2026-10-30T16:46:46Z",
+  "acceptance": [
+    {
+      "id": "a1",
+      "text": "Version licensed local boundaries with explicit 64-district mapping and tested containment.",
+      "met": true,
+      "evidence": "Pinned geoBoundaries BGD-ADM2-16705992 at 9469f09, CC BY 3.0 IGO, verified Git LFS/source/output SHA-256, 64 explicit mappings with ten aliases. Local simplified geometry preserves all rings/coordinates. Containment, holes/multipolygons, border ambiguity and all 64 independent geometry-derived fixtures pass in the 30-test intake/location suite.",
+      "state": "done",
+      "blockers": [],
+      "owner": "Fardin",
+      "depends_on": [],
+      "how": "Pin licensed geoBoundaries metadata/geometry and verify checksums; map all 64 source feature IDs/names explicitly; test containment, holes, multipolygons and border ambiguity.",
+      "files": [
+        "data/admin/",
+        "prototype/public/reference/data/",
+        "prototype/public/reference/location.js",
+        "scripts/prepare_district_boundaries.py",
+        "tests/location.test.cjs",
+        "tests/fixtures/district-interior-points.json"
+      ],
+      "verification": "Source and runtime integrity, mapping bijection, 64 independent geometry-derived interiors and synthetic topology cases pass. No bounding-box or nearest-district acceptance."
+    },
+    {
+      "id": "a2",
+      "text": "Integrate MapLibre, independent location methods, migration and accessible map lifecycle in the mounted intake.",
+      "met": true,
+      "evidence": "Mounted reference intake uses a lazy Next Client Component MapLibre bridge, local containment, draggable/keyboard-movable pending pins and explicit confirmation. Separate district search, schema/envelope v2 migration, pending saved-pin recheck and draft/last-valid-submission separation are implemented. UI submit-handler and map lifecycle/failure tests pass; full successful browser walkthroughs remain unverified because browser/native control tools failed.",
+      "state": "done",
+      "blockers": [],
+      "owner": "Fardin",
+      "depends_on": [
+        "a1"
+      ],
+      "how": "Extend the actual mounted form with independent methods, lazy MapLibre bridge, explicit pin confirmation, local resolution, lifecycle cleanup, v2 migration and no stale location state. Preserve all six required questions.",
+      "files": [
+        "prototype/components/IntakeMapRuntime.js",
+        "prototype/app/workspace/page.js",
+        "prototype/public/reference/intake.js",
+        "prototype/public/reference/intake-ui.js",
+        "prototype/public/reference/intake-map.js",
+        "prototype/public/reference/workspace.js",
+        "prototype/public/reference/workspace-fixes.css",
+        "prototype/package.json",
+        "prototype/package-lock.json"
+      ],
+      "verification": "Actual UI-controller submit handler supports both methods and rejects unconfirmed pins; pure/mocked lifecycle and failure checks pass. Full browser/physical-device checks are separately reported, not assumed."
+    },
+    {
+      "id": "a3",
+      "text": "Run regression, browser, syntax, lint/build and workflow checks; document providers, limitations and handoff.",
+      "met": true,
+      "evidence": "31 intake/location tests and 46 workflow tests pass; five changed reference scripts pass direct Node syntax checks, lint and webpack production build pass, deterministic boundary rebuild and all eight loopback asset/checksum/license checks pass, and workflow validation passes. Browser connector/native pointer failures prevented reliable complete submissions and current map mobile/physical testing; docs/LOCATION_QA.md explicitly records these unverified checks and next reviewer. One Fardin command is logged; no commit/push/deploy.",
+      "state": "done",
+      "blockers": [],
+      "owner": "Fardin",
+      "depends_on": [
+        "a2"
+      ],
+      "how": "Run existing/regression tests, direct script syntax, lint/build, reproducible asset/HTTP checks and workflow validation. Record browser attempts and not-performed checks, provider rights, migration and independent handoff.",
+      "files": [
+        "docs/LOCATION_QA.md",
+        "docs/INTAKE_QA.md",
+        "docs/API_CONTRACT.md",
+        "docs/UI_UX_SPEC.md",
+        "docs/DATA_SOURCES.md",
+        "THIRD_PARTY_NOTICES.md",
+        "prototype/public/reference/licenses/maplibre-gl.LICENSE.txt",
+        "docs/tasks/INTAKE-MAP.json",
+        "docs/tasks/INTAKE-UI.json"
+      ],
+      "verification": "Actual check outputs and limitations are recorded; no G0/science or human review acceptance, commit, push or deployment is claimed."
+    }
+  ],
+  "checks": [
+    {
+      "command": "node --check prototype/public/reference/intake.js",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. ",
+      "run_at_utc": "2026-10-30T16:03:04Z"
+    },
+    {
+      "command": "node --check prototype/public/reference/workspace.js",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. ",
+      "run_at_utc": "2026-10-30T16:03:04Z"
+    },
+    {
+      "command": "npm run lint",
+      "cwd": "prototype",
+      "result": "passed",
+      "evidence": "Exit 0. npm notice run soil-to-stars-prototype@1.0.0 lint\nnpm notice run eslint .",
+      "run_at_utc": "2026-10-30T16:03:06Z"
+    },
+    {
+      "command": "npm run build -- --webpack",
+      "cwd": "prototype",
+      "result": "passed",
+      "evidence": "Exit 0. ▲ Next.js 16.4.3 (webpack)\n✓ Running next.config.mjs took 7ms\n\n  Creating an optimized production build ...\n✓ Compiled successfully in 721ms\n  Running TypeScript ...\n  Finished TypeScript in 1ms ...\n  Collecting page data using 5 workers ...\n  Generating static pages using 5 workers (0/4) ...\n  Generating static pages using 5 workers (1/4) \n  Generating static pages using 5 workers (2/4) \n  Generating static pages using 5 workers (3/4) \n✓ Generating static pages using 5 workers (4/4) in 273ms\n  Finalizing page optimization ...\n  Collecting build traces ...\n\nRoute (app)\n┌ ○ /\n├ ○ /_not-found\n└ ○ /workspace\n\n\n○  (Static)  prerendered as static content\n\nnpm notice run soil-to-stars-prototype@1.0.0 build\nnpm notice run next build --webpack",
+      "run_at_utc": "2026-10-30T16:03:12Z"
+    },
+    {
+      "command": "python3 scripts/prepare_district_boundaries.py",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. 64 districts; 38112 vertices; 1494403 bytes; 507697 gzip bytes; SHA-256 9503a358ddcb99714db5866ef049e7ddea0d5fd6e05a0d3719a6553b3953c01a",
+      "run_at_utc": "2026-10-30T16:08:31Z"
+    },
+    {
+      "command": "npm run test:intake",
+      "cwd": "prototype",
+      "result": "passed",
+      "evidence": "Exit 0. t; invalid edits never replace the last valid submission (0.52ms)\n✔ live form submission uses shared validation, persists only valid answers and renders unavailable summary (0.91575ms)\n✔ English/Bangla render keeps IDs unchanged and escapes restored user text (0.722333ms)\n✔ actual UI submit handler requires pin confirmation and supports either method without stale data (9.707583ms)\n✔ pinned source/license/checksums and all 64 exact boundary mappings agree (9.455375ms)\n✔ Polygon, holes, MultiPolygon and numerical border handling (0.190958ms)\n✔ outside, unresolved holes/gaps, overlap and shared borders never snap to a district (0.188958ms)\n✔ invalid, non-finite and reversed longitude/latitude inputs are rejected (0.061709ms)\n✔ 64 independent source-derived interiors resolve and normalize to their explicit district IDs (15.358375ms)\n✔ new/moved pin needs confirmation and stale district, source version or geometry cannot pass (0.394875ms)\n✔ method switching clears inactive coordinates/districts and district search needs no boundaries (0.127417ms)\n✔ genuine v1 district answers migrate to v2 without coordinates or demo defaults (0.34ms)\n✔ boundary loader rejects missing/duplicate mappings and unsupported or broken rings (12.853708ms)\n✔ map rerenders reuse one instance/listeners and preserve pin/answers; leaving removes resources (14.140958ms)\n✔ WebGL and boundary-network failure retain answers and leave district fallback independent (7.372625ms)\n✔ tile errors and lost WebGL context surface fallback without destroying other answers (7.753334ms)\nℹ tests 31\nℹ suites 0\nℹ pass 31\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 184.246083\nnpm notice run soil-to-stars-prototype@1.0.0 test:intake\nnpm notice run node --test ../tests/intake.test.cjs ../tests/location.test.cjs",
+      "run_at_utc": "2026-10-30T16:08:31Z"
+    },
+    {
+      "command": "node --check prototype/public/reference/location.js",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. ",
+      "run_at_utc": "2026-10-30T16:08:32Z"
+    },
+    {
+      "command": "node --check prototype/public/reference/intake-map.js",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. ",
+      "run_at_utc": "2026-10-30T16:08:32Z"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tests -p 'test_*.py' -v",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. sts) ... ok\ntest_failed_or_unrun_checks_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_focused_member_status_succeeds (test_workflow.WorkflowTests) ... ok\ntest_log_refuses_long_or_multiline_summary (test_workflow.WorkflowTests) ... ok\ntest_manual_active_status_cannot_bypass_dependencies (test_workflow.WorkflowTests) ... ok\ntest_member_logs_are_separate_and_pipe_safe (test_workflow.WorkflowTests) ... ok\ntest_passing_check_does_not_automatically_accept_task (test_workflow.WorkflowTests) ... ok\ntest_pending_or_self_review_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_professional_docs_have_small_entrypoint_budgets (test_workflow.WorkflowTests) ... ok\ntest_prompt_amend_updates_outcome_without_extra_entry (test_workflow.WorkflowTests) ... ok\ntest_prompt_rotation_at_fifty (test_workflow.WorkflowTests) ... ok\ntest_readonly_check_detects_stale_view (test_workflow.WorkflowTests) ... ok\ntest_real_git_ancestry_proof (test_workflow.WorkflowTests) ... ok\ntest_render_is_idempotent (test_workflow.WorkflowTests) ... ok\ntest_reopening_checklist_prerequisite_reopens_done_children (test_workflow.WorkflowTests) ... ok\ntest_start_blocked_task_does_not_modify_records (test_workflow.WorkflowTests) ... ok\ntest_unchecked_acceptance_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_unknown_dependency_rejected (test_workflow.WorkflowTests) ... ok\ntest_unmerged_commit_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_verify_accepts_explicit_project_subdirectory (test_workflow.WorkflowTests) ... ok\ntest_verify_executes_check_and_records_real_failure (test_workflow.WorkflowTests) ... ok\ntest_verify_refuses_directory_outside_project (test_workflow.WorkflowTests) ... ok\n\n----------------------------------------------------------------------\nRan 46 tests in 0.326s\n\nOK",
+      "run_at_utc": "2026-10-30T16:08:32Z"
+    },
+    {
+      "command": "python3 scripts/workflow.py check",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. Workflow records valid: 28 tasks, 7 prompts. Recorded failed product checks remain visible; this is not a product test pass.",
+      "run_at_utc": "2026-10-30T16:08:33Z"
+    },
+    {
+      "command": "node --check prototype/public/reference/intake-ui.js",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. ",
+      "run_at_utc": "2026-10-30T16:09:52Z"
+    },
+    {
+      "command": "python3 scripts/check_location_assets.py --base-url http://127.0.0.1:3014",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. {\"asset\": \"/workspace\", \"status\": 200, \"encoding\": \"gzip\", \"transfer_bytes\": 3367, \"decoded_bytes\": 12864, \"loopback_ms\": 15.87}\n{\"asset\": \"/reference/location.js\", \"status\": 200, \"encoding\": \"gzip\", \"transfer_bytes\": 2434, \"decoded_bytes\": 7057, \"loopback_ms\": 1.41}\n{\"asset\": \"/reference/intake.js\", \"status\": 200, \"encoding\": \"gzip\", \"transfer_bytes\": 5115, \"decoded_bytes\": 15459, \"loopback_ms\": 1.15}\n{\"asset\": \"/reference/intake-map.js\", \"status\": 200, \"encoding\": \"gzip\", \"transfer_bytes\": 2710, \"decoded_bytes\": 7349, \"loopback_ms\": 0.82}\n{\"asset\": \"/reference/intake-ui.js\", \"status\": 200, \"encoding\": \"gzip\", \"transfer_bytes\": 12521, \"decoded_bytes\": 43925, \"loopback_ms\": 1.36}\n{\"asset\": \"/reference/data/district-boundaries.v1.geojson\", \"status\": 200, \"encoding\": \"gzip\", \"transfer_bytes\": 513054, \"decoded_bytes\": 1494403, \"loopback_ms\": 50.93}\n{\"asset\": \"/reference/licenses/maplibre-gl.LICENSE.txt\", \"status\": 200, \"encoding\": \"gzip\", \"transfer_bytes\": 1531, \"decoded_bytes\": 5984, \"loopback_ms\": 1.12}\n{\"asset\": \"/_next/static/media/maplibre-gl-worker.36d105f0.mjs\", \"status\": 200, \"encoding\": \"gzip\", \"transfer_bytes\": 146732, \"decoded_bytes\": 510888, \"loopback_ms\": 10.39}\nAll 8 loopback assets match; boundary checksum and deployed license verified. Browser/WebGL/mobile not tested.",
+      "run_at_utc": "2026-10-30T16:09:54Z"
+    }
+  ],
+  "blockers": [],
+  "issues": [],
+  "evidence": [
+    "docs/LOCATION_QA.md records provider/license/version, exact source/output checksums, aliases, actual checks and browser-tool limitations. No browser success, scientific validation or human approval is invented."
+  ],
+  "history": [
+    {
+      "at": "2026-10-30T15:34:40Z",
+      "note": "Checklist a1: in_progress",
+      "evidence": ""
+    },
+    {
+      "at": "2026-10-30T15:59:21Z",
+      "note": "Checklist a1: done",
+      "evidence": "Pinned geoBoundaries BGD-ADM2-16705992 at 9469f09, CC BY 3.0 IGO, verified Git LFS/source/output SHA-256, 64 explicit mappings with ten aliases. Local simplified geometry preserves all rings/coordinates. Containment, holes/multipolygons, border ambiguity and all 64 independent geometry-derived fixtures pass in the 30-test intake/location suite."
+    },
+    {
+      "at": "2026-10-30T15:59:21Z",
+      "note": "Checklist a2: done",
+      "evidence": "Mounted reference intake uses a lazy Next Client Component MapLibre bridge, local containment, draggable/keyboard-movable pending pins and explicit confirmation. Separate district search, schema/envelope v2 migration, pending saved-pin recheck and draft/last-valid-submission separation are implemented. UI submit-handler and map lifecycle/failure tests pass; full successful browser walkthroughs remain unverified because browser/native control tools failed."
+    },
+    {
+      "at": "2026-10-30T15:59:21Z",
+      "note": "Checklist a3: in_progress",
+      "evidence": ""
+    },
+    {
+      "at": "2026-10-30T16:03:03Z",
+      "note": "Check passed: python3 scripts/prepare_district_boundaries.py"
+    },
+    {
+      "at": "2026-10-30T16:03:03Z",
+      "note": "Check passed: node --check prototype/public/reference/location.js"
+    },
+    {
+      "at": "2026-10-30T16:03:03Z",
+      "note": "Check passed: node --check prototype/public/reference/intake-map.js"
+    },
+    {
+      "at": "2026-10-30T16:03:04Z",
+      "note": "Check passed: node --check prototype/public/reference/intake.js"
+    },
+    {
+      "at": "2026-10-30T16:03:04Z",
+      "note": "Check passed: node --check prototype/public/reference/intake-ui.js"
+    },
+    {
+      "at": "2026-10-30T16:03:04Z",
+      "note": "Check passed: node --check prototype/public/reference/workspace.js"
+    },
+    {
+      "at": "2026-10-30T16:03:04Z",
+      "note": "Check passed: npm run test:intake"
+    },
+    {
+      "at": "2026-10-30T16:03:06Z",
+      "note": "Check passed: npm run lint"
+    },
+    {
+      "at": "2026-10-30T16:03:12Z",
+      "note": "Check passed: npm run build -- --webpack"
+    },
+    {
+      "at": "2026-10-30T16:05:08Z",
+      "note": "Check passed: python3 scripts/check_location_assets.py --base-url http://127.0.0.1:3014"
+    },
+    {
+      "at": "2026-10-30T16:08:31Z",
+      "note": "Check passed: python3 scripts/prepare_district_boundaries.py"
+    },
+    {
+      "at": "2026-10-30T16:08:31Z",
+      "note": "Check passed: npm run test:intake"
+    },
+    {
+      "at": "2026-10-30T16:08:32Z",
+      "note": "Check passed: node --check prototype/public/reference/location.js"
+    },
+    {
+      "at": "2026-10-30T16:08:32Z",
+      "note": "Check passed: node --check prototype/public/reference/intake-map.js"
+    },
+    {
+      "at": "2026-10-30T16:08:32Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p 'test_*.py' -v"
+    },
+    {
+      "at": "2026-10-30T16:08:33Z",
+      "note": "Check passed: python3 scripts/workflow.py check"
+    },
+    {
+      "at": "2026-10-30T16:09:52Z",
+      "note": "Check passed: node --check prototype/public/reference/intake-ui.js"
+    },
+    {
+      "at": "2026-10-30T16:09:54Z",
+      "note": "Check passed: python3 scripts/check_location_assets.py --base-url http://127.0.0.1:3014"
+    },
+    {
+      "at": "2026-10-30T16:09:54Z",
+      "note": "Checklist a3: done",
+      "evidence": "31 intake/location tests and 46 workflow tests pass; five changed reference scripts pass direct Node syntax checks, lint and webpack production build pass, deterministic boundary rebuild and all eight loopback asset/checksum/license checks pass, and workflow validation passes. Browser connector/native pointer failures prevented reliable complete submissions and current map mobile/physical testing; docs/LOCATION_QA.md explicitly records these unverified checks and next reviewer. One Fardin command is logged; no commit/push/deploy."
+    },
+    {
+      "at": "2026-10-30T16:09:55Z",
+      "from": "in_progress",
+      "to": "in_review",
+      "note": "Local bounded implementation and automated/HTTP checks are ready for review. Complete browser and physical-device checks remain unverified due failed browser/native controls; no human approval or scientific gate acceptance is claimed."
+    },
+    {
+      "at": "2026-10-30T16:46:46Z",
+      "note": "Fardin authorized feature-branch commit/push delivery through DELIVERY-INTAKE. Branch feature/intake-location; independent review, browser/physical-phone testing and scientific gates remain pending."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": "feature/intake-location",
+  "issue": null,
+  "next_action": "Prachurjo independently verifies both full browser submissions, real WebGL/worker/tile and touch behavior, phone layout and persistence; Fardin coordinates later G0/API integration.",
+  "handoff": "Prachurjo independently reviews both complete browser submissions, secure phone-width/physical-device map behavior, keyboard/EN-BN and failure fallbacks; Fardin coordinates later G0/API integration. Scientific gates remain pending.",
+  "scope": "mvp",
+  "purpose": "Explicitly authorized independent local map/intake extension. INTAKE-UI local work exists and is reopened for regression; neither accepted G0 nor science is a prerequisite for this bounded administrative-location UI."
+}

@@ -1,0 +1,142 @@
+{
+  "id": "G0-CONTRACT",
+  "title": "Agree source, crop, field and API contracts",
+  "owner": "Fardin",
+  "collaborators": [
+    "Saim",
+    "Maruf",
+    "Prachurjo"
+  ],
+  "phase": "G0",
+  "status": "planned",
+  "depends_on": [],
+  "updated_at": "2026-10-30T10:00:13Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Draft stable field, crop and source identifiers",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Agree pilot coverage, stable IDs, short intake, equal previous/current crop IDs, dated history, usual baseline/fallow and common horizon; propose comparison bundle and per-plan statuses.",
+      "files": [
+        "docs/API_CONTRACT.md"
+      ],
+      "verification": "Every technical owner can distinguish an assessed baseline, complete alternative and incomplete bundle without guessing units.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Agree the climate evidence payload",
+      "owner": "Saim",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Saim specifies parameter IDs, time standard, period, units, missingness and grid support; do not insert invented values.",
+      "files": [
+        "docs/API_CONTRACT.md",
+        "docs/DATA_SOURCES.md"
+      ],
+      "verification": "Fardin/Prachurjo can consume one versioned schema without guessing units.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Agree executable crop-rule fields",
+      "owner": "Maruf",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Define essentiality, pass/fail/caution/unknown, reviewed rule IDs/sources, calendars/duration and soil/water/host constraints; exclude fertilizer and nutrient-depletion calculations.",
+      "files": [
+        "docs/API_CONTRACT.md",
+        "docs/METHODOLOGY.md"
+      ],
+      "verification": "The rules distinguish unknown/unsupported from actual exclusions.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s04",
+      "text": "Agree frontend states and errors",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Map three priority presets, comparison matrix, quick crop check, check ledger, replay and print/JSON receipt to API states; keep the form progressive.",
+      "files": [
+        "docs/API_CONTRACT.md",
+        "docs/UI_UX_SPEC.md"
+      ],
+      "verification": "No failed API is replaced with a fabricated success.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s05",
+      "text": "Freeze reviewed examples and contracts",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Freeze reviewed payload examples, deterministic preset/tie-break rules, period comparability and canonical input/result fingerprinting.",
+      "files": [
+        "docs/API_CONTRACT.md"
+      ],
+      "verification": "Four technical owners agree schemas and synthetic shape cases; fingerprints exclude volatile timestamps and imply no scientific certification.",
+      "depends_on": [
+        "s02",
+        "s03",
+        "s04"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s06",
+      "text": "Review, merge and announce G1 handoffs",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Record independent review and actual main-branch revision; G1 owners update their branches.",
+      "files": [
+        "docs/tasks/G0-CONTRACT.json"
+      ],
+      "verification": "Acceptance/checks/review/merge evidence is real before dependent work starts.",
+      "depends_on": [
+        "s05"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-10-30T10:00:13Z",
+      "note": "Rebased planned work to the mandatory-now/future specifications. No product feature, review or delivery is marked complete."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Draft bounded contracts and obtain agreement from Saim, Maruf and Prachurjo.",
+  "handoff": "After acceptance/merge: Saim starts G1A, Maruf G1B, Fardin G1C and Prachurjo G1D in parallel.",
+  "purpose": "Prevent four technical owners from building incompatible schemas, units and assumptions.",
+  "scope": "mvp"
+}
