@@ -494,7 +494,7 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 
 **Changed files:** AGENTS.md, CLAUDE.md, README.md, docs/AI_USE.md, docs/WORKFLOW.md, QA references, affected task records, scripts/workflow.py, tests/test_workflow.py and retired split logs.
 
-**Actual outcome:** All 60 workflow and contribution tests, record/link validation and whitespace checks passed. The changes are prepared for commit; independent teammate review remains pending.
+**Actual outcome:** Committed all 18 reviewed documentation, workflow and test paths as 5beed23ccc3f8b9e418bb63cb1b7fc39da657a16. All 60 tests, record/link validation and whitespace checks passed; independent teammate review remains pending.
 
 **Review / limitations:** No human approval, main-branch merge or G0 acceptance is inferred.
 
@@ -522,7 +522,7 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 
 **Purpose / AI contribution:** Deliver the authorized workflow consolidation without merging or accepting it.
 
-**Actual outcome:** Push authorization is recorded for feature/workspace-ui-review. No push has been performed yet; the remote revision will be checked after delivery.
+**Actual outcome:** Pushed 5beed23ccc3f8b9e418bb63cb1b7fc39da657a16 to origin/feature/workspace-ui-review and verified the exact remote SHA through GitHub. Automatic review initially rejected the push; retry succeeded after GitHub confirmed authenticated push permission. No merge or acceptance was performed.
 
 **Review / limitations:** Independent teammate review remains pending.
 

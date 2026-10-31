@@ -22,7 +22,7 @@ Generated from `docs/tasks/*.json`; update a record or use the helper, then rend
 | [ ] | [MEDIA-STORYBOARD](tasks/MEDIA-STORYBOARD.json): Prepare storyboard, capture plan and asset ledger | Nadim | ready | none | Draft storyboard and rights ledger with Hla; defer final footage to accepted app behavior. |
 | [ ] | [INTAKE-MAP](tasks/INTAKE-MAP.json): Add independent confirmed map-pin and district-search intake locations | Fardin | in_review | none | Fardin coordinates main-branch merge planning and later G0/API integration after any remaining team checks. |
 | [ ] | [INTAKE-UI](tasks/INTAKE-UI.json): Implement nationwide required farmer intake without scientific recommendations | Fardin | in_review | none | Fardin coordinates main-branch merge planning and accepted contracts/API later. |
-| [ ] | [OPS-PROMPT-STYLE](tasks/OPS-PROMPT-STYLE.json): Unify AI-use disclosure and implementation history in one compact record file | Fardin | in_review | none | A different teammate reviews the numbered contribution records and helper behavior before acceptance. |
+| [ ] | [OPS-PROMPT-STYLE](tasks/OPS-PROMPT-STYLE.json): Unify AI-use disclosure and implementation history in one compact record file | Fardin | in_review | none | A different teammate reviews the pushed numbered contribution records and helper behavior; Fardin coordinates accepted main-branch integration afterward. |
 | [ ] | [G1A](tasks/G1A.json): Acquire and validate the first NASA POWER evidence sample | Saim | waiting | G0-CONTRACT | Review G0 contracts now; acquire the first evidence slice after G0 is accepted. |
 | [ ] | [G1B](tasks/G1B.json): Source Bangladesh crop, soil and rotation rules | Maruf | waiting | G0-CONTRACT | Review G0 rules/schema now; source the minimum crop catalog after G0 is accepted. |
 | [ ] | [G1C](tasks/G1C.json): Implement API validation and schema/test foundation | Fardin | waiting | G0-CONTRACT | Implement schema/API validation after G0 acceptance; coordinate independent tooling work. |
@@ -45,7 +45,7 @@ Generated from `docs/tasks/*.json`; update a record or use the helper, then rend
 
 | Member | Available now / next dependency |
 | --- | --- |
-| Fardin | DELIVERY-INTAKE: Fardin coordinates main-branch merge planning and later accepted G0/scientific work.; DOC-FOUNDATION: Arrange a teammate review of the concise onboarding and canonical specifications; record accepted merge only afterward.; OPS-SECURITY: Prachurjo reviews the targeted patch; Fardin records actual main-branch delivery only after approval.; OPS-WORKFLOW: Request independent review of the board/helper/PR checks; publish only when authorized.; PLAN-SCOPE: Arrange independent teammate review of the scope changes. Fardin can draft G0 contracts while that review is pending; no product work is accepted by these documentation ticks.; G0-CONTRACT: Draft bounded contracts and obtain agreement from Saim, Maruf and Prachurjo.; INTAKE-MAP: Fardin coordinates main-branch merge planning and later G0/API integration after any remaining team checks.; INTAKE-UI: Fardin coordinates main-branch merge planning and accepted contracts/API later.; OPS-PROMPT-STYLE: A different teammate reviews the numbered contribution records and helper behavior before acceptance. |
+| Fardin | DELIVERY-INTAKE: Fardin coordinates main-branch merge planning and later accepted G0/scientific work.; DOC-FOUNDATION: Arrange a teammate review of the concise onboarding and canonical specifications; record accepted merge only afterward.; OPS-SECURITY: Prachurjo reviews the targeted patch; Fardin records actual main-branch delivery only after approval.; OPS-WORKFLOW: Request independent review of the board/helper/PR checks; publish only when authorized.; PLAN-SCOPE: Arrange independent teammate review of the scope changes. Fardin can draft G0 contracts while that review is pending; no product work is accepted by these documentation ticks.; G0-CONTRACT: Draft bounded contracts and obtain agreement from Saim, Maruf and Prachurjo.; INTAKE-MAP: Fardin coordinates main-branch merge planning and later G0/API integration after any remaining team checks.; INTAKE-UI: Fardin coordinates main-branch merge planning and accepted contracts/API later.; OPS-PROMPT-STYLE: A different teammate reviews the pushed numbered contribution records and helper behavior; Fardin coordinates accepted main-branch integration afterward. |
 | Saim | Collaborate on G0-CONTRACT |
 | Maruf | Collaborate on G0-CONTRACT |
 | Prachurjo | OPS-LINT: Review the bounded lint/state-initialization changes and record accepted delivery; full usability testing remains G3.; Collaborate on G0-CONTRACT, MEDIA-STORYBOARD |
@@ -498,9 +498,9 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-31T19:33:11Z`
 
 ### OPS-PROMPT-STYLE — Unify AI-use disclosure and implementation history in one compact record file
 
-Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-31T22:41:10Z`
+Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-31T22:42:31Z`
 
-**Why:** A bounded development-documentation change; no application, NASA pipeline, scientific gate, commit or push is included.
+**Why:** A bounded development-documentation and workflow change, with separately authorized feature-branch commit/push delivery. Application behavior, the NASA pipeline and scientific acceptance remain outside this task.
 
 - [x] **s01 · Fardin · done:** Combine existing command records and disclosure context without losing information.
   - How: Merge all 13 existing action entries and the historical guide contribution into AI_USE; preserve IDs, UTC, member identities, tools, prompts, outcomes, sources and shared contribution context.
@@ -537,7 +537,7 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-31T22:41:10Z`
 - Check **passed**: `python3 -B scripts/workflow.py check` — Exit 0. Workflow records valid: 30 tasks, 17 prompts. Recorded failed product checks remain visible; this is not a product test pass.
 - Review: pending — no approval recorded
 - Delivery: no accepted merge recorded; branch: feature/workspace-ui-review; issue/PR: not created/recorded
-- Handoff: Review AI_USE.md and focused log-show output; verify record preservation and helper behavior. Fardin coordinates any separately authorized commit/push.
+- Handoff: A different teammate reviews the pushed AI_USE.md records and helper behavior on feature/workspace-ui-review. Source commit 5beed23ccc3f8b9e418bb63cb1b7fc39da657a16 was verified on origin; independent human review and accepted main-branch integration remain pending.
 
 ### G1A — Acquire and validate the first NASA POWER evidence sample
 
