@@ -46,6 +46,59 @@ function evaluate(sequence,f,scenario='Typical',weights=f.weights){
 function rank(f=field(),scenario='Typical',weights=f.weights){const candidates=[];const keys=Object.keys(crop);for(const a of keys)for(const b of keys)for(const c of keys){if(a===b||b===c)continue;candidates.push(evaluate([a,b,c],f,scenario,weights));}return candidates.sort((a,b)=>b.score-a.score||a.id.localeCompare(b.id));}
 function valid(f=field(),scenario='Typical',weights=f.weights){return rank(f,scenario,weights).filter(s=>s.feasible);}
 const navItems=[['overview','◫','Your results'],['profile','⌖','Set up your field'],['rotations','⇄','Rotation plans'],['compare','⊞','Compare plans'],['simulator','⌁','What-if studio'],['climate','◷','Climate insights'],['saved','♡','Saved plan'],['methodology','◎','Data & methodology']];
+const mobileMoreRoutes=new Set(['compare','simulator','climate','saved','methodology']);
+let moreOpen=false,moreLastFocus=null;
+const isMobileNav=()=>window.matchMedia('(max-width:800px)').matches;
+function syncMobileChrome(){
+  const item=navItems.find(n=>n[0]===route)||navItems[1];
+  const mobileCrumb=$('#mobile-crumb');
+  if(mobileCrumb)mobileCrumb.textContent=item[2];
+  $$('#mobile-tabbar [data-tab]').forEach(a=>{
+    const on=a.dataset.tab===route;
+    a.classList.toggle('is-active',on);
+    if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+  });
+  const moreBtn=$('#mobile-more-open');
+  if(moreBtn){
+    const onMore=mobileMoreRoutes.has(route);
+    moreBtn.classList.toggle('is-active',onMore);
+    if(onMore)moreBtn.setAttribute('aria-current','page');else moreBtn.removeAttribute('aria-current');
+  }
+  const moreNav=$('#mobile-more-nav');
+  if(moreNav){
+    moreNav.innerHTML=navItems.filter(([id])=>mobileMoreRoutes.has(id)).map(([id,icon,label])=>`<a href="#${id}" class="${route===id?'is-active':''}" ${route===id?'aria-current="page"':''}><span aria-hidden="true">${icon}</span>${label}</a>`).join('');
+  }
+  const mobileField=$('#mobile-field-select');
+  if(mobileField){
+    mobileField.innerHTML=fields.map(f=>`<option value="${esc(f.id)}" ${demoFields.some(d=>d.name===f.name)?'':'data-no-translate'} ${current===f.id?'selected':''}>${esc(f.name)}</option>`).join('');
+    mobileField.hidden=!demoMode;
+    const label=$('.mobile-field-label');
+    if(label)label.hidden=!demoMode;
+  }
+}
+function focusables(root){return [...root.querySelectorAll('a[href],button:not([disabled]),select:not([disabled]),textarea:not([disabled]),input:not([disabled]),[tabindex]:not([tabindex="-1"])')].filter(el=>!el.hasAttribute('hidden')&&el.getAttribute('aria-hidden')!=='true');}
+function openMore(){
+  if(!isMobileNav()||moreOpen)return;
+  const sheet=$('#mobile-more-sheet'),backdrop=$('#mobile-more-backdrop'),openBtn=$('#mobile-more-open');
+  if(!sheet||!backdrop||!openBtn)return;
+  moreLastFocus=document.activeElement;
+  moreOpen=true;
+  document.body.classList.add('mobile-more-open');
+  sheet.hidden=false;backdrop.hidden=false;
+  openBtn.setAttribute('aria-expanded','true');
+  syncMobileChrome();
+  ($('#mobile-more-close')||focusables(sheet)[0])?.focus();
+}
+function closeMore({restoreFocus=true}={}){
+  if(!moreOpen)return;
+  const sheet=$('#mobile-more-sheet'),backdrop=$('#mobile-more-backdrop'),openBtn=$('#mobile-more-open');
+  moreOpen=false;
+  document.body.classList.remove('mobile-more-open');
+  if(sheet)sheet.hidden=true;
+  if(backdrop)backdrop.hidden=true;
+  if(openBtn)openBtn.setAttribute('aria-expanded','false');
+  if(restoreFocus)moreLastFocus?.focus?.({preventScroll:true});
+}
 function guidance(){
  const data={overview:['Your planning path','Start with field setup, explore the rotation options, then test a scenario before saving a plan.','profile','Review field'],profile:['Your field inputs','Answer all six questions. Scientific planning is not connected yet.','methodology','About the inputs'],rotations:['A score helps you compare','Open a plan to see its weak points as well as its strengths. Add up to three plans for a closer comparison.','compare','Compare plans'],compare:['Read the trade-offs','A high overall score can hide a weak criterion. Compare water demand alongside soil health and resilience.','simulator','Test priorities'],simulator:['Explore safely','Changes here stay in the simulation until you apply priorities and water to your field. Crop swaps are checked immediately. Save a custom plan to keep its scenario assumptions.','rotations','Saved-field plans'],climate:['Evidence has boundaries','These charts show illustrative patterns. Seasonal timing matters, and a regional grid is not a measurement of your field.','methodology','Data context'],methodology:['Know what is real','Your field inputs are saved locally. Environmental values, crop traits, and stress tests are demonstration data.','profile','Your field inputs']}[route];
  return data?`<div class="studio-guide"><span class="studio-guide-mark">◎</span><div><b>${data[0]}</b><p>${data[1]}</p></div><a href="#${data[2]}">${data[3]} ↗</a></div>`:'';
@@ -84,10 +137,11 @@ function render(){
  $('#field-select').hidden=!demoMode;
  const bn=document.documentElement.lang==='bn';
  $('.field-switch small').textContent=demoMode?(bn?'নমুনা জমি':'DEMO FIELD'):(bn?'আপনার জমির তথ্য':'YOUR FIELD INPUTS');
- $('.demo-dot').textContent=demoMode?(bn?'আলাদা নমুনা ডেমো':'Separate illustrative demo'):(bn?'জমির তথ্য · পরিকল্পনা অনুপলব্ধ':'Field inputs · planning unavailable');
- const exportButton=$('header [data-action="export"]');
- exportButton.textContent=demoMode?(bn?'নমুনা রপ্তানি':'Export demo'):(bn?'তথ্য রপ্তানি':'Export inputs');
- exportButton.disabled=!demoMode&&!intake.hasSubmission();
+ const statusText=demoMode?(bn?'আলাদা নমুনা ডেমো':'Separate illustrative demo'):(bn?'জমির তথ্য · পরিকল্পনা অনুপলব্ধ':'Field inputs · planning unavailable');
+ $$('.demo-dot').forEach(el=>{el.textContent=statusText;});
+ const exportLabel=demoMode?(bn?'নমুনা রপ্তানি':'Export demo'):(bn?'তথ্য রপ্তানি':'Export inputs');
+ $$('[data-action="export"]').forEach(btn=>{btn.textContent=exportLabel;btn.disabled=!demoMode&&!intake.hasSubmission();});
+ syncMobileChrome();
  if(!demoMode)$('#main').innerHTML=route==='profile'?intake.form():intake.summary();
  else {
   $('#main').innerHTML=`<div class="notice demo-separation" data-no-translate><b>${bn?'আলাদা নমুনা ডেমো · আপনার জমির তথ্য ব্যবহার করা হচ্ছে না।':'Separate illustrative demo · your intake answers are not used here.'}</b><button data-action="return-intake">${bn?'জমির তথ্যে ফিরুন':'Return to field inputs'}</button></div>`+({overview,rotations,compare,simulator,climate,methodology,saved}[route])();
@@ -95,15 +149,43 @@ function render(){
  }
  intake.afterRender();
  $('#sidebar').classList.remove('open');$('#menu').setAttribute('aria-expanded','false');
+ if(moreOpen&&!isMobileNav())closeMore({restoreFocus:false});
 }
-function navigate(r){if(location.hash==='#'+r)render();else location.hash=r;}
-function syncThemeLabel(){const dark=document.body.classList.contains('dark');$('#theme').setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode');$('#theme').title=dark?'Switch to light mode':'Switch to dark mode';}
-$('#theme').addEventListener('click',()=>{document.body.classList.toggle('dark');syncThemeLabel();try{localStorage.setItem('sts-studio-theme',document.body.classList.contains('dark')?'dark':'light');}catch{}});try{document.body.classList.toggle('dark',(localStorage.getItem('sts-studio-theme')||'light')==='dark');}catch{}syncThemeLabel();
-$('#menu').addEventListener('click',()=>{$('#sidebar').classList.toggle('open');$('#menu').setAttribute('aria-expanded',String($('#sidebar').classList.contains('open')));});
-$('#field-select').addEventListener('change',e=>{current=e.target.value;sim=null;selected=[];persist();render();});
-document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const d=b.dataset;if(d.route){navigate(d.route);return;}if(d.detail){showDetails(d.detail);return;}if(d.metric){metric=d.metric;render();return;}if(d.year){chartYear=d.year;render();return;}if(d.preset&&demoMode&&sim){sim.weights=[...presets[d.preset]];render();return;}if(d.compare){if(selected.includes(d.compare))selected=selected.filter(id=>id!==d.compare);else if(selected.length<3)selected.push(d.compare);else return toast('Compare up to three plans. Remove one first.');toast(`${selected.length} plan${selected.length===1?'':'s'} selected for comparison`);render();return;}if(d.save){const f=field();f.saved=d.save;f.savedContext=route==='saved'&&f.savedContext?f.savedContext:route==='simulator'&&sim?{scenario:sim.scenario,water:sim.water,weights:[...sim.weights]}:{scenario:'Typical',water:f.water,weights:[...f.weights]};persist();toast('Plan saved. Open Saved plan to review or export it.');if(!$('#details').open)render();return;}switch(d.action){case 'new-field':intake.newDraft();demoMode=false;sim=null;selected=[];navigate('profile');break;case 'return-intake':demoMode=false;navigate('profile');break;case 'reset-sim':sim=null;render();break;case 'apply-sim':field().weights=[...sim.weights];field().water=sim.water;persist();toast('Priorities and irrigation saved. Climate scenario remains a simulation.');renderSim();break;case 'swap':[sim.sequence[0],sim.sequence[1]]=[sim.sequence[1],sim.sequence[0]];render();break;case 'close-dialog':$('#details').close();break;case 'print':window.print();break;case 'export':{if(!demoMode){intake.download();break;}const f=field();const best=f.saved?savedResult(f):valid()[0];const blob=new Blob([JSON.stringify({prototype:true,dataClass:'illustrative',field:f,plan:best||null,warning:'Not validated agricultural advice. No NASA data integration.'},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='soil-to-stars-field-plan.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Demo field and plan exported');break;}case 'remove-saved':delete field().saved;delete field().savedContext;persist();render();toast('Saved plan removed from this field');break;case 'reset-data':fields=structuredClone(demoFields);current=fields[0].id;sim=null;selected=[];persist();render();toast('Example fields restored');break;}});
+function navigate(r){closeMore({restoreFocus:false});if(location.hash==='#'+r)render();else location.hash=r;}
+function syncThemeLabel(){
+  const dark=document.body.classList.contains('dark');
+  const label=dark?'Switch to light mode':'Switch to dark mode';
+  const theme=$('#theme'),mobileTheme=$('#mobile-theme');
+  if(theme){theme.setAttribute('aria-label',label);theme.title=label;}
+  if(mobileTheme){mobileTheme.setAttribute('aria-label',label);mobileTheme.textContent=dark?'Switch to light mode':'Switch to dark mode';}
+}
+function toggleTheme(){document.body.classList.toggle('dark');syncThemeLabel();try{localStorage.setItem('sts-studio-theme',document.body.classList.contains('dark')?'dark':'light');}catch{}}
+$('#theme').addEventListener('click',toggleTheme);
+$('#mobile-theme')?.addEventListener('click',toggleTheme);
+try{document.body.classList.toggle('dark',(localStorage.getItem('sts-studio-theme')||'light')==='dark');}catch{}syncThemeLabel();
+$('#menu').addEventListener('click',()=>{if(isMobileNav())return;$('#sidebar').classList.toggle('open');$('#menu').setAttribute('aria-expanded',String($('#sidebar').classList.contains('open')));});
+function switchField(id){current=id;sim=null;selected=[];persist();render();}
+$('#field-select').addEventListener('change',e=>switchField(e.target.value));
+$('#mobile-field-select')?.addEventListener('change',e=>switchField(e.target.value));
+$('#mobile-more-open')?.addEventListener('click',()=>{if(moreOpen)closeMore();else openMore();});
+$('#mobile-more-close')?.addEventListener('click',()=>closeMore());
+$('#mobile-more-backdrop')?.addEventListener('click',()=>closeMore());
+$('#mobile-more-nav')?.addEventListener('click',e=>{const link=e.target.closest('a[href^="#"]');if(link)closeMore({restoreFocus:false});});
+$('#mobile-tabbar')?.addEventListener('click',e=>{const link=e.target.closest('a[data-tab]');if(link)closeMore({restoreFocus:false});});
+document.addEventListener('keydown',e=>{
+  if(!moreOpen)return;
+  if(e.key==='Escape'){e.preventDefault();closeMore();return;}
+  if(e.key!=='Tab')return;
+  const sheet=$('#mobile-more-sheet');if(!sheet||sheet.hidden)return;
+  const items=focusables(sheet);if(!items.length)return;
+  const first=items[0],last=items[items.length-1];
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+  else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+});
+window.addEventListener('resize',()=>{if(!isMobileNav()){closeMore({restoreFocus:false});$('#sidebar').classList.remove('open');$('#menu').setAttribute('aria-expanded','false');}});
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const d=b.dataset;if(d.route){navigate(d.route);return;}if(d.detail){showDetails(d.detail);return;}if(d.metric){metric=d.metric;render();return;}if(d.year){chartYear=d.year;render();return;}if(d.preset&&demoMode&&sim){sim.weights=[...presets[d.preset]];render();return;}if(d.compare){if(selected.includes(d.compare))selected=selected.filter(id=>id!==d.compare);else if(selected.length<3)selected.push(d.compare);else return toast('Compare up to three plans. Remove one first.');toast(`${selected.length} plan${selected.length===1?'':'s'} selected for comparison`);render();return;}if(d.save){const f=field();f.saved=d.save;f.savedContext=route==='saved'&&f.savedContext?f.savedContext:route==='simulator'&&sim?{scenario:sim.scenario,water:sim.water,weights:[...sim.weights]}:{scenario:'Typical',water:f.water,weights:[...f.weights]};persist();toast('Plan saved. Open Saved plan to review or export it.');if(!$('#details').open)render();return;}switch(d.action){case 'new-field':closeMore({restoreFocus:false});intake.newDraft();demoMode=false;sim=null;selected=[];navigate('profile');break;case 'return-intake':demoMode=false;navigate('profile');break;case 'reset-sim':sim=null;render();break;case 'apply-sim':field().weights=[...sim.weights];field().water=sim.water;persist();toast('Priorities and irrigation saved. Climate scenario remains a simulation.');renderSim();break;case 'swap':[sim.sequence[0],sim.sequence[1]]=[sim.sequence[1],sim.sequence[0]];render();break;case 'close-dialog':$('#details').close();break;case 'print':window.print();break;case 'export':{closeMore({restoreFocus:false});if(!demoMode){intake.download();break;}const f=field();const best=f.saved?savedResult(f):valid()[0];const blob=new Blob([JSON.stringify({prototype:true,dataClass:'illustrative',field:f,plan:best||null,warning:'Not validated agricultural advice. No NASA data integration.'},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='soil-to-stars-field-plan.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Demo field and plan exported');break;}case 'remove-saved':delete field().saved;delete field().savedContext;persist();render();toast('Saved plan removed from this field');break;case 'reset-data':fields=structuredClone(demoFields);current=fields[0].id;sim=null;selected=[];persist();render();toast('Example fields restored');break;}});
 document.addEventListener('input',e=>{const d=e.target.dataset;if(d.weight!==undefined&&demoMode&&sim){const w=sim.weights;w[Number(d.weight)]=Number(e.target.value);if(w.every(n=>n===0)){w[Number(d.weight)]=1;e.target.value=1;}renderSim();}});
 document.addEventListener('change',e=>{if(!demoMode)return;if(e.target.id==='sim-water'){sim.water=e.target.value;renderSim();}if(e.target.id==='sim-scenario'){sim.scenario=e.target.value;renderSim();}if(e.target.dataset.slot!==undefined){sim.sequence[Number(e.target.dataset.slot)]=e.target.value;renderSim();}if(e.target.dataset.compareSlot!==undefined){const slot=Number(e.target.dataset.compareSlot),id=e.target.value;if(selected.some((s,i)=>i!==slot&&s===id)){toast('Choose a different plan for each column');render();return;}selected[slot]=id;render();}});
 document.addEventListener('sts-language-change',()=>{const focused=document.activeElement?.id;render();if(focused)document.getElementById(focused)?.focus({preventScroll:true});});
-window.addEventListener('hashchange',render);$('#details').addEventListener('click',e=>{if(e.target===$('#details'))$('#details').close();});render();
+window.addEventListener('hashchange',()=>{closeMore({restoreFocus:false});render();});$('#details').addEventListener('click',e=>{if(e.target===$('#details'))$('#details').close();});render();
 })();

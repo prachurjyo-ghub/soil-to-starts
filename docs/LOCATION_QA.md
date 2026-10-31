@@ -68,3 +68,21 @@ Administrative location is not scientific recommendation coverage. A precise pin
 Boundary integrity uses WebCrypto SHA-256; map mode requires a secure browser context (HTTPS or localhost), WebGL and the configured basemap. An insecure LAN preview can fall back to district search. Use HTTPS for physical-phone review. District search does not need those map capabilities.
 
 Shared INTAKE-UI readiness was reopened for regression checks; prior evidence remains intact and independent review is still pending. Task **INTAKE-MAP**, command **P-c57fe1ebaa44** (one new Fardin implementation instruction). At that implementation handoff no commit, push, merge or deployment was authorized/performed. Fardin subsequently authorized feature-branch commit/push delivery under DELIVERY-INTAKE; review/scientific gates remain pending.
+
+## Prachurjo independent UI review — 2026-11-01
+
+Reviewer: **Prachurjo** · Branch base: `feature/intake-location` @ `3b9fba0` (plus local frontend polish on the review branch) · Environment: local Next.js workspace (`/workspace`) in browser.
+
+**Reporter statement:** UI checked; everything okay; no blocking frontend issues found.
+
+Verified in this review:
+- Mounted field-setup / intake UI presentation and interaction look correct.
+- Desktop and narrow mobile chrome (compact header, bottom navigation / More drawer polish) usable.
+- Intake form controls, district method presentation, and select/chevron layout OK for frontend review purposes.
+
+Not claimed by this note:
+- Scientific API/NASA/agronomy acceptance.
+- Main-branch merge approval.
+- A separate physical-phone HTTPS session is not separately documented here; this record is Prachurjo’s independent UI usability review as requested for handoff.
+
+Next consumer: Fardin coordinates any remaining merge/G0 work. Scientific gates remain pending.

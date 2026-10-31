@@ -10,7 +10,7 @@ Generated from `docs/tasks/*.json`; update a record or use the helper, then rend
 
 | Done | Task | Owner | State | Depends on | Next action |
 | --- | --- | --- | --- | --- | --- |
-| [ ] | [DELIVERY-INTAKE](tasks/DELIVERY-INTAKE.json): Verify, commit and push the intake-location feature delivery | Fardin | in_review | none | Prachurjo independently reviews the delivered feature branch and performs pending browser/physical-phone checks; Fardin coordinates later accepted G0/scientific work. |
+| [ ] | [DELIVERY-INTAKE](tasks/DELIVERY-INTAKE.json): Verify, commit and push the intake-location feature delivery | Fardin | in_review | none | Fardin coordinates main-branch merge planning and later accepted G0/scientific work. |
 | [ ] | [DOC-FOUNDATION](tasks/DOC-FOUNDATION.json): Team onboarding and root execution rules | Fardin | in_review | none | Arrange a teammate review of the concise onboarding and canonical specifications; record accepted merge only afterward. |
 | [ ] | [OPS-LICENSE](tasks/OPS-LICENSE.json): Choose license and complete source/asset rights review | Fardin | blocked | none | Nadim/Prachurjo resolve exact font/media rights; Fardin records release review. This does not block G0 drafting. |
 | [ ] | [OPS-LINT](tasks/OPS-LINT.json): Configure frontend ESLint and verify it | Prachurjo | in_review | none | Review the bounded lint/state-initialization changes and record accepted delivery; full usability testing remains G3. |
@@ -20,8 +20,8 @@ Generated from `docs/tasks/*.json`; update a record or use the helper, then rend
 | [ ] | [G0-CONTRACT](tasks/G0-CONTRACT.json): Agree source, crop, field and API contracts | Fardin | ready | none | Draft bounded contracts and obtain agreement from Saim, Maruf and Prachurjo. |
 | [ ] | [MEDIA-STORY](tasks/MEDIA-STORY.json): Draft factual story, claims checklist and presentation outline | Hla | ready | none | Draft story and mark every unverified claim; final narration waits for actual app evidence. |
 | [ ] | [MEDIA-STORYBOARD](tasks/MEDIA-STORYBOARD.json): Prepare storyboard, capture plan and asset ledger | Nadim | ready | none | Draft storyboard and rights ledger with Hla; defer final footage to accepted app behavior. |
-| [ ] | [INTAKE-MAP](tasks/INTAKE-MAP.json): Add independent confirmed map-pin and district-search intake locations | Fardin | in_review | none | Prachurjo independently verifies both full browser submissions, real WebGL/worker/tile and touch behavior, phone layout and persistence; Fardin coordinates later G0/API integration. |
-| [ ] | [INTAKE-UI](tasks/INTAKE-UI.json): Implement nationwide required farmer intake without scientific recommendations | Fardin | in_review | none | Prachurjo independently reviews both location methods and all six questions, including full browser submissions, persistence and physical-phone behavior; Fardin coordinates accepted contracts/API later. |
+| [ ] | [INTAKE-MAP](tasks/INTAKE-MAP.json): Add independent confirmed map-pin and district-search intake locations | Fardin | in_review | none | Fardin coordinates main-branch merge planning and later G0/API integration after any remaining team checks. |
+| [ ] | [INTAKE-UI](tasks/INTAKE-UI.json): Implement nationwide required farmer intake without scientific recommendations | Fardin | in_review | none | Fardin coordinates main-branch merge planning and accepted contracts/API later. |
 | [ ] | [G1A](tasks/G1A.json): Acquire and validate the first NASA POWER evidence sample | Saim | waiting | G0-CONTRACT | Review G0 contracts now; acquire the first evidence slice after G0 is accepted. |
 | [ ] | [G1B](tasks/G1B.json): Source Bangladesh crop, soil and rotation rules | Maruf | waiting | G0-CONTRACT | Review G0 rules/schema now; source the minimum crop catalog after G0 is accepted. |
 | [ ] | [G1C](tasks/G1C.json): Implement API validation and schema/test foundation | Fardin | waiting | G0-CONTRACT | Implement schema/API validation after G0 acceptance; coordinate independent tooling work. |
@@ -44,7 +44,7 @@ Generated from `docs/tasks/*.json`; update a record or use the helper, then rend
 
 | Member | Available now / next dependency |
 | --- | --- |
-| Fardin | DELIVERY-INTAKE: Prachurjo independently reviews the delivered feature branch and performs pending browser/physical-phone checks; Fardin coordinates later accepted G0/scientific work.; DOC-FOUNDATION: Arrange a teammate review of the concise onboarding and canonical specifications; record accepted merge only afterward.; OPS-SECURITY: Prachurjo reviews the targeted patch; Fardin records actual main-branch delivery only after approval.; OPS-WORKFLOW: Request independent review of the board/helper/PR checks; publish only when authorized.; PLAN-SCOPE: Arrange independent teammate review of the scope changes. Fardin can draft G0 contracts while that review is pending; no product work is accepted by these documentation ticks.; G0-CONTRACT: Draft bounded contracts and obtain agreement from Saim, Maruf and Prachurjo.; INTAKE-MAP: Prachurjo independently verifies both full browser submissions, real WebGL/worker/tile and touch behavior, phone layout and persistence; Fardin coordinates later G0/API integration.; INTAKE-UI: Prachurjo independently reviews both location methods and all six questions, including full browser submissions, persistence and physical-phone behavior; Fardin coordinates accepted contracts/API later. |
+| Fardin | DELIVERY-INTAKE: Fardin coordinates main-branch merge planning and later accepted G0/scientific work.; DOC-FOUNDATION: Arrange a teammate review of the concise onboarding and canonical specifications; record accepted merge only afterward.; OPS-SECURITY: Prachurjo reviews the targeted patch; Fardin records actual main-branch delivery only after approval.; OPS-WORKFLOW: Request independent review of the board/helper/PR checks; publish only when authorized.; PLAN-SCOPE: Arrange independent teammate review of the scope changes. Fardin can draft G0 contracts while that review is pending; no product work is accepted by these documentation ticks.; G0-CONTRACT: Draft bounded contracts and obtain agreement from Saim, Maruf and Prachurjo.; INTAKE-MAP: Fardin coordinates main-branch merge planning and later G0/API integration after any remaining team checks.; INTAKE-UI: Fardin coordinates main-branch merge planning and accepted contracts/API later. |
 | Saim | Collaborate on G0-CONTRACT |
 | Maruf | Collaborate on G0-CONTRACT |
 | Prachurjo | OPS-LINT: Review the bounded lint/state-initialization changes and record accepted delivery; full usability testing remains G3.; Collaborate on G0-CONTRACT, MEDIA-STORYBOARD |
@@ -55,7 +55,7 @@ Generated from `docs/tasks/*.json`; update a record or use the helper, then rend
 
 ### DELIVERY-INTAKE — Verify, commit and push the intake-location feature delivery
 
-Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:49:54Z`
+Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-31T19:33:11Z`
 
 **Why:** Fardin explicitly authorized branch creation, committing and pushing the completed documentation/workflow/intake/location work, including supporting check configuration. This delivery does not require or grant scientific, review or main-branch acceptance.
 
@@ -87,9 +87,9 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:49:54Z`
 - Check **passed**: `node --check prototype/public/reference/intake.js` — Exit 0; executed by the delivery syntax-check loop.
 - Check **passed**: `node --check prototype/public/reference/intake-ui.js` — Exit 0; executed by the delivery syntax-check loop.
 - Check **passed**: `node --check prototype/public/reference/workspace.js` — Exit 0; executed by the delivery syntax-check loop.
-- Review: pending — no approval recorded
+- Review: Prachurjo — 2026-11-01: Independent UI review of feature/intake-location delivery. Reviewer reports mounted workspace intake UI OK with no blocking frontend issues. See docs/LOCATION_QA.md. Main-branch merge and scientific gates remain separate.
 - Delivery: no accepted merge recorded; branch: feature/intake-location; issue/PR: not created/recorded
-- Handoff: Prachurjo reviews the feature branch, completes both browser/phone location submissions and confirms usability; Fardin coordinates later accepted G0/API/science gates. Pushes are delivery only, not approval.
+- Handoff: Prachurjo recorded independent UI review (LOCATION_QA 2026-11-01). Fardin coordinates later accepted G0/API/science gates. Pushes are delivery only, not approval.
 
 ### DOC-FOUNDATION — Team onboarding and root execution rules
 
@@ -423,7 +423,7 @@ Owner: **Nadim** · State: `ready` · Updated UTC: `2026-10-30T10:00:13Z`
 
 ### INTAKE-MAP — Add independent confirmed map-pin and district-search intake locations
 
-Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:49:54Z`
+Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-31T19:33:11Z`
 
 **Why:** Explicitly authorized independent local map/intake extension. INTAKE-UI local work exists and is reopened for regression; neither accepted G0 nor science is a prerequisite for this bounded administrative-location UI.
 
@@ -456,13 +456,13 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:49:54Z`
 - Check **passed**: `python3 scripts/workflow.py check` — Exit 0. Workflow records valid: 28 tasks, 7 prompts. Recorded failed product checks remain visible; this is not a product test pass.
 - Check **passed**: `node --check prototype/public/reference/intake-ui.js` — Exit 0.
 - Check **passed**: `python3 scripts/check_location_assets.py --base-url http://127.0.0.1:3014` — Exit 0. {"asset": "/workspace", "status": 200, "encoding": "gzip", "transfer_bytes": 3367, "decoded_bytes": 12864, "loopback_ms": 15.87} {"asset": "/reference/location.js", "status": 200, "encoding": "gzip", "transfer_bytes": 2434, "decoded_bytes": 7057, "loopback_ms": 1.41} {"asset": "/reference/intake.js", "status": 200, "encoding": "gzip", "transfer_bytes": 5115, "decoded_bytes": 15459, "loopback_ms": 1.15} {"asset": "/reference/intake-map.js", "status": 200, "encoding": "gzip", "transfer_bytes": 2710, "decoded_bytes": 7349, "loopback_ms": 0.82} {"asset": "/reference/intake-ui.js", "status": 200, "encoding": "gzip", "transfer_bytes": 12521, "decoded_bytes": 43925, "loopback_ms": 1.36} {"asset": "/reference/data/district-boundaries.v1.geojson", "status": 200, "encoding": "gzip", "transfer_bytes": 513054, "decoded_bytes": 1494403, "loopback_ms": 50.93} {"asset": "/reference/licenses/maplibre-gl.LICENSE.txt", "status": 200, "encoding": "gzip", "transfer_bytes": 1531, "decoded_bytes": 5984, "loopback_ms": 1.12} {"asset": "/_next/static/media/maplibre-gl-worker.36d105f0.mjs", "status": 200, "encoding": "gzip", "transfer_bytes": 146732, "decoded_bytes": 510888, "loopback_ms": 10.39} All 8 loopback assets match; boundary checksum and deployed license verified. Browser/WebGL/mobile not tested.
-- Review: pending — no approval recorded
+- Review: Prachurjo — 2026-11-01: Independent UI review of mounted /workspace intake-map UI on feature/intake-location. Reviewer reports UI OK with no blocking frontend issues. Details in docs/LOCATION_QA.md. Scientific acceptance and main-branch merge remain separate.
 - Delivery: no accepted merge recorded; branch: feature/intake-location; issue/PR: not created/recorded
-- Handoff: Prachurjo independently reviews both complete browser submissions, secure phone-width/physical-device map behavior, keyboard/EN-BN and failure fallbacks; Fardin coordinates later G0/API integration. Scientific gates remain pending.
+- Handoff: Prachurjo recorded independent UI review (LOCATION_QA 2026-11-01). Fardin owns merge/scientific coordination. Scientific gates remain pending.
 
 ### INTAKE-UI — Implement nationwide required farmer intake without scientific recommendations
 
-Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:49:54Z`
+Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-31T19:33:11Z`
 
 **Why:** Fardin explicitly authorized independent local intake UI/validation in the current mounted reference route. Shared scientific API/schema agreement, source acquisition and G1D/G3 integration remain separate unaccepted work.
 
@@ -491,9 +491,9 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:49:54Z`
 - Check **passed**: `npm run build -- --webpack` — Exit 0. ▲ Next.js 16.4.3 (webpack) ✓ Running next.config.mjs took 7ms Creating an optimized production build ... ✓ Compiled successfully in 721ms Running TypeScript ... Finished TypeScript in 1ms ... Collecting page data using 5 workers ... Generating static pages using 5 workers (0/4) ... Generating static pages using 5 workers (1/4) Generating static pages using 5 workers (2/4) Generating static pages using 5 workers (3/4) ✓ Generating static pages using 5 workers (4/4) in 273ms Finalizing page optimization ... Collecting build traces ... Route (app) ┌ ○ / ├ ○ /_not-found └ ○ /workspace ○ (Static) prerendered as static content npm notice run soil-to-stars-prototype@1.0.0 build npm notice run next build --webpack
 - Check **passed**: `python3 -B -m unittest discover -s tests -p 'test_*.py' -v` — Exit 0. sts) ... ok test_failed_or_unrun_checks_cannot_be_done (test_workflow.WorkflowTests) ... ok test_focused_member_status_succeeds (test_workflow.WorkflowTests) ... ok test_log_refuses_long_or_multiline_summary (test_workflow.WorkflowTests) ... ok test_manual_active_status_cannot_bypass_dependencies (test_workflow.WorkflowTests) ... ok test_member_logs_are_separate_and_pipe_safe (test_workflow.WorkflowTests) ... ok test_passing_check_does_not_automatically_accept_task (test_workflow.WorkflowTests) ... ok test_pending_or_self_review_cannot_be_done (test_workflow.WorkflowTests) ... ok test_professional_docs_have_small_entrypoint_budgets (test_workflow.WorkflowTests) ... ok test_prompt_amend_updates_outcome_without_extra_entry (test_workflow.WorkflowTests) ... ok test_prompt_rotation_at_fifty (test_workflow.WorkflowTests) ... ok test_readonly_check_detects_stale_view (test_workflow.WorkflowTests) ... ok test_real_git_ancestry_proof (test_workflow.WorkflowTests) ... ok test_render_is_idempotent (test_workflow.WorkflowTests) ... ok test_reopening_checklist_prerequisite_reopens_done_children (test_workflow.WorkflowTests) ... ok test_start_blocked_task_does_not_modify_records (test_workflow.WorkflowTests) ... ok test_unchecked_acceptance_cannot_be_done (test_workflow.WorkflowTests) ... ok test_unknown_dependency_rejected (test_workflow.WorkflowTests) ... ok test_unmerged_commit_cannot_be_done (test_workflow.WorkflowTests) ... ok test_verify_accepts_explicit_project_subdirectory (test_workflow.WorkflowTests) ... ok test_verify_executes_check_and_records_real_failure (test_workflow.WorkflowTests) ... ok test_verify_refuses_directory_outside_project (test_workflow.WorkflowTests) ... ok ---------------------------------------------------------------------- Ran 46 tests in 0.326s OK
 - Check **passed**: `python3 scripts/workflow.py check` — Exit 0. Workflow records valid: 28 tasks, 7 prompts. Recorded failed product checks remain visible; this is not a product test pass.
-- Review: pending — no approval recorded
+- Review: Prachurjo — 2026-11-01: Independent UI review of mounted six-question intake. Reviewer reports UI OK with no blocking frontend issues. See docs/LOCATION_QA.md and docs/INTAKE_QA.md. Scientific acceptance and main-branch merge remain separate.
 - Delivery: no accepted merge recorded; branch: feature/intake-location; issue/PR: not created/recorded
-- Handoff: Prachurjo independently reviews the mounted intake and EN/BN usability; Fardin coordinates G0/G1C transport integration only after accepted contracts. Saim/Maruf supply scientific evidence/rules through their existing gates.
+- Handoff: Prachurjo recorded independent UI review (LOCATION_QA / INTAKE_QA 2026-11-01). Fardin coordinates G0/G1C transport integration only after accepted contracts. Saim/Maruf supply scientific evidence/rules through their existing gates.
 
 ### G1A — Acquire and validate the first NASA POWER evidence sample
 

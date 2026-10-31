@@ -6,7 +6,7 @@
   "phase": "G0-PREP",
   "status": "in_review",
   "depends_on": [],
-  "updated_at": "2026-10-30T16:49:54Z",
+  "updated_at": "2026-10-31T19:33:11Z",
   "acceptance": [
     {
       "id": "a1",
@@ -281,17 +281,22 @@
     {
       "at": "2026-10-30T16:49:54Z",
       "note": "Source delivery 7f79196 verified on origin/feature/intake-location through DELIVERY-INTAKE. Status stays in_review; physical-phone/browser and independent review remain pending."
+    },
+    {
+      "at": "2026-10-31T19:33:11Z",
+      "note": "Prachurjo recorded independent UI review: mounted intake-map UI OK with no blocking frontend issues. Status stays in_review; main-branch merge and scientific gates remain pending.",
+      "evidence": "docs/LOCATION_QA.md (2026-11-01 Prachurjo UI review)"
     }
   ],
   "review": {
-    "by": null,
-    "evidence": ""
+    "by": "Prachurjo",
+    "evidence": "2026-11-01: Independent UI review of mounted /workspace intake-map UI on feature/intake-location. Reviewer reports UI OK with no blocking frontend issues. Details in docs/LOCATION_QA.md. Scientific acceptance and main-branch merge remain separate."
   },
   "merge_ref": null,
   "branch": "feature/intake-location",
   "issue": null,
-  "next_action": "Prachurjo independently verifies both full browser submissions, real WebGL/worker/tile and touch behavior, phone layout and persistence; Fardin coordinates later G0/API integration.",
-  "handoff": "Prachurjo independently reviews both complete browser submissions, secure phone-width/physical-device map behavior, keyboard/EN-BN and failure fallbacks; Fardin coordinates later G0/API integration. Scientific gates remain pending.",
+  "next_action": "Fardin coordinates main-branch merge planning and later G0/API integration after any remaining team checks.",
+  "handoff": "Prachurjo recorded independent UI review (LOCATION_QA 2026-11-01). Fardin owns merge/scientific coordination. Scientific gates remain pending.",
   "scope": "mvp",
   "purpose": "Explicitly authorized independent local map/intake extension. INTAKE-UI local work exists and is reopened for regression; neither accepted G0 nor science is a prerequisite for this bounded administrative-location UI.",
   "delivery": {

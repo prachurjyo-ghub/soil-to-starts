@@ -534,7 +534,18 @@ window.STS_BENGALI={
   "Illustrative aerial farmland": "আকাশ থেকে দেখা কৃষিজমির নমুনা ছবি",
   "Choose planning priorities": "পরিকল্পনার অগ্রাধিকার বাছুন",
   "Illustrative mustard-field landscape beneath an example field-footprint overlay": "সরিষার জমির নমুনা ছবির ওপর উদাহরণ হিসেবে জমির সীমানা দেখানো হয়েছে",
-  "Explore evidence layers": "পরিবেশের তথ্যের স্তরগুলো দেখুন"
+  "Explore evidence layers": "পরিবেশের তথ্যের স্তরগুলো দেখুন",
+  "My Field": "আমার জমি",
+  "Results": "ফলাফল",
+  "Rotations": "আবর্তন",
+  "More": "আরও",
+  "Navigation": "নেভিগেশন",
+  "Preferences & actions": "পছন্দ ও কাজ",
+  "Demo field": "নমুনা জমি",
+  "Export inputs": "তথ্য রপ্তানি",
+  "Export demo": "নমুনা রপ্তানি",
+  "Primary": "প্রধান",
+  "More destinations": "অন্যান্য গন্তব্য"
 };
 (() => {
 'use strict';

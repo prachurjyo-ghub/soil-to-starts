@@ -6,7 +6,7 @@
   "phase": "DELIVERY",
   "status": "in_review",
   "depends_on": [],
-  "updated_at": "2026-10-30T16:49:54Z",
+  "updated_at": "2026-10-31T19:33:11Z",
   "acceptance": [
     {
       "id": "a1",
@@ -187,17 +187,22 @@
     {
       "at": "2026-10-30T16:49:54Z",
       "note": "Source delivery 7f79196 verified on origin/feature/intake-location through DELIVERY-INTAKE. Status stays in_review; physical-phone/browser and independent review remain pending."
+    },
+    {
+      "at": "2026-10-31T19:33:11Z",
+      "note": "Prachurjo recorded independent UI review of the delivered feature branch: UI OK with no blocking frontend issues. Status stays in_review; main-branch merge and scientific gates remain pending.",
+      "evidence": "docs/LOCATION_QA.md (2026-11-01 Prachurjo UI review); INTAKE-UI and INTAKE-MAP review.by=Prachurjo"
     }
   ],
   "review": {
-    "by": null,
-    "evidence": ""
+    "by": "Prachurjo",
+    "evidence": "2026-11-01: Independent UI review of feature/intake-location delivery. Reviewer reports mounted workspace intake UI OK with no blocking frontend issues. See docs/LOCATION_QA.md. Main-branch merge and scientific gates remain separate."
   },
   "merge_ref": null,
   "branch": "feature/intake-location",
   "issue": null,
-  "next_action": "Prachurjo independently reviews the delivered feature branch and performs pending browser/physical-phone checks; Fardin coordinates later accepted G0/scientific work.",
-  "handoff": "Prachurjo reviews the feature branch, completes both browser/phone location submissions and confirms usability; Fardin coordinates later accepted G0/API/science gates. Pushes are delivery only, not approval.",
+  "next_action": "Fardin coordinates main-branch merge planning and later accepted G0/scientific work.",
+  "handoff": "Prachurjo recorded independent UI review (LOCATION_QA 2026-11-01). Fardin coordinates later accepted G0/API/science gates. Pushes are delivery only, not approval.",
   "scope": "mvp",
   "purpose": "Fardin explicitly authorized branch creation, committing and pushing the completed documentation/workflow/intake/location work, including supporting check configuration. This delivery does not require or grant scientific, review or main-branch acceptance.",
   "delivery": {

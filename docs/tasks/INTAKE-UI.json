@@ -6,7 +6,7 @@
   "phase": "G0-PREP",
   "status": "in_review",
   "depends_on": [],
-  "updated_at": "2026-10-30T16:49:54Z",
+  "updated_at": "2026-10-31T19:33:11Z",
   "acceptance": [
     {
       "id": "a1",
@@ -237,17 +237,22 @@
     {
       "at": "2026-10-30T16:49:54Z",
       "note": "Source delivery 7f79196 verified on origin/feature/intake-location through DELIVERY-INTAKE. Status stays in_review; physical-phone/browser and independent review remain pending."
+    },
+    {
+      "at": "2026-10-31T19:33:11Z",
+      "note": "Prachurjo recorded independent UI review: mounted six-question intake OK with no blocking frontend issues. Status stays in_review; main-branch merge and scientific gates remain pending.",
+      "evidence": "docs/LOCATION_QA.md (2026-11-01 Prachurjo UI review); docs/INTAKE_QA.md"
     }
   ],
   "review": {
-    "by": null,
-    "evidence": ""
+    "by": "Prachurjo",
+    "evidence": "2026-11-01: Independent UI review of mounted six-question intake. Reviewer reports UI OK with no blocking frontend issues. See docs/LOCATION_QA.md and docs/INTAKE_QA.md. Scientific acceptance and main-branch merge remain separate."
   },
   "merge_ref": null,
   "branch": "feature/intake-location",
   "issue": null,
-  "next_action": "Prachurjo independently reviews both location methods and all six questions, including full browser submissions, persistence and physical-phone behavior; Fardin coordinates accepted contracts/API later.",
-  "handoff": "Prachurjo independently reviews the mounted intake and EN/BN usability; Fardin coordinates G0/G1C transport integration only after accepted contracts. Saim/Maruf supply scientific evidence/rules through their existing gates.",
+  "next_action": "Fardin coordinates main-branch merge planning and accepted contracts/API later.",
+  "handoff": "Prachurjo recorded independent UI review (LOCATION_QA / INTAKE_QA 2026-11-01). Fardin coordinates G0/G1C transport integration only after accepted contracts. Saim/Maruf supply scientific evidence/rules through their existing gates.",
   "scope": "mvp",
   "purpose": "Fardin explicitly authorized independent local intake UI/validation in the current mounted reference route. Shared scientific API/schema agreement, source acquisition and G1D/G3 integration remain separate unaccepted work.",
   "delivery": {

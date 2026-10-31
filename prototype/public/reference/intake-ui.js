@@ -20,25 +20,37 @@
     intro:['Choose a location on the map or select a district, then answer all six questions. Your answers stay in this browser.','মানচিত্রে অবস্থান বা জেলা বেছে ছয়টি প্রশ্নের উত্তর দিন। উত্তর এই ব্রাউজারেই থাকবে।'],
     draft:['Unfinished draft · not submitted or scientifically assessed.','অসমাপ্ত খসড়া · জমা দেওয়া বা বৈজ্ঞানিক মূল্যায়ন করা হয়নি।'],
     location:['Location · required','অবস্থান · আবশ্যক'], search:['Search districts in English or Bangla','ইংরেজি বা বাংলায় জেলা খুঁজুন'], district:['District','জেলা'],
+    sectionLocation:['Field location','জমির অবস্থান'], sectionLocationHelp:['Choose one way to identify the district for this field.','এই জমির জেলা চিহ্নিত করতে একটি পদ্ধতি বেছে নিন।'],
+    sectionCurrent:['Current crop & field availability','বর্তমান ফসল ও জমি পাওয়ার সময়'], sectionCurrentHelp:['Tell us what is growing now and when the field can be used next.','এখন কী চাষ হচ্ছে এবং এরপর জমি কখন ব্যবহার করা যাবে তা জানান।'],
+    sectionHistory:['Crop history & next plan','ফসলের ইতিহাস ও পরবর্তী পরিকল্পনা'], sectionHistoryHelp:['First record what grew before. Then tell us what you would usually grow next.','আগে কী চাষ হয়েছিল তা আগে লিখুন। তারপর সাধারণত এরপর কী চাষ করতেন তা জানান।'],
+    sectionWater:['Water access & priorities','পানির সুবিধা ও অগ্রাধিকার'], sectionWaterHelp:['Describe available water and the outcome that matters most to you.','পানির সুবিধা এবং আপনার কাছে সবচেয়ে গুরুত্বপূর্ণ লক্ষ্যটি জানান।'],
+    districtSearchLabel:['Find your district','আপনার জেলা খুঁজুন'], districtSearchHint:['Start typing an English or Bangla district name.','ইংরেজি বা বাংলায় জেলার নাম লিখতে শুরু করুন।'],
+    districtSelected:['Selected district','নির্বাচিত জেলা'], districtMatches:['matching districts','টি জেলা মিলেছে'], noDistrictMatches:['No matching district. Check the spelling or choose on the map.','কোনো মিল পাওয়া যায়নি। বানান দেখুন অথবা মানচিত্রে বেছে নিন।'],
     districtHelp:['All 64 districts are selectable. District search supplies district-level context, with no farm coordinates or scientific coverage implied.','৬৪টি জেলাই বেছে নেওয়া যায়। জেলা অনুসন্ধানে জেলাভিত্তিক প্রেক্ষাপট মেলে; জমির স্থানাঙ্ক বা বৈজ্ঞানিক পরামর্শের আওতা বোঝায় না।'],
     source:['District directory source: Bangladesh National Portal','জেলার তালিকার উৎস: বাংলাদেশ জাতীয় তথ্য বাতায়ন'], choose:['Select an answer','উত্তর বেছে নিন'],
     q1:['Q1. What crop is growing now?','প্রশ্ন ১। এখন কী ফসল হচ্ছে?'], currentCrop:['Current crop / field state','বর্তমান ফসল / জমির অবস্থা'],
     fallow:['Field currently empty/fallow','জমি বর্তমানে খালি/পতিত'], sown:['Current crop sowing date (optional, if known)','বর্তমান ফসল বপনের তারিখ (জানা থাকলে, ঐচ্ছিক)'],
     cropHelp:['These crop identities are supported for intake only. Regional suitability and variety rules still need review. If your crop is absent, keep a draft; do not choose a different crop as a guess.','এই ফসলগুলোর পরিচয় তথ্য গ্রহণে ব্যবহার করা হচ্ছে। অঞ্চলভিত্তিক উপযোগিতা ও জাতের নিয়ম পর্যালোচনা বাকি। আপনার ফসল তালিকায় না থাকলে খসড়া রাখুন; আন্দাজে অন্য ফসল বাছবেন না।'],
-    q2:['Q2. When will the field be available after harvest?','প্রশ্ন ২। ফসল কাটার পর জমি কবে পাওয়া যাবে?'], availabilityType:['Date or bounded date window','নির্দিষ্ট তারিখ বা সীমাবদ্ধ তারিখের পরিসর'],
-    date:['One date','একটি তারিখ'], window:['Date window','তারিখের পরিসর'], availableFrom:['Available-from date / earliest date','জমি পাওয়ার তারিখ / সম্ভাব্য প্রথম তারিখ'],
-    emptyDate:['Empty field: available-from date / earliest date','খালি জমি: পাওয়ার তারিখ / সম্ভাব্য প্রথম তারিখ'], availableTo:['Latest available date','সম্ভাব্য শেষ তারিখ'],
-    availabilityBasis:['How was this date determined?','তারিখটি কীভাবে নির্ধারণ করেছেন?'], expected:['Expected date from my crop schedule','আমার ফসলের সময়সূচি অনুযায়ী প্রত্যাশিত তারিখ'], estimate:['Farmer estimate','কৃষকের আনুমানিক তারিখ'],
-    q3:['Q3. What crops did you grow previously?','প্রশ্ন ৩। আগে কী কী ফসল চাষ করেছেন?'], historyState:['Previous crop history','আগের ফসলের ইতিহাস'],
-    historyEntries:['Enter previous crops, oldest first','আগের ফসল লিখুন, পুরোনোটি আগে'], first:['First cultivation / no previous crop history','প্রথম চাষ / আগের ফসলের ইতিহাস নেই'],
+    q2:['When will your field be ready for the next crop?','পরবর্তী ফসলের জন্য আপনার জমি কখন প্রস্তুত হবে?'], q2Number:['Q2.','প্রশ্ন ২।'],
+    q2Help:['Choose when you expect to finish harvesting your current crop.','বর্তমান ফসল কাটা কখন শেষ হবে বলে আশা করছেন, তা বেছে নিন।'],
+    availabilityType:['Choose the option that fits best','আপনার জন্য সঠিক বিকল্পটি বেছে নিন'],
+    date:['I know the date','আমি তারিখটি জানি'], window:['I have an approximate date range','আমার আনুমানিক তারিখের পরিসর জানা আছে'],
+    availableFrom:['Field ready date','জমি প্রস্তুত হওয়ার তারিখ'], emptyDate:['Field ready date (currently empty)','জমি প্রস্তুত হওয়ার তারিখ (বর্তমানে খালি)'],
+    earliestDate:['Earliest expected date','সম্ভাব্য প্রথম তারিখ'], availableTo:['Latest expected date','সম্ভাব্য শেষ তারিখ'],
+    availabilityBasis:['How do you know this date?','এই তারিখটি কীভাবে জানেন?'], expected:['From my crop schedule','আমার ফসলের সময়সূচি থেকে'], estimate:['My best estimate','আমার সেরা অনুমান'],
+    q3:['Q3. What crops did you grow previously?','প্রশ্ন ৩। আগে কী কী ফসল চাষ করেছেন?'], q3Help:['List previous crops in order, starting with the oldest.','আগের ফসলগুলো পুরোনো থেকে নতুন ক্রমে লিখুন।'],
+    historyState:['Do you have previous crop history?','আগের ফসলের ইতিহাস আছে কি?'],
+    historyEntries:['Yes, I can enter previous crops','হ্যাঁ, আগের ফসল লিখতে পারি'], first:['This is my first cultivation','এটি আমার প্রথম চাষ'],
     firstNote:['Known absence of history does not establish absence of rotation risks.','আগের ফসলের ইতিহাস না থাকা আবর্তনের ঝুঁকি নেই—এমন প্রমাণ নয়।'],
-    q4:['Q4. What would you normally grow next?','প্রশ্ন ৪। সাধারণত এরপর কী চাষ করতেন?'], baselineState:['Usual upcoming sequence (comparison baseline)','সাধারণ পরবর্তী ফসলক্রম (তুলনার ভিত্তি)'],
-    sequence:['Enter my usual upcoming sequence','আমার সাধারণ পরবর্তী ফসলক্রম লিখব'], noRotation:['No established rotation','নির্ধারিত ফসল আবর্তন নেই'],
+    q4:['Q4. What would you normally grow next?','প্রশ্ন ৪। সাধারণত এরপর কী চাষ করতেন?'], q4Help:['This usual plan is the comparison baseline for later recommendations.','এই সাধারণ পরিকল্পনা পরবর্তী তুলনার ভিত্তি হিসেবে ব্যবহার হবে।'],
+    baselineState:['What would you usually grow next?','সাধারণত এরপর কী চাষ করতেন?'],
+    sequence:['I can enter my usual next crops','আমি আমার সাধারণ পরবর্তী ফসল লিখতে পারি'], noRotation:['I do not have an established rotation','আমার নির্ধারিত ফসল আবর্তন নেই'],
     baselineNote:['Past history and this usual future sequence are separate. Repeated crops and fallow are allowed. An absent baseline cannot support a complete three-strategy comparison.','আগের ইতিহাস ও সাধারণ পরবর্তী ফসলক্রম আলাদা। একই ফসল পুনরায় এবং পতিত সময় দেওয়া যায়। ভিত্তি না থাকলে তিনটি কৌশলের পূর্ণ তুলনা সম্ভব নয়।'],
-    crop:['Crop','ফসল'], fallowSegment:['Fallow segment','পতিত সময়'], timing:['How will you describe this period?','সময়কাল কীভাবে জানাবেন?'],
-    seasonYear:['Season and year','মৌসুম ও বছর'], dates:['Start and end dates','শুরু ও শেষের তারিখ'], season:['Season','মৌসুম'], year:['Season start year','মৌসুম শুরুর বছর'],
+    crop:['Crop','ফসল'], previousCrop:['Previous crop','আগের ফসল'], nextCrop:['Next crop','পরবর্তী ফসল'], fallowSegment:['Leave the field empty for a period','একটি সময় জমি খালি রাখা'],
+    timing:['How will you describe this period?','এই সময়কাল কীভাবে জানাবেন?'],
+    seasonYear:['By growing season and year','চাষের মৌসুম ও বছর দিয়ে'], dates:['By start and end dates','শুরু ও শেষের তারিখ দিয়ে'], season:['Growing season','চাষের মৌসুম'], year:['Season start year','মৌসুম শুরুর বছর'],
     start:['Start date','শুরুর তারিখ'], end:['End date','শেষের তারিখ'], seasonHelp:['Enter entries in chronological order. For Rabi, use its starting year (e.g. 2025 for Rabi 2025–26). Season labels are reporting context, not planting advice.','সময়ের ক্রমে লিখুন। রবির জন্য শুরুর বছর দিন (যেমন রবি ২০২৫–২৬ এর জন্য ২০২৫)। মৌসুমের নাম তথ্যের প্রেক্ষাপট, বপনের পরামর্শ নয়।'],
-    add:['Add an entry','আরেকটি যোগ করুন'], remove:['Remove entry','সারিটি সরান'], entry:['Entry','সারি'],
+    add:['Add another crop','আরেকটি ফসল যোগ করুন'], addBaseline:['Add another crop or empty period','আরেকটি ফসল বা খালি সময় যোগ করুন'], remove:['Remove','সরান'], entry:['Entry','সারি'],
     q5:['Q5. What water access do you have?','প্রশ্ন ৫। পানির কী সুবিধা আছে?'], water:['Water access','পানির সুবিধা'], rainfed:['Rainfed','বৃষ্টিনির্ভর'], limited:['Limited irrigation','সীমিত সেচ'], reliable:['Reliable irrigation','নির্ভরযোগ্য সেচ'],
     seasonalLimits:['Are there seasonal irrigation limitations?','মৌসুমভেদে সেচের সীমাবদ্ধতা আছে কি?'], none:['No seasonal limitations reported','মৌসুমি সীমাবদ্ধতা নেই বলে জানাচ্ছি'], seasonal:['Yes, in specific seasons','হ্যাঁ, নির্দিষ্ট মৌসুমে'],
     limitedSeasons:['Seasons with limited/unavailable irrigation (select at least one)','সেচ সীমিত/অনুপলব্ধ থাকে যে মৌসুমে (অন্তত একটি)'], waterHelp:['These are farmer-reported access categories, not irrigation volumes.','এগুলো কৃষকের জানানো পানির সুবিধার ধরন, সেচের পরিমাণ নয়।'],
@@ -82,7 +94,7 @@
   };
   window.STS_INTAKE_UI = function ({render,onSubmit,onDemo,toast}) {
     const storageKey = 'sts-farmer-intake-v1';
-    let state, errors = [], storageOK = true, boundaryIndex=null, mapStatus='map_loading';
+    let state, errors = [], storageOK = true, boundaryIndex=null, mapStatus='map_loading', districtQuery='', activeDistrictIndex=-1;
     try { state = D.loadSaved(JSON.parse(localStorage.getItem(storageKey))); } catch { state = D.loadSaved(null); }
     const bn = () => document.documentElement.lang === 'bn';
     const t = key => (copy[key] || [key,key])[bn()?1:0];
@@ -122,10 +134,47 @@
       if(confirm)confirm.disabled=!maps?.isReady()||result.status!=='resolved'||confirmed;
       if(center)center.disabled=!maps?.isReady();
     }
+    const districtLabel = item => item ? `${name(item)} · ${item[bn()?'en':'bn']}` : '';
+    function matchingDistricts(query='') {
+      const normalized=query.trim().toLocaleLowerCase();
+      return D.districts.filter(item=>!normalized||[item.en,item.bn,item.id,item.division].some(value=>value.toLocaleLowerCase().includes(normalized)));
+    }
+    function districtOptions(items,selectedId) {
+      return items.map((item,index)=>`<button type="button" role="option" id="district-option-${esc(item.id)}" data-district-option="${esc(item.id)}" ${item.id===selectedId?'aria-selected="true"':''} class="${index===activeDistrictIndex?'is-active':''}"><span>${esc(name(item))}</span><small>${esc(item[bn()?'en':'bn'])} · ${esc(item.division)}</small>${item.id===selectedId?'<b aria-hidden="true">✓</b>':''}</button>`).join('');
+    }
+    function renderDistrictSuggestions(open=true) {
+      const input=document.getElementById(id('districtId')),list=document.getElementById('district-suggestions'),status=document.getElementById('district-match-count');
+      if(!input?.setAttribute||!list)return;
+      const items=matchingDistricts(districtQuery);
+      if(activeDistrictIndex>=items.length)activeDistrictIndex=items.length-1;
+      list.innerHTML=districtOptions(items,state.draft.districtId);
+      list.hidden=!open;
+      input.setAttribute('aria-expanded',String(open));
+      input.setAttribute('aria-activedescendant',open&&activeDistrictIndex>=0?`district-option-${items[activeDistrictIndex].id}`:'');
+      if(status)status.textContent=state.draft.districtId&&!districtQuery?`${t('districtSelected')}: ${districtLabel(D.districts.find(item=>item.id===state.draft.districtId))}`:items.length?(bn()?`${items.length}${t('districtMatches')}`:`${items.length} ${t('districtMatches')}`):t('noDistrictMatches');
+      if(activeDistrictIndex>=0)list.children[activeDistrictIndex]?.scrollIntoView({block:'nearest'});
+    }
+    function chooseDistrict(districtId) {
+      const district=D.districts.find(item=>item.id===districtId);
+      if(!district)return;
+      state.draft.districtId=district.id;
+      districtQuery='';
+      activeDistrictIndex=-1;
+      errors=errors.filter(error=>error.field!=='districtId');
+      persist();
+      const input=document.getElementById(id('districtId')),value=document.getElementById(id('districtValue')),error=document.getElementById(id('districtId')+'-error');
+      if(input)input.value=districtLabel(district);
+      if(value)value.value=district.id;
+      if(error)error.textContent='';
+      renderDistrictSuggestions(false);
+    }
     function locationControls(){
       const d=state.draft;
-      const methods=`<div role="group" aria-label="${t('locationMethod')}" id="${id('locationMethod')}" tabindex="-1" class="intake-location-methods"><button type="button" data-location-method="map_pin" aria-pressed="${d.locationMethod==='map_pin'}">${t('mapMethod')}</button><button type="button" data-location-method="district_search" aria-pressed="${d.locationMethod==='district_search'}">${t('districtMethod')}</button></div>${errorMarkup('locationMethod')}`;
-      if(d.locationMethod!=='map_pin')return methods+`<div class="form-grid">${input('districtSearch',t('search'),'','search',false,'autocomplete="off"')}${select('districtId',t('district'),D.districts.map(item=>[item.id,`${name(item)} · ${item[bn()?'en':'bn']}`]),d.districtId)}</div><p id="district-match-count" class="help" role="status"></p><p class="help">${t('districtHelp')}</p><a href="${D.directorySource.url}" target="_blank" rel="noopener">${t('source')}</a>`;
+      const methods=`<div role="group" aria-label="${t('locationMethod')}" id="${id('locationMethod')}" tabindex="-1" class="intake-location-methods"><button type="button" data-location-method="district_search" aria-pressed="${d.locationMethod==='district_search'}">${t('districtMethod')}</button><button type="button" data-location-method="map_pin" aria-pressed="${d.locationMethod==='map_pin'}">${t('mapMethod')}</button></div>${errorMarkup('locationMethod')}`;
+      if(d.locationMethod!=='map_pin'){
+        const selected=D.districts.find(item=>item.id===d.districtId),items=matchingDistricts(districtQuery);
+        return methods+`<div class="intake-district-combobox"><label for="${id('districtId')}">${t('districtSearchLabel')}</label><div class="intake-combobox-field"><span aria-hidden="true">⌕</span><input id="${id('districtId')}" name="districtSearch" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="district-suggestions" aria-describedby="${id('districtId')}-hint ${id('districtId')}-error district-match-count" autocomplete="off" placeholder="${t('search')}" value="${esc(districtQuery||districtLabel(selected))}" ${errors.some(e=>e.field==='districtId')?'aria-invalid="true"':''}></div><select id="${id('districtValue')}" name="districtId" required aria-hidden="true" tabindex="-1" class="intake-district-native"><option value=""></option>${D.districts.map(item=>`<option value="${esc(item.id)}" ${item.id===d.districtId?'selected':''}>${esc(districtLabel(item))}</option>`).join('')}</select><div id="district-suggestions" class="intake-district-suggestions" role="listbox" hidden>${districtOptions(items,d.districtId)}</div><p id="${id('districtId')}-hint" class="intake-field-hint">${t('districtSearchHint')}</p>${errorMarkup('districtId')}<p id="district-match-count" class="intake-selection-status" role="status">${selected?`${t('districtSelected')}: ${esc(districtLabel(selected))}`:''}</p></div><p class="help">${t('districtHelp')}</p><a class="intake-source-link" href="${D.directorySource.url}" target="_blank" rel="noopener">${t('source')} ↗</a>`;
+      }
       return methods+`<div id="${id('mapPin')}" tabindex="-1" aria-label="${t('mapPin')}" aria-describedby="${id('mapPin')}-error"><p class="help">${t('mapHelp')}</p><div id="intake-map-host" class="intake-map-host" role="region" aria-label="${t('mapLabel')}"></div><p class="help intake-map-credit"><a href="/reference/licenses/maplibre-gl.LICENSE.txt">MapLibre GL JS</a> &middot; <span>${esc(window.STS_MAP_CONFIG?.label||'OpenFreeMap Liberty')}</span> · ${window.STS_MAP_CONFIG?.isOpenFreeMap===false?'':'<a href="https://openfreemap.org/">OpenFreeMap</a>'} · ${window.STS_MAP_CONFIG?.isOpenFreeMap===false?'':'<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap</a>'} · ${window.STS_MAP_CONFIG?.isOpenFreeMap===false?'':'<a href="https://openmaptiles.org/">© OpenMapTiles</a>'}<br><a href="https://www.geoboundaries.org/">geoBoundaries</a> · BBS / OCHA ROAP · <a href="${L.boundarySource.licenseUrl}">CC BY 3.0 IGO</a> · ${esc(L.boundarySource.version)}</p><p id="intake-map-status" role="status">${t(mapStatus)}</p>${errorMarkup('mapPin')}<div class="actions"><button type="button" data-map-center id="intake-map-center" disabled>${t('centerPin')}</button><button type="button" data-map-confirm id="intake-map-confirm" disabled>${t('confirmPin')}</button><button type="button" data-map-retry>${t('retryMap')}</button><button type="button" data-location-method="district_search">${t('districtMethod')}</button></div><p class="help">${t('pointNote')}</p></div>`;
     }
     function errorMarkup(field) {
@@ -134,32 +183,44 @@
     function attrs(field, required = true) {
       return `id="${id(field)}" name="${esc(field)}" ${required?'required':''} aria-describedby="${id(field)}-error" ${errors.some(e=>e.field===field)?'aria-invalid="true"':''}`;
     }
+    function selectChevron() {
+      return `<span class="intake-select-chevron" aria-hidden="true"><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5 10 12.5 15 7.5"/></svg></span>`;
+    }
     function select(field,label,items,value,required=true) {
-      return `<div class="intake-control"><label for="${id(field)}">${esc(label)}</label><select ${attrs(field,required)}><option value="">${esc(t('choose'))}</option>${items.map(([v,label])=>`<option value="${esc(v)}" ${value===v?'selected':''}>${esc(label)}</option>`).join('')}</select>${errorMarkup(field)}</div>`;
+      return `<div class="intake-control"><label for="${id(field)}">${esc(label)}</label><div class="intake-select">${selectChevron()}<select ${attrs(field,required)}><option value="">${esc(t('choose'))}</option>${items.map(([v,label])=>`<option value="${esc(v)}" ${value===v?'selected':''}>${esc(label)}</option>`).join('')}</select></div>${errorMarkup(field)}</div>`;
     }
     function input(field,label,value,type='text',required=true,extra='') {
       return `<div class="intake-control"><label for="${id(field)}">${esc(label)}</label><input ${attrs(field,required)} type="${type}" value="${esc(value)}" ${extra}>${errorMarkup(field)}</div>`;
+    }
+    function radioGroup(field,label,items,value,className='') {
+      return `<fieldset class="intake-radio-group ${className}"><legend>${esc(label)}</legend><div class="intake-radio-options">${items.map(([optionValue,optionLabel],index)=>{const optionId=index===0?id(field):`${id(field)}-${optionValue}`;return `<label for="${optionId}" class="${value===optionValue?'is-selected':''}"><input id="${optionId}" name="${esc(field)}" type="radio" value="${esc(optionValue)}" ${value===optionValue?'checked':''} required aria-describedby="${id(field)}-error" ${errors.some(e=>e.field===field)?'aria-invalid="true"':''}><span>${esc(optionLabel)}</span></label>`;}).join('')}</div>${errorMarkup(field)}</fieldset>`;
     }
     const choices = keys => keys.map(key=>[key,t(key)]);
     const cropChoices = () => D.crops.map(c=>[c.id,name(c)]);
     const seasonChoices = () => D.seasons.map(s=>[s.id,name(s)]);
     function rows(key) {
-      return `<p class="help">${t('seasonHelp')}</p>${state.draft[key].map((r,i)=>{
+      const cropLabel=key==='baseline'?t('nextCrop'):t('previousCrop');
+      return `<div class="intake-entry-list"><p class="help intake-entry-guide">${t('seasonHelp')}</p>${state.draft[key].map((r,i)=>{
         const prefix = key+'-'+i+'-';
-        return `<fieldset class="intake-entry"><legend>${t('entry')} ${i+1}</legend><div class="form-grid">${select(prefix+'cropId',t('crop'),[...cropChoices(),...(key==='baseline'?[['fallow',t('fallowSegment')]]:[])],r.cropId)}${select(prefix+'timing',t('timing'),[['season_year',t('seasonYear')],['dates',t('dates')]],r.timing)}${r.timing==='dates'?input(prefix+'start',t('start'),r.start,'date')+input(prefix+'end',t('end'),r.end,'date'):select(prefix+'seasonId',t('season'),seasonChoices(),r.seasonId)+input(prefix+'year',t('year'),r.year,'text',true,'inputmode="numeric" pattern="[1-9][0-9]{3}" maxlength="4"')}</div><button type="button" data-intake-remove="${key}" data-index="${i}" aria-label="${t('remove')} ${i+1}">${t('remove')} ${i+1}</button></fieldset>`;
-      }).join('')}<button type="button" data-intake-add="${key}" ${state.draft[key].length>=20?'disabled':''}>${t('add')}</button>`;
+        const periodFields=r.timing==='dates'
+          ?`<div class="form-grid">${input(prefix+'start',t('start'),r.start,'date')}${input(prefix+'end',t('end'),r.end,'date')}</div>`
+          :r.timing==='season_year'
+            ?`<div class="form-grid">${select(prefix+'seasonId',t('season'),seasonChoices(),r.seasonId)}${input(prefix+'year',t('year'),r.year,'text',true,'inputmode="numeric" pattern="[1-9][0-9]{3}" maxlength="4"')}</div>`
+            :'';
+        return `<fieldset class="intake-entry"><legend>${esc(cropLabel)} ${i+1}</legend><button type="button" class="intake-entry-remove" data-intake-remove="${key}" data-index="${i}" aria-label="${t('remove')} ${cropLabel} ${i+1}">${t('remove')}</button><div class="intake-entry-body">${select(prefix+'cropId',t('crop'),[...cropChoices(),...(key==='baseline'?[['fallow',t('fallowSegment')]]:[])],r.cropId)}${radioGroup(prefix+'timing',t('timing'),[['season_year',t('seasonYear')],['dates',t('dates')]],r.timing,'intake-period-mode')}${periodFields?`<div class="intake-period-fields">${periodFields}</div>`:''}</div></fieldset>`;
+      }).join('')}<button type="button" class="intake-entry-add" data-intake-add="${key}" ${state.draft[key].length>=20?'disabled':''}>${key==='baseline'?t('addBaseline'):t('add')}</button></div>`;
+    }
+    function sectionHeading(number,title,description) {
+      return `<div class="intake-section-heading"><span aria-hidden="true">${number}</span><div><h2>${title}</h2><p>${description}</p></div></div>`;
     }
     function form() {
       const d = state.draft;
       return `<section class="farmer-intake" data-no-translate aria-labelledby="intake-heading"><div class="page-heading"><div><div class="kicker">SOIL TO STARS</div><h1 id="intake-heading">${t('title')}</h1><p>${t('intro')}</p></div></div><p class="notice" id="intake-draft-status">${t('draft')}</p>${!storageOK?`<p role="status" class="notice">${t('storage')}</p>`:''}<form id="farmer-intake-form" class="card" novalidate>${errors.length?`<div class="intake-error-summary" role="alert" tabindex="-1"><h2>${t('errors')}</h2><ul>${errors.map(e=>`<li><a href="#${id(e.field)}" data-intake-error="${esc(e.field)}">${esc(fieldLabel(e.field))}: ${esc(message(e.code))}</a></li>`).join('')}</ul></div>`:''}
-      <fieldset><legend>${t('location')}</legend>${locationControls()}</fieldset>
-      <fieldset><legend>${t('q1')}</legend>${select('currentCrop',t('currentCrop'),[...cropChoices(),['fallow',t('fallow')]],d.currentCrop)}${d.currentCrop&&d.currentCrop!=='fallow'?input('currentSownOn',t('sown'),d.currentSownOn,'date',false):''}<p class="help">${t('cropHelp')}</p></fieldset>
-      <fieldset><legend>${t('q2')}</legend><div class="form-grid">${select('availabilityType',t('availabilityType'),choices(['date','window']),d.availabilityType)}${input('availableFrom',t(d.currentCrop==='fallow'?'emptyDate':'availableFrom'),d.availableFrom,'date')}${d.availabilityType==='window'?input('availableTo',t('availableTo'),d.availableTo,'date'):''}${select('availabilityBasis',t('availabilityBasis'),[['expected',t('expected')],['farmer_estimate',t('estimate')]],d.availabilityBasis)}</div></fieldset>
-      <fieldset><legend>${t('q3')}</legend>${select('historyState',t('historyState'),[['entries',t('historyEntries')],['first_cultivation',t('first')]],d.historyState)}${d.historyState==='entries'?rows('history'):''}<p class="help">${t('firstNote')}</p></fieldset>
-      <fieldset><legend>${t('q4')}</legend>${select('baselineState',t('baselineState'),[['sequence',t('sequence')],['no_established_rotation',t('noRotation')]],d.baselineState)}${d.baselineState==='sequence'?rows('baseline'):''}<p class="help">${t('baselineNote')}</p></fieldset>
-      <fieldset><legend>${t('q5')}</legend>${select('water',t('water'),choices(['rainfed','limited','reliable']),d.water)}${['limited','reliable'].includes(d.water)?select('seasonalLimits',t('seasonalLimits'),choices(['none','seasonal']),d.seasonalLimits):''}${['limited','reliable'].includes(d.water)&&d.seasonalLimits==='seasonal'?`<fieldset class="intake-seasons"><legend>${t('limitedSeasons')}</legend>${D.seasons.map((s,i)=>`<label for="${i===0?id('limitedSeasons'):id('limitedSeasons')+'-'+s.id}"><input type="checkbox" id="${i===0?id('limitedSeasons'):id('limitedSeasons')+'-'+s.id}" name="limitedSeasons" value="${s.id}" ${d.limitedSeasons.includes(s.id)?'checked':''} aria-describedby="${id('limitedSeasons')}-error" ${errors.some(e=>e.field==='limitedSeasons')?'aria-invalid="true"':''}> ${name(s)}</label>`).join('')}${errorMarkup('limitedSeasons')}</fieldset>`:''}<p class="help">${t('waterHelp')}</p></fieldset>
-      <fieldset><legend>${t('q6')}</legend>${select('priority',t('priority'),[['water',t('waterPriority')],['soil_rotation',t('soilPriority')],['balanced',t('balanced')]],d.priority)}</fieldset>
-      <div class="actions mt"><button type="submit" class="primary">${t('submit')}</button><button type="button" data-intake-draft>${t('saveDraft')}</button></div><p class="help">${t('beforeSubmit')}</p></form><div class="actions mt"><button type="button" data-intake-demo>${t('demo')}</button></div></section>`;
+      <fieldset class="intake-section"><legend class="sr-only">${t('sectionLocation')}</legend>${sectionHeading('01',t('sectionLocation'),t('sectionLocationHelp'))}<div class="intake-section-body">${locationControls()}</div></fieldset>
+      <fieldset class="intake-section"><legend class="sr-only">${t('sectionCurrent')}</legend>${sectionHeading('02',t('sectionCurrent'),t('sectionCurrentHelp'))}<div class="intake-section-body"><div class="intake-question"><h3>${t('q1')}</h3><div class="form-grid">${select('currentCrop',t('currentCrop'),[...cropChoices(),['fallow',t('fallow')]],d.currentCrop)}${d.currentCrop&&d.currentCrop!=='fallow'?input('currentSownOn',t('sown'),d.currentSownOn,'date',false):''}</div><p class="help">${t('cropHelp')}</p></div><div class="intake-question intake-question--availability"><h3><span class="sr-only">${t('q2Number')} </span>${t('q2')}</h3><p class="intake-question-intro">${t('q2Help')}</p>${radioGroup('availabilityType',t('availabilityType'),choices(['date','window']),d.availabilityType,'intake-date-mode')}${d.availabilityType?`<div class="intake-q2-details"><div class="form-grid intake-date-fields">${input('availableFrom',t(d.currentCrop==='fallow'?'emptyDate':d.availabilityType==='window'?'earliestDate':'availableFrom'),d.availableFrom,'date')}${d.availabilityType==='window'?input('availableTo',t('availableTo'),d.availableTo,'date'):''}</div>${radioGroup('availabilityBasis',t('availabilityBasis'),[['expected',t('expected')],['farmer_estimate',t('estimate')]],d.availabilityBasis,'intake-date-basis')}</div>`:''}</div></div></fieldset>
+      <fieldset class="intake-section intake-section--history"><legend class="sr-only">${t('sectionHistory')}</legend>${sectionHeading('03',t('sectionHistory'),t('sectionHistoryHelp'))}<div class="intake-section-body intake-history-stack"><div class="intake-question intake-question--history"><h3>${t('q3')}</h3><p class="intake-question-intro">${t('q3Help')}</p>${radioGroup('historyState',t('historyState'),[['entries',t('historyEntries')],['first_cultivation',t('first')]],d.historyState,'intake-history-choice')}${d.historyState==='entries'?rows('history'):''}<p class="help">${t('firstNote')}</p></div><div class="intake-question intake-question--baseline"><h3>${t('q4')}</h3><p class="intake-question-intro">${t('q4Help')}</p>${radioGroup('baselineState',t('baselineState'),[['sequence',t('sequence')],['no_established_rotation',t('noRotation')]],d.baselineState,'intake-baseline-choice')}${d.baselineState==='sequence'?rows('baseline'):''}<p class="help">${t('baselineNote')}</p></div></div></fieldset>
+      <fieldset class="intake-section"><legend class="sr-only">${t('sectionWater')}</legend>${sectionHeading('04',t('sectionWater'),t('sectionWaterHelp'))}<div class="intake-section-body intake-paired-questions"><div class="intake-question"><h3>${t('q5')}</h3>${select('water',t('water'),choices(['rainfed','limited','reliable']),d.water)}${['limited','reliable'].includes(d.water)?select('seasonalLimits',t('seasonalLimits'),choices(['none','seasonal']),d.seasonalLimits):''}${['limited','reliable'].includes(d.water)&&d.seasonalLimits==='seasonal'?`<fieldset class="intake-seasons"><legend>${t('limitedSeasons')}</legend>${D.seasons.map((s,i)=>`<label for="${i===0?id('limitedSeasons'):id('limitedSeasons')+'-'+s.id}"><input type="checkbox" id="${i===0?id('limitedSeasons'):id('limitedSeasons')+'-'+s.id}" name="limitedSeasons" value="${s.id}" ${d.limitedSeasons.includes(s.id)?'checked':''} aria-describedby="${id('limitedSeasons')}-error" ${errors.some(e=>e.field==='limitedSeasons')?'aria-invalid="true"':''}> ${name(s)}</label>`).join('')}${errorMarkup('limitedSeasons')}</fieldset>`:''}<p class="help">${t('waterHelp')}</p></div><div class="intake-question"><h3>${t('q6')}</h3>${select('priority',t('priority'),[['water',t('waterPriority')],['soil_rotation',t('soilPriority')],['balanced',t('balanced')]],d.priority)}</div></div></fieldset>
+      <div class="intake-submit-panel"><p class="help">${t('beforeSubmit')}</p><div class="actions"><button type="submit" class="primary">${t('submit')}</button><button type="button" data-intake-draft>${t('saveDraft')}</button></div></div></form><div class="intake-demo-action"><button type="button" data-intake-demo>${t('demo')}</button></div></section>`;
     }
     function period(p) {
       return p.kind==='dates'?`${esc(p.start)} → ${esc(p.end)}`:`${esc(name(D.seasons.find(s=>s.id===p.season_id)))} · ${p.year}`;
@@ -171,7 +232,7 @@
     }
     function fieldLabel(field) {
       const match = field.match(/^(history|baseline)-(\d+)-(.+)$/);
-      return match?`${t(match[1]==='history'?'q3':'q4')} · ${t('entry')} ${Number(match[2])+1} · ${t(match[3]==='cropId'?'crop':match[3]==='seasonId'?'season':match[3])}`:t(({districtId:'district',currentSownOn:'sown'})[field]||field);
+      return match?`${t(match[1]==='history'?'previousCrop':'nextCrop')} ${Number(match[2])+1} · ${t(match[3]==='cropId'?'crop':match[3]==='seasonId'?'season':match[3])}`:t(({districtId:'district',currentSownOn:'sown'})[field]||field);
     }
     function redraw(focusId,preventScroll=true) {render();if(focusId)document.getElementById(focusId)?.focus({preventScroll});}
     function capture(target) {
@@ -186,13 +247,16 @@
     }
     document.addEventListener('input',e=>{
       if (!e.target.closest('#farmer-intake-form')) return;
-      if (e.target.id===id('districtSearch')) {
-        const query=e.target.value.trim().toLocaleLowerCase();
-        const items=D.districts.filter(item=>[item.en,item.bn,item.id,item.division].some(s=>s.toLocaleLowerCase().includes(query)));
-        const chosen = D.districts.find(item=>item.id===state.draft.districtId);
-        if (chosen&&!items.includes(chosen)) items.unshift(chosen);
-        document.getElementById(id('districtId')).innerHTML=`<option value="">${t('choose')}</option>`+items.map(item=>`<option value="${item.id}" ${item.id===state.draft.districtId?'selected':''}>${esc(name(item))} · ${esc(item[bn()?'en':'bn'])}</option>`).join('');
-        document.getElementById('district-match-count').textContent=bn()?`${items.length}টি জেলা দেখানো হচ্ছে`:`${items.length} districts shown`;
+      if (e.target.id===id('districtId')) {
+        const selected=D.districts.find(item=>item.id===state.draft.districtId);
+        if(selected&&e.target.value!==districtLabel(selected)){
+          state.draft.districtId='';
+          const value=document.getElementById(id('districtValue'));if(value)value.value='';
+          persist();
+        }
+        districtQuery=e.target.value;
+        activeDistrictIndex=-1;
+        renderDistrictSuggestions(true);
       } else capture(e.target);
     });
     document.addEventListener('change',e=>{
@@ -201,8 +265,10 @@
       if (['currentCrop','availabilityType','historyState','baselineState','water','seasonalLimits'].includes(e.target.name)||e.target.name.endsWith('-timing')) redraw(e.target.id);
     });
     document.addEventListener('click',e=>{
-      const button=e.target.closest('[data-intake-add],[data-intake-remove],[data-intake-draft],[data-intake-error],[data-intake-demo],[data-intake-download],[data-intake-edit],[data-location-method],[data-map-center],[data-map-confirm],[data-map-retry]');
+      if(!e.target.closest('.intake-district-combobox'))renderDistrictSuggestions(false);
+      const button=e.target.closest('[data-intake-add],[data-intake-remove],[data-intake-draft],[data-intake-error],[data-intake-demo],[data-intake-download],[data-intake-edit],[data-location-method],[data-map-center],[data-map-confirm],[data-map-retry],[data-district-option]');
       if(!button)return;
+      if(button.dataset.districtOption){chooseDistrict(button.dataset.districtOption);document.getElementById(id('districtId'))?.focus();return;}
       if(button.dataset.locationMethod){L.switchMethod(state.draft,button.dataset.locationMethod);errors=errors.filter(e=>!['mapPin','districtId','locationMethod'].includes(e.field));persist();redraw(id('locationMethod'));return;}
       if(button.hasAttribute('data-map-center')){maps?.placeCenter();return;}
       if(button.hasAttribute('data-map-confirm')){if(maps?.isReady()){L.confirmPin(state.draft,boundaryIndex);persist();maps.updateMarker();refreshMapStatus();}return;}
@@ -215,6 +281,22 @@
       if(button.hasAttribute('data-intake-demo'))onDemo();
       if(button.hasAttribute('data-intake-edit'))onSubmit(false);
       if(button.hasAttribute('data-intake-download'))download();
+    });
+    document.addEventListener('focusin',e=>{
+      if(e.target.id===id('districtId')){districtQuery=state.draft.districtId&&e.target.value===districtLabel(D.districts.find(item=>item.id===state.draft.districtId))?'':e.target.value;renderDistrictSuggestions(true);}
+    });
+    document.addEventListener('keydown',e=>{
+      if(e.target.id!==id('districtId'))return;
+      const items=matchingDistricts(districtQuery);
+      if(e.key==='ArrowDown'||e.key==='ArrowUp'){
+        e.preventDefault();
+        activeDistrictIndex=e.key==='ArrowDown'?Math.min(activeDistrictIndex+1,items.length-1):Math.max(activeDistrictIndex-1,0);
+        renderDistrictSuggestions(true);
+      }else if(e.key==='Enter'&&activeDistrictIndex>=0){
+        e.preventDefault();chooseDistrict(items[activeDistrictIndex]?.id);
+      }else if(e.key==='Escape'){
+        renderDistrictSuggestions(false);
+      }
     });
     document.addEventListener('submit',e=>{
       if(e.target.id!=='farmer-intake-form')return;
