@@ -8,17 +8,17 @@
     "Prachurjo"
   ],
   "phase": "G0",
-  "status": "planned",
+  "status": "in_progress",
   "depends_on": [],
-  "updated_at": "2026-10-30T10:00:13Z",
+  "updated_at": "2026-10-31T22:57:05Z",
   "acceptance": [
     {
       "id": "s01",
       "text": "Draft stable field, crop and source identifiers",
       "owner": "Fardin",
-      "state": "planned",
+      "state": "in_progress",
       "met": false,
-      "evidence": "",
+      "evidence": "s01 draft ready for review in docs/API_CONTRACT.md: agreed coverage/audit targets, stable IDs, preserved v2 and proposed extensions, full operation/common-period semantics, separate statuses, four indicators and six synthetic JSON blocks. JSON parsing/cardinality checks, actual v2 A/B round-trips and D rejection, all 60 workflow/PR tests and whitespace checks passed. Technical-owner agreement is still pending, so s01 remains in_progress rather than an accepted checkbox; s02-s06 and G1 are not completed.",
       "how": "Agree pilot coverage, stable IDs, short intake, equal previous/current crop IDs, dated history, usual baseline/fallow and common horizon; propose comparison bundle and per-plan statuses.",
       "files": [
         "docs/API_CONTRACT.md"
@@ -118,14 +118,93 @@
       "blockers": []
     }
   ],
-  "checks": [],
+  "checks": [
+    {
+      "command": "python3 -B -m unittest discover -s tests -p 'test_*.py' -v",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. n_prompt_records_preserve_meaning_and_metadata (test_workflow.WorkflowTests) ... ok\ntest_member_logs_are_separate_and_pipe_safe (test_workflow.WorkflowTests) ... ok\ntest_outcome_limits_and_blank_fields_are_rejected_without_log_writes (test_workflow.WorkflowTests) ... ok\ntest_passing_check_does_not_automatically_accept_task (test_workflow.WorkflowTests) ... ok\ntest_pending_or_self_review_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_professional_docs_have_small_entrypoint_budgets (test_workflow.WorkflowTests) ... ok\ntest_prompt_amend_updates_outcome_without_extra_entry (test_workflow.WorkflowTests) ... ok\ntest_prompt_numbers_are_per_member_and_do_not_change_on_update (test_workflow.WorkflowTests) ... ok\ntest_public_numbers_use_next_available_maximum_and_scale_past_three_digits (test_workflow.WorkflowTests) ... ok\ntest_readonly_check_detects_stale_view (test_workflow.WorkflowTests) ... ok\ntest_real_git_ancestry_proof (test_workflow.WorkflowTests) ... ok\ntest_render_is_idempotent (test_workflow.WorkflowTests) ... ok\ntest_reopening_checklist_prerequisite_reopens_done_children (test_workflow.WorkflowTests) ... ok\ntest_start_blocked_task_does_not_modify_records (test_workflow.WorkflowTests) ... ok\ntest_unchecked_acceptance_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_unknown_dependency_rejected (test_workflow.WorkflowTests) ... ok\ntest_unmerged_commit_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_verify_accepts_explicit_project_subdirectory (test_workflow.WorkflowTests) ... ok\ntest_verify_executes_check_and_records_real_failure (test_workflow.WorkflowTests) ... ok\ntest_verify_refuses_directory_outside_project (test_workflow.WorkflowTests) ... ok\n\n----------------------------------------------------------------------\nRan 60 tests in 0.512s\n\nOK",
+      "run_at_utc": "2026-10-31T22:50:14Z"
+    },
+    {
+      "command": "git diff --check",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. ",
+      "run_at_utc": "2026-10-31T22:50:14Z"
+    },
+    {
+      "command": "node -e 'const fs=require('\"'\"'node:fs'\"'\"'),a=require('\"'\"'node:assert/strict'\"'\"'),i=require('\"'\"'./prototype/public/reference/intake.js'\"'\"'),f=String.fromCharCode(96).repeat(3),cs=fs.readFileSync('\"'\"'docs/API_CONTRACT.md'\"'\"','\"'\"'utf8'\"'\"').split(f+'\"'\"'json\\n'\"'\"').slice(1).map(s=>JSON.parse(s.split('\"'\"'\\n'\"'\"'+f)[0])),base=cs[0].request,rows=es=>es.map(e=>({cropId:e.kind==='\"'\"'fallow'\"'\"'?'\"'\"'fallow'\"'\"':e.crop_id,timing:e.period.kind,start:e.period.start||'\"'\"''\"'\"',end:e.period.end||'\"'\"''\"'\"',seasonId:e.period.season_id||'\"'\"''\"'\"',year:String(e.period.year??'\"'\"''\"'\"')}));for(const c of cs.filter(c=>c.request||c.request_changes)){const q=structuredClone(c.request||base);for(const[p,v]of Object.entries(c.request_changes||{})){const ks=p.slice(1).split('\"'\"'/'\"'\"'),t=ks.slice(0,-1).reduce((o,k)=>o[k],q);a.ok(Object.hasOwn(t,ks.at(-1)));t[ks.at(-1)]=v;}const t=q.intake;if(t.schema_version!=='\"'\"'farmer-intake.v2'\"'\"')continue;const d=Object.assign(i.blankDraft(),{locationMethod:t.location.selection_method,districtId:t.location.district_id,currentCrop:t.current.state==='\"'\"'fallow'\"'\"'?'\"'\"'fallow'\"'\"':t.current.crop_id,currentSownOn:t.current.sown_on||'\"'\"''\"'\"',availabilityType:t.availability.kind,availableFrom:t.availability.start,availableTo:t.availability.end,availabilityBasis:t.availability.basis,historyState:t.crop_history.state,history:rows(t.crop_history.entries),baselineState:t.baseline.state,baseline:rows(t.baseline.segments),water:t.irrigation.access,seasonalLimits:t.irrigation.seasonal_limitations,limitedSeasons:t.irrigation.limited_seasons,priority:t.priority}),r=i.validateAndNormalize(d);if(c.case_id==='\"'\"'invalid'\"'\"'){a.equal(r.ok,false);a.deepEqual(r.errors,[{field:'\"'\"'availableTo'\"'\"',code:'\"'\"'window_order'\"'\"'}]);}else{a.equal(r.ok,true);a.deepEqual(r.request,t);}console.log(c.case_id+'\"'\"': passed'\"'\"');}console.log(cs.length+'\"'\"' JSON blocks parsed; A/B match v2; D rejected; C is proposed only.'\"'\"');'",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. normal-v2: passed\nincomplete: passed\ninvalid: passed\n6 JSON blocks parsed; A/B match v2; D rejected; C is proposed only.",
+      "run_at_utc": "2026-10-31T22:56:28Z"
+    },
+    {
+      "command": "python3 -B scripts/workflow.py check",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. Workflow records valid: 30 tasks, 18 prompts. Recorded failed product checks remain visible; this is not a product test pass.",
+      "run_at_utc": "2026-10-31T22:56:28Z"
+    },
+    {
+      "command": "python3 -B -c 'import json; from pathlib import Path; fence=chr(96)*3; blocks=[json.loads(s.split('\"'\"'\\n'\"'\"'+fence)[0]) for s in Path('\"'\"'docs/API_CONTRACT.md'\"'\"').read_text().split(fence+'\"'\"'json\\n'\"'\"')[1:]]; assert len(blocks)==6 and all(b['\"'\"'synthetic'\"'\"'] is True for b in blocks); assert len(blocks[4]['\"'\"'alternatives'\"'\"'])==2 and all(len(p['\"'\"'steps'\"'\"'])==3 for p in blocks[4]['\"'\"'alternatives'\"'\"']); print('\"'\"'6 synthetic JSON blocks parsed; two three-step projections checked; no scientific validation.'\"'\"')'",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. 6 synthetic JSON blocks parsed; two three-step projections checked; no scientific validation.",
+      "run_at_utc": "2026-10-31T22:57:05Z"
+    }
+  ],
   "blockers": [],
   "issues": [],
-  "evidence": [],
+  "evidence": [
+    "Documentation-only s01 draft and directly affected references were inspected; no application, data-acquisition, compute, dependency or workflow-helper code changed. Six synthetic JSON blocks parse; A/B exactly match current intake v2 and D fails its reversed-window check. Technical review is explicitly pending; these checks do not validate agricultural advice."
+  ],
   "history": [
     {
       "at": "2026-10-30T10:00:13Z",
       "note": "Rebased planned work to the mandatory-now/future specifications. No product feature, review or delivery is marked complete."
+    },
+    {
+      "at": "2026-10-31T22:43:47Z",
+      "from": "planned",
+      "to": "in_progress",
+      "note": "Started the explicitly authorized G0/s01 documentation draft using the agreed coverage, intake, scheduling and comparison decisions. Existing application behavior and pending reviews are preserved."
+    },
+    {
+      "at": "2026-10-31T22:50:13Z",
+      "note": "Check passed: python3 -B -c 'import json,re; from pathlib import Path; blocks=[json.loads(s) for s in re.findall(r'\"'\"'```json\\n(.*?)\\n```'\"'\"',Path('\"'\"'docs/API_CONTRACT.md'\"'\"').read_text(),re.S)]; assert len(blocks)==6 and all(b['\"'\"'synthetic'\"'\"'] is True for b in blocks); assert len(blocks[4]['\"'\"'alternatives'\"'\"'])==2 and all(len(p['\"'\"'steps'\"'\"'])==3 for p in blocks[4]['\"'\"'alternatives'\"'\"']); print('\"'\"'6 synthetic JSON blocks parsed; two three-step projections checked; no scientific validation.'\"'\"')'"
+    },
+    {
+      "at": "2026-10-31T22:50:14Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p 'test_*.py' -v"
+    },
+    {
+      "at": "2026-10-31T22:50:14Z",
+      "note": "Check passed: git diff --check"
+    },
+    {
+      "at": "2026-10-31T22:56:28Z",
+      "note": "Check passed: node -e 'const fs=require('\"'\"'node:fs'\"'\"'),a=require('\"'\"'node:assert/strict'\"'\"'),i=require('\"'\"'./prototype/public/reference/intake.js'\"'\"'),f=String.fromCharCode(96).repeat(3),cs=fs.readFileSync('\"'\"'docs/API_CONTRACT.md'\"'\"','\"'\"'utf8'\"'\"').split(f+'\"'\"'json\\n'\"'\"').slice(1).map(s=>JSON.parse(s.split('\"'\"'\\n'\"'\"'+f)[0])),base=cs[0].request,rows=es=>es.map(e=>({cropId:e.kind==='\"'\"'fallow'\"'\"'?'\"'\"'fallow'\"'\"':e.crop_id,timing:e.period.kind,start:e.period.start||'\"'\"''\"'\"',end:e.period.end||'\"'\"''\"'\"',seasonId:e.period.season_id||'\"'\"''\"'\"',year:String(e.period.year??'\"'\"''\"'\"')}));for(const c of cs.filter(c=>c.request||c.request_changes)){const q=structuredClone(c.request||base);for(const[p,v]of Object.entries(c.request_changes||{})){const ks=p.slice(1).split('\"'\"'/'\"'\"'),t=ks.slice(0,-1).reduce((o,k)=>o[k],q);a.ok(Object.hasOwn(t,ks.at(-1)));t[ks.at(-1)]=v;}const t=q.intake;if(t.schema_version!=='\"'\"'farmer-intake.v2'\"'\"')continue;const d=Object.assign(i.blankDraft(),{locationMethod:t.location.selection_method,districtId:t.location.district_id,currentCrop:t.current.state==='\"'\"'fallow'\"'\"'?'\"'\"'fallow'\"'\"':t.current.crop_id,currentSownOn:t.current.sown_on||'\"'\"''\"'\"',availabilityType:t.availability.kind,availableFrom:t.availability.start,availableTo:t.availability.end,availabilityBasis:t.availability.basis,historyState:t.crop_history.state,history:rows(t.crop_history.entries),baselineState:t.baseline.state,baseline:rows(t.baseline.segments),water:t.irrigation.access,seasonalLimits:t.irrigation.seasonal_limitations,limitedSeasons:t.irrigation.limited_seasons,priority:t.priority}),r=i.validateAndNormalize(d);if(c.case_id==='\"'\"'invalid'\"'\"'){a.equal(r.ok,false);a.deepEqual(r.errors,[{field:'\"'\"'availableTo'\"'\"',code:'\"'\"'window_order'\"'\"'}]);}else{a.equal(r.ok,true);a.deepEqual(r.request,t);}console.log(c.case_id+'\"'\"': passed'\"'\"');}console.log(cs.length+'\"'\"' JSON blocks parsed; A/B match v2; D rejected; C is proposed only.'\"'\"');'"
+    },
+    {
+      "at": "2026-10-31T22:56:28Z",
+      "note": "Checklist s01: in_progress",
+      "evidence": "s01 draft ready for review in docs/API_CONTRACT.md: agreed coverage/audit targets, stable IDs, preserved v2 and proposed extensions, full operation/common-period semantics, separate statuses, four indicators and six synthetic JSON blocks. JSON parsing/cardinality checks, actual v2 A/B round-trips and D rejection, all 60 workflow/PR tests and whitespace checks passed. Technical-owner agreement is still pending, so s01 remains in_progress rather than an accepted checkbox; s02-s06 and G1 are not completed."
+    },
+    {
+      "at": "2026-10-31T22:56:28Z",
+      "from": "in_progress",
+      "to": "in_progress",
+      "note": "Prepared the bounded s01 draft and synthetic examples, with directly affected product/UI/method/validation references aligned. Recorded local syntax, intake-compatibility and workflow checks. Owner agreement is pending; no human approval, schema freeze, scientific acquisition or G0/G1 acceptance is claimed."
+    },
+    {
+      "at": "2026-10-31T22:56:28Z",
+      "note": "Check passed: python3 -B scripts/workflow.py check"
+    },
+    {
+      "at": "2026-10-31T22:57:05Z",
+      "note": "Check passed: python3 -B -c 'import json; from pathlib import Path; fence=chr(96)*3; blocks=[json.loads(s.split('\"'\"'\\n'\"'\"'+fence)[0]) for s in Path('\"'\"'docs/API_CONTRACT.md'\"'\"').read_text().split(fence+'\"'\"'json\\n'\"'\"')[1:]]; assert len(blocks)==6 and all(b['\"'\"'synthetic'\"'\"'] is True for b in blocks); assert len(blocks[4]['\"'\"'alternatives'\"'\"'])==2 and all(len(p['\"'\"'steps'\"'\"'])==3 for p in blocks[4]['\"'\"'alternatives'\"'\"']); print('\"'\"'6 synthetic JSON blocks parsed; two three-step projections checked; no scientific validation.'\"'\"')'"
     }
   ],
   "review": {
@@ -133,10 +212,10 @@
     "evidence": ""
   },
   "merge_ref": null,
-  "branch": null,
+  "branch": "feature/g0-contract-draft",
   "issue": null,
-  "next_action": "Draft bounded contracts and obtain agreement from Saim, Maruf and Prachurjo.",
-  "handoff": "After acceptance/merge: Saim starts G1A, Maruf G1B, Fardin G1C and Prachurjo G1D in parallel.",
+  "next_action": "s01 draft ready for review: Saim reviews climate fields/units/periods/QA; Maruf reviews calendars/duration origins/operations and exact regional period policy; Prachurjo reviews intake extensions, result states and errors. Fardin resolves comments before s05 freeze; G1 stays gated.",
+  "handoff": "s01 draft prepared for Saim/s02, Maruf/s03 and Prachurjo/s04 review; exact regional period policy and scoring remain pending. Fardin coordinates comments, s05 freeze and independent s06 review/main-branch acceptance. G1A/G1B/G1C/G1D remain waiting until G0 is accepted, regardless of branch delivery.",
   "purpose": "Prevent four technical owners from building incompatible schemas, units and assumptions.",
   "scope": "mvp"
 }

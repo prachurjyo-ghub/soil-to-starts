@@ -531,4 +531,36 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Next action / owner:** Push without force and verify the remote branch revision.
 
 **Task / source:** OPS-PROMPT-STYLE; Current explicit commit-everything-and-push instruction
+
+## Fardin — Prompt 015
+
+<a id="fardin-015"></a>
+<a id="p-6816c1e5bbeb"></a>
+<!-- record-id: P-6816c1e5bbeb -->
+
+**Date:** 2026-11-01
+
+<!-- recorded-utc: 2026-10-31T22:45:30Z -->
+
+**Member:** fardin
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Draft G0-CONTRACT s01 with the agreed coverage, intake, scheduling, comparison and evidence semantics, then validate, commit and push it for review.
+
+**Purpose / AI contribution:** Prepare a concrete documentation-only API proposal and synthetic request/response examples while preserving the existing intake v2 implementation.
+
+**Human contribution:** Fardin supplied the crop-audit targets, availability and scheduling decisions, four indicators and pending owner-review responsibilities.
+
+**Changed files:** docs/API_CONTRACT.md, directly affected product/UI references, docs/tasks/G0-CONTRACT.json, generated README/progress and this contribution record.
+
+**Actual outcome:** Prepared the s01 API draft and review handoffs with six synthetic examples. JSON/three-step checks, actual v2 A/B compatibility and D rejection, all 60 workflow tests, record/link validation and whitespace checks passed; Saim, Maruf and Prachurjo agreement remains pending, G0 stays in_progress and G1 remains gated.
+
+**Review / limitations:** Saim, Maruf and Prachurjo reviews remain pending; G0 acceptance and G1 implementation remain gated.
+
+**Next action / owner:** Fardin prepares and checks the s01 draft before authorized branch delivery.
+
+**Task / source:** G0-CONTRACT; Current explicit G0-CONTRACT s01 draft and delivery instruction
 <!-- workflow:ai-records:end -->

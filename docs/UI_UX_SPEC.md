@@ -14,8 +14,8 @@ During form/language rerenders, detach/reinsert the same map host and resize its
 
 Show one ordered form, with all six questions visible together:
 
-1. What crop is growing now? Require a supported intake identity or explicit empty/fallow state.
-2. When will the field be available after harvest? Require a real date or bounded window and explicit expected/estimated basis; for an empty field, collect available-from date.
+1. What crop is growing now? Keep existing intake identities and explicit empty/fallow state. The proposed versioned adapter must identify unsupported crops and preserve a reported name without forcing an incorrect crop choice; this capture path is not implemented in v2.
+2. When will the field be available? Require a real date or bounded window and explicit expected/estimated basis. Available means harvested and removed so preparation can begin; for an empty field, collect available-from date.
 3. What crops did you grow previously? Require chronological crop/period entries or explicit first cultivation/no prior history.
 4. What would you normally grow next? Require a usual crop/season sequence (repeats/fallow allowed) or explicit no established rotation. Keep this separate from past history.
 5. What water access do you have? Require Rainfed, Limited irrigation or Reliable irrigation; collect applicable seasonal limitations.
@@ -23,14 +23,14 @@ Show one ordered form, with all six questions visible together:
 
 No blank, placeholder, unknown or “any” answer satisfies a core question. Do not force a guess: the named absence/fallow states have distinct meanings. Validate dependent controls, real calendar dates, ordering and known contradictions. Present specific adjacent errors with labels, `aria-describedby`/`aria-invalid`, an accessible linked error summary and focus on the first invalid control. Preserve entered answers and keyboard focus on conditional rerenders and language changes. Use browser required attributes plus the shared programmatic validator.
 
-No fertilizer, pH, nutrient, organic-matter or demo-estimate question is part of this intake. Other scientific unknowns remain unknown. New-farmer answers do not come from demo fields, soil defaults, example coordinates or demo priorities. Versioned browser-local drafts stay distinct from revalidated submissions. Escape user text; provide EN/BN, native keyboard controls, visible focus, mobile wrapping and reduced motion.
+No compulsory fertilizer, pH, nutrient, organic-matter or demo-estimate question is part of the six core answers. Short conditional follow-ups may request a field fact needed by a reviewed rule; soil reports stay optional, and unanswered essential checks prevent a complete recommendation. Other scientific unknowns remain unknown. New-farmer answers do not come from demo fields, soil defaults, example coordinates or demo priorities. Versioned browser-local drafts stay distinct from revalidated submissions. Escape user text; provide EN/BN, native keyboard controls, visible focus, mobile wrapping and reduced motion.
 
 Until a real scientific API is connected, save/show the validated field-input summary and a planning-unavailable state. Explicitly separate any legacy illustrative demo; never run its mock rankings on submitted intake answers. Input JSON export does not claim to be G3-REPORT's scientific receipt. The later integrated result journey still compares existing practice with two sourced alternatives.
 
 ## Workspace
 
-- Comparison matrix first: common horizon, existing practice, water-focused and soil/rotation-focused options; dates, supported indicators, priority and unknowns. Keep a problematic baseline visible.
-- Three future main-crop cards per complete alternative after current harvest, with a responsive timeline/gaps. Calendar gaps are potential exposed-soil periods unless actual cover/residue evidence establishes surface condition.
+- Comparison matrix first: one automatically selected common period under the reviewed regional policy, existing practice and two distinct alternatives; explained historical climate fit, water compatibility, rotation compatibility and timing feasibility with evidence/unknowns. The exact period policy and ranking formulas remain pending review in [API_CONTRACT](API_CONTRACT.md). Keep a problematic baseline visible.
+- Three future main-crop cards per complete alternative after field clearance, with a responsive operations timeline, separate plan completion dates and unallocated time. Gaps alone do not establish fallow, exposed soil, cover or soil improvement.
 - One compact intended-crop card reuses planner rules; no live monitoring or diagnosis.
 - Why/why-not uses fixed translated check labels and source/rule IDs: pass/fail/caution/unknown. Identify the missing fact that could resolve a check. No generated advice paragraphs or confidence gauges.
 - Climate charts show authentic arrays, units, period, missingness, scale and method. One reviewed historical stress preset compares changed checks/rankings with field/history/priority fixed.
