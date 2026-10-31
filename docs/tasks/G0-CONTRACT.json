@@ -10,7 +10,7 @@
   "phase": "G0",
   "status": "in_progress",
   "depends_on": [],
-  "updated_at": "2026-10-31T22:57:05Z",
+  "updated_at": "2026-10-31T22:58:03Z",
   "acceptance": [
     {
       "id": "s01",
@@ -205,6 +205,12 @@
     {
       "at": "2026-10-31T22:57:05Z",
       "note": "Check passed: python3 -B -c 'import json; from pathlib import Path; fence=chr(96)*3; blocks=[json.loads(s.split('\"'\"'\\n'\"'\"'+fence)[0]) for s in Path('\"'\"'docs/API_CONTRACT.md'\"'\"').read_text().split(fence+'\"'\"'json\\n'\"'\"')[1:]]; assert len(blocks)==6 and all(b['\"'\"'synthetic'\"'\"'] is True for b in blocks); assert len(blocks[4]['\"'\"'alternatives'\"'\"'])==2 and all(len(p['\"'\"'steps'\"'\"'])==3 for p in blocks[4]['\"'\"'alternatives'\"'\"']); print('\"'\"'6 synthetic JSON blocks parsed; two three-step projections checked; no scientific validation.'\"'\"')'"
+    },
+    {
+      "at": "2026-10-31T22:58:03Z",
+      "from": "in_progress",
+      "to": "in_progress",
+      "note": "Authorized s01 draft delivery: commit c19d97dfe1b3999ef7998a7e053b2b64ef0b142d pushed to origin/feature/g0-contract-draft with upstream tracking; GitHub ref readback independently matched the exact SHA. This is feature-branch delivery only. s01 owner agreement, s02-s06, independent human review and accepted main-branch integration remain pending; no G1 gate is unlocked."
     }
   ],
   "review": {

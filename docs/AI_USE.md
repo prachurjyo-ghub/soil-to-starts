@@ -556,7 +556,7 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 
 **Changed files:** docs/API_CONTRACT.md, directly affected product/UI references, docs/tasks/G0-CONTRACT.json, generated README/progress and this contribution record.
 
-**Actual outcome:** Prepared the s01 API draft and review handoffs with six synthetic examples. JSON/three-step checks, actual v2 A/B compatibility and D rejection, all 60 workflow tests, record/link validation and whitespace checks passed; Saim, Maruf and Prachurjo agreement remains pending, G0 stays in_progress and G1 remains gated.
+**Actual outcome:** Delivered the checked s01 draft as c19d97dfe1b3999ef7998a7e053b2b64ef0b142d on origin/feature/g0-contract-draft; GitHub ref readback matched. Six synthetic JSON examples, v2 compatibility/invalid checks and all 60 workflow tests passed; teammate agreement remains pending, G0 stays in_progress and G1 remains gated.
 
 **Review / limitations:** Saim, Maruf and Prachurjo reviews remain pending; G0 acceptance and G1 implementation remain gated.
 

@@ -314,7 +314,7 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:49:54Z`
 
 ### G0-CONTRACT — Agree source, crop, field and API contracts
 
-Owner: **Fardin** · State: `in_progress` · Updated UTC: `2026-10-31T22:57:05Z`
+Owner: **Fardin** · State: `in_progress` · Updated UTC: `2026-10-31T22:58:03Z`
 
 **Why:** Prevent four technical owners from building incompatible schemas, units and assumptions.
 
