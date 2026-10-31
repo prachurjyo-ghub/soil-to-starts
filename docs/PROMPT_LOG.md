@@ -9,4 +9,5 @@ See [workflow instructions](WORKFLOW.md) and [AI-use disclosure](AI_USE.md). Add
 | Batch | Entries |
 | --- | --- |
 | [fardin-0001](prompt_logs/fardin-0001.md) | 4 |
+| [prachurjo-0001](prompt_logs/prachurjo-0001.md) | 3 |
 | [unassigned-0001](prompt_logs/unassigned-0001.md) | 5 |
