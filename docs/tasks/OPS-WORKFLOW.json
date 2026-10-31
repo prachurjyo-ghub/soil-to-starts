@@ -53,8 +53,7 @@
       "evidence": "Command-only classification, discussion rejection, batch rollover and outcome amendment tests pass.",
       "how": "Require implementation/commit/push kind; exclude discussion and preserve short batches.",
       "files": [
-        "docs/PROMPT_LOG.md",
-        "docs/prompt_logs/"
+        "docs/AI_USE.md"
       ],
       "verification": "Discussion calls fail without writes; 50-entry rollover and amendments pass tests.",
       "depends_on": [

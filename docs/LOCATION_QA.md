@@ -9,7 +9,7 @@ Fardin authorized this bounded location extension on 30 October 2026. Current sc
 - Data: `data/admin/README.md`, `bgd-adm2-source.geojson.gz`, `bgd-adm2-metadata.json`, `bgd-adm2-mapping.json`, `bgd-adm2-retrieval.json`; runtime `prototype/public/reference/data/district-boundaries.v1.geojson` and `district-boundaries.manifest.json`; `scripts/prepare_district_boundaries.py`, `scripts/check_location_assets.py`.
 - Tests: `tests/intake.test.cjs`, `tests/location.test.cjs`, `tests/fixtures/district-interior-points.json`.
 - Documents: `docs/API_CONTRACT.md`, `docs/UI_UX_SPEC.md`, `docs/MVP_SCOPE.md`, `docs/PRODUCT_SPEC.md`, `docs/DATA_SOURCES.md`, `docs/INTAKE_QA.md`, `docs/LOCATION_QA.md`, `prototype/README.md`.
-- Records: `docs/tasks/INTAKE-MAP.json`, `docs/tasks/INTAKE-UI.json`, `docs/prompt_logs/fardin-0001.md`; regenerated `README.md`, `docs/PROGRESS.md`, `docs/PROMPT_LOG.md`. Existing unrelated changes remain preserved.
+- Records: `docs/tasks/INTAKE-MAP.json`, `docs/tasks/INTAKE-UI.json`, `docs/AI_USE.md`; regenerated `README.md` and `docs/PROGRESS.md`. The contribution history is now consolidated in `docs/AI_USE.md`. Existing unrelated changes remain preserved.
 
 ## Reproduction
 
@@ -67,7 +67,7 @@ Administrative location is not scientific recommendation coverage. A precise pin
 
 Boundary integrity uses WebCrypto SHA-256; map mode requires a secure browser context (HTTPS or localhost), WebGL and the configured basemap. An insecure LAN preview can fall back to district search. Use HTTPS for physical-phone review. District search does not need those map capabilities.
 
-Shared INTAKE-UI readiness was reopened for regression checks; prior evidence remains intact and independent review is still pending. Task **INTAKE-MAP**, command **P-c57fe1ebaa44** (one new Fardin implementation instruction). At that implementation handoff no commit, push, merge or deployment was authorized/performed. Fardin subsequently authorized feature-branch commit/push delivery under DELIVERY-INTAKE; review/scientific gates remain pending.
+Shared INTAKE-UI readiness was reopened for regression checks; prior evidence remains intact and independent review is still pending. Task **INTAKE-MAP**, command **FARDIN-007** (one new Fardin implementation instruction). At that implementation handoff no commit, push, merge or deployment was authorized/performed. Fardin subsequently authorized feature-branch commit/push delivery under DELIVERY-INTAKE; review/scientific gates remain pending.
 
 ## Prachurjo independent UI review — 2026-11-01
 

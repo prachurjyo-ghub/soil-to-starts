@@ -30,7 +30,9 @@ Build explainable crop-rotation decision support for Bangladesh for NASA Space A
 
 ## Log action commands only
 
-Record actual implementation/commit/push commands using `workflow.py log --kind implementation|commit|push`: one short English **AI-refined** summary, actual work/checks and verified delivery evidence. Preserve Bangla/English intent, not invented sophistication. Use `unassigned` if identity is unknown; never invent tools/model IDs, commits or pushes. Update the same outcome; batches cap at 50.
+Record actual implementation/commit/push instructions using `workflow.py log --kind implementation|commit|push`. Rewrite Bangla or informal English as one natural, professional English instruction without adding requirements. The helper saves **Refined implementation prompt (AI-written)** and **Actual outcome** as Markdown paragraphs. Use one or two factual outcome sentences, not slash-separated shorthand. Do not require raw prompts or an “Original command” section. Store the prompt, purpose/AI work, evidenced human contribution, changed files, result and handoff together in `docs/AI_USE.md`, using the template in `docs/WORKFLOW.md`. Do not maintain a second disclosure or member-log copy. The assistant refines wording; the helper does not call AI.
+
+Use `unassigned` if identity is unknown; never invent tools/model IDs, commits, pushes or human contributions. Use stable member-number IDs (`FARDIN-001`) and headings such as “Fardin — Prompt 001”; preserve hidden legacy aliases, dates and facts. Update the same outcome. Read focused records with `workflow.py log-show ID` or `log-show --member NAME --limit 5`; keep one canonical file.
 
 Never record ordinary discussion, explanations, understanding/status questions, brainstorming or hypothetical examples—even as summaries. Discussion-only replies do not write logs/tasks/views. “Can you fix X?” is an action; “How would X work?” is discussion. Extract only actions from mixed messages. Manual work needs no fake AI prompt.
 

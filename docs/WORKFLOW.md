@@ -6,8 +6,8 @@ Codex uses repository `AGENTS.md` as persistent guidance; see [official instruct
 
 ## What is automatic, and what needs evidence
 
-- **The assistant** reads `AGENTS.md`, interprets the human request, writes a short English summary, identifies the task and records actual work/checks. It does this only for explicit implementation, commit or push commands and the actual work performed or attempted. Normal conversation, questions, explanations, ideas, brainstorming, examples and discussion-only clarifications are never recorded.
-- **The helper** enforces task/dependency structure, records explicitly executed check results, splits prompt logs after 50 entries per member, and regenerates the README snapshot, progress page and prompt index.
+- **The assistant** reads `AGENTS.md`, refines the action request into a professional English sentence, identifies the task and supplies actual work/checks in readable sentences. It keeps purpose, AI work, evidenced human work, changed files, results and review together in the same contribution entry. It does this only for explicit implementation, commit or push instructions and actual work performed or attempted. Normal conversations, questions, explanations, ideas, brainstorming, examples and discussion-only clarifications are never recorded.
+- **The helper** saves the supplied wording as Markdown entries, validates task/dependency structure, records explicitly executed checks, maintains the single combined AI-use/contribution file, and regenerates the README snapshot and progress page. It does not translate, infer missing facts or call an AI service. English sentence quality remains the assistant/contributor's responsibility.
 - **The team** supplies real source review and human PR approval. A script cannot establish scientific correctness or prove an undocumented review. It never commits, pushes, merges, publishes, watches other chats, or silently runs commands from task JSON.
 - **CI**, after this workflow is committed/pushed and Actions is available, checks record integrity, generated views and helper tests. The local check is usable immediately. No remote CI run or branch protection is claimed by adding a YAML file.
 
@@ -16,7 +16,7 @@ Codex uses repository `AGENTS.md` as persistent guidance; see [official instruct
 1. Humans: [README](../README.md) for onboarding and [PROGRESS](PROGRESS.md) as the daily task board. Agents: load the assigned task and relevant sections only.
 2. [PROGRESS.md](PROGRESS.md): generated task checklist, checks, issues, dependencies and next actions.
 3. The relevant JSON record under `docs/tasks/`: editable source of truth, one work package per file with small ordered checklist items. Each item includes owner, how, files, verification, prerequisites, errors and evidence.
-4. [PROMPT_LOG.md](PROMPT_LOG.md): small generated index; read only the relevant/current batch.
+4. [AI_USE.md](AI_USE.md): the combined contribution history. Read one entry with `log-show ID` or the latest records for a member with `log-show --member NAME --limit 5`.
 
 `AGENTS.md` holds durable rules, not a second mutable progress table. No backend or NASA work is marked done by this workflow installation. Existing root-document changes are recorded with their observed commit, while independent review remains pending.
 
@@ -106,23 +106,74 @@ One JSON file per task reduces conflicts between members. Each member works in t
 
 ## Implementation command records
 
-Classify the user's intent before calling the logger. Only an explicit command to implement/change something, commit or push qualifies. “Can you implement X?” is an action instruction; “How does X work?” and “Show an example of logging X” are discussion. A quoted command in an example is not authorization. A mixed message contributes only its action instruction. Discussion-only messages must not modify prompt logs, AI-use history, tasks or generated views.
+Keep AI-use explanations and implementation history together in **[AI_USE.md](AI_USE.md)**. Each action has one entry: its refined prompt, purpose/AI work, evidenced human contribution, affected files, outcome and handoff. Shared context for related commands is recorded once and linked by entry ID. Do not recreate a separate prompt index or member batches, or copy the same narrative into another disclosure.
 
-For qualifying work, refine the Bangla/English command into one clear English sentence, labeled AI-written. Preserve intent and record actual work/checks separately. Commands may be blocked or fail; label that accurately. Local changes are not pushed merely because they are logged. Before delivery, associate relevant action entries with the real changed files, commits, PRs or remote ref when available; never invent that evidence. Do not paste conversations or private content.
+Classify intent before logging. Only explicit implementation, commit or push instructions qualify. “Can you implement X?” is an action; “How does X work?” and examples are discussion. Extract only the action from mixed messages. Ordinary conversations, understanding questions, brainstorming and examples never trigger log/task/view writes.
 
-```bash
-python3 scripts/workflow.py log --kind implementation --member fardin --tool Codex --summary "Define shared contracts for the Bangladesh rotation planner." --outcome "Started; decisions pending." --source "Current Codex conversation" --task G0-CONTRACT
+Refine Bangla or informal English into one natural, professional English instruction without adding requirements. Use **Refined implementation prompt (AI-written)** rather than “Original command”; raw prompts and transcripts are not required here. Write the actual outcome in one or two complete factual sentences rather than slash-separated shorthand. The assistant supplies this wording; the helper formats records without calling an AI service.
+
+The readable date uses **Asia/Dhaka** and shows the recording date only. The original UTC timestamp remains in an HTML comment so migration does not lose historical precision. Backfills still identify an unknown original command time. Preserve existing IDs, tools, sources, recorded facts and unassigned requesters. Current task records hold progress; an older result describes the evidence recorded then.
+
+Each member has an independent sequence: `FARDIN-001`, `FARDIN-002`, `SAIM-001`, and so on. Headings display the name and number, such as `Fardin — Prompt 001`. The helper allocates the next number without changing older numbers; use the returned key with `log-show` or `log-update`. Hidden internal IDs and their anchor aliases preserve earlier references and timestamps.
+
+### Combined contribution format
+
+Optional fields appear when relevant and supported by evidence. Do not invent a human edit, review, model, original prompt or scientific result to fill a field.
+
+```markdown
+## Fardin — Prompt 001
+
+**Date:** [Recording date in Bangladesh]
+
+**Member:** [Confirmed member or unassigned]
+
+**Tool:** [Actual tool; model only if recorded]
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Allow farmers to select their location using a map pin or district-name search.
+
+**Purpose / AI contribution:** [Why assistance was used and what it actually produced]
+
+**Human contribution:** [Evidenced decisions, authored work, edits or review]
+
+**Changed files:** [Paths or links to the verified full change list]
+
+**Before → After:** [One sentence describing the actual behavior change]
+
+**Actual outcome:** [Actual work, important checks and remaining limitations]
+
+**Review / limitations:** [Relevant unresolved issue or review limit]
+
+**Next action / owner:** [The actual handoff, when known]
+
+**Task / source:** [Real task ID and source of the action instruction]
 ```
 
-Only use `--member fardin` when the requester is confirmed as Fardin. Other slugs are `saim`, `maruf`, `prachurjo`, `nadim`, `hla`; default `unassigned` preserves unknown identity. Do not infer the requester from a task owner or Git author. Never invent a model/version. The log uses the recording UTC time; backfills identify their source and unknown original time.
+Use the actual tool, including tools used outside an IDE. Assigned roles and GitHub accounts do not establish authorship. Manual code needs no invented AI prompt; record its true method in the task/PR declaration. Commit and push records describe delivery rather than inventing additional creative work. Cite earlier context by its entry link instead of repeating its explanation.
 
-The helper appends to a member batch and opens the next after 50 entries. Summary/outcome are each at most 240 characters. Hundreds of prompts remain in several small Markdown files. The index contains file links/counts only. If a check finishes later, update the same entry's outcome rather than adding a prompt for every tool call:
+For authorized work, run from the project root (this example is not itself an action to execute):
 
 ```bash
-python3 scripts/workflow.py log-update P-EXISTING-ID --outcome "Actual result and remaining limitation."
+python3 scripts/workflow.py log --kind implementation --member fardin --tool Codex --summary "Define the shared data contracts for the Bangladesh rotation planner." --purpose "Assist with documenting the agreed request and response formats." --human "Fardin requested a shared contract before integration." --files "docs/API_CONTRACT.md" --outcome "The contract work has started. The shared decisions still require agreement." --source "Current implementation instruction" --task G0-CONTRACT
 ```
 
-Use the real returned ID. One entry is required per qualifying action command, not per discussion, model message, tool call or automatic instruction. The CLI requires `--kind implementation`, `--kind commit` or `--kind push`; other categories are rejected. The helper validates that classification, while the assistant/contributor must classify the original intent honestly. Backfill only actual implementation commands with a reliable source; never reconstruct commands from a commit alone or backfill discussion. Existing historical AI-use entries are retained in [AI_USE.md](AI_USE.md).
+The prompt allows 240 characters; the outcome allows 480. Optional details allow up to 1800 characters per field but should stay concise. CLI values use one line; the helper writes the Markdown paragraphs. Other optional flags are `--before-after`, `--review`, `--context` and `--next-action`. Member slugs are `fardin`, `saim`, `maruf`, `prachurjo`, `nadim`, `hla` and `unassigned`; use a name only when confirmed by evidence.
+
+Amend the same result after checks finish:
+
+```bash
+python3 scripts/workflow.py log-update FARDIN-001 --outcome "The configured checks passed. Independent teammate review remains pending."
+```
+
+Read just the relevant history without changing files:
+
+```bash
+python3 scripts/workflow.py log-show FARDIN-001
+python3 scripts/workflow.py log-show --member fardin --limit 5
+```
+
+One entry is required per qualifying instruction, not per discussion, model message or tool call. The helper accepts only implementation/commit/push kinds and checks record structure; honest intent classification, sentence quality and contribution attribution remain the contributor's responsibility. Backfill only instructions supported by an actual source, never from a commit alone. No commit, push, merge, deployment or human approval is inferred from a log entry. Keep credentials and private data out.
 
 ## End-of-task checkpoint
 

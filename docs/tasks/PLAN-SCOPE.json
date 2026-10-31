@@ -76,7 +76,7 @@
       "files": [
         "tests/",
         "docs/PROGRESS.md",
-        "docs/PROMPT_LOG.md"
+        "docs/AI_USE.md"
       ],
       "verification": "Only actual implementation command is logged; human review/merge remain pending.",
       "depends_on": [

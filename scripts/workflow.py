@@ -2,7 +2,7 @@
 """Local team workflow records; Python standard library only. Never commits or pushes."""
 import argparse
 from contextlib import contextmanager
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 import html
 import json
 import os
@@ -19,9 +19,31 @@ OWNERS = ("Fardin", "Saim", "Maruf", "Prachurjo", "Nadim", "Hla")
 STATES = ("planned", "in_progress", "blocked", "in_review", "done")
 START = "<!-- workflow:progress:start -->"
 END = "<!-- workflow:progress:end -->"
-LOG_LIMIT = 50
+AI_LOG = "docs/AI_USE.md"
+AI_START = "<!-- workflow:ai-records:start -->"
+AI_END = "<!-- workflow:ai-records:end -->"
 COMMAND_KINDS = ("implementation", "commit", "push")
 LOG_HEADER = "| ID | Recorded UTC | Tool | Command kind | Refined task summary (AI-written) | Actual outcome | Task / source |"
+LOG_FIELDS = (
+    ("recorded_utc", "Recorded UTC"),
+    ("tool", "Tool"),
+    ("kind", "Command kind"),
+    ("summary", "Refined implementation prompt (AI-written)"),
+    ("outcome", "Actual outcome"),
+    ("reference", "Task / source"),
+)
+LOG_SUMMARY_LIMIT = 240
+LOG_OUTCOME_LIMIT = 480
+LOG_DETAILS = (
+    ("member", "Member"),
+    ("purpose", "Purpose / AI contribution"),
+    ("human", "Human contribution"),
+    ("files", "Changed files"),
+    ("before_after", "Before → After"),
+    ("review", "Review / limitations"),
+    ("context", "Related context"),
+    ("next_action", "Next action / owner"),
+)
 
 
 class WorkflowError(ValueError):
@@ -234,8 +256,158 @@ def snapshot(tasks, detailed=False):
     return "\n".join(lines).rstrip() + "\n"
 
 
+def log_entries(path):
+    """Read current Markdown entries and historical tables without losing metadata."""
+    entries = []
+    current = None
+    labels = {label: key for key, label in (*LOG_FIELDS, *LOG_DETAILS)}
+    labels["Type"] = "kind"
+    text = path.read_text()
+    if AI_START in text or AI_END in text:
+        require(text.count(AI_START) == text.count(AI_END) == 1, f"{path}: missing/duplicate AI record markers")
+        require(text.index(AI_START) < text.index(AI_END), f"{path}: reversed AI record markers")
+        text = text.split(AI_START, 1)[1].split(AI_END, 1)[0]
+
+    def finish():
+        if current is not None:
+            required = {"id", *(key for key, _ in LOG_FIELDS)}
+            require(required <= set(current), f"{path}: incomplete command entry {current['id']}")
+            if "display_date" in current:
+                require(current.pop("display_date") == log_date(current["recorded_utc"]), f"{path}: displayed date does not match recorded UTC")
+            if "heading_member" in current:
+                require(current.pop("heading_member") == current.get("member", "unassigned"), f"{path}: heading/member mismatch")
+            entries.append(current)
+
+    for line in text.splitlines():
+        if line.startswith("| P-"):
+            finish()
+            current = None
+            parts = line.split(" | ")
+            require(len(parts) == 7 and parts[-1].endswith(" |"), f"{path}: malformed command row; expected an explicit command kind")
+            values = [html.unescape(parts[0].removeprefix("| "))]
+            values += [html.unescape(value) for value in parts[1:-1]]
+            values.append(html.unescape(parts[-1].removesuffix(" |")))
+            entries.append(dict(zip(("id", *(key for key, _ in LOG_FIELDS)), values)))
+        elif re.fullmatch(r"## ([A-Za-z]+) — Prompt ([0-9]{3,})", line):
+            finish()
+            heading = re.fullmatch(r"## ([A-Za-z]+) — Prompt ([0-9]{3,})", line)
+            member = heading[1].lower()
+            require(member in [owner.lower() for owner in OWNERS] + ["unassigned"] and int(heading[2]) > 0, f"{path}: invalid member prompt number")
+            current = {"heading_member": member, "number": int(heading[2])}
+        elif line.startswith("## P-"):
+            finish()
+            key = line.removeprefix("## ").strip()
+            require(re.fullmatch(r"P-[A-Za-z0-9-]+", key), f"{path}: malformed prompt ID")
+            current = {"id": key}
+        elif current is not None and line.strip():
+            identifier = re.fullmatch(r"<!-- record-id: (P-[A-Za-z0-9-]+) -->", line)
+            if identifier:
+                require("id" not in current, f"{path}: duplicate record ID")
+                current["id"] = identifier[1]
+                continue
+            if re.fullmatch(r'<a id="[A-Za-z0-9-]+"></a>', line):
+                continue
+            recorded = re.fullmatch(r"<!-- recorded-utc: (.+) -->", line)
+            if recorded:
+                require("recorded_utc" not in current, f"{path}: duplicate recorded UTC")
+                current["recorded_utc"] = recorded[1]
+                continue
+            if line.startswith("**Date:** "):
+                require("display_date" not in current, f"{path}: duplicate displayed date")
+                current["display_date"] = line.removeprefix("**Date:** ")
+                continue
+            field = re.fullmatch(r"\*\*([^*]+):\*\* (.+)", line)
+            require(field is not None and field[1] in labels, f"{path}: unexpected command-entry content")
+            key = labels[field[1]]
+            require(key not in current, f"{path}: duplicate command field {field[1]}")
+            current[key] = html.unescape(field[2])
+    finish()
+    return entries
+
+
+def log_date(recorded_utc):
+    try:
+        stamp = datetime.fromisoformat(recorded_utc.replace("Z", "+00:00"))
+        require(stamp.tzinfo is not None, "Recorded UTC needs a timezone")
+        return stamp.astimezone(timezone(timedelta(hours=6))).strftime("%Y-%m-%d")
+    except ValueError as error:
+        raise WorkflowError("Invalid recorded UTC") from error
+
+
+def prompt_key(entry):
+    if "number" not in entry:
+        return entry["id"]
+    return f"{entry.get('member', 'unassigned').upper()}-{entry['number']:03d}"
+
+
+def prompt_heading(entry):
+    if "number" not in entry:
+        return entry["id"]
+    return f"{entry.get('member', 'unassigned').title()} — Prompt {entry['number']:03d}"
+
+
+def entry_matches(entry, token):
+    return token.casefold() in (entry["id"].casefold(), prompt_key(entry).casefold(), prompt_heading(entry).casefold())
+
+
+def number_entries(entries):
+    """Allocate once per member; preserve every existing public number and legacy ID."""
+    result = [dict(entry) for entry in entries]
+    highest = {}
+    seen_ids, seen_numbers = set(), set()
+    for entry in result:
+        require(entry["id"] not in seen_ids, f"Duplicate prompt ID: {entry['id']}")
+        seen_ids.add(entry["id"])
+        member = entry.get("member", "unassigned")
+        require(member in [owner.lower() for owner in OWNERS] + ["unassigned"], "Unknown contribution member")
+        if "number" in entry:
+            number = entry["number"]
+            require(isinstance(number, int) and not isinstance(number, bool) and number > 0, "Prompt number must be positive")
+            require((member, number) not in seen_numbers, f"Duplicate member prompt number: {member}-{number}")
+            seen_numbers.add((member, number))
+            highest[member] = max(highest.get(member, 0), number)
+    for entry in result:
+        if "number" not in entry:
+            member = entry.get("member", "unassigned")
+            entry["number"] = highest.get(member, 0) + 1
+            highest[member] = entry["number"]
+    return result
+
+
+def format_contribution(entry):
+    text = f"## {prompt_heading(entry)}\n\n"
+    if "number" in entry:
+        text += f'<a id="{prompt_key(entry).lower()}"></a>\n<a id="{entry["id"].lower()}"></a>\n<!-- record-id: {entry["id"]} -->\n\n'
+    text += f"**Date:** {log_date(entry['recorded_utc'])}\n\n"
+    text += f"<!-- recorded-utc: {entry['recorded_utc']} -->\n\n"
+    fields = (("member", "Member"), ("tool", "Tool"), ("kind", "Type"), ("summary", "Refined implementation prompt (AI-written)"))
+    fields += tuple(pair for pair in LOG_DETAILS if pair[0] not in ("member", "review", "context", "next_action"))
+    fields += (("outcome", "Actual outcome"), ("review", "Review / limitations"), ("context", "Related context"), ("next_action", "Next action / owner"), ("reference", "Task / source"))
+    text += "\n\n".join(f"**{label}:** {cell(entry[key])}" for key, label in fields if entry.get(key)) + "\n"
+    return text
+
+
+def write_ai_log(root, entries):
+    """Maintain one canonical record file; preserve its introduction/legacy disclosure."""
+    path = root / AI_LOG
+    text = path.read_text() if path.exists() else "# AI Use and Contribution Log\n\nDates use Asia/Dhaka. Refined prompts are AI-written interpretations; discussion is excluded.\n"
+    if AI_START in text or AI_END in text:
+        require(text.count(AI_START) == text.count(AI_END) == 1 and text.index(AI_START) < text.index(AI_END), "AI record markers missing/duplicated/reversed")
+        prefix, rest = text.split(AI_START)
+        _, suffix = rest.split(AI_END)
+    else:
+        # Import a standalone legacy table/card file without retaining duplicate rows.
+        prefix = re.split(r"(?m)^\| ID \||^## P-|^## [A-Za-z]+ — Prompt [0-9]{3,}$", text, maxsplit=1)[0]
+        suffix = "\n"
+    entries = number_entries(entries)
+    body = "\n\n" + "\n".join(format_contribution(entry) for entry in entries)
+    write(path, prefix.rstrip() + "\n\n" + AI_START + body + AI_END + suffix)
+    return entries
+
+
 def log_rows(path):
-    return [line for line in path.read_text().splitlines() if line.startswith("| P-")]
+    """Compatibility view for callers that consume the previous seven-column format."""
+    return ["| " + " | ".join(cell(entry[key]) for key in ("id", *(key for key, _ in LOG_FIELDS))) + " |" for entry in log_entries(path)]
 
 
 def compact_snapshot(tasks):
@@ -263,16 +435,10 @@ def views(root, tasks):
     prefix, remaining = readme.split(START)
     _, suffix = remaining.split(END)
     block = "\n## Team progress and next steps\n\nGenerated from task records; the detailed board is the team's daily starting point.\n\n" + compact_snapshot(tasks)
-    block += "\n[Detailed progress, acceptance and blockers](docs/PROGRESS.md) · [Workflow commands](docs/WORKFLOW.md) · [Short prompt logs](docs/PROMPT_LOG.md)\n\n"
+    block += "\n[Detailed progress, acceptance and blockers](docs/PROGRESS.md) · [Workflow commands](docs/WORKFLOW.md) · [AI use and contribution history](docs/AI_USE.md)\n\n"
     progress = "# Team task board\n\nGenerated from `docs/tasks/*.json`; update a record or use the helper, then render. This is the single human-readable list of owners, small steps, errors, evidence and handoffs.\n\n**Read this way:** choose your next available work package, follow its small checklist items in order, record errors and real evidence, then hand it off. A checked checklist item means that output is implemented/observed locally. A checked work-package row means passing checks, independent review and an accepted main-branch commit. Neither means national scientific validation.\n\n[Team playbook](TEAM_PLAYBOOK.md) · [Command reference](WORKFLOW.md) · [Validation requirements](VALIDATION.md)\n\n" + snapshot(tasks, detailed=True)
-    index = "# Prompt log index\n\nEach entry is a concise **AI-written interpretation**, not a verbatim user prompt or proof of human prompt authorship. Preserve intent; never invent requirements, checks or outcomes. English summaries may come from Bangla or English requests. Original prompts remain in their source conversations when available; this index is not a full transcript.\n\nLog only explicit implementation, commit or push commands and the actual work/checks/delivery evidence associated with them. Never record questions, explanations, brainstorming, examples, normal conversation or discussion-only clarifications, even as summaries. Discussion must not trigger log/task/view writes. Classify intent, not punctuation: “Can you implement X?” is an action; “How would X work?” is discussion. Mixed messages contribute only their action instruction. Use --kind implementation, commit or push; do not infer commands from discussion. Local work remains not pushed until actual delivery evidence is available. Members use separate batches, at most 50 entries each. Read the index/current relevant batch, not every historical log. `unassigned` means the requesting member was not confirmed. Recorded UTC is the logging time; a backfill does not invent the original timestamp.\n\nSee [workflow instructions](WORKFLOW.md) and [AI-use disclosure](AI_USE.md). Add entries with `python3 scripts/workflow.py log`; never include credentials/private data.\n\n| Batch | Entries |\n| --- | --- |\n"
-    for path in sorted((root / "docs/prompt_logs").glob("*.md")):
-        count = len(log_rows(path))
-        require(0 < count <= LOG_LIMIT, f"{path.name}: must contain 1–50 prompt entries")
-        index += f"| [{path.stem}](prompt_logs/{path.name}) | {count} |\n"
-    if not list((root / "docs/prompt_logs").glob("*.md")):
-        index += "| No prompt entries yet | 0 |\n"
-    return {root / "README.md": prefix + START + block + END + suffix, root / "docs/PROGRESS.md": progress, root / "docs/PROMPT_LOG.md": index}
+    return {root / "README.md": prefix + START + block + END + suffix, root / "docs/PROGRESS.md": progress}
+
 
 
 def render(root, tasks):
@@ -300,15 +466,17 @@ def check(root):
             if login:
                 logins.append(login.lower())
         require(len(logins) == len(set(logins)), "One GitHub account cannot be mapped to multiple team members")
+    require(not (root / "docs/PROMPT_LOG.md").exists() and not list((root / "docs/prompt_logs").glob("*.md")), "Contribution records must live once in docs/AI_USE.md; consolidate legacy log copies")
     prompt_ids = set()
-    for path in (root / "docs/prompt_logs").glob("*.md"):
-        for row in log_rows(path):
-            parts = row.split(" | ")
-            require(len(parts) == 7, f"{path}: malformed command row; expected an explicit command kind")
-            require(parts[3] in COMMAND_KINDS, f"{path}: discussions/questions/examples cannot be logged as command entries")
-            key = parts[0].removeprefix("| ")
-            require(key not in prompt_ids, f"Duplicate prompt ID: {key}")
-            prompt_ids.add(key)
+    path = root / AI_LOG
+    entries = log_entries(path) if path.exists() else []
+    number_entries(entries)
+    for entry in entries:
+        require(entry["kind"] in COMMAND_KINDS, f"{path}: discussions/questions/examples cannot be logged as command entries")
+        require(entry.get("member", "unassigned") in [owner.lower() for owner in OWNERS] + ["unassigned"], "Unknown contribution member")
+        key = entry["id"]
+        require(key not in prompt_ids, f"Duplicate prompt ID: {key}")
+        prompt_ids.add(key)
     for path, expected in views(root, tasks).items():
         require(path.exists() and path.read_text() == expected, f"Stale/missing generated view: {path.relative_to(root)}; run render")
     pages = [root / "README.md", root / "AGENTS.md"] + list((root / "docs").rglob("*.md"))
@@ -340,27 +508,27 @@ def reopen_dependents(tasks, key):
             reopen_dependents(tasks, dependent["id"])
 
 
-def log_prompt(root, tasks, member, tool, summary, outcome, source, task_id=None, *, kind=None):
+def log_prompt(root, tasks, member, tool, summary, outcome, source, task_id=None, *, kind=None, **details):
     require(kind in COMMAND_KINDS, "Log only explicit implementation, commit or push commands; exclude discussion, explanations, ideas and examples")
     require(member in [person.lower() for person in OWNERS] + ["unassigned"], "Use a known member slug or unassigned")
-    for name, value, limit in (("summary", summary, 240), ("outcome", outcome, 240), ("tool", tool, 60), ("source", source, 180)):
-        require(value and len(value) <= limit and "\n" not in value and "\r" not in value, f"{name}: provide one short line, at most {limit} characters")
+    for name, value, limit in (("summary", summary, LOG_SUMMARY_LIMIT), ("outcome", outcome, LOG_OUTCOME_LIMIT), ("tool", tool, 60), ("source", source, 180)):
+        require(value and value.strip() and len(value) <= limit and "\n" not in value and "\r" not in value, f"{name}: provide one concise line, at most {limit} characters")
     require(task_id is None or task_id in tasks, "Unknown prompt task ID")
-    directory = root / "docs/prompt_logs"
-    batches = sorted(directory.glob(f"{member}-*.md"))
-    path = batches[-1] if batches else directory / f"{member}-0001.md"
-    if path.exists() and len(log_rows(path)) >= LOG_LIMIT:
-        number = int(path.stem.rsplit("-", 1)[1]) + 1
-        path = directory / f"{member}-{number:04d}.md"
-    if not path.exists():
-        write(path, f"# Command summaries — {member}, batch {path.stem.rsplit('-', 1)[1]}\n\nAI-written interpretations of implementation, commit or push commands only. Discussion, explanations, examples and brainstorming are excluded. UTC is the recording time; original timestamps/model identifiers are not invented.\n\n{LOG_HEADER}\n| --- | --- | --- | --- | --- | --- | --- |\n")
+    allowed = {key for key, _ in LOG_DETAILS} - {"member"}
+    require(set(details) <= allowed, "Unknown contribution detail")
+    details = {key: value for key, value in details.items() if value is not None}
+    for key, value in details.items():
+        require(isinstance(value, str) and value.strip() and len(value) <= 1800 and "\n" not in value and "\r" not in value, f"{key}: provide one concise line, at most 1800 characters")
+    path = root / AI_LOG
+    entries = log_entries(path) if path.exists() else []
     prompt_id = f"P-{uuid.uuid4().hex[:12]}"
     reference = (task_id + "; " if task_id else "") + source
-    row = "| " + " | ".join(cell(value) for value in (prompt_id, now(), tool, kind, summary, outcome, reference)) + " |\n"
-    write(path, path.read_text() + row)
+    entries.append(dict(zip(("id", *(key for key, _ in LOG_FIELDS)), (prompt_id, now(), tool, kind, summary, outcome, reference)), member=member, **details))
+    entries = write_ai_log(root, entries)
     render(root, tasks)
-    print(f"Recorded {prompt_id} in {path.relative_to(root)}")
-    return prompt_id
+    identifier = prompt_key(next(entry for entry in entries if entry["id"] == prompt_id))
+    print(f"Recorded {identifier} in {AI_LOG}")
+    return identifier
 
 
 def parser():
@@ -402,13 +570,20 @@ def parser():
     log.add_argument("--kind", choices=COMMAND_KINDS, required=True, help="Only implementation, commit or push instructions; never ordinary conversation")
     log.add_argument("--member", default="unassigned")
     log.add_argument("--tool", default="Codex")
-    log.add_argument("--summary", required=True)
-    log.add_argument("--outcome", required=True)
+    log.add_argument("--summary", required=True, help="One professional English instruction that preserves the user's meaning (AI-written; at most 240 characters)")
+    log.add_argument("--outcome", required=True, help="One or two factual sentences describing actual work, checks and remaining limits (at most 480 characters)")
     log.add_argument("--source", required=True)
     log.add_argument("--task")
+    for key, _ in LOG_DETAILS:
+        if key != "member":
+            log.add_argument("--" + key.replace("_", "-"))
+    show = commands.add_parser("log-show", help="Read selected records without loading the entire contribution file")
+    show.add_argument("id", nargs="?")
+    show.add_argument("--member", choices=[owner.lower() for owner in OWNERS] + ["unassigned"])
+    show.add_argument("--limit", type=int, default=5)
     amend = commands.add_parser("log-update")
     amend.add_argument("id")
-    amend.add_argument("--outcome", required=True)
+    amend.add_argument("--outcome", required=True, help="Update actual results in one or two sentences (at most 480 characters)")
     return cli
 
 
@@ -420,6 +595,17 @@ def main(argv=None):
         validate(root, tasks)
         if args.action == "check":
             check(root)
+            return 0
+        if args.action == "log-show":
+            require(args.limit > 0, "Limit must be positive")
+            path = root / AI_LOG
+            entries = log_entries(path) if path.exists() else []
+            if args.id:
+                entries = [entry for entry in entries if entry_matches(entry, args.id)]
+                require(len(entries) == 1, "Prompt ID missing or duplicated")
+            if args.member:
+                entries = [entry for entry in entries if entry.get("member", "unassigned") == args.member]
+            print("\n".join(format_contribution(entry) for entry in entries[-args.limit:]) or "No matching contribution records.")
             return 0
         if args.action == "status":
             if args.task:
@@ -531,20 +717,16 @@ def main(argv=None):
                 print(output[-3000:])
                 return 0 if code == 0 else 1
             elif args.action == "log":
-                log_prompt(root, tasks, args.member.lower(), args.tool, args.summary, args.outcome, args.source, args.task, kind=args.kind)
+                log_prompt(root, tasks, args.member.lower(), args.tool, args.summary, args.outcome, args.source, args.task, kind=args.kind, **{key: getattr(args, key) for key, _ in LOG_DETAILS if key != "member"})
             elif args.action == "log-update":
-                require(args.outcome and len(args.outcome) <= 240 and "\n" not in args.outcome and "\r" not in args.outcome, "Outcome must be one short line, at most 240 characters")
-                matches = []
-                for path in (root / "docs/prompt_logs").glob("*.md"):
-                    for row in log_rows(path):
-                        if row.startswith(f"| {args.id} | "):
-                            matches.append((path, row))
+                require(args.outcome and args.outcome.strip() and len(args.outcome) <= LOG_OUTCOME_LIMIT and "\n" not in args.outcome and "\r" not in args.outcome, "Outcome must be one concise line, at most 480 characters")
+                path = root / AI_LOG
+                entries = log_entries(path) if path.exists() else []
+                matches = [entry for entry in entries if entry_matches(entry, args.id)]
                 require(len(matches) == 1, "Prompt ID missing or duplicated")
-                path, row = matches[0]
-                parts = row.split(" | ")
-                require(len(parts) == 7 and parts[3] in COMMAND_KINDS, "Only classified implementation/commit/push entries can be updated")
-                parts[5] = cell(args.outcome)
-                write(path, path.read_text().replace(row, " | ".join(parts), 1))
+                require(matches[0]["kind"] in COMMAND_KINDS, "Only classified implementation/commit/push entries can be updated")
+                matches[0]["outcome"] = args.outcome
+                write_ai_log(root, entries)
                 render(root, tasks)
         return 0
     except (WorkflowError, OSError, KeyError, TypeError) as error:

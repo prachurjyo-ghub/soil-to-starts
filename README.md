@@ -15,7 +15,7 @@ The development workflow is implemented locally: task checklists, generated prog
 
 Generated from task records; the detailed board is the team's daily starting point.
 
-**Accepted work packages: 0/29 · Implemented checklist items: 32/134.** Checked items can still await independent review and merge.
+**Accepted work packages: 0/30 · Implemented checklist items: 37/139.** Checked items can still await independent review and merge.
 
 | Member | First available action |
 | --- | --- |
@@ -26,7 +26,7 @@ Generated from task records; the detailed board is the team's daily starting poi
 | Nadim | MEDIA-STORYBOARD / s01: Plan the shots and visual sequence |
 | Hla | MEDIA-STORY / s01: Define the problem and audience |
 
-[Detailed progress, acceptance and blockers](docs/PROGRESS.md) · [Workflow commands](docs/WORKFLOW.md) · [Short prompt logs](docs/PROMPT_LOG.md)
+[Detailed progress, acceptance and blockers](docs/PROGRESS.md) · [Workflow commands](docs/WORKFLOW.md) · [AI use and contribution history](docs/AI_USE.md)
 
 <!-- workflow:progress:end -->
 
@@ -106,7 +106,7 @@ Each person follows the [team playbook](docs/TEAM_PLAYBOOK.md), works on a bound
 | How is science verified? | [Methodology](docs/METHODOLOGY.md), [validation](docs/VALIDATION.md) |
 | What are the API decisions? | [Draft API contract](docs/API_CONTRACT.md), [architecture](docs/ARCHITECTURE.md) |
 | What is required before judging? | [Submission](docs/SUBMISSION.md), [third-party notices](THIRD_PARTY_NOTICES.md) |
-| What did AI actually do? | [AI-use disclosure](docs/AI_USE.md), [command log index](docs/PROMPT_LOG.md) |
+| What did AI actually do? | [Combined AI-use and contribution history](docs/AI_USE.md) |
 
 AI assistance is declared per contribution, including tool and human review. Logs contain implementation/commit/push commands and actual work only; ordinary conversation, ideas and explanations are excluded. A manual contribution uses no invented AI prompt. Current user authorization controls commits, pushes and publication; these files do not authorize them.
 

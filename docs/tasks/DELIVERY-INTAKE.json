@@ -41,7 +41,7 @@
       "how": "Run intake/location, workflow, validation, syntax, lint, build and diff checks; inspect the staged diff and create descriptive commits.",
       "files": [
         "docs/tasks/DELIVERY-INTAKE.json",
-        "docs/prompt_logs/fardin-0001.md"
+        "docs/AI_USE.md"
       ],
       "verification": "Actual check outputs and actual commit hashes are recorded, without self-referential commit identities or invented review.",
       "state": "done"
@@ -59,7 +59,7 @@
       "how": "Push without force to the requested origin branch and verify its advertised revision and upstream tracking.",
       "files": [
         "docs/tasks/DELIVERY-INTAKE.json",
-        "docs/prompt_logs/fardin-0001.md"
+        "docs/AI_USE.md"
       ],
       "verification": "Remote ref matches the pushed commit; tasks remain in_review and physical-phone/Prachurjo review stays pending.",
       "state": "done"

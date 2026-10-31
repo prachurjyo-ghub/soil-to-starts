@@ -6,7 +6,7 @@ Generated from `docs/tasks/*.json`; update a record or use the helper, then rend
 
 [Team playbook](TEAM_PLAYBOOK.md) · [Command reference](WORKFLOW.md) · [Validation requirements](VALIDATION.md)
 
-**Accepted tasks: 0/29. Tasks with recorded failing checks: 0.** Counts are task records, not product-completion percentages.
+**Accepted tasks: 0/30. Tasks with recorded failing checks: 0.** Counts are task records, not product-completion percentages.
 
 | Done | Task | Owner | State | Depends on | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -22,6 +22,7 @@ Generated from `docs/tasks/*.json`; update a record or use the helper, then rend
 | [ ] | [MEDIA-STORYBOARD](tasks/MEDIA-STORYBOARD.json): Prepare storyboard, capture plan and asset ledger | Nadim | ready | none | Draft storyboard and rights ledger with Hla; defer final footage to accepted app behavior. |
 | [ ] | [INTAKE-MAP](tasks/INTAKE-MAP.json): Add independent confirmed map-pin and district-search intake locations | Fardin | in_review | none | Fardin coordinates main-branch merge planning and later G0/API integration after any remaining team checks. |
 | [ ] | [INTAKE-UI](tasks/INTAKE-UI.json): Implement nationwide required farmer intake without scientific recommendations | Fardin | in_review | none | Fardin coordinates main-branch merge planning and accepted contracts/API later. |
+| [ ] | [OPS-PROMPT-STYLE](tasks/OPS-PROMPT-STYLE.json): Unify AI-use disclosure and implementation history in one compact record file | Fardin | in_review | none | A different teammate reviews the numbered contribution records and helper behavior before acceptance. |
 | [ ] | [G1A](tasks/G1A.json): Acquire and validate the first NASA POWER evidence sample | Saim | waiting | G0-CONTRACT | Review G0 contracts now; acquire the first evidence slice after G0 is accepted. |
 | [ ] | [G1B](tasks/G1B.json): Source Bangladesh crop, soil and rotation rules | Maruf | waiting | G0-CONTRACT | Review G0 rules/schema now; source the minimum crop catalog after G0 is accepted. |
 | [ ] | [G1C](tasks/G1C.json): Implement API validation and schema/test foundation | Fardin | waiting | G0-CONTRACT | Implement schema/API validation after G0 acceptance; coordinate independent tooling work. |
@@ -44,7 +45,7 @@ Generated from `docs/tasks/*.json`; update a record or use the helper, then rend
 
 | Member | Available now / next dependency |
 | --- | --- |
-| Fardin | DELIVERY-INTAKE: Fardin coordinates main-branch merge planning and later accepted G0/scientific work.; DOC-FOUNDATION: Arrange a teammate review of the concise onboarding and canonical specifications; record accepted merge only afterward.; OPS-SECURITY: Prachurjo reviews the targeted patch; Fardin records actual main-branch delivery only after approval.; OPS-WORKFLOW: Request independent review of the board/helper/PR checks; publish only when authorized.; PLAN-SCOPE: Arrange independent teammate review of the scope changes. Fardin can draft G0 contracts while that review is pending; no product work is accepted by these documentation ticks.; G0-CONTRACT: Draft bounded contracts and obtain agreement from Saim, Maruf and Prachurjo.; INTAKE-MAP: Fardin coordinates main-branch merge planning and later G0/API integration after any remaining team checks.; INTAKE-UI: Fardin coordinates main-branch merge planning and accepted contracts/API later. |
+| Fardin | DELIVERY-INTAKE: Fardin coordinates main-branch merge planning and later accepted G0/scientific work.; DOC-FOUNDATION: Arrange a teammate review of the concise onboarding and canonical specifications; record accepted merge only afterward.; OPS-SECURITY: Prachurjo reviews the targeted patch; Fardin records actual main-branch delivery only after approval.; OPS-WORKFLOW: Request independent review of the board/helper/PR checks; publish only when authorized.; PLAN-SCOPE: Arrange independent teammate review of the scope changes. Fardin can draft G0 contracts while that review is pending; no product work is accepted by these documentation ticks.; G0-CONTRACT: Draft bounded contracts and obtain agreement from Saim, Maruf and Prachurjo.; INTAKE-MAP: Fardin coordinates main-branch merge planning and later G0/API integration after any remaining team checks.; INTAKE-UI: Fardin coordinates main-branch merge planning and accepted contracts/API later.; OPS-PROMPT-STYLE: A different teammate reviews the numbered contribution records and helper behavior before acceptance. |
 | Saim | Collaborate on G0-CONTRACT |
 | Maruf | Collaborate on G0-CONTRACT |
 | Prachurjo | OPS-LINT: Review the bounded lint/state-initialization changes and record accepted delivery; full usability testing remains G3.; Collaborate on G0-CONTRACT, MEDIA-STORYBOARD |
@@ -66,13 +67,13 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-31T19:33:11Z`
   - Evidence: Reviewed and explicitly staged all 105 intended documentation/workflow/intake/map/supporting-check files (~3 MB). Staged paths exactly match the reviewed manifest, caches are excluded and historical unassigned logs are unchanged. No unrelated working-tree paths were found.
 - [x] **a2 · Fardin · done:** Pass delivery checks and inspect the staged changes before creating scoped commits.
   - How: Run intake/location, workflow, validation, syntax, lint, build and diff checks; inspect the staged diff and create descriptive commits.
-  - Files: docs/tasks/DELIVERY-INTAKE.json, docs/prompt_logs/fardin-0001.md
+  - Files: docs/tasks/DELIVERY-INTAKE.json, docs/AI_USE.md
   - Verify: Actual check outputs and actual commit hashes are recorded, without self-referential commit identities or invented review.
   - Before: a1
   - Evidence: Created source commit 7f79196ba7f7b876ca017614c8cc574626a9be78 after reviewing the 105-path staged diff. All required local checks passed. The source commit includes completed docs/workflow, intake/location, licensed assets/tests and supporting lint/security changes; no approval/scientific validation inferred.
 - [x] **a3 · Fardin · done:** Push the authorized feature branch and verify the remote revision without accepting review/science gates.
   - How: Push without force to the requested origin branch and verify its advertised revision and upstream tracking.
-  - Files: docs/tasks/DELIVERY-INTAKE.json, docs/prompt_logs/fardin-0001.md
+  - Files: docs/tasks/DELIVERY-INTAKE.json, docs/AI_USE.md
   - Verify: Remote ref matches the pushed commit; tasks remain in_review and physical-phone/Prachurjo review stays pending.
   - Before: a2
   - Evidence: git push --set-upstream origin feature/intake-location succeeded. Independent git ls-remote readback advertised 7f79196ba7f7b876ca017614c8cc574626a9be78 for refs/heads/feature/intake-location. No force push, merge or deployment; independent review and physical-phone/browser testing remain pending.
@@ -251,7 +252,7 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:49:54Z`
   - Evidence: README summary and detailed PROGRESS board are generated; focused member/task commands and checklist updates exist.
 - [x] **s03 · Fardin · done:** Keep command logs action-only
   - How: Require implementation/commit/push kind; exclude discussion and preserve short batches.
-  - Files: docs/PROMPT_LOG.md, docs/prompt_logs/
+  - Files: docs/AI_USE.md
   - Verify: Discussion calls fail without writes; 50-entry rollover and amendments pass tests.
   - Before: s02
   - Evidence: Command-only classification, discussion rejection, batch rollover and outcome amendment tests pass.
@@ -301,7 +302,7 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-30T16:49:54Z`
   - Evidence: 26 packages contain 125 ordered items; story/receipt follow G3, G4 precedes G5, media preparation is separate and all seven future tracks retain explicit blockers.
 - [x] **s04 · Fardin · done:** Validate documents and record real outcome
   - How: Run existing helper tests and record/link/generated-view checks; inspect final changes.
-  - Files: tests/, docs/PROGRESS.md, docs/PROMPT_LOG.md
+  - Files: tests/, docs/PROGRESS.md, docs/AI_USE.md
   - Verify: Only actual implementation command is logged; human review/merge remain pending.
   - Before: s03
   - Evidence: 46 existing helper tests passed; record/generated-view/link validation passed; scope audit confirmed seven blocked future tracks, no product ticks and no application/helper/test code edits.
@@ -494,6 +495,49 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-31T19:33:11Z`
 - Review: Prachurjo — 2026-11-01: Independent UI review of mounted six-question intake. Reviewer reports UI OK with no blocking frontend issues. See docs/LOCATION_QA.md and docs/INTAKE_QA.md. Scientific acceptance and main-branch merge remain separate.
 - Delivery: no accepted merge recorded; branch: feature/intake-location; issue/PR: not created/recorded
 - Handoff: Prachurjo recorded independent UI review (LOCATION_QA / INTAKE_QA 2026-11-01). Fardin coordinates G0/G1C transport integration only after accepted contracts. Saim/Maruf supply scientific evidence/rules through their existing gates.
+
+### OPS-PROMPT-STYLE — Unify AI-use disclosure and implementation history in one compact record file
+
+Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-31T22:41:10Z`
+
+**Why:** A bounded development-documentation change; no application, NASA pipeline, scientific gate, commit or push is included.
+
+- [x] **s01 · Fardin · done:** Combine existing command records and disclosure context without losing information.
+  - How: Merge all 13 existing action entries and the historical guide contribution into AI_USE; preserve IDs, UTC, member identities, tools, prompts, outcomes, sources and shared contribution context.
+  - Files: docs/AI_USE.md
+  - Verify: Compare all prior fields and disclosure context with the saved migration snapshot.
+  - Evidence: All 13 prior action records were compared field-for-field after consolidation: IDs, original UTC, member identities, tools, command kinds, refined prompts, outcomes and source references are preserved. The historical guide contribution and shared disclosure context now live in AI_USE.md.
+- [x] **s02 · Fardin · done:** Use one canonical log with date-only display and focused reading.
+  - How: Route log and log-update to AI_USE; retain original UTC, support contribution details and read-only filtering, and reject duplicate split copies.
+  - Files: scripts/workflow.py, tests/test_workflow.py
+  - Verify: Run regression coverage for date rollover, context preservation, filters, legacy data and single-file growth.
+  - Before: s01
+  - Evidence: All 56 workflow/PR tests pass, including single-file growth, member filtering, safe outcome updates, contribution context preservation, Bangladesh date rollover, original UTC retention and malformed/duplicate record checks. The logger writes only AI_USE.md.
+- [x] **s03 · Fardin · done:** Align future instructions and source references with the combined format.
+  - How: Update root/Claude/workflow instructions and current file references; move prior sections before retiring their split copies and preserve existing review evidence.
+  - Files: AGENTS.md, CLAUDE.md, docs/WORKFLOW.md, docs/INTAKE_QA.md, docs/LOCATION_QA.md
+  - Verify: Check relative links and task-file pointers; inspect unchanged existing review records and source evidence.
+  - Before: s02
+  - Evidence: Future instructions, README and active task/file references point to the combined log. Split contents were verified before retiring their copies; link validation passes, and original task evidence, review approvals and states remain unchanged apart from this tooling package.
+- [x] **s04 · Fardin · done:** Verify the consolidation and prepare independent review.
+  - How: Run workflow/PR tests, record/link validation, migration preservation and whitespace checks; regenerate progress without accepting scientific or human review gates.
+  - Files: docs/tasks/OPS-PROMPT-STYLE.json, docs/PROGRESS.md, README.md
+  - Verify: All relevant checks pass; existing application/data sources and independent reviews remain unchanged.
+  - Before: s03
+  - Evidence: The actual project passed workflow tests, record/link validation, whitespace and migration preservation checks. Application/data files remain unchanged; no commit, push, merge, deployment or new human approval was performed.
+- [x] **s05 · Fardin · done:** Use stable member-name prompt numbers in headings and helper lookups.
+  - How: Migrate existing headings, allocate independent counters, retain hidden record IDs/anchors, update references and support both public and legacy lookup keys.
+  - Files: docs/AI_USE.md, scripts/workflow.py, tests/test_workflow.py, AGENTS.md, docs/WORKFLOW.md
+  - Verify: Run counter isolation, stability, scaling, alias lookup/update and malformed-heading tests, plus preservation and record/link checks.
+  - Before: s04
+  - Evidence: All 14 earlier records retain their internal IDs, dates, tools, members, prompts, outcomes and sources; visible references use stable member-number keys and retained legacy anchors. All 60 workflow/PR tests, metadata/link preservation, record validation and whitespace checks pass.
+- Check **passed**: `python3 -B -m unittest discover -s tests -p 'test_*.py'` — Exit 0. ............................................................ ---------------------------------------------------------------------- Ran 60 tests in 0.451s OK
+- Check **passed**: `python3 -B -m unittest discover -s tests -p 'test_*.py' -v` — Exit 0. n_prompt_records_preserve_meaning_and_metadata (test_workflow.WorkflowTests) ... ok test_member_logs_are_separate_and_pipe_safe (test_workflow.WorkflowTests) ... ok test_outcome_limits_and_blank_fields_are_rejected_without_log_writes (test_workflow.WorkflowTests) ... ok test_passing_check_does_not_automatically_accept_task (test_workflow.WorkflowTests) ... ok test_pending_or_self_review_cannot_be_done (test_workflow.WorkflowTests) ... ok test_professional_docs_have_small_entrypoint_budgets (test_workflow.WorkflowTests) ... ok test_prompt_amend_updates_outcome_without_extra_entry (test_workflow.WorkflowTests) ... ok test_prompt_numbers_are_per_member_and_do_not_change_on_update (test_workflow.WorkflowTests) ... ok test_public_numbers_use_next_available_maximum_and_scale_past_three_digits (test_workflow.WorkflowTests) ... ok test_readonly_check_detects_stale_view (test_workflow.WorkflowTests) ... ok test_real_git_ancestry_proof (test_workflow.WorkflowTests) ... ok test_render_is_idempotent (test_workflow.WorkflowTests) ... ok test_reopening_checklist_prerequisite_reopens_done_children (test_workflow.WorkflowTests) ... ok test_start_blocked_task_does_not_modify_records (test_workflow.WorkflowTests) ... ok test_unchecked_acceptance_cannot_be_done (test_workflow.WorkflowTests) ... ok test_unknown_dependency_rejected (test_workflow.WorkflowTests) ... ok test_unmerged_commit_cannot_be_done (test_workflow.WorkflowTests) ... ok test_verify_accepts_explicit_project_subdirectory (test_workflow.WorkflowTests) ... ok test_verify_executes_check_and_records_real_failure (test_workflow.WorkflowTests) ... ok test_verify_refuses_directory_outside_project (test_workflow.WorkflowTests) ... ok ---------------------------------------------------------------------- Ran 60 tests in 0.482s OK
+- Check **passed**: `git diff --check` — Exit 0.
+- Check **passed**: `python3 -B scripts/workflow.py check` — Exit 0. Workflow records valid: 30 tasks, 17 prompts. Recorded failed product checks remain visible; this is not a product test pass.
+- Review: pending — no approval recorded
+- Delivery: no accepted merge recorded; branch: feature/workspace-ui-review; issue/PR: not created/recorded
+- Handoff: Review AI_USE.md and focused log-show output; verify record preservation and helper behavior. Fardin coordinates any separately authorized commit/push.
 
 ### G1A — Acquire and validate the first NASA POWER evidence sample
 

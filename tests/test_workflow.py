@@ -162,12 +162,14 @@ class WorkflowTests(unittest.TestCase):
                 with self.assertRaisesRegex(workflow.WorkflowError, "Instruction budget exceeded"):
                     workflow.check(self.root)
 
-    def test_prompt_rotation_at_fifty(self):
+    def test_many_prompts_stay_in_one_file(self):
         with contextlib.redirect_stdout(io.StringIO()):
             for number in range(51):
                 workflow.log_prompt(self.root, self.tasks, "fardin", "Codex", f"Record task {number}.", "Pending.", "Test fixture", kind="implementation")
-        files = sorted((self.root / "docs/prompt_logs").glob("*.md"))
-        self.assertEqual([len(workflow.log_rows(path)) for path in files], [50, 1])
+        entries = workflow.log_entries(self.root / "docs/AI_USE.md")
+        self.assertEqual(len(entries), 51)
+        self.assertEqual(list((self.root / "docs/prompt_logs").glob("*.md")), [])
+        self.assertFalse((self.root / "docs/PROMPT_LOG.md").exists())
         with contextlib.redirect_stdout(io.StringIO()):
             workflow.check(self.root)
 
@@ -176,24 +178,25 @@ class WorkflowTests(unittest.TestCase):
             for member in ("fardin", "saim"):
                 workflow.log_prompt(self.root, self.tasks, member, "Codex", "Update A | B <labels>.", "Updated labels.", "Test fixture", kind="implementation")
             workflow.check(self.root)
-        self.assertEqual(len(list((self.root / "docs/prompt_logs").glob("*.md"))), 2)
-        self.assertIn("&#124;", (self.root / "docs/prompt_logs/fardin-0001.md").read_text())
+        self.assertEqual({entry["member"] for entry in workflow.log_entries(self.root / "docs/AI_USE.md")}, {"fardin", "saim"})
+        self.assertEqual(len(workflow.log_entries(self.root / "docs/AI_USE.md")), 2)
+        self.assertIn("&#124;", (self.root / "docs/AI_USE.md").read_text())
 
     def test_prompt_amend_updates_outcome_without_extra_entry(self):
         with contextlib.redirect_stdout(io.StringIO()):
             key = workflow.log_prompt(self.root, self.tasks, "unassigned", "Codex", "Track progress.", "Started.", "Current chat", kind="implementation")
         self.assertEqual(self.cli("log-update", key, "--outcome", "Checks passed; review pending."), 0)
-        path = self.root / "docs/prompt_logs/unassigned-0001.md"
+        path = self.root / "docs/AI_USE.md"
         self.assertEqual(len(workflow.log_rows(path)), 1)
         self.assertIn("Checks passed; review pending.", path.read_text())
         self.assertIn("Track progress.", path.read_text())
 
     def test_discussion_categories_are_rejected_without_writes(self):
-        before = (self.root / "docs/PROMPT_LOG.md").read_bytes()
+        before = (self.root / "docs/AI_USE.md").read_bytes()
         for kind in (None, "discussion", "question", "explanation", "brainstorm", "example"):
             with self.subTest(kind=kind), self.assertRaisesRegex(workflow.WorkflowError, "exclude discussion"):
                 workflow.log_prompt(self.root, self.tasks, "unassigned", "Codex", "How would this work?", "Explanation only.", "Test", kind=kind)
-        self.assertEqual((self.root / "docs/PROMPT_LOG.md").read_bytes(), before)
+        self.assertEqual((self.root / "docs/AI_USE.md").read_bytes(), before)
         self.assertEqual(list((self.root / "docs/prompt_logs").glob("*.md")), [])
 
     def test_commit_and_push_commands_have_explicit_kinds(self):
@@ -201,9 +204,9 @@ class WorkflowTests(unittest.TestCase):
             for kind in ("commit", "push"):
                 workflow.log_prompt(self.root, self.tasks, "unassigned", "Codex", f"{kind.title()} the intended changes.", "Pending; no delivery claimed.", "Test command", kind=kind)
             workflow.check(self.root)
-        text = (self.root / "docs/prompt_logs/unassigned-0001.md").read_text()
-        self.assertIn(" | commit | ", text)
-        self.assertIn(" | push | ", text)
+        text = (self.root / "docs/AI_USE.md").read_text()
+        self.assertIn("**Type:** commit", text)
+        self.assertIn("**Type:** push", text)
 
     def test_cli_rejects_unclassified_and_discussion_log_calls(self):
         for extra in ([], ["--kind", "discussion"]):
@@ -215,10 +218,200 @@ class WorkflowTests(unittest.TestCase):
     def test_check_rejects_tampered_discussion_category(self):
         with contextlib.redirect_stdout(io.StringIO()):
             workflow.log_prompt(self.root, self.tasks, "unassigned", "Codex", "Update the workflow.", "Implemented locally.", "Test", kind="implementation")
-        path = self.root / "docs/prompt_logs/unassigned-0001.md"
-        path.write_text(path.read_text().replace(" | implementation | ", " | discussion | "))
+        path = self.root / "docs/AI_USE.md"
+        path.write_text(path.read_text().replace("**Type:** implementation", "**Type:** discussion"))
         with self.assertRaisesRegex(workflow.WorkflowError, "cannot be logged"):
             workflow.check(self.root)
+
+    def test_markdown_prompt_records_preserve_meaning_and_metadata(self):
+        summary = "Allow farmers to choose a location using a map pin or district-name search."
+        source = "Actual instruction; labels A | B <reference> & metadata"
+        with contextlib.redirect_stdout(io.StringIO()):
+            key = workflow.log_prompt(self.root, self.tasks, "fardin", "OpenAI Codex", summary, "The location interface was implemented. Independent review is pending.", source, "TASK-A", kind="implementation")
+            workflow.check(self.root)
+        path = self.root / "docs/AI_USE.md"
+        entries = workflow.log_entries(path)
+        self.assertEqual(len(entries), 1)
+        self.assertTrue(workflow.entry_matches(entries[0], key))
+        self.assertEqual(entries[0]["summary"], summary)
+        self.assertEqual(entries[0]["reference"], "TASK-A; " + source)
+        self.assertEqual(entries[0]["tool"], "OpenAI Codex")
+        self.assertIn("**Refined implementation prompt (AI-written):** " + summary, path.read_text())
+        self.assertNotIn("| ID |", path.read_text())
+        self.assertNotIn("Original command", path.read_text())
+
+    def test_legacy_table_append_preserves_identity_time_and_escaped_content(self):
+        path = self.root / "docs/AI_USE.md"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        row = "| P-legacy | 2026-10-28T19:37:39Z | Codex | implementation | Update A &#124; B &lt;labels&gt;. | Work was recorded; review is pending. | TASK-A; Saved source &amp; evidence |\n"
+        path.write_text("# Legacy log\n\n" + workflow.LOG_HEADER + "\n| --- | --- | --- | --- | --- | --- | --- |\n" + row)
+        before = workflow.log_entries(path)[0]
+        with contextlib.redirect_stdout(io.StringIO()):
+            workflow.log_prompt(self.root, self.tasks, "unassigned", "Codex", "Update the existing instructions.", "The instructions were updated.", "Current command", kind="implementation")
+            workflow.check(self.root)
+        after = workflow.log_entries(path)
+        self.assertEqual({k:v for k,v in after[0].items() if k != "number"}, before)
+        self.assertEqual(len(after), 2)
+        self.assertIn("<!-- record-id: P-legacy -->", path.read_text())
+        self.assertNotIn("| P-legacy", path.read_text())
+        self.assertEqual(after[0]["recorded_utc"], "2026-10-28T19:37:39Z")
+
+    def test_legacy_outcome_update_keeps_other_fields_and_allows_readable_sentences(self):
+        path = self.root / "docs/AI_USE.md"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(workflow.LOG_HEADER + "\n| P-old | 2026-10-28T19:37:39Z | Codex | push | Push the reviewed branch. | Pending. | TASK-A; Actual user instruction |\n")
+        before = workflow.log_entries(path)[0]
+        outcome = ("The branch was pushed after the configured workflow and application checks completed successfully, and the remote revision was verified against the local source commit. "
+                   "Independent teammate review, physical-phone testing and the scientific integration remain pending; no main-branch merge or deployment was performed.")
+        self.assertGreater(len(outcome), 240)
+        self.assertEqual(self.cli("log-update", "P-old", "--outcome", outcome), 0)
+        after = workflow.log_entries(path)
+        self.assertEqual(len(after), 1)
+        self.assertEqual({k:v for k,v in after[0].items() if k != "number"}, {**before, "outcome": outcome})
+
+    def test_malformed_or_duplicate_markdown_fields_are_not_silently_discarded(self):
+        with contextlib.redirect_stdout(io.StringIO()):
+            workflow.log_prompt(self.root, self.tasks, "fardin", "Codex", "Update the documentation.", "Review is pending.", "Current instruction", kind="implementation")
+        path = self.root / "docs/AI_USE.md"
+        original = path.read_text()
+        variants = (
+            original.replace("**Tool:** Codex\n", ""),
+            original.replace("**Tool:** Codex", "**Tool:** Codex\n\n**Tool:** Another tool"),
+            original.replace(workflow.AI_END, "Unexpected content inside an entry.\n" + workflow.AI_END),
+        )
+        for content in variants:
+            with self.subTest(content=content):
+                path.write_text(content)
+                with self.assertRaises(workflow.WorkflowError):
+                    workflow.log_entries(path)
+                self.assertEqual(path.read_text(), content)
+
+    def test_outcome_limits_and_blank_fields_are_rejected_without_log_writes(self):
+        for outcome in ("a" * 481, "line one\nline two", "   "):
+            with self.subTest(outcome=outcome), self.assertRaises(workflow.WorkflowError):
+                workflow.log_prompt(self.root, self.tasks, "fardin", "Codex", "Update the project.", outcome, "Current command", kind="implementation")
+        self.assertEqual(list((self.root / "docs/prompt_logs").glob("*.md")), [])
+
+    def test_duplicate_ids_in_combined_history_fail_validation(self):
+        with contextlib.redirect_stdout(io.StringIO()):
+            workflow.log_prompt(self.root, self.tasks, "fardin", "Codex", "Update the instructions.", "The instructions were updated.", "Current command", kind="implementation")
+        original = self.root / "docs/AI_USE.md"
+        entry = workflow.log_entries(original)[0]
+        before = original.read_bytes()
+        with self.assertRaisesRegex(workflow.WorkflowError, "Duplicate prompt ID"):
+            workflow.write_ai_log(self.root, [entry, entry])
+        self.assertEqual(original.read_bytes(), before)
+
+    def test_combined_log_preserves_intro_suffix_and_contribution_details_on_update(self):
+        path = self.root / "docs/AI_USE.md"
+        prefix = "# AI disclosure\n\nKnown historical contribution.\n\n"
+        path.write_text(prefix + workflow.AI_START + "\n" + workflow.AI_END + "\n\nFooter evidence stays intact.\n")
+        with contextlib.redirect_stdout(io.StringIO()):
+            key = workflow.log_prompt(self.root, self.tasks, "fardin", "Codex", "Implement both location methods.", "The work has started.", "Current instruction", "TASK-A", kind="implementation", purpose="Assist with interface code and tests.", human="Fardin selected the two methods.", files="location.js", before_after="District search becomes district search or a map pin.", review="Review is pending.", next_action="Another teammate reviews the implementation.")
+        before = workflow.log_entries(path)[0]
+        self.assertEqual(self.cli("log-update", key, "--outcome", "The checks passed. Review remains pending."), 0)
+        self.assertEqual(workflow.log_entries(path)[0], {**before, "outcome": "The checks passed. Review remains pending."})
+        self.assertTrue(path.read_text().startswith(prefix))
+        self.assertTrue(path.read_text().endswith("\n\nFooter evidence stays intact.\n"))
+
+    def test_date_only_display_uses_bangladesh_date_and_retains_original_utc(self):
+        path = self.root / "docs/AI_USE.md"
+        with patch.object(workflow, "now", return_value="2026-10-31T19:35:45Z"), contextlib.redirect_stdout(io.StringIO()):
+            workflow.log_prompt(self.root, self.tasks, "prachurjo", "Cursor", "Refine the workspace interface.", "The checks passed.", "Current instruction", kind="implementation")
+        self.assertIn("**Date:** 2026-11-01", path.read_text())
+        self.assertIn("<!-- recorded-utc: 2026-10-31T19:35:45Z -->", path.read_text())
+        self.assertEqual(workflow.log_entries(path)[0]["recorded_utc"], "2026-10-31T19:35:45Z")
+        path.write_text(path.read_text().replace("**Date:** 2026-11-01", "**Date:** 2026-10-31"))
+        with self.assertRaisesRegex(workflow.WorkflowError, "displayed date"):
+            workflow.log_entries(path)
+
+    def test_focused_member_history_is_readonly_and_does_not_load_other_members(self):
+        with contextlib.redirect_stdout(io.StringIO()):
+            for member in ("fardin", "saim", "fardin"):
+                workflow.log_prompt(self.root, self.tasks, member, "Codex", f"Update {member}'s task.", "Review is pending.", "Current instruction", kind="implementation")
+        path = self.root / "docs/AI_USE.md"
+        before = path.read_bytes()
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            result = workflow.main(["--root", str(self.root), "log-show", "--member", "fardin", "--limit", "1"])
+        self.assertEqual(result, 0)
+        self.assertEqual(output.getvalue().count("## Fardin — Prompt"), 1)
+        self.assertIn("**Member:** fardin", output.getvalue())
+        self.assertNotIn("**Member:** saim", output.getvalue())
+        self.assertEqual(path.read_bytes(), before)
+
+    def test_combined_history_refuses_duplicate_legacy_copies_and_broken_markers(self):
+        with contextlib.redirect_stdout(io.StringIO()):
+            workflow.log_prompt(self.root, self.tasks, "fardin", "Codex", "Update the records.", "The records were updated.", "Current instruction", kind="implementation")
+        old_index = self.root / "docs/PROMPT_LOG.md"
+        old_index.write_text("# Duplicate old entrypoint\n")
+        with self.assertRaisesRegex(workflow.WorkflowError, "live once"):
+            workflow.check(self.root)
+        old_index.unlink()
+        path = self.root / "docs/AI_USE.md"
+        original = path.read_text()
+        for text in (original.replace(workflow.AI_START, ""), original + workflow.AI_END):
+            with self.subTest(text=text):
+                path.write_text(text)
+                with self.assertRaisesRegex(workflow.WorkflowError, "markers"):
+                    workflow.log_entries(path)
+
+    def test_prompt_numbers_are_per_member_and_do_not_change_on_update(self):
+        with contextlib.redirect_stdout(io.StringIO()):
+            first = workflow.log_prompt(self.root, self.tasks, "fardin", "Codex", "Update the form.", "The form was updated.", "Current command", kind="implementation")
+            other = workflow.log_prompt(self.root, self.tasks, "saim", "Codex", "Review the data manifest.", "Review is pending.", "Current command", kind="implementation")
+            second = workflow.log_prompt(self.root, self.tasks, "fardin", "Codex", "Test the updated form.", "The checks passed.", "Current command", kind="implementation")
+        self.assertEqual((first, other, second), ("FARDIN-001", "SAIM-001", "FARDIN-002"))
+        path = self.root / workflow.AI_LOG
+        before = workflow.log_entries(path)
+        self.assertEqual(self.cli("log-update", "fardin-002", "--outcome", "The checks passed. Independent review remains pending."), 0)
+        after = workflow.log_entries(path)
+        self.assertEqual([(e['id'],e['member'],e['number']) for e in before], [(e['id'],e['member'],e['number']) for e in after])
+        text = path.read_text()
+        self.assertIn("## Fardin — Prompt 001", text)
+        self.assertIn("## Saim — Prompt 001", text)
+        self.assertNotIn("## P-", text)
+
+    def test_public_numbers_use_next_available_maximum_and_scale_past_three_digits(self):
+        with contextlib.redirect_stdout(io.StringIO()):
+            workflow.log_prompt(self.root, self.tasks, "fardin", "Codex", "Update the records.", "The records were updated.", "Current command", kind="implementation")
+        entries = workflow.log_entries(self.root / workflow.AI_LOG)
+        entries[0]['number'] = 1000
+        workflow.write_ai_log(self.root, entries)
+        with contextlib.redirect_stdout(io.StringIO()):
+            key = workflow.log_prompt(self.root, self.tasks, "fardin", "Codex", "Verify the records.", "Verification passed.", "Current command", kind="implementation")
+        self.assertEqual(key, "FARDIN-1001")
+        self.assertEqual([e['number'] for e in workflow.log_entries(self.root / workflow.AI_LOG)], [1000,1001])
+
+    def test_legacy_ids_remain_valid_lookup_update_and_anchor_aliases(self):
+        with contextlib.redirect_stdout(io.StringIO()):
+            public = workflow.log_prompt(self.root, self.tasks, "prachurjo", "Cursor", "Review the interface.", "Review is pending.", "Current command", kind="implementation")
+        path = self.root / workflow.AI_LOG
+        entry = workflow.log_entries(path)[0]
+        self.assertEqual(public, "PRACHURJO-001")
+        self.assertTrue(workflow.entry_matches(entry, "Prachurjo — Prompt 001"))
+        self.assertIn(f'<!-- record-id: {entry["id"]} -->', path.read_text())
+        self.assertIn(f'<a id="{entry["id"].lower()}"></a>', path.read_text())
+        self.assertIn('<a id="prachurjo-001"></a>', path.read_text())
+        self.assertEqual(self.cli("log-show", entry['id']), 0)
+        self.assertEqual(self.cli("log-update", entry['id'], "--outcome", "The UI review was recorded."), 0)
+        updated = workflow.log_entries(path)[0]
+        self.assertEqual((updated['id'],updated['number']), (entry['id'],1))
+
+    def test_duplicate_numbers_and_heading_member_mismatch_are_rejected(self):
+        with contextlib.redirect_stdout(io.StringIO()):
+            for action in ('Update the form.','Test the form.'):
+                workflow.log_prompt(self.root, self.tasks, "fardin", "Codex", action, "Review is pending.", "Current command", kind="implementation")
+        path = self.root / workflow.AI_LOG
+        entries = workflow.log_entries(path)
+        entries[1]['number'] = entries[0]['number']
+        before = path.read_bytes()
+        with self.assertRaisesRegex(workflow.WorkflowError, "Duplicate member prompt number"):
+            workflow.write_ai_log(self.root, entries)
+        self.assertEqual(path.read_bytes(), before)
+        path.write_text(path.read_text().replace('## Fardin — Prompt 001','## Saim — Prompt 001',1))
+        with self.assertRaisesRegex(workflow.WorkflowError, "heading/member mismatch"):
+            workflow.log_entries(path)
 
     def test_checklist_requires_evidence_and_preserves_task_gate(self):
         self.assertEqual(self.cli("step", "TASK-A", "a1", "--state", "done"), 1)

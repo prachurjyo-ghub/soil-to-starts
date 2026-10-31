@@ -9,7 +9,7 @@ Scope: Fardin-authorized local intake work on 30 October 2026. The mounted `/wor
 - Runtime: `prototype/public/reference/intake.js`, `intake-ui.js`, `workspace.js`, `workspace-fixes.css`; `prototype/reference/workspace-preview.html` adds the loading/noscript state.
 - Checks/onboarding: `tests/intake.test.cjs`, `prototype/package.json` (targeted test command), `prototype/README.md`.
 - Requirements/source/evidence: `docs/API_CONTRACT.md`, `docs/UI_UX_SPEC.md`, `docs/MVP_SCOPE.md`, `docs/PRODUCT_SPEC.md`, `docs/DATA_SOURCES.md`, `docs/INTAKE_QA.md`.
-- Records: `docs/tasks/INTAKE-UI.json`, `docs/tasks/G1D.json`, `docs/prompt_logs/fardin-0001.md`; regenerated `README.md`, `docs/PROGRESS.md`, `docs/PROMPT_LOG.md`. Existing changes elsewhere are preserved.
+- Records: `docs/tasks/INTAKE-UI.json`, `docs/tasks/G1D.json`, `docs/AI_USE.md`; regenerated `README.md` and `docs/PROGRESS.md`. The contribution history is now consolidated in `docs/AI_USE.md`. Existing changes elsewhere are preserved.
 
 ## Reproduce
 
@@ -59,4 +59,4 @@ Valid submission/summary, invalid live edits and preservation of the previous va
 - Genuine intake storage is `sts-farmer-intake-v1`; legacy demo storage and homepage demo preferences do not populate it. One unfinished draft and the last validated submission are retained. Browser storage is local to an origin/device, and failures are surfaced. Test-origin answers on port 3012 are browser-local QA data.
 - Independent human UI review by Prachurjo is recorded in [LOCATION_QA](LOCATION_QA.md) (2026-11-01): reporter states the mounted UI is OK. Accepted main-branch merge and scientific gates remain outstanding. No commit, push, merge or deployment was performed at the original intake handoff. Later authorized feature-branch delivery is tracked by DELIVERY-INTAKE.
 
-Command log: `P-40f8b1c01bd7` (one Fardin implementation instruction). Existing unassigned entries and discussions are unchanged.
+Command log: `FARDIN-006` (one Fardin implementation instruction). Existing unassigned entries and discussions are unchanged.

@@ -1,0 +1,248 @@
+{
+  "id": "OPS-PROMPT-STYLE",
+  "title": "Unify AI-use disclosure and implementation history in one compact record file",
+  "owner": "Fardin",
+  "collaborators": [],
+  "phase": "G0-PREP",
+  "status": "in_review",
+  "depends_on": [],
+  "updated_at": "2026-10-31T22:41:10Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Combine existing command records and disclosure context without losing information.",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "All 13 prior action records were compared field-for-field after consolidation: IDs, original UTC, member identities, tools, command kinds, refined prompts, outcomes and source references are preserved. The historical guide contribution and shared disclosure context now live in AI_USE.md.",
+      "blockers": [],
+      "depends_on": [],
+      "how": "Merge all 13 existing action entries and the historical guide contribution into AI_USE; preserve IDs, UTC, member identities, tools, prompts, outcomes, sources and shared contribution context.",
+      "files": [
+        "docs/AI_USE.md"
+      ],
+      "verification": "Compare all prior fields and disclosure context with the saved migration snapshot."
+    },
+    {
+      "id": "s02",
+      "text": "Use one canonical log with date-only display and focused reading.",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "All 56 workflow/PR tests pass, including single-file growth, member filtering, safe outcome updates, contribution context preservation, Bangladesh date rollover, original UTC retention and malformed/duplicate record checks. The logger writes only AI_USE.md.",
+      "blockers": [],
+      "depends_on": [
+        "s01"
+      ],
+      "how": "Route log and log-update to AI_USE; retain original UTC, support contribution details and read-only filtering, and reject duplicate split copies.",
+      "files": [
+        "scripts/workflow.py",
+        "tests/test_workflow.py"
+      ],
+      "verification": "Run regression coverage for date rollover, context preservation, filters, legacy data and single-file growth."
+    },
+    {
+      "id": "s03",
+      "text": "Align future instructions and source references with the combined format.",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "Future instructions, README and active task/file references point to the combined log. Split contents were verified before retiring their copies; link validation passes, and original task evidence, review approvals and states remain unchanged apart from this tooling package.",
+      "blockers": [],
+      "depends_on": [
+        "s02"
+      ],
+      "how": "Update root/Claude/workflow instructions and current file references; move prior sections before retiring their split copies and preserve existing review evidence.",
+      "files": [
+        "AGENTS.md",
+        "CLAUDE.md",
+        "docs/WORKFLOW.md",
+        "docs/INTAKE_QA.md",
+        "docs/LOCATION_QA.md"
+      ],
+      "verification": "Check relative links and task-file pointers; inspect unchanged existing review records and source evidence."
+    },
+    {
+      "id": "s04",
+      "text": "Verify the consolidation and prepare independent review.",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "The actual project passed workflow tests, record/link validation, whitespace and migration preservation checks. Application/data files remain unchanged; no commit, push, merge, deployment or new human approval was performed.",
+      "blockers": [],
+      "depends_on": [
+        "s03"
+      ],
+      "how": "Run workflow/PR tests, record/link validation, migration preservation and whitespace checks; regenerate progress without accepting scientific or human review gates.",
+      "files": [
+        "docs/tasks/OPS-PROMPT-STYLE.json",
+        "docs/PROGRESS.md",
+        "README.md"
+      ],
+      "verification": "All relevant checks pass; existing application/data sources and independent reviews remain unchanged."
+    },
+    {
+      "id": "s05",
+      "text": "Use stable member-name prompt numbers in headings and helper lookups.",
+      "owner": "Fardin",
+      "state": "done",
+      "met": true,
+      "evidence": "All 14 earlier records retain their internal IDs, dates, tools, members, prompts, outcomes and sources; visible references use stable member-number keys and retained legacy anchors. All 60 workflow/PR tests, metadata/link preservation, record validation and whitespace checks pass.",
+      "blockers": [],
+      "depends_on": [
+        "s04"
+      ],
+      "how": "Migrate existing headings, allocate independent counters, retain hidden record IDs/anchors, update references and support both public and legacy lookup keys.",
+      "files": [
+        "docs/AI_USE.md",
+        "scripts/workflow.py",
+        "tests/test_workflow.py",
+        "AGENTS.md",
+        "docs/WORKFLOW.md"
+      ],
+      "verification": "Run counter isolation, stability, scaling, alias lookup/update and malformed-heading tests, plus preservation and record/link checks."
+    }
+  ],
+  "checks": [
+    {
+      "command": "python3 -B -m unittest discover -s tests -p 'test_*.py'",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. ............................................................\n----------------------------------------------------------------------\nRan 60 tests in 0.451s\n\nOK",
+      "run_at_utc": "2026-10-31T21:04:30Z"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tests -p 'test_*.py' -v",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. n_prompt_records_preserve_meaning_and_metadata (test_workflow.WorkflowTests) ... ok\ntest_member_logs_are_separate_and_pipe_safe (test_workflow.WorkflowTests) ... ok\ntest_outcome_limits_and_blank_fields_are_rejected_without_log_writes (test_workflow.WorkflowTests) ... ok\ntest_passing_check_does_not_automatically_accept_task (test_workflow.WorkflowTests) ... ok\ntest_pending_or_self_review_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_professional_docs_have_small_entrypoint_budgets (test_workflow.WorkflowTests) ... ok\ntest_prompt_amend_updates_outcome_without_extra_entry (test_workflow.WorkflowTests) ... ok\ntest_prompt_numbers_are_per_member_and_do_not_change_on_update (test_workflow.WorkflowTests) ... ok\ntest_public_numbers_use_next_available_maximum_and_scale_past_three_digits (test_workflow.WorkflowTests) ... ok\ntest_readonly_check_detects_stale_view (test_workflow.WorkflowTests) ... ok\ntest_real_git_ancestry_proof (test_workflow.WorkflowTests) ... ok\ntest_render_is_idempotent (test_workflow.WorkflowTests) ... ok\ntest_reopening_checklist_prerequisite_reopens_done_children (test_workflow.WorkflowTests) ... ok\ntest_start_blocked_task_does_not_modify_records (test_workflow.WorkflowTests) ... ok\ntest_unchecked_acceptance_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_unknown_dependency_rejected (test_workflow.WorkflowTests) ... ok\ntest_unmerged_commit_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_verify_accepts_explicit_project_subdirectory (test_workflow.WorkflowTests) ... ok\ntest_verify_executes_check_and_records_real_failure (test_workflow.WorkflowTests) ... ok\ntest_verify_refuses_directory_outside_project (test_workflow.WorkflowTests) ... ok\n\n----------------------------------------------------------------------\nRan 60 tests in 0.482s\n\nOK",
+      "run_at_utc": "2026-10-31T22:41:10Z"
+    },
+    {
+      "command": "git diff --check",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. ",
+      "run_at_utc": "2026-10-31T22:41:10Z"
+    },
+    {
+      "command": "python3 -B scripts/workflow.py check",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. Workflow records valid: 30 tasks, 17 prompts. Recorded failed product checks remain visible; this is not a product test pass.",
+      "run_at_utc": "2026-10-31T22:41:10Z"
+    }
+  ],
+  "blockers": [],
+  "issues": [],
+  "evidence": [
+    "All 13 prior action records were compared field-for-field after consolidation: IDs, original UTC, member identities, tools, command kinds, refined prompts, outcomes and source references are preserved. The historical guide contribution and shared disclosure context now live in AI_USE.md.",
+    "All 56 workflow/PR tests pass, including single-file growth, member filtering, safe outcome updates, contribution context preservation, Bangladesh date rollover, original UTC retention and malformed/duplicate record checks. The logger writes only AI_USE.md.",
+    "Future instructions, README and active task/file references point to the combined log. Split contents were verified before retiring their copies; link validation passes, and original task evidence, review approvals and states remain unchanged apart from this tooling package.",
+    "The actual project passed workflow tests, record/link validation, whitespace and migration preservation checks. Application/data files remain unchanged; no commit, push, merge, deployment or new human approval was performed.",
+    "All 14 earlier records retain their internal IDs, dates, tools, members, prompts, outcomes and sources; visible references use stable member-number keys and retained legacy anchors. All 60 workflow/PR tests, metadata/link preservation, record validation and whitespace checks pass."
+  ],
+  "history": [
+    {
+      "at": "2026-10-31T20:19:36Z",
+      "note": "Started the explicitly authorized refinement of existing and future implementation records; discussion history is excluded."
+    },
+    {
+      "at": "2026-10-31T20:21:21Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p 'test_*.py'"
+    },
+    {
+      "at": "2026-10-31T20:21:21Z",
+      "note": "Check passed: git diff --check"
+    },
+    {
+      "at": "2026-10-31T20:21:21Z",
+      "note": "Check passed: python3 -B scripts/workflow.py check"
+    },
+    {
+      "at": "2026-10-31T20:21:21Z",
+      "note": "Implemented and verified the bounded Markdown record refinement; prior task reviews, identities and source evidence were preserved."
+    },
+    {
+      "at": "2026-10-31T20:21:21Z",
+      "from": "in_progress",
+      "to": "in_review",
+      "note": "All local checks passed; independent review and any commit or push remain separate and unperformed."
+    },
+    {
+      "at": "2026-10-31T20:45:44Z",
+      "note": "Fardin authorized combining disclosure and command information into one file without losing existing records. Earlier formatting work and checks remain in history."
+    },
+    {
+      "at": "2026-10-31T20:50:29Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p 'test_*.py'"
+    },
+    {
+      "at": "2026-10-31T20:50:29Z",
+      "note": "Check passed: git diff --check"
+    },
+    {
+      "at": "2026-10-31T20:50:29Z",
+      "note": "Check passed: python3 -B scripts/workflow.py check"
+    },
+    {
+      "at": "2026-10-31T20:50:29Z",
+      "note": "Combined AI-use and implementation information into one canonical file; existing records and reviews were verified before retiring split copies."
+    },
+    {
+      "at": "2026-10-31T20:50:29Z",
+      "from": "in_progress",
+      "to": "in_review",
+      "note": "Consolidation and local verification are complete; independent review and any commit/push remain separate."
+    },
+    {
+      "at": "2026-10-31T21:02:48Z",
+      "note": "Fardin authorized member-name and prompt-number headings. Existing record IDs are retained as hidden compatibility aliases."
+    },
+    {
+      "at": "2026-10-31T21:04:30Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p 'test_*.py'"
+    },
+    {
+      "at": "2026-10-31T21:04:30Z",
+      "note": "Check passed: git diff --check"
+    },
+    {
+      "at": "2026-10-31T21:04:30Z",
+      "note": "Check passed: python3 -B scripts/workflow.py check"
+    },
+    {
+      "at": "2026-10-31T21:04:30Z",
+      "note": "Implemented stable per-member prompt headings and lookup keys; hidden internal IDs preserve source history and existing references."
+    },
+    {
+      "at": "2026-10-31T21:04:30Z",
+      "from": "in_progress",
+      "to": "in_review",
+      "note": "Member-number IDs and compatibility checks passed; no new human approval, commit or push was performed."
+    },
+    {
+      "at": "2026-10-31T22:41:10Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p 'test_*.py' -v"
+    },
+    {
+      "at": "2026-10-31T22:41:10Z",
+      "note": "Check passed: git diff --check"
+    },
+    {
+      "at": "2026-10-31T22:41:10Z",
+      "note": "Check passed: python3 -B scripts/workflow.py check"
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": "feature/workspace-ui-review",
+  "issue": null,
+  "next_action": "A different teammate reviews the numbered contribution records and helper behavior before acceptance.",
+  "handoff": "Review AI_USE.md and focused log-show output; verify record preservation and helper behavior. Fardin coordinates any separately authorized commit/push.",
+  "scope": "mvp",
+  "purpose": "A bounded development-documentation change; no application, NASA pipeline, scientific gate, commit or push is included."
+}
