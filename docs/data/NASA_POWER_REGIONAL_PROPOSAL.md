@@ -2,10 +2,11 @@
 
 ## Recommendation
 
-The Daily Regional API is a technically suitable acquisition alternative worth
-advancing to a national-extent preflight, but it is not yet approved as a
-replacement scientific sampling method. Step 3B therefore stops before the
-full 2001–2025 collection.
+The Daily Regional API is a technically suitable acquisition alternative. A
+subsequent [national-extent PRECTOTCORR 2001 preflight](NASA_POWER_REGIONAL_PREFLIGHT_2001.md)
+showed that one annual national JSON response is operationally practical. It is
+still not approved as a replacement scientific sampling method, and the full
+2001–2025 collection remains unstarted.
 
 The regional route removes the need to invent a pre-request point-to-cell
 equivalence mapping: POWER returns a set of output coordinates for an explicit
@@ -90,8 +91,9 @@ request:
 1 area × 25 annual chunks × 4 parameters = 100 requests
 ```
 
-This is a proposal count, not completed coverage. No full Regional request was
-made in Step 3B.
+This is a proposal count, not completed coverage. Step 3C made exactly one
+annual national-area PRECTOTCORR request; the other 99 proposed requests remain
+unmade.
 
 ## Bounded smoke test
 
@@ -195,12 +197,9 @@ Before full historical acquisition:
 
 1. independently review and explicitly adopt or reject nearest-output-node
    extraction as a change to the district sampling contract;
-2. run a separately authorized national-bbox, one-parameter, one-year preflight
-   to verify actual edge coordinates, response bytes, latency and JSON/NetCDF
-   choice;
-3. require exact coordinate/date alignment again for all four parameters at
+2. require exact coordinate/date alignment again for all four parameters at
    national extent and preserve differing source metadata;
-4. define a reviewed distance/edge acceptance policy without relabeling output
+3. define a reviewed distance/edge acceptance policy without relabeling output
    nodes as unique native cells.
 
 G0 was not advanced or accepted. No crop suitability, frontend, model,

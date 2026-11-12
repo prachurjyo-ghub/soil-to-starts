@@ -49,3 +49,15 @@ Its bounded live smoke, returned-coordinate extraction proposal and limitations
 are documented in
 [`docs/data/NASA_POWER_REGIONAL_PROPOSAL.md`](../../docs/data/NASA_POWER_REGIONAL_PROPOSAL.md).
 The module has no full-execution flag.
+
+The exact Step 3C annual national preflight and network-forbidden cache check
+are:
+
+```bash
+python3 src/acquire/download_nasa_power_regional.py --check-config --plan preflight --execute-preflight
+python3 src/acquire/download_nasa_power_regional.py --check-config --plan preflight --validate-preflight-cache
+```
+
+Only the first command can make the single configured preflight request; valid
+cache causes resume without another download. See
+[`docs/data/NASA_POWER_REGIONAL_PREFLIGHT_2001.md`](../../docs/data/NASA_POWER_REGIONAL_PREFLIGHT_2001.md).

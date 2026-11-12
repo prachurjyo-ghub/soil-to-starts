@@ -16,3 +16,8 @@ diagnostics record the one-parameter and minimum 2° × 2° extent restrictions.
 Checked-in checksums and findings are in
 `data/climate/nasa_power_regional_smoke_test_manifest.json`; these files are not
 a national historical collection.
+
+The Step 3C national-extent preflight adds one verified raw JSON response and
+manifest at `raw/bgd-padded-national/PRECTOTCORR/20010101_20011231.*` within
+the same Regional cache collection. It covers raw Regional PRECTOTCORR for
+calendar year 2001 only and does not contain district-derived series.
