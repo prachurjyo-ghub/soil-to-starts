@@ -1,0 +1,75 @@
+{
+  "id": "CLIMATE-POWER-REGIONAL",
+  "title": "Evaluate NASA POWER Daily Regional acquisition",
+  "owner": "Saim",
+  "collaborators": [],
+  "phase": "INDEPENDENT-PREPARATION",
+  "status": "in_review",
+  "depends_on": [],
+  "updated_at": "2026-11-12T21:07:06Z",
+  "acceptance": [
+    {
+      "id": "a1",
+      "text": "A separate checksum-aware Regional API client, bounded four-parameter smoke test and nationwide proposal preserve original point coordinates, returned output coordinates and native-grid claims as distinct evidence without starting the full collection or changing G0.",
+      "met": true,
+      "evidence": "Verified the official Daily Regional contract and live restrictions; implemented a separate JSON regional downloader with exact-byte storage, structural validation, retries and checksum-aware resume. The bounded 2 degree by 2 degree smoke completed four successful parameter requests, each with 12 returned coordinates and three LST dates, expected units and zero fill values. Exact coordinate/date alignment was observed without claiming native-cell identity; five regional tests and all 75 repository tests passed.",
+      "state": "done",
+      "blockers": []
+    }
+  ],
+  "checks": [
+    {
+      "command": "python3 -B -m unittest tests.test_nasa_power_regional_acquire -v",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. test_checksum_resume_skips_valid_cache_and_quarantines_corruption (tests.test_nasa_power_regional_acquire.RegionalAcquireTests) ... ok\ntest_config_is_boundary_derived_and_full_plan_is_one_hundred_requests (tests.test_nasa_power_regional_acquire.RegionalAcquireTests) ... ok\ntest_cross_parameter_alignment_requires_exact_returned_coordinate_sets (tests.test_nasa_power_regional_acquire.RegionalAcquireTests) ... ok\ntest_parser_rejects_wrong_time_parameter_dates_and_spatial_coverage (tests.test_nasa_power_regional_acquire.RegionalAcquireTests) ... ok\ntest_parser_validates_coordinates_dates_units_lst_and_missing_values (tests.test_nasa_power_regional_acquire.RegionalAcquireTests) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.068s\n\nOK",
+      "run_at_utc": "2026-11-12T21:06:43Z"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tests -p 'test_*.py' -v",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. n_prompt_records_preserve_meaning_and_metadata (test_workflow.WorkflowTests) ... ok\ntest_member_logs_are_separate_and_pipe_safe (test_workflow.WorkflowTests) ... ok\ntest_outcome_limits_and_blank_fields_are_rejected_without_log_writes (test_workflow.WorkflowTests) ... ok\ntest_passing_check_does_not_automatically_accept_task (test_workflow.WorkflowTests) ... ok\ntest_pending_or_self_review_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_professional_docs_have_small_entrypoint_budgets (test_workflow.WorkflowTests) ... ok\ntest_prompt_amend_updates_outcome_without_extra_entry (test_workflow.WorkflowTests) ... ok\ntest_prompt_numbers_are_per_member_and_do_not_change_on_update (test_workflow.WorkflowTests) ... ok\ntest_public_numbers_use_next_available_maximum_and_scale_past_three_digits (test_workflow.WorkflowTests) ... ok\ntest_readonly_check_detects_stale_view (test_workflow.WorkflowTests) ... ok\ntest_real_git_ancestry_proof (test_workflow.WorkflowTests) ... ok\ntest_render_is_idempotent (test_workflow.WorkflowTests) ... ok\ntest_reopening_checklist_prerequisite_reopens_done_children (test_workflow.WorkflowTests) ... ok\ntest_start_blocked_task_does_not_modify_records (test_workflow.WorkflowTests) ... ok\ntest_unchecked_acceptance_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_unknown_dependency_rejected (test_workflow.WorkflowTests) ... ok\ntest_unmerged_commit_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_verify_accepts_explicit_project_subdirectory (test_workflow.WorkflowTests) ... ok\ntest_verify_executes_check_and_records_real_failure (test_workflow.WorkflowTests) ... ok\ntest_verify_refuses_directory_outside_project (test_workflow.WorkflowTests) ... ok\n\n----------------------------------------------------------------------\nRan 75 tests in 1.175s\n\nOK",
+      "run_at_utc": "2026-11-12T21:06:49Z"
+    }
+  ],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-11-12T20:55:14Z",
+      "from": "planned",
+      "to": "in_progress",
+      "note": "Implement and test the separate regional downloader, then run the bounded Bangladesh smoke test."
+    },
+    {
+      "at": "2026-11-12T21:06:43Z",
+      "note": "Check passed: python3 -B -m unittest tests.test_nasa_power_regional_acquire -v"
+    },
+    {
+      "at": "2026-11-12T21:06:49Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p 'test_*.py' -v"
+    },
+    {
+      "at": "2026-11-12T21:07:06Z",
+      "note": "Checklist a1: done",
+      "evidence": "Verified the official Daily Regional contract and live restrictions; implemented a separate JSON regional downloader with exact-byte storage, structural validation, retries and checksum-aware resume. The bounded 2 degree by 2 degree smoke completed four successful parameter requests, each with 12 returned coordinates and three LST dates, expected units and zero fill values. Exact coordinate/date alignment was observed without claiming native-cell identity; five regional tests and all 75 repository tests passed."
+    },
+    {
+      "at": "2026-11-12T21:07:06Z",
+      "from": "in_progress",
+      "to": "in_review",
+      "note": "An independent teammate should review the Regional output-coordinate join, nearest-node method change and national-edge preflight proposal before any full historical acquisition."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": "feature/saim-nasa-power-nationwide",
+  "issue": null,
+  "next_action": "An independent teammate should review the Regional output-coordinate join, nearest-node method change and national-edge preflight proposal before any full historical acquisition.",
+  "handoff": "Record the next consumer and reproduction steps before review."
+}

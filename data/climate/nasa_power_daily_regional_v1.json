@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0.0",
+  "collection_id": "nasa-power-daily-regional-bgd-v1",
+  "status": "regional_smoke_configuration",
+  "accessed_on": "2026-11-13",
+  "source": {
+    "name": "NASA POWER Daily Regional API",
+    "endpoint": "https://power.larc.nasa.gov/api/temporal/daily/regional",
+    "community": "AG",
+    "format": "JSON",
+    "time_standard": "LST",
+    "units_system": "metric",
+    "openapi_version": "v2.10.3",
+    "documentation_urls": [
+      "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+      "https://power.larc.nasa.gov/docs/services/api/temporal/",
+      "https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/",
+      "https://power.larc.nasa.gov/api/temporal/daily/openapi.json"
+    ]
+  },
+  "registry": {
+    "path": "data/climate/district_sampling_registry.csv",
+    "manifest_path": "data/climate/district_sampling_manifest.json",
+    "sha256": "0b31748796de714f73de135ee3e0ec77c2e44813985d790b44f2d62e18c62dfa",
+    "row_count": 64,
+    "identity_role": "Original district sampling coordinates remain unchanged extraction anchors."
+  },
+  "boundary": {
+    "path": "data/admin/bgd-adm2-source.geojson.gz",
+    "uncompressed_sha256": "7dbdb186f3b8af10417147a99859196fcd89c619fb5c6ac3804251fb6b449b6a",
+    "source_id": "BGD-ADM2-16705992",
+    "source_version": "BGD-ADM2-16705992@9469f09-local1",
+    "geometry_extent": {
+      "longitude_min": 88.00862798600008,
+      "latitude_min": 20.590609348000044,
+      "longitude_max": 92.68025738200004,
+      "latitude_max": 26.634513010000035
+    },
+    "edge_padding": {
+      "latitude_degrees": 0.5,
+      "longitude_degrees": 0.625,
+      "basis": "One full officially documented meteorological spacing is added on every edge so an output coordinate beyond each administrative edge can be requested without assuming grid origin or snapping."
+    },
+    "national_request_bbox": {
+      "longitude_min": 87.383628,
+      "latitude_min": 20.090609,
+      "longitude_max": 93.305257,
+      "latitude_max": 27.134513
+    }
+  },
+  "requested_coverage": {
+    "start": "20010101",
+    "end": "20251231",
+    "parameters": {
+      "PRECTOTCORR": {
+        "name": "Precipitation Corrected",
+        "units": "mm/day",
+        "definition": "Average MERRA-2 bias-corrected total precipitation at the surface."
+      },
+      "T2M": {
+        "name": "Temperature at 2 Meters",
+        "units": "C",
+        "definition": "Average air temperature at 2 meters."
+      },
+      "T2M_MIN": {
+        "name": "Temperature at 2 Meters Minimum",
+        "units": "C",
+        "definition": "Minimum hourly air temperature at 2 meters in the daily period."
+      },
+      "T2M_MAX": {
+        "name": "Temperature at 2 Meters Maximum",
+        "units": "C",
+        "definition": "Maximum hourly air temperature at 2 meters in the daily period."
+      }
+    },
+    "temporal": "daily",
+    "fill_value": -999
+  },
+  "regional_contract": {
+    "one_parameter_per_request": true,
+    "live_minimum_bbox_span_degrees": {
+      "latitude": 2.0,
+      "longitude": 2.0,
+      "evidence": "A 2026-11-13 live 422 response rejected the initial 0.7 by 0.8 degree smoke box and required at least a 2 degree range in both latitude and longitude; the raw error body is preserved."
+    },
+    "published_coordinate_ranges": {
+      "latitude": [
+        -90.0,
+        90.0
+      ],
+      "longitude": [
+        -180.0,
+        180.0
+      ]
+    },
+    "published_start_minimum": "19810101",
+    "published_numeric_bbox_span_limit": null,
+    "published_numeric_response_value_limit": null,
+    "formats": [
+      "ASCII",
+      "CSV",
+      "JSON",
+      "NETCDF",
+      "XARRAY"
+    ],
+    "large_region_guidance": "The v2.10.3 OpenAPI description recommends NETCDF for large regions.",
+    "usage_guidance": "Avoid excessive synchronous requests and do not request more finely than current source resolution."
+  },
+  "full_proposal": {
+    "region_partitioning": {
+      "count": 1,
+      "strategy": "one padded nationwide bounding box",
+      "reason": "A single area avoids overlapping tile edges and undocumented grid snapping. The published schema has no numeric maximum bbox span; live full-period suitability remains unverified.",
+      "areas": [
+        {
+          "area_id": "bgd-padded-national",
+          "bbox": {
+            "longitude_min": 87.383628,
+            "latitude_min": 20.090609,
+            "longitude_max": 93.305257,
+            "latitude_max": 27.134513
+          }
+        }
+      ]
+    },
+    "date_chunking": "calendar_year",
+    "year_chunks": 25,
+    "parameters_per_request": 1,
+    "parameter_count": 4,
+    "configured_request_count": 100,
+    "execution_status": "proposal_only_full_collection_not_authorized_in_step_3b"
+  },
+  "smoke_test": {
+    "area_id": "central-bangladesh-smoke",
+    "bbox": {
+      "longitude_min": 89.5,
+      "latitude_min": 22.75,
+      "longitude_max": 91.5,
+      "latitude_max": 24.75
+    },
+    "bbox_basis": "The minimum 2 by 2 degree span required by a preserved live 422 response, positioned over central Bangladesh and containing the unchanged Dhaka registry point. It is an API/parser test area, not a new district sampling coordinate or national partition.",
+    "start": "20010101",
+    "end": "20010103",
+    "parameters": [
+      "PRECTOTCORR",
+      "T2M",
+      "T2M_MIN",
+      "T2M_MAX"
+    ],
+    "successful_data_request_cap": 4,
+    "multi_parameter_probe": "Optional diagnostic runs first. A 422 rejection permits the four single-parameter requests; an unexpected 200 counts toward the cap and stops the smoke test before further data requests."
+  },
+  "network_policy": {
+    "concurrency": 1,
+    "inter_request_delay_seconds": 1.0,
+    "timeout_seconds": 90.0,
+    "max_attempts": 3,
+    "backoff_initial_seconds": 2.0,
+    "backoff_max_seconds": 60.0,
+    "backoff_jitter_seconds": 0.5,
+    "retry_http_status": [
+      408,
+      429,
+      500,
+      502,
+      503,
+      504
+    ],
+    "retry_after": "Honor Retry-After delta-seconds or HTTP-date when present."
+  },
+  "storage": {
+    "root": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1",
+    "raw_layout": "raw/{area_id}/{parameter}/{start}_{end}.json",
+    "request_manifest_layout": "raw/{area_id}/{parameter}/{start}_{end}.manifest.json",
+    "error_layout": "errors/{area_id}/{request_id}.{attempt}.{timestamp}.{body|partial|json}",
+    "raw_policy": "Preserve exact response bytes; atomically publish only structurally verified responses."
+  },
+  "identity_and_extraction": {
+    "identities": [
+      "Original district sampling coordinates are unchanged WGS84 anchors from the Step 1 registry.",
+      "Regional output coordinates are API-returned GeoJSON positions and are stored exactly as returned.",
+      "Native source-grid identity is not assigned; returned nodes are not claimed to be unique native cells."
+    ],
+    "proposed_method": "After exact cross-parameter coordinate/date alignment, choose the nearest returned output coordinate to each original district point using great-circle distance; record both coordinates, distance and deterministic distance/latitude/longitude tie-breaking.",
+    "contract_change": "Yes. This would replace a point-API request at each district anchor with nearest-returned-node extraction. The registry points remain unchanged, but the scientific sampling method requires review.",
+    "edge_rule": "Use the padded national request area and reject extraction if no returned coordinate surrounds or is acceptably near a district anchor; no acceptable-distance threshold is invented in Step 3B."
+  }
+}

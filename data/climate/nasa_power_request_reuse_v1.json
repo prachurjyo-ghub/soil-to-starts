@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "decision_id": "nasa-power-bgd-request-reuse-v1",
+  "recorded_on": "2026-11-13",
+  "status": "blocked_no_authoritative_equivalence_key",
+  "full_execution_allowed": false,
+  "collection_id": "nasa-power-daily-bgd-64-v1",
+  "configuration": {
+    "path": "data/climate/nasa_power_daily_v1.json",
+    "sha256": "0cc5fdbcbca4b3965b81de4d90a8f53eea35a06ec2627921dca1adbb59b63d8e",
+    "registry_sha256": "0b31748796de714f73de135ee3e0ec77c2e44813985d790b44f2d62e18c62dfa"
+  },
+  "requested_parameters": [
+    "PRECTOTCORR",
+    "T2M",
+    "T2M_MAX",
+    "T2M_MIN"
+  ],
+  "decision": "Do not deduplicate and do not start the full collection. The reviewed official POWER materials do not expose an authoritative pre-request grid-cell identifier, grid origin/indexing rule, or parameter-complete point-to-cell mapping for these four parameters.",
+  "evidence": [
+    {
+      "source": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+      "finding": "The Daily API warns that a 0.5 degree by 0.5 degree catalog needs one request per cell, but it does not define a point-to-cell snapping/indexing algorithm or return a cell ID."
+    },
+    {
+      "source": "https://power.larc.nasa.gov/docs/methodology/",
+      "finding": "POWER says Release 9 meteorological inputs use 0.5 degree latitude by 0.625 degree longitude spatial resolution and that products retain input-data resolutions."
+    },
+    {
+      "source": "https://power.larc.nasa.gov/docs/methodology/data/sources_meteorology/",
+      "finding": "The four requested variables are meteorological products associated with MERRA-2/GEOS, but common source family/resolution alone does not establish the API's point-to-cell mapping."
+    },
+    {
+      "source": "https://power.larc.nasa.gov/api/temporal/daily/openapi.json",
+      "finding": "POWER Daily API v2.10.3 defines Geometry.coordinates as a generic array and documents no grid-cell identifier, grid index, coordinate meaning, or equivalence field."
+    },
+    {
+      "source": "data/climate/nasa_power_smoke_test_manifest.json",
+      "finding": "All four smoke responses identify API v2.10.3 and sources MERRA2/POWER. Their geometry coordinates are rounded forms of the submitted district points plus elevation; this field is preserved as response metadata and is not treated as a documented grid key."
+    }
+  ],
+  "prohibited_inferences": [
+    "Do not group points by proximity or locally rounded latitude/longitude.",
+    "Do not group responses because observed weather values happen to match.",
+    "Do not construct or label a NASA grid-cell ID.",
+    "Do not assume all parameters share a request-equivalence mapping from resolution alone."
+  ],
+  "resolution_condition": "Full execution may proceed only after official POWER evidence supplies an authoritative mapping or equivalence key covering PRECTOTCORR, T2M, T2M_MIN and T2M_MAX, and the checked-in decision and district-to-request mapping are independently reviewed and updated."
+}

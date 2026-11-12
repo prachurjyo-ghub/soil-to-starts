@@ -1,0 +1,386 @@
+[
+  {
+    "source_shape_id": "16705992B77600989823530",
+    "source_name": "Bagerhat",
+    "district_id": "bd-district-bagerhat",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B23463827258150",
+    "source_name": "Bandarban",
+    "district_id": "bd-district-bandarban",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B13795829103768",
+    "source_name": "Barguna",
+    "district_id": "bd-district-barguna",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B66943755852345",
+    "source_name": "Barisal",
+    "district_id": "bd-district-barishal",
+    "name_note": "Explicit reviewed historical spelling/transliteration alias"
+  },
+  {
+    "source_shape_id": "16705992B37732832620169",
+    "source_name": "Bhola",
+    "district_id": "bd-district-bhola",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B87441692505107",
+    "source_name": "Bogra",
+    "district_id": "bd-district-bogura",
+    "name_note": "Explicit reviewed historical spelling/transliteration alias"
+  },
+  {
+    "source_shape_id": "16705992B2831557138260",
+    "source_name": "Brahamanbaria",
+    "district_id": "bd-district-brahmanbaria",
+    "name_note": "Explicit reviewed historical spelling/transliteration alias"
+  },
+  {
+    "source_shape_id": "16705992B70711841490613",
+    "source_name": "Chandpur",
+    "district_id": "bd-district-chandpur",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B94200136889214",
+    "source_name": "Chittagong",
+    "district_id": "bd-district-chattogram",
+    "name_note": "Explicit reviewed historical spelling/transliteration alias"
+  },
+  {
+    "source_shape_id": "16705992B19758630986204",
+    "source_name": "Chuadanga",
+    "district_id": "bd-district-chuadanga",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B59490572634285",
+    "source_name": "Comilla",
+    "district_id": "bd-district-cumilla",
+    "name_note": "Explicit reviewed historical spelling/transliteration alias"
+  },
+  {
+    "source_shape_id": "16705992B34517682786426",
+    "source_name": "Cox's Bazar",
+    "district_id": "bd-district-coxs-bazar",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B90744549146712",
+    "source_name": "Dhaka",
+    "district_id": "bd-district-dhaka",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B66423446659680",
+    "source_name": "Dinajpur",
+    "district_id": "bd-district-dinajpur",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B67131385183639",
+    "source_name": "Faridpur",
+    "district_id": "bd-district-faridpur",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B83268326466345",
+    "source_name": "Feni",
+    "district_id": "bd-district-feni",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B74857221285320",
+    "source_name": "Gaibandha",
+    "district_id": "bd-district-gaibandha",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B50862305652789",
+    "source_name": "Gazipur",
+    "district_id": "bd-district-gazipur",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B87804307332289",
+    "source_name": "Gopalganj",
+    "district_id": "bd-district-gopalganj",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B7772300815487",
+    "source_name": "Habiganj",
+    "district_id": "bd-district-habiganj",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B65705561019803",
+    "source_name": "Jamalpur",
+    "district_id": "bd-district-jamalpur",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B28022870637862",
+    "source_name": "Jessore",
+    "district_id": "bd-district-jashore",
+    "name_note": "Explicit reviewed historical spelling/transliteration alias"
+  },
+  {
+    "source_shape_id": "16705992B14602656752780",
+    "source_name": "Jhalokati",
+    "district_id": "bd-district-jhalakathi",
+    "name_note": "Explicit reviewed historical spelling/transliteration alias"
+  },
+  {
+    "source_shape_id": "16705992B77509092527129",
+    "source_name": "Jhenaidah",
+    "district_id": "bd-district-jhenaidah",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B2288856744536",
+    "source_name": "Joypurhat",
+    "district_id": "bd-district-joypurhat",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B35326431749719",
+    "source_name": "Khagrachhari",
+    "district_id": "bd-district-khagrachhari",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B21968895988188",
+    "source_name": "Khulna",
+    "district_id": "bd-district-khulna",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B82604838368079",
+    "source_name": "Kishoreganj",
+    "district_id": "bd-district-kishoreganj",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B97164497642406",
+    "source_name": "Kurigram",
+    "district_id": "bd-district-kurigram",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B21124734124900",
+    "source_name": "Kushtia",
+    "district_id": "bd-district-kushtia",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B31973889793084",
+    "source_name": "Lakshmipur",
+    "district_id": "bd-district-lakshmipur",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B84214314165922",
+    "source_name": "Lalmonirhat",
+    "district_id": "bd-district-lalmonirhat",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B87985099055959",
+    "source_name": "Madaripur",
+    "district_id": "bd-district-madaripur",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B78415132034426",
+    "source_name": "Magura",
+    "district_id": "bd-district-magura",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B79131283702140",
+    "source_name": "Manikganj",
+    "district_id": "bd-district-manikganj",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B62450131352427",
+    "source_name": "Maulvibazar",
+    "district_id": "bd-district-moulvibazar",
+    "name_note": "Explicit reviewed historical spelling/transliteration alias"
+  },
+  {
+    "source_shape_id": "16705992B11914188004823",
+    "source_name": "Meherpur",
+    "district_id": "bd-district-meherpur",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B99884694518333",
+    "source_name": "Munshiganj",
+    "district_id": "bd-district-munshiganj",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B54511139091050",
+    "source_name": "Mymensingh",
+    "district_id": "bd-district-mymensingh",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B34203284467157",
+    "source_name": "Naogaon",
+    "district_id": "bd-district-naogaon",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B56503274196630",
+    "source_name": "Narail",
+    "district_id": "bd-district-narail",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B28796010313895",
+    "source_name": "Narayanganj",
+    "district_id": "bd-district-narayanganj",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B95243043657125",
+    "source_name": "Narsingdi",
+    "district_id": "bd-district-narsingdi",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B43065208682222",
+    "source_name": "Natore",
+    "district_id": "bd-district-natore",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B76725860359822",
+    "source_name": "Nawabganj",
+    "district_id": "bd-district-chapainawabganj",
+    "name_note": "Explicit reviewed historical spelling/transliteration alias"
+  },
+  {
+    "source_shape_id": "16705992B47191620994273",
+    "source_name": "Netrakona",
+    "district_id": "bd-district-netrokona",
+    "name_note": "Explicit reviewed historical spelling/transliteration alias"
+  },
+  {
+    "source_shape_id": "16705992B74406959438199",
+    "source_name": "Nilphamari",
+    "district_id": "bd-district-nilphamari",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B96773862439533",
+    "source_name": "Noakhali",
+    "district_id": "bd-district-noakhali",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B46384724638491",
+    "source_name": "Pabna",
+    "district_id": "bd-district-pabna",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B66536058617583",
+    "source_name": "Panchagarh",
+    "district_id": "bd-district-panchagarh",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B49808088196813",
+    "source_name": "Patuakhali",
+    "district_id": "bd-district-patuakhali",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B46028667424095",
+    "source_name": "Pirojpur",
+    "district_id": "bd-district-pirojpur",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B48875454234518",
+    "source_name": "Rajbari",
+    "district_id": "bd-district-rajbari",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B51815672792645",
+    "source_name": "Rajshahi",
+    "district_id": "bd-district-rajshahi",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B35610473312733",
+    "source_name": "Rangamati",
+    "district_id": "bd-district-rangamati",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B34260815515495",
+    "source_name": "Rangpur",
+    "district_id": "bd-district-rangpur",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B60176987344662",
+    "source_name": "Satkhira",
+    "district_id": "bd-district-satkhira",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B92388810566131",
+    "source_name": "Shariatpur",
+    "district_id": "bd-district-shariatpur",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B90842308963557",
+    "source_name": "Sherpur",
+    "district_id": "bd-district-sherpur",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B55394931042500",
+    "source_name": "Sirajganj",
+    "district_id": "bd-district-sirajganj",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B61059366245275",
+    "source_name": "Sunamganj",
+    "district_id": "bd-district-sunamganj",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B47932115867008",
+    "source_name": "Sylhet",
+    "district_id": "bd-district-sylhet",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B55867939933107",
+    "source_name": "Tangail",
+    "district_id": "bd-district-tangail",
+    "name_note": "Exact English display-name match"
+  },
+  {
+    "source_shape_id": "16705992B44482388014877",
+    "source_name": "Thakurgaon",
+    "district_id": "bd-district-thakurgaon",
+    "name_note": "Exact English display-name match"
+  }
+]

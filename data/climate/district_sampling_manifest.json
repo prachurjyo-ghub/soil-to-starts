@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "registry_id": "bangladesh-nationwide-district-sampling-v1",
+  "recorded_date": "2026-11-13",
+  "scope": "All 64 districts of Bangladesh; one newly generated geometry-derived point per district.",
+  "registry_path": "data/climate/district_sampling_registry.csv",
+  "registry_sha256": "0b31748796de714f73de135ee3e0ec77c2e44813985d790b44f2d62e18c62dfa",
+  "registry_bytes": 23453,
+  "row_count": 64,
+  "fields": [
+    "district_id",
+    "district_name_en",
+    "district_name_bn",
+    "latitude",
+    "longitude",
+    "coordinate_reference_system",
+    "sampling_method",
+    "boundary_source_id",
+    "boundary_version",
+    "source_url",
+    "validation_status"
+  ],
+  "coordinate_convention": {
+    "crs": "EPSG:4326 (WGS 84)",
+    "csv": "Separate latitude then longitude columns.",
+    "nasa_request": "Pass longitude and latitude to the NASA endpoint's named parameters; never infer order from CSV position.",
+    "geojson": "Geometry positions are [longitude, latitude].",
+    "decimal_places": 6
+  },
+  "sampling_method": {
+    "id": "deterministic_horizontal_scanline_point_on_surface_v1",
+    "version": "1.0.0",
+    "description": "For each polygon component, select a horizontal scanline in the vertex-free vertical interval nearest the component bbox midpoint; pair all ring intersections by odd-even parity; take the midpoint of the widest interior span; for multipolygons retain the component candidate with the widest span; round to six decimals and revalidate.",
+    "properties": [
+      "Deterministic and offline.",
+      "Uses only the pinned district geometry; no previous sampling coordinates or test interior-point fixtures are read.",
+      "Produces a strict interior point rather than a possibly exterior centroid."
+    ]
+  },
+  "boundary_source": {
+    "id": "BGD-ADM2-16705992",
+    "version": "BGD-ADM2-16705992@9469f09-local1",
+    "upstream_revision": "9469f09",
+    "metadata_url": "https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM2/",
+    "source_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGD/ADM2/geoBoundaries-BGD-ADM2_simplified.geojson",
+    "underlying_source_url": "https://data.humdata.org/dataset/administrative-boundaries-of-bangladesh-as-of-2015",
+    "providers": "Bangladesh Bureau of Statistics (BBS), OCHA ROAP",
+    "represented_year": "2020",
+    "underlying_source_title_year": "2015 (from linked dataset title; differs from represented year 2020)",
+    "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/igo/",
+    "attribution": "geoBoundaries gbOpen Bangladesh ADM2; Bangladesh Bureau of Statistics (BBS), OCHA ROAP; CC BY 3.0 IGO. Sampling points are project-generated modifications.",
+    "retrieved_at_utc": "2026-10-30T15:35:12Z",
+    "uncompressed_sha256": "7dbdb186f3b8af10417147a99859196fcd89c619fb5c6ac3804251fb6b449b6a",
+    "compressed_sha256": "a64c10d89fe83c0ea9517aa0a3f977edc8ff0597c41d867f9c006f9ad2eec611",
+    "uncompressed_bytes": 1686112,
+    "compressed_bytes": 545583
+  },
+  "district_directory": {
+    "id": "bd-national-portal-districts-2026-10-30",
+    "source_url": "https://bangladesh.gov.bd/views/district-list",
+    "checked_on": "2026-10-30",
+    "use": "Existing application district IDs plus English/Bangla display names; IDs are application-owned, not official geocodes."
+  },
+  "processing": {
+    "script": "src/acquire/build_district_sampling_registry.py",
+    "script_sha256": "fcae888107f42f996ebdccba06509662af37cd81c1c1c88e1f489338ceacb0b7",
+    "runtime": "Python 3 standard library only",
+    "network_required": false,
+    "input_geometry": "data/admin/bgd-adm2-source.geojson.gz",
+    "previous_weather_coordinates_reused": false,
+    "weather_observations_downloaded": false
+  },
+  "validation_results": {
+    "status": "passed",
+    "expected_rows": 64,
+    "actual_rows": 64,
+    "unique_district_ids": 64,
+    "missing_names": 0,
+    "missing_coordinates": 0,
+    "coordinates_in_wgs84_ranges": 64,
+    "strictly_inside_assigned_geometry": 64,
+    "contained_by_exactly_one_district": 64,
+    "source_geometry_features": 64,
+    "source_sha256_verified": true,
+    "deterministic_repeat_generation": true,
+    "independent_runtime_containment": {
+      "status": "passed",
+      "resolved_to_assigned_district": 64,
+      "checked_with": "prototype/public/reference/location.js against district-boundaries.v1.geojson",
+      "coordinate_order": "[longitude, latitude]"
+    }
+  },
+  "limitations": [
+    "Each point requests regional gridded weather context; it is not a district-wide spatial average, farm measurement, weather station or surveyed field location.",
+    "Nearby district points may resolve to the same NASA weather grid cell. No NASA grid-cell IDs are assigned or inferred here.",
+    "The simplified administrative geometry is suitable for reproducible district association, not legal/survey precision; its simplification tolerance and positional accuracy are not established in this repository.",
+    "The source metadata says represented year 2020 while the linked underlying dataset title says as of 2015; current legal alignment is not established.",
+    "A single point does not describe within-district climate variation. Later collection must retain point-level provenance and must not label it a district average."
+  ],
+  "ai_assistance": {
+    "status": "AI-assisted implementation",
+    "human_direction": "Saim set nationwide scope, prohibited reuse of previous weather coordinates, selected one verified interior point per district and limited work to the sampling registry.",
+    "assistant_role": "Codex inspected repository assets, implemented the deterministic generator/checker, generated artifacts and ran validation.",
+    "review_status": "Local mechanical validation completed; independent human source/method review remains pending.",
+    "canonical_record": "docs/AI_USE.md"
+  }
+}

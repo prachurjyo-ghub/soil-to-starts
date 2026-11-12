@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-css-tags, @next/next/no-page-custom-font -- Supplied reference styles/fonts retain their loading order; migration requires visual and font-rights review. */
 import Script from "next/script";
 import { getReferenceBody } from "@/lib/reference";
 

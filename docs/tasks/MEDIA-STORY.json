@@ -1,0 +1,119 @@
+{
+  "id": "MEDIA-STORY",
+  "title": "Draft factual story, claims checklist and presentation outline",
+  "owner": "Hla",
+  "collaborators": [
+    "Nadim"
+  ],
+  "phase": "G0",
+  "status": "planned",
+  "depends_on": [],
+  "updated_at": "2026-10-30T10:00:13Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Define the problem and audience",
+      "owner": "Hla",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Explain why rotation choices in Bangladesh matter without inventing quantified impact.",
+      "files": [
+        "media/story-outline.md"
+      ],
+      "verification": "The story names a real user/problem and distinguishes plans from shipped behavior.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Build a claims and citations checklist",
+      "owner": "Hla",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "List every numeric/scientific/feature claim and its evidence owner; mark unknowns.",
+      "files": [
+        "media/claims.md"
+      ],
+      "verification": "Saim/Maruf/Fardin can approve or reject each claim explicitly.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Draft the timed script",
+      "owner": "Hla",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Use approved behavior and placeholders for unverified claims; coordinate edit timing with Nadim.",
+      "files": [
+        "media/narration.md"
+      ],
+      "verification": "The draft fits verified event requirements when available; no unbuilt feature is narrated as live.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s04",
+      "text": "Prepare provisional narration timing and pronunciation",
+      "owner": "Hla",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Prepare pacing/pronunciation using clearly marked draft text; final narration waits for G5 claim approval.",
+      "files": [
+        "media/narration.md",
+        "agreed media storage"
+      ],
+      "verification": "No provisional script is presented as a verified final recording.",
+      "depends_on": [
+        "s03"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s05",
+      "text": "Rehearse and prepare judge Q&A",
+      "owner": "Hla",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Prepare Q&A and rehearsal notes with unknown/unbuilt claims marked; final answers follow accepted science.",
+      "files": [
+        "media/judge-qa.md"
+      ],
+      "verification": "The team can reproduce claims and answer known scientific/coverage limits.",
+      "depends_on": [
+        "s04"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-10-30T10:00:13Z",
+      "note": "Rebased planned work to the mandatory-now/future specifications. No product feature, review or delivery is marked complete."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Draft story and mark every unverified claim; final narration waits for actual app evidence.",
+  "handoff": "Preparation can run in parallel. G5 owns approved final narration, actual scientific captures, edit, subtitles and exports after G4 acceptance.",
+  "purpose": "Make the science and user benefit clear without overstating what the project has built.",
+  "scope": "mvp"
+}

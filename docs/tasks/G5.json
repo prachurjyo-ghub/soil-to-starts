@@ -1,0 +1,168 @@
+{
+  "id": "G5",
+  "title": "Release the reviewed MVP and prepare submission handoff",
+  "owner": "Fardin",
+  "collaborators": [
+    "Hla",
+    "Nadim",
+    "Saim",
+    "Maruf",
+    "Prachurjo"
+  ],
+  "phase": "G5",
+  "status": "planned",
+  "depends_on": [
+    "G4",
+    "OPS-LICENSE",
+    "MEDIA-STORY",
+    "MEDIA-STORYBOARD"
+  ],
+  "updated_at": "2026-10-30T10:00:13Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Confirm current official submission requirements",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Check portal/Local Lead rules, timezone, media lengths, deadlines and fields.",
+      "files": [
+        "docs/SUBMISSION.md"
+      ],
+      "verification": "Record exact source/date; independent guide numbers are not treated as final rules.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Audit source, rights, AI and contribution evidence",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Resolve asset/data rights and ensure all contributors/tool uses are recorded honestly.",
+      "files": [
+        "THIRD_PARTY_NOTICES.md",
+        "docs/AI_USE.md"
+      ],
+      "verification": "No missing rights, fabricated citations or private information remain in the package.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Freeze and approve scientific claims",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Saim/Maruf verify every numeric/crop statement; Fardin checks shipped status.",
+      "files": [
+        "media/claims.md",
+        "docs/VALIDATION.md"
+      ],
+      "verification": "No planned feature or illustrative data is presented as verified functionality.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s04",
+      "text": "Capture and edit approved media",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Hla locks narration, Prachurjo supplies actual app captures, Nadim edits/subtitles/exports.",
+      "files": [
+        "media/",
+        "agreed media storage"
+      ],
+      "verification": "Reviewers approve footage, consent, language, credits and format.",
+      "depends_on": [
+        "s03"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s05",
+      "text": "Test public access and reproducibility",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Open repo/demo as a stranger; follow documented setup and exact demo path.",
+      "files": [
+        "README.md",
+        "docs/SUBMISSION.md"
+      ],
+      "verification": "Access, license, source manifests, tests and fallback behavior reproduce.",
+      "depends_on": [
+        "s04",
+        "s07"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s06",
+      "text": "Record MVP release acceptance and submission handoff",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Obtain independent release approval and actual main-branch evidence; prepare accurate submission package. Submit only with current authorization.",
+      "files": [
+        "docs/SUBMISSION.md"
+      ],
+      "verification": "Accepted MVP release is separate from any unperformed NASA submission; public links and review evidence are real.",
+      "depends_on": [
+        "s05"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s07",
+      "text": "Deploy the supported pilot with persistent evidence",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "When authorized, deploy frontend/backend with persistent versioned data, refresh/failure visibility and reproducible configuration.",
+      "files": [
+        "docs/SUBMISSION.md",
+        "src/api/",
+        "prototype/"
+      ],
+      "verification": "Anonymous access works; restart does not silently lose scientific cache; unsupported coverage fails honestly.",
+      "depends_on": [
+        "s03"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-10-30T10:00:13Z",
+      "note": "Rebased planned work to the mandatory-now/future specifications. No product feature, review or delivery is marked complete."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Wait for accepted evidence and rights gates; verify portal requirements before freeze.",
+  "handoff": "Accepted G5 establishes the MVP release gate. Future tracks still need a separate activation decision; submission remains separately authorized.",
+  "purpose": "Deliver a complete, accessible, source/rights-reviewed submission matching current official requirements.",
+  "scope": "mvp"
+}

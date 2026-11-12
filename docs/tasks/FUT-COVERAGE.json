@@ -1,0 +1,90 @@
+{
+  "id": "FUT-COVERAGE",
+  "title": "Expand reviewed regions, crops and long-duration paths",
+  "owner": "Maruf",
+  "collaborators": [
+    "Saim",
+    "Fardin"
+  ],
+  "phase": "Z-FUTURE",
+  "status": "planned",
+  "depends_on": [
+    "G5"
+  ],
+  "updated_at": "2026-10-30T10:00:13Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Define exact regional calendars and management horizons",
+      "owner": "Maruf",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "After accepted G5 and explicit activation, document exact regional calendars and management horizons. Preserve MVP regression fixtures and scope only the selected extension.",
+      "files": [
+        "data/catalog/",
+        "docs/DATA_SOURCES.md",
+        "tests/"
+      ],
+      "verification": "Evidence is real; this is deferred work, not a hidden MVP requirement.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Implement source-reviewed additional catalogue and coverage",
+      "owner": "Maruf",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "After accepted G5 and explicit activation, document source-reviewed additional catalogue and coverage. Preserve MVP regression fixtures and scope only the selected extension.",
+      "files": [
+        "data/catalog/",
+        "docs/DATA_SOURCES.md",
+        "tests/"
+      ],
+      "verification": "Evidence is real; this is deferred work, not a hidden MVP requirement.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Validate new representative cases and unsupported-region behavior",
+      "owner": "Maruf",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "After accepted G5 and explicit activation, document new representative cases and unsupported-region behavior. Preserve MVP regression fixtures and scope only the selected extension.",
+      "files": [
+        "data/catalog/",
+        "docs/DATA_SOURCES.md",
+        "tests/"
+      ],
+      "verification": "Evidence is real; this is deferred work, not a hidden MVP requirement.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [],
+  "blockers": [
+    "Future only: not approved for implementation; requires explicit activation after accepted G5."
+  ],
+  "issues": [],
+  "evidence": [],
+  "history": [],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Do not start now. After accepted G5, select and explicitly authorize one bounded extension; then resolve the activation blocker.",
+  "handoff": "Do not activate other future tracks automatically. Record separate evidence, tests and review for the selected extension.",
+  "purpose": "Deferred optional extension; choose and authorize a bounded implementation after accepted MVP.",
+  "scope": "future"
+}

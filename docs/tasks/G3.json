@@ -1,0 +1,143 @@
+{
+  "id": "G3",
+  "title": "Connect actual scientific outputs to the existing frontend",
+  "owner": "Prachurjo",
+  "collaborators": [
+    "Fardin",
+    "Saim",
+    "Maruf"
+  ],
+  "phase": "G3",
+  "status": "planned",
+  "depends_on": [
+    "G2",
+    "G1D",
+    "OPS-LINT"
+  ],
+  "updated_at": "2026-10-30T10:00:13Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Wire actual field requests and responses",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Replace the scientific result path with the accepted API and preserve error/unknown states.",
+      "files": [
+        "prototype/"
+      ],
+      "verification": "Actual requests display sourced results; demo constants remain isolated.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Display the chronological future plan",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Display assessed baseline and distinct alternatives, per-plan/bundle status, common-horizon indicators, exactly three future main crops for complete plans and calendar gaps.",
+      "files": [
+        "prototype/"
+      ],
+      "verification": "Previous/current crops are not mislabeled as future recommendations.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Connect real climate arrays",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Use backend values with units, dates, missingness, scale and documented baselines.",
+      "files": [
+        "prototype/"
+      ],
+      "verification": "Every plotted number traces to a verified source and transformation.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s04",
+      "text": "Add evidence and uncertainty access",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Expose rule/source-linked why-not labels, missing-information actions, catalogue/method versions, evidence freshness and coverage; no runtime AI.",
+      "files": [
+        "prototype/"
+      ],
+      "verification": "Reviewers can trace a selected result and an excluded candidate.",
+      "depends_on": [
+        "s03"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s05",
+      "text": "Verify the end-to-end experience",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Test mobile/keyboard/EN-BN/error/loading/reduced-motion behavior and domain copy.",
+      "files": [
+        "prototype/",
+        "docs/tasks/G3.json"
+      ],
+      "verification": "Fardin/Saim/Maruf review the actual integrated build before expansion.",
+      "depends_on": [
+        "s04",
+        "s06"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s06",
+      "text": "Connect the intended-crop assessment card",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Reuse the selected field and API rule checks; preserve limitations and incomplete results.",
+      "files": [
+        "prototype/"
+      ],
+      "verification": "Card and plan do not contradict each other for the same crop/window.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-10-30T10:00:13Z",
+      "note": "Rebased planned work to the mandatory-now/future specifications. No product feature, review or delivery is marked complete."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Integrate only after G2/G1D acceptance and the lint blocker is resolved.",
+  "handoff": "Fardin/Saim/Maruf/Prachurjo proceed to G4; Hla/Nadim can capture only approved behavior.",
+  "purpose": "Let an ordinary user obtain and inspect a traceable decision in the actual app.",
+  "scope": "mvp"
+}

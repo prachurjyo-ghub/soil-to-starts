@@ -1,0 +1,520 @@
+{
+  "kind": "geometry-derived test interiors, not observed farms/city centroids",
+  "boundary_version": "BGD-ADM2-16705992@9469f09-local1",
+  "source_sha256": "7dbdb186f3b8af10417147a99859196fcd89c619fb5c6ac3804251fb6b449b6a",
+  "method": "Independent Python odd-even ring test, first interior 1/16 bounding-grid sample in a source polygon excluding holes; expected district from explicit source shape mapping.",
+  "samples": [
+    {
+      "district_id": "bd-district-bagerhat",
+      "source_shape_id": "16705992B77600989823530",
+      "point": [
+        89.84426389325007,
+        21.808881269625047
+      ]
+    },
+    {
+      "district_id": "bd-district-bandarban",
+      "source_shape_id": "16705992B23463827258150",
+      "point": [
+        92.21483033125007,
+        21.257556932187548
+      ]
+    },
+    {
+      "district_id": "bd-district-barguna",
+      "source_shape_id": "16705992B13795829103768",
+      "point": [
+        89.87764585150006,
+        22.079460999437536
+      ]
+    },
+    {
+      "district_id": "bd-district-barishal",
+      "source_shape_id": "16705992B66943755852345",
+      "point": [
+        90.54655419425004,
+        22.59331139931253
+      ]
+    },
+    {
+      "district_id": "bd-district-bhola",
+      "source_shape_id": "16705992B37732832620169",
+      "point": [
+        90.77223578337505,
+        21.860554059500053
+      ]
+    },
+    {
+      "district_id": "bd-district-bogura",
+      "source_shape_id": "16705992B87441692505107",
+      "point": [
+        89.34635235700006,
+        24.573012684312552
+      ]
+    },
+    {
+      "district_id": "bd-district-brahmanbaria",
+      "source_shape_id": "16705992B2831557138260",
+      "point": [
+        91.13915879025004,
+        23.685568504562557
+      ]
+    },
+    {
+      "district_id": "bd-district-chandpur",
+      "source_shape_id": "16705992B70711841490613",
+      "point": [
+        90.61257401050004,
+        23.017993242562564
+      ]
+    },
+    {
+      "district_id": "bd-district-chapainawabganj",
+      "source_shape_id": "16705992B76725860359822",
+      "point": [
+        88.26016181250006,
+        24.450722009500026
+      ]
+    },
+    {
+      "district_id": "bd-district-chattogram",
+      "source_shape_id": "16705992B94200136889214",
+      "point": [
+        91.87342728112509,
+        22.15161373437503
+      ]
+    },
+    {
+      "district_id": "bd-district-chuadanga",
+      "source_shape_id": "16705992B19758630986204",
+      "point": [
+        88.75440487768755,
+        23.39256352687505
+      ]
+    },
+    {
+      "district_id": "bd-district-coxs-bazar",
+      "source_shape_id": "16705992B34517682786426",
+      "point": [
+        92.32567285350005,
+        20.593422876937545
+      ]
+    },
+    {
+      "district_id": "bd-district-cumilla",
+      "source_shape_id": "16705992B59490572634285",
+      "point": [
+        91.04729587531254,
+        23.09488526306257
+      ]
+    },
+    {
+      "district_id": "bd-district-dhaka",
+      "source_shape_id": "16705992B90744549146712",
+      "point": [
+        90.16343371806258,
+        23.554783254875048
+      ]
+    },
+    {
+      "district_id": "bd-district-dinajpur",
+      "source_shape_id": "16705992B66423446659680",
+      "point": [
+        89.01593112318756,
+        25.27484071237503
+      ]
+    },
+    {
+      "district_id": "bd-district-faridpur",
+      "source_shape_id": "16705992B67131385183639",
+      "point": [
+        89.70606571225005,
+        23.242364981875056
+      ]
+    },
+    {
+      "district_id": "bd-district-feni",
+      "source_shape_id": "16705992B83268326466345",
+      "point": [
+        91.45385593987504,
+        22.758194157812557
+      ]
+    },
+    {
+      "district_id": "bd-district-gaibandha",
+      "source_shape_id": "16705992B74857221285320",
+      "point": [
+        89.36278968531255,
+        25.076113741437556
+      ]
+    },
+    {
+      "district_id": "bd-district-gazipur",
+      "source_shape_id": "16705992B50862305652789",
+      "point": [
+        90.49449913675002,
+        23.87487929050003
+      ]
+    },
+    {
+      "district_id": "bd-district-gopalganj",
+      "source_shape_id": "16705992B87804307332289",
+      "point": [
+        89.90819373800005,
+        22.884646640437573
+      ]
+    },
+    {
+      "district_id": "bd-district-habiganj",
+      "source_shape_id": "16705992B7772300815487",
+      "point": [
+        91.31178408387505,
+        24.020363099812545
+      ]
+    },
+    {
+      "district_id": "bd-district-jamalpur",
+      "source_shape_id": "16705992B65705561019803",
+      "point": [
+        89.77933542550007,
+        24.62080432706256
+      ]
+    },
+    {
+      "district_id": "bd-district-jashore",
+      "source_shape_id": "16705992B28022870637862",
+      "point": [
+        89.15902125943755,
+        22.831480757500064
+      ]
+    },
+    {
+      "district_id": "bd-district-jhalakathi",
+      "source_shape_id": "16705992B14602656752780",
+      "point": [
+        90.06474086425007,
+        22.36501327618755
+      ]
+    },
+    {
+      "district_id": "bd-district-jhenaidah",
+      "source_shape_id": "16705992B77509092527129",
+      "point": [
+        88.73877047081254,
+        23.25287444037506
+      ]
+    },
+    {
+      "district_id": "bd-district-joypurhat",
+      "source_shape_id": "16705992B2288856744536",
+      "point": [
+        89.00970078775008,
+        24.87566160093754
+      ]
+    },
+    {
+      "district_id": "bd-district-khagrachhari",
+      "source_shape_id": "16705992B35326431749719",
+      "point": [
+        91.88782894850007,
+        22.75299852618753
+      ]
+    },
+    {
+      "district_id": "bd-district-khulna",
+      "source_shape_id": "16705992B21968895988188",
+      "point": [
+        89.33382933162507,
+        21.697656785812573
+      ]
+    },
+    {
+      "district_id": "bd-district-kishoreganj",
+      "source_shape_id": "16705992B82604838368079",
+      "point": [
+        90.95740940731255,
+        24.068880959125075
+      ]
+    },
+    {
+      "district_id": "bd-district-kurigram",
+      "source_shape_id": "16705992B97164497642406",
+      "point": [
+        89.51480371825008,
+        26.01183522087505
+      ]
+    },
+    {
+      "district_id": "bd-district-kushtia",
+      "source_shape_id": "16705992B21124734124900",
+      "point": [
+        89.02813146300005,
+        23.723538284125034
+      ]
+    },
+    {
+      "district_id": "bd-district-lakshmipur",
+      "source_shape_id": "16705992B31973889793084",
+      "point": [
+        90.92993252056255,
+        22.50097062381254
+      ]
+    },
+    {
+      "district_id": "bd-district-lalmonirhat",
+      "source_shape_id": "16705992B84214314165922",
+      "point": [
+        89.41447180075006,
+        26.07804716656254
+      ]
+    },
+    {
+      "district_id": "bd-district-madaripur",
+      "source_shape_id": "16705992B87985099055959",
+      "point": [
+        90.24990936250008,
+        22.997675890937554
+      ]
+    },
+    {
+      "district_id": "bd-district-magura",
+      "source_shape_id": "16705992B78415132034426",
+      "point": [
+        89.39453095262508,
+        23.283739819562552
+      ]
+    },
+    {
+      "district_id": "bd-district-manikganj",
+      "source_shape_id": "16705992B79131283702140",
+      "point": [
+        89.93407113987506,
+        23.66001051981253
+      ]
+    },
+    {
+      "district_id": "bd-district-meherpur",
+      "source_shape_id": "16705992B11914188004823",
+      "point": [
+        88.59686286775008,
+        23.623880715000038
+      ]
+    },
+    {
+      "district_id": "bd-district-moulvibazar",
+      "source_shape_id": "16705992B62450131352427",
+      "point": [
+        91.64502898493754,
+        24.18033563487506
+      ]
+    },
+    {
+      "district_id": "bd-district-munshiganj",
+      "source_shape_id": "16705992B99884694518333",
+      "point": [
+        90.53814855668756,
+        23.39775584162504
+      ]
+    },
+    {
+      "district_id": "bd-district-mymensingh",
+      "source_shape_id": "16705992B54511139091050",
+      "point": [
+        90.26233217475004,
+        24.30595509993754
+      ]
+    },
+    {
+      "district_id": "bd-district-naogaon",
+      "source_shape_id": "16705992B34203284467157",
+      "point": [
+        89.00682751962503,
+        24.575857724875043
+      ]
+    },
+    {
+      "district_id": "bd-district-narail",
+      "source_shape_id": "16705992B56503274196630",
+      "point": [
+        89.61907485537505,
+        22.965143358000052
+      ]
+    },
+    {
+      "district_id": "bd-district-narayanganj",
+      "source_shape_id": "16705992B28796010313895",
+      "point": [
+        90.44855524818756,
+        23.556560346562556
+      ]
+    },
+    {
+      "district_id": "bd-district-narsingdi",
+      "source_shape_id": "16705992B95243043657125",
+      "point": [
+        90.74659135806255,
+        23.79338211487507
+      ]
+    },
+    {
+      "district_id": "bd-district-natore",
+      "source_shape_id": "16705992B43065208682222",
+      "point": [
+        88.90863320500009,
+        24.13594054331255
+      ]
+    },
+    {
+      "district_id": "bd-district-netrokona",
+      "source_shape_id": "16705992B47191620994273",
+      "point": [
+        90.77368331250005,
+        24.614367255375036
+      ]
+    },
+    {
+      "district_id": "bd-district-nilphamari",
+      "source_shape_id": "16705992B74406959438199",
+      "point": [
+        88.91276007331254,
+        25.76732878487507
+      ]
+    },
+    {
+      "district_id": "bd-district-noakhali",
+      "source_shape_id": "16705992B96773862439533",
+      "point": [
+        91.05763876200004,
+        22.03292883437504
+      ]
+    },
+    {
+      "district_id": "bd-district-pabna",
+      "source_shape_id": "16705992B46384724638491",
+      "point": [
+        89.50284513193756,
+        23.842219314750036
+      ]
+    },
+    {
+      "district_id": "bd-district-panchagarh",
+      "source_shape_id": "16705992B66536058617583",
+      "point": [
+        88.64894210568755,
+        26.045609517812554
+      ]
+    },
+    {
+      "district_id": "bd-district-patuakhali",
+      "source_shape_id": "16705992B49808088196813",
+      "point": [
+        90.47394954037505,
+        21.769988732875046
+      ]
+    },
+    {
+      "district_id": "bd-district-pirojpur",
+      "source_shape_id": "16705992B46028667424095",
+      "point": [
+        89.88933562600005,
+        22.158630499750046
+      ]
+    },
+    {
+      "district_id": "bd-district-rajbari",
+      "source_shape_id": "16705992B48875454234518",
+      "point": [
+        89.54610803412504,
+        23.581869075937576
+      ]
+    },
+    {
+      "district_id": "bd-district-rajshahi",
+      "source_shape_id": "16705992B51815672792645",
+      "point": [
+        88.79567609375006,
+        24.14975068306254
+      ]
+    },
+    {
+      "district_id": "bd-district-rangamati",
+      "source_shape_id": "16705992B35610473312733",
+      "point": [
+        92.59005490543757,
+        21.969930366875037
+      ]
+    },
+    {
+      "district_id": "bd-district-rangpur",
+      "source_shape_id": "16705992B34260815515495",
+      "point": [
+        89.23310563100006,
+        25.340943979062576
+      ]
+    },
+    {
+      "district_id": "bd-district-satkhira",
+      "source_shape_id": "16705992B60176987344662",
+      "point": [
+        89.21340102225008,
+        21.655695781437572
+      ]
+    },
+    {
+      "district_id": "bd-district-shariatpur",
+      "source_shape_id": "16705992B92388810566131",
+      "point": [
+        90.45339526025008,
+        23.004178360812574
+      ]
+    },
+    {
+      "district_id": "bd-district-sherpur",
+      "source_shape_id": "16705992B90842308963557",
+      "point": [
+        90.06577360056255,
+        24.90742871425007
+      ]
+    },
+    {
+      "district_id": "bd-district-sirajganj",
+      "source_shape_id": "16705992B55394931042500",
+      "point": [
+        89.71657359781256,
+        24.061668478437568
+      ]
+    },
+    {
+      "district_id": "bd-district-sunamganj",
+      "source_shape_id": "16705992B61059366245275",
+      "point": [
+        91.23048325850007,
+        24.60886285168757
+      ]
+    },
+    {
+      "district_id": "bd-district-sylhet",
+      "source_shape_id": "16705992B47932115867008",
+      "point": [
+        91.68564683750007,
+        24.630547455500036
+      ]
+    },
+    {
+      "district_id": "bd-district-tangail",
+      "source_shape_id": "16705992B55867939933107",
+      "point": [
+        89.80495074437503,
+        24.015111191062527
+      ]
+    },
+    {
+      "district_id": "bd-district-thakurgaon",
+      "source_shape_id": "16705992B44482388014877",
+      "point": [
+        88.40120361406255,
+        25.701335327125037
+      ]
+    }
+  ]
+}

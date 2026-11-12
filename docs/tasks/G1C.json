@@ -1,0 +1,121 @@
+{
+  "id": "G1C",
+  "title": "Implement API validation and schema/test foundation",
+  "owner": "Fardin",
+  "collaborators": [],
+  "phase": "G1",
+  "status": "planned",
+  "depends_on": [
+    "G0-CONTRACT"
+  ],
+  "updated_at": "2026-10-30T10:00:13Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Create the backend dependency/test foundation",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Choose minimal FastAPI/Pydantic dependencies in an owned task after contract agreement.",
+      "files": [
+        "src/api/",
+        "backend dependency manifest",
+        "tests/"
+      ],
+      "verification": "Actual install/run/test commands exist and reproduce in a clean environment.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Implement typed field input validation",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Validate dates, coordinates, units, equal previous/current IDs, baseline/fallow, common horizon, water and preset; preserve optional unknowns.",
+      "files": [
+        "src/api/"
+      ],
+      "verification": "Invalid/inconsistent inputs return explicit structured errors.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Implement status and provenance schemas",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Implement bundle/plan statuses, check outcomes and source/version/fingerprint schemas; complete plan inside incomplete bundle is representable.",
+      "files": [
+        "src/api/"
+      ],
+      "verification": "No endpoint success invents missing evidence, second alternatives or crop slots.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s04",
+      "text": "Add health and local-evidence service boundaries",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Keep downloads in acquisition and read prepared evidence during requests.",
+      "files": [
+        "src/api/",
+        "tests/"
+      ],
+      "verification": "A missing cache/source returns unavailable rather than network-dependent success.",
+      "depends_on": [
+        "s03"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s05",
+      "text": "Review the frontend contract",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Prachurjo checks errors/payload usability; Fardin records actual checks and merge.",
+      "files": [
+        "docs/API_CONTRACT.md"
+      ],
+      "verification": "Consumers agree the versioned schema before integration.",
+      "depends_on": [
+        "s04"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-10-30T10:00:13Z",
+      "note": "Rebased planned work to the mandatory-now/future specifications. No product feature, review or delivery is marked complete."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Implement schema/API validation after G0 acceptance; coordinate independent tooling work.",
+  "handoff": "Fardin integrates the service in G2; Prachurjo consumes the agreed adapter contract in G1D/G3.",
+  "purpose": "Give compute and frontend a stable validated transport contract with honest failure states.",
+  "scope": "mvp"
+}

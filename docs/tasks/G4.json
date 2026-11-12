@@ -1,0 +1,173 @@
+{
+  "id": "G4",
+  "title": "Validate historical comparison, uncertainty and offline science",
+  "owner": "Fardin",
+  "collaborators": [
+    "Saim",
+    "Maruf",
+    "Prachurjo"
+  ],
+  "phase": "G4",
+  "status": "planned",
+  "depends_on": [
+    "G3",
+    "G3-STORY",
+    "G3-REPORT"
+  ],
+  "updated_at": "2026-10-30T10:06:38Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Choose a documented historical stress comparison",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Predeclare one historical dry/wet/hot selection and periods using G1A evidence; freeze field/history/water/priority and baseline horizon. Define calendar-day/cross-year alignment and leap-day handling.",
+      "files": [
+        "src/compute/",
+        "docs/METHODOLOGY.md"
+      ],
+      "verification": "Period, assumptions, units and missingness are explicit; no forecast precision is claimed.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Compare decisions deterministically",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Implement deterministic historical replay and API response over the same G2 engine; report changed checks and ranks, not future weather/yield.",
+      "files": [
+        "src/compute/",
+        "tests/"
+      ],
+      "verification": "Only intended climate inputs change; scenario/source identities and missingness are reproducible.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Validate the supported pilot and coverage boundaries",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Review actual pilot inputs/outputs and local applicability; treat other Barind/Haor/coastal contexts as unsupported until separately evidenced.",
+      "files": [
+        "docs/VALIDATION.md"
+      ],
+      "verification": "No requirement to fabricate three validated regions for the first release.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s04",
+      "text": "Enforce offline scientific replay",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Use verified local fixtures and test that OFFLINE=1 blocks scientific network requests.",
+      "files": [
+        "src/acquire/",
+        "src/api/",
+        "demo_fixtures/",
+        "tests/"
+      ],
+      "verification": "Missing coverage is unavailable; cache badge and source evidence remain truthful.",
+      "depends_on": [
+        "s03"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s05",
+      "text": "Assess robustness and sensitivity",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Test missing data, threshold/weight sensitivity, deterministic reruns and rank stability.",
+      "files": [
+        "tests/",
+        "docs/VALIDATION.md"
+      ],
+      "verification": "Limits/effect sizes/sample counts accompany claims.",
+      "depends_on": [
+        "s04"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s06",
+      "text": "Rehearse the actual offline demo",
+      "owner": "Fardin",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Test browser assets/fonts/maps separately and record the verified scientific flow.",
+      "files": [
+        "docs/VALIDATION.md",
+        "media/"
+      ],
+      "verification": "Only demonstrated offline behavior is claimed; fallback recording is available.",
+      "depends_on": [
+        "s05",
+        "s07"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s07",
+      "text": "Connect and verify the single historical replay control",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "Expose the reviewed replay preset with fixed field/history/priority, period labels and changed checks.",
+      "files": [
+        "prototype/",
+        "tests/"
+      ],
+      "verification": "UI and API replay agree; no synthetic future-weather slider in MVP.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-10-30T10:00:13Z",
+      "note": "Rebased planned work to the mandatory-now/future specifications. No product feature, review or delivery is marked complete."
+    },
+    {
+      "at": "2026-10-30T10:06:38Z",
+      "from": "planned",
+      "to": "planned",
+      "note": "Wait for accepted G3, G3-STORY and G3-REPORT; then implement and validate the historical replay, pilot limits and offline science."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Wait for accepted G3, G3-STORY and G3-REPORT; then implement and validate the historical replay, pilot limits and offline science.",
+  "handoff": "Hla/Nadim finalize factual media in G5 while Fardin coordinates freeze and source review.",
+  "purpose": "Demonstrate reproducibility, uncertainty, regional limits and offline science before making public claims.",
+  "scope": "mvp"
+}

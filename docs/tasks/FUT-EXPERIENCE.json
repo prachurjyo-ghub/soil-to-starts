@@ -1,0 +1,91 @@
+{
+  "id": "FUT-EXPERIENCE",
+  "title": "Extend motion, voice, saved plans and browser offline UX",
+  "owner": "Prachurjo",
+  "collaborators": [
+    "Nadim",
+    "Hla",
+    "Fardin"
+  ],
+  "phase": "Z-FUTURE",
+  "status": "planned",
+  "depends_on": [
+    "G5"
+  ],
+  "updated_at": "2026-10-30T10:00:13Z",
+  "acceptance": [
+    {
+      "id": "s01",
+      "text": "Define one bounded user need and device/accessibility budget",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "After accepted G5 and explicit activation, document one bounded user need and device/accessibility budget. Preserve MVP regression fixtures and scope only the selected extension.",
+      "files": [
+        "prototype/",
+        "tests/",
+        "docs/UI_UX_SPEC.md"
+      ],
+      "verification": "Evidence is real; this is deferred work, not a hidden MVP requirement.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "s02",
+      "text": "Implement selected rich-story, voice, calendar, saving or PWA extension",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "After accepted G5 and explicit activation, document selected rich-story, voice, calendar, saving or PWA extension. Preserve MVP regression fixtures and scope only the selected extension.",
+      "files": [
+        "prototype/",
+        "tests/",
+        "docs/UI_UX_SPEC.md"
+      ],
+      "verification": "Evidence is real; this is deferred work, not a hidden MVP requirement.",
+      "depends_on": [
+        "s01"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "s03",
+      "text": "Validate real phone/reduced-motion/offline and regression evidence",
+      "owner": "Prachurjo",
+      "state": "planned",
+      "met": false,
+      "evidence": "",
+      "how": "After accepted G5 and explicit activation, document real phone/reduced-motion/offline and regression evidence. Preserve MVP regression fixtures and scope only the selected extension.",
+      "files": [
+        "prototype/",
+        "tests/",
+        "docs/UI_UX_SPEC.md"
+      ],
+      "verification": "Evidence is real; this is deferred work, not a hidden MVP requirement.",
+      "depends_on": [
+        "s02"
+      ],
+      "blockers": []
+    }
+  ],
+  "checks": [],
+  "blockers": [
+    "Future only: not approved for implementation; requires explicit activation after accepted G5."
+  ],
+  "issues": [],
+  "evidence": [],
+  "history": [],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Do not start now. After accepted G5, select and explicitly authorize one bounded extension; then resolve the activation blocker.",
+  "handoff": "Do not activate other future tracks automatically. Record separate evidence, tests and review for the selected extension.",
+  "purpose": "Deferred optional extension; choose and authorize a bounded implementation after accepted MVP.",
+  "scope": "future"
+}

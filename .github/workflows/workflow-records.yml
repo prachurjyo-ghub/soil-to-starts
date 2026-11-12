@@ -1,0 +1,42 @@
+name: Workflow records
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited, ready_for_review]
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  records:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Test development helpers
+        run: python3 -B -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Validate records and generated views
+        run: python3 scripts/workflow.py check
+      - name: Validate contribution declaration and observed identity
+        run: python3 scripts/verify_pr.py
+  frontend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: prototype
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: prototype/package-lock.json
+      - run: npm ci
+      - run: npm audit --audit-level=high
+      - run: npm run lint -- --no-cache
+      - run: npm run build -- --webpack
