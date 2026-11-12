@@ -661,4 +661,66 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Next action / owner:** Saim or an independent reviewer should obtain official parameter-complete grid-equivalence guidance, update and review the checksum-bound mapping, then run the documented resume command.
 
 **Task / source:** CLIMATE-POWER-FULL; Current Saim Step 3 implementation instruction
+
+## Saim — Prompt 004
+
+<a id="saim-004"></a>
+<a id="p-8bf55dc1ea5a"></a>
+<!-- record-id: P-8bf55dc1ea5a -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-12T20:42:28Z -->
+
+**Member:** saim
+
+**Tool:** Codex
+
+**Type:** commit
+
+**Refined implementation prompt (AI-written):** Commit the completed nationwide NASA POWER sampling and acquisition work on a new, relevant feature branch.
+
+**Purpose / AI contribution:** Create a reviewable branch containing Saim Steps 1–3, their evidence, tests and safety gate without changing G0 or merging.
+
+**Human contribution:** Saim explicitly authorized creating a new branch and committing the completed NASA/climate work with a relevant message.
+
+**Changed files:** Nationwide climate registry, NASA POWER configuration/downloader, smoke and Step 3 plan evidence, tests, documentation and workflow records across the 22-file reviewed scope.
+
+**Actual outcome:** Created feature/saim-nasa-power-nationwide and committed the reviewed 22-file scope as 77b623a798b28466897b807be6da4d753d6b29bb with message feat(climate): add nationwide NASA POWER acquisition workflow. The preserved package-lock stash was not changed; no merge or review acceptance was claimed.
+
+**Review / limitations:** The task remains scientifically blocked on an authoritative POWER equivalence mapping, and independent review remains pending.
+
+**Next action / owner:** Push the new commit to the same-named origin branch once repository write permission is available.
+
+**Task / source:** CLIMATE-POWER-FULL; Current Saim branch, commit and push instruction
+
+## Saim — Prompt 005
+
+<a id="saim-005"></a>
+<a id="p-2233c041e295"></a>
+<!-- record-id: P-2233c041e295 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-12T20:42:28Z -->
+
+**Member:** saim
+
+**Tool:** Codex
+
+**Type:** push
+
+**Refined implementation prompt (AI-written):** Push the committed nationwide NASA POWER work to the new feature branch on origin.
+
+**Purpose / AI contribution:** Publish the reviewable climate branch without merging, deploying or changing G0.
+
+**Human contribution:** Saim explicitly authorized pushing the newly committed branch.
+
+**Actual outcome:** The push to origin/feature/saim-nasa-power-nationwide was attempted but GitHub returned HTTP 403: the active saim1sh credential lacks write permission to prachurjyo-ghub/soil-to-starts. No remote branch was created or falsely reported as delivered.
+
+**Review / limitations:** A repository owner must grant saim1sh write access or provide an authorized writable remote; the local commit remains intact and ready to push.
+
+**Next action / owner:** After access is granted, rerun git push -u origin feature/saim-nasa-power-nationwide and verify the remote SHA.
+
+**Task / source:** CLIMATE-POWER-FULL; Current Saim branch, commit and push instruction
 <!-- workflow:ai-records:end -->

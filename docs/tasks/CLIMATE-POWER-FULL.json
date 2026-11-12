@@ -83,7 +83,7 @@
     "evidence": ""
   },
   "merge_ref": null,
-  "branch": null,
+  "branch": "feature/saim-nasa-power-nationwide",
   "issue": null,
   "next_action": "Saim or an independent reviewer must obtain official parameter-complete grid-equivalence guidance, update the checksum-bound mapping, then rerun the guarded resume command.",
   "handoff": "Record the next consumer and reproduction steps before review."
