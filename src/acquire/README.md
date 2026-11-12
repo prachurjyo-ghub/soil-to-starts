@@ -37,3 +37,15 @@ python3 src/acquire/download_nasa_power.py --check-config --scope full --write-r
 ```
 
 `OFFLINE=1` blocks all live acquisition.
+
+The separate Daily Regional Step 3B client does not alter the blocked Point
+execution gate:
+
+```bash
+python3 src/acquire/download_nasa_power_regional.py --check-config --plan smoke --probe-multi-parameter
+```
+
+Its bounded live smoke, returned-coordinate extraction proposal and limitations
+are documented in
+[`docs/data/NASA_POWER_REGIONAL_PROPOSAL.md`](../../docs/data/NASA_POWER_REGIONAL_PROPOSAL.md).
+The module has no full-execution flag.

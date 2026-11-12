@@ -1,0 +1,878 @@
+{
+  "collection_id": "nasa-power-daily-regional-bgd-v1",
+  "configuration_fingerprint": "4e35cd005f4a4de7bc927ffa53b756faa6685ace21733525fb7088b689a7676b",
+  "cross_parameter_alignment": {
+    "combination_status": "safe_to_join_by_exact_returned_coordinate_and_date_for_smoke_analysis_only",
+    "coordinate_sets_identical": true,
+    "date_sets_identical": true,
+    "district_mapping_diagnostics": [
+      {
+        "district_id": "bd-district-barishal",
+        "great_circle_distance_km": 40.500284,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 23.0,
+          "longitude": 90.625
+        },
+        "original_sampling_coordinate": {
+          "latitude": 22.762154,
+          "longitude": 90.325595
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-brahmanbaria",
+        "great_circle_distance_km": 14.64195,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 24.0,
+          "longitude": 91.25
+        },
+        "original_sampling_coordinate": {
+          "latitude": 23.958462,
+          "longitude": 91.113242
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-chandpur",
+        "great_circle_distance_km": 35.021836,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 23.0,
+          "longitude": 90.625
+        },
+        "original_sampling_coordinate": {
+          "latitude": 23.243736,
+          "longitude": 90.841902
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-cumilla",
+        "great_circle_distance_km": 19.700893,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 23.5,
+          "longitude": 91.25
+        },
+        "original_sampling_coordinate": {
+          "latitude": 23.421661,
+          "longitude": 91.076765
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-dhaka",
+        "great_circle_distance_km": 36.483397,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 24.0,
+          "longitude": 90.625
+        },
+        "original_sampling_coordinate": {
+          "latitude": 23.781767,
+          "longitude": 90.357039
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-faridpur",
+        "great_circle_distance_km": 13.630386,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 23.5,
+          "longitude": 90.0
+        },
+        "original_sampling_coordinate": {
+          "latitude": 23.466354,
+          "longitude": 89.871483
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-feni",
+        "great_circle_distance_km": 15.706132,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 23.0,
+          "longitude": 91.25
+        },
+        "original_sampling_coordinate": {
+          "latitude": 23.020629,
+          "longitude": 91.401813
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-gazipur",
+        "great_circle_distance_km": 24.363057,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 24.0,
+          "longitude": 90.625
+        },
+        "original_sampling_coordinate": {
+          "latitude": 24.092664,
+          "longitude": 90.40759
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-gopalganj",
+        "great_circle_distance_km": 18.452815,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 23.0,
+          "longitude": 90.0
+        },
+        "original_sampling_coordinate": {
+          "latitude": 23.107118,
+          "longitude": 89.862251
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-habiganj",
+        "great_circle_distance_km": 26.135236,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 24.5,
+          "longitude": 91.25
+        },
+        "original_sampling_coordinate": {
+          "latitude": 24.333745,
+          "longitude": 91.43246
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-kishoreganj",
+        "great_circle_distance_km": 35.672399,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 24.5,
+          "longitude": 90.625
+        },
+        "original_sampling_coordinate": {
+          "latitude": 24.336372,
+          "longitude": 90.92805
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-lakshmipur",
+        "great_circle_distance_km": 28.726558,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 23.0,
+          "longitude": 90.625
+        },
+        "original_sampling_coordinate": {
+          "latitude": 22.87072,
+          "longitude": 90.86787
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-madaripur",
+        "great_circle_distance_km": 29.064795,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 23.0,
+          "longitude": 90.0
+        },
+        "original_sampling_coordinate": {
+          "latitude": 23.230714,
+          "longitude": 90.13358
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-manikganj",
+        "great_circle_distance_km": 19.229527,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 24.0,
+          "longitude": 90.0
+        },
+        "original_sampling_coordinate": {
+          "latitude": 23.83554,
+          "longitude": 89.941503
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-munshiganj",
+        "great_circle_distance_km": 19.300859,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 23.5,
+          "longitude": 90.625
+        },
+        "original_sampling_coordinate": {
+          "latitude": 23.527101,
+          "longitude": 90.438027
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-mymensingh",
+        "great_circle_distance_km": 32.447598,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 24.5,
+          "longitude": 90.625
+        },
+        "original_sampling_coordinate": {
+          "latitude": 24.722173,
+          "longitude": 90.416911
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-narail",
+        "great_circle_distance_km": 50.405315,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 23.0,
+          "longitude": 90.0
+        },
+        "original_sampling_coordinate": {
+          "latitude": 23.132161,
+          "longitude": 89.52871
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-narayanganj",
+        "great_circle_distance_km": 24.078394,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 23.5,
+          "longitude": 90.625
+        },
+        "original_sampling_coordinate": {
+          "latitude": 23.716371,
+          "longitude": 90.615613
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-narsingdi",
+        "great_circle_distance_km": 18.155861,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 24.0,
+          "longitude": 90.625
+        },
+        "original_sampling_coordinate": {
+          "latitude": 24.005767,
+          "longitude": 90.803624
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-noakhali",
+        "great_circle_distance_km": 26.589407,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 23.0,
+          "longitude": 91.25
+        },
+        "original_sampling_coordinate": {
+          "latitude": 22.78775,
+          "longitude": 91.130445
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-rajbari",
+        "great_circle_distance_km": 50.510907,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 23.5,
+          "longitude": 90.0
+        },
+        "original_sampling_coordinate": {
+          "latitude": 23.735234,
+          "longitude": 89.575871
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-shariatpur",
+        "great_circle_distance_km": 32.801693,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 23.0,
+          "longitude": 90.625
+        },
+        "original_sampling_coordinate": {
+          "latitude": 23.228675,
+          "longitude": 90.422379
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-sirajganj",
+        "great_circle_distance_km": 49.552784,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 24.5,
+          "longitude": 90.0
+        },
+        "original_sampling_coordinate": {
+          "latitude": 24.398078,
+          "longitude": 89.52344
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      },
+      {
+        "district_id": "bd-district-tangail",
+        "great_circle_distance_km": 13.231669,
+        "method_status": "diagnostic_only_not_adopted",
+        "nearest_returned_output_coordinate": {
+          "latitude": 24.5,
+          "longitude": 90.0
+        },
+        "original_sampling_coordinate": {
+          "latitude": 24.38102,
+          "longitude": 90.002082
+        },
+        "tie_break": "distance, then returned latitude, then returned longitude"
+      }
+    ],
+    "native_grid_identity_claimed": false
+  },
+  "limitations": [
+    "Returned output coordinates are not asserted to be unique native source-grid cell identifiers.",
+    "Exact smoke coordinate alignment does not prove identical upstream spatial support or point-API equivalence.",
+    "Nearest-output-node mapping is diagnostic only and changes the original point-request sampling method.",
+    "The smoke test does not verify national extent, annual chunks or 2001-2025 completeness."
+  ],
+  "multi_parameter_probe": {
+    "error": "HTTP 422",
+    "http_status": 422,
+    "messages": [
+      "A maximum of 1 parameters are can currently be requested in one submission."
+    ],
+    "request_id": "central-bangladesh-smoke__multi-parameter-probe__20010101_20010103",
+    "response_body_sha256": "886e416a9e0efb3a80af2c69ff892a5fce32ab366699a5e2c1d6aaa3b626ca5b",
+    "status": "rejected_as_documented"
+  },
+  "initial_extent_diagnostic": {
+    "bbox": {
+      "latitude_max": 24.2,
+      "latitude_min": 23.5,
+      "longitude_max": 90.8,
+      "longitude_min": 90.0
+    },
+    "http_status": 422,
+    "messages": [
+      "Please provide at least a 2 degree range in latitude; otherwise use the point endpoint.",
+      "Please provide at least a 2 degree range in longitude; otherwise use the point endpoint."
+    ],
+    "parameter": "PRECTOTCORR",
+    "response_body_sha256": "d8037dee0c7db87edb52d9d2de75091422b6ca0eeb8a7d35c287b3e4b229b6f7",
+    "status": "rejected_and_preserved"
+  },
+  "recorded_at_utc": "2026-11-12T21:03:17Z",
+  "registry_sha256": "0b31748796de714f73de135ee3e0ec77c2e44813985d790b44f2d62e18c62dfa",
+  "results": [
+    {
+      "bbox": {
+        "latitude_max": 24.75,
+        "latitude_min": 22.75,
+        "longitude_max": 91.5,
+        "longitude_min": 89.5
+      },
+      "request": {
+        "attempt": 1,
+        "parameters": {
+          "community": "AG",
+          "end": "20010103",
+          "format": "JSON",
+          "latitude-max": "24.750000",
+          "latitude-min": "22.750000",
+          "longitude-max": "91.500000",
+          "longitude-min": "89.500000",
+          "parameters": "PRECTOTCORR",
+          "start": "20010101",
+          "time-standard": "LST",
+          "units": "metric"
+        },
+        "requested_at_utc": "2026-11-12T21:03:10Z",
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=PRECTOTCORR&community=AG&latitude-min=22.750000&latitude-max=24.750000&longitude-min=89.500000&longitude-max=91.500000&start=20010101&end=20010103&format=JSON&time-standard=LST&units=metric"
+      },
+      "request_id": "central-bangladesh-smoke__PRECTOTCORR__20010101_20010103",
+      "response": {
+        "bytes": 2442,
+        "content_type": "application/json",
+        "http_status": 200,
+        "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/central-bangladesh-smoke/PRECTOTCORR/20010101_20010103.json",
+        "retrieved_at_utc": "2026-11-12T21:03:10Z",
+        "sha256": "19d17a863eacedfb5b82952dcb8616c562c1cd15d5c5b19cec6c44b86ffc484e"
+      },
+      "resume_status": null,
+      "status": "downloaded_verified",
+      "validation": {
+        "actual_end": "20010103",
+        "actual_start": "20010101",
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.3"
+        },
+        "coordinate_identity_note": "API-returned output coordinates only; not asserted to be unique native source-grid cell identifiers.",
+        "coordinate_set_sha256": "64c847cd7324769e960e33615e2b3daad0308c0228077e0f1190bc3beda8095a",
+        "date_count": 3,
+        "feature_count": 12,
+        "fill_counts": {
+          "PRECTOTCORR": 0
+        },
+        "fill_value": -999.0,
+        "output_coordinate_extent": {
+          "latitude_max": 24.5,
+          "latitude_min": 23.0,
+          "longitude_max": 91.25,
+          "longitude_min": 90.0
+        },
+        "output_coordinates": [
+          [
+            90.0,
+            23.0
+          ],
+          [
+            90.625,
+            23.0
+          ],
+          [
+            91.25,
+            23.0
+          ],
+          [
+            90.0,
+            23.5
+          ],
+          [
+            90.625,
+            23.5
+          ],
+          [
+            91.25,
+            23.5
+          ],
+          [
+            90.0,
+            24.0
+          ],
+          [
+            90.625,
+            24.0
+          ],
+          [
+            91.25,
+            24.0
+          ],
+          [
+            90.0,
+            24.5
+          ],
+          [
+            90.625,
+            24.5
+          ],
+          [
+            91.25,
+            24.5
+          ]
+        ],
+        "parameter_names": [
+          "PRECTOTCORR"
+        ],
+        "sources": [
+          "MERRA2"
+        ],
+        "status": "valid",
+        "time_standard": "LST",
+        "title": "NASA/POWER Source Native Resolution Daily Data",
+        "units": {
+          "PRECTOTCORR": "mm/day"
+        },
+        "value_count": 36
+      }
+    },
+    {
+      "bbox": {
+        "latitude_max": 24.75,
+        "latitude_min": 22.75,
+        "longitude_max": 91.5,
+        "longitude_min": 89.5
+      },
+      "request": {
+        "attempt": 1,
+        "parameters": {
+          "community": "AG",
+          "end": "20010103",
+          "format": "JSON",
+          "latitude-max": "24.750000",
+          "latitude-min": "22.750000",
+          "longitude-max": "91.500000",
+          "longitude-min": "89.500000",
+          "parameters": "T2M",
+          "start": "20010101",
+          "time-standard": "LST",
+          "units": "metric"
+        },
+        "requested_at_utc": "2026-11-12T21:03:12Z",
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M&community=AG&latitude-min=22.750000&latitude-max=24.750000&longitude-min=89.500000&longitude-max=91.500000&start=20010101&end=20010103&format=JSON&time-standard=LST&units=metric"
+      },
+      "request_id": "central-bangladesh-smoke__T2M__20010101_20010103",
+      "response": {
+        "bytes": 2392,
+        "content_type": "application/json",
+        "http_status": 200,
+        "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/central-bangladesh-smoke/T2M/20010101_20010103.json",
+        "retrieved_at_utc": "2026-11-12T21:03:12Z",
+        "sha256": "3d710761bea93dfd4ed1401d628b32414242c7be07b4feb7e605f817e7e7b6b0"
+      },
+      "resume_status": null,
+      "status": "downloaded_verified",
+      "validation": {
+        "actual_end": "20010103",
+        "actual_start": "20010101",
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.3"
+        },
+        "coordinate_identity_note": "API-returned output coordinates only; not asserted to be unique native source-grid cell identifiers.",
+        "coordinate_set_sha256": "64c847cd7324769e960e33615e2b3daad0308c0228077e0f1190bc3beda8095a",
+        "date_count": 3,
+        "feature_count": 12,
+        "fill_counts": {
+          "T2M": 0
+        },
+        "fill_value": -999.0,
+        "output_coordinate_extent": {
+          "latitude_max": 24.5,
+          "latitude_min": 23.0,
+          "longitude_max": 91.25,
+          "longitude_min": 90.0
+        },
+        "output_coordinates": [
+          [
+            90.0,
+            23.0
+          ],
+          [
+            90.625,
+            23.0
+          ],
+          [
+            91.25,
+            23.0
+          ],
+          [
+            90.0,
+            23.5
+          ],
+          [
+            90.625,
+            23.5
+          ],
+          [
+            91.25,
+            23.5
+          ],
+          [
+            90.0,
+            24.0
+          ],
+          [
+            90.625,
+            24.0
+          ],
+          [
+            91.25,
+            24.0
+          ],
+          [
+            90.0,
+            24.5
+          ],
+          [
+            90.625,
+            24.5
+          ],
+          [
+            91.25,
+            24.5
+          ]
+        ],
+        "parameter_names": [
+          "T2M"
+        ],
+        "sources": [
+          "MERRA2"
+        ],
+        "status": "valid",
+        "time_standard": "LST",
+        "title": "NASA/POWER Source Native Resolution Daily Data",
+        "units": {
+          "T2M": "C"
+        },
+        "value_count": 36
+      }
+    },
+    {
+      "bbox": {
+        "latitude_max": 24.75,
+        "latitude_min": 22.75,
+        "longitude_max": 91.5,
+        "longitude_min": 89.5
+      },
+      "request": {
+        "attempt": 1,
+        "parameters": {
+          "community": "AG",
+          "end": "20010103",
+          "format": "JSON",
+          "latitude-max": "24.750000",
+          "latitude-min": "22.750000",
+          "longitude-max": "91.500000",
+          "longitude-min": "89.500000",
+          "parameters": "T2M_MIN",
+          "start": "20010101",
+          "time-standard": "LST",
+          "units": "metric"
+        },
+        "requested_at_utc": "2026-11-12T21:03:15Z",
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M_MIN&community=AG&latitude-min=22.750000&latitude-max=24.750000&longitude-min=89.500000&longitude-max=91.500000&start=20010101&end=20010103&format=JSON&time-standard=LST&units=metric"
+      },
+      "request_id": "central-bangladesh-smoke__T2M_MIN__20010101_20010103",
+      "response": {
+        "bytes": 2462,
+        "content_type": "application/json",
+        "http_status": 200,
+        "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/central-bangladesh-smoke/T2M_MIN/20010101_20010103.json",
+        "retrieved_at_utc": "2026-11-12T21:03:15Z",
+        "sha256": "02e2f4dfe313d1441bd2bfae7c22c210ffcabf8612c974257f4376e3734a82b9"
+      },
+      "resume_status": null,
+      "status": "downloaded_verified",
+      "validation": {
+        "actual_end": "20010103",
+        "actual_start": "20010101",
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.3"
+        },
+        "coordinate_identity_note": "API-returned output coordinates only; not asserted to be unique native source-grid cell identifiers.",
+        "coordinate_set_sha256": "64c847cd7324769e960e33615e2b3daad0308c0228077e0f1190bc3beda8095a",
+        "date_count": 3,
+        "feature_count": 12,
+        "fill_counts": {
+          "T2M_MIN": 0
+        },
+        "fill_value": -999.0,
+        "output_coordinate_extent": {
+          "latitude_max": 24.5,
+          "latitude_min": 23.0,
+          "longitude_max": 91.25,
+          "longitude_min": 90.0
+        },
+        "output_coordinates": [
+          [
+            90.0,
+            23.0
+          ],
+          [
+            90.625,
+            23.0
+          ],
+          [
+            91.25,
+            23.0
+          ],
+          [
+            90.0,
+            23.5
+          ],
+          [
+            90.625,
+            23.5
+          ],
+          [
+            91.25,
+            23.5
+          ],
+          [
+            90.0,
+            24.0
+          ],
+          [
+            90.625,
+            24.0
+          ],
+          [
+            91.25,
+            24.0
+          ],
+          [
+            90.0,
+            24.5
+          ],
+          [
+            90.625,
+            24.5
+          ],
+          [
+            91.25,
+            24.5
+          ]
+        ],
+        "parameter_names": [
+          "T2M_MIN"
+        ],
+        "sources": [
+          "MERRA2",
+          "POWER"
+        ],
+        "status": "valid",
+        "time_standard": "LST",
+        "title": "NASA/POWER Source Native Resolution Daily Data",
+        "units": {
+          "T2M_MIN": "C"
+        },
+        "value_count": 36
+      }
+    },
+    {
+      "bbox": {
+        "latitude_max": 24.75,
+        "latitude_min": 22.75,
+        "longitude_max": 91.5,
+        "longitude_min": 89.5
+      },
+      "request": {
+        "attempt": 1,
+        "parameters": {
+          "community": "AG",
+          "end": "20010103",
+          "format": "JSON",
+          "latitude-max": "24.750000",
+          "latitude-min": "22.750000",
+          "longitude-max": "91.500000",
+          "longitude-min": "89.500000",
+          "parameters": "T2M_MAX",
+          "start": "20010101",
+          "time-standard": "LST",
+          "units": "metric"
+        },
+        "requested_at_utc": "2026-11-12T21:03:17Z",
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M_MAX&community=AG&latitude-min=22.750000&latitude-max=24.750000&longitude-min=89.500000&longitude-max=91.500000&start=20010101&end=20010103&format=JSON&time-standard=LST&units=metric"
+      },
+      "request_id": "central-bangladesh-smoke__T2M_MAX__20010101_20010103",
+      "response": {
+        "bytes": 2460,
+        "content_type": "application/json",
+        "http_status": 200,
+        "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/central-bangladesh-smoke/T2M_MAX/20010101_20010103.json",
+        "retrieved_at_utc": "2026-11-12T21:03:17Z",
+        "sha256": "68d67e5c89c646b1d3ebe66b1f71f2b9dd7f229183959e46446ede5c3a8b88ba"
+      },
+      "resume_status": null,
+      "status": "downloaded_verified",
+      "validation": {
+        "actual_end": "20010103",
+        "actual_start": "20010101",
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.3"
+        },
+        "coordinate_identity_note": "API-returned output coordinates only; not asserted to be unique native source-grid cell identifiers.",
+        "coordinate_set_sha256": "64c847cd7324769e960e33615e2b3daad0308c0228077e0f1190bc3beda8095a",
+        "date_count": 3,
+        "feature_count": 12,
+        "fill_counts": {
+          "T2M_MAX": 0
+        },
+        "fill_value": -999.0,
+        "output_coordinate_extent": {
+          "latitude_max": 24.5,
+          "latitude_min": 23.0,
+          "longitude_max": 91.25,
+          "longitude_min": 90.0
+        },
+        "output_coordinates": [
+          [
+            90.0,
+            23.0
+          ],
+          [
+            90.625,
+            23.0
+          ],
+          [
+            91.25,
+            23.0
+          ],
+          [
+            90.0,
+            23.5
+          ],
+          [
+            90.625,
+            23.5
+          ],
+          [
+            91.25,
+            23.5
+          ],
+          [
+            90.0,
+            24.0
+          ],
+          [
+            90.625,
+            24.0
+          ],
+          [
+            91.25,
+            24.0
+          ],
+          [
+            90.0,
+            24.5
+          ],
+          [
+            90.625,
+            24.5
+          ],
+          [
+            91.25,
+            24.5
+          ]
+        ],
+        "parameter_names": [
+          "T2M_MAX"
+        ],
+        "sources": [
+          "MERRA2",
+          "POWER"
+        ],
+        "status": "valid",
+        "time_standard": "LST",
+        "title": "NASA/POWER Source Native Resolution Daily Data",
+        "units": {
+          "T2M_MAX": "C"
+        },
+        "value_count": 36
+      }
+    }
+  ],
+  "schema_version": "1.0.0",
+  "scope": "One central Bangladesh bbox, three daily dates, four approved parameters, at most four successful responses.",
+  "status": "smoke_complete",
+  "successful_data_requests": 4
+}

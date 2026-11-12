@@ -723,4 +723,38 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Next action / owner:** After access is granted, rerun git push -u origin feature/saim-nasa-power-nationwide and verify the remote SHA.
 
 **Task / source:** CLIMATE-POWER-FULL; Current Saim branch, commit and push instruction
+
+## Saim — Prompt 006
+
+<a id="saim-006"></a>
+<a id="p-a58322aad62e"></a>
+<!-- record-id: P-a58322aad62e -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-12T21:07:06Z -->
+
+**Member:** saim
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Evaluate and smoke-test NASA POWER Daily Regional acquisition as a separate alternative without changing the blocked Point API reuse decision or starting the full collection.
+
+**Purpose / AI contribution:** Verify the official and live Regional contract, implement exact-byte resumable acquisition, test four parameters over a bounded Bangladesh area, and document a reproducible returned-coordinate extraction proposal.
+
+**Human contribution:** Saim authorized Step 3B independently of G0, required at most four successful data requests, preserved original district points, prohibited native-cell claims and limited the outcome to a regional recommendation.
+
+**Changed files:** data/climate/nasa_power_daily_regional_v1.json; data/climate/nasa_power_regional_smoke_test_manifest.json; src/acquire/download_nasa_power_regional.py; tests/test_nasa_power_regional_acquire.py; docs/data/NASA_POWER_REGIONAL_PROPOSAL.md; docs/data/NASA_POWER_REDUNDANCY_REVIEW.md; docs/DATA_SOURCES.md; src/acquire/README.md; cache/README.md; docs/tasks/CLIMATE-POWER-REGIONAL.json
+
+**Before → After:** The repository had only a blocked point-based full plan; it now has a separate Regional API mode and bounded evidence while the Point execution gate remains unchanged.
+
+**Actual outcome:** The live API required a minimum 2 degree by 2 degree box and rejected multiple parameters. Four sequential single-parameter responses each returned 12 coordinates and three LST dates with expected units and zero fills; exact output-coordinate alignment was observed, five regional tests and all 75 repository tests passed, and no full acquisition ran.
+
+**Review / limitations:** Regional output nodes are not claimed as native cells or Point API equivalents. Nearest-node extraction changes the sampling method; national edge/size preflight and independent review remain required.
+
+**Next action / owner:** A different teammate reviews the output-coordinate join, nearest-node distances and one-year national-extent preflight proposal before any historical execution.
+
+**Task / source:** CLIMATE-POWER-REGIONAL; Current Saim Step 3B implementation instruction
 <!-- workflow:ai-records:end -->

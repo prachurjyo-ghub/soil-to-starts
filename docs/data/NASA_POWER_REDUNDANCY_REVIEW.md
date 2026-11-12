@@ -111,3 +111,12 @@ parameters. The evidence must resolve the differing grid descriptions, define
 edge/snap behavior, and support a reproducible district-to-request mapping.
 Independent review of that mapping is still required. This documentation does
 not advance G0, claim agronomic approval or claim teammate acceptance.
+
+## Separate Regional API evaluation
+
+Step 3B evaluates the Daily Regional endpoint without changing this decision or
+disabling the Point execution gate. Its bounded smoke evidence and conditional
+recommendation are documented in
+[NASA_POWER_REGIONAL_PROPOSAL](NASA_POWER_REGIONAL_PROPOSAL.md). Regional
+output coordinates are kept distinct from the original district points and are
+not asserted to be native cell identifiers or Point API equivalents.
