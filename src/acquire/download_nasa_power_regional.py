@@ -25,6 +25,7 @@ DEFAULT_REGISTRY_MANIFEST = ROOT / "data/climate/district_sampling_manifest.json
 DEFAULT_BOUNDARY = ROOT / "data/admin/bgd-adm2-source.geojson.gz"
 DEFAULT_CACHE = ROOT / "cache/nasa_power_regional"
 DEFAULT_SMOKE_MANIFEST = ROOT / "data/climate/nasa_power_regional_smoke_test_manifest.json"
+DEFAULT_PREFLIGHT_MANIFEST = ROOT / "data/climate/nasa_power_regional_preflight_2001_manifest.json"
 
 PARAMETERS = point.PARAMETERS
 TRANSIENT_HTTP_STATUS = point.TRANSIENT_HTTP_STATUS
@@ -317,6 +318,18 @@ def build_multi_parameter_probe(config):
     )
 
 
+def build_preflight_request(config):
+    """Build the single Step 3C request; this does not authorize any other full-scope request."""
+    return build_request(
+        config,
+        "bgd-padded-national",
+        config["boundary"]["national_request_bbox"],
+        ["PRECTOTCORR"],
+        "20010101",
+        "20011231",
+    )
+
+
 def request_fingerprint(config, request_spec):
     return sha256(
         canonical_json(
@@ -435,6 +448,7 @@ class RegionalDownloader:
         sleeper=time.sleep,
         random_source=random.random,
         now=utc_now,
+        timer=time.monotonic,
     ):
         self.config = config
         self.cache_root = Path(cache_root) / config["collection_id"]
@@ -442,6 +456,7 @@ class RegionalDownloader:
         self.sleeper = sleeper
         self.random_source = random_source
         self.now = now
+        self.timer = timer
 
     def paths(self, request_spec):
         base = self.cache_root / "raw" / request_spec["area_id"] / request_spec["parameter_label"]
@@ -561,6 +576,7 @@ class RegionalDownloader:
         if cached:
             return cached
         policy = self.config["network_policy"]
+        started = self.timer()
         for attempt in range(1, policy["max_attempts"] + 1):
             try:
                 temporary, raw, headers, validation = self._stream_once(request_spec, attempt)
@@ -587,6 +603,13 @@ class RegionalDownloader:
                         "sha256": sha256(raw),
                         "bytes": len(raw),
                         "content_type": headers.get("Content-Type") or headers.get("content-type"),
+                        "elapsed_seconds": round(self.timer() - started, 6),
+                        "headers": {
+                            name: value
+                            for name, value in headers.items()
+                            if name.lower()
+                            in {"content-type", "content-length", "content-disposition", "etag", "last-modified"}
+                        },
                         "raw_path": recorded_path(raw_path),
                     },
                     "validation": validation,
@@ -612,6 +635,213 @@ class RegionalDownloader:
                 delay = retry_after if retry_after is not None else exponential + self.random_source() * policy["backoff_jitter_seconds"]
                 self.sleeper(min(policy["backoff_max_seconds"], delay))
         raise AssertionError("unreachable")
+
+
+def preflight_qa(raw, request_spec, config, registry_path=DEFAULT_REGISTRY):
+    validation = validate_response_bytes(raw, request_spec, config)
+    payload = json.loads(raw)
+    parameter = request_spec["parameter_names"][0]
+    fill_value = validation["fill_value"]
+    non_fill_values = []
+    negative_non_fill_count = 0
+    non_finite_count = 0
+    boolean_value_count = 0
+    locations_with_complete_dates = 0
+    expected_date_count = len(expected_dates(request_spec["start"], request_spec["end"]))
+    for feature in payload["features"]:
+        values = list(feature["properties"]["parameter"][parameter].values())
+        if len(values) == expected_date_count:
+            locations_with_complete_dates += 1
+        for value in values:
+            if isinstance(value, bool):
+                boolean_value_count += 1
+                continue
+            if value == fill_value:
+                continue
+            if not math.isfinite(value):
+                non_finite_count += 1
+                continue
+            non_fill_values.append(value)
+            if value < 0:
+                negative_non_fill_count += 1
+
+    returned_extent = validation["output_coordinate_extent"]
+    rows = list(csv.DictReader(registry_path.read_text().splitlines()))
+    sampling_extent = {
+        "longitude_min": min(float(row["longitude"]) for row in rows),
+        "latitude_min": min(float(row["latitude"]) for row in rows),
+        "longitude_max": max(float(row["longitude"]) for row in rows),
+        "latitude_max": max(float(row["latitude"]) for row in rows),
+    }
+    outside_sampling_points = [
+        row["district_id"]
+        for row in rows
+        if not (
+            returned_extent["longitude_min"] <= float(row["longitude"]) <= returned_extent["longitude_max"]
+            and returned_extent["latitude_min"] <= float(row["latitude"]) <= returned_extent["latitude_max"]
+        )
+    ]
+    boundary = config["boundary"]["geometry_extent"]
+    requested = request_spec["bbox"]
+    unique_coordinates = len({tuple(item) for item in validation["output_coordinates"]})
+    return {
+        "validation": validation,
+        "coordinate_uniqueness": {
+            "coordinate_count": validation["feature_count"],
+            "unique_coordinate_count": unique_coordinates,
+            "all_unique": validation["feature_count"] == unique_coordinates,
+            "identity_note": "Returned output coordinates only; not native NASA cell identifiers.",
+        },
+        "date_coverage": {
+            "expected_dates_per_location": expected_date_count,
+            "locations_checked": validation["feature_count"],
+            "locations_with_complete_ordered_dates": locations_with_complete_dates,
+            "locations_incomplete": validation["feature_count"] - locations_with_complete_dates,
+            "returned_values_expected": validation["feature_count"] * expected_date_count,
+            "returned_values_actual": validation["value_count"],
+        },
+        "value_qa": {
+            "parameter": parameter,
+            "unit": validation["units"][parameter],
+            "fill_value": fill_value,
+            "fill_count": validation["fill_counts"][parameter],
+            "non_fill_count": len(non_fill_values),
+            "minimum_non_fill": min(non_fill_values) if non_fill_values else None,
+            "maximum_non_fill": max(non_fill_values) if non_fill_values else None,
+            "negative_non_fill_count": negative_non_fill_count,
+            "non_finite_count": non_finite_count,
+            "boolean_value_count": boolean_value_count,
+            "values_corrected": False,
+        },
+        "spatial_coverage": {
+            "request_bbox": requested,
+            "returned_coordinate_extent": returned_extent,
+            "pinned_boundary_extent": boundary,
+            "district_sampling_coordinate_extent": sampling_extent,
+            "district_sampling_points_checked": len(rows),
+            "district_sampling_points_within_returned_extent": len(rows) - len(outside_sampling_points),
+            "district_sampling_points_outside_returned_extent": outside_sampling_points,
+            "all_district_sampling_points_within_returned_extent": not outside_sampling_points,
+            "returned_extent_margin_beyond_boundary_degrees": {
+                "west": boundary["longitude_min"] - returned_extent["longitude_min"],
+                "east": returned_extent["longitude_max"] - boundary["longitude_max"],
+                "south": boundary["latitude_min"] - returned_extent["latitude_min"],
+                "north": returned_extent["latitude_max"] - boundary["latitude_max"],
+            },
+            "returned_extent_inset_from_request_bbox_degrees": {
+                "west": returned_extent["longitude_min"] - requested["longitude_min"],
+                "east": requested["longitude_max"] - returned_extent["longitude_max"],
+                "south": returned_extent["latitude_min"] - requested["latitude_min"],
+                "north": requested["latitude_max"] - returned_extent["latitude_max"],
+            },
+            "edge_note": (
+                "Extent containment verifies raw regional coordinate coverage only. It does not select an output "
+                "coordinate for a district or approve nearest-node extraction."
+            ),
+        },
+    }
+
+
+def preflight_summary(config, request_spec, manifest, qa):
+    observed_bytes = manifest["response"]["bytes"]
+    observed_seconds = manifest["response"].get("elapsed_seconds")
+    proposed_requests = config["full_proposal"]["configured_request_count"]
+    return {
+        "schema_version": "1.0.0",
+        "preflight_id": "nasa-power-regional-bgd-prectotcorr-2001-v1",
+        "recorded_at_utc": utc_now(),
+        "status": "preflight_complete",
+        "format_decision": {
+            "selected": "JSON",
+            "reason": (
+                "The existing dependency-free JSON parser preserves and validates Regional coordinates, dates and "
+                "metadata. The official schema recommends NetCDF for large regions, but this one-year preflight "
+                "measures whether national JSON is practical before adding a NetCDF dependency."
+            ),
+            "comparison_download_performed": False,
+        },
+        "configuration": {
+            "path": recorded_path(DEFAULT_CONFIG),
+            "sha256": sha256(DEFAULT_CONFIG.read_bytes()),
+            "fingerprint": sha256(canonical_json(config)),
+            "registry_sha256": config["registry"]["sha256"],
+        },
+        "request": {
+            "request_id": request_spec["request_id"],
+            "area_id": request_spec["area_id"],
+            "bbox": request_spec["bbox"],
+            "parameters": request_spec["parameters"],
+            "url": request_spec["url"],
+        },
+        "raw_response": manifest["response"],
+        "qa": qa,
+        "practicality": {
+            "assessment": "annual_national_json_request_succeeded",
+            "observed_raw_bytes_for_one_parameter_year": observed_bytes,
+            "observed_elapsed_seconds": observed_seconds,
+            "proposed_full_request_count": proposed_requests,
+            "simple_linear_raw_byte_estimate_for_100_requests": observed_bytes * proposed_requests,
+            "simple_linear_elapsed_estimate_seconds_for_100_sequential_requests": (
+                round(observed_seconds * proposed_requests, 6) if observed_seconds is not None else None
+            ),
+            "estimate_limitations": (
+                "The 100-request figures are arithmetic extrapolations from one PRECTOTCORR year, not measured "
+                "storage or duration. Other parameters, years, service load and compression may differ."
+            ),
+            "proposed_chunking": "one national area, one parameter, one calendar year per request",
+            "execution": "sequential with existing bounded transient retries, Retry-After and checksum-aware resume",
+            "format_recommendation": (
+                "Retain JSON annual chunks unless later observed responses become impractical; do not change to "
+                "NetCDF without a separately tested parser and provenance path."
+            ),
+        },
+        "separation": {
+            "raw_regional_coverage": "Validated for PRECTOTCORR over the padded national area in calendar year 2001.",
+            "district_derived_coverage": "Not generated; extraction method and distance/edge policy remain unresolved.",
+            "nearest_node_approved": False,
+            "native_cell_identity_claimed": False,
+        },
+    }
+
+
+def execute_preflight(config, cache_dir, preflight_manifest_path):
+    request_spec = build_preflight_request(config)
+    downloader = RegionalDownloader(config, cache_dir)
+    manifest = downloader.download(request_spec)
+    raw_path = ROOT / manifest["response"]["raw_path"]
+    qa = preflight_qa(raw_path.read_bytes(), request_spec, config)
+    summary = preflight_summary(config, request_spec, manifest, qa)
+    atomic_write(preflight_manifest_path, (json.dumps(summary, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode())
+    print(
+        f"PASS preflight request={request_spec['request_id']} bytes={manifest['response']['bytes']} "
+        f"elapsed={manifest['response'].get('elapsed_seconds')} features={qa['validation']['feature_count']} "
+        f"dates={qa['validation']['date_count']} sha256={manifest['response']['sha256']}"
+    )
+    print(f"WROTE {recorded_path(preflight_manifest_path)}")
+
+
+def validate_preflight_cache(config, cache_dir, preflight_manifest_path):
+    request_spec = build_preflight_request(config)
+
+    def network_forbidden(*_args, **_kwargs):
+        raise AssertionError("Cached-response validation attempted network access")
+
+    downloader = RegionalDownloader(config, cache_dir, opener=network_forbidden)
+    manifest = downloader.download(request_spec)
+    if manifest.get("resume_status") != "cached_verified":
+        raise ConfigurationError("Preflight cache was not accepted as checksum-verified resume evidence")
+    raw_path = ROOT / manifest["response"]["raw_path"]
+    qa = preflight_qa(raw_path.read_bytes(), request_spec, config)
+    recorded = json.loads(preflight_manifest_path.read_text())
+    if recorded["raw_response"]["sha256"] != manifest["response"]["sha256"]:
+        raise ConfigurationError("Checked-in preflight manifest raw checksum differs from cache")
+    if recorded["qa"] != qa:
+        raise ConfigurationError("Checked-in preflight QA differs from fresh cached-response validation")
+    print(
+        f"PASS cached preflight: no network; sha256={manifest['response']['sha256']} "
+        f"bytes={manifest['response']['bytes']} features={qa['validation']['feature_count']} "
+        f"dates={qa['validation']['date_count']}"
+    )
 
 
 def haversine_km(latitude_a, longitude_a, latitude_b, longitude_b):
@@ -769,11 +999,14 @@ def main():
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
     parser.add_argument("--write-config", action="store_true")
     parser.add_argument("--check-config", action="store_true")
-    parser.add_argument("--plan", choices=("smoke", "full"), default="smoke")
+    parser.add_argument("--plan", choices=("smoke", "preflight", "full"), default="smoke")
     parser.add_argument("--execute-smoke", action="store_true")
+    parser.add_argument("--execute-preflight", action="store_true")
+    parser.add_argument("--validate-preflight-cache", action="store_true")
     parser.add_argument("--probe-multi-parameter", action="store_true")
     parser.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE)
     parser.add_argument("--smoke-manifest", type=Path, default=DEFAULT_SMOKE_MANIFEST)
+    parser.add_argument("--preflight-manifest", type=Path, default=DEFAULT_PREFLIGHT_MANIFEST)
     args = parser.parse_args()
 
     if args.write_config:
@@ -795,6 +1028,18 @@ def main():
             raise ConfigurationError("Step 3B supports live execution only for --plan smoke")
         execute_smoke(config, args.cache_dir, args.smoke_manifest, args.probe_multi_parameter)
         return
+    if args.execute_preflight:
+        if os.environ.get("OFFLINE") == "1":
+            raise ConfigurationError("OFFLINE=1 blocks NASA POWER regional acquisition")
+        if args.plan != "preflight":
+            raise ConfigurationError("--execute-preflight requires --plan preflight")
+        execute_preflight(config, args.cache_dir, args.preflight_manifest)
+        return
+    if args.validate_preflight_cache:
+        if args.plan != "preflight":
+            raise ConfigurationError("--validate-preflight-cache requires --plan preflight")
+        validate_preflight_cache(config, args.cache_dir, args.preflight_manifest)
+        return
     if args.plan == "smoke":
         requests = build_smoke_requests(config)
         print(f"DRY RUN regional smoke requests={len(requests)} success_cap=4")
@@ -802,6 +1047,10 @@ def main():
             print(f"DIAGNOSTIC {build_multi_parameter_probe(config)['url']}")
         for request_spec in requests:
             print(f"{request_spec['request_id']} {request_spec['url']}")
+    elif args.plan == "preflight":
+        request_spec = build_preflight_request(config)
+        print("DRY RUN regional preflight requests=1 format=JSON extraction=none")
+        print(f"{request_spec['request_id']} {request_spec['url']}")
     else:
         proposal = config["full_proposal"]
         print(

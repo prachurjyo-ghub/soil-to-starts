@@ -1,0 +1,742 @@
+{
+  "configuration": {
+    "fingerprint": "4e35cd005f4a4de7bc927ffa53b756faa6685ace21733525fb7088b689a7676b",
+    "path": "data/climate/nasa_power_daily_regional_v1.json",
+    "registry_sha256": "0b31748796de714f73de135ee3e0ec77c2e44813985d790b44f2d62e18c62dfa",
+    "sha256": "234c0f24b58e4b5fce97a912a0f06b832a17e50362143c6884cc07b2a6f0e863"
+  },
+  "format_decision": {
+    "comparison_download_performed": false,
+    "reason": "The existing dependency-free JSON parser preserves and validates Regional coordinates, dates and metadata. The official schema recommends NetCDF for large regions, but this one-year preflight measures whether national JSON is practical before adding a NetCDF dependency.",
+    "selected": "JSON"
+  },
+  "practicality": {
+    "assessment": "annual_national_json_request_succeeded",
+    "estimate_limitations": "The 100-request figures are arithmetic extrapolations from one PRECTOTCORR year, not measured storage or duration. Other parameters, years, service load and compression may differ.",
+    "execution": "sequential with existing bounded transient retries, Retry-After and checksum-aware resume",
+    "format_recommendation": "Retain JSON annual chunks unless later observed responses become impractical; do not change to NetCDF without a separately tested parser and provenance path.",
+    "observed_elapsed_seconds": 2.865375,
+    "observed_raw_bytes_for_one_parameter_year": 823232,
+    "proposed_chunking": "one national area, one parameter, one calendar year per request",
+    "proposed_full_request_count": 100,
+    "simple_linear_elapsed_estimate_seconds_for_100_sequential_requests": 286.5375,
+    "simple_linear_raw_byte_estimate_for_100_requests": 82323200
+  },
+  "preflight_id": "nasa-power-regional-bgd-prectotcorr-2001-v1",
+  "qa": {
+    "coordinate_uniqueness": {
+      "all_unique": true,
+      "coordinate_count": 140,
+      "identity_note": "Returned output coordinates only; not native NASA cell identifiers.",
+      "unique_coordinate_count": 140
+    },
+    "date_coverage": {
+      "expected_dates_per_location": 365,
+      "locations_checked": 140,
+      "locations_incomplete": 0,
+      "locations_with_complete_ordered_dates": 140,
+      "returned_values_actual": 51100,
+      "returned_values_expected": 51100
+    },
+    "spatial_coverage": {
+      "all_district_sampling_points_within_returned_extent": true,
+      "district_sampling_coordinate_extent": {
+        "latitude_max": 26.320216,
+        "latitude_min": 21.332458,
+        "longitude_max": 92.385918,
+        "longitude_min": 88.256694
+      },
+      "district_sampling_points_checked": 64,
+      "district_sampling_points_outside_returned_extent": [],
+      "district_sampling_points_within_returned_extent": 64,
+      "edge_note": "Extent containment verifies raw regional coordinate coverage only. It does not select an output coordinate for a district or approve nearest-node extraction.",
+      "pinned_boundary_extent": {
+        "latitude_max": 26.634513010000035,
+        "latitude_min": 20.590609348000044,
+        "longitude_max": 92.68025738200004,
+        "longitude_min": 88.00862798600008
+      },
+      "request_bbox": {
+        "latitude_max": 27.134513,
+        "latitude_min": 20.090609,
+        "longitude_max": 93.305257,
+        "longitude_min": 87.383628
+      },
+      "returned_coordinate_extent": {
+        "latitude_max": 27.0,
+        "latitude_min": 20.5,
+        "longitude_max": 93.125,
+        "longitude_min": 87.5
+      },
+      "returned_extent_inset_from_request_bbox_degrees": {
+        "east": 0.18025699999999745,
+        "north": 0.13451299999999833,
+        "south": 0.4093909999999994,
+        "west": 0.11637199999999837
+      },
+      "returned_extent_margin_beyond_boundary_degrees": {
+        "east": 0.44474261799996384,
+        "north": 0.3654869899999653,
+        "south": 0.09060934800004361,
+        "west": 0.5086279860000786
+      }
+    },
+    "validation": {
+      "actual_end": "20011231",
+      "actual_start": "20010101",
+      "api": {
+        "name": "POWER Daily API",
+        "version": "v2.10.3"
+      },
+      "coordinate_identity_note": "API-returned output coordinates only; not asserted to be unique native source-grid cell identifiers.",
+      "coordinate_set_sha256": "697c347b6623d74914550ccad34b640a2060647250c9a549a8fa5ddfbd58ad4f",
+      "date_count": 365,
+      "feature_count": 140,
+      "fill_counts": {
+        "PRECTOTCORR": 0
+      },
+      "fill_value": -999.0,
+      "output_coordinate_extent": {
+        "latitude_max": 27.0,
+        "latitude_min": 20.5,
+        "longitude_max": 93.125,
+        "longitude_min": 87.5
+      },
+      "output_coordinates": [
+        [
+          87.5,
+          20.5
+        ],
+        [
+          88.125,
+          20.5
+        ],
+        [
+          88.75,
+          20.5
+        ],
+        [
+          89.375,
+          20.5
+        ],
+        [
+          90.0,
+          20.5
+        ],
+        [
+          90.625,
+          20.5
+        ],
+        [
+          91.25,
+          20.5
+        ],
+        [
+          91.875,
+          20.5
+        ],
+        [
+          92.5,
+          20.5
+        ],
+        [
+          93.125,
+          20.5
+        ],
+        [
+          87.5,
+          21.0
+        ],
+        [
+          88.125,
+          21.0
+        ],
+        [
+          88.75,
+          21.0
+        ],
+        [
+          89.375,
+          21.0
+        ],
+        [
+          90.0,
+          21.0
+        ],
+        [
+          90.625,
+          21.0
+        ],
+        [
+          91.25,
+          21.0
+        ],
+        [
+          91.875,
+          21.0
+        ],
+        [
+          92.5,
+          21.0
+        ],
+        [
+          93.125,
+          21.0
+        ],
+        [
+          87.5,
+          21.5
+        ],
+        [
+          88.125,
+          21.5
+        ],
+        [
+          88.75,
+          21.5
+        ],
+        [
+          89.375,
+          21.5
+        ],
+        [
+          90.0,
+          21.5
+        ],
+        [
+          90.625,
+          21.5
+        ],
+        [
+          91.25,
+          21.5
+        ],
+        [
+          91.875,
+          21.5
+        ],
+        [
+          92.5,
+          21.5
+        ],
+        [
+          93.125,
+          21.5
+        ],
+        [
+          87.5,
+          22.0
+        ],
+        [
+          88.125,
+          22.0
+        ],
+        [
+          88.75,
+          22.0
+        ],
+        [
+          89.375,
+          22.0
+        ],
+        [
+          90.0,
+          22.0
+        ],
+        [
+          90.625,
+          22.0
+        ],
+        [
+          91.25,
+          22.0
+        ],
+        [
+          91.875,
+          22.0
+        ],
+        [
+          92.5,
+          22.0
+        ],
+        [
+          93.125,
+          22.0
+        ],
+        [
+          87.5,
+          22.5
+        ],
+        [
+          88.125,
+          22.5
+        ],
+        [
+          88.75,
+          22.5
+        ],
+        [
+          89.375,
+          22.5
+        ],
+        [
+          90.0,
+          22.5
+        ],
+        [
+          90.625,
+          22.5
+        ],
+        [
+          91.25,
+          22.5
+        ],
+        [
+          91.875,
+          22.5
+        ],
+        [
+          92.5,
+          22.5
+        ],
+        [
+          93.125,
+          22.5
+        ],
+        [
+          87.5,
+          23.0
+        ],
+        [
+          88.125,
+          23.0
+        ],
+        [
+          88.75,
+          23.0
+        ],
+        [
+          89.375,
+          23.0
+        ],
+        [
+          90.0,
+          23.0
+        ],
+        [
+          90.625,
+          23.0
+        ],
+        [
+          91.25,
+          23.0
+        ],
+        [
+          91.875,
+          23.0
+        ],
+        [
+          92.5,
+          23.0
+        ],
+        [
+          93.125,
+          23.0
+        ],
+        [
+          87.5,
+          23.5
+        ],
+        [
+          88.125,
+          23.5
+        ],
+        [
+          88.75,
+          23.5
+        ],
+        [
+          89.375,
+          23.5
+        ],
+        [
+          90.0,
+          23.5
+        ],
+        [
+          90.625,
+          23.5
+        ],
+        [
+          91.25,
+          23.5
+        ],
+        [
+          91.875,
+          23.5
+        ],
+        [
+          92.5,
+          23.5
+        ],
+        [
+          93.125,
+          23.5
+        ],
+        [
+          87.5,
+          24.0
+        ],
+        [
+          88.125,
+          24.0
+        ],
+        [
+          88.75,
+          24.0
+        ],
+        [
+          89.375,
+          24.0
+        ],
+        [
+          90.0,
+          24.0
+        ],
+        [
+          90.625,
+          24.0
+        ],
+        [
+          91.25,
+          24.0
+        ],
+        [
+          91.875,
+          24.0
+        ],
+        [
+          92.5,
+          24.0
+        ],
+        [
+          93.125,
+          24.0
+        ],
+        [
+          87.5,
+          24.5
+        ],
+        [
+          88.125,
+          24.5
+        ],
+        [
+          88.75,
+          24.5
+        ],
+        [
+          89.375,
+          24.5
+        ],
+        [
+          90.0,
+          24.5
+        ],
+        [
+          90.625,
+          24.5
+        ],
+        [
+          91.25,
+          24.5
+        ],
+        [
+          91.875,
+          24.5
+        ],
+        [
+          92.5,
+          24.5
+        ],
+        [
+          93.125,
+          24.5
+        ],
+        [
+          87.5,
+          25.0
+        ],
+        [
+          88.125,
+          25.0
+        ],
+        [
+          88.75,
+          25.0
+        ],
+        [
+          89.375,
+          25.0
+        ],
+        [
+          90.0,
+          25.0
+        ],
+        [
+          90.625,
+          25.0
+        ],
+        [
+          91.25,
+          25.0
+        ],
+        [
+          91.875,
+          25.0
+        ],
+        [
+          92.5,
+          25.0
+        ],
+        [
+          93.125,
+          25.0
+        ],
+        [
+          87.5,
+          25.5
+        ],
+        [
+          88.125,
+          25.5
+        ],
+        [
+          88.75,
+          25.5
+        ],
+        [
+          89.375,
+          25.5
+        ],
+        [
+          90.0,
+          25.5
+        ],
+        [
+          90.625,
+          25.5
+        ],
+        [
+          91.25,
+          25.5
+        ],
+        [
+          91.875,
+          25.5
+        ],
+        [
+          92.5,
+          25.5
+        ],
+        [
+          93.125,
+          25.5
+        ],
+        [
+          87.5,
+          26.0
+        ],
+        [
+          88.125,
+          26.0
+        ],
+        [
+          88.75,
+          26.0
+        ],
+        [
+          89.375,
+          26.0
+        ],
+        [
+          90.0,
+          26.0
+        ],
+        [
+          90.625,
+          26.0
+        ],
+        [
+          91.25,
+          26.0
+        ],
+        [
+          91.875,
+          26.0
+        ],
+        [
+          92.5,
+          26.0
+        ],
+        [
+          93.125,
+          26.0
+        ],
+        [
+          87.5,
+          26.5
+        ],
+        [
+          88.125,
+          26.5
+        ],
+        [
+          88.75,
+          26.5
+        ],
+        [
+          89.375,
+          26.5
+        ],
+        [
+          90.0,
+          26.5
+        ],
+        [
+          90.625,
+          26.5
+        ],
+        [
+          91.25,
+          26.5
+        ],
+        [
+          91.875,
+          26.5
+        ],
+        [
+          92.5,
+          26.5
+        ],
+        [
+          93.125,
+          26.5
+        ],
+        [
+          87.5,
+          27.0
+        ],
+        [
+          88.125,
+          27.0
+        ],
+        [
+          88.75,
+          27.0
+        ],
+        [
+          89.375,
+          27.0
+        ],
+        [
+          90.0,
+          27.0
+        ],
+        [
+          90.625,
+          27.0
+        ],
+        [
+          91.25,
+          27.0
+        ],
+        [
+          91.875,
+          27.0
+        ],
+        [
+          92.5,
+          27.0
+        ],
+        [
+          93.125,
+          27.0
+        ]
+      ],
+      "parameter_names": [
+        "PRECTOTCORR"
+      ],
+      "sources": [
+        "MERRA2"
+      ],
+      "status": "valid",
+      "time_standard": "LST",
+      "title": "NASA/POWER Source Native Resolution Daily Data",
+      "units": {
+        "PRECTOTCORR": "mm/day"
+      },
+      "value_count": 51100
+    },
+    "value_qa": {
+      "boolean_value_count": 0,
+      "fill_count": 0,
+      "fill_value": -999.0,
+      "maximum_non_fill": 161.68,
+      "minimum_non_fill": 0.0,
+      "negative_non_fill_count": 0,
+      "non_fill_count": 51100,
+      "non_finite_count": 0,
+      "parameter": "PRECTOTCORR",
+      "unit": "mm/day",
+      "values_corrected": false
+    }
+  },
+  "raw_response": {
+    "bytes": 823232,
+    "content_type": "application/json",
+    "elapsed_seconds": 2.865375,
+    "headers": {
+      "Content-Length": "823232",
+      "Content-Type": "application/json",
+      "content-disposition": "inline; filename=POWER_Regional_Daily_20010101_20011231_020d09N_027d13N_087d38E_093d31E_LST.json"
+    },
+    "http_status": 200,
+    "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/PRECTOTCORR/20010101_20011231.json",
+    "retrieved_at_utc": "2026-11-12T21:20:42Z",
+    "sha256": "f6e7f87c045323d9e22e168688c22ce77ac947d00e1e66c014d6da90b29235ab"
+  },
+  "recorded_at_utc": "2026-11-12T21:20:42Z",
+  "request": {
+    "area_id": "bgd-padded-national",
+    "bbox": {
+      "latitude_max": 27.134513,
+      "latitude_min": 20.090609,
+      "longitude_max": 93.305257,
+      "longitude_min": 87.383628
+    },
+    "parameters": {
+      "community": "AG",
+      "end": "20011231",
+      "format": "JSON",
+      "latitude-max": "27.134513",
+      "latitude-min": "20.090609",
+      "longitude-max": "93.305257",
+      "longitude-min": "87.383628",
+      "parameters": "PRECTOTCORR",
+      "start": "20010101",
+      "time-standard": "LST",
+      "units": "metric"
+    },
+    "request_id": "bgd-padded-national__PRECTOTCORR__20010101_20011231",
+    "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=PRECTOTCORR&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20010101&end=20011231&format=JSON&time-standard=LST&units=metric"
+  },
+  "schema_version": "1.0.0",
+  "separation": {
+    "district_derived_coverage": "Not generated; extraction method and distance/edge policy remain unresolved.",
+    "native_cell_identity_claimed": false,
+    "nearest_node_approved": false,
+    "raw_regional_coverage": "Validated for PRECTOTCORR over the padded national area in calendar year 2001."
+  },
+  "status": "preflight_complete"
+}

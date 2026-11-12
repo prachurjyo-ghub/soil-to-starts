@@ -819,4 +819,38 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Next action / owner:** A teammate reviews the branch; do not run the full historical collection until the recorded Regional blockers are resolved.
 
 **Task / source:** CLIMATE-POWER-REGIONAL; Current Saim retry-push instruction
+
+## Saim — Prompt 009
+
+<a id="saim-009"></a>
+<a id="p-a5fffff987ce"></a>
+<!-- record-id: P-a5fffff987ce -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-12T21:22:35Z -->
+
+**Member:** saim
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Run exactly one national-extent PRECTOTCORR Regional preflight for calendar year 2001, validate its cached response and revise the full-acquisition proposal without selecting district extraction.
+
+**Purpose / AI contribution:** Measure annual national JSON size and timing, verify spatial/date/value QA and edge coverage, add network-forbidden resume validation, and keep raw Regional coverage separate from unresolved district-derived coverage.
+
+**Human contribution:** Saim authorized one bounded national-area annual request, selected PRECTOTCORR/AG/LST, prohibited nearest-node approval and limited work to the preflight and recommendation.
+
+**Changed files:** data/climate/nasa_power_regional_preflight_2001_manifest.json; docs/data/NASA_POWER_REGIONAL_PREFLIGHT_2001.md; docs/data/NASA_POWER_REGIONAL_PROPOSAL.md; src/acquire/download_nasa_power_regional.py; tests/test_nasa_power_regional_acquire.py; cache/README.md; src/acquire/README.md; docs/DATA_SOURCES.md; docs/tasks/CLIMATE-POWER-REGIONAL-PREFLIGHT.json
+
+**Before → After:** The Regional route had only a three-day smoke test; it now has one validated annual national PRECTOTCORR response and a no-network reproducible cache audit, without district extraction.
+
+**Actual outcome:** One JSON request returned 823,232 bytes in 2.865375 seconds with 140 unique coordinates, 365 complete dates per coordinate, 51,100 values, zero fills or unexpected numeric types and all 64 sampling points within the returned extent. Cached validation, six regional tests and all 76 repository tests passed; no other year or parameter was downloaded.
+
+**Review / limitations:** The 100-request storage/time figures are linear estimates from one observed parameter-year. District extraction, cross-parameter national alignment and scientific review remain unresolved; G0 was unchanged.
+
+**Next action / owner:** A different teammate reviews the preflight evidence before authorizing any multi-year or multi-parameter Regional collection.
+
+**Task / source:** CLIMATE-POWER-REGIONAL-PREFLIGHT; Current Saim Step 3C implementation instruction
 <!-- workflow:ai-records:end -->

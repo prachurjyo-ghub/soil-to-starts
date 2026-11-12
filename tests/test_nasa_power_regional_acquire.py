@@ -151,6 +151,8 @@ class RegionalAcquireTests(unittest.TestCase):
             first = downloader.download(self.request)
             second = downloader.download(self.request)
             self.assertEqual(first["acquisition_status"], "downloaded_verified")
+            self.assertGreaterEqual(first["response"]["elapsed_seconds"], 0)
+            self.assertEqual(first["response"]["headers"]["Content-Type"], "application/json")
             self.assertEqual(second["resume_status"], "cached_verified")
             self.assertEqual(len(calls), 1)
             raw_path, _ = downloader.paths(self.request)
@@ -174,6 +176,35 @@ class RegionalAcquireTests(unittest.TestCase):
         rejected = regional.smoke_alignment(self.config, changed)
         self.assertFalse(rejected["coordinate_sets_identical"])
         self.assertEqual(rejected["combination_status"], "not_safe_to_combine")
+
+    def test_preflight_request_and_qa_cover_dates_points_and_unexpected_values(self):
+        request_spec = regional.build_preflight_request(self.config)
+        self.assertEqual(request_spec["parameter_names"], ["PRECTOTCORR"])
+        self.assertEqual(request_spec["start"], "20010101")
+        self.assertEqual(request_spec["end"], "20011231")
+        self.assertEqual(request_spec["bbox"], self.config["boundary"]["national_request_bbox"])
+        raw_payload = json.loads(
+            synthetic_response(
+                request_spec,
+                self.config,
+                coordinates=[[87.5, 20.5], [93.125, 27.0]],
+            )
+        )
+        values = raw_payload["features"][0]["properties"]["parameter"]["PRECTOTCORR"]
+        dates = list(values)
+        values[dates[0]] = -999
+        values[dates[1]] = -0.25
+        raw = json.dumps(raw_payload, separators=(",", ":")).encode()
+        qa = regional.preflight_qa(raw, request_spec, self.config)
+        self.assertEqual(qa["date_coverage"]["expected_dates_per_location"], 365)
+        self.assertEqual(qa["date_coverage"]["locations_with_complete_ordered_dates"], 2)
+        self.assertEqual(qa["date_coverage"]["returned_values_actual"], 730)
+        self.assertEqual(qa["value_qa"]["fill_count"], 1)
+        self.assertEqual(qa["value_qa"]["negative_non_fill_count"], 1)
+        self.assertFalse(qa["value_qa"]["values_corrected"])
+        self.assertTrue(qa["coordinate_uniqueness"]["all_unique"])
+        self.assertTrue(qa["spatial_coverage"]["all_district_sampling_points_within_returned_extent"])
+        self.assertFalse(qa["spatial_coverage"]["district_sampling_points_outside_returned_extent"])
 
 
 if __name__ == "__main__":
