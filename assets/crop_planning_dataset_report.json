@@ -1,0 +1,800 @@
+﻿{
+    "rows":  7834,
+    "columns":  18,
+    "column_names":  [
+                         "crop",
+                         "season",
+                         "region",
+                         "district_coverage",
+                         "standard_week",
+                         "month",
+                         "growth_stage",
+                         "duration_min_days",
+                         "duration_max_days",
+                         "rainfall_mm",
+                         "temp_min_c",
+                         "temp_max_c",
+                         "temp_mean_c",
+                         "humidity_mean_pct",
+                         "sunshine_hours",
+                         "wind_speed_kmh",
+                         "source_pdf",
+                         "source_page"
+                     ],
+    "csv_bytes":  1743422,
+    "xlsx_bytes":  700066,
+    "max_cell_characters":  83,
+    "checks":  "passed at source build: Excel cell/row/column limits, single-line cells, workbook reopening, numeric core fields and physical range checks; repository CSV check passed after English month-label normalization",
+    "repository_normalizations":  {
+                                           "month_bengali_or_ocr_cells_to_english":  106,
+                                           "affected_column":  "month",
+                                           "method":  "exact observed-label mapping; no week-based inference",
+                                           "remaining_bengali_script_cells":  0,
+                                           "external_builder_updated":  false
+                                       },
+    "crops":  [
+                  "Banana",
+                  "Bottle Gourd",
+                  "Brinjal",
+                  "Chilli",
+                  "Cotton",
+                  "Cucumber",
+                  "Garlic",
+                  "Groundnut",
+                  "Guava",
+                  "Jackfruit",
+                  "Jujube",
+                  "Jute",
+                  "Lentil",
+                  "Litchi",
+                  "Maize",
+                  "Mango",
+                  "Mungbean",
+                  "Mustard",
+                  "Onion",
+                  "Papaya",
+                  "Pineapple",
+                  "Pointed Gourd",
+                  "Potato",
+                  "Pumpkin",
+                  "Rice",
+                  "Soybean",
+                  "Sugarcane",
+                  "Tomato",
+                  "Wheat"
+              ],
+    "regions":  [
+                    "Barishal",
+                    "Bogura",
+                    "Chattogram",
+                    "Cumilla",
+                    "Dhaka",
+                    "Dinajpur",
+                    "Faridpur",
+                    "Jashore",
+                    "Khulna",
+                    "Mymensingh",
+                    "Rajshahi",
+                    "Rangamati",
+                    "Rangpur",
+                    "Sylhet"
+                ],
+    "seasons":  {
+                    "Unspecified":  3198,
+                    "Kharif":  1159,
+                    "Rabi":  2231,
+                    "Kharif-1":  268,
+                    "Boro":  480,
+                    "Aman":  247,
+                    "Aus":  251
+                },
+    "source_documents_represented":  310,
+    "source_pages_represented":  366,
+    "missing_values":  {
+                           "crop":  0,
+                           "season":  0,
+                           "region":  0,
+                           "district_coverage":  0,
+                           "standard_week":  0,
+                           "month":  2,
+                           "growth_stage":  939,
+                           "duration_min_days":  0,
+                           "duration_max_days":  0,
+                           "rainfall_mm":  0,
+                           "temp_min_c":  0,
+                           "temp_max_c":  0,
+                           "temp_mean_c":  0,
+                           "humidity_mean_pct":  1,
+                           "sunshine_hours":  0,
+                           "wind_speed_kmh":  25,
+                           "source_pdf":  0,
+                           "source_page":  0
+                       },
+    "processing_counts":  {
+                              "source_documents_read":  318,
+                              "calendars_examined":  378,
+                              "calendar_columns_examined":  7927,
+                              "identical_rows_removed":  21
+                          },
+    "excluded_by_reason":  {
+                               "unverified_low_resolution_scan":  1,
+                               "ambiguous_or_compressed_week_label":  13,
+                               "printed_crop_labels_conflict":  4,
+                               "duplicate_pdf":  1,
+                               "inconsistent_temperature_order":  21,
+                               "missing_core_weather_value":  4,
+                               "invalid_sunshine_hours":  20,
+                               "invalid_wind_speed_kmh":  1,
+                               "printed_season_labels_conflict":  5,
+                               "inconsistent_humidity_order":  9,
+                               "source_calendar_row_labels_inconsistent":  1,
+                               "repeated_week_in_single_season_calendar":  5,
+                               "printed_region_conflicts_with_folder":  1,
+                               "source_region_district_labels_conflict":  1
+                           },
+    "excluded_records":  [
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Wheat/Sylhet/2060.pdf",
+                                 "source_page":  1,
+                                 "reason":  "unverified_low_resolution_scan"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Papaya/Barishal/25072.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  30,
+                                 "reason":  "ambiguous_or_compressed_week_label",
+                                 "label":  "-12"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Papaya/Bogura/25074.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  30,
+                                 "reason":  "ambiguous_or_compressed_week_label",
+                                 "label":  "-12"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Papaya/Dhaka/25076.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  30,
+                                 "reason":  "ambiguous_or_compressed_week_label",
+                                 "label":  "-12"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Papaya/Dinajpur/25078.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  30,
+                                 "reason":  "ambiguous_or_compressed_week_label",
+                                 "label":  "-12"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Papaya/Jashore/25080.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  30,
+                                 "reason":  "ambiguous_or_compressed_week_label",
+                                 "label":  "-12"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Papaya/Mymensingh/25082.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  30,
+                                 "reason":  "ambiguous_or_compressed_week_label",
+                                 "label":  "-12"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Papaya/Rajshahi/25084.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  30,
+                                 "reason":  "ambiguous_or_compressed_week_label",
+                                 "label":  "-12"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Banana/Barishal/25591.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  31,
+                                 "reason":  "ambiguous_or_compressed_week_label",
+                                 "label":  "-2"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Banana/Bogura/25593.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  31,
+                                 "reason":  "ambiguous_or_compressed_week_label",
+                                 "label":  "-2"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Banana/Dhaka/25595.pdf",
+                                 "source_page":  1,
+                                 "reason":  "printed_crop_labels_conflict",
+                                 "header_crop":  "Papaya",
+                                 "title_crop":  "Banana"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Banana/Jashore/25597.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  31,
+                                 "reason":  "ambiguous_or_compressed_week_label",
+                                 "label":  "-2"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Banana/Mymensingh/25599.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  31,
+                                 "reason":  "ambiguous_or_compressed_week_label",
+                                 "label":  "-2"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Banana/Rangamati/25601.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  31,
+                                 "reason":  "ambiguous_or_compressed_week_label",
+                                 "label":  "-2"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Banana/Rangpur/25603.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  31,
+                                 "reason":  "ambiguous_or_compressed_week_label",
+                                 "label":  "-2"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Tomato/Bogura/26448.pdf",
+                                 "reason":  "duplicate_pdf"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Tomato/Cumilla/26452.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  10,
+                                 "standard_week":  45,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Tomato/Cumilla/26452.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  16,
+                                 "standard_week":  51,
+                                 "reason":  "missing_core_weather_value"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Tomato/Cumilla/26452.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  20,
+                                 "standard_week":  3,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Tomato/Cumilla/26452.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  21,
+                                 "standard_week":  4,
+                                 "reason":  "invalid_wind_speed_kmh"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Tomato/Dhaka/26454.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  11,
+                                 "standard_week":  15,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Tomato/Dinajpur/26457.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  7,
+                                 "standard_week":  15,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Tomato/Khulna/26460.pdf",
+                                 "source_page":  2,
+                                 "reason":  "printed_season_labels_conflict",
+                                 "header_season":  "Rabi",
+                                 "title_season":  "Kharif"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Tomato/Mymensingh/26462.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  11,
+                                 "standard_week":  46,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Tomato/Rajshahi/26464.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  7,
+                                 "standard_week":  50,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Onion/Cumilla/26470.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  1,
+                                 "standard_week":  5,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Onion/Dinajpur/26474.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  2,
+                                 "standard_week":  15,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Onion/Faridpur/26476.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  16,
+                                 "standard_week":  7,
+                                 "reason":  "inconsistent_humidity_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Onion/Mymensingh/26480.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  13,
+                                 "standard_week":  5,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Cumilla/26494.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  18,
+                                 "standard_week":  5,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Dinajpur/26497.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  19,
+                                 "standard_week":  15,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Dinajpur/26497.pdf",
+                                 "source_page":  3,
+                                 "calendar_column":  2,
+                                 "standard_week":  15,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  7,
+                                 "standard_week":  7,
+                                 "reason":  "inconsistent_humidity_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  11,
+                                 "standard_week":  24,
+                                 "reason":  "missing_core_weather_value"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  18,
+                                 "standard_week":  31,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  19,
+                                 "standard_week":  32,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  20,
+                                 "standard_week":  33,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  21,
+                                 "standard_week":  34,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  22,
+                                 "standard_week":  35,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  23,
+                                 "standard_week":  36,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  24,
+                                 "standard_week":  37,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  25,
+                                 "standard_week":  38,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  26,
+                                 "standard_week":  39,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Jashore/26500.pdf",
+                                 "source_page":  1,
+                                 "reason":  "printed_crop_labels_conflict",
+                                 "header_crop":  "Bottle Gourd",
+                                 "title_crop":  "Chilli"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Jashore/26500.pdf",
+                                 "source_page":  2,
+                                 "reason":  "printed_crop_labels_conflict",
+                                 "header_crop":  "Chilli",
+                                 "title_crop":  "Bottle Gourd"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Rajshahi/26506.pdf",
+                                 "source_page":  2,
+                                 "reason":  "source_calendar_row_labels_inconsistent"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Rangpur/26509.pdf",
+                                 "source_page":  3,
+                                 "calendar_column":  18,
+                                 "reason":  "repeated_week_in_single_season_calendar",
+                                 "standard_week":  16
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Rangpur/26509.pdf",
+                                 "source_page":  3,
+                                 "calendar_column":  19,
+                                 "reason":  "repeated_week_in_single_season_calendar",
+                                 "standard_week":  17
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Rangpur/26509.pdf",
+                                 "source_page":  3,
+                                 "calendar_column":  20,
+                                 "reason":  "repeated_week_in_single_season_calendar",
+                                 "standard_week":  18
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Rangpur/26509.pdf",
+                                 "source_page":  3,
+                                 "calendar_column":  21,
+                                 "reason":  "repeated_week_in_single_season_calendar",
+                                 "standard_week":  19
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pepper/Rangpur/26509.pdf",
+                                 "source_page":  3,
+                                 "calendar_column":  22,
+                                 "reason":  "repeated_week_in_single_season_calendar",
+                                 "standard_week":  20
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Garlic/Cumilla/26514.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  18,
+                                 "standard_week":  5,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Garlic/Dinajpur/26518.pdf",
+                                 "source_page":  1,
+                                 "reason":  "printed_region_conflicts_with_folder",
+                                 "printed_region":  "jashore",
+                                 "folder_region":  "Dinajpur"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Garlic/Faridpur/26520.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  16,
+                                 "standard_week":  7,
+                                 "reason":  "inconsistent_humidity_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pumpkin/Dhaka/26534.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  5,
+                                 "standard_week":  46,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pumpkin/Dhaka/26534.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  7,
+                                 "standard_week":  15,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pointed Gourd/Dhaka/26538.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  11,
+                                 "standard_week":  15,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pointed Gourd/Dhaka/26538.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  9,
+                                 "standard_week":  52,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Gourd/Jashore/26963.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  14,
+                                 "standard_week":  1,
+                                 "reason":  "missing_core_weather_value"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  1,
+                                 "standard_week":  31,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  2,
+                                 "standard_week":  32,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  3,
+                                 "standard_week":  33,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  4,
+                                 "standard_week":  34,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  5,
+                                 "standard_week":  35,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  6,
+                                 "standard_week":  36,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  7,
+                                 "standard_week":  37,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  8,
+                                 "standard_week":  38,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  9,
+                                 "standard_week":  39,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  10,
+                                 "standard_week":  40,
+                                 "reason":  "invalid_sunshine_hours"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Cucumber/Rajshahi/27005.pdf",
+                                 "source_page":  2,
+                                 "reason":  "printed_season_labels_conflict",
+                                 "header_season":  "Rabi",
+                                 "title_season":  "Kharif"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pointed Gourd/Cumilla/27393.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  1,
+                                 "standard_week":  5,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Brinjal/Barishal/27405.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  19,
+                                 "standard_week":  26,
+                                 "reason":  "inconsistent_humidity_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Brinjal/Barishal/27405.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  21,
+                                 "standard_week":  28,
+                                 "reason":  "inconsistent_humidity_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Brinjal/Cumilla/27411.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  18,
+                                 "standard_week":  5,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pumpkin/Barishal/27423.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  17,
+                                 "standard_week":  26,
+                                 "reason":  "inconsistent_humidity_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pumpkin/Bogura/27426.pdf",
+                                 "source_page":  2,
+                                 "reason":  "printed_season_labels_conflict",
+                                 "header_season":  "Rabi",
+                                 "title_season":  "Kharif"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pumpkin/Cumilla/27430.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  16,
+                                 "standard_week":  5,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pumpkin/Cumilla/27430.pdf",
+                                 "source_page":  2,
+                                 "reason":  "printed_season_labels_conflict",
+                                 "header_season":  "Rabi",
+                                 "title_season":  "Kharif"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pumpkin/Rajshahi/27438.pdf",
+                                 "source_page":  2,
+                                 "calendar_column":  19,
+                                 "standard_week":  32,
+                                 "reason":  "missing_core_weather_value"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pumpkin/Sylhet/27439.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  1,
+                                 "standard_week":  40,
+                                 "reason":  "inconsistent_humidity_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Pumpkin/Sylhet/27439.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  2,
+                                 "standard_week":  41,
+                                 "reason":  "inconsistent_humidity_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Rice Aus/Dinajpur/5068.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  5,
+                                 "standard_week":  15,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Rice Aman/Mymensingh/5084.pdf",
+                                 "source_page":  1,
+                                 "reason":  "printed_season_labels_conflict",
+                                 "header_season":  "Aman",
+                                 "title_season":  "Aus"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Rice Boro/Cumilla/5099.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  16,
+                                 "standard_week":  5,
+                                 "reason":  "inconsistent_temperature_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Rice Boro/Faridpur/5102.pdf",
+                                 "source_page":  1,
+                                 "calendar_column":  19,
+                                 "standard_week":  7,
+                                 "reason":  "inconsistent_humidity_order"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Wheat/Faridpur/5112.pdf",
+                                 "source_page":  1,
+                                 "reason":  "printed_crop_labels_conflict",
+                                 "header_crop":  "Wheat",
+                                 "title_crop":  "Maize"
+                             },
+                             {
+                                 "source_pdf":  "BAMIS_All_Crops/Onion/Mymensingh/26480.pdf",
+                                 "reason":  "source_region_district_labels_conflict",
+                                 "detail":  "folder/title Mymensingh conflict with Cumilla table and districts; excluded rather than silently reassigned"
+                             }
+                         ],
+    "label_corrections":  [
+                              {
+                                  "source_pdf":  "BAMIS_All_Crops/Gourd/Khulna/26965.pdf",
+                                  "source_page":  1,
+                                  "correction":  "crop_from_agreeing_printed_labels",
+                                  "crop":  "Pointed Gourd",
+                                  "folder_crop":  "Bottle Gourd"
+                              },
+                              {
+                                  "source_pdf":  "BAMIS_All_Crops/Gourd/Khulna/26965.pdf",
+                                  "source_page":  2,
+                                  "correction":  "crop_from_agreeing_printed_labels",
+                                  "crop":  "Pointed Gourd",
+                                  "folder_crop":  "Bottle Gourd"
+                              },
+                              {
+                                  "source_pdf":  "BAMIS_All_Crops/Ground nut (Robi)/Jashore/9914.pdf",
+                                  "correction":  "district_coverage_from_region_consensus",
+                                  "region":  "Jashore",
+                                  "district_coverage":  [
+                                                            "Chuadanga",
+                                                            "Jashore",
+                                                            "Jhenaidah",
+                                                            "Kushtia",
+                                                            "Magura",
+                                                            "Meherpur"
+                                                        ],
+                                  "detail":  "printed districts list Rangpur-area districts; use Jashore region coverage; folder/title/table agree and weekly weather matches Jashore 21/21"
+                              },
+                              {
+                                  "source_pdf":  "BAMIS_All_Crops/Pointed Gourd/Dinajpur/27396.pdf",
+                                  "correction":  "district_coverage_from_region_consensus",
+                                  "region":  "Dinajpur",
+                                  "district_coverage":  [
+                                                            "Dinajpur",
+                                                            "Panchagarh",
+                                                            "Thakurgaon"
+                                                        ],
+                                  "detail":  "printed districts list Rajshahi-area districts; use Dinajpur region coverage; folder/title/table agree and weekly weather matches Dinajpur 21/21"
+                              },
+                              {
+                                  "source_pdf":  "BAMIS_All_Crops/Pointed Gourd/Rangpur/27404.pdf",
+                                  "correction":  "district_coverage_from_region_consensus",
+                                  "region":  "Rangpur",
+                                  "district_coverage":  [
+                                                            "Gaibandha",
+                                                            "Kurigram",
+                                                            "Lalmonirhat",
+                                                            "Nilphamari",
+                                                            "Rangpur"
+                                                        ],
+                                  "detail":  "printed districts list Rajshahi-area districts; use Rangpur region coverage; folder/title/table agree and weekly weather matches Rangpur 21/21"
+                              }
+                          ],
+    "meaning":  "Printed BAMIS crop-calendar weather normals for crop/season/week context. These values are not favorable-weather requirements, actual crop outcomes, yield, or suitability labels.",
+    "project_fit":  "Soil to Stars crop calendar and regional climate features. No frontend demo scores were used. Soil pH, salinity, irrigation capacity, crop-family sequence rules, outcomes and NASA historical series require separate evidence.",
+    "missingness":  "Blank = not unambiguously supplied by the source; never zero-filled. Unspecified season = no explicit season label. Stage follows the printed calendar geometry; not an independent agronomic validation.",
+    "training_split":  "Group by region and source calendar when splitting. Multiple crop calendars repeat regional weather normals; a random row split can leak this shared context.",
+    "retained_source_archive":  "BAMIS_Dataset contains raw extraction for review, excluded details, and future use.",
+    "district_mapping_file":  "bamis_region_district_mapping.csv",
+    "district_mapping_rows":  64,
+    "districts_mapped":  64,
+    "administrative_divisions_mapped":  8
+}
