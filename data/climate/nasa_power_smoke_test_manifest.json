@@ -1,0 +1,333 @@
+{
+  "collection_id": "nasa-power-daily-bgd-64-v1",
+  "configuration_fingerprint": "263a4971369df656d68818f594f7a23fd73e46036d7130980e45bda8f8aa2733",
+  "limitations": [
+    "Smoke success does not verify all 64 districts or the complete 2001-2025 period.",
+    "Raw responses remain in ignored cache storage and are referenced by checksum/path.",
+    "No NASA grid-cell IDs are created; response geometry is preserved as returned metadata."
+  ],
+  "recorded_at_utc": "2026-11-12T20:20:17Z",
+  "registry_sha256": "0b31748796de714f73de135ee3e0ec77c2e44813985d790b44f2d62e18c62dfa",
+  "requested_full_coverage": {
+    "availability_evidence": "Daily UTC and LST are documented from 1981-01-01 to near real time; parameter-specific response availability remains subject to validation.",
+    "end": "20251231",
+    "end_iso": "2025-12-31",
+    "fill_value": -999,
+    "parameters": {
+      "PRECTOTCORR": {
+        "definition": "Average MERRA-2 bias-corrected total precipitation at the surface.",
+        "name": "Precipitation Corrected",
+        "units": "mm/day"
+      },
+      "T2M": {
+        "definition": "Average air temperature at 2 meters.",
+        "name": "Temperature at 2 Meters",
+        "units": "C"
+      },
+      "T2M_MAX": {
+        "definition": "Maximum hourly air temperature at 2 meters in the daily period.",
+        "name": "Temperature at 2 Meters Maximum",
+        "units": "C"
+      },
+      "T2M_MIN": {
+        "definition": "Minimum hourly air temperature at 2 meters in the daily period.",
+        "name": "Temperature at 2 Meters Minimum",
+        "units": "C"
+      }
+    },
+    "start": "20010101",
+    "start_iso": "2001-01-01",
+    "temporal": "daily"
+  },
+  "results": [
+    {
+      "district_id": "bd-district-bagerhat",
+      "end": "20010131",
+      "http_status": 200,
+      "raw_bytes": 2742,
+      "raw_path": "cache/nasa_power/nasa-power-daily-bgd-64-v1/raw/bd-district-bagerhat/20010101_20010131.json",
+      "raw_sha256": "6dcfe644ba035434666f37619b76beebe3a587c70e19d16a7999a70bf29c08ef",
+      "request_id": "bd-district-bagerhat__20010101_20010131",
+      "request_parameters": {
+        "community": "AG",
+        "end": "20010131",
+        "format": "JSON",
+        "latitude": "22.530353",
+        "longitude": "89.756761",
+        "parameters": "PRECTOTCORR,T2M,T2M_MIN,T2M_MAX",
+        "start": "20010101",
+        "time-standard": "LST",
+        "units": "metric"
+      },
+      "resume_status": "cached_verified",
+      "retrieved_at_utc": "2026-11-12T20:13:38Z",
+      "start": "20010101",
+      "status": "downloaded_verified",
+      "validation": {
+        "actual_end": "20010131",
+        "actual_start": "20010101",
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.3"
+        },
+        "date_count": 31,
+        "fill_counts": {
+          "PRECTOTCORR": 0,
+          "T2M": 0,
+          "T2M_MAX": 0,
+          "T2M_MIN": 0
+        },
+        "fill_value": -999.0,
+        "parameter_names": [
+          "PRECTOTCORR",
+          "T2M",
+          "T2M_MAX",
+          "T2M_MIN"
+        ],
+        "response_geometry": {
+          "coordinates": [
+            89.757,
+            22.53,
+            5.34
+          ],
+          "type": "Point"
+        },
+        "sources": [
+          "MERRA2",
+          "POWER"
+        ],
+        "status": "valid",
+        "time_standard": "LST",
+        "title": "NASA/POWER Source Native Resolution Daily Data",
+        "units": {
+          "PRECTOTCORR": "mm/day",
+          "T2M": "C",
+          "T2M_MAX": "C",
+          "T2M_MIN": "C"
+        }
+      }
+    },
+    {
+      "district_id": "bd-district-bagerhat",
+      "end": "20250131",
+      "http_status": 200,
+      "raw_bytes": 2752,
+      "raw_path": "cache/nasa_power/nasa-power-daily-bgd-64-v1/raw/bd-district-bagerhat/20250101_20250131.json",
+      "raw_sha256": "447fd282194b7b70d62b5d5ecdf3167f34062e7602eb00145fef787bedf8dfe3",
+      "request_id": "bd-district-bagerhat__20250101_20250131",
+      "request_parameters": {
+        "community": "AG",
+        "end": "20250131",
+        "format": "JSON",
+        "latitude": "22.530353",
+        "longitude": "89.756761",
+        "parameters": "PRECTOTCORR,T2M,T2M_MIN,T2M_MAX",
+        "start": "20250101",
+        "time-standard": "LST",
+        "units": "metric"
+      },
+      "resume_status": "cached_verified",
+      "retrieved_at_utc": "2026-11-12T20:13:40Z",
+      "start": "20250101",
+      "status": "downloaded_verified",
+      "validation": {
+        "actual_end": "20250131",
+        "actual_start": "20250101",
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.3"
+        },
+        "date_count": 31,
+        "fill_counts": {
+          "PRECTOTCORR": 0,
+          "T2M": 0,
+          "T2M_MAX": 0,
+          "T2M_MIN": 0
+        },
+        "fill_value": -999.0,
+        "parameter_names": [
+          "PRECTOTCORR",
+          "T2M",
+          "T2M_MAX",
+          "T2M_MIN"
+        ],
+        "response_geometry": {
+          "coordinates": [
+            89.757,
+            22.53,
+            5.34
+          ],
+          "type": "Point"
+        },
+        "sources": [
+          "MERRA2",
+          "POWER"
+        ],
+        "status": "valid",
+        "time_standard": "LST",
+        "title": "NASA/POWER Source Native Resolution Daily Data",
+        "units": {
+          "PRECTOTCORR": "mm/day",
+          "T2M": "C",
+          "T2M_MAX": "C",
+          "T2M_MIN": "C"
+        }
+      }
+    },
+    {
+      "district_id": "bd-district-rangamati",
+      "end": "20010131",
+      "http_status": 200,
+      "raw_bytes": 2748,
+      "raw_path": "cache/nasa_power/nasa-power-daily-bgd-64-v1/raw/bd-district-rangamati/20010101_20010131.json",
+      "raw_sha256": "be8f0f33fa1647bfcb2eea9d491efdbf083d9381ee2bc551fe743921488f12c7",
+      "request_id": "bd-district-rangamati__20010101_20010131",
+      "request_parameters": {
+        "community": "AG",
+        "end": "20010131",
+        "format": "JSON",
+        "latitude": "22.796093",
+        "longitude": "92.223285",
+        "parameters": "PRECTOTCORR,T2M,T2M_MIN,T2M_MAX",
+        "start": "20010101",
+        "time-standard": "LST",
+        "units": "metric"
+      },
+      "resume_status": "cached_verified",
+      "retrieved_at_utc": "2026-11-12T20:13:42Z",
+      "start": "20010101",
+      "status": "downloaded_verified",
+      "validation": {
+        "actual_end": "20010131",
+        "actual_start": "20010101",
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.3"
+        },
+        "date_count": 31,
+        "fill_counts": {
+          "PRECTOTCORR": 0,
+          "T2M": 0,
+          "T2M_MAX": 0,
+          "T2M_MIN": 0
+        },
+        "fill_value": -999.0,
+        "parameter_names": [
+          "PRECTOTCORR",
+          "T2M",
+          "T2M_MAX",
+          "T2M_MIN"
+        ],
+        "response_geometry": {
+          "coordinates": [
+            92.223,
+            22.796,
+            299.21
+          ],
+          "type": "Point"
+        },
+        "sources": [
+          "MERRA2",
+          "POWER"
+        ],
+        "status": "valid",
+        "time_standard": "LST",
+        "title": "NASA/POWER Source Native Resolution Daily Data",
+        "units": {
+          "PRECTOTCORR": "mm/day",
+          "T2M": "C",
+          "T2M_MAX": "C",
+          "T2M_MIN": "C"
+        }
+      }
+    },
+    {
+      "district_id": "bd-district-rangamati",
+      "end": "20250131",
+      "http_status": 200,
+      "raw_bytes": 2761,
+      "raw_path": "cache/nasa_power/nasa-power-daily-bgd-64-v1/raw/bd-district-rangamati/20250101_20250131.json",
+      "raw_sha256": "203e70e33efabde0d2154502239fdc7862d40652a9cc6ef91974116f0eea5797",
+      "request_id": "bd-district-rangamati__20250101_20250131",
+      "request_parameters": {
+        "community": "AG",
+        "end": "20250131",
+        "format": "JSON",
+        "latitude": "22.796093",
+        "longitude": "92.223285",
+        "parameters": "PRECTOTCORR,T2M,T2M_MIN,T2M_MAX",
+        "start": "20250101",
+        "time-standard": "LST",
+        "units": "metric"
+      },
+      "resume_status": "cached_verified",
+      "retrieved_at_utc": "2026-11-12T20:13:44Z",
+      "start": "20250101",
+      "status": "downloaded_verified",
+      "validation": {
+        "actual_end": "20250131",
+        "actual_start": "20250101",
+        "api": {
+          "name": "POWER Daily API",
+          "version": "v2.10.3"
+        },
+        "date_count": 31,
+        "fill_counts": {
+          "PRECTOTCORR": 0,
+          "T2M": 0,
+          "T2M_MAX": 0,
+          "T2M_MIN": 0
+        },
+        "fill_value": -999.0,
+        "parameter_names": [
+          "PRECTOTCORR",
+          "T2M",
+          "T2M_MAX",
+          "T2M_MIN"
+        ],
+        "response_geometry": {
+          "coordinates": [
+            92.223,
+            22.796,
+            299.21
+          ],
+          "type": "Point"
+        },
+        "sources": [
+          "MERRA2",
+          "POWER"
+        ],
+        "status": "valid",
+        "time_standard": "LST",
+        "title": "NASA/POWER Source Native Resolution Daily Data",
+        "units": {
+          "PRECTOTCORR": "mm/day",
+          "T2M": "C",
+          "T2M_MAX": "C",
+          "T2M_MIN": "C"
+        }
+      }
+    }
+  ],
+  "schema_version": "1.0.0",
+  "scope": "Exactly two configured districts × January 2001 and January 2025; four requests maximum.",
+  "verified_actual_coverage": {
+    "district_ids": [
+      "bd-district-bagerhat",
+      "bd-district-rangamati"
+    ],
+    "failed_requests": 0,
+    "periods": [
+      [
+        "20010101",
+        "20010131"
+      ],
+      [
+        "20250101",
+        "20250131"
+      ]
+    ],
+    "status": "smoke_test_only",
+    "successful_requests": 4
+  }
+}

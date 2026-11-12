@@ -2,4 +2,9 @@
 
 Place downloaded NASA and partner data here during acquisition. Git ignores the contents of this directory. Each processed dataset should have a provenance record before it is used in an analysis: product/version, URL or DOI, download date, coordinates or polygon, time range, units, transformations, and quality checks.
 
-No data has been downloaded for this project yet.
+The Step 2 NASA POWER smoke test stores four verified raw JSON responses and
+their request manifests under `cache/nasa_power/nasa-power-daily-bgd-64-v1/`.
+These ignored files cover Bagerhat and Rangamati for January 2001 and January
+2025 only. They are not a full historical or nationwide collection; checked-in
+evidence and checksums are in
+`data/climate/nasa_power_smoke_test_manifest.json`.

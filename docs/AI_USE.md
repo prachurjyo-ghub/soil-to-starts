@@ -563,4 +563,102 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Next action / owner:** Fardin prepares and checks the s01 draft before authorized branch delivery.
 
 **Task / source:** G0-CONTRACT; Current explicit G0-CONTRACT s01 draft and delivery instruction
+
+## Saim — Prompt 001
+
+<a id="saim-001"></a>
+<a id="p-f231b8aa1983"></a>
+<!-- record-id: P-f231b8aa1983 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-12T19:45:01Z -->
+
+**Member:** saim
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Create and validate a nationwide registry with one newly derived interior sampling point for each of Bangladesh's 64 districts, without downloading weather data or advancing G0.
+
+**Purpose / AI contribution:** Inspect the pinned administrative assets; implement a deterministic offline point-on-surface generator and checker; document provenance, coordinate order, checksums, validation and limitations.
+
+**Human contribution:** Saim set the 64-district scope, prohibited reuse of prior weather coordinates, authorized work independently of G0 and limited delivery to Step 1.
+
+**Changed files:** data/climate/district_sampling_registry.csv; data/climate/district_sampling_manifest.json; docs/data/NATIONWIDE_SAMPLING.md; src/acquire/build_district_sampling_registry.py; src/acquire/README.md; docs/DATA_SOURCES.md
+
+**Actual outcome:** The registry contains 64 unique complete rows; all 64 points are strict unique interiors and independently resolve to their assigned districts. Generation is byte-reproducible from the pinned geometry; no weather observations were downloaded, G0 was unchanged and human method/source review remains pending.
+
+**Review / limitations:** Administrative geometry is simplified and has a 2020 represented-year versus as-of-2015 source-title discrepancy. One point is regional grid context, not a district average or farm measurement.
+
+**Next action / owner:** An independent teammate should review the source provenance and sampling method before Step 2 weather collection.
+
+**Task / source:** CLIMATE-SAMPLING; Current Saim Step 1 implementation instruction
+
+## Saim — Prompt 002
+
+<a id="saim-002"></a>
+<a id="p-e85f784a5655"></a>
+<!-- record-id: P-e85f784a5655 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-12T20:21:42Z -->
+
+**Member:** saim
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Build and verify a versioned NASA POWER configuration and resilient downloader with exactly four smoke requests, without starting the full 64-district historical collection or advancing G0.
+
+**Purpose / AI contribution:** Verify official POWER parameters, units, availability and service restrictions; implement dry-run, structural validation, raw-byte preservation, retries, safe resume and synthetic tests; record live smoke evidence.
+
+**Human contribution:** Saim set the 64-point 2001-2025 scope, required AG daily precipitation and temperature in explicit LST, limited live acquisition to two districts and two months, and prohibited full collection or G0 acceptance.
+
+**Changed files:** data/climate/nasa_power_daily_v1.json; data/climate/nasa_power_smoke_test_manifest.json; src/acquire/download_nasa_power.py; tests/test_nasa_power_acquire.py; docs/data/NASA_POWER_ACQUISITION.md; src/acquire/README.md; cache/README.md; docs/DATA_SOURCES.md
+
+**Actual outcome:** The 64-point configuration plans 1,600 annual requests. Seven synthetic tests and all four Bagerhat/Rangamati January 2001/2025 smoke requests passed exact date, parameter, unit, LST, fill and checksum validation; raw bytes remain in ignored cache. The full collection was not run, G0 was unchanged and human review remains pending.
+
+**Review / limitations:** POWER documents at most five concurrent requests but no requests-per-second quota; the client uses one. Same-grid deduplication and full-period availability remain unresolved before the guarded full run.
+
+**Next action / owner:** An independent teammate should review the POWER contract and same-grid strategy before authorizing the full command.
+
+**Task / source:** CLIMATE-POWER-ACQUIRE; Current Saim Step 2 implementation instruction
+
+## Saim — Prompt 003
+
+<a id="saim-003"></a>
+<a id="p-0472fd2ed2f7"></a>
+<!-- record-id: P-0472fd2ed2f7 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-12T20:34:24Z -->
+
+**Member:** saim
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Resolve NASA POWER request redundancy with official evidence, then execute the full 64-district 2001-2025 collection only if a parameter-complete reuse method is defensible.
+
+**Purpose / AI contribution:** Review official POWER grid/source/schema evidence, preserve smoke metadata, implement a checksum-bound execution gate, and generate a complete district-to-request dry-run plan and honest acquisition summary.
+
+**Human contribution:** Saim authorized the full historical collection conditionally on a defensible reuse method, required all 64 district points and four parameters to remain traceable, and required the process to stop rather than guess grid equivalence.
+
+**Changed files:** data/climate/nasa_power_request_reuse_v1.json; data/climate/nasa_power_full_acquisition_plan.json; data/climate/nasa_power_full_acquisition_summary.json; src/acquire/download_nasa_power.py; tests/test_nasa_power_acquire.py; docs/data/NASA_POWER_REDUNDANCY_REVIEW.md; docs/data/NASA_POWER_ACQUISITION.md; docs/DATA_SOURCES.md; src/acquire/README.md; docs/tasks/CLIMATE-POWER-FULL.json
+
+**Before → After:** The downloader had a generic full-run confirmation flag but no evidence-bound same-grid decision; it now refuses full execution until an authoritative parameter-complete equivalence mapping is checked in.
+
+**Actual outcome:** Official sources exposed no defensible point-to-cell equivalence key, so the exact full command stopped before network access. The plan records 1,600 pending logical chunks, zero safe reuses and zero full coverage; 10 targeted and 70 repository tests passed. The four smoke responses remain intact, G0 was unchanged and no commit or push occurred.
+
+**Review / limitations:** The Daily API grid warning and meteorological native-resolution documentation differ, while OpenAPI v2.10.3 defines no cell identifier or snapping rule. Official clarification and independent review remain required.
+
+**Next action / owner:** Saim or an independent reviewer should obtain official parameter-complete grid-equivalence guidance, update and review the checksum-bound mapping, then run the documented resume command.
+
+**Task / source:** CLIMATE-POWER-FULL; Current Saim Step 3 implementation instruction
 <!-- workflow:ai-records:end -->

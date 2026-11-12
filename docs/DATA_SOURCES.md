@@ -1,10 +1,10 @@
 # Data sources and provenance
 
-**Integration status: planned.** [MVP_SCOPE](MVP_SCOPE.md) requires one reviewed pilot POWER record; [FUTURE_ROADMAP](FUTURE_ROADMAP.md) defers extra products until separately activated. The current app uses illustrative values, not the datasets below. Listing a dataset here does not mean it has been downloaded, processed, or used in a result.
+**Scientific integration status: planned.** A four-request NASA POWER acquisition smoke test is complete, but Step 3 stopped before full acquisition because no authoritative parameter-complete request-reuse mapping was found. No response is integrated into the app, API, indicators or recommendations. [MVP_SCOPE](MVP_SCOPE.md) requires reviewed evidence; [FUTURE_ROADMAP](FUTURE_ROADMAP.md) defers extra products until separately activated. The current app uses illustrative values, not the datasets below.
 
 | Source | Intended role | Current status and caveat |
 | --- | --- | --- |
-| [NASA POWER daily API](https://power.larc.nasa.gov/docs/services/api/temporal/daily/) | Daily precipitation and temperature for season indicators; possibly solar radiation for context | First acquisition target. Document selected parameter IDs, grid point, time standard, units, missing values, and retrieval date. POWER gives gridded regional context, not a field rain gauge. |
+| [NASA POWER daily API](https://power.larc.nasa.gov/docs/services/api/temporal/daily/) | Daily precipitation and temperature for season indicators | [Configuration and four-request smoke evidence](data/NASA_POWER_ACQUISITION.md) exist for `PRECTOTCORR`, `T2M`, `T2M_MIN`, `T2M_MAX` in AG metric units and explicit LST. The [request-reuse review](data/NASA_POWER_REDUNDANCY_REVIEW.md) records why all 1,600 full chunks remain pending. Full 64-point history is not downloaded or integrated. POWER gives gridded regional context, not a field rain gauge or district average. |
 | [GPM IMERG Final Run](https://gpm.nasa.gov/data/directory/imerg-final-run-pps-research-gis) | Spatial rainfall comparison where a point series is insufficient | Optional. Choose an exact product/version and aggregation method; do not mix precipitation rate and accumulation. |
 | [SMAP enhanced L3 soil moisture, v6](https://nsidc.org/data/spl3smp_e/versions/6) | Regional surface-soil-moisture context for water stress | Optional. The product is daily at a 9 km grid and begins in 2015, so it cannot support a 2001-onward soil-moisture comparison. Check quality flags and local representativeness. |
 | [MODIS vegetation indices](https://lpdaac.usgs.gov/products/mod13q1v061/) | Observe broad vegetation patterns and help validate season timing | Optional. Select the exact collection, quality mask, spatial subset, and crop/land-cover mask before interpreting NDVI as farm activity. |
@@ -41,3 +41,12 @@ The mounted intake uses the [Bangladesh National Portal district list](https://b
 [geoBoundaries gbOpen BGD ADM2 metadata](https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM2/) identifies `BGD-ADM2-16705992`, BBS / OCHA ROAP sources and CC BY 3.0 IGO. The downloaded simplified geometry is pinned to upstream revision `9469f09`; metadata declares represented year 2020, while its source link says as of 2015. This discrepancy and unknown positional accuracy remain explicit. [Local snapshot, aliases and rebuild](../data/admin/README.md) retain the source, retrieval timestamp, license and checksums. [Runtime manifest](../prototype/public/reference/data/district-boundaries.manifest.json) records processing, version `BGD-ADM2-16705992@9469f09-local1`, 64 features and 38,112 vertices.
 
 The runtime asset is 1,494,403 bytes (507,697 bytes with deterministic gzip). Loading and integrity checking are lazy for map selection/saved point rechecking; district-only intake needs neither geometry nor the MapLibre code chunk. Coordinates are unchanged from upstream simplified geometry. No scientific network acquisition runs on intake. OpenFreeMap supplies remote street/reference tiles with visible OpenFreeMap, OpenMapTiles and OpenStreetMap attribution; it is not satellite imagery or a local offline map. Administrative geometry gives location context only, never national advice coverage or surveyed field precision.
+
+## Nationwide climate sampling registry (coordinates only)
+
+Step 1 of the independently authorized nationwide climate work is documented in
+[NATIONWIDE_SAMPLING](data/NATIONWIDE_SAMPLING.md). It derives one new,
+strictly contained WGS84 point for each of the 64 districts from the pinned
+administrative geometry. The registry contains no weather observations and is
+not a district-average, field-measurement or NASA-grid-ID dataset. Acquisition
+remains a later step.
