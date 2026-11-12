@@ -926,4 +926,36 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Next action / owner:** A teammate reviews the preflight evidence and unresolved extraction/alignment decisions before any broader acquisition authorization.
 
 **Task / source:** CLIMATE-POWER-REGIONAL-PREFLIGHT; Current Saim commit and push instruction
+
+## Saim — Prompt 012
+
+<a id="saim-012"></a>
+<a id="p-eed08753ed0a"></a>
+<!-- record-id: P-eed08753ed0a -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-12T21:35:48Z -->
+
+**Member:** saim
+
+**Tool:** Codex
+
+**Type:** commit
+
+**Refined implementation prompt (AI-written):** Update main2 and merge the completed nationwide NASA POWER feature branch into it.
+
+**Purpose / AI contribution:** Integrate the reviewed Step 3C preflight implementation and evidence with the existing main2 BAMIS work while preserving both source records.
+
+**Human contribution:** Saim explicitly authorized pulling and checking out main2, then merging feature/saim-nasa-power-nationwide into it.
+
+**Changed files:** The Step 3C Regional preflight files from feature/saim-nasa-power-nationwide and the combined docs/DATA_SOURCES.md provenance record.
+
+**Actual outcome:** Merged feature/saim-nasa-power-nationwide into local main2 as 78c17c430aa35bca2f74e20fe46dfeb5fe843ed1. One DATA_SOURCES.md conflict was resolved by retaining main2 BAMIS/Rajshahi evidence and the feature branch NASA preflight update; six Regional tests, all 76 repository tests and workflow validation passed.
+
+**Review / limitations:** The merge is local only and main2 has not been pushed. CLIMATE-POWER-REGIONAL-PREFLIGHT remains in_review with district extraction and cross-parameter alignment unresolved.
+
+**Next action / owner:** Review the local main2 merge and explicitly authorize pushing main2 if remote publication is desired.
+
+**Task / source:** CLIMATE-POWER-REGIONAL-PREFLIGHT; Current Saim checkout and merge instruction
 <!-- workflow:ai-records:end -->
