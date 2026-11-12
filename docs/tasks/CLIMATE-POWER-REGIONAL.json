@@ -68,7 +68,7 @@
     "evidence": ""
   },
   "merge_ref": null,
-  "branch": null,
+  "branch": "feature/saim-nasa-power-nationwide",
   "issue": null,
   "next_action": "An independent teammate should review the Regional output-coordinate join, nearest-node method change and national-edge preflight proposal before any full historical acquisition.",
   "handoff": "Record the next consumer and reproduction steps before review."

@@ -757,4 +757,66 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Next action / owner:** A different teammate reviews the output-coordinate join, nearest-node distances and one-year national-extent preflight proposal before any historical execution.
 
 **Task / source:** CLIMATE-POWER-REGIONAL; Current Saim Step 3B implementation instruction
+
+## Saim — Prompt 007
+
+<a id="saim-007"></a>
+<a id="p-a68941c20ad8"></a>
+<!-- record-id: P-a68941c20ad8 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-12T21:09:43Z -->
+
+**Member:** saim
+
+**Tool:** Codex
+
+**Type:** commit
+
+**Refined implementation prompt (AI-written):** Commit the completed NASA POWER Regional Step 3B implementation and smoke-test evidence with the existing nationwide climate branch history.
+
+**Purpose / AI contribution:** Package the separate Regional API client, bounded live evidence, tests and proposal for review without changing the blocked Point gate or G0.
+
+**Human contribution:** Saim explicitly authorized retrying branch delivery for the nationwide NASA POWER steps.
+
+**Changed files:** Regional configuration and smoke manifest, regional downloader and tests, acquisition proposal, source/cache documentation, task evidence and generated progress views.
+
+**Actual outcome:** Committed the validated 13-file Step 3B scope as bf4e8bb2e786d27e0367f5e84dbfee0cf3521123 with message feat(climate): evaluate NASA POWER regional acquisition. The commit follows the existing Steps 1-3 branch history; no merge, review acceptance or G0 advancement was performed.
+
+**Review / limitations:** The Regional task remains in_review and full historical collection still requires the documented method review and national-extent preflight.
+
+**Next action / owner:** Push the feature branch and verify the exact remote SHA.
+
+**Task / source:** CLIMATE-POWER-REGIONAL; Current Saim retry-push instruction
+
+## Saim — Prompt 008
+
+<a id="saim-008"></a>
+<a id="p-64868289a1cc"></a>
+<!-- record-id: P-64868289a1cc -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-12T21:09:43Z -->
+
+**Member:** saim
+
+**Tool:** Codex
+
+**Type:** push
+
+**Refined implementation prompt (AI-written):** Push the complete nationwide NASA POWER branch, including the Regional Step 3B evaluation, to origin.
+
+**Purpose / AI contribution:** Publish the reviewable Steps 1-3B climate work without merging, deploying or changing scientific acceptance.
+
+**Human contribution:** Saim explicitly requested another push attempt after repository access was corrected.
+
+**Actual outcome:** Pushed feature/saim-nasa-power-nationwide to origin and set upstream tracking. GitHub ref readback matched bf4e8bb2e786d27e0367f5e84dbfee0cf3521123 exactly; no pull request, merge or acceptance was created.
+
+**Review / limitations:** Remote branch delivery is verified, but independent scientific review and the Regional preflight blockers remain open.
+
+**Next action / owner:** A teammate reviews the branch; do not run the full historical collection until the recorded Regional blockers are resolved.
+
+**Task / source:** CLIMATE-POWER-REGIONAL; Current Saim retry-push instruction
 <!-- workflow:ai-records:end -->
