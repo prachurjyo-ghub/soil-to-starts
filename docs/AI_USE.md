@@ -1118,4 +1118,68 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Next action / owner:** Commit the verified source/evidence changes, push main2 and record the actual result.
 
 **Task / source:** CLIMATE-DATA-PACKAGE; Saim explicitly requested pushing all completed work to main2
+
+## Saim — Prompt 018
+
+<a id="saim-018"></a>
+<a id="p-e13f02a4f490"></a>
+<!-- record-id: P-e13f02a4f490 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T09:44:02Z -->
+
+**Member:** saim
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Verify the existing climate archive, assemble a complete local folder for Fardin, retest offline reproduction and document consumption and crop-evidence compatibility without uploading or changing scientific data.
+
+**Purpose / AI contribution:** Verify actual local data availability, copy existing sealed artifacts into one transfer folder, add exact recipient commands and consumer/parameter documentation, and retest away from the working cache.
+
+**Human contribution:** Saim identified Fardin as backend/calculation owner, Maruf as crop-evidence owner and Prachurjo as frontend owner, and explicitly limited this work to local preparation without transfer or publication.
+
+**Changed files:** src/acquire/prepare_climate_team_delivery.py, tests/test_climate_team_delivery.py, docs/data/CLIMATE_DELIVERY_START_HERE.md, docs/data/CLIMATE_CONSUMPTION.md, docs/data/CLIMATE_PARAMETER_COMPATIBILITY.json, docs/data/CLIMATE_TEAM_HANDOFF_REPORT.md, docs/data/CLIMATE_REGIONAL_HANDOFF.md, data/climate/climate_team_delivery_receipt.json, docs/tasks/CLIMATE-TEAM-DELIVERY.json, cache/README.md, docs/AI_USE.md, docs/PROGRESS.md, README.md, ignored cache/climate_delivery/Saim_to_Fardin_climate_v1.0.0 and separate temporary test workspaces
+
+**Actual outcome:** Assembled the 13-file Saim-to-Fardin delivery folder using the unchanged v1.0.0 archive and trusted components. Fresh offline verification passed and all 2,387 derived files reproduced exactly; all 110 tests passed, while actual transfer and recipient validation remain pending.
+
+**Review / limitations:** Producer-side checks do not establish recipient receipt, independent scientific accuracy or agronomic approval. The original archive/receipt, nine sealed source hashes, scientific observations and district mappings remain unchanged; public-sharing limitations and Python/zlib compression compatibility remain explicit.
+
+**Next action / owner:** Saim transfers the complete folder only through a separately authorized/manual method; Fardin independently verifies it and owns later local-data backend/calculation integration. No region receives automatic priority.
+
+**Task / source:** CLIMATE-TEAM-DELIVERY; Current attached Saim climate-delivery instruction and continuation to proceed with supported local preparation
+
+## Saim — Prompt 019
+
+<a id="saim-019"></a>
+<a id="p-4cf4431b612c"></a>
+<!-- record-id: P-4cf4431b612c -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T09:51:10Z -->
+
+**Member:** saim
+
+**Tool:** Codex
+
+**Type:** push
+
+**Refined implementation prompt (AI-written):** Commit and push the unchanged climate archive and setup tools to main2 so teammates obtain verified data by cloning the GitHub repository without manually transferring folders.
+
+**Purpose / AI contribution:** Track one unchanged versioned archive and metadata, add safe idempotent clone setup, update delivery instructions and verify the published repository from a fresh clone.
+
+**Human contribution:** Saim explicitly authorized Git-based distribution, commit and push of the climate data, superseding the prior no-publication/manual-delivery scope.
+
+**Changed files:** data/climate/packages/v1.0.0/, scripts/setup_climate_data.py, tests/test_climate_git_setup.py, docs/data/CLIMATE_GITHUB_SETUP.md, data/climate/climate_git_distribution_receipt.json, prior pending teammate-delivery helper/tests/docs/receipt, README.md, cache/README.md, climate handoff/setup docs, docs/tasks/CLIMATE-GIT-DISTRIBUTION.json, docs/AI_USE.md and docs/PROGRESS.md
+
+**Actual outcome:** Prepared the Git-hosted v1.0.0 archive and one-command installer; offline installation preflight and all 113 Python tests passed. Commit, reconciliation with the newer remote teammate commit and GitHub publication verification are pending.
+
+**Review / limitations:** No scientific observations or mappings changed. The archive is below the GitHub 100 MiB file limit but triggers the documented size warning. Existing BAMIS rights and NASA notification limitations remain explicit; no scientific approval, actual recipient acceptance or app integration is claimed.
+
+**Next action / owner:** Commit the verified work, preserve the newer remote teammate commit, push main2 and test setup from a fresh GitHub clone.
+
+**Task / source:** CLIMATE-GIT-DISTRIBUTION; Saim explicitly requested GitHub-based climate delivery by committing and pushing instead of manual transfer
 <!-- workflow:ai-records:end -->

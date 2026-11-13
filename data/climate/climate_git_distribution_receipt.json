@@ -1,0 +1,42 @@
+{
+  "application_integration": false,
+  "archive_bytes": 88023118,
+  "archive_path": "data/climate/packages/v1.0.0/soil-to-stars-climate-bgd-v1.0.0.tar.gz",
+  "archive_sha256": "4a0ba04c9c8beaa0a908e0b4d61cc23c6b90f87ad927bbe229405860eda6117b",
+  "authorization": "Saim explicitly requested repository-hosted delivery by committing and pushing; this supersedes manual-only delivery instructions.",
+  "default_install": "cache/climate_repository/v1.0.0",
+  "district_mapping_changed": false,
+  "fresh_github_clone": {
+    "status": "not_run"
+  },
+  "git_lfs_required": false,
+  "installation_command": "python3 scripts/setup_climate_data.py",
+  "limitations": [
+    "Archive and original producer receipt retain immutable historical build-time local-only flags. Current Git distribution status is recorded here.",
+    "BAMIS mapping public redistribution rights remain unverified; owner authorization is not a third-party license grant.",
+    "NASA researcher-transmission notification is requested but not sent; no external contact is authorized.",
+    "Git setup provides data only; backend/API/frontend integration and browser offline support remain separate."
+  ],
+  "manifest_path": "data/climate/packages/v1.0.0/PACKAGE_MANIFEST.json",
+  "manifest_sha256": "230b58fdc12b0cc12742387ab542e944d99facf35e6b7e071fa3636423dca29b",
+  "manual_transfer_required": false,
+  "package_id": "soil-to-stars-climate-bgd-v1.0.0",
+  "preflight": {
+    "payload_files": 2618,
+    "raw_requests": 100,
+    "status": "passed",
+    "workspace": "/private/tmp/soil-climate-git-preflight-v1"
+  },
+  "publication": {
+    "branch": "main2",
+    "remote": "origin",
+    "status": "pending_commit_and_push"
+  },
+  "python_tests": {
+    "count": 113,
+    "result": "passed"
+  },
+  "schema_version": "climate-git-distribution-1.0.0",
+  "scientific_approval": false,
+  "scientific_observations_changed": false
+}

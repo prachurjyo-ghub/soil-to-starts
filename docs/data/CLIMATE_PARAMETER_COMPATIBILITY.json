@@ -1,0 +1,59 @@
+{
+  "schema_version": "climate-compatibility-1.0.0",
+  "package_id": "soil-to-stars-climate-bgd-v1.0.0",
+  "status": "descriptive_parameter_dictionary_not_crop_rules",
+  "period": ["2001-01-01", "2025-12-31"],
+  "time_standard": "LST",
+  "spatial_meaning": "Historical regional model/reanalysis context at API-returned positions. Positions are not field observations, district-area averages or asserted native-cell IDs. District views reuse selected regional observations.",
+  "parameters": {
+    "T2M": {
+      "daily_unit": "C",
+      "daily_statistic": "Mean air temperature at 2 metres over the daily LST interval",
+      "monthly_unit": "C",
+      "monthly_statistic": "Arithmetic mean of valid daily T2M values; primary value only if the expected month is complete",
+      "source_metadata": ["MERRA2"],
+      "crop_comparison_requirement": "A sourced mean-temperature criterion for the same crop/variety/stage, dates, averaging period and applicable location; no inference from a daily maximum or a climate normal."
+    },
+    "T2M_MIN": {
+      "daily_unit": "C",
+      "daily_statistic": "Minimum of the hourly 2-metre air temperatures in the daily LST interval",
+      "monthly_unit": "C",
+      "monthly_statistic": "Mean of daily minimum temperatures, NOT the absolute minimum of the month",
+      "source_metadata": ["MERRA2", "POWER"],
+      "crop_comparison_requirement": "Match a sourced minimum-temperature statistic and exposure duration/stage. Monthly mean-of-minima cannot stand in for a daily cold event or absolute seasonal minimum. Negative Celsius is not a missing marker."
+    },
+    "T2M_MAX": {
+      "daily_unit": "C",
+      "daily_statistic": "Maximum of the hourly 2-metre air temperatures in the daily LST interval",
+      "monthly_unit": "C",
+      "monthly_statistic": "Mean of daily maximum temperatures, NOT the absolute maximum of the month",
+      "source_metadata": ["MERRA2", "POWER"],
+      "crop_comparison_requirement": "Match a sourced maximum-temperature statistic and exposure duration/stage. Monthly mean-of-maxima cannot stand in for a daily heat event or absolute seasonal maximum."
+    },
+    "PRECTOTCORR": {
+      "daily_unit": "mm/day",
+      "daily_statistic": "Daily mean corrected precipitation rate over one LST daily interval",
+      "monthly_unit": "mm",
+      "monthly_statistic": "Sum each daily rate times one day exactly once; incomplete primary total is null",
+      "source_metadata": ["MERRA2"],
+      "crop_comparison_requirement": "Match a sourced rainfall amount/rate definition, accumulation interval, stage dates, missingness policy and location. A total is not onset, a dry spell, available irrigation volume, flooding depth or crop water demand."
+    }
+  },
+  "comparison_prerequisites": [
+    "Reviewed crop/variety/stage evidence with statistic, units and applicability explicitly defined",
+    "Agreed actual dates and period including cross-year/leap-day handling; printed BAMIS standard weeks are not assumed ISO weeks",
+    "Matching accumulation or averaging support and expected/valid day counts; no silent interpolation or partial-as-complete totals",
+    "Explicit representative location or district-context mapping, original anchor, returned position and distance",
+    "Source/artifact identities and processing version retained with any derived comparison"
+  ],
+  "not_thresholds": "Printed BAMIS climate normals describe source calendar context; they are not crop tolerance thresholds, hard exclusions or success labels.",
+  "unsupported_in_core_package": ["humidity", "wind", "sunshine duration", "soil properties", "irrigation volume", "yield", "crop-failure probability"],
+  "unsupported_policy": "Humidity/wind/sunshine require a separately defined need, parameter, acquisition scope and method; do not synthesize them from these four variables.",
+  "missingness": "Documented -999 source fill becomes null with missing_reason. Keep a real zero; do not clip unusual values. Primary monthly values are null if any expected daily value is missing.",
+  "rule_activation": "No weights, crop limits, soil facts or success probabilities are defined here. Missing essential applicability evidence remains incomplete/unavailable.",
+  "references": [
+    "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+    "https://power.larc.nasa.gov/docs/methodology/data/sources_meteorology/",
+    "https://power.larc.nasa.gov/docs/methodology/data/sources_hydrology/"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "CLIMATE-GIT-DISTRIBUTION",
+  "title": "Distribute sealed climate data through main2 with clone setup",
+  "owner": "Saim",
+  "collaborators": [],
+  "phase": "INDEPENDENT-PREPARATION",
+  "status": "in_progress",
+  "depends_on": [],
+  "updated_at": "2026-11-13T09:51:10Z",
+  "acceptance": [
+    {
+      "id": "a1",
+      "text": "Include one unchanged verified v1.0.0 archive and metadata in a versioned Git path, with no raw/cache duplication and recorded size/hash limits.",
+      "met": true,
+      "evidence": "Copied the unchanged 88,023,118-byte archive to data/climate/packages/v1.0.0 with its original SHA-256 4a0ba04c9c8beaa0a908e0b4d61cc23c6b90f87ad927bbe229405860eda6117b, original manifest and checksum. One compressed archive is included; raw and expanded caches remain ignored. Official GitHub limits permit this file below 100 MiB with a warning above 50 MiB.",
+      "state": "done",
+      "blockers": []
+    },
+    {
+      "id": "a2",
+      "text": "Provide safe idempotent offline setup after cloning and test it without pre-existing ignored caches; preserve sealed source/data and scientific limitations.",
+      "met": false,
+      "evidence": ""
+    },
+    {
+      "id": "a3",
+      "text": "Commit and push the authorized data/setup/docs to main2, verify a fresh GitHub clone and record actual delivery status without claiming application integration.",
+      "met": false,
+      "evidence": ""
+    }
+  ],
+  "checks": [
+    {
+      "command": "python3 -B -m unittest discover -s tests -p 'test_*.py' -v",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. prompt_records_preserve_meaning_and_metadata (test_workflow.WorkflowTests) ... ok\ntest_member_logs_are_separate_and_pipe_safe (test_workflow.WorkflowTests) ... ok\ntest_outcome_limits_and_blank_fields_are_rejected_without_log_writes (test_workflow.WorkflowTests) ... ok\ntest_passing_check_does_not_automatically_accept_task (test_workflow.WorkflowTests) ... ok\ntest_pending_or_self_review_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_professional_docs_have_small_entrypoint_budgets (test_workflow.WorkflowTests) ... ok\ntest_prompt_amend_updates_outcome_without_extra_entry (test_workflow.WorkflowTests) ... ok\ntest_prompt_numbers_are_per_member_and_do_not_change_on_update (test_workflow.WorkflowTests) ... ok\ntest_public_numbers_use_next_available_maximum_and_scale_past_three_digits (test_workflow.WorkflowTests) ... ok\ntest_readonly_check_detects_stale_view (test_workflow.WorkflowTests) ... ok\ntest_real_git_ancestry_proof (test_workflow.WorkflowTests) ... ok\ntest_render_is_idempotent (test_workflow.WorkflowTests) ... ok\ntest_reopening_checklist_prerequisite_reopens_done_children (test_workflow.WorkflowTests) ... ok\ntest_start_blocked_task_does_not_modify_records (test_workflow.WorkflowTests) ... ok\ntest_unchecked_acceptance_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_unknown_dependency_rejected (test_workflow.WorkflowTests) ... ok\ntest_unmerged_commit_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_verify_accepts_explicit_project_subdirectory (test_workflow.WorkflowTests) ... ok\ntest_verify_executes_check_and_records_real_failure (test_workflow.WorkflowTests) ... ok\ntest_verify_refuses_directory_outside_project (test_workflow.WorkflowTests) ... ok\n\n----------------------------------------------------------------------\nRan 113 tests in 29.153s\n\nOK",
+      "run_at_utc": "2026-11-13T09:50:24Z"
+    }
+  ],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-11-13T09:48:45Z",
+      "from": "planned",
+      "to": "in_progress",
+      "note": "Saim now explicitly authorizes committing and pushing the climate data through GitHub instead of manual folder transfer. This supersedes the previous local-only delivery instruction; scientific approval is unchanged."
+    },
+    {
+      "at": "2026-11-13T09:50:24Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p 'test_*.py' -v"
+    },
+    {
+      "at": "2026-11-13T09:51:10Z",
+      "note": "Checklist a1: done",
+      "evidence": "Copied the unchanged 88,023,118-byte archive to data/climate/packages/v1.0.0 with its original SHA-256 4a0ba04c9c8beaa0a908e0b4d61cc23c6b90f87ad927bbe229405860eda6117b, original manifest and checksum. One compressed archive is included; raw and expanded caches remain ignored. Official GitHub limits permit this file below 100 MiB with a warning above 50 MiB."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Copy sealed archive to versioned tracked package directory and implement safe clone setup.",
+  "handoff": "Record the next consumer and reproduction steps before review."
+}

@@ -1,0 +1,137 @@
+{
+  "id": "CLIMATE-TEAM-DELIVERY",
+  "title": "Assemble verified local climate delivery for Fardin",
+  "owner": "Saim",
+  "collaborators": [],
+  "phase": "INDEPENDENT-PREPARATION",
+  "status": "in_review",
+  "depends_on": [],
+  "updated_at": "2026-11-13T09:51:27Z",
+  "acceptance": [
+    {
+      "id": "a1",
+      "text": "Verify existing v1.0.0 artifacts and local raw/prepared evidence, and assemble one copyable folder without altering the sealed package.",
+      "met": true,
+      "evidence": "Verified the existing archive (88,023,118 bytes), checksum sidecar, producer receipt, manifest and matching bootstrap against v1.0.0 identities; all 2,610 local non-document package entries pass, including 100 raw responses and 2,387 prepared files. Assembled cache/climate_delivery/Saim_to_Fardin_climate_v1.0.0 without modifying the sealed package or producer receipt. All nine sealed source hashes also match committed main2 at db37c6d.",
+      "state": "done",
+      "blockers": []
+    },
+    {
+      "id": "a2",
+      "text": "Test fresh extraction, offline validation and complete reproduction from delivery files; document consumer fields, real examples, compatibility and recipient checklist.",
+      "met": true,
+      "evidence": "Fresh extraction from the copied delivery archive verified all 2,618 payload files. Existing network-blocked workflow validated all 100 raw requests, original registry and coordinate roles, then reproduced all 2,387 derived files byte-for-byte in a separate tree with no derived inputs copied; all 222 raw/source/input files stayed unchanged. Real regional/district and monthly/chart example records were loaded from that extraction. All 110 tests passed.",
+      "state": "done",
+      "blockers": []
+    },
+    {
+      "id": "a3",
+      "text": "Record measured local delivery results and transfer instructions without claiming recipient acceptance, scientific approval, upload or application integration.",
+      "met": true,
+      "evidence": "The 13-file ignored delivery folder contains START_HERE verification/extraction/validation/loading commands and recipient checklist, trusted original components, consumer guide, four-parameter compatibility dictionary, real example and LOCAL_PRODUCER_CHECKS. Documented USB/manual transfer without assuming a device or account; new report distinguishes producer checks, unresolved science/sharing, backend/frontend responsibilities and pending recipient verification. No upload, data change, commit or push occurred.",
+      "state": "done",
+      "blockers": []
+    }
+  ],
+  "checks": [
+    {
+      "command": "python3 -B -m unittest discover -s tests -p 'test_*.py' -v",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. prompt_records_preserve_meaning_and_metadata (test_workflow.WorkflowTests) ... ok\ntest_member_logs_are_separate_and_pipe_safe (test_workflow.WorkflowTests) ... ok\ntest_outcome_limits_and_blank_fields_are_rejected_without_log_writes (test_workflow.WorkflowTests) ... ok\ntest_passing_check_does_not_automatically_accept_task (test_workflow.WorkflowTests) ... ok\ntest_pending_or_self_review_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_professional_docs_have_small_entrypoint_budgets (test_workflow.WorkflowTests) ... ok\ntest_prompt_amend_updates_outcome_without_extra_entry (test_workflow.WorkflowTests) ... ok\ntest_prompt_numbers_are_per_member_and_do_not_change_on_update (test_workflow.WorkflowTests) ... ok\ntest_public_numbers_use_next_available_maximum_and_scale_past_three_digits (test_workflow.WorkflowTests) ... ok\ntest_readonly_check_detects_stale_view (test_workflow.WorkflowTests) ... ok\ntest_real_git_ancestry_proof (test_workflow.WorkflowTests) ... ok\ntest_render_is_idempotent (test_workflow.WorkflowTests) ... ok\ntest_reopening_checklist_prerequisite_reopens_done_children (test_workflow.WorkflowTests) ... ok\ntest_start_blocked_task_does_not_modify_records (test_workflow.WorkflowTests) ... ok\ntest_unchecked_acceptance_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_unknown_dependency_rejected (test_workflow.WorkflowTests) ... ok\ntest_unmerged_commit_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_verify_accepts_explicit_project_subdirectory (test_workflow.WorkflowTests) ... ok\ntest_verify_executes_check_and_records_real_failure (test_workflow.WorkflowTests) ... ok\ntest_verify_refuses_directory_outside_project (test_workflow.WorkflowTests) ... ok\n\n----------------------------------------------------------------------\nRan 110 tests in 29.498s\n\nOK",
+      "run_at_utc": "2026-11-13T09:40:35Z"
+    },
+    {
+      "command": "python3 -B src/acquire/prepare_climate_team_delivery.py",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Existing archive, sidecar, manifest, bootstrap and receipt verified; all 2,610 non-document local payload entries passed. Created clearly named transfer folder from unchanged artifacts."
+    },
+    {
+      "command": "python3 cache/climate_delivery/Saim_to_Fardin_climate_v1.0.0/package_climate_data.py extract cache/climate_delivery/Saim_to_Fardin_climate_v1.0.0/soil-to-stars-climate-bgd-v1.0.0.tar.gz --destination /private/tmp/soil-climate-team-delivery.IBiDOj/extracted --sha256 4a0ba04c9c8beaa0a908e0b4d61cc23c6b90f87ad927bbe229405860eda6117b",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Safe fresh extraction passed and every one of 2,618 payload files matched the manifest."
+    },
+    {
+      "command": "OFFLINE=1 python3 /private/tmp/soil-climate-team-delivery.IBiDOj/extracted/soil-to-stars-climate-bgd-v1.0.0/src/acquire/package_climate_data.py validate --root /private/tmp/soil-climate-team-delivery.IBiDOj/extracted/soil-to-stars-climate-bgd-v1.0.0 --report /private/tmp/soil-climate-team-delivery.IBiDOj/validation.json",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Passed all raw request/byte/provenance checks, registry regeneration and coordinate roles with socket/DNS blocking in isolated Python."
+    },
+    {
+      "command": "OFFLINE=1 python3 /private/tmp/soil-climate-team-delivery.IBiDOj/extracted/soil-to-stars-climate-bgd-v1.0.0/src/acquire/package_climate_data.py reproduce --root /private/tmp/soil-climate-team-delivery.IBiDOj/extracted/soil-to-stars-climate-bgd-v1.0.0 --destination /private/tmp/soil-climate-team-delivery.IBiDOj/reproduced --report /private/tmp/soil-climate-team-delivery.IBiDOj/reproduction.json",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "All 2,387 regenerated derived files match expected SHA-256; 222 raw/source/input files and the extracted payload remain unchanged. No hidden dependency found."
+    },
+    {
+      "command": "python3 /private/tmp/soil-climate-team-delivery.IBiDOj/extracted/soil-to-stars-climate-bgd-v1.0.0/src/acquire/package_climate_data.py examples --root /private/tmp/soil-climate-team-delivery.IBiDOj/extracted/soil-to-stars-climate-bgd-v1.0.0",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Loaded real regional and district-context records from the delivered package; a separate exact-key check verified the 2001-01-01 Chapainawabganj example and January monthly/chart 0.2 mm total."
+    },
+    {
+      "command": "git diff --check",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. ",
+      "run_at_utc": "2026-11-13T09:44:02Z"
+    }
+  ],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-11-13T09:36:43Z",
+      "from": "planned",
+      "to": "in_progress",
+      "note": "Saim requests closing the physical delivery gap using existing verified artifacts; receipt alone does not establish recipient delivery."
+    },
+    {
+      "at": "2026-11-13T09:40:35Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p 'test_*.py' -v"
+    },
+    {
+      "at": "2026-11-13T09:41:58Z",
+      "note": "Checklist a1: done",
+      "evidence": "Verified the existing archive (88,023,118 bytes), checksum sidecar, producer receipt, manifest and matching bootstrap against v1.0.0 identities; all 2,610 local non-document package entries pass, including 100 raw responses and 2,387 prepared files. Assembled cache/climate_delivery/Saim_to_Fardin_climate_v1.0.0 without modifying the sealed package or producer receipt. All nine sealed source hashes also match committed main2 at db37c6d."
+    },
+    {
+      "at": "2026-11-13T09:44:02Z",
+      "note": "Checklist a2: done",
+      "evidence": "Fresh extraction from the copied delivery archive verified all 2,618 payload files. Existing network-blocked workflow validated all 100 raw requests, original registry and coordinate roles, then reproduced all 2,387 derived files byte-for-byte in a separate tree with no derived inputs copied; all 222 raw/source/input files stayed unchanged. Real regional/district and monthly/chart example records were loaded from that extraction. All 110 tests passed."
+    },
+    {
+      "at": "2026-11-13T09:44:02Z",
+      "note": "Checklist a3: done",
+      "evidence": "The 13-file ignored delivery folder contains START_HERE verification/extraction/validation/loading commands and recipient checklist, trusted original components, consumer guide, four-parameter compatibility dictionary, real example and LOCAL_PRODUCER_CHECKS. Documented USB/manual transfer without assuming a device or account; new report distinguishes producer checks, unresolved science/sharing, backend/frontend responsibilities and pending recipient verification. No upload, data change, commit or push occurred."
+    },
+    {
+      "at": "2026-11-13T09:44:02Z",
+      "from": "in_progress",
+      "to": "in_review",
+      "note": "Completed producer-side availability check, folder assembly, fresh offline reproduction and consumer/compatibility documentation without modifying the sealed package."
+    },
+    {
+      "at": "2026-11-13T09:44:02Z",
+      "note": "Check passed: git diff --check"
+    },
+    {
+      "at": "2026-11-13T09:51:27Z",
+      "from": "in_review",
+      "to": "in_review",
+      "note": "Saim superseded manual-only delivery with explicit commit/push authorization for repository-hosted data. Earlier stage evidence remains unchanged."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Historical local-delivery stage complete. Current delivery is CLIMATE-GIT-DISTRIBUTION: Git-hosted archive plus clone setup; manual folder transfer is no longer required.",
+  "handoff": "Saim can manually/separately authorize transfer of cache/climate_delivery/Saim_to_Fardin_climate_v1.0.0. Fardin follows START_HERE and records actual recipient results; no recipient acceptance or scientific/backend/frontend integration is claimed."
+}

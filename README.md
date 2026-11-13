@@ -6,7 +6,7 @@ Explainable crop-rotation planning for Bangladesh for [NASA Space Apps 2026 — 
 
 ## Honest current status
 
-The working product is a Next.js frontend demonstration at `/` and `/workspace`, backed by supplied reference HTML/assets. Its crop traits, scores, soil defaults and climate charts are illustrative. The React components also present in the tree are not all mounted by the current routes. There is no integrated NASA ingestion, validated agronomic engine, FastAPI service or verified offline science dataset yet.
+The working product is a Next.js frontend demonstration at `/` and `/workspace`, backed by supplied reference HTML/assets. Its crop traits, scores, soil defaults and climate charts are illustrative. The React components also present in the tree are not all mounted by the current routes. NASA climate data is prepared and reproducible; use the Git-hosted setup below to install it locally. It is not integrated into the frontend/API, independently scientifically validated or an approved agronomic engine. No FastAPI service is implemented.
 
 The development workflow is implemented locally: task checklists, generated progress, command-only AI logs, tests and CI definitions. Independent review, publication, scientific validation and submission remain separate gates. A green workflow check does not validate agricultural advice.
 
@@ -15,12 +15,12 @@ The development workflow is implemented locally: task checklists, generated prog
 
 Generated from task records; the detailed board is the team's daily starting point.
 
-**Accepted work packages: 0/39 · Implemented checklist items: 52/154.** Checked items can still await independent review and merge.
+**Accepted work packages: 0/41 · Implemented checklist items: 56/160.** Checked items can still await independent review and merge.
 
 | Member | First available action |
 | --- | --- |
 | Fardin | G0-CONTRACT / s01: Draft stable field, crop and source identifiers |
-| Saim | Review/collaborate on G0-CONTRACT |
+| Saim | CLIMATE-GIT-DISTRIBUTION / a2: Provide safe idempotent offline setup after cloning and test it without pre-existing ignored caches; preserve sealed source/data and scientific limitations. |
 | Maruf | Review/collaborate on G0-CONTRACT |
 | Prachurjo | Review/collaborate on G0-CONTRACT, MEDIA-STORYBOARD |
 | Nadim | MEDIA-STORYBOARD / s01: Plan the shots and visual sequence |
@@ -52,6 +52,22 @@ make build
 
 Equivalent commands are documented in [CONTRIBUTING.md](CONTRIBUTING.md). `make check` runs workflow tests, record validation and frontend lint; `make build` performs the production build using the installed Next.js webpack option. Backend launch/science-test commands remain planned until their implementation PRs exist.
 
+## Climate data from this repository
+
+The unchanged v1.0.0 climate archive is included on `main2`. After cloning or
+pulling this branch, run:
+
+```bash
+python3 scripts/setup_climate_data.py
+```
+
+No manual folder transfer or NASA request is needed. Setup verifies and extracts
+all 2,618 payload files into ignored local storage and prints the prepared-data
+path. See [GitHub climate setup](docs/data/CLIMATE_GITHUB_SETUP.md) for validation,
+examples, reproducibility, attribution and known scientific/sharing limitations.
+This installs data; it does not automatically integrate the app/backend or make
+browser assets/maps offline.
+
 ## What we are building
 
 Start with one supported Bangladesh pilot. A short form records location, current harvest/field availability, recent crops/usual rotation, seasonal water access and a priority preset; relevant soil details may be unknown. Previous/current crops may match.
@@ -66,11 +82,12 @@ Read the two contexts: **[Mandatory-now specification](docs/MVP_SCOPE.md)** and 
 
 ```text
 prototype/        existing Next.js application; preserve routes/reference assets
-src/acquire/      planned authentic source ingestion, QA and caching
+src/acquire/      implemented climate acquisition/preparation/package tools
 src/compute/      planned deterministic climate/agronomy/rotation/scenario logic
 src/api/          planned validation, transport and provenance gate
 src/agents/       future only; no MVP runtime AI
-cache/            local downloads, ignored except its README
+cache/            ignored expanded data/installations; README retained
+data/climate/packages/  one versioned Git-hosted climate archive and metadata
 demo_fixtures/   small verified/licensed offline evidence when available
 docs/            specifications, team board, sources and truthful AI records
 scripts/         development workflow, diagnostics and PR validation

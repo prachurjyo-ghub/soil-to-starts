@@ -307,3 +307,35 @@ the immutable package snapshot; this measured-result addendum and the external
 producer receipt are recorded after the package was sealed to avoid circular
 archive/receipt hashing. The scientific method and packaged source are unchanged.
 No data refresh, upload, publication, staging or commit occurred. Step 3 stops here.
+
+## Ready-to-copy teammate delivery (after Git publication)
+
+Git at `db37c6d` contains the implementation/receipts but does not deliver ignored
+climate data. The verified existing v1.0.0 archive and matching sidecars/receipt/
+bootstrap are now assembled at
+`cache/climate_delivery/Saim_to_Fardin_climate_v1.0.0/`, with START_HERE, a recipient
+checklist, local producer results, real loaded example and file inventory.
+See the [concise delivery report](CLIMATE_TEAM_HANDOFF_REPORT.md),
+[local consumption interface](CLIMATE_CONSUMPTION.md) and
+[Maruf/Fardin parameter dictionary](CLIMATE_PARAMETER_COMPATIBILITY.json).
+New clean-directory offline validation/reproduction passed without changing the
+sealed archive, source observations or mappings. Manual/separately authorized
+transfer and Fardin's independent verification remain outstanding; no recipient
+acceptance or backend/frontend integration is claimed. Do not confuse available
+producer files or Git receipts with delivery to another computer.
+
+
+## Current delivery — Git-hosted archive
+
+Saim now authorizes Git-based distribution, superseding manual transfer as the
+current workflow. The unchanged 88,023,118-byte v1.0.0 archive is included under
+`data/climate/packages/v1.0.0/`, with original SHA-256
+`4a0ba04c9c8beaa0a908e0b4d61cc23c6b90f87ad927bbe229405860eda6117b`.
+Teammates clone/pull `main2` and run `python3 scripts/setup_climate_data.py`.
+The command verifies and extracts local data with no NASA request; expanded
+files remain ignored. See [current setup](CLIMATE_GITHUB_SETUP.md) and
+`data/climate/climate_git_distribution_receipt.json` for measured Git-delivery
+checks. Original archive/producer records remain unchanged as historical
+provenance. Scientific applicability, NASA notification and BAMIS mapping rights
+limitations remain explicit; Git publication is not scientific validation or
+automatic backend/frontend integration.
