@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "collection_id": "nasa-power-daily-regional-bgd-v1",
-  "status": "regional_smoke_configuration",
+  "status": "regional_full_collection_authorized_step_3d",
   "accessed_on": "2026-11-13",
   "source": {
     "name": "NASA POWER Daily Regional API",
@@ -110,7 +110,7 @@
     "region_partitioning": {
       "count": 1,
       "strategy": "one padded nationwide bounding box",
-      "reason": "A single area avoids overlapping tile edges and undocumented grid snapping. The published schema has no numeric maximum bbox span; live full-period suitability remains unverified.",
+      "reason": "A single area avoids overlapping tile edges and undocumented grid snapping. The published schema has no numeric maximum bbox span; annual national JSON succeeded in the preflight; full collection is separately authorized in Step 3D.",
       "areas": [
         {
           "area_id": "bgd-padded-national",
@@ -128,7 +128,7 @@
     "parameters_per_request": 1,
     "parameter_count": 4,
     "configured_request_count": 100,
-    "execution_status": "proposal_only_full_collection_not_authorized_in_step_3b"
+    "execution_status": "authorized_by_saim_independent_of_g0_step_3d"
   },
   "smoke_test": {
     "area_id": "central-bangladesh-smoke",
@@ -176,13 +176,14 @@
     "raw_policy": "Preserve exact response bytes; atomically publish only structurally verified responses."
   },
   "identity_and_extraction": {
+    "adoption": "Saim explicitly adopted representative-point context on 2026-11-13; independent scientific review remains pending.",
     "identities": [
       "Original district sampling coordinates are unchanged WGS84 anchors from the Step 1 registry.",
       "Regional output coordinates are API-returned GeoJSON positions and are stored exactly as returned.",
       "Native source-grid identity is not assigned; returned nodes are not claimed to be unique native cells."
     ],
-    "proposed_method": "After exact cross-parameter coordinate/date alignment, choose the nearest returned output coordinate to each original district point using great-circle distance; record both coordinates, distance and deterministic distance/latitude/longitude tie-breaking.",
+    "proposed_method": "After exact cross-parameter coordinate/date alignment, use the user-adopted nearest returned output coordinate to each original district point using great-circle distance; record both coordinates, distance and deterministic distance/latitude/longitude tie-breaking.",
     "contract_change": "Yes. This would replace a point-API request at each district anchor with nearest-returned-node extraction. The registry points remain unchanged, but the scientific sampling method requires review.",
-    "edge_rule": "Use the padded national request area and reject extraction if no returned coordinate surrounds or is acceptably near a district anchor; no acceptable-distance threshold is invented in Step 3B."
+    "edge_rule": "Use the padded area; expose actual distances without an invented cutoff. Fail if an adopted coordinate is absent in a later verified regional view. No district-area or field measurement is claimed."
   }
 }

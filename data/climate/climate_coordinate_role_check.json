@@ -1,0 +1,57 @@
+{
+  "anchors_uniquely_inside_assigned_district": 64,
+  "boundary": {
+    "limitation": "Pinned simplified administrative geometry; not a surveyed border or native source-cell footprint.",
+    "path": "data/admin/bgd-adm2-source.geojson.gz",
+    "source_id": "BGD-ADM2-16705992",
+    "uncompressed_sha256": "7dbdb186f3b8af10417147a99859196fcd89c619fb5c6ac3804251fb6b449b6a",
+    "version": "BGD-ADM2-16705992@9469f09-local1"
+  },
+  "check_version": "climate-coordinate-roles-v1",
+  "districts_using_outside_country_output": [
+    "bd-district-barishal",
+    "bd-district-chandpur",
+    "bd-district-chapainawabganj",
+    "bd-district-cumilla",
+    "bd-district-kushtia",
+    "bd-district-lakshmipur",
+    "bd-district-meherpur",
+    "bd-district-panchagarh",
+    "bd-district-rangamati",
+    "bd-district-shariatpur",
+    "bd-district-thakurgaon"
+  ],
+  "evidence_sha256": {
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/PRECTOTCORR/20010101_20011231.json": "f6e7f87c045323d9e22e168688c22ce77ac947d00e1e66c014d6da90b29235ab",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/PRECTOTCORR/20010101_20011231.manifest.json": "abbbf0f3f8347cd608f265500cc347348f7957653b2fcb5023b0cade0c35e4b4",
+    "cache/nasa_power_regional/prepared-v1/district-context/manifest.json": "c090ec40bdadfe9016a28d9c18c5317794ea3003d8dc01d2d4d169e36d2460db",
+    "data/admin/bgd-adm2-mapping.json": "7a9014e211aba25af0a24f43227b16835c4cde962f29de4c97d04f381f8f85f8",
+    "data/climate/district_sampling_manifest.json": "42f2bee4e352c24190e2ddef5f6d772ee0081f3dda82c1acc017e21a0ed1acfc",
+    "data/climate/district_sampling_registry.csv": "0b31748796de714f73de135ee3e0ec77c2e44813985d790b44f2d62e18c62dfa",
+    "data/climate/regional_district_extraction_diagnostics.json": "262c45d860801504275a9006827c0153c62f81a1a30e3577464bea5d349d4763"
+  },
+  "mapping_changed": false,
+  "method": "Existing strict polygon-with-holes containment against all 64 original pinned ADM2 features; longitude/latitude order. Existing great-circle nearest ranking; tie order distance, latitude, longitude; radius 6371.0088 km.",
+  "network_requests": 0,
+  "observations_changed": false,
+  "registry_anchors_checked": 64,
+  "selected_output_inside_country_count": 53,
+  "selected_outputs_checked": 64,
+  "selected_outputs_on_pinned_boundary": 0,
+  "status": "passed",
+  "target": {
+    "anchor_containing_district_ids": [
+      "bd-district-chapainawabganj"
+    ],
+    "anchor_latitude": 24.688357,
+    "anchor_longitude": 88.256694,
+    "distance_km": 24.8185734952679,
+    "district_id": "bd-district-chapainawabganj",
+    "exact_distance_ties": 1,
+    "output_containing_district_ids": [],
+    "output_latitude": 24.5,
+    "output_longitude": 88.125,
+    "output_on_pinned_boundary": false,
+    "second_nearest_distance_km": 37.11368586097449
+  }
+}

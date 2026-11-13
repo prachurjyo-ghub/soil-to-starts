@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Plan and smoke-test NASA POWER Daily Regional requests without full acquisition."""
+"""Plan, acquire and validate NASA POWER Daily Regional requests."""
 
 import argparse
 import csv
@@ -90,7 +90,7 @@ def build_config(
     return {
         "schema_version": "1.0.0",
         "collection_id": "nasa-power-daily-regional-bgd-v1",
-        "status": "regional_smoke_configuration",
+        "status": "regional_full_collection_authorized_step_3d",
         "accessed_on": "2026-11-13",
         "source": {
             "name": "NASA POWER Daily Regional API",
@@ -162,7 +162,7 @@ def build_config(
                 "strategy": "one padded nationwide bounding box",
                 "reason": (
                     "A single area avoids overlapping tile edges and undocumented grid snapping. The published "
-                    "schema has no numeric maximum bbox span; live full-period suitability remains unverified."
+                    "schema has no numeric maximum bbox span; annual national JSON succeeded in the preflight; full collection is separately authorized in Step 3D."
                 ),
                 "areas": [{"area_id": "bgd-padded-national", "bbox": request_bbox}],
             },
@@ -171,7 +171,7 @@ def build_config(
             "parameters_per_request": 1,
             "parameter_count": 4,
             "configured_request_count": 100,
-            "execution_status": "proposal_only_full_collection_not_authorized_in_step_3b",
+            "execution_status": "authorized_by_saim_independent_of_g0_step_3d",
         },
         "smoke_test": {
             "area_id": "central-bangladesh-smoke",
@@ -214,13 +214,14 @@ def build_config(
             "raw_policy": "Preserve exact response bytes; atomically publish only structurally verified responses.",
         },
         "identity_and_extraction": {
+            "adoption": "Saim explicitly adopted representative-point context on 2026-11-13; independent scientific review remains pending.",
             "identities": [
                 "Original district sampling coordinates are unchanged WGS84 anchors from the Step 1 registry.",
                 "Regional output coordinates are API-returned GeoJSON positions and are stored exactly as returned.",
                 "Native source-grid identity is not assigned; returned nodes are not claimed to be unique native cells.",
             ],
             "proposed_method": (
-                "After exact cross-parameter coordinate/date alignment, choose the nearest returned output coordinate "
+                "After exact cross-parameter coordinate/date alignment, use the user-adopted nearest returned output coordinate "
                 "to each original district point using great-circle distance; record both coordinates, distance and "
                 "deterministic distance/latitude/longitude tie-breaking."
             ),
@@ -229,8 +230,8 @@ def build_config(
                 "extraction. The registry points remain unchanged, but the scientific sampling method requires review."
             ),
             "edge_rule": (
-                "Use the padded national request area and reject extraction if no returned coordinate surrounds or "
-                "is acceptably near a district anchor; no acceptable-distance threshold is invented in Step 3B."
+                "Use the padded area; expose actual distances without an invented cutoff. Fail if an adopted "
+                "coordinate is absent in a later verified regional view. No district-area or field measurement is claimed."
             ),
         },
     }
@@ -343,9 +344,18 @@ def request_fingerprint(config, request_spec):
     )
 
 
+def unique_object(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ResponseValidationError(f"Duplicate JSON key: {key}")
+        result[key] = value
+    return result
+
+
 def validate_response_bytes(raw, request_spec, config):
     try:
-        payload = json.loads(raw)
+        payload = json.loads(raw, object_pairs_hook=unique_object)
     except (UnicodeDecodeError, json.JSONDecodeError) as error:
         raise ResponseValidationError("Regional response is not valid UTF-8 JSON") from error
     if not isinstance(payload, dict) or payload.get("type") != "FeatureCollection":
@@ -365,6 +375,8 @@ def validate_response_bytes(raw, request_spec, config):
     if not isinstance(metadata, dict) or set(metadata) != names:
         raise ResponseValidationError(f"Unexpected regional parameter metadata: {sorted(metadata or {})}")
     for name in names:
+        if not isinstance(metadata[name], dict):
+            raise ResponseValidationError(f"Malformed regional metadata for {name}")
         if metadata[name].get("units") != PARAMETERS[name]["units"]:
             raise ResponseValidationError(f"Unexpected regional units for {name}: {metadata[name].get('units')!r}")
     dates = expected_dates(request_spec["start"], request_spec["end"])
@@ -379,7 +391,7 @@ def validate_response_bytes(raw, request_spec, config):
         if not isinstance(geometry, dict) or geometry.get("type") != "Point" or not isinstance(coordinate, list) or len(coordinate) < 2:
             raise ResponseValidationError("Regional feature geometry is not a coordinate point")
         longitude, latitude = coordinate[:2]
-        if not isinstance(longitude, (int, float)) or not isinstance(latitude, (int, float)):
+        if type(longitude) not in (int, float) or type(latitude) not in (int, float):
             raise ResponseValidationError("Regional output coordinate is non-numeric")
         if not (-180 <= longitude <= 180 and -90 <= latitude <= 90):
             raise ResponseValidationError("Regional output coordinate is out of WGS84 range")
@@ -393,14 +405,17 @@ def validate_response_bytes(raw, request_spec, config):
         if pair in coordinates:
             raise ResponseValidationError("Regional response repeats an output coordinate")
         coordinates.append(pair)
-        series = feature.get("properties", {}).get("parameter")
+        properties = feature.get("properties")
+        if not isinstance(properties, dict):
+            raise ResponseValidationError("Regional feature properties are malformed")
+        series = properties.get("parameter")
         if not isinstance(series, dict) or set(series) != names:
             raise ResponseValidationError("Regional feature parameter set is missing or unexpected")
         for name in names:
             values = series[name]
             if not isinstance(values, dict) or list(values) != dates:
                 raise ResponseValidationError(f"Regional {name} dates are missing, duplicated, reordered or unexpected")
-            if any(not isinstance(value, (int, float)) for value in values.values()):
+            if any(type(value) not in (int, float) or not math.isfinite(value) for value in values.values()):
                 raise ResponseValidationError(f"Regional {name} contains a non-numeric value")
             fill_counts[name] += sum(value == header["fill_value"] for value in values.values())
     sorted_coordinates = sorted(coordinates)
@@ -504,6 +519,8 @@ class RegionalDownloader:
         try:
             manifest = json.loads(manifest_path.read_text())
             raw = raw_path.read_bytes()
+            if manifest["request"]["url"] != request_spec["url"] or manifest["request"]["parameters"] != request_spec["parameters"]:
+                raise ValueError("full request identity mismatch")
             if manifest["request_fingerprint"] != request_fingerprint(self.config, request_spec):
                 raise ValueError("request fingerprint mismatch")
             if manifest["response"]["sha256"] != sha256(raw) or manifest["response"]["bytes"] != len(raw):
@@ -633,7 +650,9 @@ class RegionalDownloader:
                 retry_after = retry_after_seconds(error.retry_after)
                 exponential = min(policy["backoff_max_seconds"], policy["backoff_initial_seconds"] * (2 ** (attempt - 1)))
                 delay = retry_after if retry_after is not None else exponential + self.random_source() * policy["backoff_jitter_seconds"]
-                self.sleeper(min(policy["backoff_max_seconds"], delay))
+                if retry_after is not None and delay > policy["backoff_max_seconds"]:
+                    raise DownloadError(f"Paused: Retry-After {delay} seconds exceeds bounded wait; resume later", status=error.status) from error
+                self.sleeper(delay)
         raise AssertionError("unreachable")
 
 
@@ -994,12 +1013,85 @@ def execute_smoke(config, cache_dir, smoke_manifest_path, run_probe):
     print(f"WROTE {recorded_path(smoke_manifest_path)} successful_requests={len(manifests)}")
 
 
+def build_full_requests(config):
+    area = config["full_proposal"]["region_partitioning"]["areas"][0]
+    return [build_request(config, area["area_id"], area["bbox"], [name], start, end)
+            for start, end in point.year_chunks(config["requested_coverage"]["start"], config["requested_coverage"]["end"])
+            for name in PARAMETERS]
+
+
+def compact_annual_qa(qa):
+    qa["validation"].pop("output_coordinates", None)
+    return qa
+
+
+def validate_full_cache(config, cache_dir, summary_path):
+    def forbidden(*args, **kwargs):
+        raise AssertionError("Offline collection validation attempted network")
+    downloader = RegionalDownloader(config, cache_dir, opener=forbidden)
+    summary = json.loads(summary_path.read_text())
+    recorded = {item["request_id"]: item for item in summary["results"]}
+    for spec in build_full_requests(config):
+        manifest = downloader._cached(spec)
+        if manifest is None or spec["request_id"] not in recorded:
+            raise ConfigurationError(f"Incomplete/invalid full cache: {spec['request_id']}")
+        raw_path, _ = downloader.paths(spec)
+        recorded[spec["request_id"]]["annual_qa"] = compact_annual_qa(preflight_qa(raw_path.read_bytes(), spec, config))
+        recorded[spec["request_id"]]["validation"].pop("output_coordinates", None)
+    summary["offline_validation"] = dict(status="passed", requests=len(recorded), configuration_sha256=sha256(canonical_json(config)))
+    atomic_write(summary_path, (json.dumps(summary, indent=2, sort_keys=True) + "\n").encode())
+    print(f"PASS offline full cache requests={len(recorded)}; acquisition counts/timing preserved")
+
+
+def execute_full(config, cache_dir, summary_path):
+    requests = build_full_requests(config)
+    downloader = RegionalDownloader(config, cache_dir)
+    started = time.monotonic()
+    results = []
+    failures = []
+    def save():
+        summary = {
+            "collection_id": config["collection_id"], "recorded_at_utc": utc_now(),
+            "configuration_sha256": sha256(canonical_json(config)),
+            "status": "complete" if len(results) == len(requests) else "partial",
+            "planned": len(requests), "complete": len(results), "failed": len(failures),
+            "pending": len(requests) - len(results) - len(failures),
+            "reused": sum(r.get("resume_status") == "cached_verified" for r in results),
+            "bytes": sum(r["response"]["bytes"] for r in results),
+            "elapsed_seconds": round(time.monotonic() - started, 6),
+            "coordinate_support_hashes": sorted({r["validation"]["coordinate_set_sha256"] for r in results}),
+            "results": results, "failures": failures,
+            "resume_command": "python3 src/acquire/download_nasa_power_regional.py --plan full --execute-full",
+            "district_series_produced": False,
+        }
+        atomic_write(summary_path, (json.dumps(summary, indent=2, sort_keys=True) + "\n").encode())
+    save()
+    for spec in requests:
+        try:
+            manifest = downloader.download(spec)
+            raw_path, _ = downloader.paths(spec)
+            manifest["annual_qa"] = compact_annual_qa(preflight_qa(raw_path.read_bytes(), spec, config))
+            manifest["validation"].pop("output_coordinates", None)
+            results.append(manifest)
+            save()
+            print(f"PASS {spec['request_id']} {manifest.get('resume_status', 'downloaded')} bytes={manifest['response']['bytes']}", flush=True)
+            if manifest.get("resume_status") != "cached_verified":
+                time.sleep(config["network_policy"]["inter_request_delay_seconds"])
+        except (DownloadError, ResponseValidationError) as error:
+            failures.append({"request_id": spec["request_id"], "error": str(error)})
+            save()
+            raise
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
     parser.add_argument("--write-config", action="store_true")
     parser.add_argument("--check-config", action="store_true")
     parser.add_argument("--plan", choices=("smoke", "preflight", "full"), default="smoke")
+    parser.add_argument("--validate-full-cache", action="store_true")
+    parser.add_argument("--execute-full", action="store_true")
+    parser.add_argument("--full-summary", type=Path, default=ROOT / "data/climate/nasa_power_regional_full_summary.json")
     parser.add_argument("--execute-smoke", action="store_true")
     parser.add_argument("--execute-preflight", action="store_true")
     parser.add_argument("--validate-preflight-cache", action="store_true")
@@ -1021,6 +1113,14 @@ def main():
             f"PASS regional configuration: registry={config['registry']['sha256']} "
             f"national_bbox={config['boundary']['national_request_bbox']}"
         )
+    if args.validate_full_cache:
+        validate_full_cache(config, args.cache_dir, args.full_summary)
+        return
+    if args.execute_full:
+        if args.plan != "full" or os.environ.get("OFFLINE") == "1":
+            raise ConfigurationError("Full execution requires --plan full and network enabled")
+        execute_full(config, args.cache_dir, args.full_summary)
+        return
     if args.execute_smoke:
         if os.environ.get("OFFLINE") == "1":
             raise ConfigurationError("OFFLINE=1 blocks NASA POWER regional acquisition")
@@ -1056,7 +1156,7 @@ def main():
         print(
             f"DRY RUN regional full proposal areas={proposal['region_partitioning']['count']} "
             f"years={proposal['year_chunks']} parameters={proposal['parameter_count']} "
-            f"requests={proposal['configured_request_count']} execution={proposal['execution_status']}"
+            f"requests={len(build_full_requests(config))} execution=authorized_step_3d_via_execute_full"
         )
 
 

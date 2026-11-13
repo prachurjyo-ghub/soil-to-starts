@@ -958,4 +958,164 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Next action / owner:** Review the local main2 merge and explicitly authorize pushing main2 if remote publication is desired.
 
 **Task / source:** CLIMATE-POWER-REGIONAL-PREFLIGHT; Current Saim checkout and merge instruction
+
+## Saim — Prompt 013
+
+<a id="saim-013"></a>
+<a id="p-0e2bb8a8b2c4"></a>
+<!-- record-id: P-0e2bb8a8b2c4 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-12T22:02:22Z -->
+
+**Member:** saim
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Implement and execute resumable NASA POWER regional acquisition for 2001–2025, prepare reproducible offline climate products, and document district context and agronomy handoff without activating crop rules.
+
+**Purpose / AI contribution:** Extend the existing downloader and validation, run the authorized collection, prepare deterministic local products and record real QA and handoff evidence.
+
+**Human contribution:** Saim supplied the bounded implementation scope and explicitly adopted representative-point context after reviewing distance and shared-location diagnostics.
+
+**Changed files:** src/acquire/download_nasa_power_regional.py, src/acquire/prepare_nasa_power_regional.py, src/acquire/regional_climate_handoff.py, src/acquire/verify_regional_climate_preparation.py, tests/test_nasa_power_regional_acquire.py, tests/test_nasa_power_regional_prepare.py, data/climate/nasa_power_daily_regional_v1.json, data/climate/nasa_power_regional_full_summary.json, data/climate/nasa_power_regional_preparation_summary.json, data/climate/regional_district_extraction_diagnostics.json, docs/data/CLIMATE_REGIONAL_HANDOFF.md, docs/data/NASA_POWER_REGIONAL_PREFLIGHT_2001.md, docs/data/NASA_POWER_REGIONAL_PROPOSAL.md, docs/DATA_SOURCES.md, three Saim task records, docs/AI_USE.md, docs/PROGRESS.md, README.md
+
+**Actual outcome:** Completed 100 annual requests with 5,113,360 values, then prepared offline observations, monthly charts, provisional replay inputs and the user-adopted representative-point context. All 90 tests passed, and 786 regional files reproduced byte-for-byte; independent review and agronomic integration remain pending.
+
+**Review / limitations:** No independent human or agronomic review is claimed. Initial sandbox DNS failure and optional bytecode-cache permission failure are documented; scientific app integration, frontend checks, staging, commits and publication were not performed.
+
+**Next action / owner:** Maruf and Fardin review calendar-period definitions, sourced rainfall/water triggers, provisional replay selection and future evidence integration.
+
+**Task / source:** CLIMATE-REGIONAL-PREP; Current Saim Step 3D implementation request and explicit representative-point method selection
+
+## Saim — Prompt 014
+
+<a id="saim-014"></a>
+<a id="p-1067811d0922"></a>
+<!-- record-id: P-1067811d0922 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-12T22:15:17Z -->
+
+**Member:** saim
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Audit flagged NASA POWER rainfall and temperature extremes through unchanged local raw and derived artifacts, document spatial and district impact, and stop after Step 1 without refreshing data.
+
+**Purpose / AI contribution:** Implement a reproducible local-only audit with raw checksum validation, independent monthly calculations, boundary classification, neighbouring values and exact district provenance.
+
+**Human contribution:** Saim explicitly bounded the work to the extreme-value audit and prohibited data refresh, scientific rule activation and publication actions.
+
+**Changed files:** src/acquire/audit_climate_extremes.py, tests/test_climate_extreme_audit.py, docs/data/CLIMATE_EXTREME_VALUE_AUDIT.md, data/climate/climate_extreme_value_audit.json, docs/tasks/CLIMATE-EXTREME-AUDIT.json, docs/AI_USE.md, docs/PROGRESS.md, README.md
+
+**Actual outcome:** Traced 14 extrema with matching lineage and found no proven processing error; all 1,278,340 matched temperature triplets satisfy minimum &lt;= mean &lt;= maximum. The reported rainfall maximum is outside the pinned Bangladesh geometry and unused by district exports; 95 repository tests and 25 focused tests passed.
+
+**Review / limitations:** No independent meteorological validation or human review acceptance is claimed. All source and derived climate observations and existing mapping remain unchanged; the outside-country representative point and physical accuracy remain unresolved source or method questions.
+
+**Next action / owner:** Stop after the audit; any upstream validation request or sampling-method change needs a separately scoped instruction.
+
+**Task / source:** CLIMATE-EXTREME-AUDIT; Current Saim Step 1 extreme-value audit instruction
+
+## Saim — Prompt 015
+
+<a id="saim-015"></a>
+<a id="p-191f029da7d9"></a>
+<!-- record-id: P-191f029da7d9 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-12T22:22:39Z -->
+
+**Member:** saim
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Clarify original district anchors versus selected NASA POWER output positions, recheck Chapainawabganj containment, and consolidate climate-method documentation without changing data or extraction.
+
+**Purpose / AI contribution:** Recheck coordinate roles against original pinned geometry, add a read-only role/mapping check with synthetic regressions, and reconcile current method documentation and historical audit wording.
+
+**Human contribution:** Saim scoped the work to Step 2 and required separate anchor/output identification without moving coordinates, changing extraction, downloading data or claiming scientific acceptance.
+
+**Changed files:** docs/data/CLIMATE_REGIONAL_HANDOFF.md, docs/data/NATIONWIDE_SAMPLING.md, docs/data/NASA_POWER_REGIONAL_PROPOSAL.md, docs/data/NASA_POWER_REGIONAL_PREFLIGHT_2001.md, docs/data/CLIMATE_EXTREME_VALUE_AUDIT.md, src/acquire/audit_climate_extremes.py (report wording only), src/acquire/check_climate_coordinate_roles.py, tests/test_climate_coordinate_roles.py, data/climate/climate_coordinate_role_check.json, docs/tasks/CLIMATE-METHOD-DOCS.json, docs/AI_USE.md, docs/PROGRESS.md, README.md
+
+**Actual outcome:** Confirmed the Chapainawabganj anchor is inside its assigned pinned district; only the API output position is outside, 24.818573 km away. Consolidated current and historical guidance, verified all 64 anchors and unchanged prior evidence, and passed 99 repository tests plus geometry and registry checks.
+
+**Review / limitations:** No original-anchor containment failure or mapping inconsistency was found. Eleven district mappings use output positions outside pinned country polygons; geometry accuracy, spatial representativeness and independent scientific review remain unresolved. No observations, extraction methodology, crop rules or frontend behavior changed.
+
+**Next action / owner:** Stop after Step 2; independent reviewers may inspect the clarified method and geometry evidence without treating local checks as scientific acceptance.
+
+**Task / source:** CLIMATE-METHOD-DOCS; Current Saim Step 2 climate-method documentation instruction
+
+## Saim — Prompt 016
+
+<a id="saim-016"></a>
+<a id="p-f8d388aeb610"></a>
+<!-- record-id: P-f8d388aeb610 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T07:16:42Z -->
+
+**Member:** saim
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Package the existing climate raw and prepared evidence into a versioned local archive with source hashes, teammate setup instructions and isolated offline reproduction, without refreshing data or publishing.
+
+**Purpose / AI contribution:** Implement explicit allowlist packaging, safe extraction, per-file verification and network-blocked isolated reproduction; preserve raw bytes and existing evidence while producing a portable teammate guide and measured receipt.
+
+**Human contribution:** Saim defined the local packaging and verification scope and explicitly prohibited data refresh, observation or mapping changes, uploads, commits and publication.
+
+**Changed files:** src/acquire/package_climate_data.py, tests/test_climate_package.py, docs/data/CLIMATE_DATA_PACKAGE_GUIDE.md, docs/data/CLIMATE_DATA_PACKAGE_TERMS.md, docs/data/CLIMATE_REGIONAL_HANDOFF.md, data/climate/climate_data_package_v1_receipt.json, docs/tasks/CLIMATE-DATA-PACKAGE.json, docs/AI_USE.md, docs/PROGRESS.md, README.md, ignored cache/climate_handoff archive/manifest/checksum/bootstrap artifacts and separate temporary verification workspaces
+
+**Actual outcome:** Built the 88,023,118-byte v1.0.0 archive with 2,618 payload files and a checksummed working source snapshot. Fresh-directory offline validation passed and all 2,387 derived files reproduced byte-for-byte; 105 tests passed, with sharing and compression-runtime limitations documented.
+
+**Review / limitations:** No hidden project dependency was found in the extracted snapshot. All 82 prior audit evidence files and nine packaged source hashes remain unchanged; compressed-byte reproduction was tested with Python 3.9.6 and zlib 1.2.12. Public redistribution of the supplied BAMIS mapping remains unverified, NASA researcher-transmission notification is requested but not sent, and no independent scientific or agronomic approval is claimed.
+
+**Next action / owner:** Stop after Step 3; teammates can obtain the local archive and verify it using the setup guide, with external transfer or public publication separately authorized and reviewed.
+
+**Task / source:** CLIMATE-DATA-PACKAGE; Current Saim Step 3 climate-data packaging instruction and continuation to finish the remaining task
+
+## Saim — Prompt 017
+
+<a id="saim-017"></a>
+<a id="p-543f21344d93"></a>
+<!-- record-id: P-543f21344d93 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T07:22:02Z -->
+
+**Member:** saim
+
+**Tool:** Codex
+
+**Type:** push
+
+**Refined implementation prompt (AI-written):** Commit and push all completed climate acquisition, preparation, audit, method documentation and packaging work to main2 while keeping ignored climate caches local.
+
+**Purpose / AI contribution:** Inspect the full pending source/evidence diff, preserve existing commits and teammate records, then commit and push the authorized main2 changes.
+
+**Human contribution:** Saim explicitly authorized committing and pushing the completed work to main2.
+
+**Changed files:** README.md, docs/AI_USE.md, docs/PROGRESS.md, climate source/configuration/receipts, climate documentation and task records, acquisition/preparation/audit/packaging tests; ignored cache artifacts excluded
+
+**Actual outcome:** Verified the pending climate work with all 105 Python tests, workflow validation and whitespace checks passing. The remote main2 has no divergent commits; commit and push are pending.
+
+**Review / limitations:** Independent review and scientific/agronomic acceptance remain pending. The ignored raw/prepared cache and 88,023,118-byte archive are not uploaded by this Git push; no frontend files changed.
+
+**Next action / owner:** Commit the verified source/evidence changes, push main2 and record the actual result.
+
+**Task / source:** CLIMATE-DATA-PACKAGE; Saim explicitly requested pushing all completed work to main2
 <!-- workflow:ai-records:end -->

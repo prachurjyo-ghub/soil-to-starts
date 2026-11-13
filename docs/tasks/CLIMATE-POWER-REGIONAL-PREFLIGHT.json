@@ -6,7 +6,7 @@
   "phase": "INDEPENDENT-PREPARATION",
   "status": "in_review",
   "depends_on": [],
-  "updated_at": "2026-11-12T21:22:35Z",
+  "updated_at": "2026-11-12T22:01:18Z",
   "acceptance": [
     {
       "id": "a1",
@@ -72,6 +72,12 @@
       "from": "in_progress",
       "to": "in_review",
       "note": "An independent teammate should review the annual JSON practicality evidence and raw-versus-district coverage separation before any multi-parameter or multi-year Regional collection."
+    },
+    {
+      "at": "2026-11-12T22:01:18Z",
+      "from": "in_review",
+      "to": "in_review",
+      "note": "Current authorization separates full raw Regional acquisition from district method review; no acceptance or G0 record changed."
     }
   ],
   "review": {
@@ -81,6 +87,6 @@
   "merge_ref": null,
   "branch": null,
   "issue": null,
-  "next_action": "An independent teammate should review the annual JSON practicality evidence and raw-versus-district coverage separation before any multi-parameter or multi-year Regional collection.",
+  "next_action": "Review the annual preflight evidence. Independently authorized full Regional preparation is tracked in CLIMATE-REGIONAL-PREP; Saim adopted representative-point context separately without claiming independent scientific review.",
   "handoff": "Record the next consumer and reproduction steps before review."
 }

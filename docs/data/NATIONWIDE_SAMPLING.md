@@ -1,6 +1,12 @@
 # Nationwide district sampling registry
 
-## Scope and status
+## Historical Step 1 scope and current status
+
+Current Regional acquisition/context and separate anchor/output geometry checks
+are documented in the [climate method handoff](CLIMATE_REGIONAL_HANDOFF.md). All
+64 original anchors remain inside their assigned pinned districts. Returned
+Regional API positions are different coordinates and may be outside the pinned
+country polygons; this does not mean an original anchor moved or failed.
 
 Step 1 establishes one reproducible interior sampling point for each of all 64
 Bangladesh districts. It does not download NASA or other weather observations,

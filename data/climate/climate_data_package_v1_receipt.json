@@ -1,0 +1,109 @@
+{
+  "archive_bytes": 88023118,
+  "archive_member_count": 2619,
+  "archive_path": "cache/climate_handoff/soil-to-stars-climate-bgd-v1.0.0.tar.gz",
+  "archive_sha256": "4a0ba04c9c8beaa0a908e0b4d61cc23c6b90f87ad927bbe229405860eda6117b",
+  "bootstrap_path": "cache/climate_handoff/package_climate_data.py",
+  "bootstrap_sha256": "6b33abf5dee24570e04d01ed12e52a74a989aa7da1ecd1946f477f7aaf26bcd8",
+  "build_runtime": {
+    "dependencies": "Python standard library only; no pip install",
+    "exact_compression_note": "Byte-for-byte compressed reproduction was tested in this runtime; other Python/zlib versions may encode equivalent data differently. Do not silently accept a byte mismatch.",
+    "minimum_python": "3.9",
+    "platform": "Darwin",
+    "python": "3.9.6",
+    "zlib_compile": "1.2.12",
+    "zlib_runtime": "1.2.12"
+  },
+  "checks": {
+    "package_safety_tests": {
+      "count": 6,
+      "result": "passed"
+    },
+    "prior_audit_evidence": {
+      "result": "passed",
+      "unchanged_files": 82
+    },
+    "repository_tests": {
+      "count": 105,
+      "result": "passed"
+    },
+    "working_source_snapshot": {
+      "files": 9,
+      "result": "passed"
+    }
+  },
+  "delivery_status": "Local ignored artifact only; no upload/publication",
+  "disk_preflight": {
+    "available_bytes": 16015360000,
+    "required_headroom_bytes": 1743203171
+  },
+  "examples": {
+    "district": "cache/nasa_power_regional/prepared-v1/district-context/bd-district-chapainawabganj-2001.wide-replay.jsonl.gz",
+    "regional": "cache/nasa_power_regional/prepared-v1/2001.wide-replay.jsonl.gz",
+    "result": "passed"
+  },
+  "manifest_path": "cache/climate_handoff/PACKAGE_MANIFEST.json",
+  "manifest_sha256": "230b58fdc12b0cc12742387ab542e944d99facf35e6b7e071fa3636423dca29b",
+  "package_id": "soil-to-stars-climate-bgd-v1.0.0",
+  "payload_bytes": 294953543,
+  "payload_file_count": 2618,
+  "remaining_limits": [
+    "No hidden project dependency found in isolated tests; Python standard library and recorded Python/zlib compression runtime are still required.",
+    "Public redistribution of supplied BAMIS mapping is not cleared; NASA POWER requests researcher-transmission notification, and none was sent.",
+    "Hashes establish bytes/reproducibility, not physical weather accuracy, scientific or agronomic approval, or application integration."
+  ],
+  "reproduction": {
+    "destination": "/private/tmp/soil-climate-package-test.UeroHE/reproduced",
+    "exact_byte_comparison": true,
+    "network": "socket audit hook + OFFLINE=1; isolated Python -I -B",
+    "no_derived_inputs_copied": true,
+    "reproduced_derived_files": 2387,
+    "reproduced_district_files": 1601,
+    "reproduced_regional_files": 786,
+    "status": "passed",
+    "unchanged_raw_and_inputs": 222
+  },
+  "role_counts": {
+    "derived_chart": 560,
+    "derived_district_context": 1600,
+    "derived_district_manifest": 1,
+    "derived_inventory": 1,
+    "derived_long_observations": 100,
+    "derived_monthly": 100,
+    "derived_wide_replay": 25,
+    "documentation_or_terms": 8,
+    "evidence_receipt": 6,
+    "input_or_provenance": 8,
+    "raw_request_manifest": 100,
+    "raw_response": 100,
+    "source_code": 9
+  },
+  "source_revision": {
+    "branch": "main2",
+    "head": "5c8c858059440da58f00eb6d3c14daff588c68bc",
+    "note": "This is the working implementation snapshot; HEAD alone does not identify modified/untracked sources.",
+    "relevant_working_tree_status": "M src/acquire/download_nasa_power_regional.py\n?? src/acquire/audit_climate_extremes.py\n?? src/acquire/check_climate_coordinate_roles.py\n?? src/acquire/package_climate_data.py\n?? src/acquire/prepare_nasa_power_regional.py\n?? src/acquire/regional_climate_handoff.py\n?? src/acquire/verify_regional_climate_preparation.py",
+    "source_file_sha256": {
+      "src/acquire/audit_climate_extremes.py": "87e90caf1d80f63cc26461f322ea8b0c352a8a3b0b7becac5de9d6366cac3c9e",
+      "src/acquire/build_district_sampling_registry.py": "fcae888107f42f996ebdccba06509662af37cd81c1c1c88e1f489338ceacb0b7",
+      "src/acquire/check_climate_coordinate_roles.py": "eb400568cb6d1e0a78cc54d26c02ac6f5024a93dd8939c4755161bacf56ed8e7",
+      "src/acquire/download_nasa_power.py": "5d4f48a37c1d3b985d4f70a6de8ecde6508cfa61dd0f288d273cab7351398e3e",
+      "src/acquire/download_nasa_power_regional.py": "5533ebf877972e61ca48e7162dbc0bb5dc8d42c909ca8d714457e63babd337a7",
+      "src/acquire/package_climate_data.py": "6b33abf5dee24570e04d01ed12e52a74a989aa7da1ecd1946f477f7aaf26bcd8",
+      "src/acquire/prepare_nasa_power_regional.py": "620504e8e7e8746faabfbc4dc0536358f483851f370bca3e923872ed232bc589",
+      "src/acquire/regional_climate_handoff.py": "226e8d0aa2545a52463a5778892a97dc6782c6ec5641899c2f9272822f8f224a",
+      "src/acquire/verify_regional_climate_preparation.py": "d241cdba01d2cfcbfc225046f6ea081cc4039a8fc5d0e076eaefb9e32f360360"
+    }
+  },
+  "test_workspace": "/private/tmp/soil-climate-package-test.UeroHE",
+  "validation": {
+    "coordinate_role_check": "passed",
+    "extraction_root": "/private/tmp/soil-climate-package-test.UeroHE/extracted/soil-to-stars-climate-bgd-v1.0.0",
+    "network": "socket audit hook + OFFLINE=1; isolated Python -I -B",
+    "raw_requests": 100,
+    "registry_anchors": 64,
+    "status": "passed",
+    "unlisted_project_files": "No working-repository path or .git checkout is needed",
+    "verified_payload_files": 2618
+  }
+}

@@ -6,7 +6,7 @@
   "phase": "INDEPENDENT-PREPARATION",
   "status": "in_review",
   "depends_on": [],
-  "updated_at": "2026-11-12T21:07:06Z",
+  "updated_at": "2026-11-12T22:01:18Z",
   "acceptance": [
     {
       "id": "a1",
@@ -61,6 +61,12 @@
       "from": "in_progress",
       "to": "in_review",
       "note": "An independent teammate should review the Regional output-coordinate join, nearest-node method change and national-edge preflight proposal before any full historical acquisition."
+    },
+    {
+      "at": "2026-11-12T22:01:18Z",
+      "from": "in_review",
+      "to": "in_review",
+      "note": "Current Saim authorization supersedes the old full-acquisition prerequisite; historical evidence and acceptance are unchanged."
     }
   ],
   "review": {
@@ -70,6 +76,6 @@
   "merge_ref": null,
   "branch": "feature/saim-nasa-power-nationwide",
   "issue": null,
-  "next_action": "An independent teammate should review the Regional output-coordinate join, nearest-node method change and national-edge preflight proposal before any full historical acquisition.",
+  "next_action": "Review the historical smoke evidence and sampling limitations. Independently authorized full Regional preparation is tracked in CLIMATE-REGIONAL-PREP; district extraction is not a raw acquisition prerequisite.",
   "handoff": "Record the next consumer and reproduction steps before review."
 }

@@ -1,0 +1,3322 @@
+{
+  "acquisition_receipt_counts": {
+    "bytes": 86654505,
+    "complete": 100,
+    "failed": 0,
+    "pending": 0
+  },
+  "audit_version": "climate-extreme-audit-v1",
+  "boundary_method": {
+    "method": "Existing strict polygon-with-holes ray test; boundary separately flagged. Simplified pinned geometry, not a surveyed border or a cell footprint.",
+    "path": "data/admin/bgd-adm2-source.geojson.gz",
+    "uncompressed_sha256": "7dbdb186f3b8af10417147a99859196fcd89c619fb5c6ac3804251fb6b449b6a"
+  },
+  "checks": {
+    "negative_non_fill_counts": {
+      "PRECTOTCORR": 0,
+      "T2M": 0,
+      "T2M_MAX": 0,
+      "T2M_MIN": 17
+    },
+    "raw_fill_values": 0,
+    "raw_requests": 100,
+    "raw_values": 5113360,
+    "temperature_missing_rows": 0,
+    "temperature_rows_checked": 1278340,
+    "temperature_violation_count": 0,
+    "temperature_violations": []
+  },
+  "classification_definitions": {
+    "A": "Proven processing error",
+    "B": "Faithfully preserved unusual source value",
+    "C": "Unresolved source or method question"
+  },
+  "collection_id": "nasa-power-daily-regional-bgd-v1",
+  "evidence_sha256": {
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/PRECTOTCORR/20170101_20171231.json": "37009d9e6a8f074ca5432fc494125737324339c92886e3b8e054acebca3b3e23",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/PRECTOTCORR/20170101_20171231.manifest.json": "460418c0abbbf38f860d0caf4398ffd5cad6da1fa588e72c18e720add9d50ae0",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/PRECTOTCORR/20190101_20191231.json": "325717e2cee839a5aeb48e594e5f54390920561b00b88f799174a63a24da75d4",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/PRECTOTCORR/20190101_20191231.manifest.json": "9dc45addc5553d41cabdeb716c42c270b62308101092b66b38884ff72d0db29e",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M/20130101_20131231.json": "7799a6786ad27d007cf294ba58ada979116a679767720b809af572e5d6fbc8ee",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M/20130101_20131231.manifest.json": "e7043300c28940c12a65c24d76dc500c1b5b4afa6edd97bff761c328ee4f06fc",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M/20220101_20221231.json": "07db62a5f66f7eb8c24908d75c7f06d236ffb7958ac418222e305999a00fb9b4",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M/20220101_20221231.manifest.json": "83893f9229f55336974f523d0371546ef4562a49e50f93cf37b19e0b709cb47e",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M/20230101_20231231.json": "3a2c42e19c61a0268a051f4fe8fb54db5fc1cabc950bd5de5cca52a82bd41395",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M/20230101_20231231.manifest.json": "8139998e0bba6d6fe527cd757b7a4058c1321333647dbd565fe7c28afda2d82e",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M/20240101_20241231.json": "7a0430aa3b01d08025647b4fa110f7af7b2bd376620e56e0f3ab5044282bc63d",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M/20240101_20241231.manifest.json": "6b5250e75376140e5f76e6fd6f51e60e12899959bdde547d2f7ddefc85c3b4f4",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MAX/20020101_20021231.json": "40a588b2fc9edc03bc36b5070f9b6514dbdea9837161b3f73e4e5ca93a5d5495",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MAX/20020101_20021231.manifest.json": "b3f4c011a564aa07ecfe28db8df64fc6d6d7c6f3c494fafbde7c42c5dbca6b2d",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MAX/20190101_20191231.json": "fa0940c5ea0ad9d177205f51c14592ee4f10949d208ce15418f47017d099f4bd",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MAX/20190101_20191231.manifest.json": "1aada2bfd18ceaf6073efc49facba0eb0211b8eb1dd62ecf4d30d5812c6007fc",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MAX/20220101_20221231.json": "4b81a4df1c9830bf3e857747352e943b0c77b7a7cc5fe128a376f6d0d6466d1a",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MAX/20220101_20221231.manifest.json": "dd03ceee42ca6c75f4b9612e2f8bc999acaa7f8811ad90b7d20e2062357814c4",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MAX/20240101_20241231.json": "6d3438221c453f3d68f35401366ca4b59c00de78a03c26c825bd85a726a003f4",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MAX/20240101_20241231.manifest.json": "6f07ddaa829b5fa707e7b9ae9b7e9bb351eb4adc3b21d42fa5c568df13ea9a01",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MIN/20120101_20121231.json": "8d44183c0674c35f441ef6cbc6c473912167f56aa1611584e8632c865ed65e02",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MIN/20120101_20121231.manifest.json": "4ac593989276e0001136f7984ea493139302e37efaa7b272c70af44fdfe52792",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MIN/20130101_20131231.json": "fb7f7142954a28f5a44720e95634b60d3c76201de5781904194dab5ac6e4888d",
+    "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MIN/20130101_20131231.manifest.json": "2a686c3e5f2bb35d481e51076f7e0fb801025779b06bd9ba3f78dc2b0ca72b92",
+    "cache/nasa_power_regional/prepared-v1/2002.wide-replay.jsonl.gz": "89aa97891c4d489613b3ad829f576bc1ac979e8d286d131b9ad7cc20b43121b5",
+    "cache/nasa_power_regional/prepared-v1/2012.wide-replay.jsonl.gz": "721e1ff5415722e0556858073acb149e78053597384b4abc9b0fb12e511ccf48",
+    "cache/nasa_power_regional/prepared-v1/2013.wide-replay.jsonl.gz": "d7bb99b7c8d23f8f4f9763d10955afa734508756a83241ac36790cf27a49945e",
+    "cache/nasa_power_regional/prepared-v1/2017.wide-replay.jsonl.gz": "a9b5ac8ba90782e5601484ea41f63c912441392633c8a0de73ee7560fd7393db",
+    "cache/nasa_power_regional/prepared-v1/2019.wide-replay.jsonl.gz": "75f83200578c63b38c6c8906cd36fa7d0e85bf8c28251aed929f7edd85dc7267",
+    "cache/nasa_power_regional/prepared-v1/2022.wide-replay.jsonl.gz": "1b7ab82198b6e55a4492ff9621f0ff46a6ff6c4441023c9a39bb2c96feb155e2",
+    "cache/nasa_power_regional/prepared-v1/2023.wide-replay.jsonl.gz": "0499c16f85068d90ece8018b4397f97b192d5ff04f82b7841c0fb9f4806a4337",
+    "cache/nasa_power_regional/prepared-v1/2024.wide-replay.jsonl.gz": "3e02b357ba989a584da719129370486d7d36ef01adb7fd71e93f937dc689f01f",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__PRECTOTCORR__20170101_20171231.jsonl.gz": "8fed30b505dc9b778df4ef37761dd4165148801eb65a5dde3a57e93380ccd654",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__PRECTOTCORR__20170101_20171231.monthly.json": "e1c616d9af60753db968c70a8b06ed2f833e40c440b3e62f447ee4aebda23cf6",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__PRECTOTCORR__20190101_20191231.jsonl.gz": "cb5c000f90f5a6ab0542d7cbff4fe76a5e53a206f4d898d9e5b51443d1392935",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__PRECTOTCORR__20190101_20191231.monthly.json": "d98e76964b505e1b22f1b1915aed8e6c043f4f79faeede6cbe52b9411e0aa739",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MAX__20020101_20021231.jsonl.gz": "6436dfb531792eccb54576b353bb2d750bdd1bcdf67d45d1330e7bca96ebf1d7",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MAX__20020101_20021231.monthly.json": "059942a689bf287218adaacb88d71f1a5a186840836c76a2867fb4f94551f15b",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MAX__20190101_20191231.jsonl.gz": "7a10d6ff3a722e7f28ba29244c5fd5c5c7840c7e880665aad6a156ede5f00044",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MAX__20190101_20191231.monthly.json": "5b700133c3918dcc84edd07fa3eb8f64879e4bc61766c852b313e3438a375aca",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MAX__20220101_20221231.jsonl.gz": "e3498a75c00b957e039688ddb0df851d246924000c785028bac25011afbca408",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MAX__20220101_20221231.monthly.json": "ce48a21483e6fd73284684c047ab2e544198d4a16e9367e0de83f2ac8511ecbe",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MAX__20240101_20241231.jsonl.gz": "9aefc3dfdcad862712a50fb5ba7a6d0b523a34f23d827d7790ef177d063a2f89",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MAX__20240101_20241231.monthly.json": "c483f2927ef471f839c25d0892ec6f46d9d6f7d689895e538cabf96c283c3c77",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MIN__20120101_20121231.jsonl.gz": "add82d09822028176ebb7f386755561b54838850b5c4923b084e2b9ece816a8b",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MIN__20120101_20121231.monthly.json": "d3b27588181a1919d029beb1012792da2548bb021ff5d25df5d4e4f00ab5d74c",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MIN__20130101_20131231.jsonl.gz": "e8bdd1284b3e41b622697a10e981ab9ac9be2ee37effbaf2f6133eb8117ffc20",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MIN__20130101_20131231.monthly.json": "469c89923853f0dcf08ce37d4a5c99b1e8241b3753f35e425782901c9ea8eeff",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M__20130101_20131231.jsonl.gz": "62d60165f16be6b02fb51d3c494c9b4ec4d9142d4387bb0996ef08b45b430f70",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M__20130101_20131231.monthly.json": "ee5bef52bc02f7e124bd2ed54f4a1bf49a402881e5116576351e916ffa9ce617",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M__20220101_20221231.jsonl.gz": "91c020607431248248a6ea27b2eeeabd2c88d1cb2455960b137272190c968432",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M__20220101_20221231.monthly.json": "6184bae673b389ba07e2ff50938ff8cec53e37b9b787613632ecf3470184e009",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M__20230101_20231231.jsonl.gz": "e7ca1b76e0c64209a50e461020664d06c74e2487a6eddf54005703f54954cfd7",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M__20230101_20231231.monthly.json": "e2db1b15695bb00a31c6d290e3990aa4b00a0187026926182621c08a3cb471b0",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M__20240101_20241231.jsonl.gz": "56ed99c4bfe965721e60fba87e0e523ef2771a6f50e4e210320e50bb6ab860c6",
+    "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M__20240101_20241231.monthly.json": "fa4d977f01c65b3daaf2db786852584cf7041f22a729c69da16a34cb13fbcde8",
+    "cache/nasa_power_regional/prepared-v1/chart-87.5-22.5-T2M_MAX.json": "0ae03801315f32286da2d7ac44877350a71b75252af97ac370c5e7178a71ebc0",
+    "cache/nasa_power_regional/prepared-v1/chart-87.5-23.5-T2M.json": "37ca4b7c2de02824d5239f9dd1ec54acbab0610e31fcf2b59e3b05e16b6a4a18",
+    "cache/nasa_power_regional/prepared-v1/chart-87.5-24.0-T2M_MIN.json": "192197d37806c5b6cca66c2cd9662df200aedaca79b75b1290c9899a229e17d6",
+    "cache/nasa_power_regional/prepared-v1/chart-88.125-24.5-T2M_MIN.json": "1d65063189b50bee48cc3cbfbedba1743cdf59438dc3e3b7aa74c767efa7314c",
+    "cache/nasa_power_regional/prepared-v1/chart-88.75-23.5-T2M.json": "f84439199493ca6e485100c2a953d74750b4d4d30c8ef04a0f92a6734d88f8a9",
+    "cache/nasa_power_regional/prepared-v1/chart-88.75-23.5-T2M_MAX.json": "aedf9d0cc3df328a0e67d334f970196fee7bc83ff25a3f894691e4c819457744",
+    "cache/nasa_power_regional/prepared-v1/chart-89.375-22.5-T2M_MAX.json": "938a922cee731e7d6e01d972deced9a600d1a6c9900ab848a6eceddf6e9fc1ed",
+    "cache/nasa_power_regional/prepared-v1/chart-89.375-26.0-T2M.json": "3bd97bedbe17b8966261b3189f2055e127f6e1847dbc9b38db6696c447de6e8e",
+    "cache/nasa_power_regional/prepared-v1/chart-89.375-26.0-T2M_MIN.json": "23ddc69576b5cd8abe677bff860117ff24befb2b664697376c830fb53fdfba0d",
+    "cache/nasa_power_regional/prepared-v1/chart-89.375-27.0-T2M.json": "74d6356aa2d6c1b3f198dd76243e0f022c099ad54955fe419914b252f136ebf5",
+    "cache/nasa_power_regional/prepared-v1/chart-89.375-27.0-T2M_MAX.json": "b529eaccd2a6896d171ce202a5141665a0b29a95d7fb1f1e055df08f0ef9d175",
+    "cache/nasa_power_regional/prepared-v1/chart-89.375-27.0-T2M_MIN.json": "6af8d7b2317ca856258b49017160b38143475627ba6ba46193c19e0e83a24089",
+    "cache/nasa_power_regional/prepared-v1/chart-91.25-20.5-PRECTOTCORR.json": "13a712777a44caaa4709343087d3705dc50b7de872d351845737be6e2f701c5d",
+    "cache/nasa_power_regional/prepared-v1/chart-91.875-21.5-PRECTOTCORR.json": "b5bd8d065b778e73a506d912757a42fb03e2ab6792aae3d29d8a3eb76efe455f",
+    "cache/nasa_power_regional/prepared-v1/district-context/bd-district-chapainawabganj-2012.wide-replay.jsonl.gz": "5779a65fabe926cb90e8b5e432538d5c45f2bc5c9750319014bc57724c7e8692",
+    "cache/nasa_power_regional/prepared-v1/district-context/bd-district-chuadanga-2024.wide-replay.jsonl.gz": "0d6e4a7b2a657c2bb5b33a4f228b5be6b19d45f961dd2244a4408eee440470c5",
+    "cache/nasa_power_regional/prepared-v1/district-context/bd-district-coxs-bazar-2019.wide-replay.jsonl.gz": "dc3444c7da1016b4bdcc43d4eb72490ea283afb7042b3a2026eb68a9a8fd3242",
+    "cache/nasa_power_regional/prepared-v1/district-context/bd-district-khulna-2019.wide-replay.jsonl.gz": "61801c7e6385d51e5b848e7207aac6f47015031e170ade685cadfeababf76ad5",
+    "cache/nasa_power_regional/prepared-v1/district-context/bd-district-kurigram-2013.wide-replay.jsonl.gz": "4b3b0147687960c8e5c8b94ad60f76f43e21bac99473fadae60858854bcf3d9a",
+    "cache/nasa_power_regional/prepared-v1/district-context/bd-district-lalmonirhat-2013.wide-replay.jsonl.gz": "ad469dbf2765c50f3163a53fb703be46288a89060e47e720fdabe59c26f774ef",
+    "cache/nasa_power_regional/prepared-v1/district-context/bd-district-satkhira-2019.wide-replay.jsonl.gz": "a3ee0adfd3f9be322071e1505f9b3e036b90b28b3e3ce2001af08295e047c7b9",
+    "cache/nasa_power_regional/prepared-v1/district-context/manifest.json": "c090ec40bdadfe9016a28d9c18c5317794ea3003d8dc01d2d4d169e36d2460db",
+    "cache/nasa_power_regional/prepared-v1/inventory.json": "43d9a11abeeb64ac49fc248771d828b3ec0678318d5fb305d41fc168b9973837",
+    "data/admin/bgd-adm2-source.geojson.gz": "a64c10d89fe83c0ea9517aa0a3f977edc8ff0597c41d867f9c006f9ad2eec611",
+    "data/climate/nasa_power_regional_full_summary.json": "882123480e7734e2e8706aa7a5163c50eb82a8ddafcc79e6ea518d803f02322c",
+    "data/climate/nasa_power_regional_preparation_summary.json": "8209b6f447e51f514a38b4a6a00b08daa9f52321b7ae11e2927666ef21b73d8d"
+  },
+  "neighbour_method": "Same returned coordinate at offsets -2,-1,0,+1,+2 calendar days; four nearest distinct returned points on the same LST date by great-circle distance (6371.0088 km), then latitude, longitude. No interpolation.",
+  "network_requests": 0,
+  "observations": [
+    {
+      "chart": {
+        "monthly_record_matches": true,
+        "path": "cache/nasa_power_regional/prepared-v1/chart-91.25-20.5-PRECTOTCORR.json",
+        "period": [
+          "2001-01",
+          "2025-12"
+        ],
+        "provisional_selection": {
+          "maximum": {
+            "end": "2017-12",
+            "start": "2017-01",
+            "value": 9880.92
+          },
+          "minimum": {
+            "end": "2003-12",
+            "start": "2003-01",
+            "value": 2518.2500000000005
+          },
+          "month_count": 12,
+          "start_month": 1,
+          "status": "provisional_descriptive_only",
+          "tie_break": "earliest start",
+          "usable_periods": 25
+        }
+      },
+      "checks": {
+        "district_exports": true,
+        "independently_recomputed_monthly": true,
+        "monthly_to_chart": true,
+        "raw_to_normalized": true,
+        "raw_to_wide_replay": true
+      },
+      "classification": "B",
+      "conclusion": "Faithfully preserved unusual source value; physical accuracy unresolved.",
+      "coordinates": [
+        91.25,
+        20.5
+      ],
+      "date": "2017-07-22",
+      "district_context": [],
+      "geography": {
+        "classification": "padded_area_only_outside_pinned_Bangladesh_geometry",
+        "containing_source_district_names": []
+      },
+      "method_questions": [],
+      "monthly": {
+        "independent_value": 3237.04,
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__PRECTOTCORR__20170101_20171231.monthly.json",
+        "record": {
+          "available_day_statistic": 3237.0400000000004,
+          "coverage": "complete",
+          "date": "2017-07",
+          "expected_days": 31,
+          "output_latitude": 20.5,
+          "output_longitude": 91.25,
+          "parameter": "PRECTOTCORR",
+          "processing_version": "regional-preparation-v1",
+          "source_artifacts": [
+            "37009d9e6a8f074ca5432fc494125737324339c92886e3b8e054acebca3b3e23"
+          ],
+          "statistic": "daily_rate_times_one_day_sum",
+          "unit": "mm",
+          "valid_days": 31,
+          "value": 3237.0400000000004
+        }
+      },
+      "normalized": {
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__PRECTOTCORR__20170101_20171231.jsonl.gz",
+        "record": {
+          "collection_id": "nasa-power-daily-regional-bgd-v1",
+          "date": "2017-07-22",
+          "missing_reason": null,
+          "output_latitude": 20.5,
+          "output_longitude": 91.25,
+          "parameter": "PRECTOTCORR",
+          "raw_artifact": "37009d9e6a8f074ca5432fc494125737324339c92886e3b8e054acebca3b3e23",
+          "request_id": "bgd-padded-national__PRECTOTCORR__20170101_20171231",
+          "time_standard": "LST",
+          "unit": "mm/day",
+          "value": 965.18
+        }
+      },
+      "parameter": "PRECTOTCORR",
+      "raw": {
+        "header": {
+          "api": {
+            "name": "POWER Daily API",
+            "version": "v2.10.3"
+          },
+          "end": "20171231",
+          "fill_value": -999.0,
+          "sources": [
+            "MERRA2"
+          ],
+          "start": "20170101",
+          "time_standard": "LST",
+          "title": "NASA/POWER Source Native Resolution Daily Data"
+        },
+        "manifest_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/PRECTOTCORR/20170101_20171231.manifest.json",
+        "parameter_metadata": {
+          "longname": "Precipitation Corrected",
+          "units": "mm/day"
+        },
+        "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/PRECTOTCORR/20170101_20171231.json",
+        "raw_sha256": "37009d9e6a8f074ca5432fc494125737324339c92886e3b8e054acebca3b3e23",
+        "request_parameters": {
+          "community": "AG",
+          "end": "20171231",
+          "format": "JSON",
+          "latitude-max": "27.134513",
+          "latitude-min": "20.090609",
+          "longitude-max": "93.305257",
+          "longitude-min": "87.383628",
+          "parameters": "PRECTOTCORR",
+          "start": "20170101",
+          "time-standard": "LST",
+          "units": "metric"
+        },
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=PRECTOTCORR&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20170101&end=20171231&format=JSON&time-standard=LST&units=metric"
+      },
+      "replay": {
+        "path": "cache/nasa_power_regional/prepared-v1/2017.wide-replay.jsonl.gz",
+        "record": {
+          "date": "2017-07-22",
+          "missing_reasons": {
+            "PRECTOTCORR": null,
+            "T2M": null,
+            "T2M_MAX": null,
+            "T2M_MIN": null
+          },
+          "output_latitude": 20.5,
+          "output_longitude": 91.25,
+          "processing_version": "regional-preparation-v1",
+          "raw_artifacts": {
+            "PRECTOTCORR": "37009d9e6a8f074ca5432fc494125737324339c92886e3b8e054acebca3b3e23",
+            "T2M": "3b550556f5721121c9036eed59c74364fd15634321a17df9d105a1fabac3ac51",
+            "T2M_MAX": "7035c06f178f55b04f46d5c2781375b8bac9a4eb9e3311cc74128a929b975403",
+            "T2M_MIN": "cee85a853ea04a4bc7df4906db9f596ecb45ce6f10a4daccb7743aae6eacfdd9"
+          },
+          "time_standard": "LST",
+          "units": {
+            "PRECTOTCORR": "mm/day",
+            "T2M": "C",
+            "T2M_MAX": "C",
+            "T2M_MIN": "C"
+          },
+          "values": {
+            "PRECTOTCORR": 965.18,
+            "T2M": 28.18,
+            "T2M_MAX": 28.51,
+            "T2M_MIN": 27.82
+          }
+        }
+      },
+      "request_id": "bgd-padded-national__PRECTOTCORR__20170101_20171231",
+      "selections": [
+        {
+          "extreme": "maximum",
+          "scope": "padded_regional",
+          "ties": 1
+        }
+      ],
+      "spatial_neighbours": [
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 21.0,
+          "longitude": 91.25,
+          "value": 527.46
+        },
+        {
+          "distance_km": 65.09579743921556,
+          "latitude": 20.5,
+          "longitude": 90.625,
+          "value": 290.76
+        },
+        {
+          "distance_km": 65.09579743921556,
+          "latitude": 20.5,
+          "longitude": 91.875,
+          "value": 708.66
+        },
+        {
+          "distance_km": 85.52552719245239,
+          "latitude": 21.0,
+          "longitude": 90.625,
+          "value": 196.4
+        }
+      ],
+      "temporal_neighbours": [
+        {
+          "date": "2017-07-20",
+          "offset_days": -2,
+          "value": 106.49
+        },
+        {
+          "date": "2017-07-21",
+          "offset_days": -1,
+          "value": 122.74
+        },
+        {
+          "date": "2017-07-22",
+          "offset_days": 0,
+          "value": 965.18
+        },
+        {
+          "date": "2017-07-23",
+          "offset_days": 1,
+          "value": 232.21
+        },
+        {
+          "date": "2017-07-24",
+          "offset_days": 2,
+          "value": 174.51
+        }
+      ],
+      "time_standard": "LST",
+      "unit": "mm/day",
+      "value": 965.18
+    },
+    {
+      "chart": {
+        "monthly_record_matches": true,
+        "path": "cache/nasa_power_regional/prepared-v1/chart-91.875-21.5-PRECTOTCORR.json",
+        "period": [
+          "2001-01",
+          "2025-12"
+        ],
+        "provisional_selection": {
+          "maximum": {
+            "end": "2017-12",
+            "start": "2017-01",
+            "value": 9818.19
+          },
+          "minimum": {
+            "end": "2003-12",
+            "start": "2003-01",
+            "value": 2212.31
+          },
+          "month_count": 12,
+          "start_month": 1,
+          "status": "provisional_descriptive_only",
+          "tie_break": "earliest start",
+          "usable_periods": 25
+        }
+      },
+      "checks": {
+        "district_exports": true,
+        "independently_recomputed_monthly": true,
+        "monthly_to_chart": true,
+        "raw_to_normalized": true,
+        "raw_to_wide_replay": true
+      },
+      "classification": "B",
+      "conclusion": "Faithfully preserved unusual source value; physical accuracy unresolved.",
+      "coordinates": [
+        91.875,
+        21.5
+      ],
+      "date": "2019-07-07",
+      "district_context": [
+        {
+          "distance_km": 29.204961129791275,
+          "district_id": "bd-district-coxs-bazar",
+          "matches": true,
+          "path": "cache/nasa_power_regional/prepared-v1/district-context/bd-district-coxs-bazar-2019.wide-replay.jsonl.gz",
+          "sha256": "dc3444c7da1016b4bdcc43d4eb72490ea283afb7042b3a2026eb68a9a8fd3242"
+        }
+      ],
+      "geography": {
+        "classification": "inside_pinned_Bangladesh_geometry",
+        "containing_source_district_names": [
+          "Cox's Bazar"
+        ]
+      },
+      "method_questions": [],
+      "monthly": {
+        "independent_value": 3321.56,
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__PRECTOTCORR__20190101_20191231.monthly.json",
+        "record": {
+          "available_day_statistic": 3321.56,
+          "coverage": "complete",
+          "date": "2019-07",
+          "expected_days": 31,
+          "output_latitude": 21.5,
+          "output_longitude": 91.875,
+          "parameter": "PRECTOTCORR",
+          "processing_version": "regional-preparation-v1",
+          "source_artifacts": [
+            "325717e2cee839a5aeb48e594e5f54390920561b00b88f799174a63a24da75d4"
+          ],
+          "statistic": "daily_rate_times_one_day_sum",
+          "unit": "mm",
+          "valid_days": 31,
+          "value": 3321.56
+        }
+      },
+      "normalized": {
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__PRECTOTCORR__20190101_20191231.jsonl.gz",
+        "record": {
+          "collection_id": "nasa-power-daily-regional-bgd-v1",
+          "date": "2019-07-07",
+          "missing_reason": null,
+          "output_latitude": 21.5,
+          "output_longitude": 91.875,
+          "parameter": "PRECTOTCORR",
+          "raw_artifact": "325717e2cee839a5aeb48e594e5f54390920561b00b88f799174a63a24da75d4",
+          "request_id": "bgd-padded-national__PRECTOTCORR__20190101_20191231",
+          "time_standard": "LST",
+          "unit": "mm/day",
+          "value": 521.24
+        }
+      },
+      "parameter": "PRECTOTCORR",
+      "raw": {
+        "header": {
+          "api": {
+            "name": "POWER Daily API",
+            "version": "v2.10.3"
+          },
+          "end": "20191231",
+          "fill_value": -999.0,
+          "sources": [
+            "MERRA2"
+          ],
+          "start": "20190101",
+          "time_standard": "LST",
+          "title": "NASA/POWER Source Native Resolution Daily Data"
+        },
+        "manifest_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/PRECTOTCORR/20190101_20191231.manifest.json",
+        "parameter_metadata": {
+          "longname": "Precipitation Corrected",
+          "units": "mm/day"
+        },
+        "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/PRECTOTCORR/20190101_20191231.json",
+        "raw_sha256": "325717e2cee839a5aeb48e594e5f54390920561b00b88f799174a63a24da75d4",
+        "request_parameters": {
+          "community": "AG",
+          "end": "20191231",
+          "format": "JSON",
+          "latitude-max": "27.134513",
+          "latitude-min": "20.090609",
+          "longitude-max": "93.305257",
+          "longitude-min": "87.383628",
+          "parameters": "PRECTOTCORR",
+          "start": "20190101",
+          "time-standard": "LST",
+          "units": "metric"
+        },
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=PRECTOTCORR&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20190101&end=20191231&format=JSON&time-standard=LST&units=metric"
+      },
+      "replay": {
+        "path": "cache/nasa_power_regional/prepared-v1/2019.wide-replay.jsonl.gz",
+        "record": {
+          "date": "2019-07-07",
+          "missing_reasons": {
+            "PRECTOTCORR": null,
+            "T2M": null,
+            "T2M_MAX": null,
+            "T2M_MIN": null
+          },
+          "output_latitude": 21.5,
+          "output_longitude": 91.875,
+          "processing_version": "regional-preparation-v1",
+          "raw_artifacts": {
+            "PRECTOTCORR": "325717e2cee839a5aeb48e594e5f54390920561b00b88f799174a63a24da75d4",
+            "T2M": "a072b294c469296ad4860d07206355223a2e7caabae8c8ddc85201694517bb18",
+            "T2M_MAX": "fa0940c5ea0ad9d177205f51c14592ee4f10949d208ce15418f47017d099f4bd",
+            "T2M_MIN": "522736bced2054027ea65e19e05a50f462336e89b326705a07c5b62cb8a4d157"
+          },
+          "time_standard": "LST",
+          "units": {
+            "PRECTOTCORR": "mm/day",
+            "T2M": "C",
+            "T2M_MAX": "C",
+            "T2M_MIN": "C"
+          },
+          "values": {
+            "PRECTOTCORR": 521.24,
+            "T2M": 28.58,
+            "T2M_MAX": 29.04,
+            "T2M_MIN": 27.94
+          }
+        }
+      },
+      "request_id": "bgd-padded-national__PRECTOTCORR__20190101_20191231",
+      "selections": [
+        {
+          "extreme": "maximum",
+          "scope": "district_used_locations",
+          "ties": 1
+        }
+      ],
+      "spatial_neighbours": [
+        {
+          "distance_km": 55.597540116766176,
+          "latitude": 22.0,
+          "longitude": 91.875,
+          "value": 561.92
+        },
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 21.0,
+          "longitude": 91.875,
+          "value": 431.3
+        },
+        {
+          "distance_km": 64.66111701373036,
+          "latitude": 21.5,
+          "longitude": 91.25,
+          "value": 538.55
+        },
+        {
+          "distance_km": 64.66111701373036,
+          "latitude": 21.5,
+          "longitude": 92.5,
+          "value": 174.9
+        }
+      ],
+      "temporal_neighbours": [
+        {
+          "date": "2019-07-05",
+          "offset_days": -2,
+          "value": 164.75
+        },
+        {
+          "date": "2019-07-06",
+          "offset_days": -1,
+          "value": 190.38
+        },
+        {
+          "date": "2019-07-07",
+          "offset_days": 0,
+          "value": 521.24
+        },
+        {
+          "date": "2019-07-08",
+          "offset_days": 1,
+          "value": 138.79
+        },
+        {
+          "date": "2019-07-09",
+          "offset_days": 2,
+          "value": 148.03
+        }
+      ],
+      "time_standard": "LST",
+      "unit": "mm/day",
+      "value": 521.24
+    },
+    {
+      "chart": {
+        "monthly_record_matches": true,
+        "path": "cache/nasa_power_regional/prepared-v1/chart-89.375-26.0-T2M.json",
+        "period": [
+          "2001-01",
+          "2025-12"
+        ],
+        "provisional_selection": {
+          "maximum": {
+            "end": "2016-12",
+            "start": "2016-01",
+            "value": 25.849180327868854
+          },
+          "minimum": {
+            "end": "2012-12",
+            "start": "2012-01",
+            "value": 24.420437158469944
+          },
+          "month_count": 12,
+          "start_month": 1,
+          "status": "provisional_descriptive_only",
+          "tie_break": "earliest start",
+          "usable_periods": 25
+        }
+      },
+      "checks": {
+        "district_exports": true,
+        "independently_recomputed_monthly": true,
+        "monthly_to_chart": true,
+        "raw_to_normalized": true,
+        "raw_to_wide_replay": true
+      },
+      "classification": "B",
+      "conclusion": "Faithfully preserved unusual source value; physical accuracy unresolved.",
+      "coordinates": [
+        89.375,
+        26.0
+      ],
+      "date": "2013-01-09",
+      "district_context": [
+        {
+          "distance_km": 36.8707780753441,
+          "district_id": "bd-district-kurigram",
+          "matches": true,
+          "path": "cache/nasa_power_regional/prepared-v1/district-context/bd-district-kurigram-2013.wide-replay.jsonl.gz",
+          "sha256": "4b3b0147687960c8e5c8b94ad60f76f43e21bac99473fadae60858854bcf3d9a"
+        },
+        {
+          "distance_km": 24.942742913607518,
+          "district_id": "bd-district-lalmonirhat",
+          "matches": true,
+          "path": "cache/nasa_power_regional/prepared-v1/district-context/bd-district-lalmonirhat-2013.wide-replay.jsonl.gz",
+          "sha256": "ad469dbf2765c50f3163a53fb703be46288a89060e47e720fdabe59c26f774ef"
+        }
+      ],
+      "geography": {
+        "classification": "inside_pinned_Bangladesh_geometry",
+        "containing_source_district_names": [
+          "Lalmonirhat"
+        ]
+      },
+      "method_questions": [],
+      "monthly": {
+        "independent_value": 14.192258064516128,
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M__20130101_20131231.monthly.json",
+        "record": {
+          "available_day_statistic": 14.19225806451613,
+          "coverage": "complete",
+          "date": "2013-01",
+          "expected_days": 31,
+          "output_latitude": 26.0,
+          "output_longitude": 89.375,
+          "parameter": "T2M",
+          "processing_version": "regional-preparation-v1",
+          "source_artifacts": [
+            "7799a6786ad27d007cf294ba58ada979116a679767720b809af572e5d6fbc8ee"
+          ],
+          "statistic": "mean_of_daily_values",
+          "unit": "C",
+          "valid_days": 31,
+          "value": 14.19225806451613
+        }
+      },
+      "normalized": {
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M__20130101_20131231.jsonl.gz",
+        "record": {
+          "collection_id": "nasa-power-daily-regional-bgd-v1",
+          "date": "2013-01-09",
+          "missing_reason": null,
+          "output_latitude": 26.0,
+          "output_longitude": 89.375,
+          "parameter": "T2M",
+          "raw_artifact": "7799a6786ad27d007cf294ba58ada979116a679767720b809af572e5d6fbc8ee",
+          "request_id": "bgd-padded-national__T2M__20130101_20131231",
+          "time_standard": "LST",
+          "unit": "C",
+          "value": 8.39
+        }
+      },
+      "parameter": "T2M",
+      "raw": {
+        "header": {
+          "api": {
+            "name": "POWER Daily API",
+            "version": "v2.10.3"
+          },
+          "end": "20131231",
+          "fill_value": -999.0,
+          "sources": [
+            "MERRA2"
+          ],
+          "start": "20130101",
+          "time_standard": "LST",
+          "title": "NASA/POWER Source Native Resolution Daily Data"
+        },
+        "manifest_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M/20130101_20131231.manifest.json",
+        "parameter_metadata": {
+          "longname": "Temperature at 2 Meters",
+          "units": "C"
+        },
+        "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M/20130101_20131231.json",
+        "raw_sha256": "7799a6786ad27d007cf294ba58ada979116a679767720b809af572e5d6fbc8ee",
+        "request_parameters": {
+          "community": "AG",
+          "end": "20131231",
+          "format": "JSON",
+          "latitude-max": "27.134513",
+          "latitude-min": "20.090609",
+          "longitude-max": "93.305257",
+          "longitude-min": "87.383628",
+          "parameters": "T2M",
+          "start": "20130101",
+          "time-standard": "LST",
+          "units": "metric"
+        },
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20130101&end=20131231&format=JSON&time-standard=LST&units=metric"
+      },
+      "replay": {
+        "path": "cache/nasa_power_regional/prepared-v1/2013.wide-replay.jsonl.gz",
+        "record": {
+          "date": "2013-01-09",
+          "missing_reasons": {
+            "PRECTOTCORR": null,
+            "T2M": null,
+            "T2M_MAX": null,
+            "T2M_MIN": null
+          },
+          "output_latitude": 26.0,
+          "output_longitude": 89.375,
+          "processing_version": "regional-preparation-v1",
+          "raw_artifacts": {
+            "PRECTOTCORR": "76e735dd50b35ada53b9f4c6a0e0f94af7e4f393f89d0549c1b176b403ebf261",
+            "T2M": "7799a6786ad27d007cf294ba58ada979116a679767720b809af572e5d6fbc8ee",
+            "T2M_MAX": "e9a410260fefd634d35b6105da0b31326964253a27c790c0920979ac5867ebc0",
+            "T2M_MIN": "fb7f7142954a28f5a44720e95634b60d3c76201de5781904194dab5ac6e4888d"
+          },
+          "time_standard": "LST",
+          "units": {
+            "PRECTOTCORR": "mm/day",
+            "T2M": "C",
+            "T2M_MAX": "C",
+            "T2M_MIN": "C"
+          },
+          "values": {
+            "PRECTOTCORR": 0.0,
+            "T2M": 8.39,
+            "T2M_MAX": 17.72,
+            "T2M_MIN": 1.23
+          }
+        }
+      },
+      "request_id": "bgd-padded-national__T2M__20130101_20131231",
+      "selections": [
+        {
+          "extreme": "minimum",
+          "scope": "district_used_locations",
+          "ties": 1
+        }
+      ],
+      "spatial_neighbours": [
+        {
+          "distance_km": 55.597540116766176,
+          "latitude": 26.5,
+          "longitude": 89.375,
+          "value": 10.35
+        },
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 25.5,
+          "longitude": 89.375,
+          "value": 8.99
+        },
+        {
+          "distance_km": 62.463363043541136,
+          "latitude": 26.0,
+          "longitude": 88.75,
+          "value": 8.65
+        },
+        {
+          "distance_km": 62.463363043541136,
+          "latitude": 26.0,
+          "longitude": 90.0,
+          "value": 8.44
+        }
+      ],
+      "temporal_neighbours": [
+        {
+          "date": "2013-01-07",
+          "offset_days": -2,
+          "value": 10.32
+        },
+        {
+          "date": "2013-01-08",
+          "offset_days": -1,
+          "value": 8.87
+        },
+        {
+          "date": "2013-01-09",
+          "offset_days": 0,
+          "value": 8.39
+        },
+        {
+          "date": "2013-01-10",
+          "offset_days": 1,
+          "value": 9.79
+        },
+        {
+          "date": "2013-01-11",
+          "offset_days": 2,
+          "value": 11.83
+        }
+      ],
+      "time_standard": "LST",
+      "unit": "C",
+      "value": 8.39
+    },
+    {
+      "chart": {
+        "monthly_record_matches": true,
+        "path": "cache/nasa_power_regional/prepared-v1/chart-89.375-27.0-T2M.json",
+        "period": [
+          "2001-01",
+          "2025-12"
+        ],
+        "provisional_selection": {
+          "maximum": {
+            "end": "2016-12",
+            "start": "2016-01",
+            "value": 15.881120218579234
+          },
+          "minimum": {
+            "end": "2011-12",
+            "start": "2011-01",
+            "value": 14.787013698630137
+          },
+          "month_count": 12,
+          "start_month": 1,
+          "status": "provisional_descriptive_only",
+          "tie_break": "earliest start",
+          "usable_periods": 25
+        }
+      },
+      "checks": {
+        "district_exports": true,
+        "independently_recomputed_monthly": true,
+        "monthly_to_chart": true,
+        "raw_to_normalized": true,
+        "raw_to_wide_replay": true
+      },
+      "classification": "B",
+      "conclusion": "Faithfully preserved unusual source value; physical accuracy unresolved.",
+      "coordinates": [
+        89.375,
+        27.0
+      ],
+      "date": "2022-02-05",
+      "district_context": [],
+      "geography": {
+        "classification": "padded_area_only_outside_pinned_Bangladesh_geometry",
+        "containing_source_district_names": []
+      },
+      "method_questions": [],
+      "monthly": {
+        "independent_value": 7.0249999999999995,
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M__20220101_20221231.monthly.json",
+        "record": {
+          "available_day_statistic": 7.025,
+          "coverage": "complete",
+          "date": "2022-02",
+          "expected_days": 28,
+          "output_latitude": 27.0,
+          "output_longitude": 89.375,
+          "parameter": "T2M",
+          "processing_version": "regional-preparation-v1",
+          "source_artifacts": [
+            "07db62a5f66f7eb8c24908d75c7f06d236ffb7958ac418222e305999a00fb9b4"
+          ],
+          "statistic": "mean_of_daily_values",
+          "unit": "C",
+          "valid_days": 28,
+          "value": 7.025
+        }
+      },
+      "normalized": {
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M__20220101_20221231.jsonl.gz",
+        "record": {
+          "collection_id": "nasa-power-daily-regional-bgd-v1",
+          "date": "2022-02-05",
+          "missing_reason": null,
+          "output_latitude": 27.0,
+          "output_longitude": 89.375,
+          "parameter": "T2M",
+          "raw_artifact": "07db62a5f66f7eb8c24908d75c7f06d236ffb7958ac418222e305999a00fb9b4",
+          "request_id": "bgd-padded-national__T2M__20220101_20221231",
+          "time_standard": "LST",
+          "unit": "C",
+          "value": 2.74
+        }
+      },
+      "parameter": "T2M",
+      "raw": {
+        "header": {
+          "api": {
+            "name": "POWER Daily API",
+            "version": "v2.10.3"
+          },
+          "end": "20221231",
+          "fill_value": -999.0,
+          "sources": [
+            "MERRA2"
+          ],
+          "start": "20220101",
+          "time_standard": "LST",
+          "title": "NASA/POWER Source Native Resolution Daily Data"
+        },
+        "manifest_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M/20220101_20221231.manifest.json",
+        "parameter_metadata": {
+          "longname": "Temperature at 2 Meters",
+          "units": "C"
+        },
+        "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M/20220101_20221231.json",
+        "raw_sha256": "07db62a5f66f7eb8c24908d75c7f06d236ffb7958ac418222e305999a00fb9b4",
+        "request_parameters": {
+          "community": "AG",
+          "end": "20221231",
+          "format": "JSON",
+          "latitude-max": "27.134513",
+          "latitude-min": "20.090609",
+          "longitude-max": "93.305257",
+          "longitude-min": "87.383628",
+          "parameters": "T2M",
+          "start": "20220101",
+          "time-standard": "LST",
+          "units": "metric"
+        },
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20220101&end=20221231&format=JSON&time-standard=LST&units=metric"
+      },
+      "replay": {
+        "path": "cache/nasa_power_regional/prepared-v1/2022.wide-replay.jsonl.gz",
+        "record": {
+          "date": "2022-02-05",
+          "missing_reasons": {
+            "PRECTOTCORR": null,
+            "T2M": null,
+            "T2M_MAX": null,
+            "T2M_MIN": null
+          },
+          "output_latitude": 27.0,
+          "output_longitude": 89.375,
+          "processing_version": "regional-preparation-v1",
+          "raw_artifacts": {
+            "PRECTOTCORR": "cc395e97190ee19861a517eb6615f91488563460a5238248f2e09f98bd4bad8f",
+            "T2M": "07db62a5f66f7eb8c24908d75c7f06d236ffb7958ac418222e305999a00fb9b4",
+            "T2M_MAX": "4b81a4df1c9830bf3e857747352e943b0c77b7a7cc5fe128a376f6d0d6466d1a",
+            "T2M_MIN": "29053c7a9fcbefb513a7f7634041d33d08c757e27fdeb344cf41a6ef85992f6c"
+          },
+          "time_standard": "LST",
+          "units": {
+            "PRECTOTCORR": "mm/day",
+            "T2M": "C",
+            "T2M_MAX": "C",
+            "T2M_MIN": "C"
+          },
+          "values": {
+            "PRECTOTCORR": 4.98,
+            "T2M": 2.74,
+            "T2M_MAX": 5.89,
+            "T2M_MIN": -0.09
+          }
+        }
+      },
+      "request_id": "bgd-padded-national__T2M__20220101_20221231",
+      "selections": [
+        {
+          "extreme": "minimum",
+          "scope": "padded_regional",
+          "ties": 1
+        }
+      ],
+      "spatial_neighbours": [
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 26.5,
+          "longitude": 89.375,
+          "value": 13.07
+        },
+        {
+          "distance_km": 61.92215043884317,
+          "latitude": 27.0,
+          "longitude": 88.75,
+          "value": 6.06
+        },
+        {
+          "distance_km": 61.92215043884317,
+          "latitude": 27.0,
+          "longitude": 90.0,
+          "value": 3.68
+        },
+        {
+          "distance_km": 83.32101315287298,
+          "latitude": 26.5,
+          "longitude": 88.75,
+          "value": 14.1
+        }
+      ],
+      "temporal_neighbours": [
+        {
+          "date": "2022-02-03",
+          "offset_days": -2,
+          "value": 6.2
+        },
+        {
+          "date": "2022-02-04",
+          "offset_days": -1,
+          "value": 5.81
+        },
+        {
+          "date": "2022-02-05",
+          "offset_days": 0,
+          "value": 2.74
+        },
+        {
+          "date": "2022-02-06",
+          "offset_days": 1,
+          "value": 4.66
+        },
+        {
+          "date": "2022-02-07",
+          "offset_days": 2,
+          "value": 5.19
+        }
+      ],
+      "time_standard": "LST",
+      "unit": "C",
+      "value": 2.74
+    },
+    {
+      "chart": {
+        "monthly_record_matches": true,
+        "path": "cache/nasa_power_regional/prepared-v1/chart-87.5-23.5-T2M.json",
+        "period": [
+          "2001-01",
+          "2025-12"
+        ],
+        "provisional_selection": {
+          "maximum": {
+            "end": "2023-12",
+            "start": "2023-01",
+            "value": 26.430246575342473
+          },
+          "minimum": {
+            "end": "2020-12",
+            "start": "2020-01",
+            "value": 25.060245901639348
+          },
+          "month_count": 12,
+          "start_month": 1,
+          "status": "provisional_descriptive_only",
+          "tie_break": "earliest start",
+          "usable_periods": 25
+        }
+      },
+      "checks": {
+        "district_exports": true,
+        "independently_recomputed_monthly": true,
+        "monthly_to_chart": true,
+        "raw_to_normalized": true,
+        "raw_to_wide_replay": true
+      },
+      "classification": "B",
+      "conclusion": "Faithfully preserved unusual source value; physical accuracy unresolved.",
+      "coordinates": [
+        87.5,
+        23.5
+      ],
+      "date": "2023-06-16",
+      "district_context": [],
+      "geography": {
+        "classification": "padded_area_only_outside_pinned_Bangladesh_geometry",
+        "containing_source_district_names": []
+      },
+      "method_questions": [],
+      "monthly": {
+        "independent_value": 33.41266666666667,
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M__20230101_20231231.monthly.json",
+        "record": {
+          "available_day_statistic": 33.41266666666666,
+          "coverage": "complete",
+          "date": "2023-06",
+          "expected_days": 30,
+          "output_latitude": 23.5,
+          "output_longitude": 87.5,
+          "parameter": "T2M",
+          "processing_version": "regional-preparation-v1",
+          "source_artifacts": [
+            "3a2c42e19c61a0268a051f4fe8fb54db5fc1cabc950bd5de5cca52a82bd41395"
+          ],
+          "statistic": "mean_of_daily_values",
+          "unit": "C",
+          "valid_days": 30,
+          "value": 33.41266666666666
+        }
+      },
+      "normalized": {
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M__20230101_20231231.jsonl.gz",
+        "record": {
+          "collection_id": "nasa-power-daily-regional-bgd-v1",
+          "date": "2023-06-16",
+          "missing_reason": null,
+          "output_latitude": 23.5,
+          "output_longitude": 87.5,
+          "parameter": "T2M",
+          "raw_artifact": "3a2c42e19c61a0268a051f4fe8fb54db5fc1cabc950bd5de5cca52a82bd41395",
+          "request_id": "bgd-padded-national__T2M__20230101_20231231",
+          "time_standard": "LST",
+          "unit": "C",
+          "value": 39.09
+        }
+      },
+      "parameter": "T2M",
+      "raw": {
+        "header": {
+          "api": {
+            "name": "POWER Daily API",
+            "version": "v2.10.3"
+          },
+          "end": "20231231",
+          "fill_value": -999.0,
+          "sources": [
+            "MERRA2"
+          ],
+          "start": "20230101",
+          "time_standard": "LST",
+          "title": "NASA/POWER Source Native Resolution Daily Data"
+        },
+        "manifest_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M/20230101_20231231.manifest.json",
+        "parameter_metadata": {
+          "longname": "Temperature at 2 Meters",
+          "units": "C"
+        },
+        "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M/20230101_20231231.json",
+        "raw_sha256": "3a2c42e19c61a0268a051f4fe8fb54db5fc1cabc950bd5de5cca52a82bd41395",
+        "request_parameters": {
+          "community": "AG",
+          "end": "20231231",
+          "format": "JSON",
+          "latitude-max": "27.134513",
+          "latitude-min": "20.090609",
+          "longitude-max": "93.305257",
+          "longitude-min": "87.383628",
+          "parameters": "T2M",
+          "start": "20230101",
+          "time-standard": "LST",
+          "units": "metric"
+        },
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20230101&end=20231231&format=JSON&time-standard=LST&units=metric"
+      },
+      "replay": {
+        "path": "cache/nasa_power_regional/prepared-v1/2023.wide-replay.jsonl.gz",
+        "record": {
+          "date": "2023-06-16",
+          "missing_reasons": {
+            "PRECTOTCORR": null,
+            "T2M": null,
+            "T2M_MAX": null,
+            "T2M_MIN": null
+          },
+          "output_latitude": 23.5,
+          "output_longitude": 87.5,
+          "processing_version": "regional-preparation-v1",
+          "raw_artifacts": {
+            "PRECTOTCORR": "ad99e1281bff61c618f02de5a9ceb2ce1506fc506e74fbd14221fb88ae221eab",
+            "T2M": "3a2c42e19c61a0268a051f4fe8fb54db5fc1cabc950bd5de5cca52a82bd41395",
+            "T2M_MAX": "bf11b60f9fa4025b30b1d11ddd40fab59fb5b5e813a2159ffdecee042a97cc03",
+            "T2M_MIN": "b9239ca119b5475aa2e05cd95b5256f55440f93bdeb9f62a13f6fea4c49f4835"
+          },
+          "time_standard": "LST",
+          "units": {
+            "PRECTOTCORR": "mm/day",
+            "T2M": "C",
+            "T2M_MAX": "C",
+            "T2M_MIN": "C"
+          },
+          "values": {
+            "PRECTOTCORR": 0.19,
+            "T2M": 39.09,
+            "T2M_MAX": 46.82,
+            "T2M_MIN": 32.04
+          }
+        }
+      },
+      "request_id": "bgd-padded-national__T2M__20230101_20231231",
+      "selections": [
+        {
+          "extreme": "maximum",
+          "scope": "padded_regional",
+          "ties": 1
+        }
+      ],
+      "spatial_neighbours": [
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 23.0,
+          "longitude": 87.5,
+          "value": 38.05
+        },
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 24.0,
+          "longitude": 87.5,
+          "value": 38.78
+        },
+        {
+          "distance_km": 63.732805101474106,
+          "latitude": 23.5,
+          "longitude": 88.125,
+          "value": 37.58
+        },
+        {
+          "distance_km": 84.48337762240061,
+          "latitude": 24.0,
+          "longitude": 88.125,
+          "value": 37.8
+        }
+      ],
+      "temporal_neighbours": [
+        {
+          "date": "2023-06-14",
+          "offset_days": -2,
+          "value": 36.66
+        },
+        {
+          "date": "2023-06-15",
+          "offset_days": -1,
+          "value": 38.76
+        },
+        {
+          "date": "2023-06-16",
+          "offset_days": 0,
+          "value": 39.09
+        },
+        {
+          "date": "2023-06-17",
+          "offset_days": 1,
+          "value": 37.68
+        },
+        {
+          "date": "2023-06-18",
+          "offset_days": 2,
+          "value": 35.97
+        }
+      ],
+      "time_standard": "LST",
+      "unit": "C",
+      "value": 39.09
+    },
+    {
+      "chart": {
+        "monthly_record_matches": true,
+        "path": "cache/nasa_power_regional/prepared-v1/chart-88.75-23.5-T2M.json",
+        "period": [
+          "2001-01",
+          "2025-12"
+        ],
+        "provisional_selection": {
+          "maximum": {
+            "end": "2023-12",
+            "start": "2023-01",
+            "value": 26.47767123287671
+          },
+          "minimum": {
+            "end": "2020-12",
+            "start": "2020-01",
+            "value": 25.106530054644814
+          },
+          "month_count": 12,
+          "start_month": 1,
+          "status": "provisional_descriptive_only",
+          "tie_break": "earliest start",
+          "usable_periods": 25
+        }
+      },
+      "checks": {
+        "district_exports": true,
+        "independently_recomputed_monthly": true,
+        "monthly_to_chart": true,
+        "raw_to_normalized": true,
+        "raw_to_wide_replay": true
+      },
+      "classification": "B",
+      "conclusion": "Faithfully preserved unusual source value; physical accuracy unresolved.",
+      "coordinates": [
+        88.75,
+        23.5
+      ],
+      "date": "2024-04-30",
+      "district_context": [
+        {
+          "distance_km": 13.21545888933311,
+          "district_id": "bd-district-chuadanga",
+          "matches": true,
+          "path": "cache/nasa_power_regional/prepared-v1/district-context/bd-district-chuadanga-2024.wide-replay.jsonl.gz",
+          "sha256": "0d6e4a7b2a657c2bb5b33a4f228b5be6b19d45f961dd2244a4408eee440470c5"
+        }
+      ],
+      "geography": {
+        "classification": "inside_pinned_Bangladesh_geometry",
+        "containing_source_district_names": [
+          "Chuadanga"
+        ]
+      },
+      "method_questions": [],
+      "monthly": {
+        "independent_value": 33.60366666666667,
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M__20240101_20241231.monthly.json",
+        "record": {
+          "available_day_statistic": 33.60366666666667,
+          "coverage": "complete",
+          "date": "2024-04",
+          "expected_days": 30,
+          "output_latitude": 23.5,
+          "output_longitude": 88.75,
+          "parameter": "T2M",
+          "processing_version": "regional-preparation-v1",
+          "source_artifacts": [
+            "7a0430aa3b01d08025647b4fa110f7af7b2bd376620e56e0f3ab5044282bc63d"
+          ],
+          "statistic": "mean_of_daily_values",
+          "unit": "C",
+          "valid_days": 30,
+          "value": 33.60366666666667
+        }
+      },
+      "normalized": {
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M__20240101_20241231.jsonl.gz",
+        "record": {
+          "collection_id": "nasa-power-daily-regional-bgd-v1",
+          "date": "2024-04-30",
+          "missing_reason": null,
+          "output_latitude": 23.5,
+          "output_longitude": 88.75,
+          "parameter": "T2M",
+          "raw_artifact": "7a0430aa3b01d08025647b4fa110f7af7b2bd376620e56e0f3ab5044282bc63d",
+          "request_id": "bgd-padded-national__T2M__20240101_20241231",
+          "time_standard": "LST",
+          "unit": "C",
+          "value": 37.81
+        }
+      },
+      "parameter": "T2M",
+      "raw": {
+        "header": {
+          "api": {
+            "name": "POWER Daily API",
+            "version": "v2.10.3"
+          },
+          "end": "20241231",
+          "fill_value": -999.0,
+          "sources": [
+            "MERRA2"
+          ],
+          "start": "20240101",
+          "time_standard": "LST",
+          "title": "NASA/POWER Source Native Resolution Daily Data"
+        },
+        "manifest_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M/20240101_20241231.manifest.json",
+        "parameter_metadata": {
+          "longname": "Temperature at 2 Meters",
+          "units": "C"
+        },
+        "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M/20240101_20241231.json",
+        "raw_sha256": "7a0430aa3b01d08025647b4fa110f7af7b2bd376620e56e0f3ab5044282bc63d",
+        "request_parameters": {
+          "community": "AG",
+          "end": "20241231",
+          "format": "JSON",
+          "latitude-max": "27.134513",
+          "latitude-min": "20.090609",
+          "longitude-max": "93.305257",
+          "longitude-min": "87.383628",
+          "parameters": "T2M",
+          "start": "20240101",
+          "time-standard": "LST",
+          "units": "metric"
+        },
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20240101&end=20241231&format=JSON&time-standard=LST&units=metric"
+      },
+      "replay": {
+        "path": "cache/nasa_power_regional/prepared-v1/2024.wide-replay.jsonl.gz",
+        "record": {
+          "date": "2024-04-30",
+          "missing_reasons": {
+            "PRECTOTCORR": null,
+            "T2M": null,
+            "T2M_MAX": null,
+            "T2M_MIN": null
+          },
+          "output_latitude": 23.5,
+          "output_longitude": 88.75,
+          "processing_version": "regional-preparation-v1",
+          "raw_artifacts": {
+            "PRECTOTCORR": "51f9879e0b49971def965acdd106062589af4ca4b206c5536b9890cf7e626299",
+            "T2M": "7a0430aa3b01d08025647b4fa110f7af7b2bd376620e56e0f3ab5044282bc63d",
+            "T2M_MAX": "6d3438221c453f3d68f35401366ca4b59c00de78a03c26c825bd85a726a003f4",
+            "T2M_MIN": "4d1a6f0cb478222ad6139807b9e8271fe0b775e4e0dacb48fc7a3a0add84467c"
+          },
+          "time_standard": "LST",
+          "units": {
+            "PRECTOTCORR": "mm/day",
+            "T2M": "C",
+            "T2M_MAX": "C",
+            "T2M_MIN": "C"
+          },
+          "values": {
+            "PRECTOTCORR": 0.0,
+            "T2M": 37.81,
+            "T2M_MAX": 47.62,
+            "T2M_MIN": 28.07
+          }
+        }
+      },
+      "request_id": "bgd-padded-national__T2M__20240101_20241231",
+      "selections": [
+        {
+          "extreme": "maximum",
+          "scope": "district_used_locations",
+          "ties": 1
+        }
+      ],
+      "spatial_neighbours": [
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 23.0,
+          "longitude": 88.75,
+          "value": 37.88
+        },
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 24.0,
+          "longitude": 88.75,
+          "value": 37.11
+        },
+        {
+          "distance_km": 63.732805101474106,
+          "latitude": 23.5,
+          "longitude": 88.125,
+          "value": 37.88
+        },
+        {
+          "distance_km": 63.732805101474106,
+          "latitude": 23.5,
+          "longitude": 89.375,
+          "value": 36.95
+        }
+      ],
+      "temporal_neighbours": [
+        {
+          "date": "2024-04-28",
+          "offset_days": -2,
+          "value": 36.56
+        },
+        {
+          "date": "2024-04-29",
+          "offset_days": -1,
+          "value": 36.84
+        },
+        {
+          "date": "2024-04-30",
+          "offset_days": 0,
+          "value": 37.81
+        },
+        {
+          "date": "2024-05-01",
+          "offset_days": 1,
+          "value": 37.53
+        },
+        {
+          "date": "2024-05-02",
+          "offset_days": 2,
+          "value": 36.01
+        }
+      ],
+      "time_standard": "LST",
+      "unit": "C",
+      "value": 37.81
+    },
+    {
+      "chart": {
+        "monthly_record_matches": true,
+        "path": "cache/nasa_power_regional/prepared-v1/chart-87.5-22.5-T2M_MAX.json",
+        "period": [
+          "2001-01",
+          "2025-12"
+        ],
+        "provisional_selection": {
+          "maximum": {
+            "end": "2016-12",
+            "start": "2016-01",
+            "value": 32.11191256830601
+          },
+          "minimum": {
+            "end": "2020-12",
+            "start": "2020-01",
+            "value": 30.016338797814207
+          },
+          "month_count": 12,
+          "start_month": 1,
+          "status": "provisional_descriptive_only",
+          "tie_break": "earliest start",
+          "usable_periods": 25
+        }
+      },
+      "checks": {
+        "district_exports": true,
+        "independently_recomputed_monthly": true,
+        "monthly_to_chart": true,
+        "raw_to_normalized": true,
+        "raw_to_wide_replay": true
+      },
+      "classification": "B",
+      "conclusion": "Faithfully preserved unusual source value; physical accuracy unresolved.",
+      "coordinates": [
+        87.5,
+        22.5
+      ],
+      "date": "2002-05-20",
+      "district_context": [],
+      "geography": {
+        "classification": "padded_area_only_outside_pinned_Bangladesh_geometry",
+        "containing_source_district_names": []
+      },
+      "method_questions": [],
+      "monthly": {
+        "independent_value": 41.12032258064516,
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MAX__20020101_20021231.monthly.json",
+        "record": {
+          "available_day_statistic": 41.12032258064516,
+          "coverage": "complete",
+          "date": "2002-05",
+          "expected_days": 31,
+          "output_latitude": 22.5,
+          "output_longitude": 87.5,
+          "parameter": "T2M_MAX",
+          "processing_version": "regional-preparation-v1",
+          "source_artifacts": [
+            "40a588b2fc9edc03bc36b5070f9b6514dbdea9837161b3f73e4e5ca93a5d5495"
+          ],
+          "statistic": "mean_of_daily_values",
+          "unit": "C",
+          "valid_days": 31,
+          "value": 41.12032258064516
+        }
+      },
+      "normalized": {
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MAX__20020101_20021231.jsonl.gz",
+        "record": {
+          "collection_id": "nasa-power-daily-regional-bgd-v1",
+          "date": "2002-05-20",
+          "missing_reason": null,
+          "output_latitude": 22.5,
+          "output_longitude": 87.5,
+          "parameter": "T2M_MAX",
+          "raw_artifact": "40a588b2fc9edc03bc36b5070f9b6514dbdea9837161b3f73e4e5ca93a5d5495",
+          "request_id": "bgd-padded-national__T2M_MAX__20020101_20021231",
+          "time_standard": "LST",
+          "unit": "C",
+          "value": 47.81
+        }
+      },
+      "parameter": "T2M_MAX",
+      "raw": {
+        "header": {
+          "api": {
+            "name": "POWER Daily API",
+            "version": "v2.10.3"
+          },
+          "end": "20021231",
+          "fill_value": -999.0,
+          "sources": [
+            "MERRA2",
+            "POWER"
+          ],
+          "start": "20020101",
+          "time_standard": "LST",
+          "title": "NASA/POWER Source Native Resolution Daily Data"
+        },
+        "manifest_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MAX/20020101_20021231.manifest.json",
+        "parameter_metadata": {
+          "longname": "Temperature at 2 Meters Maximum",
+          "units": "C"
+        },
+        "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MAX/20020101_20021231.json",
+        "raw_sha256": "40a588b2fc9edc03bc36b5070f9b6514dbdea9837161b3f73e4e5ca93a5d5495",
+        "request_parameters": {
+          "community": "AG",
+          "end": "20021231",
+          "format": "JSON",
+          "latitude-max": "27.134513",
+          "latitude-min": "20.090609",
+          "longitude-max": "93.305257",
+          "longitude-min": "87.383628",
+          "parameters": "T2M_MAX",
+          "start": "20020101",
+          "time-standard": "LST",
+          "units": "metric"
+        },
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M_MAX&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20020101&end=20021231&format=JSON&time-standard=LST&units=metric"
+      },
+      "replay": {
+        "path": "cache/nasa_power_regional/prepared-v1/2002.wide-replay.jsonl.gz",
+        "record": {
+          "date": "2002-05-20",
+          "missing_reasons": {
+            "PRECTOTCORR": null,
+            "T2M": null,
+            "T2M_MAX": null,
+            "T2M_MIN": null
+          },
+          "output_latitude": 22.5,
+          "output_longitude": 87.5,
+          "processing_version": "regional-preparation-v1",
+          "raw_artifacts": {
+            "PRECTOTCORR": "d0a7d3fe7a7a1991bfcf684395811ff152e6c5974241a33bc581a1df66112882",
+            "T2M": "773e8583b3e675e6776d51138c018fd6526351730a881c81eff12bdc226f63f8",
+            "T2M_MAX": "40a588b2fc9edc03bc36b5070f9b6514dbdea9837161b3f73e4e5ca93a5d5495",
+            "T2M_MIN": "9de9ff060313027323362e096e57273d04bf5655def5f604e8f3bb13be6db63d"
+          },
+          "time_standard": "LST",
+          "units": {
+            "PRECTOTCORR": "mm/day",
+            "T2M": "C",
+            "T2M_MAX": "C",
+            "T2M_MIN": "C"
+          },
+          "values": {
+            "PRECTOTCORR": 0.0,
+            "T2M": 37.3,
+            "T2M_MAX": 47.81,
+            "T2M_MIN": 27.88
+          }
+        }
+      },
+      "request_id": "bgd-padded-national__T2M_MAX__20020101_20021231",
+      "selections": [
+        {
+          "extreme": "maximum",
+          "scope": "padded_regional",
+          "ties": 1
+        }
+      ],
+      "spatial_neighbours": [
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 22.0,
+          "longitude": 87.5,
+          "value": 46.99
+        },
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 23.0,
+          "longitude": 87.5,
+          "value": 47.3
+        },
+        {
+          "distance_km": 64.20674009526701,
+          "latitude": 22.5,
+          "longitude": 88.125,
+          "value": 46.81
+        },
+        {
+          "distance_km": 84.84447868887098,
+          "latitude": 23.0,
+          "longitude": 88.125,
+          "value": 46.81
+        }
+      ],
+      "temporal_neighbours": [
+        {
+          "date": "2002-05-18",
+          "offset_days": -2,
+          "value": 41.66
+        },
+        {
+          "date": "2002-05-19",
+          "offset_days": -1,
+          "value": 45.9
+        },
+        {
+          "date": "2002-05-20",
+          "offset_days": 0,
+          "value": 47.81
+        },
+        {
+          "date": "2002-05-21",
+          "offset_days": 1,
+          "value": 46.59
+        },
+        {
+          "date": "2002-05-22",
+          "offset_days": 2,
+          "value": 46.49
+        }
+      ],
+      "time_standard": "LST",
+      "unit": "C",
+      "value": 47.81
+    },
+    {
+      "chart": {
+        "monthly_record_matches": true,
+        "path": "cache/nasa_power_regional/prepared-v1/chart-89.375-22.5-T2M_MAX.json",
+        "period": [
+          "2001-01",
+          "2025-12"
+        ],
+        "provisional_selection": {
+          "maximum": {
+            "end": "2014-12",
+            "start": "2014-01",
+            "value": 32.17534246575343
+          },
+          "minimum": {
+            "end": "2020-12",
+            "start": "2020-01",
+            "value": 30.118688524590166
+          },
+          "month_count": 12,
+          "start_month": 1,
+          "status": "provisional_descriptive_only",
+          "tie_break": "earliest start",
+          "usable_periods": 25
+        }
+      },
+      "checks": {
+        "district_exports": true,
+        "independently_recomputed_monthly": true,
+        "monthly_to_chart": true,
+        "raw_to_normalized": true,
+        "raw_to_wide_replay": true
+      },
+      "classification": "B",
+      "conclusion": "Faithfully preserved unusual source value; physical accuracy unresolved.",
+      "coordinates": [
+        89.375,
+        22.5
+      ],
+      "date": "2019-12-27",
+      "district_context": [
+        {
+          "distance_km": 4.549506967594671,
+          "district_id": "bd-district-khulna",
+          "matches": true,
+          "path": "cache/nasa_power_regional/prepared-v1/district-context/bd-district-khulna-2019.wide-replay.jsonl.gz",
+          "sha256": "61801c7e6385d51e5b848e7207aac6f47015031e170ade685cadfeababf76ad5"
+        },
+        {
+          "distance_km": 24.4993633579427,
+          "district_id": "bd-district-satkhira",
+          "matches": true,
+          "path": "cache/nasa_power_regional/prepared-v1/district-context/bd-district-satkhira-2019.wide-replay.jsonl.gz",
+          "sha256": "a3ee0adfd3f9be322071e1505f9b3e036b90b28b3e3ce2001af08295e047c7b9"
+        }
+      ],
+      "geography": {
+        "classification": "inside_pinned_Bangladesh_geometry",
+        "containing_source_district_names": [
+          "Khulna"
+        ]
+      },
+      "method_questions": [],
+      "monthly": {
+        "independent_value": 23.79548387096774,
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MAX__20190101_20191231.monthly.json",
+        "record": {
+          "available_day_statistic": 23.795483870967743,
+          "coverage": "complete",
+          "date": "2019-12",
+          "expected_days": 31,
+          "output_latitude": 22.5,
+          "output_longitude": 89.375,
+          "parameter": "T2M_MAX",
+          "processing_version": "regional-preparation-v1",
+          "source_artifacts": [
+            "fa0940c5ea0ad9d177205f51c14592ee4f10949d208ce15418f47017d099f4bd"
+          ],
+          "statistic": "mean_of_daily_values",
+          "unit": "C",
+          "valid_days": 31,
+          "value": 23.795483870967743
+        }
+      },
+      "normalized": {
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MAX__20190101_20191231.jsonl.gz",
+        "record": {
+          "collection_id": "nasa-power-daily-regional-bgd-v1",
+          "date": "2019-12-27",
+          "missing_reason": null,
+          "output_latitude": 22.5,
+          "output_longitude": 89.375,
+          "parameter": "T2M_MAX",
+          "raw_artifact": "fa0940c5ea0ad9d177205f51c14592ee4f10949d208ce15418f47017d099f4bd",
+          "request_id": "bgd-padded-national__T2M_MAX__20190101_20191231",
+          "time_standard": "LST",
+          "unit": "C",
+          "value": 15.2
+        }
+      },
+      "parameter": "T2M_MAX",
+      "raw": {
+        "header": {
+          "api": {
+            "name": "POWER Daily API",
+            "version": "v2.10.3"
+          },
+          "end": "20191231",
+          "fill_value": -999.0,
+          "sources": [
+            "MERRA2",
+            "POWER"
+          ],
+          "start": "20190101",
+          "time_standard": "LST",
+          "title": "NASA/POWER Source Native Resolution Daily Data"
+        },
+        "manifest_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MAX/20190101_20191231.manifest.json",
+        "parameter_metadata": {
+          "longname": "Temperature at 2 Meters Maximum",
+          "units": "C"
+        },
+        "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MAX/20190101_20191231.json",
+        "raw_sha256": "fa0940c5ea0ad9d177205f51c14592ee4f10949d208ce15418f47017d099f4bd",
+        "request_parameters": {
+          "community": "AG",
+          "end": "20191231",
+          "format": "JSON",
+          "latitude-max": "27.134513",
+          "latitude-min": "20.090609",
+          "longitude-max": "93.305257",
+          "longitude-min": "87.383628",
+          "parameters": "T2M_MAX",
+          "start": "20190101",
+          "time-standard": "LST",
+          "units": "metric"
+        },
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M_MAX&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20190101&end=20191231&format=JSON&time-standard=LST&units=metric"
+      },
+      "replay": {
+        "path": "cache/nasa_power_regional/prepared-v1/2019.wide-replay.jsonl.gz",
+        "record": {
+          "date": "2019-12-27",
+          "missing_reasons": {
+            "PRECTOTCORR": null,
+            "T2M": null,
+            "T2M_MAX": null,
+            "T2M_MIN": null
+          },
+          "output_latitude": 22.5,
+          "output_longitude": 89.375,
+          "processing_version": "regional-preparation-v1",
+          "raw_artifacts": {
+            "PRECTOTCORR": "325717e2cee839a5aeb48e594e5f54390920561b00b88f799174a63a24da75d4",
+            "T2M": "a072b294c469296ad4860d07206355223a2e7caabae8c8ddc85201694517bb18",
+            "T2M_MAX": "fa0940c5ea0ad9d177205f51c14592ee4f10949d208ce15418f47017d099f4bd",
+            "T2M_MIN": "522736bced2054027ea65e19e05a50f462336e89b326705a07c5b62cb8a4d157"
+          },
+          "time_standard": "LST",
+          "units": {
+            "PRECTOTCORR": "mm/day",
+            "T2M": "C",
+            "T2M_MAX": "C",
+            "T2M_MIN": "C"
+          },
+          "values": {
+            "PRECTOTCORR": 24.85,
+            "T2M": 13.27,
+            "T2M_MAX": 15.2,
+            "T2M_MIN": 10.45
+          }
+        }
+      },
+      "request_id": "bgd-padded-national__T2M_MAX__20190101_20191231",
+      "selections": [
+        {
+          "extreme": "minimum",
+          "scope": "district_used_locations",
+          "ties": 1
+        }
+      ],
+      "spatial_neighbours": [
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 22.0,
+          "longitude": 89.375,
+          "value": 15.53
+        },
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 23.0,
+          "longitude": 89.375,
+          "value": 15.98
+        },
+        {
+          "distance_km": 64.20674009526701,
+          "latitude": 22.5,
+          "longitude": 88.75,
+          "value": 15.41
+        },
+        {
+          "distance_km": 64.20674009526701,
+          "latitude": 22.5,
+          "longitude": 90.0,
+          "value": 15.94
+        }
+      ],
+      "temporal_neighbours": [
+        {
+          "date": "2019-12-25",
+          "offset_days": -2,
+          "value": 22.58
+        },
+        {
+          "date": "2019-12-26",
+          "offset_days": -1,
+          "value": 22.76
+        },
+        {
+          "date": "2019-12-27",
+          "offset_days": 0,
+          "value": 15.2
+        },
+        {
+          "date": "2019-12-28",
+          "offset_days": 1,
+          "value": 20.08
+        },
+        {
+          "date": "2019-12-29",
+          "offset_days": 2,
+          "value": 21.47
+        }
+      ],
+      "time_standard": "LST",
+      "unit": "C",
+      "value": 15.2
+    },
+    {
+      "chart": {
+        "monthly_record_matches": true,
+        "path": "cache/nasa_power_regional/prepared-v1/chart-89.375-27.0-T2M_MAX.json",
+        "period": [
+          "2001-01",
+          "2025-12"
+        ],
+        "provisional_selection": {
+          "maximum": {
+            "end": "2006-12",
+            "start": "2006-01",
+            "value": 20.64972602739726
+          },
+          "minimum": {
+            "end": "2020-12",
+            "start": "2020-01",
+            "value": 19.48909836065574
+          },
+          "month_count": 12,
+          "start_month": 1,
+          "status": "provisional_descriptive_only",
+          "tie_break": "earliest start",
+          "usable_periods": 25
+        }
+      },
+      "checks": {
+        "district_exports": true,
+        "independently_recomputed_monthly": true,
+        "monthly_to_chart": true,
+        "raw_to_normalized": true,
+        "raw_to_wide_replay": true
+      },
+      "classification": "B",
+      "conclusion": "Faithfully preserved unusual source value; physical accuracy unresolved.",
+      "coordinates": [
+        89.375,
+        27.0
+      ],
+      "date": "2022-02-05",
+      "district_context": [],
+      "geography": {
+        "classification": "padded_area_only_outside_pinned_Bangladesh_geometry",
+        "containing_source_district_names": []
+      },
+      "method_questions": [],
+      "monthly": {
+        "independent_value": 12.427142857142856,
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MAX__20220101_20221231.monthly.json",
+        "record": {
+          "available_day_statistic": 12.427142857142856,
+          "coverage": "complete",
+          "date": "2022-02",
+          "expected_days": 28,
+          "output_latitude": 27.0,
+          "output_longitude": 89.375,
+          "parameter": "T2M_MAX",
+          "processing_version": "regional-preparation-v1",
+          "source_artifacts": [
+            "4b81a4df1c9830bf3e857747352e943b0c77b7a7cc5fe128a376f6d0d6466d1a"
+          ],
+          "statistic": "mean_of_daily_values",
+          "unit": "C",
+          "valid_days": 28,
+          "value": 12.427142857142856
+        }
+      },
+      "normalized": {
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MAX__20220101_20221231.jsonl.gz",
+        "record": {
+          "collection_id": "nasa-power-daily-regional-bgd-v1",
+          "date": "2022-02-05",
+          "missing_reason": null,
+          "output_latitude": 27.0,
+          "output_longitude": 89.375,
+          "parameter": "T2M_MAX",
+          "raw_artifact": "4b81a4df1c9830bf3e857747352e943b0c77b7a7cc5fe128a376f6d0d6466d1a",
+          "request_id": "bgd-padded-national__T2M_MAX__20220101_20221231",
+          "time_standard": "LST",
+          "unit": "C",
+          "value": 5.89
+        }
+      },
+      "parameter": "T2M_MAX",
+      "raw": {
+        "header": {
+          "api": {
+            "name": "POWER Daily API",
+            "version": "v2.10.3"
+          },
+          "end": "20221231",
+          "fill_value": -999.0,
+          "sources": [
+            "MERRA2",
+            "POWER"
+          ],
+          "start": "20220101",
+          "time_standard": "LST",
+          "title": "NASA/POWER Source Native Resolution Daily Data"
+        },
+        "manifest_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MAX/20220101_20221231.manifest.json",
+        "parameter_metadata": {
+          "longname": "Temperature at 2 Meters Maximum",
+          "units": "C"
+        },
+        "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MAX/20220101_20221231.json",
+        "raw_sha256": "4b81a4df1c9830bf3e857747352e943b0c77b7a7cc5fe128a376f6d0d6466d1a",
+        "request_parameters": {
+          "community": "AG",
+          "end": "20221231",
+          "format": "JSON",
+          "latitude-max": "27.134513",
+          "latitude-min": "20.090609",
+          "longitude-max": "93.305257",
+          "longitude-min": "87.383628",
+          "parameters": "T2M_MAX",
+          "start": "20220101",
+          "time-standard": "LST",
+          "units": "metric"
+        },
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M_MAX&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20220101&end=20221231&format=JSON&time-standard=LST&units=metric"
+      },
+      "replay": {
+        "path": "cache/nasa_power_regional/prepared-v1/2022.wide-replay.jsonl.gz",
+        "record": {
+          "date": "2022-02-05",
+          "missing_reasons": {
+            "PRECTOTCORR": null,
+            "T2M": null,
+            "T2M_MAX": null,
+            "T2M_MIN": null
+          },
+          "output_latitude": 27.0,
+          "output_longitude": 89.375,
+          "processing_version": "regional-preparation-v1",
+          "raw_artifacts": {
+            "PRECTOTCORR": "cc395e97190ee19861a517eb6615f91488563460a5238248f2e09f98bd4bad8f",
+            "T2M": "07db62a5f66f7eb8c24908d75c7f06d236ffb7958ac418222e305999a00fb9b4",
+            "T2M_MAX": "4b81a4df1c9830bf3e857747352e943b0c77b7a7cc5fe128a376f6d0d6466d1a",
+            "T2M_MIN": "29053c7a9fcbefb513a7f7634041d33d08c757e27fdeb344cf41a6ef85992f6c"
+          },
+          "time_standard": "LST",
+          "units": {
+            "PRECTOTCORR": "mm/day",
+            "T2M": "C",
+            "T2M_MAX": "C",
+            "T2M_MIN": "C"
+          },
+          "values": {
+            "PRECTOTCORR": 4.98,
+            "T2M": 2.74,
+            "T2M_MAX": 5.89,
+            "T2M_MIN": -0.09
+          }
+        }
+      },
+      "request_id": "bgd-padded-national__T2M_MAX__20220101_20221231",
+      "selections": [
+        {
+          "extreme": "minimum",
+          "scope": "padded_regional",
+          "ties": 1
+        }
+      ],
+      "spatial_neighbours": [
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 26.5,
+          "longitude": 89.375,
+          "value": 17.27
+        },
+        {
+          "distance_km": 61.92215043884317,
+          "latitude": 27.0,
+          "longitude": 88.75,
+          "value": 8.88
+        },
+        {
+          "distance_km": 61.92215043884317,
+          "latitude": 27.0,
+          "longitude": 90.0,
+          "value": 6.34
+        },
+        {
+          "distance_km": 83.32101315287298,
+          "latitude": 26.5,
+          "longitude": 88.75,
+          "value": 18.41
+        }
+      ],
+      "temporal_neighbours": [
+        {
+          "date": "2022-02-03",
+          "offset_days": -2,
+          "value": 11.03
+        },
+        {
+          "date": "2022-02-04",
+          "offset_days": -1,
+          "value": 9.27
+        },
+        {
+          "date": "2022-02-05",
+          "offset_days": 0,
+          "value": 5.89
+        },
+        {
+          "date": "2022-02-06",
+          "offset_days": 1,
+          "value": 10.33
+        },
+        {
+          "date": "2022-02-07",
+          "offset_days": 2,
+          "value": 10.28
+        }
+      ],
+      "time_standard": "LST",
+      "unit": "C",
+      "value": 5.89
+    },
+    {
+      "chart": {
+        "monthly_record_matches": true,
+        "path": "cache/nasa_power_regional/prepared-v1/chart-88.75-23.5-T2M_MAX.json",
+        "period": [
+          "2001-01",
+          "2025-12"
+        ],
+        "provisional_selection": {
+          "maximum": {
+            "end": "2023-12",
+            "start": "2023-01",
+            "value": 32.31065753424657
+          },
+          "minimum": {
+            "end": "2020-12",
+            "start": "2020-01",
+            "value": 30.174726775956287
+          },
+          "month_count": 12,
+          "start_month": 1,
+          "status": "provisional_descriptive_only",
+          "tie_break": "earliest start",
+          "usable_periods": 25
+        }
+      },
+      "checks": {
+        "district_exports": true,
+        "independently_recomputed_monthly": true,
+        "monthly_to_chart": true,
+        "raw_to_normalized": true,
+        "raw_to_wide_replay": true
+      },
+      "classification": "B",
+      "conclusion": "Faithfully preserved unusual source value; physical accuracy unresolved.",
+      "coordinates": [
+        88.75,
+        23.5
+      ],
+      "date": "2024-04-30",
+      "district_context": [
+        {
+          "distance_km": 13.21545888933311,
+          "district_id": "bd-district-chuadanga",
+          "matches": true,
+          "path": "cache/nasa_power_regional/prepared-v1/district-context/bd-district-chuadanga-2024.wide-replay.jsonl.gz",
+          "sha256": "0d6e4a7b2a657c2bb5b33a4f228b5be6b19d45f961dd2244a4408eee440470c5"
+        }
+      ],
+      "geography": {
+        "classification": "inside_pinned_Bangladesh_geometry",
+        "containing_source_district_names": [
+          "Chuadanga"
+        ]
+      },
+      "method_questions": [],
+      "monthly": {
+        "independent_value": 42.35766666666667,
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MAX__20240101_20241231.monthly.json",
+        "record": {
+          "available_day_statistic": 42.357666666666674,
+          "coverage": "complete",
+          "date": "2024-04",
+          "expected_days": 30,
+          "output_latitude": 23.5,
+          "output_longitude": 88.75,
+          "parameter": "T2M_MAX",
+          "processing_version": "regional-preparation-v1",
+          "source_artifacts": [
+            "6d3438221c453f3d68f35401366ca4b59c00de78a03c26c825bd85a726a003f4"
+          ],
+          "statistic": "mean_of_daily_values",
+          "unit": "C",
+          "valid_days": 30,
+          "value": 42.357666666666674
+        }
+      },
+      "normalized": {
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MAX__20240101_20241231.jsonl.gz",
+        "record": {
+          "collection_id": "nasa-power-daily-regional-bgd-v1",
+          "date": "2024-04-30",
+          "missing_reason": null,
+          "output_latitude": 23.5,
+          "output_longitude": 88.75,
+          "parameter": "T2M_MAX",
+          "raw_artifact": "6d3438221c453f3d68f35401366ca4b59c00de78a03c26c825bd85a726a003f4",
+          "request_id": "bgd-padded-national__T2M_MAX__20240101_20241231",
+          "time_standard": "LST",
+          "unit": "C",
+          "value": 47.62
+        }
+      },
+      "parameter": "T2M_MAX",
+      "raw": {
+        "header": {
+          "api": {
+            "name": "POWER Daily API",
+            "version": "v2.10.3"
+          },
+          "end": "20241231",
+          "fill_value": -999.0,
+          "sources": [
+            "MERRA2",
+            "POWER"
+          ],
+          "start": "20240101",
+          "time_standard": "LST",
+          "title": "NASA/POWER Source Native Resolution Daily Data"
+        },
+        "manifest_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MAX/20240101_20241231.manifest.json",
+        "parameter_metadata": {
+          "longname": "Temperature at 2 Meters Maximum",
+          "units": "C"
+        },
+        "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MAX/20240101_20241231.json",
+        "raw_sha256": "6d3438221c453f3d68f35401366ca4b59c00de78a03c26c825bd85a726a003f4",
+        "request_parameters": {
+          "community": "AG",
+          "end": "20241231",
+          "format": "JSON",
+          "latitude-max": "27.134513",
+          "latitude-min": "20.090609",
+          "longitude-max": "93.305257",
+          "longitude-min": "87.383628",
+          "parameters": "T2M_MAX",
+          "start": "20240101",
+          "time-standard": "LST",
+          "units": "metric"
+        },
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M_MAX&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20240101&end=20241231&format=JSON&time-standard=LST&units=metric"
+      },
+      "replay": {
+        "path": "cache/nasa_power_regional/prepared-v1/2024.wide-replay.jsonl.gz",
+        "record": {
+          "date": "2024-04-30",
+          "missing_reasons": {
+            "PRECTOTCORR": null,
+            "T2M": null,
+            "T2M_MAX": null,
+            "T2M_MIN": null
+          },
+          "output_latitude": 23.5,
+          "output_longitude": 88.75,
+          "processing_version": "regional-preparation-v1",
+          "raw_artifacts": {
+            "PRECTOTCORR": "51f9879e0b49971def965acdd106062589af4ca4b206c5536b9890cf7e626299",
+            "T2M": "7a0430aa3b01d08025647b4fa110f7af7b2bd376620e56e0f3ab5044282bc63d",
+            "T2M_MAX": "6d3438221c453f3d68f35401366ca4b59c00de78a03c26c825bd85a726a003f4",
+            "T2M_MIN": "4d1a6f0cb478222ad6139807b9e8271fe0b775e4e0dacb48fc7a3a0add84467c"
+          },
+          "time_standard": "LST",
+          "units": {
+            "PRECTOTCORR": "mm/day",
+            "T2M": "C",
+            "T2M_MAX": "C",
+            "T2M_MIN": "C"
+          },
+          "values": {
+            "PRECTOTCORR": 0.0,
+            "T2M": 37.81,
+            "T2M_MAX": 47.62,
+            "T2M_MIN": 28.07
+          }
+        }
+      },
+      "request_id": "bgd-padded-national__T2M_MAX__20240101_20241231",
+      "selections": [
+        {
+          "extreme": "maximum",
+          "scope": "district_used_locations",
+          "ties": 1
+        }
+      ],
+      "spatial_neighbours": [
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 23.0,
+          "longitude": 88.75,
+          "value": 47.61
+        },
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 24.0,
+          "longitude": 88.75,
+          "value": 46.94
+        },
+        {
+          "distance_km": 63.732805101474106,
+          "latitude": 23.5,
+          "longitude": 88.125,
+          "value": 47.55
+        },
+        {
+          "distance_km": 63.732805101474106,
+          "latitude": 23.5,
+          "longitude": 89.375,
+          "value": 46.72
+        }
+      ],
+      "temporal_neighbours": [
+        {
+          "date": "2024-04-28",
+          "offset_days": -2,
+          "value": 45.38
+        },
+        {
+          "date": "2024-04-29",
+          "offset_days": -1,
+          "value": 45.74
+        },
+        {
+          "date": "2024-04-30",
+          "offset_days": 0,
+          "value": 47.62
+        },
+        {
+          "date": "2024-05-01",
+          "offset_days": 1,
+          "value": 45.89
+        },
+        {
+          "date": "2024-05-02",
+          "offset_days": 2,
+          "value": 44.38
+        }
+      ],
+      "time_standard": "LST",
+      "unit": "C",
+      "value": 47.62
+    },
+    {
+      "chart": {
+        "monthly_record_matches": true,
+        "path": "cache/nasa_power_regional/prepared-v1/chart-87.5-24.0-T2M_MIN.json",
+        "period": [
+          "2001-01",
+          "2025-12"
+        ],
+        "provisional_selection": {
+          "maximum": {
+            "end": "2016-12",
+            "start": "2016-01",
+            "value": 21.04620218579235
+          },
+          "minimum": {
+            "end": "2012-12",
+            "start": "2012-01",
+            "value": 19.712650273224043
+          },
+          "month_count": 12,
+          "start_month": 1,
+          "status": "provisional_descriptive_only",
+          "tie_break": "earliest start",
+          "usable_periods": 25
+        }
+      },
+      "checks": {
+        "district_exports": true,
+        "independently_recomputed_monthly": true,
+        "monthly_to_chart": true,
+        "raw_to_normalized": true,
+        "raw_to_wide_replay": true
+      },
+      "classification": "B",
+      "conclusion": "Faithfully preserved unusual source value; physical accuracy unresolved.",
+      "coordinates": [
+        87.5,
+        24.0
+      ],
+      "date": "2012-06-05",
+      "district_context": [],
+      "geography": {
+        "classification": "padded_area_only_outside_pinned_Bangladesh_geometry",
+        "containing_source_district_names": []
+      },
+      "method_questions": [],
+      "monthly": {
+        "independent_value": 28.389333333333333,
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MIN__20120101_20121231.monthly.json",
+        "record": {
+          "available_day_statistic": 28.389333333333333,
+          "coverage": "complete",
+          "date": "2012-06",
+          "expected_days": 30,
+          "output_latitude": 24.0,
+          "output_longitude": 87.5,
+          "parameter": "T2M_MIN",
+          "processing_version": "regional-preparation-v1",
+          "source_artifacts": [
+            "8d44183c0674c35f441ef6cbc6c473912167f56aa1611584e8632c865ed65e02"
+          ],
+          "statistic": "mean_of_daily_values",
+          "unit": "C",
+          "valid_days": 30,
+          "value": 28.389333333333333
+        }
+      },
+      "normalized": {
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MIN__20120101_20121231.jsonl.gz",
+        "record": {
+          "collection_id": "nasa-power-daily-regional-bgd-v1",
+          "date": "2012-06-05",
+          "missing_reason": null,
+          "output_latitude": 24.0,
+          "output_longitude": 87.5,
+          "parameter": "T2M_MIN",
+          "raw_artifact": "8d44183c0674c35f441ef6cbc6c473912167f56aa1611584e8632c865ed65e02",
+          "request_id": "bgd-padded-national__T2M_MIN__20120101_20121231",
+          "time_standard": "LST",
+          "unit": "C",
+          "value": 32.09
+        }
+      },
+      "parameter": "T2M_MIN",
+      "raw": {
+        "header": {
+          "api": {
+            "name": "POWER Daily API",
+            "version": "v2.10.3"
+          },
+          "end": "20121231",
+          "fill_value": -999.0,
+          "sources": [
+            "MERRA2",
+            "POWER"
+          ],
+          "start": "20120101",
+          "time_standard": "LST",
+          "title": "NASA/POWER Source Native Resolution Daily Data"
+        },
+        "manifest_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MIN/20120101_20121231.manifest.json",
+        "parameter_metadata": {
+          "longname": "Temperature at 2 Meters Minimum",
+          "units": "C"
+        },
+        "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MIN/20120101_20121231.json",
+        "raw_sha256": "8d44183c0674c35f441ef6cbc6c473912167f56aa1611584e8632c865ed65e02",
+        "request_parameters": {
+          "community": "AG",
+          "end": "20121231",
+          "format": "JSON",
+          "latitude-max": "27.134513",
+          "latitude-min": "20.090609",
+          "longitude-max": "93.305257",
+          "longitude-min": "87.383628",
+          "parameters": "T2M_MIN",
+          "start": "20120101",
+          "time-standard": "LST",
+          "units": "metric"
+        },
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M_MIN&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20120101&end=20121231&format=JSON&time-standard=LST&units=metric"
+      },
+      "replay": {
+        "path": "cache/nasa_power_regional/prepared-v1/2012.wide-replay.jsonl.gz",
+        "record": {
+          "date": "2012-06-05",
+          "missing_reasons": {
+            "PRECTOTCORR": null,
+            "T2M": null,
+            "T2M_MAX": null,
+            "T2M_MIN": null
+          },
+          "output_latitude": 24.0,
+          "output_longitude": 87.5,
+          "processing_version": "regional-preparation-v1",
+          "raw_artifacts": {
+            "PRECTOTCORR": "b1ed9e69b9d83ff76aeb28be4e05c201f52cd1f6036d3c1bfd8e26af6c6b0905",
+            "T2M": "75356fd35d36bd6c1bfff21600fc01bbc8da9ec277360d5386a537547e5fede6",
+            "T2M_MAX": "0ff92aaba5f5086c477a0f0faea50349268b5b39f532e2f01e55d347830b6c5d",
+            "T2M_MIN": "8d44183c0674c35f441ef6cbc6c473912167f56aa1611584e8632c865ed65e02"
+          },
+          "time_standard": "LST",
+          "units": {
+            "PRECTOTCORR": "mm/day",
+            "T2M": "C",
+            "T2M_MAX": "C",
+            "T2M_MIN": "C"
+          },
+          "values": {
+            "PRECTOTCORR": 2.3,
+            "T2M": 37.51,
+            "T2M_MAX": 44.22,
+            "T2M_MIN": 32.09
+          }
+        }
+      },
+      "request_id": "bgd-padded-national__T2M_MIN__20120101_20121231",
+      "selections": [
+        {
+          "extreme": "maximum",
+          "scope": "padded_regional",
+          "ties": 1
+        }
+      ],
+      "spatial_neighbours": [
+        {
+          "distance_km": 55.597540116766176,
+          "latitude": 24.5,
+          "longitude": 87.5,
+          "value": 31.34
+        },
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 23.5,
+          "longitude": 87.5,
+          "value": 31.74
+        },
+        {
+          "distance_km": 63.48854821212097,
+          "latitude": 24.0,
+          "longitude": 88.125,
+          "value": 31.73
+        },
+        {
+          "distance_km": 84.29779774462489,
+          "latitude": 24.5,
+          "longitude": 88.125,
+          "value": 31.59
+        }
+      ],
+      "temporal_neighbours": [
+        {
+          "date": "2012-06-03",
+          "offset_days": -2,
+          "value": 29.15
+        },
+        {
+          "date": "2012-06-04",
+          "offset_days": -1,
+          "value": 29.92
+        },
+        {
+          "date": "2012-06-05",
+          "offset_days": 0,
+          "value": 32.09
+        },
+        {
+          "date": "2012-06-06",
+          "offset_days": 1,
+          "value": 29.58
+        },
+        {
+          "date": "2012-06-07",
+          "offset_days": 2,
+          "value": 29.77
+        }
+      ],
+      "time_standard": "LST",
+      "unit": "C",
+      "value": 32.09
+    },
+    {
+      "chart": {
+        "monthly_record_matches": true,
+        "path": "cache/nasa_power_regional/prepared-v1/chart-88.125-24.5-T2M_MIN.json",
+        "period": [
+          "2001-01",
+          "2025-12"
+        ],
+        "provisional_selection": {
+          "maximum": {
+            "end": "2016-12",
+            "start": "2016-01",
+            "value": 21.557322404371586
+          },
+          "minimum": {
+            "end": "2012-12",
+            "start": "2012-01",
+            "value": 20.278360655737707
+          },
+          "month_count": 12,
+          "start_month": 1,
+          "status": "provisional_descriptive_only",
+          "tie_break": "earliest start",
+          "usable_periods": 25
+        }
+      },
+      "checks": {
+        "district_exports": true,
+        "independently_recomputed_monthly": true,
+        "monthly_to_chart": true,
+        "raw_to_normalized": true,
+        "raw_to_wide_replay": true
+      },
+      "classification": "B",
+      "conclusion": "Faithfully preserved unusual source value; physical accuracy unresolved.",
+      "coordinates": [
+        88.125,
+        24.5
+      ],
+      "date": "2012-06-05",
+      "district_context": [
+        {
+          "distance_km": 24.8185734952679,
+          "district_id": "bd-district-chapainawabganj",
+          "matches": true,
+          "path": "cache/nasa_power_regional/prepared-v1/district-context/bd-district-chapainawabganj-2012.wide-replay.jsonl.gz",
+          "sha256": "5779a65fabe926cb90e8b5e432538d5c45f2bc5c9750319014bc57724c7e8692"
+        }
+      ],
+      "geography": {
+        "classification": "padded_area_only_outside_pinned_Bangladesh_geometry",
+        "containing_source_district_names": []
+      },
+      "method_questions": [
+        "C: The adopted representative-point context uses a returned position outside the pinned Bangladesh geometry; this is a sampling limitation, not evidence of a processing error."
+      ],
+      "monthly": {
+        "independent_value": 29.037333333333333,
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MIN__20120101_20121231.monthly.json",
+        "record": {
+          "available_day_statistic": 29.03733333333333,
+          "coverage": "complete",
+          "date": "2012-06",
+          "expected_days": 30,
+          "output_latitude": 24.5,
+          "output_longitude": 88.125,
+          "parameter": "T2M_MIN",
+          "processing_version": "regional-preparation-v1",
+          "source_artifacts": [
+            "8d44183c0674c35f441ef6cbc6c473912167f56aa1611584e8632c865ed65e02"
+          ],
+          "statistic": "mean_of_daily_values",
+          "unit": "C",
+          "valid_days": 30,
+          "value": 29.03733333333333
+        }
+      },
+      "normalized": {
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MIN__20120101_20121231.jsonl.gz",
+        "record": {
+          "collection_id": "nasa-power-daily-regional-bgd-v1",
+          "date": "2012-06-05",
+          "missing_reason": null,
+          "output_latitude": 24.5,
+          "output_longitude": 88.125,
+          "parameter": "T2M_MIN",
+          "raw_artifact": "8d44183c0674c35f441ef6cbc6c473912167f56aa1611584e8632c865ed65e02",
+          "request_id": "bgd-padded-national__T2M_MIN__20120101_20121231",
+          "time_standard": "LST",
+          "unit": "C",
+          "value": 31.59
+        }
+      },
+      "parameter": "T2M_MIN",
+      "raw": {
+        "header": {
+          "api": {
+            "name": "POWER Daily API",
+            "version": "v2.10.3"
+          },
+          "end": "20121231",
+          "fill_value": -999.0,
+          "sources": [
+            "MERRA2",
+            "POWER"
+          ],
+          "start": "20120101",
+          "time_standard": "LST",
+          "title": "NASA/POWER Source Native Resolution Daily Data"
+        },
+        "manifest_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MIN/20120101_20121231.manifest.json",
+        "parameter_metadata": {
+          "longname": "Temperature at 2 Meters Minimum",
+          "units": "C"
+        },
+        "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MIN/20120101_20121231.json",
+        "raw_sha256": "8d44183c0674c35f441ef6cbc6c473912167f56aa1611584e8632c865ed65e02",
+        "request_parameters": {
+          "community": "AG",
+          "end": "20121231",
+          "format": "JSON",
+          "latitude-max": "27.134513",
+          "latitude-min": "20.090609",
+          "longitude-max": "93.305257",
+          "longitude-min": "87.383628",
+          "parameters": "T2M_MIN",
+          "start": "20120101",
+          "time-standard": "LST",
+          "units": "metric"
+        },
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M_MIN&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20120101&end=20121231&format=JSON&time-standard=LST&units=metric"
+      },
+      "replay": {
+        "path": "cache/nasa_power_regional/prepared-v1/2012.wide-replay.jsonl.gz",
+        "record": {
+          "date": "2012-06-05",
+          "missing_reasons": {
+            "PRECTOTCORR": null,
+            "T2M": null,
+            "T2M_MAX": null,
+            "T2M_MIN": null
+          },
+          "output_latitude": 24.5,
+          "output_longitude": 88.125,
+          "processing_version": "regional-preparation-v1",
+          "raw_artifacts": {
+            "PRECTOTCORR": "b1ed9e69b9d83ff76aeb28be4e05c201f52cd1f6036d3c1bfd8e26af6c6b0905",
+            "T2M": "75356fd35d36bd6c1bfff21600fc01bbc8da9ec277360d5386a537547e5fede6",
+            "T2M_MAX": "0ff92aaba5f5086c477a0f0faea50349268b5b39f532e2f01e55d347830b6c5d",
+            "T2M_MIN": "8d44183c0674c35f441ef6cbc6c473912167f56aa1611584e8632c865ed65e02"
+          },
+          "time_standard": "LST",
+          "units": {
+            "PRECTOTCORR": "mm/day",
+            "T2M": "C",
+            "T2M_MAX": "C",
+            "T2M_MIN": "C"
+          },
+          "values": {
+            "PRECTOTCORR": 2.32,
+            "T2M": 36.37,
+            "T2M_MAX": 43.07,
+            "T2M_MIN": 31.59
+          }
+        }
+      },
+      "request_id": "bgd-padded-national__T2M_MIN__20120101_20121231",
+      "selections": [
+        {
+          "extreme": "maximum",
+          "scope": "district_used_locations",
+          "ties": 1
+        }
+      ],
+      "spatial_neighbours": [
+        {
+          "distance_km": 55.597540116766176,
+          "latitude": 24.0,
+          "longitude": 88.125,
+          "value": 31.73
+        },
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 25.0,
+          "longitude": 88.125,
+          "value": 30.7
+        },
+        {
+          "distance_km": 63.239456407799636,
+          "latitude": 24.5,
+          "longitude": 87.5,
+          "value": 31.34
+        },
+        {
+          "distance_km": 63.239456407799636,
+          "latitude": 24.5,
+          "longitude": 88.75,
+          "value": 30.07
+        }
+      ],
+      "temporal_neighbours": [
+        {
+          "date": "2012-06-03",
+          "offset_days": -2,
+          "value": 29.29
+        },
+        {
+          "date": "2012-06-04",
+          "offset_days": -1,
+          "value": 29.74
+        },
+        {
+          "date": "2012-06-05",
+          "offset_days": 0,
+          "value": 31.59
+        },
+        {
+          "date": "2012-06-06",
+          "offset_days": 1,
+          "value": 29.33
+        },
+        {
+          "date": "2012-06-07",
+          "offset_days": 2,
+          "value": 30.23
+        }
+      ],
+      "time_standard": "LST",
+      "unit": "C",
+      "value": 31.59
+    },
+    {
+      "chart": {
+        "monthly_record_matches": true,
+        "path": "cache/nasa_power_regional/prepared-v1/chart-89.375-26.0-T2M_MIN.json",
+        "period": [
+          "2001-01",
+          "2025-12"
+        ],
+        "provisional_selection": {
+          "maximum": {
+            "end": "2016-12",
+            "start": "2016-01",
+            "value": 21.344535519125685
+          },
+          "minimum": {
+            "end": "2012-12",
+            "start": "2012-01",
+            "value": 19.445273224043714
+          },
+          "month_count": 12,
+          "start_month": 1,
+          "status": "provisional_descriptive_only",
+          "tie_break": "earliest start",
+          "usable_periods": 25
+        }
+      },
+      "checks": {
+        "district_exports": true,
+        "independently_recomputed_monthly": true,
+        "monthly_to_chart": true,
+        "raw_to_normalized": true,
+        "raw_to_wide_replay": true
+      },
+      "classification": "B",
+      "conclusion": "Faithfully preserved unusual source value; physical accuracy unresolved.",
+      "coordinates": [
+        89.375,
+        26.0
+      ],
+      "date": "2013-01-09",
+      "district_context": [
+        {
+          "distance_km": 36.8707780753441,
+          "district_id": "bd-district-kurigram",
+          "matches": true,
+          "path": "cache/nasa_power_regional/prepared-v1/district-context/bd-district-kurigram-2013.wide-replay.jsonl.gz",
+          "sha256": "4b3b0147687960c8e5c8b94ad60f76f43e21bac99473fadae60858854bcf3d9a"
+        },
+        {
+          "distance_km": 24.942742913607518,
+          "district_id": "bd-district-lalmonirhat",
+          "matches": true,
+          "path": "cache/nasa_power_regional/prepared-v1/district-context/bd-district-lalmonirhat-2013.wide-replay.jsonl.gz",
+          "sha256": "ad469dbf2765c50f3163a53fb703be46288a89060e47e720fdabe59c26f774ef"
+        }
+      ],
+      "geography": {
+        "classification": "inside_pinned_Bangladesh_geometry",
+        "containing_source_district_names": [
+          "Lalmonirhat"
+        ]
+      },
+      "method_questions": [],
+      "monthly": {
+        "independent_value": 7.077419354838709,
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MIN__20130101_20131231.monthly.json",
+        "record": {
+          "available_day_statistic": 7.077419354838712,
+          "coverage": "complete",
+          "date": "2013-01",
+          "expected_days": 31,
+          "output_latitude": 26.0,
+          "output_longitude": 89.375,
+          "parameter": "T2M_MIN",
+          "processing_version": "regional-preparation-v1",
+          "source_artifacts": [
+            "fb7f7142954a28f5a44720e95634b60d3c76201de5781904194dab5ac6e4888d"
+          ],
+          "statistic": "mean_of_daily_values",
+          "unit": "C",
+          "valid_days": 31,
+          "value": 7.077419354838712
+        }
+      },
+      "normalized": {
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MIN__20130101_20131231.jsonl.gz",
+        "record": {
+          "collection_id": "nasa-power-daily-regional-bgd-v1",
+          "date": "2013-01-09",
+          "missing_reason": null,
+          "output_latitude": 26.0,
+          "output_longitude": 89.375,
+          "parameter": "T2M_MIN",
+          "raw_artifact": "fb7f7142954a28f5a44720e95634b60d3c76201de5781904194dab5ac6e4888d",
+          "request_id": "bgd-padded-national__T2M_MIN__20130101_20131231",
+          "time_standard": "LST",
+          "unit": "C",
+          "value": 1.23
+        }
+      },
+      "parameter": "T2M_MIN",
+      "raw": {
+        "header": {
+          "api": {
+            "name": "POWER Daily API",
+            "version": "v2.10.3"
+          },
+          "end": "20131231",
+          "fill_value": -999.0,
+          "sources": [
+            "MERRA2",
+            "POWER"
+          ],
+          "start": "20130101",
+          "time_standard": "LST",
+          "title": "NASA/POWER Source Native Resolution Daily Data"
+        },
+        "manifest_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MIN/20130101_20131231.manifest.json",
+        "parameter_metadata": {
+          "longname": "Temperature at 2 Meters Minimum",
+          "units": "C"
+        },
+        "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MIN/20130101_20131231.json",
+        "raw_sha256": "fb7f7142954a28f5a44720e95634b60d3c76201de5781904194dab5ac6e4888d",
+        "request_parameters": {
+          "community": "AG",
+          "end": "20131231",
+          "format": "JSON",
+          "latitude-max": "27.134513",
+          "latitude-min": "20.090609",
+          "longitude-max": "93.305257",
+          "longitude-min": "87.383628",
+          "parameters": "T2M_MIN",
+          "start": "20130101",
+          "time-standard": "LST",
+          "units": "metric"
+        },
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M_MIN&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20130101&end=20131231&format=JSON&time-standard=LST&units=metric"
+      },
+      "replay": {
+        "path": "cache/nasa_power_regional/prepared-v1/2013.wide-replay.jsonl.gz",
+        "record": {
+          "date": "2013-01-09",
+          "missing_reasons": {
+            "PRECTOTCORR": null,
+            "T2M": null,
+            "T2M_MAX": null,
+            "T2M_MIN": null
+          },
+          "output_latitude": 26.0,
+          "output_longitude": 89.375,
+          "processing_version": "regional-preparation-v1",
+          "raw_artifacts": {
+            "PRECTOTCORR": "76e735dd50b35ada53b9f4c6a0e0f94af7e4f393f89d0549c1b176b403ebf261",
+            "T2M": "7799a6786ad27d007cf294ba58ada979116a679767720b809af572e5d6fbc8ee",
+            "T2M_MAX": "e9a410260fefd634d35b6105da0b31326964253a27c790c0920979ac5867ebc0",
+            "T2M_MIN": "fb7f7142954a28f5a44720e95634b60d3c76201de5781904194dab5ac6e4888d"
+          },
+          "time_standard": "LST",
+          "units": {
+            "PRECTOTCORR": "mm/day",
+            "T2M": "C",
+            "T2M_MAX": "C",
+            "T2M_MIN": "C"
+          },
+          "values": {
+            "PRECTOTCORR": 0.0,
+            "T2M": 8.39,
+            "T2M_MAX": 17.72,
+            "T2M_MIN": 1.23
+          }
+        }
+      },
+      "request_id": "bgd-padded-national__T2M_MIN__20130101_20131231",
+      "selections": [
+        {
+          "extreme": "minimum",
+          "scope": "district_used_locations",
+          "ties": 1
+        }
+      ],
+      "spatial_neighbours": [
+        {
+          "distance_km": 55.597540116766176,
+          "latitude": 26.5,
+          "longitude": 89.375,
+          "value": 3.63
+        },
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 25.5,
+          "longitude": 89.375,
+          "value": 2.08
+        },
+        {
+          "distance_km": 62.463363043541136,
+          "latitude": 26.0,
+          "longitude": 88.75,
+          "value": 2.18
+        },
+        {
+          "distance_km": 62.463363043541136,
+          "latitude": 26.0,
+          "longitude": 90.0,
+          "value": 1.75
+        }
+      ],
+      "temporal_neighbours": [
+        {
+          "date": "2013-01-07",
+          "offset_days": -2,
+          "value": 4.0
+        },
+        {
+          "date": "2013-01-08",
+          "offset_days": -1,
+          "value": 1.74
+        },
+        {
+          "date": "2013-01-09",
+          "offset_days": 0,
+          "value": 1.23
+        },
+        {
+          "date": "2013-01-10",
+          "offset_days": 1,
+          "value": 2.53
+        },
+        {
+          "date": "2013-01-11",
+          "offset_days": 2,
+          "value": 4.69
+        }
+      ],
+      "time_standard": "LST",
+      "unit": "C",
+      "value": 1.23
+    },
+    {
+      "chart": {
+        "monthly_record_matches": true,
+        "path": "cache/nasa_power_regional/prepared-v1/chart-89.375-27.0-T2M_MIN.json",
+        "period": [
+          "2001-01",
+          "2025-12"
+        ],
+        "provisional_selection": {
+          "maximum": {
+            "end": "2016-12",
+            "start": "2016-01",
+            "value": 12.551721311475406
+          },
+          "minimum": {
+            "end": "2012-12",
+            "start": "2012-01",
+            "value": 11.030109289617487
+          },
+          "month_count": 12,
+          "start_month": 1,
+          "status": "provisional_descriptive_only",
+          "tie_break": "earliest start",
+          "usable_periods": 25
+        }
+      },
+      "checks": {
+        "district_exports": true,
+        "independently_recomputed_monthly": true,
+        "monthly_to_chart": true,
+        "raw_to_normalized": true,
+        "raw_to_wide_replay": true
+      },
+      "classification": "B",
+      "conclusion": "Faithfully preserved unusual source value; physical accuracy unresolved.",
+      "coordinates": [
+        89.375,
+        27.0
+      ],
+      "date": "2013-12-15",
+      "district_context": [],
+      "geography": {
+        "classification": "padded_area_only_outside_pinned_Bangladesh_geometry",
+        "containing_source_district_names": []
+      },
+      "method_questions": [],
+      "monthly": {
+        "independent_value": 5.381935483870968,
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MIN__20130101_20131231.monthly.json",
+        "record": {
+          "available_day_statistic": 5.381935483870967,
+          "coverage": "complete",
+          "date": "2013-12",
+          "expected_days": 31,
+          "output_latitude": 27.0,
+          "output_longitude": 89.375,
+          "parameter": "T2M_MIN",
+          "processing_version": "regional-preparation-v1",
+          "source_artifacts": [
+            "fb7f7142954a28f5a44720e95634b60d3c76201de5781904194dab5ac6e4888d"
+          ],
+          "statistic": "mean_of_daily_values",
+          "unit": "C",
+          "valid_days": 31,
+          "value": 5.381935483870967
+        }
+      },
+      "normalized": {
+        "path": "cache/nasa_power_regional/prepared-v1/bgd-padded-national__T2M_MIN__20130101_20131231.jsonl.gz",
+        "record": {
+          "collection_id": "nasa-power-daily-regional-bgd-v1",
+          "date": "2013-12-15",
+          "missing_reason": null,
+          "output_latitude": 27.0,
+          "output_longitude": 89.375,
+          "parameter": "T2M_MIN",
+          "raw_artifact": "fb7f7142954a28f5a44720e95634b60d3c76201de5781904194dab5ac6e4888d",
+          "request_id": "bgd-padded-national__T2M_MIN__20130101_20131231",
+          "time_standard": "LST",
+          "unit": "C",
+          "value": -0.93
+        }
+      },
+      "parameter": "T2M_MIN",
+      "raw": {
+        "header": {
+          "api": {
+            "name": "POWER Daily API",
+            "version": "v2.10.3"
+          },
+          "end": "20131231",
+          "fill_value": -999.0,
+          "sources": [
+            "MERRA2",
+            "POWER"
+          ],
+          "start": "20130101",
+          "time_standard": "LST",
+          "title": "NASA/POWER Source Native Resolution Daily Data"
+        },
+        "manifest_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MIN/20130101_20131231.manifest.json",
+        "parameter_metadata": {
+          "longname": "Temperature at 2 Meters Minimum",
+          "units": "C"
+        },
+        "raw_path": "cache/nasa_power_regional/nasa-power-daily-regional-bgd-v1/raw/bgd-padded-national/T2M_MIN/20130101_20131231.json",
+        "raw_sha256": "fb7f7142954a28f5a44720e95634b60d3c76201de5781904194dab5ac6e4888d",
+        "request_parameters": {
+          "community": "AG",
+          "end": "20131231",
+          "format": "JSON",
+          "latitude-max": "27.134513",
+          "latitude-min": "20.090609",
+          "longitude-max": "93.305257",
+          "longitude-min": "87.383628",
+          "parameters": "T2M_MIN",
+          "start": "20130101",
+          "time-standard": "LST",
+          "units": "metric"
+        },
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M_MIN&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20130101&end=20131231&format=JSON&time-standard=LST&units=metric"
+      },
+      "replay": {
+        "path": "cache/nasa_power_regional/prepared-v1/2013.wide-replay.jsonl.gz",
+        "record": {
+          "date": "2013-12-15",
+          "missing_reasons": {
+            "PRECTOTCORR": null,
+            "T2M": null,
+            "T2M_MAX": null,
+            "T2M_MIN": null
+          },
+          "output_latitude": 27.0,
+          "output_longitude": 89.375,
+          "processing_version": "regional-preparation-v1",
+          "raw_artifacts": {
+            "PRECTOTCORR": "76e735dd50b35ada53b9f4c6a0e0f94af7e4f393f89d0549c1b176b403ebf261",
+            "T2M": "7799a6786ad27d007cf294ba58ada979116a679767720b809af572e5d6fbc8ee",
+            "T2M_MAX": "e9a410260fefd634d35b6105da0b31326964253a27c790c0920979ac5867ebc0",
+            "T2M_MIN": "fb7f7142954a28f5a44720e95634b60d3c76201de5781904194dab5ac6e4888d"
+          },
+          "time_standard": "LST",
+          "units": {
+            "PRECTOTCORR": "mm/day",
+            "T2M": "C",
+            "T2M_MAX": "C",
+            "T2M_MIN": "C"
+          },
+          "values": {
+            "PRECTOTCORR": 0.0,
+            "T2M": 7.18,
+            "T2M_MAX": 15.33,
+            "T2M_MIN": -0.93
+          }
+        }
+      },
+      "request_id": "bgd-padded-national__T2M_MIN__20130101_20131231",
+      "selections": [
+        {
+          "extreme": "minimum",
+          "scope": "padded_regional",
+          "ties": 1
+        }
+      ],
+      "spatial_neighbours": [
+        {
+          "distance_km": 55.59754011676653,
+          "latitude": 26.5,
+          "longitude": 89.375,
+          "value": 10.7
+        },
+        {
+          "distance_km": 61.92215043884317,
+          "latitude": 27.0,
+          "longitude": 88.75,
+          "value": 5.51
+        },
+        {
+          "distance_km": 61.92215043884317,
+          "latitude": 27.0,
+          "longitude": 90.0,
+          "value": 3.0
+        },
+        {
+          "distance_km": 83.32101315287298,
+          "latitude": 26.5,
+          "longitude": 88.75,
+          "value": 12.02
+        }
+      ],
+      "temporal_neighbours": [
+        {
+          "date": "2013-12-13",
+          "offset_days": -2,
+          "value": 5.0
+        },
+        {
+          "date": "2013-12-14",
+          "offset_days": -1,
+          "value": 4.74
+        },
+        {
+          "date": "2013-12-15",
+          "offset_days": 0,
+          "value": -0.93
+        },
+        {
+          "date": "2013-12-16",
+          "offset_days": 1,
+          "value": 1.73
+        },
+        {
+          "date": "2013-12-17",
+          "offset_days": 2,
+          "value": 2.05
+        }
+      ],
+      "time_standard": "LST",
+      "unit": "C",
+      "value": -0.93
+    }
+  ],
+  "selection_method": "Global padded-area and district-used-location maximum rainfall plus minima/maxima of each temperature parameter; all ties counted, earliest date then longitude then latitude selects one observation.",
+  "source_interpretation": {
+    "evidence": "Existing local handoff and per-response units/LST metadata; no new source requests.",
+    "precipitation": "Daily average rate mm/day multiplied by a one-day interval; sum daily amounts once for monthly mm. Daily records/replay retain mm/day.",
+    "temperatures": "Celsius retained directly; monthly means of daily values/extrema are not monthly absolute extrema.",
+    "urls": [
+      "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+      "https://power.larc.nasa.gov/docs/services/api/temporal/",
+      "https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/",
+      "https://power.larc.nasa.gov/api/temporal/daily/openapi.json",
+      "https://power.larc.nasa.gov/docs/methodology/data/sources_meteorology/",
+      "https://power.larc.nasa.gov/docs/methodology/data/sources_hydrology/"
+    ]
+  },
+  "source_or_derived_data_modified": false,
+  "unresolved_questions": [
+    "Local physical accuracy and representativeness are not independently meteorologically validated.",
+    "The rainfall source maximum needs upstream/source or independent station evidence before event interpretation; statistical rarity alone is not an error.",
+    "Returned coordinate containment does not establish the source spatial footprint is wholly inside Bangladesh."
+  ]
+}

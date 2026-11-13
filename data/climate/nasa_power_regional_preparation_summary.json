@@ -1,0 +1,27 @@
+{
+  "charts": 560,
+  "complete_monthly_rows": 168000,
+  "district_date_rows": 584384,
+  "district_manifest_sha256": "c090ec40bdadfe9016a28d9c18c5317794ea3003d8dc01d2d4d169e36d2460db",
+  "district_year_partitions": 1600,
+  "frontend_integrated": false,
+  "independent_review": false,
+  "missing": 0,
+  "monthly_partitions": 100,
+  "monthly_rows": 168000,
+  "normalized_partitions": 100,
+  "observations": 5113360,
+  "output_root": "cache/nasa_power_regional/prepared-v1",
+  "processing_version": "regional-preparation-v1",
+  "regional_inventory_sha256": "43d9a11abeeb64ac49fc248771d828b3ec0678318d5fb305d41fc168b9973837",
+  "replay_selection": "configurable provisional descriptive extrema; no agronomic trigger or engine replay",
+  "reproducibility": {
+    "artifact_set_sha256": "22174ac85de7a3f790f9279d059622b749e1b970275f28d47389f196ef0c083f",
+    "identical_files": 786,
+    "network": "forbidden by normalization opener",
+    "runs": 2,
+    "status": "passed"
+  },
+  "wide_partitions": 25,
+  "wide_rows": 1278340
+}

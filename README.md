@@ -15,7 +15,7 @@ The development workflow is implemented locally: task checklists, generated prog
 
 Generated from task records; the detailed board is the team's daily starting point.
 
-**Accepted work packages: 0/35 · Implemented checklist items: 42/144.** Checked items can still await independent review and merge.
+**Accepted work packages: 0/39 · Implemented checklist items: 52/154.** Checked items can still await independent review and merge.
 
 | Member | First available action |
 | --- | --- |

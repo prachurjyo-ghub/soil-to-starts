@@ -93,6 +93,27 @@ class RegionalAcquireTests(unittest.TestCase):
             now=lambda: "2026-11-13T00:00:00Z",
         )
 
+    def test_long_retry_after_pauses_without_early_retry(self):
+        calls = []
+        def fail(url, timeout):
+            calls.append(url)
+            raise regional.DownloadError('throttle', status=429, retry_after='120', body=b'throttled')
+        with tempfile.TemporaryDirectory() as directory:
+            downloader = self.downloader(directory, fail)
+            with self.assertRaisesRegex(regional.DownloadError, 'Paused'):
+                downloader.download(self.request)
+        self.assertEqual(len(calls), 1)
+
+    def test_permanent_error_is_not_retried(self):
+        calls = []
+        def fail(url, timeout):
+            calls.append(url)
+            raise regional.DownloadError('invalid request', status=422, body=b'error')
+        with tempfile.TemporaryDirectory() as directory:
+            with self.assertRaises(regional.DownloadError):
+                self.downloader(directory, fail).download(self.request)
+        self.assertEqual(len(calls), 1)
+
     def test_config_is_boundary_derived_and_full_plan_is_one_hundred_requests(self):
         self.assertEqual(self.config["registry"]["sha256"], regional.sha256(regional.DEFAULT_REGISTRY.read_bytes()))
         self.assertEqual(len(self.requests), 4)

@@ -1,0 +1,983 @@
+{
+  "adoption": {
+    "basis": "Explicit user selection: Adopt representative-point context",
+    "by": "Saim",
+    "date": "2026-11-13",
+    "independent_scientific_review": false
+  },
+  "bamis_mapping_sha256": "9e508caca45b81c8550f9bbdc56525a084976a4ab7eb14bad6a50c0ae0cff7d8",
+  "distance_km_max": 40.50028448976602,
+  "distance_km_min": 1.5693744823385338,
+  "district_weather_produced": false,
+  "districts": [
+    {
+      "anchor_latitude": 22.530353,
+      "anchor_longitude": 89.756761,
+      "bamis_regions": [
+        "Khulna"
+      ],
+      "diagnostic_output_latitude": 22.5,
+      "diagnostic_output_longitude": 90.0,
+      "distance_km": 25.212334773724656,
+      "district_id": "bd-district-bagerhat",
+      "district_name": "Bagerhat",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 39.35929622530713,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 21.769169,
+      "anchor_longitude": 92.385918,
+      "bamis_regions": [
+        "Rangamati"
+      ],
+      "diagnostic_output_latitude": 22.0,
+      "diagnostic_output_longitude": 92.5,
+      "distance_km": 28.23773814428381,
+      "district_id": "bd-district-bandarban",
+      "district_name": "Bandarban",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 32.169323778331744,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 22.172556,
+      "anchor_longitude": 90.203538,
+      "bamis_regions": [
+        "Barishal"
+      ],
+      "diagnostic_output_latitude": 22.0,
+      "diagnostic_output_longitude": 90.0,
+      "distance_km": 28.424709166401595,
+      "district_id": "bd-district-barguna",
+      "district_name": "Barguna",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 41.99931919535322,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 22.762154,
+      "anchor_longitude": 90.325595,
+      "bamis_regions": [
+        "Barishal"
+      ],
+      "diagnostic_output_latitude": 23.0,
+      "diagnostic_output_longitude": 90.625,
+      "distance_km": 40.50028448976602,
+      "district_id": "bd-district-barishal",
+      "district_name": "Barishal",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 42.35562565066054,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 22.405126,
+      "anchor_longitude": 90.768427,
+      "bamis_regions": [
+        "Barishal"
+      ],
+      "diagnostic_output_latitude": 22.5,
+      "diagnostic_output_longitude": 90.625,
+      "distance_km": 18.12575591146114,
+      "district_id": "bd-district-bhola",
+      "district_name": "Bhola",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 47.40625775702045,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 24.829312,
+      "anchor_longitude": 89.33375,
+      "bamis_regions": [
+        "Bogura"
+      ],
+      "diagnostic_output_latitude": 25.0,
+      "diagnostic_output_longitude": 89.375,
+      "distance_km": 19.43020161287373,
+      "district_id": "bd-district-bogura",
+      "district_name": "Bogura",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 36.85435610218811,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.958462,
+      "anchor_longitude": 91.113242,
+      "bamis_regions": [
+        "Cumilla"
+      ],
+      "diagnostic_output_latitude": 24.0,
+      "diagnostic_output_longitude": 91.25,
+      "distance_km": 14.641950273820699,
+      "district_id": "bd-district-brahmanbaria",
+      "district_name": "Brahmanbaria",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 49.81902861529384,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.243736,
+      "anchor_longitude": 90.841902,
+      "bamis_regions": [
+        "Cumilla"
+      ],
+      "diagnostic_output_latitude": 23.0,
+      "diagnostic_output_longitude": 90.625,
+      "distance_km": 35.021836383140936,
+      "district_id": "bd-district-chandpur",
+      "district_name": "Chandpur",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 36.08515279709142,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 24.688357,
+      "anchor_longitude": 88.256694,
+      "bamis_regions": [
+        "Rajshahi"
+      ],
+      "diagnostic_output_latitude": 24.5,
+      "diagnostic_output_longitude": 88.125,
+      "distance_km": 24.8185734952679,
+      "district_id": "bd-district-chapainawabganj",
+      "district_name": "Chapainawabganj",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 37.11368586097449,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 22.423176,
+      "anchor_longitude": 92.038116,
+      "bamis_regions": [
+        "Chattogram"
+      ],
+      "diagnostic_output_latitude": 22.5,
+      "diagnostic_output_longitude": 91.875,
+      "distance_km": 18.812969976213683,
+      "district_id": "bd-district-chattogram",
+      "district_name": "Chattogram",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 48.225497492819756,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.59986,
+      "anchor_longitude": 88.8203,
+      "bamis_regions": [
+        "Jashore"
+      ],
+      "diagnostic_output_latitude": 23.5,
+      "diagnostic_output_longitude": 88.75,
+      "distance_km": 13.21545888933311,
+      "district_id": "bd-district-chuadanga",
+      "district_name": "Chuadanga",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 45.06478482085914,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 21.332458,
+      "anchor_longitude": 92.092271,
+      "bamis_regions": [
+        "Chattogram"
+      ],
+      "diagnostic_output_latitude": 21.5,
+      "diagnostic_output_longitude": 91.875,
+      "distance_km": 29.204961129791275,
+      "district_id": "bd-district-coxs-bazar",
+      "district_name": "Cox's Bazar",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 43.29192450058894,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.421661,
+      "anchor_longitude": 91.076765,
+      "bamis_regions": [
+        "Cumilla"
+      ],
+      "diagnostic_output_latitude": 23.5,
+      "diagnostic_output_longitude": 91.25,
+      "distance_km": 19.700893150823592,
+      "district_id": "bd-district-cumilla",
+      "district_name": "Cumilla",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 46.897396616246134,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.781767,
+      "anchor_longitude": 90.357039,
+      "bamis_regions": [
+        "Dhaka"
+      ],
+      "diagnostic_output_latitude": 24.0,
+      "diagnostic_output_longitude": 90.625,
+      "distance_km": 36.48339722086542,
+      "district_id": "bd-district-dhaka",
+      "district_name": "Dhaka",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 41.55325477680143,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 25.642919,
+      "anchor_longitude": 88.724441,
+      "bamis_regions": [
+        "Dinajpur"
+      ],
+      "diagnostic_output_latitude": 25.5,
+      "diagnostic_output_longitude": 88.75,
+      "distance_km": 16.09734320346186,
+      "district_id": "bd-district-dinajpur",
+      "district_name": "Dinajpur",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 39.78798068847783,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.466354,
+      "anchor_longitude": 89.871483,
+      "bamis_regions": [
+        "Faridpur"
+      ],
+      "diagnostic_output_latitude": 23.5,
+      "diagnostic_output_longitude": 90.0,
+      "distance_km": 13.630385648958134,
+      "district_id": "bd-district-faridpur",
+      "district_name": "Faridpur",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 50.7721118335548,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.020629,
+      "anchor_longitude": 91.401813,
+      "bamis_regions": [
+        "Chattogram"
+      ],
+      "diagnostic_output_latitude": 23.0,
+      "diagnostic_output_longitude": 91.25,
+      "distance_km": 15.706131958906527,
+      "district_id": "bd-district-feni",
+      "district_name": "Feni",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 48.483914178724575,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 25.343199,
+      "anchor_longitude": 89.536251,
+      "bamis_regions": [
+        "Rangpur"
+      ],
+      "diagnostic_output_latitude": 25.5,
+      "diagnostic_output_longitude": 89.375,
+      "distance_km": 23.79596784393725,
+      "district_id": "bd-district-gaibandha",
+      "district_name": "Gaibandha",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 41.46897150542616,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 24.092664,
+      "anchor_longitude": 90.40759,
+      "bamis_regions": [
+        "Dhaka"
+      ],
+      "diagnostic_output_latitude": 24.0,
+      "diagnostic_output_longitude": 90.625,
+      "distance_km": 24.363057339327064,
+      "district_id": "bd-district-gazipur",
+      "district_name": "Gazipur",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 42.652057446043344,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.107118,
+      "anchor_longitude": 89.862251,
+      "bamis_regions": [
+        "Faridpur"
+      ],
+      "diagnostic_output_latitude": 23.0,
+      "diagnostic_output_longitude": 90.0,
+      "distance_km": 18.45281525331182,
+      "district_id": "bd-district-gopalganj",
+      "district_name": "Gopalganj",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 45.89560924241017,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 24.333745,
+      "anchor_longitude": 91.43246,
+      "bamis_regions": [
+        "Sylhet"
+      ],
+      "diagnostic_output_latitude": 24.5,
+      "diagnostic_output_longitude": 91.25,
+      "distance_km": 26.13523619260828,
+      "district_id": "bd-district-habiganj",
+      "district_name": "Habiganj",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 41.47105571818835,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 25.001211,
+      "anchor_longitude": 89.777095,
+      "bamis_regions": [
+        "Mymensingh"
+      ],
+      "diagnostic_output_latitude": 25.0,
+      "diagnostic_output_longitude": 90.0,
+      "distance_km": 22.463980214627373,
+      "district_id": "bd-district-jamalpur",
+      "district_name": "Jamalpur",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 40.521923777626384,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.085019,
+      "anchor_longitude": 89.126231,
+      "bamis_regions": [
+        "Jashore"
+      ],
+      "diagnostic_output_latitude": 23.0,
+      "diagnostic_output_longitude": 89.375,
+      "distance_km": 27.153687793725005,
+      "district_id": "bd-district-jashore",
+      "district_name": "Jashore",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 39.64097257814811,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 22.560965,
+      "anchor_longitude": 90.171619,
+      "bamis_regions": [
+        "Barishal"
+      ],
+      "diagnostic_output_latitude": 22.5,
+      "diagnostic_output_longitude": 90.0,
+      "distance_km": 18.88530386838671,
+      "district_id": "bd-district-jhalakathi",
+      "district_name": "Jhalakathi",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 47.05678031959802,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.494928,
+      "anchor_longitude": 89.123069,
+      "bamis_regions": [
+        "Jashore"
+      ],
+      "diagnostic_output_latitude": 23.5,
+      "diagnostic_output_longitude": 89.375,
+      "distance_km": 25.696732019705067,
+      "district_id": "bd-district-jhenaidah",
+      "district_name": "Jhenaidah",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 38.04770576820639,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 25.061506,
+      "anchor_longitude": 89.091866,
+      "bamis_regions": [
+        "Bogura"
+      ],
+      "diagnostic_output_latitude": 25.0,
+      "diagnostic_output_longitude": 89.375,
+      "distance_km": 29.334623315803206,
+      "district_id": "bd-district-joypurhat",
+      "district_name": "Joypurhat",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 35.11601198086408,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.211036,
+      "anchor_longitude": 91.962058,
+      "bamis_regions": [
+        "Rangamati"
+      ],
+      "diagnostic_output_latitude": 23.0,
+      "diagnostic_output_longitude": 91.875,
+      "distance_km": 25.098607159616424,
+      "district_id": "bd-district-khagrachhari",
+      "district_name": "Khagrachhari",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 33.33778525523698,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 22.501504,
+      "anchor_longitude": 89.419256,
+      "bamis_regions": [
+        "Khulna"
+      ],
+      "diagnostic_output_latitude": 22.5,
+      "diagnostic_output_longitude": 89.375,
+      "distance_km": 4.549506967594671,
+      "district_id": "bd-district-khulna",
+      "district_name": "Khulna",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 55.61576451241698,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 24.336372,
+      "anchor_longitude": 90.92805,
+      "bamis_regions": [
+        "Dhaka"
+      ],
+      "diagnostic_output_latitude": 24.5,
+      "diagnostic_output_longitude": 90.625,
+      "distance_km": 35.67239915526556,
+      "district_id": "bd-district-kishoreganj",
+      "district_name": "Kishoreganj",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 37.331138665565895,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 25.805589,
+      "anchor_longitude": 89.673615,
+      "bamis_regions": [
+        "Rangpur"
+      ],
+      "diagnostic_output_latitude": 26.0,
+      "diagnostic_output_longitude": 89.375,
+      "distance_km": 36.8707780753441,
+      "district_id": "bd-district-kurigram",
+      "district_name": "Kurigram",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 39.15481773929328,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.942596,
+      "anchor_longitude": 89.024823,
+      "bamis_regions": [
+        "Jashore"
+      ],
+      "diagnostic_output_latitude": 24.0,
+      "diagnostic_output_longitude": 88.75,
+      "distance_km": 28.64348952194412,
+      "district_id": "bd-district-kushtia",
+      "district_name": "Kushtia",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 36.14754537678462,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 22.87072,
+      "anchor_longitude": 90.86787,
+      "bamis_regions": [
+        "Chattogram"
+      ],
+      "diagnostic_output_latitude": 23.0,
+      "diagnostic_output_longitude": 90.625,
+      "distance_km": 28.726558279672304,
+      "district_id": "bd-district-lakshmipur",
+      "district_name": "Lakshmipur",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 41.688721467957926,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 26.121333,
+      "anchor_longitude": 89.164979,
+      "bamis_regions": [
+        "Rangpur"
+      ],
+      "diagnostic_output_latitude": 26.0,
+      "diagnostic_output_longitude": 89.375,
+      "distance_km": 24.942742913607518,
+      "district_id": "bd-district-lalmonirhat",
+      "district_name": "Lalmonirhat",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 43.59247877074173,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.230714,
+      "anchor_longitude": 90.13358,
+      "bamis_regions": [
+        "Faridpur"
+      ],
+      "diagnostic_output_latitude": 23.0,
+      "diagnostic_output_longitude": 90.0,
+      "distance_km": 29.064794754553766,
+      "district_id": "bd-district-madaripur",
+      "district_name": "Madaripur",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 32.90171520319853,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.468699,
+      "anchor_longitude": 89.455507,
+      "bamis_regions": [
+        "Jashore"
+      ],
+      "diagnostic_output_latitude": 23.5,
+      "diagnostic_output_longitude": 89.375,
+      "distance_km": 8.917734164739514,
+      "district_id": "bd-district-magura",
+      "district_name": "Magura",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 52.762202688659144,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.83554,
+      "anchor_longitude": 89.941503,
+      "bamis_regions": [
+        "Dhaka"
+      ],
+      "diagnostic_output_latitude": 24.0,
+      "diagnostic_output_longitude": 90.0,
+      "distance_km": 19.229526762218804,
+      "district_id": "bd-district-manikganj",
+      "district_name": "Manikganj",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 37.78302553149183,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.789007,
+      "anchor_longitude": 88.701171,
+      "bamis_regions": [
+        "Jashore"
+      ],
+      "diagnostic_output_latitude": 24.0,
+      "diagnostic_output_longitude": 88.75,
+      "distance_km": 23.980819259546024,
+      "district_id": "bd-district-meherpur",
+      "district_name": "Meherpur",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 32.51877286300375,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 24.487333,
+      "anchor_longitude": 91.88184,
+      "bamis_regions": [
+        "Sylhet"
+      ],
+      "diagnostic_output_latitude": 24.5,
+      "diagnostic_output_longitude": 91.875,
+      "distance_km": 1.5693744823385338,
+      "district_id": "bd-district-moulvibazar",
+      "district_name": "Moulvibazar",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 54.193469411438976,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.527101,
+      "anchor_longitude": 90.438027,
+      "bamis_regions": [
+        "Dhaka"
+      ],
+      "diagnostic_output_latitude": 23.5,
+      "diagnostic_output_longitude": 90.625,
+      "distance_km": 19.300858718750273,
+      "district_id": "bd-district-munshiganj",
+      "district_name": "Munshiganj",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 44.7636756015274,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 24.722173,
+      "anchor_longitude": 90.416911,
+      "bamis_regions": [
+        "Mymensingh"
+      ],
+      "diagnostic_output_latitude": 24.5,
+      "diagnostic_output_longitude": 90.625,
+      "distance_km": 32.44759849108239,
+      "district_id": "bd-district-mymensingh",
+      "district_name": "Mymensingh",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 37.351481364052795,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 24.873851,
+      "anchor_longitude": 88.738297,
+      "bamis_regions": [
+        "Rajshahi"
+      ],
+      "diagnostic_output_latitude": 25.0,
+      "diagnostic_output_longitude": 88.75,
+      "distance_km": 14.076692767573395,
+      "district_id": "bd-district-naogaon",
+      "district_name": "Naogaon",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 41.587203574624866,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.132161,
+      "anchor_longitude": 89.52871,
+      "bamis_regions": [
+        "Khulna"
+      ],
+      "diagnostic_output_latitude": 23.0,
+      "diagnostic_output_longitude": 89.375,
+      "distance_km": 21.523225422788126,
+      "district_id": "bd-district-narail",
+      "district_name": "Narail",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 43.81012946385672,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.716371,
+      "anchor_longitude": 90.615613,
+      "bamis_regions": [
+        "Dhaka"
+      ],
+      "diagnostic_output_latitude": 23.5,
+      "diagnostic_output_longitude": 90.625,
+      "distance_km": 24.07839354394851,
+      "district_id": "bd-district-narayanganj",
+      "district_name": "Narayanganj",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 31.55259289871393,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 24.005767,
+      "anchor_longitude": 90.803624,
+      "bamis_regions": [
+        "Dhaka"
+      ],
+      "diagnostic_output_latitude": 24.0,
+      "diagnostic_output_longitude": 90.625,
+      "distance_km": 18.155860727562203,
+      "district_id": "bd-district-narsingdi",
+      "district_name": "Narsingdi",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 45.34715916165995,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 24.393465,
+      "anchor_longitude": 89.090786,
+      "bamis_regions": [
+        "Rajshahi"
+      ],
+      "diagnostic_output_latitude": 24.5,
+      "diagnostic_output_longitude": 89.375,
+      "distance_km": 31.113273273646453,
+      "district_id": "bd-district-natore",
+      "district_name": "Natore",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 36.47373581019097,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 24.886624,
+      "anchor_longitude": 90.788687,
+      "bamis_regions": [
+        "Mymensingh"
+      ],
+      "diagnostic_output_latitude": 25.0,
+      "diagnostic_output_longitude": 90.625,
+      "distance_km": 20.767703009108185,
+      "district_id": "bd-district-netrokona",
+      "district_name": "Netrokona",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 46.061521089695276,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 26.020295,
+      "anchor_longitude": 88.921578,
+      "bamis_regions": [
+        "Rangpur"
+      ],
+      "diagnostic_output_latitude": 26.0,
+      "diagnostic_output_longitude": 88.75,
+      "distance_km": 17.294145936248146,
+      "district_id": "bd-district-nilphamari",
+      "district_name": "Nilphamari",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 45.36788732139465,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 22.78775,
+      "anchor_longitude": 91.130445,
+      "bamis_regions": [
+        "Chattogram"
+      ],
+      "diagnostic_output_latitude": 23.0,
+      "diagnostic_output_longitude": 91.25,
+      "distance_km": 26.589406935290928,
+      "district_id": "bd-district-noakhali",
+      "district_name": "Noakhali",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 34.26807199192384,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 24.080528,
+      "anchor_longitude": 89.338787,
+      "bamis_regions": [
+        "Bogura"
+      ],
+      "diagnostic_output_latitude": 24.0,
+      "diagnostic_output_longitude": 89.375,
+      "distance_km": 9.680045284276071,
+      "district_id": "bd-district-pabna",
+      "district_name": "Pabna",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 46.78739956251594,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 26.320216,
+      "anchor_longitude": 88.546401,
+      "bamis_regions": [
+        "Dinajpur"
+      ],
+      "diagnostic_output_latitude": 26.5,
+      "diagnostic_output_longitude": 88.75,
+      "distance_km": 28.474142438682968,
+      "district_id": "bd-district-panchagarh",
+      "district_name": "Panchagarh",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 40.996662178065606,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 22.258001,
+      "anchor_longitude": 90.458959,
+      "bamis_regions": [
+        "Barishal"
+      ],
+      "diagnostic_output_latitude": 22.5,
+      "diagnostic_output_longitude": 90.625,
+      "distance_km": 31.86795139742079,
+      "district_id": "bd-district-patuakhali",
+      "district_name": "Patuakhali",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 33.399641150427925,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 22.514867,
+      "anchor_longitude": 89.995742,
+      "bamis_regions": [
+        "Barishal"
+      ],
+      "diagnostic_output_latitude": 22.5,
+      "diagnostic_output_longitude": 90.0,
+      "distance_km": 1.7100249926899818,
+      "district_id": "bd-district-pirojpur",
+      "district_name": "Pirojpur",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 53.94616970569518,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.735234,
+      "anchor_longitude": 89.575871,
+      "bamis_regions": [
+        "Faridpur"
+      ],
+      "diagnostic_output_latitude": 23.5,
+      "diagnostic_output_longitude": 89.375,
+      "distance_km": 33.211398142707566,
+      "district_id": "bd-district-rajbari",
+      "district_name": "Rajbari",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 35.83244488080339,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 24.413304,
+      "anchor_longitude": 88.59763,
+      "bamis_regions": [
+        "Rajshahi"
+      ],
+      "diagnostic_output_latitude": 24.5,
+      "diagnostic_output_longitude": 88.75,
+      "distance_km": 18.187613435822254,
+      "district_id": "bd-district-rajshahi",
+      "district_name": "Rajshahi",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 48.48582553192617,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 22.796093,
+      "anchor_longitude": 92.223285,
+      "bamis_regions": [
+        "Rangamati"
+      ],
+      "diagnostic_output_latitude": 23.0,
+      "diagnostic_output_longitude": 92.5,
+      "distance_km": 36.297451552494,
+      "district_id": "bd-district-rangamati",
+      "district_name": "Rangamati",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 42.27109162674624,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 25.632887,
+      "anchor_longitude": 89.262555,
+      "bamis_regions": [
+        "Rangpur"
+      ],
+      "diagnostic_output_latitude": 25.5,
+      "diagnostic_output_longitude": 89.375,
+      "distance_km": 18.589211885732546,
+      "district_id": "bd-district-rangpur",
+      "district_name": "Rangpur",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 42.344430835362694,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 22.474143,
+      "anchor_longitude": 89.138189,
+      "bamis_regions": [
+        "Khulna"
+      ],
+      "diagnostic_output_latitude": 22.5,
+      "diagnostic_output_longitude": 89.375,
+      "distance_km": 24.4993633579427,
+      "district_id": "bd-district-satkhira",
+      "district_name": "Satkhira",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 39.9862061532823,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 23.228675,
+      "anchor_longitude": 90.422379,
+      "bamis_regions": [
+        "Faridpur"
+      ],
+      "diagnostic_output_latitude": 23.0,
+      "diagnostic_output_longitude": 90.625,
+      "distance_km": 32.801692848498384,
+      "district_id": "bd-district-shariatpur",
+      "district_name": "Shariatpur",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 36.578877668168566,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 25.092218,
+      "anchor_longitude": 90.095171,
+      "bamis_regions": [
+        "Mymensingh"
+      ],
+      "diagnostic_output_latitude": 25.0,
+      "diagnostic_output_longitude": 90.0,
+      "distance_km": 14.03806917280998,
+      "district_id": "bd-district-sherpur",
+      "district_name": "Sherpur",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 46.341793206714016,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 24.398078,
+      "anchor_longitude": 89.52344,
+      "bamis_regions": [
+        "Bogura"
+      ],
+      "diagnostic_output_latitude": 24.5,
+      "diagnostic_output_longitude": 89.375,
+      "distance_km": 18.820576368627542,
+      "district_id": "bd-district-sirajganj",
+      "district_name": "Sirajganj",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 46.75460069003702,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 24.888034,
+      "anchor_longitude": 91.390654,
+      "bamis_regions": [
+        "Sylhet"
+      ],
+      "diagnostic_output_latitude": 25.0,
+      "diagnostic_output_longitude": 91.25,
+      "distance_km": 18.8708418120317,
+      "district_id": "bd-district-sunamganj",
+      "district_name": "Sunamganj",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 45.42709423452804,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 24.89001,
+      "anchor_longitude": 91.958525,
+      "bamis_regions": [
+        "Sylhet"
+      ],
+      "diagnostic_output_latitude": 25.0,
+      "diagnostic_output_longitude": 91.875,
+      "distance_km": 14.849150768308556,
+      "district_id": "bd-district-sylhet",
+      "district_name": "Sylhet",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 44.18049030927053,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 24.38102,
+      "anchor_longitude": 90.002082,
+      "bamis_regions": [
+        "Dhaka"
+      ],
+      "diagnostic_output_latitude": 24.5,
+      "diagnostic_output_longitude": 90.0,
+      "distance_km": 13.2316693400682,
+      "district_id": "bd-district-tangail",
+      "district_name": "Tangail",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 42.36807576976502,
+      "status": "user_adopted_representative_point_context"
+    },
+    {
+      "anchor_latitude": 25.935204,
+      "anchor_longitude": 88.31055,
+      "bamis_regions": [
+        "Dinajpur"
+      ],
+      "diagnostic_output_latitude": 26.0,
+      "diagnostic_output_longitude": 88.125,
+      "distance_km": 19.899412305595085,
+      "district_id": "bd-district-thakurgaon",
+      "district_name": "Thakurgaon",
+      "exact_distance_ties": 1,
+      "second_nearest_distance_km": 44.51827243991731,
+      "status": "user_adopted_representative_point_context"
+    }
+  ],
+  "earth_radius_km": 6371.0088,
+  "mapped_districts": 64,
+  "maximum_districts_sharing_output": 4,
+  "native_cell_ids_assigned": false,
+  "regional_raw_sha256": "f6e7f87c045323d9e22e168688c22ce77ac947d00e1e66c014d6da90b29235ab",
+  "registry_sha256": "0b31748796de714f73de135ee3e0ec77c2e44813985d790b44f2d62e18c62dfa",
+  "selected_output_locations": 42,
+  "shared_output_locations": 17,
+  "tie_break": "great-circle distance, returned latitude, returned longitude"
+}

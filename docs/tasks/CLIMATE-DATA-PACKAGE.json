@@ -1,0 +1,136 @@
+{
+  "id": "CLIMATE-DATA-PACKAGE",
+  "title": "Package and verify portable offline climate handoff",
+  "owner": "Saim",
+  "collaborators": [],
+  "phase": "INDEPENDENT-PREPARATION",
+  "status": "in_review",
+  "depends_on": [],
+  "updated_at": "2026-11-13T07:16:42Z",
+  "acceptance": [
+    {
+      "id": "a1",
+      "text": "Create a versioned ignored archive with minimum raw/prepared data, executable source snapshot, provenance, checksums, coverage and scientific/sharing limitations.",
+      "met": true,
+      "evidence": "Created ignored v1.0.0 archive: 88,023,118 bytes, SHA-256 4a0ba04c9c8beaa0a908e0b4d61cc23c6b90f87ad927bbe229405860eda6117b, 2,618 payload files plus manifest. It contains 100 raw responses/manifests, 2,387 prepared artifacts, nine source snapshots and minimal support/terms; records HEAD 5c8c858059440da58f00eb6d3c14daff588c68bc plus working source hashes, runtime, coverage, missingness and all 11 outside-polygon mappings. Disk-space preflight passed.",
+      "state": "done",
+      "blockers": []
+    },
+    {
+      "id": "a2",
+      "text": "Verify safe extraction and every payload checksum in a fresh directory, then validate and reproduce all derived products offline without hidden local dependencies.",
+      "met": true,
+      "evidence": "Safely extracted to /private/tmp/soil-climate-package-test.UeroHE/extracted and verified all 2,618 payload hashes. Isolated Python with OFFLINE=1 and socket audit hooks validated all 100 raw requests, registry and geometry roles. A separate root with no derived inputs regenerated all 2,387 derived files byte-for-byte; all 222 raw/source/input files and original extracted payload remained unchanged. No hidden project dependency was found.",
+      "state": "done",
+      "blockers": []
+    },
+    {
+      "id": "a3",
+      "text": "Document exact teammate setup, examples, fallback resume instructions, measured archive receipt and truthful Saim evidence; stop without uploading or publishing.",
+      "met": true,
+      "evidence": "Created teammate setup and terms guides with bootstrap/checksum verification, safe extraction, exact offline commands, regional/district loading examples, profile A/B file roles and separately intentional resume instructions. Updated climate handoff and small package receipt with measured checksums/results; examples passed, all 105 repository tests and six safety/offline tests passed, and 82 prior evidence hashes remain unchanged. No upload, scientific data change or publication occurred.",
+      "state": "done",
+      "blockers": []
+    }
+  ],
+  "checks": [
+    {
+      "command": "python3 -B -m unittest tests.test_climate_package -v",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. PASS safe extraction and 1 payload checksums: /var/folders/sh/lz94tbcs0cd193wgx9k6fstw0000gn/T/tmpyc93uawa/fresh/soil-to-stars-climate-bgd-v1.0.0\ntest_corrupt_payload_fails_manifest_verification (tests.test_climate_package.ClimatePackageTests) ... ok\ntest_manifest_totals_and_unsafe_paths_are_rejected (tests.test_climate_package.ClimatePackageTests) ... ok\ntest_network_is_rejected_before_connection_or_dns (tests.test_climate_package.ClimatePackageTests) ... ok\ntest_safe_extract_and_every_payload_checksum (tests.test_climate_package.ClimatePackageTests) ... ok\ntest_traversal_absolute_symlink_duplicate_and_unlisted_members_rejected (tests.test_climate_package.ClimatePackageTests) ... ok\ntest_wrong_archive_hash_and_existing_destination_are_refused (tests.test_climate_package.ClimatePackageTests) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.087s\n\nOK",
+      "run_at_utc": "2026-11-12T22:28:58Z"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tests -p 'test_*.py' -v",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. prompt_records_preserve_meaning_and_metadata (test_workflow.WorkflowTests) ... ok\ntest_member_logs_are_separate_and_pipe_safe (test_workflow.WorkflowTests) ... ok\ntest_outcome_limits_and_blank_fields_are_rejected_without_log_writes (test_workflow.WorkflowTests) ... ok\ntest_passing_check_does_not_automatically_accept_task (test_workflow.WorkflowTests) ... ok\ntest_pending_or_self_review_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_professional_docs_have_small_entrypoint_budgets (test_workflow.WorkflowTests) ... ok\ntest_prompt_amend_updates_outcome_without_extra_entry (test_workflow.WorkflowTests) ... ok\ntest_prompt_numbers_are_per_member_and_do_not_change_on_update (test_workflow.WorkflowTests) ... ok\ntest_public_numbers_use_next_available_maximum_and_scale_past_three_digits (test_workflow.WorkflowTests) ... ok\ntest_readonly_check_detects_stale_view (test_workflow.WorkflowTests) ... ok\ntest_real_git_ancestry_proof (test_workflow.WorkflowTests) ... ok\ntest_render_is_idempotent (test_workflow.WorkflowTests) ... ok\ntest_reopening_checklist_prerequisite_reopens_done_children (test_workflow.WorkflowTests) ... ok\ntest_start_blocked_task_does_not_modify_records (test_workflow.WorkflowTests) ... ok\ntest_unchecked_acceptance_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_unknown_dependency_rejected (test_workflow.WorkflowTests) ... ok\ntest_unmerged_commit_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_verify_accepts_explicit_project_subdirectory (test_workflow.WorkflowTests) ... ok\ntest_verify_executes_check_and_records_real_failure (test_workflow.WorkflowTests) ... ok\ntest_verify_refuses_directory_outside_project (test_workflow.WorkflowTests) ... ok\n\n----------------------------------------------------------------------\nRan 105 tests in 29.178s\n\nOK",
+      "run_at_utc": "2026-11-12T22:29:57Z"
+    },
+    {
+      "command": "python3 cache/climate_handoff/package_climate_data.py extract cache/climate_handoff/soil-to-stars-climate-bgd-v1.0.0.tar.gz --destination /private/tmp/soil-climate-package-test.UeroHE/extracted --sha256 4a0ba04c9c8beaa0a908e0b4d61cc23c6b90f87ad927bbe229405860eda6117b",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Safe extraction passed; all 2,618 payload files matched manifest checksums."
+    },
+    {
+      "command": "OFFLINE=1 python3 /private/tmp/soil-climate-package-test.UeroHE/extracted/soil-to-stars-climate-bgd-v1.0.0/src/acquire/package_climate_data.py validate --root /private/tmp/soil-climate-package-test.UeroHE/extracted/soil-to-stars-climate-bgd-v1.0.0 --report /private/tmp/soil-climate-package-test.UeroHE/validation.json",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Passed in isolated extracted tree: 2,618 file hashes, all 100 raw requests, deterministic registry and coordinate-role checks. Socket audit hook and isolated Python blocked external dependencies/network."
+    },
+    {
+      "command": "OFFLINE=1 python3 /private/tmp/soil-climate-package-test.UeroHE/extracted/soil-to-stars-climate-bgd-v1.0.0/src/acquire/package_climate_data.py reproduce --root /private/tmp/soil-climate-package-test.UeroHE/extracted/soil-to-stars-climate-bgd-v1.0.0 --destination /private/tmp/soil-climate-package-test.UeroHE/reproduced --report /private/tmp/soil-climate-package-test.UeroHE/reproduction.json",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Passed exact file-set and SHA-256 comparison for all 2,387 regenerated derived files, with no derived inputs copied; all 222 raw/source/input files and the extracted package remain unchanged."
+    },
+    {
+      "command": "python3 /private/tmp/soil-climate-package-test.UeroHE/extracted/soil-to-stars-climate-bgd-v1.0.0/src/acquire/package_climate_data.py examples --root /private/tmp/soil-climate-package-test.UeroHE/extracted/soil-to-stars-climate-bgd-v1.0.0",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Loaded one regional and one Chapainawabganj district-context daily record with units, raw artifact identities and distinct anchor/output coordinates."
+    },
+    {
+      "command": "git diff --check",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. ",
+      "run_at_utc": "2026-11-13T07:16:42Z"
+    }
+  ],
+  "blockers": [],
+  "issues": [],
+  "evidence": [],
+  "history": [
+    {
+      "at": "2026-11-12T22:25:22Z",
+      "from": "planned",
+      "to": "in_progress",
+      "note": "Saim explicitly authorized Step 3 packaging and isolated offline verification only; existing data and uncommitted work must remain unchanged."
+    },
+    {
+      "at": "2026-11-12T22:28:58Z",
+      "note": "Check passed: python3 -B -m unittest tests.test_climate_package -v"
+    },
+    {
+      "at": "2026-11-12T22:29:57Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p 'test_*.py' -v"
+    },
+    {
+      "at": "2026-11-13T07:16:03Z",
+      "note": "Checklist a1: done",
+      "evidence": "Created ignored v1.0.0 archive: 88,023,118 bytes, SHA-256 4a0ba04c9c8beaa0a908e0b4d61cc23c6b90f87ad927bbe229405860eda6117b, 2,618 payload files plus manifest. It contains 100 raw responses/manifests, 2,387 prepared artifacts, nine source snapshots and minimal support/terms; records HEAD 5c8c858059440da58f00eb6d3c14daff588c68bc plus working source hashes, runtime, coverage, missingness and all 11 outside-polygon mappings. Disk-space preflight passed."
+    },
+    {
+      "at": "2026-11-13T07:16:03Z",
+      "note": "Checklist a2: done",
+      "evidence": "Safely extracted to /private/tmp/soil-climate-package-test.UeroHE/extracted and verified all 2,618 payload hashes. Isolated Python with OFFLINE=1 and socket audit hooks validated all 100 raw requests, registry and geometry roles. A separate root with no derived inputs regenerated all 2,387 derived files byte-for-byte; all 222 raw/source/input files and original extracted payload remained unchanged. No hidden project dependency was found."
+    },
+    {
+      "at": "2026-11-13T07:16:03Z",
+      "note": "Checklist a3: done",
+      "evidence": "Created teammate setup and terms guides with bootstrap/checksum verification, safe extraction, exact offline commands, regional/district loading examples, profile A/B file roles and separately intentional resume instructions. Updated climate handoff and small package receipt with measured checksums/results; examples passed, all 105 repository tests and six safety/offline tests passed, and 82 prior evidence hashes remain unchanged. No upload, scientific data change or publication occurred."
+    },
+    {
+      "at": "2026-11-13T07:16:42Z",
+      "from": "in_progress",
+      "to": "in_review",
+      "note": "Local package creation and fresh-directory validation/reproduction passed. No data, mapping or frontend change and no upload/publication occurred."
+    },
+    {
+      "at": "2026-11-13T07:16:42Z",
+      "note": "Check passed: git diff --check"
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": null,
+  "issue": null,
+  "next_action": "Stop after Step 3. Teammates may review the local archive receipt and setup guide; external sharing, scientific review and publication are not implied.",
+  "handoff": "Local delivery: cache/climate_handoff/soil-to-stars-climate-bgd-v1.0.0.tar.gz plus standalone bootstrap, checksum sidecar and trusted receipt. Teammates use docs/data/CLIMATE_DATA_PACKAGE_GUIDE.md. Stop after Step 3; public-sharing clearance and scientific review are not implied."
+}

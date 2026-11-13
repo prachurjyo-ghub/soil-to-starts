@@ -1,13 +1,19 @@
 # NASA POWER Regional national-extent preflight — PRECTOTCORR 2001
 
-## Result and recommendation
+## Historical preflight result and current status
+
+The full Regional collection and representative-point context are now prepared
+locally; see [current method handoff](CLIMATE_REGIONAL_HANDOFF.md). The evidence
+below remains the bounded preflight record. In particular, output positions are
+not original district anchors, and outside-polygon outputs do not invalidate
+verified interior anchors. Independent scientific review remains pending.
 
 One annual national-area JSON request is operationally practical based on this
 bounded observation. Continue to propose one national area, one parameter and
 one calendar year per request, executed sequentially with checksum-aware
-resume. Do not start the 100-request historical plan until the remaining
-parameter-alignment and extraction decisions are separately reviewed and
-authorized.
+resume. Step 3D is now independently authorized by Saim; raw Regional
+acquisition does not require adoption of district extraction. Cross-parameter
+alignment is checked during preparation; district extraction remains separate.
 
 This preflight validates raw Regional coverage only. It does not generate
 district weather series, approve nearest-node sampling, choose a distance
@@ -175,7 +181,8 @@ Raw Regional coverage and district-derived coverage remain different products:
 - Raw Regional coverage: validated for national-area PRECTOTCORR in 2001.
 - District-derived coverage: not produced and still unresolved.
 
-Before any full collection, separately review cross-parameter national
-coordinate/date alignment and choose an extraction method. This preflight does
+For subsequent processing, verify cross-parameter national coordinate/date
+alignment before joining observations. Choose and review an extraction method
+before publishing district-derived series, independently of raw collection. This preflight does
 not approve nearest-node extraction. No independent review or scientific
 acceptance is claimed, and G0 was not changed.

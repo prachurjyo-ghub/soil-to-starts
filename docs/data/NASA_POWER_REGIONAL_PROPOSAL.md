@@ -1,5 +1,14 @@
 # NASA POWER Daily Regional acquisition proposal
 
+Current Step 3D status: Saim independently authorized the full Regional collection
+and subsequently adopted representative-point context. See
+[current results and handoff](CLIMATE_REGIONAL_HANDOFF.md). The Step 3B evidence
+below is historical; its district-method review was not a raw-acquisition gate.
+Saim subsequently adopted representative-point context; independent scientific
+review remains pending. Earlier adoption/review wording below does not mean the
+method is still unselected. The current handoff distinguishes original anchors
+from outside-polygon API output positions.
+
 ## Recommendation
 
 The Daily Regional API is a technically suitable acquisition alternative. A
@@ -21,7 +30,7 @@ The blocked Point API finding in
 [NASA_POWER_REDUNDANCY_REVIEW](NASA_POWER_REDUNDANCY_REVIEW.md) remains valid.
 Its execution gate was not changed or bypassed.
 
-## Current official and observed contract
+## Historical Step 3B official and observed contract
 
 Official sources were accessed on 13 November 2026:
 
@@ -189,11 +198,13 @@ python3 src/acquire/download_nasa_power_regional.py --check-config --plan smoke 
 Resume validates the request fingerprint, raw byte count, SHA-256 and response
 structure before accepting a cached response. Corrupt evidence is quarantined;
 partial and API-error bodies are preserved. `OFFLINE=1` blocks live execution.
-The module intentionally provides no full-execution flag in Step 3B.
+Step 3B originally provided no full-execution flag. Independently authorized
+Step 3D adds `--plan full --execute-full`; district extraction is not a raw
+Regional acquisition prerequisite.
 
-## Remaining blockers
+## Historical Step 3B review questions
 
-Before full historical acquisition:
+Before publishing district-derived series (separate from authorized raw acquisition):
 
 1. independently review and explicitly adopt or reject nearest-output-node
    extraction as a change to the district sampling contract;
