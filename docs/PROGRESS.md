@@ -558,7 +558,7 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-31T22:42:31Z`
 
 ### CROP-EVIDENCE-PREP — Normalize preserved multi-region crop evidence for review
 
-Owner: **Maruf** · State: `in_review` · Updated UTC: `2026-11-13T09:13:58Z`
+Owner: **Maruf** · State: `in_review` · Updated UTC: `2026-11-13T09:27:29Z`
 
 **Why:** Independent evidence preparation across the existing collection, without activating additional executable coverage or bypassing G0/G1B.
 
@@ -596,7 +596,7 @@ Owner: **Maruf** · State: `in_review` · Updated UTC: `2026-11-13T09:13:58Z`
 
 ### CROP-LINEAGE-REVIEW — Resolve preserved calendar-entry import lineage
 
-Owner: **Maruf** · State: `in_review` · Updated UTC: `2026-11-13T09:24:18Z`
+Owner: **Maruf** · State: `in_review` · Updated UTC: `2026-11-13T09:27:29Z`
 
 **Why:** Independent inspection of preserved local extraction lineage; this does not require or establish accepted executable rules, G0 agreement or a passing unrelated climate checkout.
 
@@ -619,7 +619,7 @@ Owner: **Maruf** · State: `in_review` · Updated UTC: `2026-11-13T09:24:18Z`
 
 ### CROP-SOURCE-SEMANTICS — Audit source calendar semantics and definition gaps
 
-Owner: **Maruf** · State: `in_review` · Updated UTC: `2026-11-13T09:25:10Z`
+Owner: **Maruf** · State: `in_review` · Updated UTC: `2026-11-13T09:27:29Z`
 
 **Why:** Independent source-semantics preparation from the preserved collection, without substituting regions or approving executable rules. Human source/agronomic review remains separate.
 

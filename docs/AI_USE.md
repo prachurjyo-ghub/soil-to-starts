@@ -1234,4 +1234,36 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Actual outcome:** Audited all 318 extracted documents and 13 Lentil regions; original PDFs confirmed the same month-label gap in four regions, with no corrections inferred. Preserved 320 inactive temporal-wording leads and bounded official-source checks. All 118 Python tests and both byte-identical rebuilds passed; independent review and scientific definitions remain pending.
 
 **Task / source:** CROP-SOURCE-SEMANTICS; Current instruction: go ahead with source-evidence review
+
+## Maruf — Prompt 005
+
+<a id="maruf-005"></a>
+<a id="p-56f4c3c58221"></a>
+<!-- record-id: P-56f4c3c58221 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T09:27:28Z -->
+
+**Member:** maruf
+
+**Tool:** Codex
+
+**Type:** push
+
+**Refined implementation prompt (AI-written):** Push the crop-evidence preparation branch to origin and record the actual remote delivery.
+
+**Purpose / AI contribution:** Publish the authorized branch with a normal non-force Git push and preserve its delivery evidence without advancing review or science gates.
+
+**Human contribution:** Maruf explicitly requested the push. No independent source approval, human review or merge was supplied.
+
+**Changed files:** docs/AI_USE.md; docs/tasks/CROP-EVIDENCE-PREP.json; docs/tasks/CROP-LINEAGE-REVIEW.json; docs/tasks/CROP-SOURCE-SEMANTICS.json; docs/PROGRESS.md; README.md
+
+**Actual outcome:** Git successfully created origin/maruf/crop-evidence-prep at source checkpoint 4c3a0f4 and configured upstream tracking. Independent review remains pending; the unrelated untracked prototype/app/api directory was not included.
+
+**Review / limitations:** Push is delivery only: no pull request, merge, scientific activation or agronomic approval is claimed.
+
+**Next action / owner:** Maruf/Fardin independently review the evidence and lineage; Maruf/Saim resolve the remaining source semantics and rights.
+
+**Task / source:** CROP-SOURCE-SEMANTICS; Current explicit instruction: push it now
 <!-- workflow:ai-records:end -->

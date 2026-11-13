@@ -6,7 +6,7 @@
   "phase": "G1",
   "status": "in_review",
   "depends_on": [],
-  "updated_at": "2026-11-13T09:13:58Z",
+  "updated_at": "2026-11-13T09:27:29Z",
   "acceptance": [
     {
       "id": "a1",
@@ -121,7 +121,8 @@
   "issues": [],
   "evidence": [
     "CROP-LINEAGE-REVIEW continuation on maruf/crop-evidence-prep resolved 221 initially ambiguous imported rows using original stage geometry; alternatives/prior IDs retained. Original climate checksum blocker remains open.",
-    "Local branch checkpoint 5ee0936 contains the evidence package and source-stage lineage work. No push, independent approval, main merge or executable scientific activation is claimed."
+    "Local branch checkpoint 5ee0936 contains the evidence package and source-stage lineage work. No push, independent approval, main merge or executable scientific activation is claimed.",
+    "Authorized non-force push succeeded: origin/maruf/crop-evidence-prep contains source checkpoint 4c3a0f4c6474efe3517f9f770045ff14f37f064e. Upstream tracking configured. Delivery does not establish independent review, main merge, rights approval or scientific validity."
   ],
   "history": [
     {
@@ -204,6 +205,10 @@
       "from": "in_progress",
       "to": "in_review",
       "note": "Preparation checks and acceptance items are satisfied locally. Independent human review and main-branch integration remain pending; no source-rights approval or scientific activation is claimed."
+    },
+    {
+      "at": "2026-11-13T09:27:29Z",
+      "note": "Authorized non-force push succeeded: origin/maruf/crop-evidence-prep contains source checkpoint 4c3a0f4c6474efe3517f9f770045ff14f37f064e. Upstream tracking configured. Delivery does not establish independent review, main merge, rights approval or scientific validity."
     }
   ],
   "review": {

@@ -6,7 +6,7 @@
   "phase": "G1",
   "status": "in_review",
   "depends_on": [],
-  "updated_at": "2026-11-13T09:25:10Z",
+  "updated_at": "2026-11-13T09:27:29Z",
   "acceptance": [
     {
       "id": "a1",
@@ -85,7 +85,9 @@
   ],
   "blockers": [],
   "issues": [],
-  "evidence": [],
+  "evidence": [
+    "Authorized non-force push succeeded: origin/maruf/crop-evidence-prep contains source checkpoint 4c3a0f4c6474efe3517f9f770045ff14f37f064e. Upstream tracking configured. Delivery does not establish independent review, main merge, rights approval or scientific validity."
+  ],
   "history": [
     {
       "at": "2026-11-13T09:19:13Z",
@@ -129,6 +131,10 @@
       "from": "in_progress",
       "to": "in_review",
       "note": "Local audit implementation and acceptance checks passed; independent human review remains pending. Source-specific definitions, authoritative calendar corrections and reuse rights remain unresolved and no scientific rule was activated."
+    },
+    {
+      "at": "2026-11-13T09:27:29Z",
+      "note": "Authorized non-force push succeeded: origin/maruf/crop-evidence-prep contains source checkpoint 4c3a0f4c6474efe3517f9f770045ff14f37f064e. Upstream tracking configured. Delivery does not establish independent review, main merge, rights approval or scientific validity."
     }
   ],
   "review": {
