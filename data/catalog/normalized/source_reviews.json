@@ -1,0 +1,39 @@
+[
+  {
+    "review_id": "gourd-chattogram-26957",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Chattogram/26957.pdf",
+    "pages": [
+      1,
+      4
+    ],
+    "method": "Assistant inspection of original local PDF text and rendered page 4 on 2026-11-13; no independent human approval",
+    "finding": "Page 1 has a Rabi title/header and duration 180-190 days. Page 4 has a Kharif title, a Rabi table header and duration 110-120 days. This is a printed title/header season conflict; the existing CSV classifies both as Rabi.",
+    "disposition": "Preserve original CSV and both source-table identities. Do not relabel page 4 as an approved Kharif calendar or choose a duration until reviewed.",
+    "next_owner": "Maruf: request BAMIS clarification or find an agreeing publication; then record an explicit correction"
+  },
+  {
+    "review_id": "pointed-gourd-mymensingh-27400",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Mymensingh/27400.pdf",
+    "pages": [
+      1,
+      2
+    ],
+    "method": "Assistant inspection of both original local PDF pages as text and rendered images on 2026-11-13; no independent human approval",
+    "finding": "Both pages print Kharif and duration 120-150 days. Page 1 spans weeks 5-25; page 2 spans 23-39, restarting the seedling stage. Their overlap represents separate printed calendar spans, not duplicate extraction rows.",
+    "disposition": "Keep separate source calendars and the overlap. Whether these are separate planting cycles or variants is unresolved; no year/cycle offsets assigned.",
+    "next_owner": "Maruf: establish cycle applicability and duration origin/end; do not join the spans into one chronology"
+  },
+  {
+    "review_id": "banana-dhaka-25595",
+    "source_pdf": "BAMIS_All_Crops/Banana/Dhaka/25595.pdf",
+    "pages": [
+      1
+    ],
+    "source_url": "https://www.bamis.gov.bd/res/calendars/2023/01/12/25595.pdf",
+    "listing_url": "https://www.bamis.gov.bd/en/calendar/1/69/",
+    "method": "Assistant inspected the original local rendered PDF and the published PDF text on 2026-11-13; listing checked through web search; no independent human approval",
+    "finding": "The title prints Banana while the calendar header prints Papaya. The conflict is visible in the original PDF. The listing has seven regions; the retained CSV has six banana regions.",
+    "disposition": "Retain the excluded document in the snapshot and quarantine. No OCR-error conclusion or Dhaka-unsuitability claim.",
+    "next_owner": "Maruf: seek an authoritative corrected calendar before using the rows"
+  }
+]

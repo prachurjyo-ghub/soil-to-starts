@@ -1118,4 +1118,64 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Next action / owner:** Commit the verified source/evidence changes, push main2 and record the actual result.
 
 **Task / source:** CLIMATE-DATA-PACKAGE; Saim explicitly requested pushing all completed work to main2
+
+## Maruf — Prompt 001
+
+<a id="maruf-001"></a>
+<a id="p-00cd4692c47c"></a>
+<!-- record-id: P-00cd4692c47c -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T08:55:21Z -->
+
+**Member:** maruf
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Prepare a reproducible multi-region crop-evidence package that preserves source records, corrections, unresolved calendars and inactive agronomic evidence for climate compatibility review.
+
+**Purpose / AI contribution:** Normalize the existing collection with source lineage, reproducible scripts, QA and a candidate-rule compatibility matrix.
+
+**Human contribution:** Maruf supplied the collection scope and evidence-handling requirements; no human source approval is inferred.
+
+**Changed files:** scripts/; data/catalog/; tests/test_crop_evidence.py; docs/tasks/CROP-EVIDENCE-PREP.json; docs/AI_USE.md; docs/PROGRESS.md; README.md
+
+**Actual outcome:** Preserved 7,834 rows and all 318 extracted sources with 106 reproducible month corrections, explicit calendar ambiguities and 17 inactive compatibility rows. Seven evidence tests and both rebuilds passed; the full suite ran 93 tests with 14 existing climate checksum errors, so review completion remains blocked.
+
+**Review / limitations:** No agronomic activation, API contract change, source-rights approval, commit or push. Scientific period/statistic/cycle definitions remain unresolved.
+
+**Next action / owner:** Maruf reviews source semantics and rights; Saim resolves climate checkout integrity; Fardin reviews research-schema mapping.
+
+**Task / source:** CROP-EVIDENCE-PREP; Attached crop/agronomy evidence request, 13 November 2026
+
+## Maruf — Prompt 002
+
+<a id="maruf-002"></a>
+<a id="p-66d21a1ed020"></a>
+<!-- record-id: P-66d21a1ed020 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T09:02:44Z -->
+
+**Member:** maruf
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Keep the evidence work on a local branch and proceed with source-supported calendar-entry lineage review.
+
+**Purpose / AI contribution:** Create local branch maruf/crop-evidence-prep and replay original extraction-stage geometry to resolve ambiguous numeric column matches while preserving alternatives and prior IDs.
+
+**Human contribution:** Maruf requested local branch tracking and continuation to the next step; no source approval or scientific validation was supplied.
+
+**Changed files:** scripts/build_crop_evidence.py; scripts/crop_evidence_lineage.py; tests/test_crop_evidence.py; data/catalog/normalized/; data/catalog/EVIDENCE_PACKAGE.md; data/catalog/EVIDENCE_DICTIONARY.md; docs/tasks/CROP-LINEAGE-REVIEW.json; docs/tasks/CROP-EVIDENCE-PREP.json; docs/AI_USE.md; docs/PROGRESS.md; README.md
+
+**Actual outcome:** Created local branch maruf/crop-evidence-prep and resolved all 221 initial column ambiguities by replaying original stage geometry, preserving alternatives and prior IDs. Nine evidence tests and byte-identical rebuild passed; independent review and the separate climate checkout blocker remain pending.
+
+**Task / source:** CROP-LINEAGE-REVIEW; Current instruction: keep track in local branch and move to the next step
 <!-- workflow:ai-records:end -->

@@ -1,0 +1,269 @@
+[
+  {
+    "crop_id": "crop-8ebd142a0358d050bde8",
+    "original_label": "Banana",
+    "folder_aliases": [
+      "Banana"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-4aa869540c6a2df5cce1",
+    "original_label": "Bottle Gourd",
+    "folder_aliases": [
+      "Gourd"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-e98d84f0a8362e3bac8d",
+    "original_label": "Brinjal",
+    "folder_aliases": [
+      "Brinjal"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-0cc224e30c0591f7c0fd",
+    "original_label": "Chilli",
+    "folder_aliases": [
+      "Pepper"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-cf24bedd9891d3283e76",
+    "original_label": "Cotton",
+    "folder_aliases": [
+      "Cotton"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-0182400d6c5c4c7eec40",
+    "original_label": "Cucumber",
+    "folder_aliases": [
+      "Cucumber"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-249d2f29d78377e6aaab",
+    "original_label": "Garlic",
+    "folder_aliases": [
+      "Garlic"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-c65b4ea1a90c7372f034",
+    "original_label": "Groundnut",
+    "folder_aliases": [
+      "Ground nut (Robi)",
+      "Groundnut (Kharif - 1)"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-694f1461b2e3f118b2b3",
+    "original_label": "Guava",
+    "folder_aliases": [
+      "Guava"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-12eac1d225c410065ba2",
+    "original_label": "Jackfruit",
+    "folder_aliases": [
+      "Jackfruit"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-5c8d745e13bd27690f3e",
+    "original_label": "Jujube",
+    "folder_aliases": [
+      "Jujube"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-2122c94269cb2a589397",
+    "original_label": "Jute",
+    "folder_aliases": [
+      "Jute"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-7fefa18be3ea791e074e",
+    "original_label": "Lentil",
+    "folder_aliases": [
+      "Lentil"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-cad7196be19f30f5539c",
+    "original_label": "Litchi",
+    "folder_aliases": [
+      "Litchi"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-088343e4a2f17021a95b",
+    "original_label": "Maize",
+    "folder_aliases": [
+      "Maize (kharif-1)",
+      "Mazie (Rabi)"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-98e3d7294c814aad5500",
+    "original_label": "Mango",
+    "folder_aliases": [
+      "Mango"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-8e0c1c0dd0a07637f5ef",
+    "original_label": "Mungbean",
+    "folder_aliases": [
+      "Green Gram (Kharif 1)",
+      "Green Gram (Robi)"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-50aee317fbf797082a9c",
+    "original_label": "Mustard",
+    "folder_aliases": [
+      "Mustard"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-2e40a16113a78fcaaeec",
+    "original_label": "Onion",
+    "folder_aliases": [
+      "Onion"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-ac0d8495d2b24f32adfa",
+    "original_label": "Papaya",
+    "folder_aliases": [
+      "Papaya"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-85711c75e5d0e35cafa8",
+    "original_label": "Pineapple",
+    "folder_aliases": [
+      "Pineapple"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-71d7bbbc5e56097f190e",
+    "original_label": "Pointed Gourd",
+    "folder_aliases": [
+      "Gourd",
+      "Pointed Gourd"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-b6f316b3a6e9ce2a80b6",
+    "original_label": "Potato",
+    "folder_aliases": [
+      "Potato"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-e04b5dc3b63e44214d72",
+    "original_label": "Pumpkin",
+    "folder_aliases": [
+      "Pumpkin"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-fc75ce67f8962f962cdf",
+    "original_label": "Rice",
+    "folder_aliases": [
+      "Rice Aman",
+      "Rice Aus",
+      "Rice Boro"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-f508feca12c4803a592a",
+    "original_label": "Soybean",
+    "folder_aliases": [
+      "Soybean"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-acc0bbd1e292c7eafb6d",
+    "original_label": "Sugarcane",
+    "folder_aliases": [
+      "Sugarcane"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-17cb10aa8c765c077fbe",
+    "original_label": "Tomato",
+    "folder_aliases": [
+      "Tomato"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  },
+  {
+    "crop_id": "crop-f1681062f7a984348554",
+    "original_label": "Wheat",
+    "folder_aliases": [
+      "Wheat"
+    ],
+    "species": null,
+    "species_status": "unreviewed; see separate existing taxonomy candidates"
+  }
+]

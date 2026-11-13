@@ -1,0 +1,187 @@
+{
+  "id": "CROP-EVIDENCE-PREP",
+  "title": "Normalize preserved multi-region crop evidence for review",
+  "owner": "Maruf",
+  "collaborators": [],
+  "phase": "G1",
+  "status": "blocked",
+  "depends_on": [],
+  "updated_at": "2026-11-13T09:03:15Z",
+  "acceptance": [
+    {
+      "id": "a1",
+      "text": "Preserve source artifacts and existing corrections with reproducible flat import.",
+      "owner": "Maruf",
+      "state": "done",
+      "met": true,
+      "evidence": "Imported all 318 extracted document records after checking original PDF hashes; recorded 106 original/corrected month cells; isolated flat rebuild reproduced every repository CSV cell.",
+      "how": "Prepare inactive evidence only; no contract change or scientific activation.",
+      "files": [
+        "scripts/import_crop_evidence.py",
+        "scripts/build_planning_dataset.py",
+        "data/catalog/evidence_inputs/"
+      ],
+      "verification": "Preserve source artifacts and existing corrections with reproducible flat import.",
+      "depends_on": [],
+      "blockers": []
+    },
+    {
+      "id": "a2",
+      "text": "Build inactive multi-region calendar, entry, coverage and quarantine relationships.",
+      "owner": "Maruf",
+      "state": "done",
+      "met": true,
+      "evidence": "Generated 7,834 preserved analytical entries, 8,191 physical source columns, 366 retained source-table calendars and all 124 repeated-key groups; explicit unavailable coverage and upstream quarantine preserved.",
+      "how": "Prepare inactive evidence only; no contract change or scientific activation.",
+      "files": [
+        "scripts/build_crop_evidence.py",
+        "data/catalog/normalized/"
+      ],
+      "verification": "Build inactive multi-region calendar, entry, coverage and quarantine relationships.",
+      "depends_on": [
+        "a1"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "a3",
+      "text": "Document field semantics, candidate compatibility, source investigations and unresolved handoff decisions.",
+      "owner": "Maruf",
+      "state": "done",
+      "met": true,
+      "evidence": "EVIDENCE_PACKAGE.md and EVIDENCE_DICTIONARY.md describe all output relationships, definitions and unresolved decisions; 17 inactive candidate compatibility rows and three original-source investigations included.",
+      "how": "Prepare inactive evidence only; no contract change or scientific activation.",
+      "files": [
+        "data/catalog/EVIDENCE_PACKAGE.md",
+        "data/catalog/EVIDENCE_DICTIONARY.md"
+      ],
+      "verification": "Document field semantics, candidate compatibility, source investigations and unresolved handoff decisions.",
+      "depends_on": [
+        "a2"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "a4",
+      "text": "Verify preservation, relationship failures and deterministic rebuild; hand off for independent review.",
+      "owner": "Maruf",
+      "state": "blocked",
+      "met": false,
+      "evidence": "Seven focused evidence tests, normalized byte-identical rebuild and flat all-cell rebuild passed. Full configured suite ran 93 tests with 14 climate-registry checksum errors; HEAD bytes match the manifest and checkout differs only in line endings.",
+      "how": "Prepare inactive evidence only; no contract change or scientific activation.",
+      "files": [
+        "tests/test_crop_evidence.py",
+        "docs/tasks/CROP-EVIDENCE-PREP.json"
+      ],
+      "verification": "Verify preservation, relationship failures and deterministic rebuild; hand off for independent review.",
+      "depends_on": [
+        "a3"
+      ],
+      "blockers": [
+        "Saim/integration must resolve the pre-existing climate registry checkout byte mismatch before full-suite verification can pass."
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "command": "'C:\\Users\\BBB#12\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' -B -m unittest discover -s tests -p 'test_*.py' -v",
+      "cwd": ".",
+      "result": "failed",
+      "evidence": "Exit 1. stry checksum does not match its manifest\n\n======================================================================\nERROR: test_provisional_cross_year_selection_excludes_partial (test_nasa_power_regional_prepare.PreparationTests.test_provisional_cross_year_selection_excludes_partial)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\Workplace\\Nasa Space Apps\\Website\\soil-to-starts\\tests\\test_nasa_power_regional_prepare.py\", line 17, in setUp\n    self.config = p.r.build_config()\n                  ^^^^^^^^^^^^^^^^^^\n  File \"D:\\Workplace\\Nasa Space Apps\\Website\\soil-to-starts\\src\\acquire\\download_nasa_power_regional.py\", line 78, in build_config\n    raise ConfigurationError(\"Registry checksum does not match its manifest\")\ndownload_nasa_power.ConfigurationError: Registry checksum does not match its manifest\n\n======================================================================\nERROR: test_wide_join_requires_identical_keys (test_nasa_power_regional_prepare.PreparationTests.test_wide_join_requires_identical_keys)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\Workplace\\Nasa Space Apps\\Website\\soil-to-starts\\tests\\test_nasa_power_regional_prepare.py\", line 17, in setUp\n    self.config = p.r.build_config()\n                  ^^^^^^^^^^^^^^^^^^\n  File \"D:\\Workplace\\Nasa Space Apps\\Website\\soil-to-starts\\src\\acquire\\download_nasa_power_regional.py\", line 78, in build_config\n    raise ConfigurationError(\"Registry checksum does not match its manifest\")\ndownload_nasa_power.ConfigurationError: Registry checksum does not match its manifest\n\n----------------------------------------------------------------------\nRan 93 tests in 3.393s\n\nFAILED (errors=14)",
+      "run_at_utc": "2026-11-13T08:53:39Z"
+    },
+    {
+      "command": "'C:\\Users\\BBB#12\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' scripts/build_crop_evidence.py --check",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. PASS: 7834 preserved entries, 366 source-table calendars, 124 repeated-week groups; zero active rules\nPASS: byte-identical normalized rebuild",
+      "run_at_utc": "2026-11-13T08:54:31Z"
+    },
+    {
+      "command": "'C:\\Users\\BBB#12\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' scripts/build_planning_dataset.py --output cache/crop-flat-rebuild",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. PASS: rebuilt 7834 rows with recorded month corrections; all cells match assets",
+      "run_at_utc": "2026-11-13T08:54:44Z"
+    },
+    {
+      "command": "'C:\\Users\\BBB#12\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' -B -m unittest discover -s tests -p test_crop_evidence.py -v",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. test_ambiguous_columns_never_get_an_invented_order (test_crop_evidence.CropEvidenceTests.test_ambiguous_columns_never_get_an_invented_order) ... ok\ntest_cross_year_keeps_physical_column_order_without_invented_offsets (test_crop_evidence.CropEvidenceTests.test_cross_year_keeps_physical_column_order_without_invented_offsets) ... ok\ntest_every_input_row_and_null_preserved (test_crop_evidence.CropEvidenceTests.test_every_input_row_and_null_preserved) ... ok\ntest_invalid_numeric_and_geographic_inputs_fail (test_crop_evidence.CropEvidenceTests.test_invalid_numeric_and_geographic_inputs_fail) ... ok\ntest_repetitions_and_excluded_banana_retained (test_crop_evidence.CropEvidenceTests.test_repetitions_and_excluded_banana_retained) ... ok\ntest_rules_stay_inactive_and_compatibility_complete (test_crop_evidence.CropEvidenceTests.test_rules_stay_inactive_and_compatibility_complete) ... ok\ntest_source_relationships_and_physical_entry_identity (test_crop_evidence.CropEvidenceTests.test_source_relationships_and_physical_entry_identity) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.430s\n\nOK",
+      "run_at_utc": "2026-11-13T08:55:59Z"
+    }
+  ],
+  "blockers": [
+    "Full configured suite has 14 errors at existing climate registry checksum gates; checkout CRLF/LF bytes differ from the manifest. Climate files remain unchanged."
+  ],
+  "issues": [],
+  "evidence": [
+    "CROP-LINEAGE-REVIEW continuation on maruf/crop-evidence-prep resolved 221 initially ambiguous imported rows using original stage geometry; alternatives/prior IDs retained. Original climate checksum blocker remains open."
+  ],
+  "history": [
+    {
+      "at": "2026-11-13T08:44:54Z",
+      "from": "planned",
+      "to": "in_progress",
+      "note": "Build and validate inactive normalized package; preserve ambiguity and review requirements."
+    },
+    {
+      "at": "2026-11-13T08:53:39Z",
+      "note": "Check failed: 'C:\\Users\\BBB#12\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' -B -m unittest discover -s tests -p 'test_*.py' -v"
+    },
+    {
+      "at": "2026-11-13T08:53:39Z",
+      "note": "Four bounded preparation steps recorded. Dependencies are empty because preservation/QA of existing evidence does not require an accepted executable API schema; G0/G1B/FUT-COVERAGE remain unchanged."
+    },
+    {
+      "at": "2026-11-13T08:54:31Z",
+      "note": "Check passed: 'C:\\Users\\BBB#12\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' scripts/build_crop_evidence.py --check"
+    },
+    {
+      "at": "2026-11-13T08:54:44Z",
+      "note": "Check passed: 'C:\\Users\\BBB#12\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' scripts/build_planning_dataset.py --output cache/crop-flat-rebuild"
+    },
+    {
+      "at": "2026-11-13T08:55:59Z",
+      "note": "Check passed: 'C:\\Users\\BBB#12\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' -B -m unittest discover -s tests -p test_crop_evidence.py -v"
+    },
+    {
+      "at": "2026-11-13T08:55:59Z",
+      "note": "Checklist a1: done",
+      "evidence": "Imported all 318 extracted document records after checking original PDF hashes; recorded 106 original/corrected month cells; isolated flat rebuild reproduced every repository CSV cell."
+    },
+    {
+      "at": "2026-11-13T08:56:00Z",
+      "note": "Checklist a2: done",
+      "evidence": "Generated 7,834 preserved analytical entries, 8,191 physical source columns, 366 retained source-table calendars and all 124 repeated-key groups; explicit unavailable coverage and upstream quarantine preserved."
+    },
+    {
+      "at": "2026-11-13T08:56:00Z",
+      "note": "Checklist a3: done",
+      "evidence": "EVIDENCE_PACKAGE.md and EVIDENCE_DICTIONARY.md describe all output relationships, definitions and unresolved decisions; 17 inactive candidate compatibility rows and three original-source investigations included."
+    },
+    {
+      "at": "2026-11-13T08:56:23Z",
+      "note": "Checklist a4: blocked",
+      "evidence": "Seven focused evidence tests, normalized byte-identical rebuild and flat all-cell rebuild passed. Full configured suite ran 93 tests with 14 climate-registry checksum errors; HEAD bytes match the manifest and checkout differs only in line endings."
+    },
+    {
+      "at": "2026-11-13T08:56:23Z",
+      "from": "in_progress",
+      "to": "blocked",
+      "note": "Saim/integration resolves byte-preserving climate checkout; rerun the full suite, then obtain independent review of the inactive evidence preparation. Maruf reviews source definitions, conflicts and rights; Fardin reviews research-schema mapping."
+    }
+  ],
+  "review": {
+    "by": null,
+    "evidence": ""
+  },
+  "merge_ref": null,
+  "branch": "maruf/crop-evidence-prep",
+  "issue": null,
+  "next_action": "Saim/integration resolves byte-preserving climate checkout; rerun the full suite, then obtain independent review of the inactive evidence preparation. Maruf reviews source definitions, conflicts and rights; Fardin reviews research-schema mapping.",
+  "handoff": "Maruf reviews source semantics/rights and unresolved source cycles; Saim reviews measurement compatibility; Fardin reviews research-schema mapping after contract agreement.",
+  "purpose": "Independent evidence preparation across the existing collection, without activating additional executable coverage or bypassing G0/G1B.",
+  "scope": "mvp"
+}

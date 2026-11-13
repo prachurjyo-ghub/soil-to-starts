@@ -1,0 +1,514 @@
+[
+  {
+    "bamis_region": "Barishal",
+    "district": "Barguna",
+    "administrative_division": "Barishal",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-c54c0fa3219b541585bc"
+  },
+  {
+    "bamis_region": "Barishal",
+    "district": "Barishal",
+    "administrative_division": "Barishal",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-c54c0fa3219b541585bc"
+  },
+  {
+    "bamis_region": "Barishal",
+    "district": "Bhola",
+    "administrative_division": "Barishal",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-c54c0fa3219b541585bc"
+  },
+  {
+    "bamis_region": "Barishal",
+    "district": "Jhalakathi",
+    "administrative_division": "Barishal",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-c54c0fa3219b541585bc"
+  },
+  {
+    "bamis_region": "Barishal",
+    "district": "Patuakhali",
+    "administrative_division": "Barishal",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-c54c0fa3219b541585bc"
+  },
+  {
+    "bamis_region": "Barishal",
+    "district": "Pirojpur",
+    "administrative_division": "Barishal",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-c54c0fa3219b541585bc"
+  },
+  {
+    "bamis_region": "Bogura",
+    "district": "Bogura",
+    "administrative_division": "Rajshahi",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-5c2451eb9b322c1965e8"
+  },
+  {
+    "bamis_region": "Bogura",
+    "district": "Joypurhat",
+    "administrative_division": "Rajshahi",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-5c2451eb9b322c1965e8"
+  },
+  {
+    "bamis_region": "Bogura",
+    "district": "Pabna",
+    "administrative_division": "Rajshahi",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-5c2451eb9b322c1965e8"
+  },
+  {
+    "bamis_region": "Bogura",
+    "district": "Sirajganj",
+    "administrative_division": "Rajshahi",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-5c2451eb9b322c1965e8"
+  },
+  {
+    "bamis_region": "Chattogram",
+    "district": "Chattogram",
+    "administrative_division": "Chattogram",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-6ea3e0d639bcb4308340"
+  },
+  {
+    "bamis_region": "Chattogram",
+    "district": "Cox's Bazar",
+    "administrative_division": "Chattogram",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-6ea3e0d639bcb4308340"
+  },
+  {
+    "bamis_region": "Chattogram",
+    "district": "Feni",
+    "administrative_division": "Chattogram",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-6ea3e0d639bcb4308340"
+  },
+  {
+    "bamis_region": "Chattogram",
+    "district": "Lakshmipur",
+    "administrative_division": "Chattogram",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-6ea3e0d639bcb4308340"
+  },
+  {
+    "bamis_region": "Chattogram",
+    "district": "Noakhali",
+    "administrative_division": "Chattogram",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-6ea3e0d639bcb4308340"
+  },
+  {
+    "bamis_region": "Cumilla",
+    "district": "Brahmanbaria",
+    "administrative_division": "Chattogram",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-eb882e64f63abb365bd0"
+  },
+  {
+    "bamis_region": "Cumilla",
+    "district": "Chandpur",
+    "administrative_division": "Chattogram",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-eb882e64f63abb365bd0"
+  },
+  {
+    "bamis_region": "Cumilla",
+    "district": "Cumilla",
+    "administrative_division": "Chattogram",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-eb882e64f63abb365bd0"
+  },
+  {
+    "bamis_region": "Dhaka",
+    "district": "Dhaka",
+    "administrative_division": "Dhaka",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-b43b1ac4cbe935f27ee1"
+  },
+  {
+    "bamis_region": "Dhaka",
+    "district": "Gazipur",
+    "administrative_division": "Dhaka",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-b43b1ac4cbe935f27ee1"
+  },
+  {
+    "bamis_region": "Dhaka",
+    "district": "Kishoreganj",
+    "administrative_division": "Dhaka",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-b43b1ac4cbe935f27ee1"
+  },
+  {
+    "bamis_region": "Dhaka",
+    "district": "Manikganj",
+    "administrative_division": "Dhaka",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-b43b1ac4cbe935f27ee1"
+  },
+  {
+    "bamis_region": "Dhaka",
+    "district": "Munshiganj",
+    "administrative_division": "Dhaka",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-b43b1ac4cbe935f27ee1"
+  },
+  {
+    "bamis_region": "Dhaka",
+    "district": "Narayanganj",
+    "administrative_division": "Dhaka",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-b43b1ac4cbe935f27ee1"
+  },
+  {
+    "bamis_region": "Dhaka",
+    "district": "Narsingdi",
+    "administrative_division": "Dhaka",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-b43b1ac4cbe935f27ee1"
+  },
+  {
+    "bamis_region": "Dhaka",
+    "district": "Tangail",
+    "administrative_division": "Dhaka",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-b43b1ac4cbe935f27ee1"
+  },
+  {
+    "bamis_region": "Dinajpur",
+    "district": "Dinajpur",
+    "administrative_division": "Rangpur",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-26e44e9d906bdf19a560"
+  },
+  {
+    "bamis_region": "Dinajpur",
+    "district": "Panchagarh",
+    "administrative_division": "Rangpur",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-26e44e9d906bdf19a560"
+  },
+  {
+    "bamis_region": "Dinajpur",
+    "district": "Thakurgaon",
+    "administrative_division": "Rangpur",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-26e44e9d906bdf19a560"
+  },
+  {
+    "bamis_region": "Faridpur",
+    "district": "Faridpur",
+    "administrative_division": "Dhaka",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-f0a08c8d15236f1a0ede"
+  },
+  {
+    "bamis_region": "Faridpur",
+    "district": "Gopalganj",
+    "administrative_division": "Dhaka",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-f0a08c8d15236f1a0ede"
+  },
+  {
+    "bamis_region": "Faridpur",
+    "district": "Madaripur",
+    "administrative_division": "Dhaka",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-f0a08c8d15236f1a0ede"
+  },
+  {
+    "bamis_region": "Faridpur",
+    "district": "Rajbari",
+    "administrative_division": "Dhaka",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-f0a08c8d15236f1a0ede"
+  },
+  {
+    "bamis_region": "Faridpur",
+    "district": "Shariatpur",
+    "administrative_division": "Dhaka",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-f0a08c8d15236f1a0ede"
+  },
+  {
+    "bamis_region": "Jashore",
+    "district": "Chuadanga",
+    "administrative_division": "Khulna",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-770e4170fbe47bf2ffe0"
+  },
+  {
+    "bamis_region": "Jashore",
+    "district": "Jashore",
+    "administrative_division": "Khulna",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-770e4170fbe47bf2ffe0"
+  },
+  {
+    "bamis_region": "Jashore",
+    "district": "Jhenaidah",
+    "administrative_division": "Khulna",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-770e4170fbe47bf2ffe0"
+  },
+  {
+    "bamis_region": "Jashore",
+    "district": "Kushtia",
+    "administrative_division": "Khulna",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-770e4170fbe47bf2ffe0"
+  },
+  {
+    "bamis_region": "Jashore",
+    "district": "Magura",
+    "administrative_division": "Khulna",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-770e4170fbe47bf2ffe0"
+  },
+  {
+    "bamis_region": "Jashore",
+    "district": "Meherpur",
+    "administrative_division": "Khulna",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-770e4170fbe47bf2ffe0"
+  },
+  {
+    "bamis_region": "Khulna",
+    "district": "Bagerhat",
+    "administrative_division": "Khulna",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-8ed996619f923d80ec4a"
+  },
+  {
+    "bamis_region": "Khulna",
+    "district": "Khulna",
+    "administrative_division": "Khulna",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-8ed996619f923d80ec4a"
+  },
+  {
+    "bamis_region": "Khulna",
+    "district": "Narail",
+    "administrative_division": "Khulna",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-8ed996619f923d80ec4a"
+  },
+  {
+    "bamis_region": "Khulna",
+    "district": "Satkhira",
+    "administrative_division": "Khulna",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-8ed996619f923d80ec4a"
+  },
+  {
+    "bamis_region": "Mymensingh",
+    "district": "Jamalpur",
+    "administrative_division": "Mymensingh",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-989a9ec3ce000e0c0d71"
+  },
+  {
+    "bamis_region": "Mymensingh",
+    "district": "Mymensingh",
+    "administrative_division": "Mymensingh",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-989a9ec3ce000e0c0d71"
+  },
+  {
+    "bamis_region": "Mymensingh",
+    "district": "Netrokona",
+    "administrative_division": "Mymensingh",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-989a9ec3ce000e0c0d71"
+  },
+  {
+    "bamis_region": "Mymensingh",
+    "district": "Sherpur",
+    "administrative_division": "Mymensingh",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-989a9ec3ce000e0c0d71"
+  },
+  {
+    "bamis_region": "Rajshahi",
+    "district": "Chapainawabganj",
+    "administrative_division": "Rajshahi",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-05aadc68470ab448677b"
+  },
+  {
+    "bamis_region": "Rajshahi",
+    "district": "Naogaon",
+    "administrative_division": "Rajshahi",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-05aadc68470ab448677b"
+  },
+  {
+    "bamis_region": "Rajshahi",
+    "district": "Natore",
+    "administrative_division": "Rajshahi",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-05aadc68470ab448677b"
+  },
+  {
+    "bamis_region": "Rajshahi",
+    "district": "Rajshahi",
+    "administrative_division": "Rajshahi",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-05aadc68470ab448677b"
+  },
+  {
+    "bamis_region": "Rangamati",
+    "district": "Bandarban",
+    "administrative_division": "Chattogram",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-3f0a62fe1dd7f7cfac15"
+  },
+  {
+    "bamis_region": "Rangamati",
+    "district": "Khagrachhari",
+    "administrative_division": "Chattogram",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-3f0a62fe1dd7f7cfac15"
+  },
+  {
+    "bamis_region": "Rangamati",
+    "district": "Rangamati",
+    "administrative_division": "Chattogram",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-3f0a62fe1dd7f7cfac15"
+  },
+  {
+    "bamis_region": "Rangpur",
+    "district": "Gaibandha",
+    "administrative_division": "Rangpur",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-e5ec82e9749c9403b31b"
+  },
+  {
+    "bamis_region": "Rangpur",
+    "district": "Kurigram",
+    "administrative_division": "Rangpur",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-e5ec82e9749c9403b31b"
+  },
+  {
+    "bamis_region": "Rangpur",
+    "district": "Lalmonirhat",
+    "administrative_division": "Rangpur",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-e5ec82e9749c9403b31b"
+  },
+  {
+    "bamis_region": "Rangpur",
+    "district": "Nilphamari",
+    "administrative_division": "Rangpur",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-e5ec82e9749c9403b31b"
+  },
+  {
+    "bamis_region": "Rangpur",
+    "district": "Rangpur",
+    "administrative_division": "Rangpur",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-e5ec82e9749c9403b31b"
+  },
+  {
+    "bamis_region": "Sylhet",
+    "district": "Habiganj",
+    "administrative_division": "Sylhet",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-6b78b9a6a5a77a1a7ed6"
+  },
+  {
+    "bamis_region": "Sylhet",
+    "district": "Moulvibazar",
+    "administrative_division": "Sylhet",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-6b78b9a6a5a77a1a7ed6"
+  },
+  {
+    "bamis_region": "Sylhet",
+    "district": "Sunamganj",
+    "administrative_division": "Sylhet",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-6b78b9a6a5a77a1a7ed6"
+  },
+  {
+    "bamis_region": "Sylhet",
+    "district": "Sylhet",
+    "administrative_division": "Sylhet",
+    "mapping_status": "source_normalized",
+    "source_basis": "normalized consensus of district lists printed in BAMIS source PDF titles",
+    "region_id": "bamis-region-6b78b9a6a5a77a1a7ed6"
+  }
+]

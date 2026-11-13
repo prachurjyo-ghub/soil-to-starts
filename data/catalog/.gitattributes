@@ -1,0 +1,3 @@
+# Preserve generated receipts and frozen evidence bytes across checkouts.
+evidence_inputs/** -text whitespace=cr-at-eol
+normalized/** -text whitespace=cr-at-eol

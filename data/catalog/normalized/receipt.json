@@ -1,0 +1,84 @@
+{
+  "inputs": {
+    "assets/crop_planning_dataset.csv": {
+      "sha256": "26347fabc413e4f98c8c30b31b9617a5b3f12041a1f4093361a002ab6f639663",
+      "method": "UTF-8 source bytes with CRLF normalized to LF"
+    },
+    "assets/bamis_region_district_mapping.csv": {
+      "sha256": "9e508caca45b81c8550f9bbdc56525a084976a4ab7eb14bad6a50c0ae0cff7d8",
+      "method": "UTF-8 source bytes with CRLF normalized to LF"
+    },
+    "assets/crop_planning_dataset_report.json": {
+      "sha256": "8b36ddb6fc6523a37d697896421da9f9a6b4e6ccc1a6755e45afcf86413299c1",
+      "method": "UTF-8 source bytes with CRLF normalized to LF"
+    },
+    "data/catalog/rajshahi_crop_evidence_catalog.csv": {
+      "sha256": "4d84baddb5692c87ec6075029550fc8c0ec7673cbb3f41f813f428cedd5df7e5",
+      "method": "UTF-8 source bytes with CRLF normalized to LF"
+    },
+    "data/catalog/rajshahi_candidate_rule_evidence.csv": {
+      "sha256": "f95274f0490bb061f8cbeea32cd9137c3ab6d9b8185738cb4b1e3c24b5967016",
+      "method": "UTF-8 source bytes with CRLF normalized to LF"
+    },
+    "data/catalog/evidence_inputs/documents.jsonl.gz": {
+      "sha256": "a488c43e58cfbb57f6f8760173618fb37630022dade586dc5d09ab992e30e0b2",
+      "method": "exact binary bytes"
+    },
+    "data/catalog/evidence_inputs/month_aliases.json": {
+      "sha256": "d066312a2f37f8c8dc6760a8de7f3f9554abada254493293f8a864ab744c5a09",
+      "method": "UTF-8 source bytes with CRLF normalized to LF"
+    },
+    "data/catalog/evidence_inputs/month_corrections.json": {
+      "sha256": "033e9223b5bc47e54bbb6aff313aca553558d26024e0592a84ad9af09ba3179f",
+      "method": "UTF-8 source bytes with CRLF normalized to LF"
+    },
+    "data/catalog/evidence_inputs/reviewed_page_candidates.json": {
+      "sha256": "16e5942d1708924245b6a870149a253c4e3fc46c25e611fe4fbb0a9a79aa6999",
+      "method": "UTF-8 source bytes with CRLF normalized to LF"
+    },
+    "data/catalog/evidence_inputs/source_artifacts.json": {
+      "sha256": "52843dddc1a411fb80a82742214b61cd3c4873ad800d1c6b19b540a1b9673046",
+      "method": "UTF-8 source bytes with CRLF normalized to LF"
+    },
+    "data/catalog/evidence_inputs/source_reviews.json": {
+      "sha256": "4f54e94a0cf52a9345b43eaa67a84db5de3c0babdccaf9daf509d0d28fb8dd06",
+      "method": "UTF-8 source bytes with CRLF normalized to LF"
+    },
+    "scripts/build_crop_evidence.py": {
+      "sha256": "d665ee045603620d8508244f194b7d1d97981b1b6eb5d8b9182aaa30e66070e4",
+      "method": "UTF-8 source bytes with CRLF normalized to LF"
+    },
+    "scripts/crop_evidence_lineage.py": {
+      "sha256": "1740b6ff8f56c1b4eb0b08fbb64ad25e2f1ae6449ccc59e9db951e865a63db95",
+      "method": "UTF-8 source bytes with CRLF normalized to LF"
+    },
+    "scripts/vendor/bamis/build_planning_dataset.py": {
+      "sha256": "f83f5c34c5d8edce12dead78295e8ef154e7631db1f1c4adaec9c98363e5f878",
+      "method": "UTF-8 source bytes with CRLF normalized to LF"
+    }
+  },
+  "outputs": {
+    "calendar_inventory.json": "dc16d0524653699c637b301e7b050bce76d340115c2a80e659c2d918566f5e6e",
+    "calendars.json": "4c301c548c1ae53f1146bfff8da398d371b3a856cbcceeb4aabf87444c8efb1c",
+    "candidate_evidence.json": "564a1c85344afdfcc49e19cc79bbf6ee85fa84dd9559f911bbd525286f8a670a",
+    "coverage.json": "c61335922808ed8debb6f50bc4c088664ab22a3fb9bb848a2943b3577797ab42",
+    "crops.json": "0d09b2df4d3bab8bea10fce8ae813efe3b384b147c4321b170151d8b542ca43f",
+    "district_memberships.json": "af7aa7baa4e9ecdf1b9a1a14996e19a1d4e1f852b8ee07c36e1799991faf55dd",
+    "entries.jsonl": "e66654f0c227c11e54db1c3ca843eeb80f19b3183276e83504d1cbe07803d207",
+    "legacy_crop_candidates.json": "2a0925517aa7bbfc28828d2531386ddc9321918b6fdc43febc783647d9d5472a",
+    "lineage_audit.json": "32a50e5fc079ec1c7d6f02d05bafc127fe2c167c68fdb4f5ce5f83407c5d2081",
+    "month_corrections.json": "033e9223b5bc47e54bbb6aff313aca553558d26024e0592a84ad9af09ba3179f",
+    "page_candidates.json": "6d543867f97d8f761f56051c0da7c9786e3263f453e60d5bfbc74ed0b07f3f1b",
+    "qa.json": "404582e6378c41fde5f7df830b04741894104099174b7cb35b75c2fc924a20f5",
+    "quarantine.json": "ae9d5efdfaeb256e8904bfb1634ce9ff956308ca1f4b4832cc8ff9768655c00c",
+    "regions.json": "c21976d69cd0382ef97bc1069f2075a8c3e2697d571945e068fd3d4cb767dd83",
+    "repeated_weeks.json": "a601f113dad46cf15a12370bbf8abef1f893e459610e4e6e56c8ca72fe70a8f8",
+    "rule_compatibility.csv": "3c41cf5d4aa4d3c9cfeb3a2c8eaf60058f684c75e70ea459419bccd2e4c901d5",
+    "rule_compatibility.json": "f6bfd1436137decc98f20a2854b80af7e9f94810a2a63d045ad9fe1aed7bc5d9",
+    "source_artifacts.json": "5633876ebcd0012c82bcd3a574bf10f23b297b565ebb243b1344a1ca2ac9559d",
+    "source_entries.jsonl": "1534996636fc3850ff0614ba175e995af2ed71740f313bed1d9350511ce841dd",
+    "source_reviews.json": "6d37e815448481e00c61485ac8ac1db322dd766f336275ec8a18048e9f750ece",
+    "weather_definitions.json": "e25a5e16dddf62917a9ce301d3a11e06041fed1b77c749791ffbdba54512062a",
+    "weather_normals.jsonl": "c182b582292fc8571b366908d63bb8a9c87cfe3ff204c877aa143c6e07692ec2"
+  }
+}

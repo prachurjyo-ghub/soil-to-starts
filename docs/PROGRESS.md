@@ -6,7 +6,7 @@ Generated from `docs/tasks/*.json`; update a record or use the helper, then rend
 
 [Team playbook](TEAM_PLAYBOOK.md) · [Command reference](WORKFLOW.md) · [Validation requirements](VALIDATION.md)
 
-**Accepted tasks: 0/39. Tasks with recorded failing checks: 0.** Counts are task records, not product-completion percentages.
+**Accepted tasks: 0/41. Tasks with recorded failing checks: 1.** Counts are task records, not product-completion percentages.
 
 | Done | Task | Owner | State | Depends on | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -23,6 +23,8 @@ Generated from `docs/tasks/*.json`; update a record or use the helper, then rend
 | [ ] | [INTAKE-MAP](tasks/INTAKE-MAP.json): Add independent confirmed map-pin and district-search intake locations | Fardin | in_review | none | Fardin coordinates main-branch merge planning and later G0/API integration after any remaining team checks. |
 | [ ] | [INTAKE-UI](tasks/INTAKE-UI.json): Implement nationwide required farmer intake without scientific recommendations | Fardin | in_review | none | Fardin coordinates main-branch merge planning and accepted contracts/API later. |
 | [ ] | [OPS-PROMPT-STYLE](tasks/OPS-PROMPT-STYLE.json): Unify AI-use disclosure and implementation history in one compact record file | Fardin | in_review | none | A different teammate reviews the pushed numbered contribution records and helper behavior; Fardin coordinates accepted main-branch integration afterward. |
+| [ ] | [CROP-EVIDENCE-PREP](tasks/CROP-EVIDENCE-PREP.json): Normalize preserved multi-region crop evidence for review | Maruf | blocked | none | Saim/integration resolves byte-preserving climate checkout; rerun the full suite, then obtain independent review of the inactive evidence preparation. Maruf reviews source definitions, conflicts and rights; Fardin reviews research-schema mapping. |
+| [ ] | [CROP-LINEAGE-REVIEW](tasks/CROP-LINEAGE-REVIEW.json): Resolve preserved calendar-entry import lineage | Maruf | in_review | none | Maruf/Fardin independently review the 221 lineage resolutions and prior-ID migration. Saim/integration resolves the unchanged climate checksum blocker in CROP-EVIDENCE-PREP; source cycles and scientific activation remain separate. |
 | [ ] | [G1A](tasks/G1A.json): Acquire and validate the first NASA POWER evidence sample | Saim | waiting | G0-CONTRACT | Review G0 contracts now; acquire the first evidence slice after G0 is accepted. |
 | [ ] | [G1B](tasks/G1B.json): Source Bangladesh crop, soil and rotation rules | Maruf | waiting | G0-CONTRACT | Review G0 rules/schema now; source the minimum crop catalog after G0 is accepted. |
 | [ ] | [G1C](tasks/G1C.json): Implement API validation and schema/test foundation | Fardin | waiting | G0-CONTRACT | Implement schema/API validation after G0 acceptance; coordinate independent tooling work. |
@@ -56,7 +58,7 @@ Generated from `docs/tasks/*.json`; update a record or use the helper, then rend
 | --- | --- |
 | Fardin | DELIVERY-INTAKE: Fardin coordinates main-branch merge planning and later accepted G0/scientific work.; DOC-FOUNDATION: Arrange a teammate review of the concise onboarding and canonical specifications; record accepted merge only afterward.; OPS-SECURITY: Prachurjo reviews the targeted patch; Fardin records actual main-branch delivery only after approval.; OPS-WORKFLOW: Request independent review of the board/helper/PR checks; publish only when authorized.; PLAN-SCOPE: Arrange independent teammate review of the scope changes. Fardin can draft G0 contracts while that review is pending; no product work is accepted by these documentation ticks.; G0-CONTRACT: s01 draft ready for review: Saim reviews climate fields/units/periods/QA; Maruf reviews calendars/duration origins/operations and exact regional period policy; Prachurjo reviews intake extensions, result states and errors. Fardin resolves comments before s05 freeze; G1 stays gated.; INTAKE-MAP: Fardin coordinates main-branch merge planning and later G0/API integration after any remaining team checks.; INTAKE-UI: Fardin coordinates main-branch merge planning and accepted contracts/API later.; OPS-PROMPT-STYLE: A different teammate reviews the pushed numbered contribution records and helper behavior; Fardin coordinates accepted main-branch integration afterward. |
 | Saim | CLIMATE-DATA-PACKAGE: Stop after Step 3. Teammates may review the local archive receipt and setup guide; external sharing, scientific review and publication are not implied.; CLIMATE-EXTREME-AUDIT: Stop after Step 1; independent reviewers may inspect audit evidence. Do not refresh sources or change representative-point mapping without a new instruction.; CLIMATE-METHOD-DOCS: Stop after Step 2; independent reviewers may inspect coordinate-role evidence and consolidated climate-method documentation.; CLIMATE-POWER-ACQUIRE: Obtain independent human review of the POWER source/parameter contract and same-grid deduplication plan before authorizing the guarded 1,600-request full collection.; CLIMATE-POWER-REGIONAL: Review the historical smoke evidence and sampling limitations. Independently authorized full Regional preparation is tracked in CLIMATE-REGIONAL-PREP; district extraction is not a raw acquisition prerequisite.; CLIMATE-POWER-REGIONAL-PREFLIGHT: Review the annual preflight evidence. Independently authorized full Regional preparation is tracked in CLIMATE-REGIONAL-PREP; Saim adopted representative-point context separately without claiming independent scientific review.; CLIMATE-REGIONAL-PREP: Independent reviewer checks source/processing receipts; Maruf and Fardin resolve calendar, rainfall/water and replay questions before scientific integration.; CLIMATE-SAMPLING: Obtain independent human review of the boundary provenance and point-on-surface method before using the registry for weather collection.; Collaborate on G0-CONTRACT |
-| Maruf | Collaborate on G0-CONTRACT |
+| Maruf | CROP-LINEAGE-REVIEW: Maruf/Fardin independently review the 221 lineage resolutions and prior-ID migration. Saim/integration resolves the unchanged climate checksum blocker in CROP-EVIDENCE-PREP; source cycles and scientific activation remain separate.; Collaborate on G0-CONTRACT |
 | Prachurjo | OPS-LINT: Review the bounded lint/state-initialization changes and record accepted delivery; full usability testing remains G3.; Collaborate on G0-CONTRACT, MEDIA-STORYBOARD |
 | Nadim | MEDIA-STORYBOARD: Draft storyboard and rights ledger with Hla; defer final footage to accepted app behavior.; Collaborate on MEDIA-STORY |
 | Hla | MEDIA-STORY: Draft story and mark every unverified claim; final narration waits for actual app evidence.; Collaborate on MEDIA-STORYBOARD |
@@ -552,6 +554,68 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-31T22:42:31Z`
 - Review: pending — no approval recorded
 - Delivery: no accepted merge recorded; branch: feature/workspace-ui-review; issue/PR: not created/recorded
 - Handoff: A different teammate reviews the pushed AI_USE.md records and helper behavior on feature/workspace-ui-review. Source commit 5beed23ccc3f8b9e418bb63cb1b7fc39da657a16 was verified on origin; independent human review and accepted main-branch integration remain pending.
+
+### CROP-EVIDENCE-PREP — Normalize preserved multi-region crop evidence for review
+
+Owner: **Maruf** · State: `blocked` · Updated UTC: `2026-11-13T09:03:15Z`
+
+**Why:** Independent evidence preparation across the existing collection, without activating additional executable coverage or bypassing G0/G1B.
+
+- [x] **a1 · Maruf · done:** Preserve source artifacts and existing corrections with reproducible flat import.
+  - How: Prepare inactive evidence only; no contract change or scientific activation.
+  - Files: scripts/import_crop_evidence.py, scripts/build_planning_dataset.py, data/catalog/evidence_inputs/
+  - Verify: Preserve source artifacts and existing corrections with reproducible flat import.
+  - Evidence: Imported all 318 extracted document records after checking original PDF hashes; recorded 106 original/corrected month cells; isolated flat rebuild reproduced every repository CSV cell.
+- [x] **a2 · Maruf · done:** Build inactive multi-region calendar, entry, coverage and quarantine relationships.
+  - How: Prepare inactive evidence only; no contract change or scientific activation.
+  - Files: scripts/build_crop_evidence.py, data/catalog/normalized/
+  - Verify: Build inactive multi-region calendar, entry, coverage and quarantine relationships.
+  - Before: a1
+  - Evidence: Generated 7,834 preserved analytical entries, 8,191 physical source columns, 366 retained source-table calendars and all 124 repeated-key groups; explicit unavailable coverage and upstream quarantine preserved.
+- [x] **a3 · Maruf · done:** Document field semantics, candidate compatibility, source investigations and unresolved handoff decisions.
+  - How: Prepare inactive evidence only; no contract change or scientific activation.
+  - Files: data/catalog/EVIDENCE_PACKAGE.md, data/catalog/EVIDENCE_DICTIONARY.md
+  - Verify: Document field semantics, candidate compatibility, source investigations and unresolved handoff decisions.
+  - Before: a2
+  - Evidence: EVIDENCE_PACKAGE.md and EVIDENCE_DICTIONARY.md describe all output relationships, definitions and unresolved decisions; 17 inactive candidate compatibility rows and three original-source investigations included.
+- [ ] **a4 · Maruf · blocked:** Verify preservation, relationship failures and deterministic rebuild; hand off for independent review.
+  - How: Prepare inactive evidence only; no contract change or scientific activation.
+  - Files: tests/test_crop_evidence.py, docs/tasks/CROP-EVIDENCE-PREP.json
+  - Verify: Verify preservation, relationship failures and deterministic rebuild; hand off for independent review.
+  - Before: a3
+  - Error/blocker: Saim/integration must resolve the pre-existing climate registry checkout byte mismatch before full-suite verification can pass.
+  - Evidence: Seven focused evidence tests, normalized byte-identical rebuild and flat all-cell rebuild passed. Full configured suite ran 93 tests with 14 climate-registry checksum errors; HEAD bytes match the manifest and checkout differs only in line endings.
+- **Blocker:** Full configured suite has 14 errors at existing climate registry checksum gates; checkout CRLF/LF bytes differ from the manifest. Climate files remain unchanged.
+- Check **failed**: `'C:\Users\BBB#12\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' -B -m unittest discover -s tests -p 'test_*.py' -v` — Exit 1. stry checksum does not match its manifest ====================================================================== ERROR: test_provisional_cross_year_selection_excludes_partial (test_nasa_power_regional_prepare.PreparationTests.test_provisional_cross_year_selection_excludes_partial) ---------------------------------------------------------------------- Traceback (most recent call last): File "D:\Workplace\Nasa Space Apps\Website\soil-to-starts\tests\test_nasa_power_regional_prepare.py", line 17, in setUp self.config = p.r.build_config() ^^^^^^^^^^^^^^^^^^ File "D:\Workplace\Nasa Space Apps\Website\soil-to-starts\src\acquire\download_nasa_power_regional.py", line 78, in build_config raise ConfigurationError("Registry checksum does not match its manifest") download_nasa_power.ConfigurationError: Registry checksum does not match its manifest ====================================================================== ERROR: test_wide_join_requires_identical_keys (test_nasa_power_regional_prepare.PreparationTests.test_wide_join_requires_identical_keys) ---------------------------------------------------------------------- Traceback (most recent call last): File "D:\Workplace\Nasa Space Apps\Website\soil-to-starts\tests\test_nasa_power_regional_prepare.py", line 17, in setUp self.config = p.r.build_config() ^^^^^^^^^^^^^^^^^^ File "D:\Workplace\Nasa Space Apps\Website\soil-to-starts\src\acquire\download_nasa_power_regional.py", line 78, in build_config raise ConfigurationError("Registry checksum does not match its manifest") download_nasa_power.ConfigurationError: Registry checksum does not match its manifest ---------------------------------------------------------------------- Ran 93 tests in 3.393s FAILED (errors=14)
+- Check **passed**: `'C:\Users\BBB#12\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/build_crop_evidence.py --check` — Exit 0. PASS: 7834 preserved entries, 366 source-table calendars, 124 repeated-week groups; zero active rules PASS: byte-identical normalized rebuild
+- Check **passed**: `'C:\Users\BBB#12\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/build_planning_dataset.py --output cache/crop-flat-rebuild` — Exit 0. PASS: rebuilt 7834 rows with recorded month corrections; all cells match assets
+- Check **passed**: `'C:\Users\BBB#12\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' -B -m unittest discover -s tests -p test_crop_evidence.py -v` — Exit 0. test_ambiguous_columns_never_get_an_invented_order (test_crop_evidence.CropEvidenceTests.test_ambiguous_columns_never_get_an_invented_order) ... ok test_cross_year_keeps_physical_column_order_without_invented_offsets (test_crop_evidence.CropEvidenceTests.test_cross_year_keeps_physical_column_order_without_invented_offsets) ... ok test_every_input_row_and_null_preserved (test_crop_evidence.CropEvidenceTests.test_every_input_row_and_null_preserved) ... ok test_invalid_numeric_and_geographic_inputs_fail (test_crop_evidence.CropEvidenceTests.test_invalid_numeric_and_geographic_inputs_fail) ... ok test_repetitions_and_excluded_banana_retained (test_crop_evidence.CropEvidenceTests.test_repetitions_and_excluded_banana_retained) ... ok test_rules_stay_inactive_and_compatibility_complete (test_crop_evidence.CropEvidenceTests.test_rules_stay_inactive_and_compatibility_complete) ... ok test_source_relationships_and_physical_entry_identity (test_crop_evidence.CropEvidenceTests.test_source_relationships_and_physical_entry_identity) ... ok ---------------------------------------------------------------------- Ran 7 tests in 0.430s OK
+- Review: pending — no approval recorded
+- Delivery: no accepted merge recorded; branch: maruf/crop-evidence-prep; issue/PR: not created/recorded
+- Handoff: Maruf reviews source semantics/rights and unresolved source cycles; Saim reviews measurement compatibility; Fardin reviews research-schema mapping after contract agreement.
+
+### CROP-LINEAGE-REVIEW — Resolve preserved calendar-entry import lineage
+
+Owner: **Maruf** · State: `in_review` · Updated UTC: `2026-11-13T09:06:39Z`
+
+**Why:** Independent inspection of preserved local extraction lineage; this does not require or establish accepted executable rules, G0 agreement or a passing unrelated climate checkout.
+
+- [x] **a1 · Maruf · done:** Replay original stage geometry and preserve candidate columns and prior analytical IDs.
+  - How: Use preserved table cells and exact nonblank stage labels; retain all alternatives on unresolved matches.
+  - Files: scripts/crop_evidence_lineage.py, scripts/build_crop_evidence.py, data/catalog/normalized/lineage_audit.json
+  - Verify: Every selected column matches the imported source stage; no heuristic first-candidate fallback.
+  - Evidence: Original upstream stage replay and stdlib implementation each select exactly one column for all 221 initially ambiguous rows. lineage_audit.json preserves all numeric alternatives, geometry-extracted stages, physical IDs and prior analytical IDs.
+- [x] **a2 · Maruf · done:** Verify source relationships, safe unresolved behavior and deterministic rebuild; hand off for independent review.
+  - How: Run focused tests and byte-comparison rebuild; document unchanged scientific gates.
+  - Files: tests/test_crop_evidence.py, data/catalog/EVIDENCE_PACKAGE.md
+  - Verify: Relevant checks pass; no scientific rule activation or false review claim.
+  - Before: a1
+  - Evidence: Nine focused tests passed, including unresolved/tied/blank stage behavior and newline-sensitive binary versus normalized text fingerprints. The byte-identical normalized rebuild passed; all 7,834 rows and 124 repeated groups remain inactive and preserved.
+- Check **passed**: `'C:\Users\BBB#12\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' -B -m unittest discover -s tests -p test_crop_evidence.py -v` — Exit 0. test_ambiguous_columns_never_get_an_invented_order (test_crop_evidence.CropEvidenceTests.test_ambiguous_columns_never_get_an_invented_order) ... ok test_cross_year_keeps_physical_column_order_without_invented_offsets (test_crop_evidence.CropEvidenceTests.test_cross_year_keeps_physical_column_order_without_invented_offsets) ... ok test_every_input_row_and_null_preserved (test_crop_evidence.CropEvidenceTests.test_every_input_row_and_null_preserved) ... ok test_invalid_numeric_and_geographic_inputs_fail (test_crop_evidence.CropEvidenceTests.test_invalid_numeric_and_geographic_inputs_fail) ... ok test_receipt_text_fingerprint_ignores_checkout_line_endings_only (test_crop_evidence.CropEvidenceTests.test_receipt_text_fingerprint_ignores_checkout_line_endings_only) ... ok test_repetitions_and_excluded_banana_retained (test_crop_evidence.CropEvidenceTests.test_repetitions_and_excluded_banana_retained) ... ok test_rules_stay_inactive_and_compatibility_complete (test_crop_evidence.CropEvidenceTests.test_rules_stay_inactive_and_compatibility_complete) ... ok test_source_relationships_and_physical_entry_identity (test_crop_evidence.CropEvidenceTests.test_source_relationships_and_physical_entry_identity) ... ok test_stage_lineage_never_uses_blank_fuzzy_or_tied_matches (test_crop_evidence.CropEvidenceTests.test_stage_lineage_never_uses_blank_fuzzy_or_tied_matches) ... ok ---------------------------------------------------------------------- Ran 9 tests in 0.489s OK
+- Check **passed**: `'C:\Users\BBB#12\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/build_crop_evidence.py --check` — Exit 0. PASS: 7834 preserved entries, 366 source-table calendars, 124 repeated-week groups; zero active rules PASS: byte-identical normalized rebuild
+- Review: pending — no approval recorded
+- Delivery: no accepted merge recorded; branch: maruf/crop-evidence-prep; issue/PR: not created/recorded
+- Handoff: Maruf/Fardin independently review the 221 lineage resolutions and prior-ID mappings. Calendar-cycle interpretation and original climate verification blocker remain unresolved.
 
 ### G1A — Acquire and validate the first NASA POWER evidence sample
 

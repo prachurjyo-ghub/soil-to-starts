@@ -1,0 +1,72 @@
+[
+  {
+    "region_id": "bamis-region-c54c0fa3219b541585bc",
+    "original_label": "Barishal",
+    "type": "BAMIS calendar region"
+  },
+  {
+    "region_id": "bamis-region-5c2451eb9b322c1965e8",
+    "original_label": "Bogura",
+    "type": "BAMIS calendar region"
+  },
+  {
+    "region_id": "bamis-region-6ea3e0d639bcb4308340",
+    "original_label": "Chattogram",
+    "type": "BAMIS calendar region"
+  },
+  {
+    "region_id": "bamis-region-eb882e64f63abb365bd0",
+    "original_label": "Cumilla",
+    "type": "BAMIS calendar region"
+  },
+  {
+    "region_id": "bamis-region-b43b1ac4cbe935f27ee1",
+    "original_label": "Dhaka",
+    "type": "BAMIS calendar region"
+  },
+  {
+    "region_id": "bamis-region-26e44e9d906bdf19a560",
+    "original_label": "Dinajpur",
+    "type": "BAMIS calendar region"
+  },
+  {
+    "region_id": "bamis-region-f0a08c8d15236f1a0ede",
+    "original_label": "Faridpur",
+    "type": "BAMIS calendar region"
+  },
+  {
+    "region_id": "bamis-region-770e4170fbe47bf2ffe0",
+    "original_label": "Jashore",
+    "type": "BAMIS calendar region"
+  },
+  {
+    "region_id": "bamis-region-8ed996619f923d80ec4a",
+    "original_label": "Khulna",
+    "type": "BAMIS calendar region"
+  },
+  {
+    "region_id": "bamis-region-989a9ec3ce000e0c0d71",
+    "original_label": "Mymensingh",
+    "type": "BAMIS calendar region"
+  },
+  {
+    "region_id": "bamis-region-05aadc68470ab448677b",
+    "original_label": "Rajshahi",
+    "type": "BAMIS calendar region"
+  },
+  {
+    "region_id": "bamis-region-3f0a62fe1dd7f7cfac15",
+    "original_label": "Rangamati",
+    "type": "BAMIS calendar region"
+  },
+  {
+    "region_id": "bamis-region-e5ec82e9749c9403b31b",
+    "original_label": "Rangpur",
+    "type": "BAMIS calendar region"
+  },
+  {
+    "region_id": "bamis-region-6b78b9a6a5a77a1a7ed6",
+    "original_label": "Sylhet",
+    "type": "BAMIS calendar region"
+  }
+]
