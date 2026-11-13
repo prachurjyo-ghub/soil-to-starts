@@ -15,6 +15,7 @@ export default function WorkspacePage() {
       <link rel="stylesheet" href="/reference/bengali-fonts.css" />
       <link rel="stylesheet" href="/reference/i18n.css" />
       <link rel="stylesheet" href="/reference/workspace-fixes.css" />
+      <link rel="stylesheet" href="/reference/results.css" />
       <IntakeMapRuntime />
       <div className="reference-root" dangerouslySetInnerHTML={{ __html: html }} />
       <Script src="/reference/workspace.js" strategy="afterInteractive" />

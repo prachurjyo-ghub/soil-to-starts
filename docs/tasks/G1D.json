@@ -8,7 +8,7 @@
   "depends_on": [
     "G0-CONTRACT"
   ],
-  "updated_at": "2026-10-30T15:07:08Z",
+  "updated_at": "2026-11-13T09:12:59Z",
   "acceptance": [
     {
       "id": "s01",
@@ -111,7 +111,36 @@
       "blockers": []
     }
   ],
-  "checks": [],
+  "checks": [
+    {
+      "command": "node --test tests/result-ui.test.cjs",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. TAP version 13\n# Subtest: fixture mode requires an explicit action\nok 1 - fixture mode requires an explicit action\n  ---\n  duration_ms: 0.947916\n  type: 'test'\n  ...\n# Subtest: genuine planning request stays unavailable without an endpoint\nok 2 - genuine planning request stays unavailable without an endpoint\n  ---\n  duration_ms: 0.243916\n  type: 'test'\n  ...\n# Subtest: complete fixture has baseline and two distinct three-step alternatives\nok 3 - complete fixture has baseline and two distinct three-step alternatives\n  ---\n  duration_ms: 0.611084\n  type: 'test'\n  ...\n# Subtest: incomplete fixture keeps one complete alternative without filler\nok 4 - incomplete fixture keeps one complete alternative without filler\n  ---\n  duration_ms: 0.133\n  type: 'test'\n  ...\n# Subtest: current crop with unknown stage remains unassessed\nok 5 - current crop with unknown stage remains unassessed\n  ---\n  duration_ms: 0.106292\n  type: 'test'\n  ...\n# Subtest: fixture receipt preserves example labels and has no invented fingerprint\nok 6 - fixture receipt preserves example labels and has no invented fingerprint\n  ---\n  duration_ms: 0.119792\n  type: 'test'\n  ...\n# Subtest: fixture state renders missing second alternative and scientific limits\nok 7 - fixture state renders missing second alternative and scientific limits\n  ---\n  duration_ms: 22.686541\n  type: 'test'\n  ...\n# Subtest: invalidating a pending real request prevents stale overwrite\nok 8 - invalidating a pending real request prevents stale overwrite\n  ---\n  duration_ms: 0.167209\n  type: 'test'\n  ...\n1..8\n# tests 8\n# suites 0\n# pass 8\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 73.742916",
+      "run_at_utc": "2026-11-13T09:12:41Z"
+    },
+    {
+      "command": "npm run test:intake",
+      "cwd": "prototype",
+      "result": "passed",
+      "evidence": "Exit 0. rmation and stale district, source version or geometry cannot pass\nok 25 - new/moved pin needs confirmation and stale district, source version or geometry cannot pass\n  ---\n  duration_ms: 0.183917\n  type: 'test'\n  ...\n# Subtest: method switching clears inactive coordinates/districts and district search needs no boundaries\nok 26 - method switching clears inactive coordinates/districts and district search needs no boundaries\n  ---\n  duration_ms: 0.155625\n  type: 'test'\n  ...\n# Subtest: genuine v1 district answers migrate to v2 without coordinates or demo defaults\nok 27 - genuine v1 district answers migrate to v2 without coordinates or demo defaults\n  ---\n  duration_ms: 0.322833\n  type: 'test'\n  ...\n# Subtest: boundary loader rejects missing/duplicate mappings and unsupported or broken rings\nok 28 - boundary loader rejects missing/duplicate mappings and unsupported or broken rings\n  ---\n  duration_ms: 13.919625\n  type: 'test'\n  ...\n# Subtest: map rerenders reuse one instance/listeners and preserve pin/answers; leaving removes resources\nok 29 - map rerenders reuse one instance/listeners and preserve pin/answers; leaving removes resources\n  ---\n  duration_ms: 18.997458\n  type: 'test'\n  ...\n# Subtest: WebGL and boundary-network failure retain answers and leave district fallback independent\nok 30 - WebGL and boundary-network failure retain answers and leave district fallback independent\n  ---\n  duration_ms: 11.569667\n  type: 'test'\n  ...\n# Subtest: tile errors and lost WebGL context surface fallback without destroying other answers\nok 31 - tile errors and lost WebGL context surface fallback without destroying other answers\n  ---\n  duration_ms: 12.032625\n  type: 'test'\n  ...\n1..31\n# tests 31\n# suites 0\n# pass 31\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 131.9405",
+      "run_at_utc": "2026-11-13T09:12:43Z"
+    },
+    {
+      "command": "npm run lint",
+      "cwd": "prototype",
+      "result": "passed",
+      "evidence": "Exit 0. > soil-to-stars-prototype@1.0.0 lint\n> eslint .",
+      "run_at_utc": "2026-11-13T09:12:47Z"
+    },
+    {
+      "command": "npm run build -- --webpack",
+      "cwd": "prototype",
+      "result": "passed",
+      "evidence": "Exit 0. > soil-to-stars-prototype@1.0.0 build\n> next build --webpack\n\n▲ Next.js 16.4.3 (webpack)\n✓ Running next.config.mjs took 8ms\n\n  Creating an optimized production build ...\n✓ Compiled successfully in 790ms\n  Running TypeScript ...\n  Finished TypeScript in 1ms ...\n  Collecting page data using 5 workers ...\n  Generating static pages using 5 workers (0/4) ...\n  Generating static pages using 5 workers (1/4) \n  Generating static pages using 5 workers (2/4) \n  Generating static pages using 5 workers (3/4) \n✓ Generating static pages using 5 workers (4/4) in 398ms\n  Finalizing page optimization ...\n  Collecting build traces ...\n\nRoute (app)\n┌ ○ /\n├ ○ /_not-found\n└ ○ /workspace\n\n\n○  (Static)  prerendered as static content",
+      "run_at_utc": "2026-11-13T09:12:55Z"
+    }
+  ],
   "blockers": [],
   "issues": [],
   "evidence": [],
@@ -123,6 +152,28 @@
     {
       "at": "2026-10-30T15:07:08Z",
       "note": "Latest Fardin-authorized INTAKE-UI implements independent local form/validation preparation. G0 and all G1D acceptance remain pending; no scientific API adapter or integration is accepted."
+    },
+    {
+      "at": "2026-11-13T09:12:41Z",
+      "note": "Check passed: node --test tests/result-ui.test.cjs"
+    },
+    {
+      "at": "2026-11-13T09:12:43Z",
+      "note": "Check passed: npm run test:intake"
+    },
+    {
+      "at": "2026-11-13T09:12:47Z",
+      "note": "Check passed: npm run lint"
+    },
+    {
+      "at": "2026-11-13T09:12:55Z",
+      "note": "Check passed: npm run build -- --webpack"
+    },
+    {
+      "at": "2026-11-13T09:12:59Z",
+      "from": "planned",
+      "to": "planned",
+      "note": "Prachurjo's Fardin-authorized independent frontend preparation added the mounted result adapter, isolated development fixtures, full result layout, proposed current-crop extension, focused tests and handoff. G1D remains planned because G0 acceptance and real API integration are pending; no scientific acceptance or teammate review is claimed."
     }
   ],
   "review": {
@@ -132,7 +183,7 @@
   "merge_ref": null,
   "branch": null,
   "issue": null,
-  "next_action": "Extend the current app against accepted G0 contracts; do not create a second frontend.",
+  "next_action": "Request Fardin/Saim/Maruf review of the proposed payload needs; keep genuine planning unavailable until accepted contracts/data exist, then connect the adapter and rerun parity, accessibility and physical-device checks.",
   "handoff": "Prachurjo connects G3 only after G2 and this shell are accepted; Fardin reviews transport behavior.",
   "purpose": "Make field inputs and failure states usable before connecting scientific results.",
   "scope": "mvp"

@@ -1,0 +1,25 @@
+SOIL TO STARS — ENGLISH / BANGLA FRONTEND PROTOTYPE
+
+HOW TO OPEN
+1. Extract this ZIP completely.
+2. Open Soil_to_Stars/index.html in a modern browser.
+3. Use “Open workspace” to explore the field-planning tools.
+
+Included: homepage, workspace, farmland video, images, Bengali fonts,
+English/Bangla language switch, light/dark themes, and branch cursor control.
+No installation, account, or backend is required.
+
+The leaf button beside the theme control switches the branch cursor on/off
+on desktop devices. EN / বাংলা changes the language and remembers your choice.
+Field inputs and saved plans stay in the browser; they do not sync between devices.
+
+This is a frontend demonstration. Crop scores and environmental data are
+illustrative; live NASA data and validated planting advice are not connected.
+
+বাংলায় ব্যবহার
+১. ZIP ফাইলটি সম্পূর্ণ এক্সট্র্যাক্ট করুন।
+২. Soil_to_Stars ফোল্ডারের index.html ব্রাউজারে খুলুন।
+৩. উপরের EN / বাংলা বোতাম থেকে বাংলা বেছে নিন।
+৪. জমির তথ্য দিন, বিকল্প তুলনা করুন এবং পরিকল্পনা সংরক্ষণ করুন।
+
+এটি নমুনা প্রোটোটাইপ। বাস্তবে চাষের আগে স্থানীয় কৃষি বিশেষজ্ঞের পরামর্শ নিন।
