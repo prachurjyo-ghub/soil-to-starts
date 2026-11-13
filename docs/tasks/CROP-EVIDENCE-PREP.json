@@ -4,9 +4,9 @@
   "owner": "Maruf",
   "collaborators": [],
   "phase": "G1",
-  "status": "blocked",
+  "status": "in_review",
   "depends_on": [],
-  "updated_at": "2026-11-13T09:07:44Z",
+  "updated_at": "2026-11-13T09:13:58Z",
   "acceptance": [
     {
       "id": "a1",
@@ -65,9 +65,9 @@
       "id": "a4",
       "text": "Verify preservation, relationship failures and deterministic rebuild; hand off for independent review.",
       "owner": "Maruf",
-      "state": "blocked",
-      "met": false,
-      "evidence": "Seven focused evidence tests, normalized byte-identical rebuild and flat all-cell rebuild passed. Full configured suite ran 93 tests with 14 climate-registry checksum errors; HEAD bytes match the manifest and checkout differs only in line endings.",
+      "state": "done",
+      "met": true,
+      "evidence": "Full configured suite passes all 114 tests; registry regeneration validates 64 unique strict-interior points and its original SHA-256. Exact-path LF attributes preserve registry, manifest and generator bytes with core.autocrlf=true/false. Prior deterministic crop and flat rebuild checks remain recorded; no scientific content or rules changed.",
       "how": "Prepare inactive evidence only; no contract change or scientific activation.",
       "files": [
         "tests/test_crop_evidence.py",
@@ -77,19 +77,10 @@
       "depends_on": [
         "a3"
       ],
-      "blockers": [
-        "Saim/integration must resolve the pre-existing climate registry checkout byte mismatch before full-suite verification can pass."
-      ]
+      "blockers": []
     }
   ],
   "checks": [
-    {
-      "command": "'C:\\Users\\BBB#12\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' -B -m unittest discover -s tests -p 'test_*.py' -v",
-      "cwd": ".",
-      "result": "failed",
-      "evidence": "Exit 1. stry checksum does not match its manifest\n\n======================================================================\nERROR: test_provisional_cross_year_selection_excludes_partial (test_nasa_power_regional_prepare.PreparationTests.test_provisional_cross_year_selection_excludes_partial)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\Workplace\\Nasa Space Apps\\Website\\soil-to-starts\\tests\\test_nasa_power_regional_prepare.py\", line 17, in setUp\n    self.config = p.r.build_config()\n                  ^^^^^^^^^^^^^^^^^^\n  File \"D:\\Workplace\\Nasa Space Apps\\Website\\soil-to-starts\\src\\acquire\\download_nasa_power_regional.py\", line 78, in build_config\n    raise ConfigurationError(\"Registry checksum does not match its manifest\")\ndownload_nasa_power.ConfigurationError: Registry checksum does not match its manifest\n\n======================================================================\nERROR: test_wide_join_requires_identical_keys (test_nasa_power_regional_prepare.PreparationTests.test_wide_join_requires_identical_keys)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\Workplace\\Nasa Space Apps\\Website\\soil-to-starts\\tests\\test_nasa_power_regional_prepare.py\", line 17, in setUp\n    self.config = p.r.build_config()\n                  ^^^^^^^^^^^^^^^^^^\n  File \"D:\\Workplace\\Nasa Space Apps\\Website\\soil-to-starts\\src\\acquire\\download_nasa_power_regional.py\", line 78, in build_config\n    raise ConfigurationError(\"Registry checksum does not match its manifest\")\ndownload_nasa_power.ConfigurationError: Registry checksum does not match its manifest\n\n----------------------------------------------------------------------\nRan 93 tests in 3.393s\n\nFAILED (errors=14)",
-      "run_at_utc": "2026-11-13T08:53:39Z"
-    },
     {
       "command": "'C:\\Users\\BBB#12\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' scripts/build_crop_evidence.py --check",
       "cwd": ".",
@@ -110,11 +101,23 @@
       "result": "passed",
       "evidence": "Exit 0. test_ambiguous_columns_never_get_an_invented_order (test_crop_evidence.CropEvidenceTests.test_ambiguous_columns_never_get_an_invented_order) ... ok\ntest_cross_year_keeps_physical_column_order_without_invented_offsets (test_crop_evidence.CropEvidenceTests.test_cross_year_keeps_physical_column_order_without_invented_offsets) ... ok\ntest_every_input_row_and_null_preserved (test_crop_evidence.CropEvidenceTests.test_every_input_row_and_null_preserved) ... ok\ntest_invalid_numeric_and_geographic_inputs_fail (test_crop_evidence.CropEvidenceTests.test_invalid_numeric_and_geographic_inputs_fail) ... ok\ntest_repetitions_and_excluded_banana_retained (test_crop_evidence.CropEvidenceTests.test_repetitions_and_excluded_banana_retained) ... ok\ntest_rules_stay_inactive_and_compatibility_complete (test_crop_evidence.CropEvidenceTests.test_rules_stay_inactive_and_compatibility_complete) ... ok\ntest_source_relationships_and_physical_entry_identity (test_crop_evidence.CropEvidenceTests.test_source_relationships_and_physical_entry_identity) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.430s\n\nOK",
       "run_at_utc": "2026-11-13T08:55:59Z"
+    },
+    {
+      "command": "'C:\\Users\\BBB#12\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' src/acquire/build_district_sampling_registry.py --check",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. PASS: 64 rows; 64 unique IDs; 64 strict interiors; registry SHA-256 0b31748796de714f73de135ee3e0ec77c2e44813985d790b44f2d62e18c62dfa",
+      "run_at_utc": "2026-11-13T09:12:43Z"
+    },
+    {
+      "command": "'C:\\Users\\BBB#12\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' -B -m unittest discover -s tests -p 'test_*.py' -v",
+      "cwd": ".",
+      "result": "passed",
+      "evidence": "Exit 0. out_extra_entry) ... ok\ntest_prompt_numbers_are_per_member_and_do_not_change_on_update (test_workflow.WorkflowTests.test_prompt_numbers_are_per_member_and_do_not_change_on_update) ... ok\ntest_public_numbers_use_next_available_maximum_and_scale_past_three_digits (test_workflow.WorkflowTests.test_public_numbers_use_next_available_maximum_and_scale_past_three_digits) ... ok\ntest_readonly_check_detects_stale_view (test_workflow.WorkflowTests.test_readonly_check_detects_stale_view) ... ok\ntest_real_git_ancestry_proof (test_workflow.WorkflowTests.test_real_git_ancestry_proof) ... ok\ntest_render_is_idempotent (test_workflow.WorkflowTests.test_render_is_idempotent) ... ok\ntest_reopening_checklist_prerequisite_reopens_done_children (test_workflow.WorkflowTests.test_reopening_checklist_prerequisite_reopens_done_children) ... ok\ntest_start_blocked_task_does_not_modify_records (test_workflow.WorkflowTests.test_start_blocked_task_does_not_modify_records) ... ok\ntest_unchecked_acceptance_cannot_be_done (test_workflow.WorkflowTests.test_unchecked_acceptance_cannot_be_done) ... ok\ntest_unknown_dependency_rejected (test_workflow.WorkflowTests.test_unknown_dependency_rejected) ... ok\ntest_unmerged_commit_cannot_be_done (test_workflow.WorkflowTests.test_unmerged_commit_cannot_be_done) ... ok\ntest_verify_accepts_explicit_project_subdirectory (test_workflow.WorkflowTests.test_verify_accepts_explicit_project_subdirectory) ... ok\ntest_verify_executes_check_and_records_real_failure (test_workflow.WorkflowTests.test_verify_executes_check_and_records_real_failure) ... ok\ntest_verify_refuses_directory_outside_project (test_workflow.WorkflowTests.test_verify_refuses_directory_outside_project) ... ok\n\n----------------------------------------------------------------------\nRan 114 tests in 6.850s\n\nOK",
+      "run_at_utc": "2026-11-13T09:12:51Z"
     }
   ],
-  "blockers": [
-    "Full configured suite has 14 errors at existing climate registry checksum gates; checkout CRLF/LF bytes differ from the manifest. Climate files remain unchanged."
-  ],
+  "blockers": [],
   "issues": [],
   "evidence": [
     "CROP-LINEAGE-REVIEW continuation on maruf/crop-evidence-prep resolved 221 initially ambiguous imported rows using original stage geometry; alternatives/prior IDs retained. Original climate checksum blocker remains open.",
@@ -176,6 +179,31 @@
     {
       "at": "2026-11-13T09:07:44Z",
       "note": "Recorded actual local checkpoint 5ee0936 on maruf/crop-evidence-prep; existing review and climate-source blockers unchanged."
+    },
+    {
+      "at": "2026-11-13T09:12:43Z",
+      "note": "Check passed: 'C:\\Users\\BBB#12\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' src/acquire/build_district_sampling_registry.py --check"
+    },
+    {
+      "at": "2026-11-13T09:12:51Z",
+      "note": "Check passed: 'C:\\Users\\BBB#12\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' -B -m unittest discover -s tests -p 'test_*.py' -v"
+    },
+    {
+      "at": "2026-11-13T09:13:57Z",
+      "from": "blocked",
+      "to": "in_progress",
+      "note": "Resolved the recorded CRLF checkout mismatch by pinning three exact paths to LF and restoring verified original committed bytes. Registry regeneration passed with the original SHA-256, all 114 full-suite tests passed, and checkout filters preserved bytes for core.autocrlf=true and false."
+    },
+    {
+      "at": "2026-11-13T09:13:58Z",
+      "note": "Checklist a4: done",
+      "evidence": "Full configured suite passes all 114 tests; registry regeneration validates 64 unique strict-interior points and its original SHA-256. Exact-path LF attributes preserve registry, manifest and generator bytes with core.autocrlf=true/false. Prior deterministic crop and flat rebuild checks remain recorded; no scientific content or rules changed."
+    },
+    {
+      "at": "2026-11-13T09:13:58Z",
+      "from": "in_progress",
+      "to": "in_review",
+      "note": "Preparation checks and acceptance items are satisfied locally. Independent human review and main-branch integration remain pending; no source-rights approval or scientific activation is claimed."
     }
   ],
   "review": {
@@ -185,7 +213,7 @@
   "merge_ref": null,
   "branch": "maruf/crop-evidence-prep",
   "issue": null,
-  "next_action": "Saim/integration resolves byte-preserving climate checkout; rerun the full suite, then obtain independent review of the inactive evidence preparation. Maruf reviews source definitions, conflicts and rights; Fardin reviews research-schema mapping.",
+  "next_action": "Maruf/Fardin independently review source lineage and package preservation. Maruf and Saim resolve source periods, statistics, calendar cycles and scientific applicability before executable-rule integration.",
   "handoff": "Maruf reviews source semantics/rights and unresolved source cycles; Saim reviews measurement compatibility; Fardin reviews research-schema mapping after contract agreement.",
   "purpose": "Independent evidence preparation across the existing collection, without activating additional executable coverage or bypassing G0/G1B.",
   "scope": "mvp"

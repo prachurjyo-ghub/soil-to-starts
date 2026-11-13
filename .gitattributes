@@ -1,0 +1,5 @@
+# These artifacts are checked against exact bytes, including the generator hash.
+# Keep the existing LF representation when core.autocrlf is enabled on Windows.
+/data/climate/district_sampling_registry.csv text eol=lf
+/data/climate/district_sampling_manifest.json text eol=lf
+/src/acquire/build_district_sampling_registry.py text eol=lf

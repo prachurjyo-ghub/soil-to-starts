@@ -1178,4 +1178,32 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Actual outcome:** Local checkpoint 5ee0936 saved the evidence package on maruf/crop-evidence-prep, including all 221 source-stage lineage resolutions with alternatives and prior IDs. Nine evidence tests, deterministic rebuild and staged whitespace checks passed. Independent review and the existing climate checksum blocker remain pending; nothing was pushed.
 
 **Task / source:** CROP-LINEAGE-REVIEW; Current instruction: keep track in local branch and move to the next step
+
+## Maruf — Prompt 003
+
+<a id="maruf-003"></a>
+<a id="p-3d14dfcdf2c5"></a>
+<!-- record-id: P-3d14dfcdf2c5 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T09:12:41Z -->
+
+**Member:** maruf
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Resolve the climate-registry checkout checksum blocker and rerun verification before continuing evidence review.
+
+**Purpose / AI contribution:** Pin the registry, its manifest and its hash-pinned generator to LF; restore only verified committed bytes and test checkout filters and existing source checks.
+
+**Human contribution:** Maruf authorized continuation to the next listed step. No source approval, scientific validation or teammate review was supplied.
+
+**Changed files:** .gitattributes; data/catalog/EVIDENCE_PACKAGE.md; docs/tasks/CROP-EVIDENCE-PREP.json; docs/tasks/CROP-LINEAGE-REVIEW.json; docs/AI_USE.md; docs/PROGRESS.md; README.md
+
+**Actual outcome:** Pinned three hash-sensitive paths to LF and restored their verified committed bytes without changing scientific values or source hashes. Registry regeneration, checkout filters with core.autocrlf enabled/disabled, and all 114 Python tests passed; CROP-EVIDENCE-PREP is now in_review with human review pending.
+
+**Task / source:** CROP-EVIDENCE-PREP; Current instruction: move to the next step
 <!-- workflow:ai-records:end -->

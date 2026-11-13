@@ -6,7 +6,7 @@
   "phase": "G1",
   "status": "in_review",
   "depends_on": [],
-  "updated_at": "2026-11-13T09:07:44Z",
+  "updated_at": "2026-11-13T09:13:58Z",
   "acceptance": [
     {
       "id": "a1",
@@ -115,6 +115,12 @@
     {
       "at": "2026-11-13T09:07:44Z",
       "note": "Recorded actual local checkpoint 5ee0936 on maruf/crop-evidence-prep; existing review and climate-source blockers unchanged."
+    },
+    {
+      "at": "2026-11-13T09:13:58Z",
+      "from": "in_review",
+      "to": "in_review",
+      "note": "Related preparation checkout blocker resolved: exact-path LF policy, unchanged pinned bytes, registry check and 114 full-suite tests passed. Lineage review remains pending."
     }
   ],
   "review": {
@@ -124,7 +130,7 @@
   "merge_ref": null,
   "branch": "maruf/crop-evidence-prep",
   "issue": null,
-  "next_action": "Maruf/Fardin independently review the 221 lineage resolutions and prior-ID migration. Saim/integration resolves the unchanged climate checksum blocker in CROP-EVIDENCE-PREP; source cycles and scientific activation remain separate.",
+  "next_action": "Maruf/Fardin independently review the 221 lineage resolutions and prior-ID mappings; then continue source-calendar semantics and rights review. No agronomic approval or API activation is implied.",
   "handoff": "Maruf/Fardin independently review the 221 lineage resolutions and prior-ID mappings. Calendar-cycle interpretation and original climate verification blocker remain unresolved.",
   "purpose": "Independent inspection of preserved local extraction lineage; this does not require or establish accepted executable rules, G0 agreement or a passing unrelated climate checkout.",
   "scope": "mvp"
