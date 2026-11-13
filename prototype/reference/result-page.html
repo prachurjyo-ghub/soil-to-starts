@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Result page (mock preview) — Soil to Stars</title>
+  <!--
+    Local preview only. Open this file to review the result UI with mock data.
+    Uses the same workspace chrome (sidebar + header). Not part of the live app routes.
+    Illustrative fixture data only — not scientific advice.
+  -->
+  <link rel="stylesheet" href="../public/reference/workspace.css">
+  <link rel="stylesheet" href="../public/reference/polish.css">
+  <link rel="stylesheet" href="../public/reference/bengali-fonts.css">
+  <link rel="stylesheet" href="../public/reference/i18n.css">
+  <link rel="stylesheet" href="../public/reference/workspace-fixes.css">
+  <link rel="stylesheet" href="../public/reference/results.css">
+</head>
+<body>
+  <aside id="sidebar">
+    <a class="brand" href="index.html"><span class="brand-icon">✳</span><span>SOIL TO STARS<small>FIELD INTELLIGENCE STUDIO</small></span></a>
+    <div class="field-switch">
+      <small>DEMO RESULT</small>
+      <select id="field-select" aria-label="Select field" hidden></select>
+      <button type="button" data-action="open-workspace">← Go to field intake</button>
+    </div>
+    <nav id="nav"></nav>
+    <div class="side-bottom side-home-only">
+      <a class="sidebar-home-button" href="index.html">← Back to homepage</a>
+    </div>
+  </aside>
+  <div class="shell">
+    <header>
+      <button id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <a class="mobile-brand" href="index.html" aria-label="Soil to Stars home"><span class="brand-icon" aria-hidden="true">✳</span></a>
+      <div class="mobile-page-title"><b id="mobile-crumb">Your results</b></div>
+      <div class="breadcrumb">Workspace <span>/</span> <b id="crumb">Your results</b></div>
+      <div class="header-actions">
+        <span class="demo-dot">Illustrative result · not scientific advice</span>
+        <button id="theme" aria-label="Toggle dark mode">◐</button>
+        <button type="button" data-action="export" class="small-button">Export example ↗</button>
+        <span class="avatar">RF</span>
+      </div>
+    </header>
+    <main id="main">
+      <p role="status">Loading mock result… / নমুনা ফলাফল লোড হচ্ছে…</p>
+      <noscript>Enable JavaScript to preview the result page. This file uses illustrative mock data only.</noscript>
+    </main>
+    <footer>SOIL TO STARS <span>Local mock preview · All values are illustrative.</span></footer>
+  </div>
+
+  <nav id="mobile-tabbar" class="mobile-tabbar" aria-label="Primary">
+    <a href="workspace-preview.html" data-tab="profile"><span class="mobile-tab-icon" aria-hidden="true">⌖</span><span class="mobile-tab-label">My Field</span></a>
+    <a href="result-page.html" data-tab="overview" class="is-active" aria-current="page"><span class="mobile-tab-icon" aria-hidden="true">◫</span><span class="mobile-tab-label">Results</span></a>
+    <a href="workspace-preview.html" data-tab="rotations"><span class="mobile-tab-icon" aria-hidden="true">⇄</span><span class="mobile-tab-label">Rotations</span></a>
+    <button type="button" id="mobile-more-open" aria-haspopup="dialog" aria-controls="mobile-more-sheet" aria-expanded="false">
+      <span class="mobile-tab-icon" aria-hidden="true">⋯</span>
+      <span class="mobile-tab-label">More</span>
+    </button>
+  </nav>
+
+  <div id="mobile-more-backdrop" class="mobile-more-backdrop" hidden></div>
+  <div id="mobile-more-sheet" class="mobile-more-sheet" role="dialog" aria-modal="true" aria-labelledby="mobile-more-heading" hidden>
+    <div class="mobile-more-sheet-inner">
+      <div class="mobile-more-grab" aria-hidden="true"></div>
+      <div class="mobile-more-header">
+        <h2 id="mobile-more-heading">More</h2>
+        <button type="button" id="mobile-more-close" class="mobile-more-close" aria-label="Close">✕</button>
+      </div>
+      <div class="mobile-more-scroll">
+        <p class="mobile-more-group-label">Navigation</p>
+        <nav id="mobile-more-nav" class="mobile-more-nav" aria-label="More destinations"></nav>
+        <p class="mobile-more-group-label">Preferences &amp; actions</p>
+        <div class="mobile-more-actions">
+          <button type="button" id="mobile-theme" class="mobile-more-action">Switch theme</button>
+          <button type="button" data-action="export" class="mobile-more-action mobile-export">Export example</button>
+          <a class="mobile-more-action mobile-home-link" href="index.html">← Back to homepage</a>
+          <p class="mobile-demo-status demo-dot">Illustrative result · not scientific advice</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <dialog id="details"><div id="detail-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Classic scripts so this file can open from the folder without a Next route. -->
+  <script src="../public/reference/result-fixtures.js"></script>
+  <script src="../public/reference/result-adapter.js"></script>
+  <script src="../public/reference/result-ui.js"></script>
+  <script src="../public/reference/result-page-preview.js"></script>
+  <script src="../public/reference/polish.js"></script>
+  <script src="../public/reference/i18n.js" defer></script>
+</body>
+</html>

@@ -1312,4 +1312,36 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Next action / owner:** Teammates can open /result-page for the mock result demo; Fardin/Saim/Maruf review still needed before scientific connection.
 
 **Task / source:** G1D; Current user instruction authorized push to main2
+
+## Prachurjo — Prompt 008
+
+<a id="prachurjo-008"></a>
+<a id="p-a3e0fc0c075d"></a>
+<!-- record-id: P-a3e0fc0c075d -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T11:02:52Z -->
+
+**Member:** prachurjo
+
+**Tool:** Cursor Composer
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Replace the mistaken /result-page app route with a local HTML preview file under prototype/reference.
+
+**Purpose / AI contribution:** Provide a double-clickable mock result preview without adding a live website route.
+
+**Human contribution:** Prachurjo clarified the demo must be a local directory file, not a Next.js route.
+
+**Changed files:** prototype/reference/result-page.html;prototype/public/reference/result-page-preview.js;prototype/app/result-page/;prototype/app/result-mock/;prototype/public/reference/result-page.js;docs/FRONTEND_RESULTS_HANDOFF.md;docs/AI_USE.md
+
+**Before → After:** Before: a /result-page website route. After: only a local prototype/reference/result-page.html preview; live routes remain / and /workspace.
+
+**Actual outcome:** Removed the Next.js result-page/result-mock routes and added a standalone HTML preview with workspace chrome and mock fixtures. Lint, build and result tests passed.
+
+**Next action / owner:** Commit and push the correction to origin/main2.
+
+**Task / source:** G1D; Current user correction: standalone local HTML preview, not a website route
 <!-- workflow:ai-records:end -->

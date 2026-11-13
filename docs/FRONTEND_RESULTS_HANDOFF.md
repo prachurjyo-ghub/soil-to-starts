@@ -10,8 +10,9 @@ yellow banners). No scientific API, crop engine, reviewed crop catalogue or prep
 climate package is connected. This handoff is not teammate approval, scientific
 acceptance, main-branch delivery, deployment or submission evidence.
 
-Demo route: `/result-page` (legacy `/result-mock` redirects here). Genuine intake
-remains on `/workspace`.
+Local preview file (not an app route): `prototype/reference/result-page.html`.
+Open that file to review the result UI with mock data inside the normal workspace
+chrome. Genuine intake remains on `/workspace`.
 
 ## Mounted paths and changed surface
 
