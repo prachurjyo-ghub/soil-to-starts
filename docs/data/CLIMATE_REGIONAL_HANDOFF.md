@@ -307,3 +307,52 @@ the immutable package snapshot; this measured-result addendum and the external
 producer receipt are recorded after the package was sealed to avoid circular
 archive/receipt hashing. The scientific method and packaged source are unchanged.
 No data refresh, upload, publication, staging or commit occurred. Step 3 stops here.
+
+## Ready-to-copy teammate delivery (after Git publication)
+
+Git at `db37c6d` contains the implementation/receipts but does not deliver ignored
+climate data. The verified existing v1.0.0 archive and matching sidecars/receipt/
+bootstrap are now assembled at
+`cache/climate_delivery/Saim_to_Fardin_climate_v1.0.0/`, with START_HERE, a recipient
+checklist, local producer results, real loaded example and file inventory.
+See the [concise delivery report](CLIMATE_TEAM_HANDOFF_REPORT.md),
+[local consumption interface](CLIMATE_CONSUMPTION.md) and
+[Maruf/Fardin parameter dictionary](CLIMATE_PARAMETER_COMPATIBILITY.json).
+New clean-directory offline validation/reproduction passed without changing the
+sealed archive, source observations or mappings. Manual/separately authorized
+transfer and Fardin's independent verification remain outstanding; no recipient
+acceptance or backend/frontend integration is claimed. Do not confuse available
+producer files or Git receipts with delivery to another computer.
+
+
+## Current delivery — Git-hosted archive
+
+Saim now authorizes Git-based distribution, superseding manual transfer as the
+current workflow. The unchanged 88,023,118-byte v1.0.0 archive is included under
+`data/climate/packages/v1.0.0/`, with original SHA-256
+`4a0ba04c9c8beaa0a908e0b4d61cc23c6b90f87ad927bbe229405860eda6117b`.
+Teammates clone/pull `main2` and run `python3 scripts/setup_climate_data.py`.
+The command verifies and extracts local data with no NASA request; expanded
+files remain ignored. See [current setup](CLIMATE_GITHUB_SETUP.md) and
+`data/climate/climate_git_distribution_receipt.json` for measured Git-delivery
+checks. Original archive/producer records remain unchanged as historical
+provenance. Scientific applicability, NASA notification and BAMIS mapping rights
+limitations remain explicit; Git publication is not scientific validation or
+automatic backend/frontend integration.
+
+
+Git publication outcome: local commit `ebbada9` and merge `38b97a4` preserve the
+new data/setup work and teammate changes. Automatic approval review rejected
+`git push origin main2` before execution because the 88 MB payload contains a
+BAMIS mapping whose redistribution rights are unverified and requires explicit
+archive/destination authorization. No alternate upload or bypass was attempted.
+Local fresh-clone installation passed, but remote availability/fresh GitHub-clone
+verification are not claimed. See the current Git distribution receipt/status.
+
+
+Publication confirmation: after explicit user approval for the exact archive and
+GitHub destination, `git push origin main2` succeeded (`bf61942` → `7faf144`).
+The archive is now available through GitHub. The earlier automatic rejection and
+local-only records are historical; current distribution status is in the Git
+distribution receipt. No manual folder transfer is required. Owner authorization
+is not independent scientific approval or a new third-party license grant.

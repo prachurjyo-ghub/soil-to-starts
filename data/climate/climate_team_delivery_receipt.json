@@ -1,0 +1,121 @@
+{
+  "archive_bytes": 88023118,
+  "archive_name": "soil-to-stars-climate-bgd-v1.0.0.tar.gz",
+  "archive_sha256": "4a0ba04c9c8beaa0a908e0b4d61cc23c6b90f87ad927bbe229405860eda6117b",
+  "bootstrap_sha256": "6b33abf5dee24570e04d01ed12e52a74a989aa7da1ecd1946f477f7aaf26bcd8",
+  "current_revision": "db37c6d02c13a9e9231b2396780e5f26465eabf3",
+  "delivery_file_count": 13,
+  "delivery_folder": "cache/climate_delivery/Saim_to_Fardin_climate_v1.0.0",
+  "delivery_helper_sha256": "77ede365124b33c7aaf17234272cf1dc3de28440c59da0bfb5a7c7f0dbca43c0",
+  "delivery_inventory_sha256": "d7c0eb714707beece54daffe4faa3fb757d15e9ef5abf72e0bdd2cacb69071f1",
+  "delivery_total_bytes": 89004454,
+  "documentation_sha256": {
+    "docs/data/CLIMATE_CONSUMPTION.md": "fc0db8f031899c97f2ee565fb6c2c0b80ed0d1807b3b2f0ced068dd0bad3a03f",
+    "docs/data/CLIMATE_DELIVERY_START_HERE.md": "162349f4e689e682397143fb1ae9ed4911e1decd72b171f13a1c15644eebc482",
+    "docs/data/CLIMATE_PARAMETER_COMPATIBILITY.json": "17a03a17998b0d4e8183e490029bdadd6142bf3016624d75991af9178f2fc23e"
+  },
+  "example_verified_from_fresh_delivery": true,
+  "fresh_reproduction": {
+    "exact_byte_comparison": true,
+    "network": "socket audit hook + OFFLINE=1; isolated Python -I -B",
+    "no_derived_inputs_copied": true,
+    "reproduced_derived_files": 2387,
+    "reproduced_district_files": 1601,
+    "reproduced_regional_files": 786,
+    "status": "passed",
+    "unchanged_raw_and_inputs": 222
+  },
+  "fresh_validation": {
+    "coordinate_role_check": "passed",
+    "network": "socket audit hook + OFFLINE=1; isolated Python -I -B",
+    "raw_requests": 100,
+    "registry_anchors": 64,
+    "status": "passed",
+    "unlisted_project_files": "No working-repository path or .git checkout is needed",
+    "verified_payload_files": 2618
+  },
+  "independent_recipient_validation": false,
+  "local_non_document_payload_files_verified": 2610,
+  "local_prepared_files": 2387,
+  "local_producer_checks": {
+    "application_integrated": false,
+    "archive_sha256": "4a0ba04c9c8beaa0a908e0b4d61cc23c6b90f87ad927bbe229405860eda6117b",
+    "examples_verified_from_delivered_archive": true,
+    "independent_recipient_validation": false,
+    "network": "OFFLINE=1 and socket audit hook in isolated Python -I -B",
+    "recipient_received": false,
+    "reproduction": {
+      "exact_byte_comparison": true,
+      "network": "socket audit hook + OFFLINE=1; isolated Python -I -B",
+      "no_derived_inputs_copied": true,
+      "reproduced_derived_files": 2387,
+      "reproduced_district_files": 1601,
+      "reproduced_regional_files": 786,
+      "status": "passed",
+      "unchanged_raw_and_inputs": 222
+    },
+    "runtime": {
+      "python": "3.9.6",
+      "zlib": "1.2.12"
+    },
+    "scientific_approval": false,
+    "source_revision": "db37c6d02c13a9e9231b2396780e5f26465eabf3",
+    "status": "passed_producer_local_only",
+    "tests": {
+      "new_delivery_tests": 5,
+      "repository": 110,
+      "result": "passed"
+    },
+    "validation": {
+      "coordinate_role_check": "passed",
+      "network": "socket audit hook + OFFLINE=1; isolated Python -I -B",
+      "raw_requests": 100,
+      "registry_anchors": 64,
+      "status": "passed",
+      "unlisted_project_files": "No working-repository path or .git checkout is needed",
+      "verified_payload_files": 2618
+    }
+  },
+  "local_raw_responses": 100,
+  "manifest_sha256": "230b58fdc12b0cc12742387ab542e944d99facf35e6b7e071fa3636423dca29b",
+  "original_producer_receipt_unchanged": true,
+  "package_build_baseline": {
+    "branch": "main2",
+    "head": "5c8c858059440da58f00eb6d3c14daff588c68bc",
+    "note": "This is the working implementation snapshot; HEAD alone does not identify modified/untracked sources.",
+    "relevant_working_tree_status": "M src/acquire/download_nasa_power_regional.py\n?? src/acquire/audit_climate_extremes.py\n?? src/acquire/check_climate_coordinate_roles.py\n?? src/acquire/package_climate_data.py\n?? src/acquire/prepare_nasa_power_regional.py\n?? src/acquire/regional_climate_handoff.py\n?? src/acquire/verify_regional_climate_preparation.py",
+    "source_file_sha256": {
+      "src/acquire/audit_climate_extremes.py": "87e90caf1d80f63cc26461f322ea8b0c352a8a3b0b7becac5de9d6366cac3c9e",
+      "src/acquire/build_district_sampling_registry.py": "fcae888107f42f996ebdccba06509662af37cd81c1c1c88e1f489338ceacb0b7",
+      "src/acquire/check_climate_coordinate_roles.py": "eb400568cb6d1e0a78cc54d26c02ac6f5024a93dd8939c4755161bacf56ed8e7",
+      "src/acquire/download_nasa_power.py": "5d4f48a37c1d3b985d4f70a6de8ecde6508cfa61dd0f288d273cab7351398e3e",
+      "src/acquire/download_nasa_power_regional.py": "5533ebf877972e61ca48e7162dbc0bb5dc8d42c909ca8d714457e63babd337a7",
+      "src/acquire/package_climate_data.py": "6b33abf5dee24570e04d01ed12e52a74a989aa7da1ecd1946f477f7aaf26bcd8",
+      "src/acquire/prepare_nasa_power_regional.py": "620504e8e7e8746faabfbc4dc0536358f483851f370bca3e923872ed232bc589",
+      "src/acquire/regional_climate_handoff.py": "226e8d0aa2545a52463a5778892a97dc6782c6ec5641899c2f9272822f8f224a",
+      "src/acquire/verify_regional_climate_preparation.py": "d241cdba01d2cfcbfc225046f6ea081cc4039a8fc5d0e076eaefb9e32f360360"
+    }
+  },
+  "package_id": "soil-to-stars-climate-bgd-v1.0.0",
+  "public_sharing": "Not cleared; preserve existing NASA notification request and unresolved BAMIS mapping rights.",
+  "recipient_received": false,
+  "remaining_fardin_work": "Independently verify on recipient machine, configure persistent local prepared data and implement backend/calculation integration under project gates.",
+  "remaining_frontend_work": "Prachurjo integrates actual API results/states and separately tests assets/fonts/maps/browser offline behavior.",
+  "remaining_saim_work": "Transfer the folder using a separately authorized/manual method; support actual recipient reproducibility problems and scientific applicability review. No additional data acquisition is required for this handoff.",
+  "runtime": {
+    "python": "3.9.6",
+    "zlib": "1.2.12"
+  },
+  "schema_version": "climate-team-delivery-receipt-1.0.0",
+  "sealed_package_unchanged": true,
+  "small_git_files": [
+    "src/acquire/prepare_climate_team_delivery.py",
+    "docs/data/CLIMATE_DELIVERY_START_HERE.md",
+    "docs/data/CLIMATE_CONSUMPTION.md",
+    "docs/data/CLIMATE_PARAMETER_COMPATIBILITY.json",
+    "data/climate/climate_team_delivery_receipt.json",
+    "docs/data/CLIMATE_TEAM_HANDOFF_REPORT.md"
+  ],
+  "test_workspace": "/private/tmp/soil-climate-team-delivery.IBiDOj",
+  "uploaded": false
+}

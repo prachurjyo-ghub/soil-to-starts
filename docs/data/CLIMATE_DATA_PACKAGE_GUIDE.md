@@ -1,5 +1,10 @@
 # Teammate climate-data setup — package v1.0.0
 
+**Current delivery:** the archive is now included in Git on `main2`. Use
+`python3 scripts/setup_climate_data.py` after cloning/pulling; no manual folder
+transfer is needed. See [current GitHub setup](CLIMATE_GITHUB_SETUP.md). The
+local handoff instructions below preserve the earlier package workflow.
+
 Obtain these local delivery files from Saim; no upload/share service is configured:
 
 - `cache/climate_handoff/soil-to-stars-climate-bgd-v1.0.0.tar.gz`

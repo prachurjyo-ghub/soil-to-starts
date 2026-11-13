@@ -1,0 +1,68 @@
+{
+  "application_integration": false,
+  "approval_history": {
+    "explicit_user_approval": "i approved it,push it so that my team member access can all of it",
+    "initial_push": "Rejected by automatic approval review before execution; recorded in commit 7faf144.",
+    "scope": "Exact v1.0.0 archive including BAMIS mapping to https://github.com/prachurjyo-ghub/soil-to-starts.git main2 after the payload/destination and existing terms were disclosed."
+  },
+  "archive_bytes": 88023118,
+  "archive_path": "data/climate/packages/v1.0.0/soil-to-stars-climate-bgd-v1.0.0.tar.gz",
+  "archive_sha256": "4a0ba04c9c8beaa0a908e0b4d61cc23c6b90f87ad927bbe229405860eda6117b",
+  "authorization": "Saim explicitly requested repository-hosted delivery by committing and pushing; this supersedes manual-only delivery instructions.",
+  "checkout_integrity": "Git attributes preserve archive/manifest bytes and matching helper LF endings for cross-platform hash verification.",
+  "default_install": "cache/climate_repository/v1.0.0",
+  "district_mapping_changed": false,
+  "fresh_github_clone": {
+    "status": "in_progress",
+    "workspace": "/private/tmp/soil-climate-github-check.1JLRh6/repo"
+  },
+  "fresh_local_git_clone": {
+    "clone_revision": "38b97a4",
+    "initial_ignored_climate_caches_present": false,
+    "network_blocked": true,
+    "payload_files_verified": 2618,
+    "raw_requests_validated": 100,
+    "status": "passed",
+    "workspace": "/private/tmp/soil-climate-repo-check.hQFGV1/repo"
+  },
+  "git_lfs_required": false,
+  "implementation_commit": "ebbada9",
+  "installation_command": "python3 scripts/setup_climate_data.py",
+  "limitations": [
+    "Archive and original producer receipt retain immutable historical build-time local-only flags. Current Git distribution status is recorded here.",
+    "BAMIS mapping public redistribution rights remain unverified; owner authorization is not a third-party license grant.",
+    "NASA researcher-transmission notification is requested but not sent; no external contact is authorized.",
+    "Git setup provides data only; backend/API/frontend integration and browser offline support remain separate."
+  ],
+  "manifest_path": "data/climate/packages/v1.0.0/PACKAGE_MANIFEST.json",
+  "manifest_sha256": "230b58fdc12b0cc12742387ab542e944d99facf35e6b7e071fa3636423dca29b",
+  "manual_transfer_required": false,
+  "package_id": "soil-to-stars-climate-bgd-v1.0.0",
+  "preflight": {
+    "payload_files": 2618,
+    "raw_requests": 100,
+    "status": "passed",
+    "workspace": "/private/tmp/soil-climate-git-preflight-v1"
+  },
+  "preserved_remote_merge": "38b97a4",
+  "publication": {
+    "branch": "main2",
+    "data_commit": "7faf144",
+    "github_large_file_warning": "Accepted 83.95 MB archive with warning above recommended 50 MB; below the blocking 100 MiB limit.",
+    "remote": "https://github.com/prachurjyo-ghub/soil-to-starts.git",
+    "remote_output": "bf61942..7faf144 main2 -> main2",
+    "status": "pushed",
+    "uploaded_by_this_task": true
+  },
+  "python_tests": {
+    "count": 113,
+    "result": "passed"
+  },
+  "schema_version": "climate-git-distribution-1.0.0",
+  "scientific_approval": false,
+  "scientific_observations_changed": false,
+  "verify_only_repeat": {
+    "status": "passed",
+    "workspace": "/private/tmp/soil-climate-git-preflight-v1"
+  }
+}

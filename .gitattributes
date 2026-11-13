@@ -3,3 +3,7 @@
 /data/climate/district_sampling_registry.csv text eol=lf
 /data/climate/district_sampling_manifest.json text eol=lf
 /src/acquire/build_district_sampling_registry.py text eol=lf
+# Sealed climate package: preserve its exact SHA-256 across Git checkouts.
+/data/climate/packages/v1.0.0/*.tar.gz binary
+/data/climate/packages/v1.0.0/PACKAGE_MANIFEST.json -text
+/src/acquire/package_climate_data.py text eol=lf
