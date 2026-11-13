@@ -1,0 +1,51 @@
+{
+  "schema_version": "crop-evidence-research-v1",
+  "activation_status": "inactive_candidate",
+  "input_rows": 7834,
+  "crops": 29,
+  "regions": 14,
+  "source_pdfs_in_csv": 310,
+  "source_documents": 318,
+  "retained_calendars": 366,
+  "inventoried_calendars": 380,
+  "entries": 7834,
+  "source_entries": 8191,
+  "repeated_week_groups": 124,
+  "ambiguous_entry_lineage": 0,
+  "stage_resolved_entry_lineage": 221,
+  "missing_values": {
+    "crop": 0,
+    "season": 0,
+    "region": 0,
+    "district_coverage": 0,
+    "standard_week": 0,
+    "month": 2,
+    "growth_stage": 939,
+    "duration_min_days": 0,
+    "duration_max_days": 0,
+    "rainfall_mm": 0,
+    "temp_min_c": 0,
+    "temp_max_c": 0,
+    "temp_mean_c": 0,
+    "humidity_mean_pct": 1,
+    "sunshine_hours": 0,
+    "wind_speed_kmh": 25,
+    "source_pdf": 0,
+    "source_page": 0
+  },
+  "month_corrections": 106,
+  "candidate_evidence": 17,
+  "executable_rules": 0,
+  "checks": [
+    "Every retained row matched to a source table and numeric weather values; ambiguous columns explicitly retained",
+    "64 distinct district mappings; exact regional membership and finite numeric/range checks",
+    "No week-to-date conversion, cycle offsets, regional substitution or rule activation"
+  ],
+  "limitations": [
+    "Source climate period, week standard and aggregation unresolved",
+    "PDF hashes verified at import; original PDFs remain external with rights/download-log gaps",
+    "Original upstream exclusions/deduplication retained in audit, not repeated on normalized entries",
+    "Source-table identity is provisional; human cycle/variant review pending",
+    "Whole-corpus extraction snapshot preserves context, not verification of every scientific statement"
+  ]
+}

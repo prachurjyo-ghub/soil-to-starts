@@ -1,0 +1,18 @@
+{
+  "inputs": {
+    "data/catalog/evidence_inputs/documents.jsonl.gz": {
+      "sha256": "a488c43e58cfbb57f6f8760173618fb37630022dade586dc5d09ab992e30e0b2",
+      "method": "exact binary bytes"
+    },
+    "scripts/audit_crop_source_semantics.py": {
+      "sha256": "9a41b69706404f1b4b368b33a97e1f605d7b8b5083e24497e99b59853edc62f7",
+      "method": "UTF-8 bytes with CRLF normalized to LF"
+    }
+  },
+  "outputs": {
+    "document_definition_leads.json": "c56e4702b8a3ad198c913a7c96658262ea5e15b72c2f449e34e73d01d4b1041b",
+    "lentil_region_comparison.json": "35ea27a33b43bfde6d0fee63ad3c4bb4df06aaaed45207d374930832e479ed14",
+    "interval_wording_leads.json": "7669690350f60186f8512ea4dbef0fb4a2d11fe82c9f217d0d9d973985ea2b32",
+    "summary.json": "17f1af78f3e49bdce4c41b689ad0873321940012c5999eb12b98d4e5ac2df9ff"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "checked_on": "2026-11-13",
+  "reviewer_type": "assistant; no independent human approval",
+  "sources": [
+    {
+      "title": "Sensitivity of Crops to Weather & Climate",
+      "organization": "Department of Agricultural Extension, hosted by BAMIS",
+      "url": "https://www.bamis.gov.bd/res/attachment/2020/02/16/13310.pdf",
+      "pdf_pages": 30,
+      "relevant_pdf_pages_1_based": [25],
+      "method": "Published PDF text inspected with web retrieval; image screenshot retrieval failed with cache miss",
+      "finding": "Explains that crop calendars contain stages, normal weather, crop requirements, warnings and pest/disease conditions as distinct information roles.",
+      "not_established": "No collection-specific climate reference period, standard-week convention or per-field aggregation was established from this material.",
+      "publication_date_or_version": null,
+      "downloaded_bytes_sha256": null,
+      "reuse_rights": "unreviewed; no original PDF or images copied into the repository"
+    },
+    {
+      "title": "Concept & Scope of Agrometeorology",
+      "organization": "Department of Agricultural Extension, hosted by BAMIS",
+      "url": "https://www.bamis.gov.bd/res/attachment/2020/02/16/13328.pdf",
+      "pdf_pages": 30,
+      "relevant_pdf_pages_1_based": [11],
+      "method": "Published PDF text inspected with web retrieval; sample-calendar screenshot retrieval failed with cache miss",
+      "finding": "Discusses calendar weather warnings, normal weather and conditions favourable to pests and diseases. General observation descriptions do not establish how the retained regional normals were computed.",
+      "not_established": "No verified definition of daily/weekly aggregation, reference years or standard-week date boundaries for the imported calendar collection.",
+      "publication_date_or_version": null,
+      "downloaded_bytes_sha256": null,
+      "reuse_rights": "unreviewed; no original PDF or images copied into the repository"
+    },
+    {
+      "title": "Lentil regional calendar listing",
+      "url": "https://www.bamis.gov.bd/en/calendar/1/58/",
+      "method": "Official listing inspected through web search",
+      "finding": "Lists 13 regional choices, consistent with the 13 Lentil documents in the preserved extraction. Rangamati is not among the listed regions; absence does not establish unsuitability."
+    },
+    {
+      "title": "Rajshahi Lentil calendar page",
+      "url": "https://www.bamis.gov.bd/en/calendar/1/58/2/",
+      "observed_iframe_url": "https://www.bamis.gov.bd/res/public/calendars/2019/11/14/8725.pdf",
+      "method": "Page inspected and iframe link followed; PDF retrieval returned cache miss",
+      "finding": "The direct PDF URL was observed in the official page, not inferred from its filename. Online byte equality was not verified; original local PDF inspection uses the pinned local source hash."
+    }
+  ],
+  "searches": [
+    "site:bamis.gov.bd crop weather calendar normal 1981",
+    "site:bamis.gov.bd standard week calendar",
+    "site:bamis.gov.bd crop weather calendar rainfall sunshine weekly methodology",
+    "site:bamis.gov.bd normal weather 30 year",
+    "site:bamis.gov.bd standard meteorological week",
+    "site:bamis.gov.bd crop weather calendar 1981-2010"
+  ],
+  "search_limitations": "Searches and two training documents are a bounded investigation, not an exhaustive review of BAMIS/BMD methodology. Missing definitions and permissions remain unresolved. Public URL availability is not a reuse license."
+}

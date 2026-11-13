@@ -1,0 +1,5215 @@
+[
+  {
+    "calendar_id": "calendar-5fc168c845a7d24bfd6d",
+    "source_id": "bamis_10932_6b41ac94",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Kharif 1)/Rajshahi/10932.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10932_6b41ac94_p001_t001",
+    "crop_folder": "Green Gram (Kharif 1)",
+    "region": "Rajshahi",
+    "retained_entries": 10,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-0f9cf605e2d6bec03c28",
+    "source_id": "bamis_10933_ed3b994e",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Kharif 1)/Mymensingh/10933.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10933_ed3b994e_p001_t001",
+    "crop_folder": "Green Gram (Kharif 1)",
+    "region": "Mymensingh",
+    "retained_entries": 10,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-0bf61be79c9680d8640f",
+    "source_id": "bamis_10934_5fff57fa",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Kharif 1)/Khulna/10934.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10934_5fff57fa_p001_t001",
+    "crop_folder": "Green Gram (Kharif 1)",
+    "region": "Khulna",
+    "retained_entries": 10,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-26f85dec3269be19f01a",
+    "source_id": "bamis_10935_302e0e9a",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Kharif 1)/Dhaka/10935.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10935_302e0e9a_p001_t001",
+    "crop_folder": "Green Gram (Kharif 1)",
+    "region": "Dhaka",
+    "retained_entries": 10,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-d287fd465168426dcfc3",
+    "source_id": "bamis_10936_aedfb69b",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Kharif 1)/Bogura/10936.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10936_aedfb69b_p001_t001",
+    "crop_folder": "Green Gram (Kharif 1)",
+    "region": "Bogura",
+    "retained_entries": 10,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-f3f04569287463146663",
+    "source_id": "bamis_10946_6305be66",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Robi)/Rangpur/10946.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10946_6305be66_p001_t001",
+    "crop_folder": "Green Gram (Robi)",
+    "region": "Rangpur",
+    "retained_entries": 10,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-db60cfc8cb543e381281",
+    "source_id": "bamis_10947_52657d19",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Robi)/Mymensingh/10947.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10947_52657d19_p001_t001",
+    "crop_folder": "Green Gram (Robi)",
+    "region": "Mymensingh",
+    "retained_entries": 10,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-a855ad7f0c5aec30d4cf",
+    "source_id": "bamis_10948_cef4d9fe",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Robi)/Khulna/10948.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10948_cef4d9fe_p001_t001",
+    "crop_folder": "Green Gram (Robi)",
+    "region": "Khulna",
+    "retained_entries": 10,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-108641dcb27f9ca2cc19",
+    "source_id": "bamis_10949_da883d0e",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Robi)/Jashore/10949.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10949_da883d0e_p001_t001",
+    "crop_folder": "Green Gram (Robi)",
+    "region": "Jashore",
+    "retained_entries": 10,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-6abf9fccb8c9f73cc8f7",
+    "source_id": "bamis_10950_0d5c32c5",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Robi)/Faridpur/10950.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10950_0d5c32c5_p001_t001",
+    "crop_folder": "Green Gram (Robi)",
+    "region": "Faridpur",
+    "retained_entries": 10,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-589ee1701d5b0575aa1f",
+    "source_id": "bamis_10951_081d9319",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Robi)/Dinajpur/10951.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10951_081d9319_p001_t001",
+    "crop_folder": "Green Gram (Robi)",
+    "region": "Dinajpur",
+    "retained_entries": 10,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-a6ce2fd5f1a3c7213e84",
+    "source_id": "bamis_10952_15ebb1b5",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Robi)/Dhaka/10952.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10952_15ebb1b5_p001_t001",
+    "crop_folder": "Green Gram (Robi)",
+    "region": "Dhaka",
+    "retained_entries": 10,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-cb50580556da4179f01f",
+    "source_id": "bamis_10953_d2b06755",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Robi)/Chattogram/10953.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10953_d2b06755_p001_t001",
+    "crop_folder": "Green Gram (Robi)",
+    "region": "Chattogram",
+    "retained_entries": 10,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-96288057bf26fc5967ac",
+    "source_id": "bamis_10954_0f177985",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Robi)/Barishal/10954.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10954_0f177985_p001_t001",
+    "crop_folder": "Green Gram (Robi)",
+    "region": "Barishal",
+    "retained_entries": 10,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b919d0e689bfa7ddbc2e",
+    "source_id": "bamis_10966_2ca0acd8",
+    "source_pdf": "BAMIS_All_Crops/Jute/Rangpur/10966.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10966_2ca0acd8_p001_t001",
+    "crop_folder": "Jute",
+    "region": "Rangpur",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-11df1b563d1c17e32406",
+    "source_id": "bamis_10967_c9f27ae8",
+    "source_pdf": "BAMIS_All_Crops/Jute/Rajshahi/10967.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10967_c9f27ae8_p001_t001",
+    "crop_folder": "Jute",
+    "region": "Rajshahi",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-58c80f900162cceeaaf9",
+    "source_id": "bamis_10968_e758969b",
+    "source_pdf": "BAMIS_All_Crops/Jute/Mymensingh/10968.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10968_e758969b_p001_t001",
+    "crop_folder": "Jute",
+    "region": "Mymensingh",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-41cc6cb3f80699ac4dc3",
+    "source_id": "bamis_10969_4ac837ac",
+    "source_pdf": "BAMIS_All_Crops/Jute/Khulna/10969.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10969_4ac837ac_p001_t001",
+    "crop_folder": "Jute",
+    "region": "Khulna",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b48f5efa8ac394bc70db",
+    "source_id": "bamis_10970_001f6c19",
+    "source_pdf": "BAMIS_All_Crops/Jute/Jashore/10970.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10970_001f6c19_p001_t001",
+    "crop_folder": "Jute",
+    "region": "Jashore",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-05a19d625832a542b9de",
+    "source_id": "bamis_10971_7ad35baf",
+    "source_pdf": "BAMIS_All_Crops/Jute/Faridpur/10971.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10971_7ad35baf_p001_t001",
+    "crop_folder": "Jute",
+    "region": "Faridpur",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-ec5d252f8e7b8a412147",
+    "source_id": "bamis_10972_264b0d10",
+    "source_pdf": "BAMIS_All_Crops/Jute/Dinajpur/10972.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10972_264b0d10_p001_t001",
+    "crop_folder": "Jute",
+    "region": "Dinajpur",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-50db62bc5583a03abfb2",
+    "source_id": "bamis_10973_7e792663",
+    "source_pdf": "BAMIS_All_Crops/Jute/Dhaka/10973.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10973_7e792663_p001_t001",
+    "crop_folder": "Jute",
+    "region": "Dhaka",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-da08e55a1f9dcc980abe",
+    "source_id": "bamis_10974_047ef491",
+    "source_pdf": "BAMIS_All_Crops/Jute/Cumilla/10974.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10974_047ef491_p001_t001",
+    "crop_folder": "Jute",
+    "region": "Cumilla",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-02a6f1cce6e8510c1a5f",
+    "source_id": "bamis_10975_26fe8406",
+    "source_pdf": "BAMIS_All_Crops/Jute/Bogura/10975.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10975_26fe8406_p001_t001",
+    "crop_folder": "Jute",
+    "region": "Bogura",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-834219791dbb8ce218ce",
+    "source_id": "bamis_10976_c9b18672",
+    "source_pdf": "BAMIS_All_Crops/Jute/Barishal/10976.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10976_c9b18672_p001_t001",
+    "crop_folder": "Jute",
+    "region": "Barishal",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-798541ac478371a70067",
+    "source_id": "bamis_10977_4650fecf",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Barishal/10977.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10977_4650fecf_p001_t001",
+    "crop_folder": "Mustard",
+    "region": "Barishal",
+    "retained_entries": 14,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-8cfa5c37f53a258389d6",
+    "source_id": "bamis_10978_d539a790",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Bogura/10978.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10978_d539a790_p001_t001",
+    "crop_folder": "Mustard",
+    "region": "Bogura",
+    "retained_entries": 14,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-6dfe11458a764e472eb4",
+    "source_id": "bamis_10979_c326bf1b",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Chattogram/10979.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10979_c326bf1b_p001_t001",
+    "crop_folder": "Mustard",
+    "region": "Chattogram",
+    "retained_entries": 14,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-0b58560cb3325db6a501",
+    "source_id": "bamis_10980_23cfa211",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Cumilla/10980.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10980_23cfa211_p001_t001",
+    "crop_folder": "Mustard",
+    "region": "Cumilla",
+    "retained_entries": 14,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-615fc8411b600bcbf040",
+    "source_id": "bamis_10981_5d1020fa",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Dhaka/10981.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10981_5d1020fa_p001_t001",
+    "crop_folder": "Mustard",
+    "region": "Dhaka",
+    "retained_entries": 14,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-d182aa532e48f68d0ef4",
+    "source_id": "bamis_10982_708ab487",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Faridpur/10982.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10982_708ab487_p001_t001",
+    "crop_folder": "Mustard",
+    "region": "Faridpur",
+    "retained_entries": 14,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-3fbed3b9e72dff0df31e",
+    "source_id": "bamis_10983_86c11015",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Jashore/10983.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10983_86c11015_p001_t001",
+    "crop_folder": "Mustard",
+    "region": "Jashore",
+    "retained_entries": 14,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b7c416e9b8d75c594cc2",
+    "source_id": "bamis_10984_035f9f66",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Khulna/10984.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10984_035f9f66_p001_t001",
+    "crop_folder": "Mustard",
+    "region": "Khulna",
+    "retained_entries": 14,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-beae89e0ad6c8443ee39",
+    "source_id": "bamis_10985_63b34ca0",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Mymensingh/10985.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10985_63b34ca0_p001_t001",
+    "crop_folder": "Mustard",
+    "region": "Mymensingh",
+    "retained_entries": 14,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-075146811f5710f6f831",
+    "source_id": "bamis_10986_8cc6ee56",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Rajshahi/10986.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10986_8cc6ee56_p001_t001",
+    "crop_folder": "Mustard",
+    "region": "Rajshahi",
+    "retained_entries": 14,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-673df64a501f0c84c399",
+    "source_id": "bamis_10987_d19b797a",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Rangpur/10987.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10987_d19b797a_p001_t001",
+    "crop_folder": "Mustard",
+    "region": "Rangpur",
+    "retained_entries": 14,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b4809511ae7cec23a51c",
+    "source_id": "bamis_10988_6ead8eb8",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Sylhet/10988.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_10988_6ead8eb8_p001_t001",
+    "crop_folder": "Mustard",
+    "region": "Sylhet",
+    "retained_entries": 14,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-55e313cd7a17b99c8a47",
+    "source_id": "bamis_11004_e34ad23d",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Dinajpur/11004.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_11004_e34ad23d_p001_t001",
+    "crop_folder": "Mustard",
+    "region": "Dinajpur",
+    "retained_entries": 14,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-4820bf80296a1054b896",
+    "source_id": "bamis_2060_b0ae6e30",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Sylhet/2060.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_2060_b0ae6e30_p001_t001",
+    "crop_folder": "Wheat",
+    "region": "Sylhet",
+    "retained_entries": 0,
+    "status": "no_retained_entries",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Wheat/Sylhet/2060.pdf",
+        "source_page": 1,
+        "reason": "unverified_low_resolution_scan"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-839d40ee7b1956163bd4",
+    "source_id": "bamis_24972_e927dd58",
+    "source_pdf": "BAMIS_All_Crops/Mango/Dinajpur/24972.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_24972_e927dd58_p001_t001",
+    "crop_folder": "Mango",
+    "region": "Dinajpur",
+    "retained_entries": 24,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-5e90dee49899373c29bc",
+    "source_id": "bamis_24974_724a9453",
+    "source_pdf": "BAMIS_All_Crops/Mango/Jashore/24974.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_24974_724a9453_p001_t001",
+    "crop_folder": "Mango",
+    "region": "Jashore",
+    "retained_entries": 24,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-0d7eb7ba99fcd5c35497",
+    "source_id": "bamis_24976_c82aa0c5",
+    "source_pdf": "BAMIS_All_Crops/Mango/Khulna/24976.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_24976_c82aa0c5_p001_t001",
+    "crop_folder": "Mango",
+    "region": "Khulna",
+    "retained_entries": 25,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-497b1b3cdc7c47f30fdd",
+    "source_id": "bamis_24980_ec955cdc",
+    "source_pdf": "BAMIS_All_Crops/Mango/Rangamati/24980.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_24980_ec955cdc_p001_t001",
+    "crop_folder": "Mango",
+    "region": "Rangamati",
+    "retained_entries": 25,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-6c1828c0af42346a111c",
+    "source_id": "bamis_24982_4dba62e0",
+    "source_pdf": "BAMIS_All_Crops/Mango/Rangpur/24982.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_24982_4dba62e0_p001_t001",
+    "crop_folder": "Mango",
+    "region": "Rangpur",
+    "retained_entries": 24,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-3605b15f50cbcf7f0424",
+    "source_id": "bamis_24987_c9127486",
+    "source_pdf": "BAMIS_All_Crops/Jackfruit/Bogura/24987.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_24987_c9127486_p001_t001",
+    "crop_folder": "Jackfruit",
+    "region": "Bogura",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-741d66d97c1e72f257b5",
+    "source_id": "bamis_24989_e14bb0d1",
+    "source_pdf": "BAMIS_All_Crops/Jackfruit/Chattogram/24989.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_24989_e14bb0d1_p001_t001",
+    "crop_folder": "Jackfruit",
+    "region": "Chattogram",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-0fd7f64b538194993ab6",
+    "source_id": "bamis_24991_4a62185d",
+    "source_pdf": "BAMIS_All_Crops/Jackfruit/Dhaka/24991.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_24991_4a62185d_p001_t001",
+    "crop_folder": "Jackfruit",
+    "region": "Dhaka",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-4e0144593334f93b21a5",
+    "source_id": "bamis_24993_0b3395d3",
+    "source_pdf": "BAMIS_All_Crops/Jackfruit/Dinajpur/24993.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_24993_0b3395d3_p001_t001",
+    "crop_folder": "Jackfruit",
+    "region": "Dinajpur",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-a73a2ddec869b47854f0",
+    "source_id": "bamis_24995_a575d661",
+    "source_pdf": "BAMIS_All_Crops/Jackfruit/Jashore/24995.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_24995_a575d661_p001_t001",
+    "crop_folder": "Jackfruit",
+    "region": "Jashore",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-19ccbfea3928ed68255e",
+    "source_id": "bamis_24997_d43ea406",
+    "source_pdf": "BAMIS_All_Crops/Jackfruit/Mymensingh/24997.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_24997_d43ea406_p001_t001",
+    "crop_folder": "Jackfruit",
+    "region": "Mymensingh",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-5ee3fe41825e6d04090a",
+    "source_id": "bamis_24999_79f81aa8",
+    "source_pdf": "BAMIS_All_Crops/Jackfruit/Rajshahi/24999.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_24999_79f81aa8_p001_t001",
+    "crop_folder": "Jackfruit",
+    "region": "Rajshahi",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-f9881749dabea10e4a1a",
+    "source_id": "bamis_25001_7c800e74",
+    "source_pdf": "BAMIS_All_Crops/Jackfruit/Rangamati/25001.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25001_7c800e74_p001_t001",
+    "crop_folder": "Jackfruit",
+    "region": "Rangamati",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-3b016e59c16ca2f30d02",
+    "source_id": "bamis_25003_18aa8548",
+    "source_pdf": "BAMIS_All_Crops/Jackfruit/Rangpur/25003.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25003_18aa8548_p001_t001",
+    "crop_folder": "Jackfruit",
+    "region": "Rangpur",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-ac1625af2f398a4af084",
+    "source_id": "bamis_25072_9d633e18",
+    "source_pdf": "BAMIS_All_Crops/Papaya/Barishal/25072.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25072_9d633e18_p001_t001",
+    "crop_folder": "Papaya",
+    "region": "Barishal",
+    "retained_entries": 29,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Papaya/Barishal/25072.pdf",
+        "source_page": 1,
+        "calendar_column": 30,
+        "reason": "ambiguous_or_compressed_week_label",
+        "label": "-12"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-f49712af5145f61e31a1",
+    "source_id": "bamis_25074_5733d23b",
+    "source_pdf": "BAMIS_All_Crops/Papaya/Bogura/25074.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25074_5733d23b_p001_t001",
+    "crop_folder": "Papaya",
+    "region": "Bogura",
+    "retained_entries": 29,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Papaya/Bogura/25074.pdf",
+        "source_page": 1,
+        "calendar_column": 30,
+        "reason": "ambiguous_or_compressed_week_label",
+        "label": "-12"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-60917e3bc3567f34c9cd",
+    "source_id": "bamis_25076_2290e3c7",
+    "source_pdf": "BAMIS_All_Crops/Papaya/Dhaka/25076.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25076_2290e3c7_p001_t001",
+    "crop_folder": "Papaya",
+    "region": "Dhaka",
+    "retained_entries": 29,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Papaya/Dhaka/25076.pdf",
+        "source_page": 1,
+        "calendar_column": 30,
+        "reason": "ambiguous_or_compressed_week_label",
+        "label": "-12"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-649b2bffba6fe16fa637",
+    "source_id": "bamis_25078_a337e9f9",
+    "source_pdf": "BAMIS_All_Crops/Papaya/Dinajpur/25078.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25078_a337e9f9_p001_t001",
+    "crop_folder": "Papaya",
+    "region": "Dinajpur",
+    "retained_entries": 29,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Papaya/Dinajpur/25078.pdf",
+        "source_page": 1,
+        "calendar_column": 30,
+        "reason": "ambiguous_or_compressed_week_label",
+        "label": "-12"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-56f343d34a9d2c86e37f",
+    "source_id": "bamis_25080_90ca73a6",
+    "source_pdf": "BAMIS_All_Crops/Papaya/Jashore/25080.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25080_90ca73a6_p001_t001",
+    "crop_folder": "Papaya",
+    "region": "Jashore",
+    "retained_entries": 29,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Papaya/Jashore/25080.pdf",
+        "source_page": 1,
+        "calendar_column": 30,
+        "reason": "ambiguous_or_compressed_week_label",
+        "label": "-12"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-dca17bbb6a258b0c3f4c",
+    "source_id": "bamis_25082_e46f5902",
+    "source_pdf": "BAMIS_All_Crops/Papaya/Mymensingh/25082.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25082_e46f5902_p001_t001",
+    "crop_folder": "Papaya",
+    "region": "Mymensingh",
+    "retained_entries": 29,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Papaya/Mymensingh/25082.pdf",
+        "source_page": 1,
+        "calendar_column": 30,
+        "reason": "ambiguous_or_compressed_week_label",
+        "label": "-12"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-b2586530a7236a229100",
+    "source_id": "bamis_25084_5267ecc3",
+    "source_pdf": "BAMIS_All_Crops/Papaya/Rajshahi/25084.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25084_5267ecc3_p001_t001",
+    "crop_folder": "Papaya",
+    "region": "Rajshahi",
+    "retained_entries": 29,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Papaya/Rajshahi/25084.pdf",
+        "source_page": 1,
+        "calendar_column": 30,
+        "reason": "ambiguous_or_compressed_week_label",
+        "label": "-12"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-cdd9a0ed50936e19c3e5",
+    "source_id": "bamis_25110_b923ecda",
+    "source_pdf": "BAMIS_All_Crops/Cotton/Bogura/25110.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25110_b923ecda_p001_t001",
+    "crop_folder": "Cotton",
+    "region": "Bogura",
+    "retained_entries": 26,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-c1bf4eaa9b594eef4958",
+    "source_id": "bamis_25112_7c88053b",
+    "source_pdf": "BAMIS_All_Crops/Cotton/Dhaka/25112.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25112_7c88053b_p001_t001",
+    "crop_folder": "Cotton",
+    "region": "Dhaka",
+    "retained_entries": 26,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-f706cad8c7a3796b771a",
+    "source_id": "bamis_25114_241eb8ab",
+    "source_pdf": "BAMIS_All_Crops/Cotton/Dinajpur/25114.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25114_241eb8ab_p001_t001",
+    "crop_folder": "Cotton",
+    "region": "Dinajpur",
+    "retained_entries": 26,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-d7e527fd445d4ec5e321",
+    "source_id": "bamis_25116_83177e1f",
+    "source_pdf": "BAMIS_All_Crops/Cotton/Jashore/25116.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25116_83177e1f_p001_t001",
+    "crop_folder": "Cotton",
+    "region": "Jashore",
+    "retained_entries": 26,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-5ba8e69d6af1799f6de6",
+    "source_id": "bamis_25118_51a6202e",
+    "source_pdf": "BAMIS_All_Crops/Cotton/Mymensingh/25118.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25118_51a6202e_p001_t001",
+    "crop_folder": "Cotton",
+    "region": "Mymensingh",
+    "retained_entries": 26,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-d325f0d8574cd2f7dd28",
+    "source_id": "bamis_25120_fd2283db",
+    "source_pdf": "BAMIS_All_Crops/Cotton/Rajshahi/25120.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25120_fd2283db_p001_t001",
+    "crop_folder": "Cotton",
+    "region": "Rajshahi",
+    "retained_entries": 26,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-cf6f0ea9dc6b87be5361",
+    "source_id": "bamis_25122_39e422ac",
+    "source_pdf": "BAMIS_All_Crops/Cotton/Rangpur/25122.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25122_39e422ac_p001_t001",
+    "crop_folder": "Cotton",
+    "region": "Rangpur",
+    "retained_entries": 26,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-f7208b2b72b6d6e51704",
+    "source_id": "bamis_25195_384f1fbd",
+    "source_pdf": "BAMIS_All_Crops/Guava/Dhaka/25195.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25195_384f1fbd_p001_t001",
+    "crop_folder": "Guava",
+    "region": "Dhaka",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-baf4e4a05442056e210f",
+    "source_id": "bamis_25197_2559cbce",
+    "source_pdf": "BAMIS_All_Crops/Guava/Dinajpur/25197.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25197_2559cbce_p001_t001",
+    "crop_folder": "Guava",
+    "region": "Dinajpur",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-259e31bfce04fa6bb7e8",
+    "source_id": "bamis_25199_e0d11507",
+    "source_pdf": "BAMIS_All_Crops/Guava/Faridpur/25199.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25199_e0d11507_p001_t001",
+    "crop_folder": "Guava",
+    "region": "Faridpur",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-3e62d45a83f66b8f5654",
+    "source_id": "bamis_25201_121e9900",
+    "source_pdf": "BAMIS_All_Crops/Guava/Jashore/25201.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25201_121e9900_p001_t001",
+    "crop_folder": "Guava",
+    "region": "Jashore",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-3f543944c7d6c28d62c6",
+    "source_id": "bamis_25203_87128f4e",
+    "source_pdf": "BAMIS_All_Crops/Guava/Khulna/25203.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25203_87128f4e_p001_t001",
+    "crop_folder": "Guava",
+    "region": "Khulna",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-022435bc3764e15b93ae",
+    "source_id": "bamis_25205_3b1afb49",
+    "source_pdf": "BAMIS_All_Crops/Guava/Mymensingh/25205.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25205_3b1afb49_p001_t001",
+    "crop_folder": "Guava",
+    "region": "Mymensingh",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-0c244446bb15b2896efe",
+    "source_id": "bamis_25207_4e573124",
+    "source_pdf": "BAMIS_All_Crops/Guava/Rajshahi/25207.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25207_4e573124_p001_t001",
+    "crop_folder": "Guava",
+    "region": "Rajshahi",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-e3dc7b0955283afc1a71",
+    "source_id": "bamis_25589_9897ddb9",
+    "source_pdf": "BAMIS_All_Crops/Guava/Barishal/25589.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25589_9897ddb9_p001_t001",
+    "crop_folder": "Guava",
+    "region": "Barishal",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-ed90f7f1254b83d1a465",
+    "source_id": "bamis_25591_d97a6b54",
+    "source_pdf": "BAMIS_All_Crops/Banana/Barishal/25591.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25591_d97a6b54_p001_t001",
+    "crop_folder": "Banana",
+    "region": "Barishal",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Banana/Barishal/25591.pdf",
+        "source_page": 1,
+        "calendar_column": 31,
+        "reason": "ambiguous_or_compressed_week_label",
+        "label": "-2"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-0f29f97640e3ed22a42c",
+    "source_id": "bamis_25593_6dba7d23",
+    "source_pdf": "BAMIS_All_Crops/Banana/Bogura/25593.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25593_6dba7d23_p001_t001",
+    "crop_folder": "Banana",
+    "region": "Bogura",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Banana/Bogura/25593.pdf",
+        "source_page": 1,
+        "calendar_column": 31,
+        "reason": "ambiguous_or_compressed_week_label",
+        "label": "-2"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-271a4970a812d6979ed0",
+    "source_id": "bamis_25595_6f0f1b21",
+    "source_pdf": "BAMIS_All_Crops/Banana/Dhaka/25595.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25595_6f0f1b21_p001_t001",
+    "crop_folder": "Banana",
+    "region": "Dhaka",
+    "retained_entries": 0,
+    "status": "no_retained_entries",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Banana/Dhaka/25595.pdf",
+        "source_page": 1,
+        "reason": "printed_crop_labels_conflict",
+        "header_crop": "Papaya",
+        "title_crop": "Banana"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-ff1e35ec75f2c7153e70",
+    "source_id": "bamis_25597_a51b5e61",
+    "source_pdf": "BAMIS_All_Crops/Banana/Jashore/25597.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25597_a51b5e61_p001_t001",
+    "crop_folder": "Banana",
+    "region": "Jashore",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Banana/Jashore/25597.pdf",
+        "source_page": 1,
+        "calendar_column": 31,
+        "reason": "ambiguous_or_compressed_week_label",
+        "label": "-2"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-06da79a69b595b331a16",
+    "source_id": "bamis_25599_1ba0fb15",
+    "source_pdf": "BAMIS_All_Crops/Banana/Mymensingh/25599.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25599_1ba0fb15_p001_t001",
+    "crop_folder": "Banana",
+    "region": "Mymensingh",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Banana/Mymensingh/25599.pdf",
+        "source_page": 1,
+        "calendar_column": 31,
+        "reason": "ambiguous_or_compressed_week_label",
+        "label": "-2"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-89bea2563a2e2070578d",
+    "source_id": "bamis_25601_c544eee8",
+    "source_pdf": "BAMIS_All_Crops/Banana/Rangamati/25601.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25601_c544eee8_p001_t001",
+    "crop_folder": "Banana",
+    "region": "Rangamati",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Banana/Rangamati/25601.pdf",
+        "source_page": 1,
+        "calendar_column": 31,
+        "reason": "ambiguous_or_compressed_week_label",
+        "label": "-2"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-c22ae810ddd15aae7e3b",
+    "source_id": "bamis_25603_20c8736e",
+    "source_pdf": "BAMIS_All_Crops/Banana/Rangpur/25603.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_25603_20c8736e_p001_t001",
+    "crop_folder": "Banana",
+    "region": "Rangpur",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Banana/Rangpur/25603.pdf",
+        "source_page": 1,
+        "calendar_column": 31,
+        "reason": "ambiguous_or_compressed_week_label",
+        "label": "-2"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-b39f91b2e0b4f5348045",
+    "source_id": "bamis_26121_b0ffd3fc",
+    "source_pdf": "BAMIS_All_Crops/Litchi/Bogura/26121.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26121_b0ffd3fc_p001_t001",
+    "crop_folder": "Litchi",
+    "region": "Bogura",
+    "retained_entries": 24,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-d0340ef516974aa5ebce",
+    "source_id": "bamis_26123_7ae52712",
+    "source_pdf": "BAMIS_All_Crops/Litchi/Dinajpur/26123.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26123_7ae52712_p001_t001",
+    "crop_folder": "Litchi",
+    "region": "Dinajpur",
+    "retained_entries": 24,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-daee36fd9ea64d440c79",
+    "source_id": "bamis_26125_11410640",
+    "source_pdf": "BAMIS_All_Crops/Litchi/Jashore/26125.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26125_11410640_p001_t001",
+    "crop_folder": "Litchi",
+    "region": "Jashore",
+    "retained_entries": 24,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-36a08503244227833f09",
+    "source_id": "bamis_26127_ea7514a0",
+    "source_pdf": "BAMIS_All_Crops/Litchi/Mymensingh/26127.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26127_ea7514a0_p001_t001",
+    "crop_folder": "Litchi",
+    "region": "Mymensingh",
+    "retained_entries": 24,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-c5a28ebdb87d0084851b",
+    "source_id": "bamis_26129_4a9a9bfb",
+    "source_pdf": "BAMIS_All_Crops/Litchi/Rajshahi/26129.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26129_4a9a9bfb_p001_t001",
+    "crop_folder": "Litchi",
+    "region": "Rajshahi",
+    "retained_entries": 24,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-358eff5a3e862b16c127",
+    "source_id": "bamis_26131_1b9abd19",
+    "source_pdf": "BAMIS_All_Crops/Litchi/Rangamati/26131.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26131_1b9abd19_p001_t001",
+    "crop_folder": "Litchi",
+    "region": "Rangamati",
+    "retained_entries": 24,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-dd6da1bc46519ddf03d9",
+    "source_id": "bamis_26133_b5df50ff",
+    "source_pdf": "BAMIS_All_Crops/Litchi/Rangpur/26133.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26133_b5df50ff_p001_t001",
+    "crop_folder": "Litchi",
+    "region": "Rangpur",
+    "retained_entries": 24,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-9cb9f3a92fe301534cb3",
+    "source_id": "bamis_26245_336ac38d",
+    "source_pdf": "BAMIS_All_Crops/Jujube/Barishal/26245.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26245_336ac38d_p001_t001",
+    "crop_folder": "Jujube",
+    "region": "Barishal",
+    "retained_entries": 32,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-33a4a94bb798e90eae6f",
+    "source_id": "bamis_26247_02d8cef0",
+    "source_pdf": "BAMIS_All_Crops/Jujube/Chattogram/26247.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26247_02d8cef0_p001_t001",
+    "crop_folder": "Jujube",
+    "region": "Chattogram",
+    "retained_entries": 32,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-c823b6859c3908c218ab",
+    "source_id": "bamis_26249_8cc9f89d",
+    "source_pdf": "BAMIS_All_Crops/Jujube/Dhaka/26249.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26249_8cc9f89d_p001_t001",
+    "crop_folder": "Jujube",
+    "region": "Dhaka",
+    "retained_entries": 32,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-72543209967aabb55feb",
+    "source_id": "bamis_26251_fdbd675d",
+    "source_pdf": "BAMIS_All_Crops/Jujube/Khulna/26251.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26251_fdbd675d_p001_t001",
+    "crop_folder": "Jujube",
+    "region": "Khulna",
+    "retained_entries": 32,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-5d8a818555f6eba7f939",
+    "source_id": "bamis_26253_81d688c2",
+    "source_pdf": "BAMIS_All_Crops/Jujube/Rajshahi/26253.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26253_81d688c2_p001_t001",
+    "crop_folder": "Jujube",
+    "region": "Rajshahi",
+    "retained_entries": 32,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-df0a945c9ad038e5352e",
+    "source_id": "bamis_26436_6e29c0f2",
+    "source_pdf": "BAMIS_All_Crops/Soybean/Rangpur/26436.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26436_6e29c0f2_p001_t001",
+    "crop_folder": "Soybean",
+    "region": "Rangpur",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b7f6889f535ce4b013ca",
+    "source_id": "bamis_26438_ce6d1b38",
+    "source_pdf": "BAMIS_All_Crops/Soybean/Barishal/26438.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26438_ce6d1b38_p001_t001",
+    "crop_folder": "Soybean",
+    "region": "Barishal",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-e4acf10f59a1cf8b9c8c",
+    "source_id": "bamis_26440_70a9b3a8",
+    "source_pdf": "BAMIS_All_Crops/Soybean/Chattogram/26440.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26440_70a9b3a8_p001_t001",
+    "crop_folder": "Soybean",
+    "region": "Chattogram",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-d8ecaffe0d28ae70fe96",
+    "source_id": "bamis_26442_25ce7e0f",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Barishal/26442.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26442_25ce7e0f_p001_t001",
+    "crop_folder": "Tomato",
+    "region": "Barishal",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-ce26a572cff82e2bd3d0",
+    "source_id": "bamis_26448_fa7f7e7b",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Bogura/26448.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26448_fa7f7e7b_p001_t001",
+    "crop_folder": "Tomato",
+    "region": "Bogura",
+    "retained_entries": 0,
+    "status": "no_retained_entries",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Tomato/Bogura/26448.pdf",
+        "reason": "duplicate_pdf"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-8a26321d9b3ac72b683d",
+    "source_id": "bamis_26450_18b5c074",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Chattogram/26450.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26450_18b5c074_p001_t001",
+    "crop_folder": "Tomato",
+    "region": "Chattogram",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-e407416e9893073a52b3",
+    "source_id": "bamis_26452_4604bce0",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Cumilla/26452.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26452_4604bce0_p001_t001",
+    "crop_folder": "Tomato",
+    "region": "Cumilla",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Tomato/Cumilla/26452.pdf",
+        "source_page": 1,
+        "calendar_column": 10,
+        "standard_week": 45,
+        "reason": "inconsistent_temperature_order"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Tomato/Cumilla/26452.pdf",
+        "source_page": 1,
+        "calendar_column": 16,
+        "standard_week": 51,
+        "reason": "missing_core_weather_value"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Tomato/Cumilla/26452.pdf",
+        "source_page": 1,
+        "calendar_column": 20,
+        "standard_week": 3,
+        "reason": "invalid_sunshine_hours"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Tomato/Cumilla/26452.pdf",
+        "source_page": 1,
+        "calendar_column": 21,
+        "standard_week": 4,
+        "reason": "invalid_wind_speed_kmh"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-51072f45bccc431b69bf",
+    "source_id": "bamis_26454_2a2da943",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Dhaka/26454.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26454_2a2da943_p001_t001",
+    "crop_folder": "Tomato",
+    "region": "Dhaka",
+    "retained_entries": 25,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-f5024e49a4ada397907b",
+    "source_id": "bamis_26454_2a2da943",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Dhaka/26454.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26454_2a2da943_p002_t001",
+    "crop_folder": "Tomato",
+    "region": "Dhaka",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Tomato/Dhaka/26454.pdf",
+        "source_page": 2,
+        "calendar_column": 11,
+        "standard_week": 15,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-57367f0b654c89f4fe4b",
+    "source_id": "bamis_26457_db5478df",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Dinajpur/26457.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26457_db5478df_p001_t001",
+    "crop_folder": "Tomato",
+    "region": "Dinajpur",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b40ebefac06f336912c4",
+    "source_id": "bamis_26457_db5478df",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Dinajpur/26457.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26457_db5478df_p002_t001",
+    "crop_folder": "Tomato",
+    "region": "Dinajpur",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Tomato/Dinajpur/26457.pdf",
+        "source_page": 2,
+        "calendar_column": 7,
+        "standard_week": 15,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-a47acf9d779e9171a44c",
+    "source_id": "bamis_26458_d0521744",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Jashore/26458.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26458_d0521744_p001_t001",
+    "crop_folder": "Tomato",
+    "region": "Jashore",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b832d9675688a45f9c55",
+    "source_id": "bamis_26458_d0521744",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Jashore/26458.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26458_d0521744_p002_t001",
+    "crop_folder": "Tomato",
+    "region": "Jashore",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-de276b0331f1bad34de6",
+    "source_id": "bamis_26460_30f2018a",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Khulna/26460.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26460_30f2018a_p001_t001",
+    "crop_folder": "Tomato",
+    "region": "Khulna",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-42b07c7725f31d0aa15e",
+    "source_id": "bamis_26460_30f2018a",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Khulna/26460.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26460_30f2018a_p002_t001",
+    "crop_folder": "Tomato",
+    "region": "Khulna",
+    "retained_entries": 0,
+    "status": "no_retained_entries",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Tomato/Khulna/26460.pdf",
+        "source_page": 2,
+        "reason": "printed_season_labels_conflict",
+        "header_season": "Rabi",
+        "title_season": "Kharif"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-b3db38fdc3e60b808574",
+    "source_id": "bamis_26462_3fde887c",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Mymensingh/26462.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26462_3fde887c_p001_t001",
+    "crop_folder": "Tomato",
+    "region": "Mymensingh",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Tomato/Mymensingh/26462.pdf",
+        "source_page": 1,
+        "calendar_column": 11,
+        "standard_week": 46,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-876ec37ecc1b382f49ee",
+    "source_id": "bamis_26462_3fde887c",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Mymensingh/26462.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26462_3fde887c_p002_t001",
+    "crop_folder": "Tomato",
+    "region": "Mymensingh",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-c1a3505c4c2faa3846bb",
+    "source_id": "bamis_26462_3fde887c",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Mymensingh/26462.pdf",
+    "source_page": 4,
+    "source_table_id": "bamis_26462_3fde887c_p004_t001",
+    "crop_folder": "Tomato",
+    "region": "Mymensingh",
+    "retained_entries": 0,
+    "status": "no_retained_entries",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-6d00e683c586c516c1e1",
+    "source_id": "bamis_26464_331f4570",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Rajshahi/26464.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26464_331f4570_p001_t001",
+    "crop_folder": "Tomato",
+    "region": "Rajshahi",
+    "retained_entries": 24,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Tomato/Rajshahi/26464.pdf",
+        "source_page": 1,
+        "calendar_column": 7,
+        "standard_week": 50,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-36be9d283fc6b5c5ef35",
+    "source_id": "bamis_26464_331f4570",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Rajshahi/26464.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26464_331f4570_p002_t001",
+    "crop_folder": "Tomato",
+    "region": "Rajshahi",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-4525f0713910caadbaa9",
+    "source_id": "bamis_26466_09d470fc",
+    "source_pdf": "BAMIS_All_Crops/Onion/Bogura/26466.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26466_09d470fc_p001_t001",
+    "crop_folder": "Onion",
+    "region": "Bogura",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-fc684f9133d4615d63ab",
+    "source_id": "bamis_26469_d65cea65",
+    "source_pdf": "BAMIS_All_Crops/Onion/Chattogram/26469.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26469_d65cea65_p001_t001",
+    "crop_folder": "Onion",
+    "region": "Chattogram",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-61bb209fd9a42a232317",
+    "source_id": "bamis_26470_bc3660e7",
+    "source_pdf": "BAMIS_All_Crops/Onion/Cumilla/26470.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26470_bc3660e7_p001_t001",
+    "crop_folder": "Onion",
+    "region": "Cumilla",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Onion/Cumilla/26470.pdf",
+        "source_page": 1,
+        "calendar_column": 1,
+        "standard_week": 5,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-78f9bb06f525847eb4c5",
+    "source_id": "bamis_26470_bc3660e7",
+    "source_pdf": "BAMIS_All_Crops/Onion/Cumilla/26470.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26470_bc3660e7_p002_t001",
+    "crop_folder": "Onion",
+    "region": "Cumilla",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-a756a52740251bf5df1b",
+    "source_id": "bamis_26472_9ba6aa1c",
+    "source_pdf": "BAMIS_All_Crops/Onion/Dhaka/26472.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26472_9ba6aa1c_p001_t001",
+    "crop_folder": "Onion",
+    "region": "Dhaka",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-5c014421c053cc7609c3",
+    "source_id": "bamis_26472_9ba6aa1c",
+    "source_pdf": "BAMIS_All_Crops/Onion/Dhaka/26472.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26472_9ba6aa1c_p002_t001",
+    "crop_folder": "Onion",
+    "region": "Dhaka",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-8958ae230526590abc72",
+    "source_id": "bamis_26474_ae73a6ef",
+    "source_pdf": "BAMIS_All_Crops/Onion/Dinajpur/26474.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26474_ae73a6ef_p001_t001",
+    "crop_folder": "Onion",
+    "region": "Dinajpur",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-ce64b9dddaabd15fd0f4",
+    "source_id": "bamis_26474_ae73a6ef",
+    "source_pdf": "BAMIS_All_Crops/Onion/Dinajpur/26474.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26474_ae73a6ef_p002_t001",
+    "crop_folder": "Onion",
+    "region": "Dinajpur",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Onion/Dinajpur/26474.pdf",
+        "source_page": 2,
+        "calendar_column": 2,
+        "standard_week": 15,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-11a1e505a05ce043513e",
+    "source_id": "bamis_26476_55a7e590",
+    "source_pdf": "BAMIS_All_Crops/Onion/Faridpur/26476.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26476_55a7e590_p001_t001",
+    "crop_folder": "Onion",
+    "region": "Faridpur",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Onion/Faridpur/26476.pdf",
+        "source_page": 1,
+        "calendar_column": 16,
+        "standard_week": 7,
+        "reason": "inconsistent_humidity_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-0f078b5413bce24fc00c",
+    "source_id": "bamis_26478_f5238c0e",
+    "source_pdf": "BAMIS_All_Crops/Onion/Jashore/26478.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26478_f5238c0e_p001_t001",
+    "crop_folder": "Onion",
+    "region": "Jashore",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-54598832d9ee4d4d32e2",
+    "source_id": "bamis_26480_8715bfd0",
+    "source_pdf": "BAMIS_All_Crops/Onion/Mymensingh/26480.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26480_8715bfd0_p001_t001",
+    "crop_folder": "Onion",
+    "region": "Mymensingh",
+    "retained_entries": 0,
+    "status": "no_retained_entries",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Onion/Mymensingh/26480.pdf",
+        "source_page": 1,
+        "calendar_column": 13,
+        "standard_week": 5,
+        "reason": "inconsistent_temperature_order"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Onion/Mymensingh/26480.pdf",
+        "reason": "source_region_district_labels_conflict",
+        "detail": "folder/title Mymensingh conflict with Cumilla table and districts; excluded rather than silently reassigned"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-383fa25bb2d5634097b1",
+    "source_id": "bamis_26482_bbea504c",
+    "source_pdf": "BAMIS_All_Crops/Onion/Rajshahi/26482.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26482_bbea504c_p001_t001",
+    "crop_folder": "Onion",
+    "region": "Rajshahi",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-c598ef941c868ff12874",
+    "source_id": "bamis_26484_ec180a77",
+    "source_pdf": "BAMIS_All_Crops/Onion/Rangpur/26484.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26484_ec180a77_p001_t001",
+    "crop_folder": "Onion",
+    "region": "Rangpur",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-d396e713f1bb71c4fe0c",
+    "source_id": "bamis_26488_29be02db",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Barishal/26488.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26488_29be02db_p001_t001",
+    "crop_folder": "Pepper",
+    "region": "Barishal",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-822dbd57ed3222f3ab9c",
+    "source_id": "bamis_26488_29be02db",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Barishal/26488.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26488_29be02db_p002_t001",
+    "crop_folder": "Pepper",
+    "region": "Barishal",
+    "retained_entries": 28,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-655170f80affef265904",
+    "source_id": "bamis_26490_e70712ee",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Bogura/26490.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26490_e70712ee_p001_t001",
+    "crop_folder": "Pepper",
+    "region": "Bogura",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-58a7fd5a9db8c07d89eb",
+    "source_id": "bamis_26490_e70712ee",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Bogura/26490.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26490_e70712ee_p002_t001",
+    "crop_folder": "Pepper",
+    "region": "Bogura",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-21bb793f16f1abc9dd1d",
+    "source_id": "bamis_26492_27ade249",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Chattogram/26492.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26492_27ade249_p001_t001",
+    "crop_folder": "Pepper",
+    "region": "Chattogram",
+    "retained_entries": 26,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-f5b9fe589ec680776521",
+    "source_id": "bamis_26494_9e24081e",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Cumilla/26494.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26494_9e24081e_p001_t001",
+    "crop_folder": "Pepper",
+    "region": "Cumilla",
+    "retained_entries": 25,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Cumilla/26494.pdf",
+        "source_page": 1,
+        "calendar_column": 18,
+        "standard_week": 5,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-4f2906b3753c5c4b4aa8",
+    "source_id": "bamis_26494_9e24081e",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Cumilla/26494.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26494_9e24081e_p002_t001",
+    "crop_folder": "Pepper",
+    "region": "Cumilla",
+    "retained_entries": 26,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b9038746d65b12faafb2",
+    "source_id": "bamis_26497_c8c7331e",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Dinajpur/26497.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26497_c8c7331e_p001_t001",
+    "crop_folder": "Pepper",
+    "region": "Dinajpur",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Dinajpur/26497.pdf",
+        "source_page": 1,
+        "calendar_column": 19,
+        "standard_week": 15,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-08f7c856c2b4377cd8d1",
+    "source_id": "bamis_26497_c8c7331e",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Dinajpur/26497.pdf",
+    "source_page": 3,
+    "source_table_id": "bamis_26497_c8c7331e_p003_t001",
+    "crop_folder": "Pepper",
+    "region": "Dinajpur",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Dinajpur/26497.pdf",
+        "source_page": 3,
+        "calendar_column": 2,
+        "standard_week": 15,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-effbe94eb21175b10441",
+    "source_id": "bamis_26499_55746d5e",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26499_55746d5e_p001_t001",
+    "crop_folder": "Pepper",
+    "region": "Faridpur",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+        "source_page": 1,
+        "calendar_column": 7,
+        "standard_week": 7,
+        "reason": "inconsistent_humidity_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-34209da46194ab3b6a1b",
+    "source_id": "bamis_26499_55746d5e",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26499_55746d5e_p002_t001",
+    "crop_folder": "Pepper",
+    "region": "Faridpur",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+        "source_page": 2,
+        "calendar_column": 11,
+        "standard_week": 24,
+        "reason": "missing_core_weather_value"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+        "source_page": 2,
+        "calendar_column": 18,
+        "standard_week": 31,
+        "reason": "invalid_sunshine_hours"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+        "source_page": 2,
+        "calendar_column": 19,
+        "standard_week": 32,
+        "reason": "invalid_sunshine_hours"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+        "source_page": 2,
+        "calendar_column": 20,
+        "standard_week": 33,
+        "reason": "invalid_sunshine_hours"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+        "source_page": 2,
+        "calendar_column": 21,
+        "standard_week": 34,
+        "reason": "invalid_sunshine_hours"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+        "source_page": 2,
+        "calendar_column": 22,
+        "standard_week": 35,
+        "reason": "invalid_sunshine_hours"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+        "source_page": 2,
+        "calendar_column": 23,
+        "standard_week": 36,
+        "reason": "invalid_sunshine_hours"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+        "source_page": 2,
+        "calendar_column": 24,
+        "standard_week": 37,
+        "reason": "invalid_sunshine_hours"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+        "source_page": 2,
+        "calendar_column": 25,
+        "standard_week": 38,
+        "reason": "invalid_sunshine_hours"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+        "source_page": 2,
+        "calendar_column": 26,
+        "standard_week": 39,
+        "reason": "invalid_sunshine_hours"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-2117872b4791bdb2052b",
+    "source_id": "bamis_26500_a6a5a64c",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Jashore/26500.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26500_a6a5a64c_p001_t001",
+    "crop_folder": "Pepper",
+    "region": "Jashore",
+    "retained_entries": 0,
+    "status": "no_retained_entries",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Jashore/26500.pdf",
+        "source_page": 1,
+        "reason": "printed_crop_labels_conflict",
+        "header_crop": "Bottle Gourd",
+        "title_crop": "Chilli"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-519718760ce2520dc2ef",
+    "source_id": "bamis_26500_a6a5a64c",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Jashore/26500.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26500_a6a5a64c_p002_t001",
+    "crop_folder": "Pepper",
+    "region": "Jashore",
+    "retained_entries": 0,
+    "status": "no_retained_entries",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Jashore/26500.pdf",
+        "source_page": 2,
+        "reason": "printed_crop_labels_conflict",
+        "header_crop": "Chilli",
+        "title_crop": "Bottle Gourd"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-165f44bba4fe53729b09",
+    "source_id": "bamis_26504_9069bd2c",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Mymensingh/26504.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26504_9069bd2c_p001_t001",
+    "crop_folder": "Pepper",
+    "region": "Mymensingh",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-34952637aae11e4054d6",
+    "source_id": "bamis_26506_18d0fd7e",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Rajshahi/26506.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26506_18d0fd7e_p001_t001",
+    "crop_folder": "Pepper",
+    "region": "Rajshahi",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-73b6d6f39d2511bd2234",
+    "source_id": "bamis_26509_0e99b306",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Rangpur/26509.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26509_0e99b306_p001_t001",
+    "crop_folder": "Pepper",
+    "region": "Rangpur",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-793880bd6bb9494305d6",
+    "source_id": "bamis_26509_0e99b306",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Rangpur/26509.pdf",
+    "source_page": 3,
+    "source_table_id": "bamis_26509_0e99b306_p003_t001",
+    "crop_folder": "Pepper",
+    "region": "Rangpur",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Rangpur/26509.pdf",
+        "source_page": 3,
+        "calendar_column": 18,
+        "reason": "repeated_week_in_single_season_calendar",
+        "standard_week": 16
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Rangpur/26509.pdf",
+        "source_page": 3,
+        "calendar_column": 19,
+        "reason": "repeated_week_in_single_season_calendar",
+        "standard_week": 17
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Rangpur/26509.pdf",
+        "source_page": 3,
+        "calendar_column": 20,
+        "reason": "repeated_week_in_single_season_calendar",
+        "standard_week": 18
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Rangpur/26509.pdf",
+        "source_page": 3,
+        "calendar_column": 21,
+        "reason": "repeated_week_in_single_season_calendar",
+        "standard_week": 19
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Pepper/Rangpur/26509.pdf",
+        "source_page": 3,
+        "calendar_column": 22,
+        "reason": "repeated_week_in_single_season_calendar",
+        "standard_week": 20
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-b5794d03c95af7d8f1dc",
+    "source_id": "bamis_26510_183d76d2",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Sylhet/26510.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26510_183d76d2_p001_t001",
+    "crop_folder": "Pepper",
+    "region": "Sylhet",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-72ad3592e3a06d9c55a0",
+    "source_id": "bamis_26510_183d76d2",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Sylhet/26510.pdf",
+    "source_page": 3,
+    "source_table_id": "bamis_26510_183d76d2_p003_t001",
+    "crop_folder": "Pepper",
+    "region": "Sylhet",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-66f04459b89a5e272bef",
+    "source_id": "bamis_26512_76561ea6",
+    "source_pdf": "BAMIS_All_Crops/Garlic/Bogura/26512.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26512_76561ea6_p001_t001",
+    "crop_folder": "Garlic",
+    "region": "Bogura",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-330ace9eed8ca8875a2a",
+    "source_id": "bamis_26514_68a303a5",
+    "source_pdf": "BAMIS_All_Crops/Garlic/Cumilla/26514.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26514_68a303a5_p001_t001",
+    "crop_folder": "Garlic",
+    "region": "Cumilla",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Garlic/Cumilla/26514.pdf",
+        "source_page": 1,
+        "calendar_column": 18,
+        "standard_week": 5,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-0660a5fde838b9c72764",
+    "source_id": "bamis_26516_eb84692d",
+    "source_pdf": "BAMIS_All_Crops/Garlic/Dhaka/26516.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26516_eb84692d_p001_t001",
+    "crop_folder": "Garlic",
+    "region": "Dhaka",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-1157f0d158cd130be8c0",
+    "source_id": "bamis_26518_16a2e18d",
+    "source_pdf": "BAMIS_All_Crops/Garlic/Dinajpur/26518.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26518_16a2e18d_p001_t001",
+    "crop_folder": "Garlic",
+    "region": "Dinajpur",
+    "retained_entries": 0,
+    "status": "no_retained_entries",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Garlic/Dinajpur/26518.pdf",
+        "source_page": 1,
+        "reason": "printed_region_conflicts_with_folder",
+        "printed_region": "jashore",
+        "folder_region": "Dinajpur"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-576ba385407ae143e09e",
+    "source_id": "bamis_26520_f3191baa",
+    "source_pdf": "BAMIS_All_Crops/Garlic/Faridpur/26520.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26520_f3191baa_p001_t001",
+    "crop_folder": "Garlic",
+    "region": "Faridpur",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Garlic/Faridpur/26520.pdf",
+        "source_page": 1,
+        "calendar_column": 16,
+        "standard_week": 7,
+        "reason": "inconsistent_humidity_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-11b4af5685476211fbfc",
+    "source_id": "bamis_26522_242c8495",
+    "source_pdf": "BAMIS_All_Crops/Garlic/Jashore/26522.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26522_242c8495_p001_t001",
+    "crop_folder": "Garlic",
+    "region": "Jashore",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-c09c643239fc211bc3d4",
+    "source_id": "bamis_26524_dcf98fd7",
+    "source_pdf": "BAMIS_All_Crops/Garlic/Mymensingh/26524.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26524_dcf98fd7_p001_t001",
+    "crop_folder": "Garlic",
+    "region": "Mymensingh",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b1985da69e527919103f",
+    "source_id": "bamis_26526_5c3343d1",
+    "source_pdf": "BAMIS_All_Crops/Garlic/Rajshahi/26526.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26526_5c3343d1_p001_t001",
+    "crop_folder": "Garlic",
+    "region": "Rajshahi",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-7e5d8a7bee65373df54b",
+    "source_id": "bamis_26528_c646664d",
+    "source_pdf": "BAMIS_All_Crops/Garlic/Rangpur/26528.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26528_c646664d_p001_t001",
+    "crop_folder": "Garlic",
+    "region": "Rangpur",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-7eb247cdd1dfc31c7fb4",
+    "source_id": "bamis_26530_26548805",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Chattogram/26530.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26530_26548805_p001_t001",
+    "crop_folder": "Cucumber",
+    "region": "Chattogram",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-fada4e443faa68ae49ac",
+    "source_id": "bamis_26530_26548805",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Chattogram/26530.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26530_26548805_p002_t001",
+    "crop_folder": "Cucumber",
+    "region": "Chattogram",
+    "retained_entries": 13,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-05aa945a626ecb88cd43",
+    "source_id": "bamis_26532_00af3cca",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Dhaka/26532.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26532_00af3cca_p001_t001",
+    "crop_folder": "Gourd",
+    "region": "Dhaka",
+    "retained_entries": 25,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-a68efa4574349896f6ba",
+    "source_id": "bamis_26532_00af3cca",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Dhaka/26532.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26532_00af3cca_p002_t001",
+    "crop_folder": "Gourd",
+    "region": "Dhaka",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-ff9fdd868f07caf91605",
+    "source_id": "bamis_26534_8cd6df13",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Dhaka/26534.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26534_8cd6df13_p001_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Dhaka",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pumpkin/Dhaka/26534.pdf",
+        "source_page": 1,
+        "calendar_column": 5,
+        "standard_week": 46,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-3da0d465b4fe711e8bad",
+    "source_id": "bamis_26534_8cd6df13",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Dhaka/26534.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26534_8cd6df13_p002_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Dhaka",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pumpkin/Dhaka/26534.pdf",
+        "source_page": 2,
+        "calendar_column": 7,
+        "standard_week": 15,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-004c5c2f7592563d38e6",
+    "source_id": "bamis_26537_934f46b6",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Dhaka/26537.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26537_934f46b6_p001_t001",
+    "crop_folder": "Brinjal",
+    "region": "Dhaka",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-bcf5b8a6f537690e451f",
+    "source_id": "bamis_26537_934f46b6",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Dhaka/26537.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26537_934f46b6_p002_t001",
+    "crop_folder": "Brinjal",
+    "region": "Dhaka",
+    "retained_entries": 29,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-6af847f8d983888f8868",
+    "source_id": "bamis_26538_502c893a",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Dhaka/26538.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26538_502c893a_p001_t001",
+    "crop_folder": "Pointed Gourd",
+    "region": "Dhaka",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Dhaka/26538.pdf",
+        "source_page": 1,
+        "calendar_column": 11,
+        "standard_week": 15,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-f0014411bb2fdced9a49",
+    "source_id": "bamis_26538_502c893a",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Dhaka/26538.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26538_502c893a_p002_t001",
+    "crop_folder": "Pointed Gourd",
+    "region": "Dhaka",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Dhaka/26538.pdf",
+        "source_page": 2,
+        "calendar_column": 9,
+        "standard_week": 52,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-dfa85419797b2a63f02b",
+    "source_id": "bamis_26795_bd5159ec",
+    "source_pdf": "BAMIS_All_Crops/Pineapple/Chattogram/26795.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26795_bd5159ec_p001_t001",
+    "crop_folder": "Pineapple",
+    "region": "Chattogram",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-63dba09b74ff3e247d2b",
+    "source_id": "bamis_26797_ef805512",
+    "source_pdf": "BAMIS_All_Crops/Pineapple/Dhaka/26797.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26797_ef805512_p001_t001",
+    "crop_folder": "Pineapple",
+    "region": "Dhaka",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-ca4dad82d23ffd0bb7da",
+    "source_id": "bamis_26799_5758dbd1",
+    "source_pdf": "BAMIS_All_Crops/Pineapple/Mymensingh/26799.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26799_5758dbd1_p001_t001",
+    "crop_folder": "Pineapple",
+    "region": "Mymensingh",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-6ced34066a740f66850b",
+    "source_id": "bamis_26801_31deefd9",
+    "source_pdf": "BAMIS_All_Crops/Pineapple/Rangamati/26801.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26801_31deefd9_p001_t001",
+    "crop_folder": "Pineapple",
+    "region": "Rangamati",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-0ac239c607743c37d0f1",
+    "source_id": "bamis_26803_b97f024c",
+    "source_pdf": "BAMIS_All_Crops/Pineapple/Sylhet/26803.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26803_b97f024c_p001_t001",
+    "crop_folder": "Pineapple",
+    "region": "Sylhet",
+    "retained_entries": 30,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-a8113fb0d547b18c5558",
+    "source_id": "bamis_26932_85126578",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Barishal/26932.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26932_85126578_p001_t001",
+    "crop_folder": "Cucumber",
+    "region": "Barishal",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-734ddf5032a6433312f3",
+    "source_id": "bamis_26932_85126578",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Barishal/26932.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26932_85126578_p002_t001",
+    "crop_folder": "Cucumber",
+    "region": "Barishal",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-424ae81f785517a403c4",
+    "source_id": "bamis_26953_cea21024",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Barishal/26953.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26953_cea21024_p001_t001",
+    "crop_folder": "Gourd",
+    "region": "Barishal",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-538f679eff17a5730fd4",
+    "source_id": "bamis_26953_cea21024",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Barishal/26953.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26953_cea21024_p002_t001",
+    "crop_folder": "Gourd",
+    "region": "Barishal",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-04aae3e94e2f8a438330",
+    "source_id": "bamis_26955_a6ca6cdc",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Bogura/26955.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26955_a6ca6cdc_p001_t001",
+    "crop_folder": "Gourd",
+    "region": "Bogura",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-cf264d8f7a178fae5030",
+    "source_id": "bamis_26955_a6ca6cdc",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Bogura/26955.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26955_a6ca6cdc_p002_t001",
+    "crop_folder": "Gourd",
+    "region": "Bogura",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-47c2f0c794962f54099a",
+    "source_id": "bamis_26957_d783db9a",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Chattogram/26957.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26957_d783db9a_p001_t001",
+    "crop_folder": "Gourd",
+    "region": "Chattogram",
+    "retained_entries": 28,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-85020726b2e592f9617a",
+    "source_id": "bamis_26957_d783db9a",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Chattogram/26957.pdf",
+    "source_page": 4,
+    "source_table_id": "bamis_26957_d783db9a_p004_t001",
+    "crop_folder": "Gourd",
+    "region": "Chattogram",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-ccb8445667b534b10b7c",
+    "source_id": "bamis_26959_20beddca",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Cumilla/26959.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26959_20beddca_p001_t001",
+    "crop_folder": "Gourd",
+    "region": "Cumilla",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-ff7f3b1f38bd236fe569",
+    "source_id": "bamis_26959_20beddca",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Cumilla/26959.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26959_20beddca_p002_t001",
+    "crop_folder": "Gourd",
+    "region": "Cumilla",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-64d4fc69731d0d8652d4",
+    "source_id": "bamis_26963_43ea10f1",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Jashore/26963.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26963_43ea10f1_p001_t001",
+    "crop_folder": "Gourd",
+    "region": "Jashore",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Gourd/Jashore/26963.pdf",
+        "source_page": 1,
+        "calendar_column": 14,
+        "standard_week": 1,
+        "reason": "missing_core_weather_value"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-dd4851be21b9a304839e",
+    "source_id": "bamis_26963_43ea10f1",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Jashore/26963.pdf",
+    "source_page": 3,
+    "source_table_id": "bamis_26963_43ea10f1_p003_t002",
+    "crop_folder": "Gourd",
+    "region": "Jashore",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b54a4ff631561e3fcfcc",
+    "source_id": "bamis_26965_bc215dbc",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Khulna/26965.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26965_bc215dbc_p001_t001",
+    "crop_folder": "Gourd",
+    "region": "Khulna",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-fc70b40e2a06c20ac43d",
+    "source_id": "bamis_26965_bc215dbc",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Khulna/26965.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26965_bc215dbc_p002_t001",
+    "crop_folder": "Gourd",
+    "region": "Khulna",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-a04e4a0ef6259eeb8d29",
+    "source_id": "bamis_26967_8dca900c",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Mymensingh/26967.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26967_8dca900c_p001_t001",
+    "crop_folder": "Gourd",
+    "region": "Mymensingh",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-dd2d59a660856cb09b0f",
+    "source_id": "bamis_26967_8dca900c",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Mymensingh/26967.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26967_8dca900c_p002_t001",
+    "crop_folder": "Gourd",
+    "region": "Mymensingh",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-66ea0d5a5f2765dcfbe5",
+    "source_id": "bamis_26974_61e420c2",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Rajshahi/26974.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26974_61e420c2_p001_t001",
+    "crop_folder": "Gourd",
+    "region": "Rajshahi",
+    "retained_entries": 25,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-bd30e875f308e569f3f1",
+    "source_id": "bamis_26974_61e420c2",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Rajshahi/26974.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26974_61e420c2_p002_t001",
+    "crop_folder": "Gourd",
+    "region": "Rajshahi",
+    "retained_entries": 26,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-72f8671af290842a882b",
+    "source_id": "bamis_26981_979f9acd",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Sylhet/26981.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26981_979f9acd_p001_t001",
+    "crop_folder": "Gourd",
+    "region": "Sylhet",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-f20205acee0e54c80aa1",
+    "source_id": "bamis_26981_979f9acd",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Sylhet/26981.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26981_979f9acd_p002_t001",
+    "crop_folder": "Gourd",
+    "region": "Sylhet",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-45db7f855c040b65419e",
+    "source_id": "bamis_26983_d5f2cf66",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Bogura/26983.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26983_d5f2cf66_p001_t001",
+    "crop_folder": "Cucumber",
+    "region": "Bogura",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-c246d389f4515eef7713",
+    "source_id": "bamis_26983_d5f2cf66",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Bogura/26983.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26983_d5f2cf66_p002_t001",
+    "crop_folder": "Cucumber",
+    "region": "Bogura",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-a27f76e4326842153c5a",
+    "source_id": "bamis_26985_f3bd72b5",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Dhaka/26985.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26985_f3bd72b5_p001_t001",
+    "crop_folder": "Cucumber",
+    "region": "Dhaka",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-bfeda3b5e9ab9f33e3c2",
+    "source_id": "bamis_26985_f3bd72b5",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Dhaka/26985.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26985_f3bd72b5_p002_t001",
+    "crop_folder": "Cucumber",
+    "region": "Dhaka",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-29ca7d8d69980c18c642",
+    "source_id": "bamis_26992_15e300e6",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26992_15e300e6_p001_t001",
+    "crop_folder": "Cucumber",
+    "region": "Faridpur",
+    "retained_entries": 13,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-dd26092b3ea1ff91204d",
+    "source_id": "bamis_26992_15e300e6",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26992_15e300e6_p002_t001",
+    "crop_folder": "Cucumber",
+    "region": "Faridpur",
+    "retained_entries": 3,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+        "source_page": 2,
+        "calendar_column": 1,
+        "standard_week": 31,
+        "reason": "invalid_sunshine_hours"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+        "source_page": 2,
+        "calendar_column": 2,
+        "standard_week": 32,
+        "reason": "invalid_sunshine_hours"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+        "source_page": 2,
+        "calendar_column": 3,
+        "standard_week": 33,
+        "reason": "invalid_sunshine_hours"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+        "source_page": 2,
+        "calendar_column": 4,
+        "standard_week": 34,
+        "reason": "invalid_sunshine_hours"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+        "source_page": 2,
+        "calendar_column": 5,
+        "standard_week": 35,
+        "reason": "invalid_sunshine_hours"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+        "source_page": 2,
+        "calendar_column": 6,
+        "standard_week": 36,
+        "reason": "invalid_sunshine_hours"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+        "source_page": 2,
+        "calendar_column": 7,
+        "standard_week": 37,
+        "reason": "invalid_sunshine_hours"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+        "source_page": 2,
+        "calendar_column": 8,
+        "standard_week": 38,
+        "reason": "invalid_sunshine_hours"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+        "source_page": 2,
+        "calendar_column": 9,
+        "standard_week": 39,
+        "reason": "invalid_sunshine_hours"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+        "source_page": 2,
+        "calendar_column": 10,
+        "standard_week": 40,
+        "reason": "invalid_sunshine_hours"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-798335a812acc5e145f0",
+    "source_id": "bamis_26997_ba08c38e",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Jashore/26997.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26997_ba08c38e_p001_t001",
+    "crop_folder": "Cucumber",
+    "region": "Jashore",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-0b4c7bf9a5d63a80269d",
+    "source_id": "bamis_26997_ba08c38e",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Jashore/26997.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26997_ba08c38e_p002_t002",
+    "crop_folder": "Cucumber",
+    "region": "Jashore",
+    "retained_entries": 26,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-f1edc2deb5de764bca9f",
+    "source_id": "bamis_26999_26d3f4d5",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Khulna/26999.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_26999_26d3f4d5_p001_t001",
+    "crop_folder": "Cucumber",
+    "region": "Khulna",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-5c58a17beb9448ae6486",
+    "source_id": "bamis_26999_26d3f4d5",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Khulna/26999.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_26999_26d3f4d5_p002_t001",
+    "crop_folder": "Cucumber",
+    "region": "Khulna",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-ccb7cfb9408aaa880ce9",
+    "source_id": "bamis_27005_87c91086",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Rajshahi/27005.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27005_87c91086_p001_t001",
+    "crop_folder": "Cucumber",
+    "region": "Rajshahi",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-3ad71228f51e4e6d9cbb",
+    "source_id": "bamis_27005_87c91086",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Rajshahi/27005.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27005_87c91086_p002_t001",
+    "crop_folder": "Cucumber",
+    "region": "Rajshahi",
+    "retained_entries": 0,
+    "status": "no_retained_entries",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Cucumber/Rajshahi/27005.pdf",
+        "source_page": 2,
+        "reason": "printed_season_labels_conflict",
+        "header_season": "Rabi",
+        "title_season": "Kharif"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-093fd1e387d5b903c9d2",
+    "source_id": "bamis_27391_64971ce5",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Bogura/27391.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27391_64971ce5_p001_t001",
+    "crop_folder": "Pointed Gourd",
+    "region": "Bogura",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-1972f4348c8822b10780",
+    "source_id": "bamis_27391_64971ce5",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Bogura/27391.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27391_64971ce5_p002_t001",
+    "crop_folder": "Pointed Gourd",
+    "region": "Bogura",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-7e7bed362344441b59d1",
+    "source_id": "bamis_27393_dbcd23d8",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Cumilla/27393.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27393_dbcd23d8_p001_t001",
+    "crop_folder": "Pointed Gourd",
+    "region": "Cumilla",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-5f4859b49e5408fa1a7f",
+    "source_id": "bamis_27393_dbcd23d8",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Cumilla/27393.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27393_dbcd23d8_p002_t001",
+    "crop_folder": "Pointed Gourd",
+    "region": "Cumilla",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Cumilla/27393.pdf",
+        "source_page": 2,
+        "calendar_column": 1,
+        "standard_week": 5,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-d0b85439b1fc3f810f73",
+    "source_id": "bamis_27396_53197868",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Dinajpur/27396.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27396_53197868_p001_t001",
+    "crop_folder": "Pointed Gourd",
+    "region": "Dinajpur",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-6ac113b9df3f2756e8e1",
+    "source_id": "bamis_27398_1602ba24",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Jashore/27398.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27398_1602ba24_p001_t001",
+    "crop_folder": "Pointed Gourd",
+    "region": "Jashore",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-9cb01aa608bc3a24fb9d",
+    "source_id": "bamis_27398_1602ba24",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Jashore/27398.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27398_1602ba24_p002_t001",
+    "crop_folder": "Pointed Gourd",
+    "region": "Jashore",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-8a000e672a79b06d6fd8",
+    "source_id": "bamis_27400_25c76f1c",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Mymensingh/27400.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27400_25c76f1c_p001_t001",
+    "crop_folder": "Pointed Gourd",
+    "region": "Mymensingh",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-5203592a2ace3f48ee7a",
+    "source_id": "bamis_27400_25c76f1c",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Mymensingh/27400.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27400_25c76f1c_p002_t001",
+    "crop_folder": "Pointed Gourd",
+    "region": "Mymensingh",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-f506703808baf97aeb5b",
+    "source_id": "bamis_27402_c8fe533d",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Rajshahi/27402.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27402_c8fe533d_p001_t001",
+    "crop_folder": "Pointed Gourd",
+    "region": "Rajshahi",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b2cb4d7ceda65c5da276",
+    "source_id": "bamis_27402_c8fe533d",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Rajshahi/27402.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27402_c8fe533d_p002_t001",
+    "crop_folder": "Pointed Gourd",
+    "region": "Rajshahi",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-f6b8aa4cc0ba2eb0f6dd",
+    "source_id": "bamis_27404_e367df80",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Rangpur/27404.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27404_e367df80_p001_t001",
+    "crop_folder": "Pointed Gourd",
+    "region": "Rangpur",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-f898233042a6a711378f",
+    "source_id": "bamis_27405_05f745d1",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Barishal/27405.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27405_05f745d1_p001_t001",
+    "crop_folder": "Brinjal",
+    "region": "Barishal",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-2c9a83b1591a51014c9d",
+    "source_id": "bamis_27405_05f745d1",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Barishal/27405.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27405_05f745d1_p002_t001",
+    "crop_folder": "Brinjal",
+    "region": "Barishal",
+    "retained_entries": 26,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Brinjal/Barishal/27405.pdf",
+        "source_page": 2,
+        "calendar_column": 19,
+        "standard_week": 26,
+        "reason": "inconsistent_humidity_order"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Brinjal/Barishal/27405.pdf",
+        "source_page": 2,
+        "calendar_column": 21,
+        "standard_week": 28,
+        "reason": "inconsistent_humidity_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-bc93c78113370a04800b",
+    "source_id": "bamis_27408_49f0247b",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Bogura/27408.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27408_49f0247b_p001_t001",
+    "crop_folder": "Brinjal",
+    "region": "Bogura",
+    "retained_entries": 25,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-fc6231e1994501771239",
+    "source_id": "bamis_27408_49f0247b",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Bogura/27408.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27408_49f0247b_p002_t001",
+    "crop_folder": "Brinjal",
+    "region": "Bogura",
+    "retained_entries": 25,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b4cab5d6623217922fc8",
+    "source_id": "bamis_27410_d1aaf135",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Chattogram/27410.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27410_d1aaf135_p001_t001",
+    "crop_folder": "Brinjal",
+    "region": "Chattogram",
+    "retained_entries": 28,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-9ca660a791a9dca92fdd",
+    "source_id": "bamis_27410_d1aaf135",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Chattogram/27410.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27410_d1aaf135_p002_t001",
+    "crop_folder": "Brinjal",
+    "region": "Chattogram",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-2d1c71be05411c2937dc",
+    "source_id": "bamis_27411_3dbc83d3",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Cumilla/27411.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27411_3dbc83d3_p001_t001",
+    "crop_folder": "Brinjal",
+    "region": "Cumilla",
+    "retained_entries": 25,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Brinjal/Cumilla/27411.pdf",
+        "source_page": 1,
+        "calendar_column": 18,
+        "standard_week": 5,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-a711dcb4875e0e03999f",
+    "source_id": "bamis_27411_3dbc83d3",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Cumilla/27411.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27411_3dbc83d3_p002_t001",
+    "crop_folder": "Brinjal",
+    "region": "Cumilla",
+    "retained_entries": 26,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-6eee3d68eda3c3b8e589",
+    "source_id": "bamis_27414_afab4e2e",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Jashore/27414.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27414_afab4e2e_p001_t001",
+    "crop_folder": "Brinjal",
+    "region": "Jashore",
+    "retained_entries": 26,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-9752ff2e70a47ef4653b",
+    "source_id": "bamis_27414_afab4e2e",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Jashore/27414.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27414_afab4e2e_p002_t001",
+    "crop_folder": "Brinjal",
+    "region": "Jashore",
+    "retained_entries": 25,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-3780483524d22a4924b0",
+    "source_id": "bamis_27416_63a321ad",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Khulna/27416.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27416_63a321ad_p001_t001",
+    "crop_folder": "Brinjal",
+    "region": "Khulna",
+    "retained_entries": 24,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-3a62ae10d7a6f7802e4e",
+    "source_id": "bamis_27416_63a321ad",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Khulna/27416.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27416_63a321ad_p002_t001",
+    "crop_folder": "Brinjal",
+    "region": "Khulna",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-e10b6040137b23f0382a",
+    "source_id": "bamis_27417_0438e6b8",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Mymensingh/27417.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27417_0438e6b8_p001_t001",
+    "crop_folder": "Brinjal",
+    "region": "Mymensingh",
+    "retained_entries": 26,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-faf92e01d37ae946e534",
+    "source_id": "bamis_27417_0438e6b8",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Mymensingh/27417.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27417_0438e6b8_p002_t001",
+    "crop_folder": "Brinjal",
+    "region": "Mymensingh",
+    "retained_entries": 25,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-a4b651c801dc03574fc1",
+    "source_id": "bamis_27419_44d772f6",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Rajshahi/27419.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27419_44d772f6_p001_t001",
+    "crop_folder": "Brinjal",
+    "region": "Rajshahi",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-dba085e5182a200f51b4",
+    "source_id": "bamis_27419_44d772f6",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Rajshahi/27419.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27419_44d772f6_p002_t001",
+    "crop_folder": "Brinjal",
+    "region": "Rajshahi",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-7d2846548eed221a1678",
+    "source_id": "bamis_27422_a50ea303",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Sylhet/27422.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27422_a50ea303_p001_t001",
+    "crop_folder": "Brinjal",
+    "region": "Sylhet",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-bf10263c1b0abe889a62",
+    "source_id": "bamis_27422_a50ea303",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Sylhet/27422.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27422_a50ea303_p002_t001",
+    "crop_folder": "Brinjal",
+    "region": "Sylhet",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-1a4afc244cc57e306f69",
+    "source_id": "bamis_27423_692a1804",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Barishal/27423.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27423_692a1804_p001_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Barishal",
+    "retained_entries": 19,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-dc15a41d0fffd7a327c3",
+    "source_id": "bamis_27423_692a1804",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Barishal/27423.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27423_692a1804_p002_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Barishal",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pumpkin/Barishal/27423.pdf",
+        "source_page": 2,
+        "calendar_column": 17,
+        "standard_week": 26,
+        "reason": "inconsistent_humidity_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-0244a45d52bf7b2c3be3",
+    "source_id": "bamis_27426_268b4f54",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Bogura/27426.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27426_268b4f54_p001_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Bogura",
+    "retained_entries": 19,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-5acfecad9f22ddc38ad9",
+    "source_id": "bamis_27426_268b4f54",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Bogura/27426.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27426_268b4f54_p002_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Bogura",
+    "retained_entries": 0,
+    "status": "no_retained_entries",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pumpkin/Bogura/27426.pdf",
+        "source_page": 2,
+        "reason": "printed_season_labels_conflict",
+        "header_season": "Rabi",
+        "title_season": "Kharif"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-4edaf6170568071b6813",
+    "source_id": "bamis_27427_a1b32a68",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Chattogram/27427.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27427_a1b32a68_p001_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Chattogram",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-d539f70562a729c91781",
+    "source_id": "bamis_27427_a1b32a68",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Chattogram/27427.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27427_a1b32a68_p002_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Chattogram",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b9a3d81266058fcaf04c",
+    "source_id": "bamis_27430_1f59248e",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Cumilla/27430.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27430_1f59248e_p001_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Cumilla",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pumpkin/Cumilla/27430.pdf",
+        "source_page": 1,
+        "calendar_column": 16,
+        "standard_week": 5,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-6dfe462bd7a09331820b",
+    "source_id": "bamis_27430_1f59248e",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Cumilla/27430.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27430_1f59248e_p002_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Cumilla",
+    "retained_entries": 0,
+    "status": "no_retained_entries",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pumpkin/Cumilla/27430.pdf",
+        "source_page": 2,
+        "reason": "printed_season_labels_conflict",
+        "header_season": "Rabi",
+        "title_season": "Kharif"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-ab9030694963ca0e56b3",
+    "source_id": "bamis_27431_7f04a136",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Jashore/27431.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27431_7f04a136_p001_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Jashore",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-a665f556af5fab246126",
+    "source_id": "bamis_27431_7f04a136",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Jashore/27431.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27431_7f04a136_p002_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Jashore",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-e215cb35a759ce365757",
+    "source_id": "bamis_27434_842aea7b",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Khulna/27434.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27434_842aea7b_p001_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Khulna",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-7d5a8bafc500ea4c8a8b",
+    "source_id": "bamis_27434_842aea7b",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Khulna/27434.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27434_842aea7b_p002_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Khulna",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-4e843de5ad6f377745cd",
+    "source_id": "bamis_27435_aac6a35b",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Mymensingh/27435.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27435_aac6a35b_p001_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Mymensingh",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-18488e25880108229085",
+    "source_id": "bamis_27435_aac6a35b",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Mymensingh/27435.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27435_aac6a35b_p002_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Mymensingh",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-07243f89cfa2a8067946",
+    "source_id": "bamis_27438_fd439aff",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Rajshahi/27438.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27438_fd439aff_p001_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Rajshahi",
+    "retained_entries": 23,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-291ce80f4f305fffbd39",
+    "source_id": "bamis_27438_fd439aff",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Rajshahi/27438.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27438_fd439aff_p002_t002",
+    "crop_folder": "Pumpkin",
+    "region": "Rajshahi",
+    "retained_entries": 20,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pumpkin/Rajshahi/27438.pdf",
+        "source_page": 2,
+        "calendar_column": 19,
+        "standard_week": 32,
+        "reason": "missing_core_weather_value"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-53986e3fade77bc07d93",
+    "source_id": "bamis_27439_b2e99cc3",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Sylhet/27439.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_27439_b2e99cc3_p001_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Sylhet",
+    "retained_entries": 15,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Pumpkin/Sylhet/27439.pdf",
+        "source_page": 1,
+        "calendar_column": 1,
+        "standard_week": 40,
+        "reason": "inconsistent_humidity_order"
+      },
+      {
+        "source_pdf": "BAMIS_All_Crops/Pumpkin/Sylhet/27439.pdf",
+        "source_page": 1,
+        "calendar_column": 2,
+        "standard_week": 41,
+        "reason": "inconsistent_humidity_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-a88e64c838c60f902f6d",
+    "source_id": "bamis_27439_b2e99cc3",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Sylhet/27439.pdf",
+    "source_page": 2,
+    "source_table_id": "bamis_27439_b2e99cc3_p002_t001",
+    "crop_folder": "Pumpkin",
+    "region": "Sylhet",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-eea5d29c8909b77ee5dd",
+    "source_id": "bamis_5061_24bb67c3",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Barishal/5061.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5061_24bb67c3_p001_t001",
+    "crop_folder": "Rice Aus",
+    "region": "Barishal",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-708f95497b7f1ab20ed3",
+    "source_id": "bamis_5062_0d1d8a3f",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Bogura/5062.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5062_0d1d8a3f_p001_t001",
+    "crop_folder": "Rice Aus",
+    "region": "Bogura",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-608f6b3ee4f8f7093915",
+    "source_id": "bamis_5063_347f2638",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Chattogram/5063.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5063_347f2638_p001_t001",
+    "crop_folder": "Rice Aus",
+    "region": "Chattogram",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-8ef4862d037b2a349260",
+    "source_id": "bamis_5064_479d1258",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Cumilla/5064.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5064_479d1258_p001_t001",
+    "crop_folder": "Rice Aus",
+    "region": "Cumilla",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-1075f6e704ec746e420f",
+    "source_id": "bamis_5065_6581202b",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Dhaka/5065.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5065_6581202b_p001_t001",
+    "crop_folder": "Rice Aus",
+    "region": "Dhaka",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-e09b379eae0fd38e891b",
+    "source_id": "bamis_5067_660f7626",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Faridpur/5067.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5067_660f7626_p001_t001",
+    "crop_folder": "Rice Aus",
+    "region": "Faridpur",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-6b7739ed969b5d181e6e",
+    "source_id": "bamis_5068_0326bd21",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Dinajpur/5068.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5068_0326bd21_p001_t001",
+    "crop_folder": "Rice Aus",
+    "region": "Dinajpur",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Rice Aus/Dinajpur/5068.pdf",
+        "source_page": 1,
+        "calendar_column": 5,
+        "standard_week": 15,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-c186ba32007ec9e1d31f",
+    "source_id": "bamis_5069_b10ff4d1",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Jashore/5069.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5069_b10ff4d1_p001_t001",
+    "crop_folder": "Rice Aus",
+    "region": "Jashore",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b9b4d830fc0958fc36fe",
+    "source_id": "bamis_5070_803d9514",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Khulna/5070.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5070_803d9514_p001_t001",
+    "crop_folder": "Rice Aus",
+    "region": "Khulna",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-ebf159fd8dc5cda2c193",
+    "source_id": "bamis_5071_08629c84",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Mymensingh/5071.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5071_08629c84_p001_t001",
+    "crop_folder": "Rice Aus",
+    "region": "Mymensingh",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-ea5107d59f4e77443032",
+    "source_id": "bamis_5072_c7f0e4a5",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Rajshahi/5072.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5072_c7f0e4a5_p001_t001",
+    "crop_folder": "Rice Aus",
+    "region": "Rajshahi",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-8d2f769bf974da59174e",
+    "source_id": "bamis_5073_26b7a53b",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Rangamati/5073.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5073_26b7a53b_p001_t001",
+    "crop_folder": "Rice Aus",
+    "region": "Rangamati",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-8cd14c00e3d8ba49fe98",
+    "source_id": "bamis_5074_8fc5535c",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Rangpur/5074.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5074_8fc5535c_p001_t001",
+    "crop_folder": "Rice Aus",
+    "region": "Rangpur",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-9c88160f8f305d9865db",
+    "source_id": "bamis_5075_f2c26178",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Sylhet/5075.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5075_f2c26178_p001_t001",
+    "crop_folder": "Rice Aus",
+    "region": "Sylhet",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-d852ceb72b1cc4253140",
+    "source_id": "bamis_5076_7a461741",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Bogura/5076.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5076_7a461741_p001_t001",
+    "crop_folder": "Rice Aman",
+    "region": "Bogura",
+    "retained_entries": 19,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-3d411e538ec2c55bf5f9",
+    "source_id": "bamis_5077_6c965103",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Chattogram/5077.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5077_6c965103_p001_t001",
+    "crop_folder": "Rice Aman",
+    "region": "Chattogram",
+    "retained_entries": 19,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-892d675181a66493a9c8",
+    "source_id": "bamis_5078_451241bb",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Dhaka/5078.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5078_451241bb_p001_t001",
+    "crop_folder": "Rice Aman",
+    "region": "Dhaka",
+    "retained_entries": 19,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-6a8ef04c990dcd3bca92",
+    "source_id": "bamis_5079_f0b8bc3b",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Cumilla/5079.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5079_f0b8bc3b_p001_t001",
+    "crop_folder": "Rice Aman",
+    "region": "Cumilla",
+    "retained_entries": 19,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-1fec47dbf49ed4a40e47",
+    "source_id": "bamis_5080_bc1735c2",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Dinajpur/5080.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5080_bc1735c2_p001_t001",
+    "crop_folder": "Rice Aman",
+    "region": "Dinajpur",
+    "retained_entries": 19,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b9bf065d7d01693fb890",
+    "source_id": "bamis_5081_b3aaa058",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Faridpur/5081.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5081_b3aaa058_p001_t001",
+    "crop_folder": "Rice Aman",
+    "region": "Faridpur",
+    "retained_entries": 19,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-a2137b482ccd495f1b93",
+    "source_id": "bamis_5082_bcbc50a0",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Jashore/5082.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5082_bcbc50a0_p001_t001",
+    "crop_folder": "Rice Aman",
+    "region": "Jashore",
+    "retained_entries": 19,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-81f303f32f3d6acaedf5",
+    "source_id": "bamis_5083_8f3ec142",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Khulna/5083.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5083_8f3ec142_p001_t001",
+    "crop_folder": "Rice Aman",
+    "region": "Khulna",
+    "retained_entries": 19,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-697d80356baa3e0b6ca0",
+    "source_id": "bamis_5084_09b892aa",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Mymensingh/5084.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5084_09b892aa_p001_t001",
+    "crop_folder": "Rice Aman",
+    "region": "Mymensingh",
+    "retained_entries": 0,
+    "status": "no_retained_entries",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Rice Aman/Mymensingh/5084.pdf",
+        "source_page": 1,
+        "reason": "printed_season_labels_conflict",
+        "header_season": "Aman",
+        "title_season": "Aus"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-ebe33f79c08318d36951",
+    "source_id": "bamis_5085_8b03b4f7",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Rajshahi/5085.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5085_8b03b4f7_p001_t001",
+    "crop_folder": "Rice Aman",
+    "region": "Rajshahi",
+    "retained_entries": 19,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-94143a35c8a04280474c",
+    "source_id": "bamis_5086_2eaca377",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Rangamati/5086.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5086_2eaca377_p001_t001",
+    "crop_folder": "Rice Aman",
+    "region": "Rangamati",
+    "retained_entries": 19,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-12d4f533daa270ee959d",
+    "source_id": "bamis_5088_d62494b6",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Rangpur/5088.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5088_d62494b6_p001_t001",
+    "crop_folder": "Rice Aman",
+    "region": "Rangpur",
+    "retained_entries": 19,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-73d2f0e59425e2b24747",
+    "source_id": "bamis_5090_45e06f6e",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Barishal/5090.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5090_45e06f6e_p001_t001",
+    "crop_folder": "Rice Aman",
+    "region": "Barishal",
+    "retained_entries": 19,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-15714383a55e9901e12d",
+    "source_id": "bamis_5091_105475ba",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Sylhet/5091.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5091_105475ba_p001_t001",
+    "crop_folder": "Rice Aman",
+    "region": "Sylhet",
+    "retained_entries": 19,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-d531e0f0ca3fba3ac68b",
+    "source_id": "bamis_5094_5b1cee83",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Mymensingh/5094.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5094_5b1cee83_p001_t001",
+    "crop_folder": "Rice Boro",
+    "region": "Mymensingh",
+    "retained_entries": 23,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-86522a47dee6f3a86837",
+    "source_id": "bamis_5095_88bcff05",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Barishal/5095.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5095_88bcff05_p001_t001",
+    "crop_folder": "Rice Boro",
+    "region": "Barishal",
+    "retained_entries": 23,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-3c0dbfed1953b24aaba3",
+    "source_id": "bamis_5096_01ce0ee4",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Bogura/5096.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5096_01ce0ee4_p001_t001",
+    "crop_folder": "Rice Boro",
+    "region": "Bogura",
+    "retained_entries": 23,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-15724b8570c684a4395d",
+    "source_id": "bamis_5098_e2023886",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Chattogram/5098.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5098_e2023886_p001_t001",
+    "crop_folder": "Rice Boro",
+    "region": "Chattogram",
+    "retained_entries": 23,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-08927f2ae832d569bd21",
+    "source_id": "bamis_5099_696b723e",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Cumilla/5099.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5099_696b723e_p001_t001",
+    "crop_folder": "Rice Boro",
+    "region": "Cumilla",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Rice Boro/Cumilla/5099.pdf",
+        "source_page": 1,
+        "calendar_column": 16,
+        "standard_week": 5,
+        "reason": "inconsistent_temperature_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-5563d4b475cb895301ab",
+    "source_id": "bamis_5100_164252d0",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Dhaka/5100.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5100_164252d0_p001_t001",
+    "crop_folder": "Rice Boro",
+    "region": "Dhaka",
+    "retained_entries": 23,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-78be4dff93095bc4812a",
+    "source_id": "bamis_5101_bce699c1",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Dinajpur/5101.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5101_bce699c1_p001_t001",
+    "crop_folder": "Rice Boro",
+    "region": "Dinajpur",
+    "retained_entries": 23,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-955b21bc26f555c52d15",
+    "source_id": "bamis_5102_98f07c4b",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Faridpur/5102.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5102_98f07c4b_p001_t001",
+    "crop_folder": "Rice Boro",
+    "region": "Faridpur",
+    "retained_entries": 22,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Rice Boro/Faridpur/5102.pdf",
+        "source_page": 1,
+        "calendar_column": 19,
+        "standard_week": 7,
+        "reason": "inconsistent_humidity_order"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-9982c002a68900260de0",
+    "source_id": "bamis_5103_ee71b772",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Jashore/5103.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5103_ee71b772_p001_t001",
+    "crop_folder": "Rice Boro",
+    "region": "Jashore",
+    "retained_entries": 23,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-ab69a8695591e9cfaab4",
+    "source_id": "bamis_5104_c2c96af5",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Khulna/5104.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5104_c2c96af5_p001_t001",
+    "crop_folder": "Rice Boro",
+    "region": "Khulna",
+    "retained_entries": 23,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-140a35178355d0a24725",
+    "source_id": "bamis_5105_9b6e4dda",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Rajshahi/5105.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5105_9b6e4dda_p001_t001",
+    "crop_folder": "Rice Boro",
+    "region": "Rajshahi",
+    "retained_entries": 23,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-6d17b0e9914fbb1ced68",
+    "source_id": "bamis_5106_68f3f5e3",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Rangamati/5106.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5106_68f3f5e3_p001_t001",
+    "crop_folder": "Rice Boro",
+    "region": "Rangamati",
+    "retained_entries": 23,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-fd6aef5a034df3cf6026",
+    "source_id": "bamis_5107_45c2eb62",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Rangpur/5107.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5107_45c2eb62_p001_t001",
+    "crop_folder": "Rice Boro",
+    "region": "Rangpur",
+    "retained_entries": 23,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-9140fb19dc1e6ff46d36",
+    "source_id": "bamis_5108_344f3bc3",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Sylhet/5108.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5108_344f3bc3_p001_t001",
+    "crop_folder": "Rice Boro",
+    "region": "Sylhet",
+    "retained_entries": 23,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-471260f81185fd1edaa5",
+    "source_id": "bamis_5109_d3f76baf",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Dhaka/5109.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5109_d3f76baf_p001_t001",
+    "crop_folder": "Wheat",
+    "region": "Dhaka",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-fa31ab498cafe7325118",
+    "source_id": "bamis_5110_6fe161b4",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Cumilla/5110.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5110_6fe161b4_p001_t001",
+    "crop_folder": "Wheat",
+    "region": "Cumilla",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-16e29f03fcbfa2c83d2e",
+    "source_id": "bamis_5111_e3fe24f9",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Dinajpur/5111.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5111_e3fe24f9_p001_t001",
+    "crop_folder": "Wheat",
+    "region": "Dinajpur",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-efd377b9dbab2355b382",
+    "source_id": "bamis_5112_6033937e",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Faridpur/5112.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5112_6033937e_p001_t001",
+    "crop_folder": "Wheat",
+    "region": "Faridpur",
+    "retained_entries": 0,
+    "status": "no_retained_entries",
+    "exclusion_records": [
+      {
+        "source_pdf": "BAMIS_All_Crops/Wheat/Faridpur/5112.pdf",
+        "source_page": 1,
+        "reason": "printed_crop_labels_conflict",
+        "header_crop": "Wheat",
+        "title_crop": "Maize"
+      }
+    ]
+  },
+  {
+    "calendar_id": "calendar-146f55439783d12edd81",
+    "source_id": "bamis_5113_e77f17f9",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Jashore/5113.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5113_e77f17f9_p001_t001",
+    "crop_folder": "Wheat",
+    "region": "Jashore",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-48b03e7b6fd7f84d725c",
+    "source_id": "bamis_5114_40b616e9",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Khulna/5114.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5114_40b616e9_p001_t001",
+    "crop_folder": "Wheat",
+    "region": "Khulna",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-077c23b130ba4b35e706",
+    "source_id": "bamis_5115_72eb242c",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Mymensingh/5115.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5115_72eb242c_p001_t001",
+    "crop_folder": "Wheat",
+    "region": "Mymensingh",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b19a046315c306de2c11",
+    "source_id": "bamis_5116_09d89b7e",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Rajshahi/5116.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5116_09d89b7e_p001_t001",
+    "crop_folder": "Wheat",
+    "region": "Rajshahi",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-a2ed784fa3b18340e5ca",
+    "source_id": "bamis_5117_2d13198f",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Rangpur/5117.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5117_2d13198f_p001_t001",
+    "crop_folder": "Wheat",
+    "region": "Rangpur",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-1beb5b215d140601284f",
+    "source_id": "bamis_5119_58c023ee",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Bogura/5119.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5119_58c023ee_p001_t001",
+    "crop_folder": "Wheat",
+    "region": "Bogura",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-0e99f869eb42678a2a1d",
+    "source_id": "bamis_5120_84e10350",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Barishal/5120.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5120_84e10350_p001_t001",
+    "crop_folder": "Wheat",
+    "region": "Barishal",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-67014c7b6a6e9ef6c872",
+    "source_id": "bamis_5121_d7861571",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Barishal/5121.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5121_d7861571_p001_t001",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Barishal",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-5c8c192570df3a73f2c1",
+    "source_id": "bamis_5122_a4aeaabe",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Sylhet/5122.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5122_a4aeaabe_p001_t001",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Sylhet",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-1fb08e9fdd1d623fa9e8",
+    "source_id": "bamis_5123_f6143775",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Rangpur/5123.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5123_f6143775_p001_t001",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Rangpur",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-ca18edd5e0171d6b603d",
+    "source_id": "bamis_5124_f9dbb0b7",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Rangamati/5124.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5124_f9dbb0b7_p001_t001",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Rangamati",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-6fa5a455186d1699a5f3",
+    "source_id": "bamis_5125_468a3dbc",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Rajshahi/5125.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5125_468a3dbc_p001_t001",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Rajshahi",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-092a2541cb21f7e8bd4c",
+    "source_id": "bamis_5126_ade3d641",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Mymensingh/5126.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5126_ade3d641_p001_t001",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Mymensingh",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-1daa37c0fda0c992e3bb",
+    "source_id": "bamis_5127_a2eca3a5",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Khulna/5127.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5127_a2eca3a5_p001_t001",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Khulna",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-ae7d812b862b8f01cd66",
+    "source_id": "bamis_5128_2463adcd",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Jashore/5128.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5128_2463adcd_p001_t001",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Jashore",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-6db8749f4059e11a13b4",
+    "source_id": "bamis_5129_2dd789a7",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Faridpur/5129.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5129_2dd789a7_p001_t001",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Faridpur",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-5de0fa4f420ff2342e37",
+    "source_id": "bamis_5130_29bb6119",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Dinajpur/5130.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5130_29bb6119_p001_t001",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Dinajpur",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-5be072b88a8c56258471",
+    "source_id": "bamis_5131_eaf557a7",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Dhaka/5131.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5131_eaf557a7_p001_t001",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Dhaka",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-c9489f7c01e2cd764f55",
+    "source_id": "bamis_5132_74ac0617",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Cumilla/5132.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5132_74ac0617_p001_t001",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Cumilla",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-7ab1e5dc162011aae4ca",
+    "source_id": "bamis_5133_79f72cf2",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Chattogram/5133.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5133_79f72cf2_p001_t001",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Chattogram",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-4051f0b881baa7ca010e",
+    "source_id": "bamis_5134_687ed8cc",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Bogura/5134.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5134_687ed8cc_p001_t001",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Bogura",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-22e85313d24b3b72c78c",
+    "source_id": "bamis_5135_7216c1a7",
+    "source_pdf": "BAMIS_All_Crops/Maize (kharif-1)/Bogura/5135.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5135_7216c1a7_p001_t001",
+    "crop_folder": "Maize (kharif-1)",
+    "region": "Bogura",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-ddf3d4f6e41ac098fcf3",
+    "source_id": "bamis_5136_e16ec19d",
+    "source_pdf": "BAMIS_All_Crops/Maize (kharif-1)/Rangpur/5136.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5136_e16ec19d_p001_t001",
+    "crop_folder": "Maize (kharif-1)",
+    "region": "Rangpur",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-59b8eb9ced3a4b905a99",
+    "source_id": "bamis_5138_1081b741",
+    "source_pdf": "BAMIS_All_Crops/Maize (kharif-1)/Rangamati/5138.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5138_1081b741_p001_t001",
+    "crop_folder": "Maize (kharif-1)",
+    "region": "Rangamati",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-43170c7d6624425e6285",
+    "source_id": "bamis_5139_8345d0a5",
+    "source_pdf": "BAMIS_All_Crops/Maize (kharif-1)/Rajshahi/5139.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5139_8345d0a5_p001_t001",
+    "crop_folder": "Maize (kharif-1)",
+    "region": "Rajshahi",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-45e77eff893266e357ca",
+    "source_id": "bamis_5140_60912808",
+    "source_pdf": "BAMIS_All_Crops/Maize (kharif-1)/Mymensingh/5140.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5140_60912808_p001_t001",
+    "crop_folder": "Maize (kharif-1)",
+    "region": "Mymensingh",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-7721cc3d71b115e268e0",
+    "source_id": "bamis_5141_025d9b81",
+    "source_pdf": "BAMIS_All_Crops/Maize (kharif-1)/Dinajpur/5141.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5141_025d9b81_p001_t001",
+    "crop_folder": "Maize (kharif-1)",
+    "region": "Dinajpur",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-d2d1d0e3fc9fb838e165",
+    "source_id": "bamis_5142_7a318bf2",
+    "source_pdf": "BAMIS_All_Crops/Maize (kharif-1)/Dhaka/5142.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5142_7a318bf2_p001_t001",
+    "crop_folder": "Maize (kharif-1)",
+    "region": "Dhaka",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-3737cdf0926e41a23ab5",
+    "source_id": "bamis_5143_b75fabbf",
+    "source_pdf": "BAMIS_All_Crops/Maize (kharif-1)/Cumilla/5143.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_5143_b75fabbf_p001_t001",
+    "crop_folder": "Maize (kharif-1)",
+    "region": "Cumilla",
+    "retained_entries": 16,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-c8c8d25bb4cbc698d1b0",
+    "source_id": "bamis_8722_7e0cbe12",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Chattogram/8722.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8722_7e0cbe12_p001_t001",
+    "crop_folder": "Lentil",
+    "region": "Chattogram",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-ff53d8b163e08f7e8709",
+    "source_id": "bamis_8723_d31a1ce4",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Rangpur/8723.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8723_d31a1ce4_p001_t001",
+    "crop_folder": "Lentil",
+    "region": "Rangpur",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-50f60e2bbcb4c4e12386",
+    "source_id": "bamis_8724_67467ef6",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Sylhet/8724.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8724_67467ef6_p001_t001",
+    "crop_folder": "Lentil",
+    "region": "Sylhet",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-172b06362c70e5f5200c",
+    "source_id": "bamis_8725_d6bc624f",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Rajshahi/8725.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8725_d6bc624f_p001_t001",
+    "crop_folder": "Lentil",
+    "region": "Rajshahi",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-d0abba79f226030f4f7f",
+    "source_id": "bamis_8726_7f7ba368",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Mymensingh/8726.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8726_7f7ba368_p001_t001",
+    "crop_folder": "Lentil",
+    "region": "Mymensingh",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-e8aa06f9847bd940e33e",
+    "source_id": "bamis_8727_fc29c938",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Khulna/8727.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8727_fc29c938_p001_t001",
+    "crop_folder": "Lentil",
+    "region": "Khulna",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-e021cece1901b1349dcc",
+    "source_id": "bamis_8728_7ad616e2",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Jashore/8728.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8728_7ad616e2_p001_t001",
+    "crop_folder": "Lentil",
+    "region": "Jashore",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-326df6945bc029dd0631",
+    "source_id": "bamis_8729_a98b4b9e",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Faridpur/8729.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8729_a98b4b9e_p001_t001",
+    "crop_folder": "Lentil",
+    "region": "Faridpur",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-617f116cce75d1c0c728",
+    "source_id": "bamis_8730_b31b3dc2",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Dinajpur/8730.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8730_b31b3dc2_p001_t001",
+    "crop_folder": "Lentil",
+    "region": "Dinajpur",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b3515cb0b6a3fc1c86fd",
+    "source_id": "bamis_8731_9526299a",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Dhaka/8731.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8731_9526299a_p001_t001",
+    "crop_folder": "Lentil",
+    "region": "Dhaka",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-0fa7c8046f7288d7dec2",
+    "source_id": "bamis_8732_0a9ae1bf",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Cumilla/8732.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8732_0a9ae1bf_p001_t001",
+    "crop_folder": "Lentil",
+    "region": "Cumilla",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-f186a21fb4a1e2bcf2e7",
+    "source_id": "bamis_8733_32fc7400",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Barishal/8733.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8733_32fc7400_p001_t001",
+    "crop_folder": "Lentil",
+    "region": "Barishal",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b46f5d47165279ba93a5",
+    "source_id": "bamis_8734_785cc231",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Bogura/8734.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8734_785cc231_p001_t001",
+    "crop_folder": "Lentil",
+    "region": "Bogura",
+    "retained_entries": 17,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-7ca66522e5d2977bb4b5",
+    "source_id": "bamis_8844_4921733d",
+    "source_pdf": "BAMIS_All_Crops/Potato/Barishal/8844.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8844_4921733d_p001_t001",
+    "crop_folder": "Potato",
+    "region": "Barishal",
+    "retained_entries": 15,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-06a3669e1b38ec320974",
+    "source_id": "bamis_8846_50c48a72",
+    "source_pdf": "BAMIS_All_Crops/Potato/Bogura/8846.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8846_50c48a72_p001_t001",
+    "crop_folder": "Potato",
+    "region": "Bogura",
+    "retained_entries": 15,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-ef66a36ecc8a41519ba5",
+    "source_id": "bamis_8848_fea0c8f1",
+    "source_pdf": "BAMIS_All_Crops/Potato/Chattogram/8848.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8848_fea0c8f1_p001_t001",
+    "crop_folder": "Potato",
+    "region": "Chattogram",
+    "retained_entries": 15,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-e522d77130928fc643b2",
+    "source_id": "bamis_8850_992b22bd",
+    "source_pdf": "BAMIS_All_Crops/Potato/Cumilla/8850.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8850_992b22bd_p001_t001",
+    "crop_folder": "Potato",
+    "region": "Cumilla",
+    "retained_entries": 15,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-4040a05250448ebeddfe",
+    "source_id": "bamis_8852_2c785163",
+    "source_pdf": "BAMIS_All_Crops/Potato/Dhaka/8852.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8852_2c785163_p001_t001",
+    "crop_folder": "Potato",
+    "region": "Dhaka",
+    "retained_entries": 15,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-d1ea50ed62b1b7c85d18",
+    "source_id": "bamis_8854_cbeee305",
+    "source_pdf": "BAMIS_All_Crops/Potato/Dinajpur/8854.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8854_cbeee305_p001_t001",
+    "crop_folder": "Potato",
+    "region": "Dinajpur",
+    "retained_entries": 15,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-d9de26af6cabb5145e30",
+    "source_id": "bamis_8856_d0b82833",
+    "source_pdf": "BAMIS_All_Crops/Potato/Faridpur/8856.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8856_d0b82833_p001_t001",
+    "crop_folder": "Potato",
+    "region": "Faridpur",
+    "retained_entries": 15,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-0d3c3ea5cc71707ef013",
+    "source_id": "bamis_8858_8e1231de",
+    "source_pdf": "BAMIS_All_Crops/Potato/Jashore/8858.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8858_8e1231de_p001_t001",
+    "crop_folder": "Potato",
+    "region": "Jashore",
+    "retained_entries": 15,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-41ece96e391e26774545",
+    "source_id": "bamis_8860_50cb83e7",
+    "source_pdf": "BAMIS_All_Crops/Potato/Khulna/8860.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8860_50cb83e7_p001_t001",
+    "crop_folder": "Potato",
+    "region": "Khulna",
+    "retained_entries": 15,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-18b05bb70a874151b449",
+    "source_id": "bamis_8862_b876be88",
+    "source_pdf": "BAMIS_All_Crops/Potato/Mymensingh/8862.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8862_b876be88_p001_t001",
+    "crop_folder": "Potato",
+    "region": "Mymensingh",
+    "retained_entries": 15,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-f20c9020f7e82ae72fd2",
+    "source_id": "bamis_8864_f42ee48b",
+    "source_pdf": "BAMIS_All_Crops/Potato/Rajshahi/8864.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8864_f42ee48b_p001_t001",
+    "crop_folder": "Potato",
+    "region": "Rajshahi",
+    "retained_entries": 15,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-687f5290265be2b6b527",
+    "source_id": "bamis_8866_3eb20dea",
+    "source_pdf": "BAMIS_All_Crops/Potato/Rangamati/8866.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8866_3eb20dea_p001_t001",
+    "crop_folder": "Potato",
+    "region": "Rangamati",
+    "retained_entries": 15,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-bacceb153c95781c2711",
+    "source_id": "bamis_8868_a9c938fc",
+    "source_pdf": "BAMIS_All_Crops/Potato/Rangpur/8868.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8868_a9c938fc_p001_t001",
+    "crop_folder": "Potato",
+    "region": "Rangpur",
+    "retained_entries": 15,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-62184c54aef68f92c334",
+    "source_id": "bamis_8870_3b3fb7ff",
+    "source_pdf": "BAMIS_All_Crops/Potato/Sylhet/8870.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_8870_3b3fb7ff_p001_t001",
+    "crop_folder": "Potato",
+    "region": "Sylhet",
+    "retained_entries": 15,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-8fb9eefa683935e0a8ed",
+    "source_id": "bamis_9490_8eeee828",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Barishal/9490.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9490_8eeee828_p001_t001",
+    "crop_folder": "Sugarcane",
+    "region": "Barishal",
+    "retained_entries": 61,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-25a60c3ca4d246e058fa",
+    "source_id": "bamis_9492_ff7b574f",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Bogura/9492.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9492_ff7b574f_p001_t001",
+    "crop_folder": "Sugarcane",
+    "region": "Bogura",
+    "retained_entries": 61,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-325e71b15c6b11aa3854",
+    "source_id": "bamis_9494_1963117b",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Chattogram/9494.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9494_1963117b_p001_t001",
+    "crop_folder": "Sugarcane",
+    "region": "Chattogram",
+    "retained_entries": 61,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-81de8f7bf49fec6a88af",
+    "source_id": "bamis_9496_6cfa73a8",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Cumilla/9496.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9496_6cfa73a8_p001_t001",
+    "crop_folder": "Sugarcane",
+    "region": "Cumilla",
+    "retained_entries": 61,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-73a976154d7b136e3e4a",
+    "source_id": "bamis_9498_a6be913b",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Dhaka/9498.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9498_a6be913b_p001_t001",
+    "crop_folder": "Sugarcane",
+    "region": "Dhaka",
+    "retained_entries": 61,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-2389624b16248e408e48",
+    "source_id": "bamis_9501_41b67710",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Dinajpur/9501.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9501_41b67710_p001_t001",
+    "crop_folder": "Sugarcane",
+    "region": "Dinajpur",
+    "retained_entries": 61,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-cc4c92af25a19c61bd23",
+    "source_id": "bamis_9503_660ca206",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Faridpur/9503.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9503_660ca206_p001_t001",
+    "crop_folder": "Sugarcane",
+    "region": "Faridpur",
+    "retained_entries": 61,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-81c517393ab43da33e83",
+    "source_id": "bamis_9505_2ff62574",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Jashore/9505.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9505_2ff62574_p001_t001",
+    "crop_folder": "Sugarcane",
+    "region": "Jashore",
+    "retained_entries": 61,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-61f9c584aeb154e5890e",
+    "source_id": "bamis_9507_544e88f9",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Khulna/9507.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9507_544e88f9_p001_t001",
+    "crop_folder": "Sugarcane",
+    "region": "Khulna",
+    "retained_entries": 61,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-4b5b9bf7bbd87c48fa6f",
+    "source_id": "bamis_9509_0300bbd2",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Mymensingh/9509.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9509_0300bbd2_p001_t001",
+    "crop_folder": "Sugarcane",
+    "region": "Mymensingh",
+    "retained_entries": 61,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-9dc4b4b3418d4cdf1f2a",
+    "source_id": "bamis_9511_6e8edee7",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Rajshahi/9511.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9511_6e8edee7_p001_t001",
+    "crop_folder": "Sugarcane",
+    "region": "Rajshahi",
+    "retained_entries": 61,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-96b00c083254d15f9d7b",
+    "source_id": "bamis_9513_294961cc",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Rangamati/9513.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9513_294961cc_p001_t001",
+    "crop_folder": "Sugarcane",
+    "region": "Rangamati",
+    "retained_entries": 61,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-35b76caf881f6ed7be42",
+    "source_id": "bamis_9515_a3cda058",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Rangpur/9515.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9515_a3cda058_p001_t001",
+    "crop_folder": "Sugarcane",
+    "region": "Rangpur",
+    "retained_entries": 61,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-d078ea15cb726a026849",
+    "source_id": "bamis_9894_965608c0",
+    "source_pdf": "BAMIS_All_Crops/Groundnut (Kharif - 1)/Barishal/9894.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9894_965608c0_p001_t001",
+    "crop_folder": "Groundnut (Kharif - 1)",
+    "region": "Barishal",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-d150c231ef8f2328a574",
+    "source_id": "bamis_9896_7e6c4401",
+    "source_pdf": "BAMIS_All_Crops/Groundnut (Kharif - 1)/Dinajpur/9896.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9896_7e6c4401_p001_t001",
+    "crop_folder": "Groundnut (Kharif - 1)",
+    "region": "Dinajpur",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-b914e97280403cf392f2",
+    "source_id": "bamis_9898_4d9266f2",
+    "source_pdf": "BAMIS_All_Crops/Groundnut (Kharif - 1)/Faridpur/9898.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9898_4d9266f2_p001_t001",
+    "crop_folder": "Groundnut (Kharif - 1)",
+    "region": "Faridpur",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-fee2803f9fd0c05855f3",
+    "source_id": "bamis_9900_079a8968",
+    "source_pdf": "BAMIS_All_Crops/Groundnut (Kharif - 1)/Rajshahi/9900.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9900_079a8968_p001_t001",
+    "crop_folder": "Groundnut (Kharif - 1)",
+    "region": "Rajshahi",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-04544b8bdf3266f6ea78",
+    "source_id": "bamis_9902_704ffb35",
+    "source_pdf": "BAMIS_All_Crops/Groundnut (Kharif - 1)/Rangpur/9902.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9902_704ffb35_p001_t001",
+    "crop_folder": "Groundnut (Kharif - 1)",
+    "region": "Rangpur",
+    "retained_entries": 18,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-30a53d48d255becda247",
+    "source_id": "bamis_9904_74c8718d",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Barishal/9904.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9904_74c8718d_p001_t001",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Barishal",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-9991e550d76c6eb520f4",
+    "source_id": "bamis_9906_b046b8d8",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Chattogram/9906.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9906_b046b8d8_p001_t001",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Chattogram",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-3e3dcb89b18b17665ea9",
+    "source_id": "bamis_9908_31d4ee29",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Cumilla/9908.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9908_31d4ee29_p001_t001",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Cumilla",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-223830f3bc6893ac5e2c",
+    "source_id": "bamis_9910_1db70280",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Dhaka/9910.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9910_1db70280_p001_t001",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Dhaka",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-eedd8a1afb501369c8d8",
+    "source_id": "bamis_9912_0778f491",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Faridpur/9912.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9912_0778f491_p001_t001",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Faridpur",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-2aea1a83366fc3c658d0",
+    "source_id": "bamis_9914_e306ee83",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Jashore/9914.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9914_e306ee83_p001_t001",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Jashore",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-4f2af6bb6f2e5c3c030b",
+    "source_id": "bamis_9916_2bc4d15e",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Rajshahi/9916.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9916_2bc4d15e_p001_t001",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Rajshahi",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-47e7181ab811d262a6fb",
+    "source_id": "bamis_9918_f00feba7",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Rangamati/9918.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9918_f00feba7_p001_t001",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Rangamati",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-80f03250719c83eff47a",
+    "source_id": "bamis_9920_6b70db35",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Rangpur/9920.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9920_6b70db35_p001_t001",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Rangpur",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  },
+  {
+    "calendar_id": "calendar-8298bee86385bcef57e6",
+    "source_id": "bamis_9922_8580240f",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Sylhet/9922.pdf",
+    "source_page": 1,
+    "source_table_id": "bamis_9922_8580240f_p001_t001",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Sylhet",
+    "retained_entries": 21,
+    "status": "partially_or_fully_retained",
+    "exclusion_records": []
+  }
+]

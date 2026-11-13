@@ -1344,4 +1344,186 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Next action / owner:** Commit and push the correction to origin/main2.
 
 **Task / source:** G1D; Current user correction: standalone local HTML preview, not a website route
+
+## Maruf — Prompt 001
+
+<a id="maruf-001"></a>
+<a id="p-00cd4692c47c"></a>
+<!-- record-id: P-00cd4692c47c -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T08:55:21Z -->
+
+**Member:** maruf
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Prepare a reproducible multi-region crop-evidence package that preserves source records, corrections, unresolved calendars and inactive agronomic evidence for climate compatibility review.
+
+**Purpose / AI contribution:** Normalize the existing collection with source lineage, reproducible scripts, QA and a candidate-rule compatibility matrix.
+
+**Human contribution:** Maruf supplied the collection scope and evidence-handling requirements; no human source approval is inferred.
+
+**Changed files:** scripts/; data/catalog/; tests/test_crop_evidence.py; docs/tasks/CROP-EVIDENCE-PREP.json; docs/AI_USE.md; docs/PROGRESS.md; README.md
+
+**Actual outcome:** Preserved 7,834 rows and all 318 extracted sources with 106 reproducible month corrections, explicit calendar ambiguities and 17 inactive compatibility rows. Seven evidence tests and both rebuilds passed; the full suite ran 93 tests with 14 existing climate checksum errors, so review completion remains blocked.
+
+**Review / limitations:** No agronomic activation, API contract change, source-rights approval, commit or push. Scientific period/statistic/cycle definitions remain unresolved.
+
+**Next action / owner:** Maruf reviews source semantics and rights; Saim resolves climate checkout integrity; Fardin reviews research-schema mapping.
+
+**Task / source:** CROP-EVIDENCE-PREP; Attached crop/agronomy evidence request, 13 November 2026
+
+## Maruf — Prompt 002
+
+<a id="maruf-002"></a>
+<a id="p-66d21a1ed020"></a>
+<!-- record-id: P-66d21a1ed020 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T09:02:44Z -->
+
+**Member:** maruf
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Keep the evidence work on a local branch and proceed with source-supported calendar-entry lineage review.
+
+**Purpose / AI contribution:** Create local branch maruf/crop-evidence-prep and replay original extraction-stage geometry to resolve ambiguous numeric column matches while preserving alternatives and prior IDs.
+
+**Human contribution:** Maruf requested local branch tracking and continuation to the next step; no source approval or scientific validation was supplied.
+
+**Changed files:** scripts/build_crop_evidence.py; scripts/crop_evidence_lineage.py; tests/test_crop_evidence.py; data/catalog/normalized/; data/catalog/EVIDENCE_PACKAGE.md; data/catalog/EVIDENCE_DICTIONARY.md; docs/tasks/CROP-LINEAGE-REVIEW.json; docs/tasks/CROP-EVIDENCE-PREP.json; docs/AI_USE.md; docs/PROGRESS.md; README.md
+
+**Actual outcome:** Local checkpoint 5ee0936 saved the evidence package on maruf/crop-evidence-prep, including all 221 source-stage lineage resolutions with alternatives and prior IDs. Nine evidence tests, deterministic rebuild and staged whitespace checks passed. Independent review and the existing climate checksum blocker remain pending; nothing was pushed.
+
+**Task / source:** CROP-LINEAGE-REVIEW; Current instruction: keep track in local branch and move to the next step
+
+## Maruf — Prompt 003
+
+<a id="maruf-003"></a>
+<a id="p-3d14dfcdf2c5"></a>
+<!-- record-id: P-3d14dfcdf2c5 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T09:12:41Z -->
+
+**Member:** maruf
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Resolve the climate-registry checkout checksum blocker and rerun verification before continuing evidence review.
+
+**Purpose / AI contribution:** Pin the registry, its manifest and its hash-pinned generator to LF; restore only verified committed bytes and test checkout filters and existing source checks.
+
+**Human contribution:** Maruf authorized continuation to the next listed step. No source approval, scientific validation or teammate review was supplied.
+
+**Changed files:** .gitattributes; data/catalog/EVIDENCE_PACKAGE.md; docs/tasks/CROP-EVIDENCE-PREP.json; docs/tasks/CROP-LINEAGE-REVIEW.json; docs/AI_USE.md; docs/PROGRESS.md; README.md
+
+**Actual outcome:** Pinned three hash-sensitive paths to LF and restored their verified committed bytes without changing scientific values or source hashes. Registry regeneration, checkout filters with core.autocrlf enabled/disabled, and all 114 Python tests passed; CROP-EVIDENCE-PREP is now in_review with human review pending.
+
+**Task / source:** CROP-EVIDENCE-PREP; Current instruction: move to the next step
+
+## Maruf — Prompt 004
+
+<a id="maruf-004"></a>
+<a id="p-7f10a208f724"></a>
+<!-- record-id: P-7f10a208f724 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T09:19:13Z -->
+
+**Member:** maruf
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Continue source-evidence preparation by investigating calendar conflicts and weather-definition gaps across the preserved collection.
+
+**Purpose / AI contribution:** Audit all extracted documents for definition leads, compare every collected Lentil region, and document inspected original-source conflicts without inventing corrections or approving rules.
+
+**Human contribution:** Maruf authorized the next source-evidence step. No independent review or agronomic approval was supplied.
+
+**Changed files:** data/catalog/.gitattributes; data/catalog/README.md; data/catalog/EVIDENCE_DICTIONARY.md; scripts/audit_crop_source_semantics.py; tests/test_crop_source_semantics.py; data/catalog/source_review/; data/catalog/evidence_inputs/source_reviews.json; data/catalog/normalized/; data/catalog/EVIDENCE_PACKAGE.md; docs/tasks/CROP-SOURCE-SEMANTICS.json; docs/tasks/CROP-LINEAGE-REVIEW.json; docs/AI_USE.md; docs/PROGRESS.md; README.md
+
+**Actual outcome:** Audited all 318 extracted documents and 13 Lentil regions; original PDFs confirmed the same month-label gap in four regions, with no corrections inferred. Preserved 320 inactive temporal-wording leads and bounded official-source checks. All 118 Python tests and both byte-identical rebuilds passed; independent review and scientific definitions remain pending.
+
+**Task / source:** CROP-SOURCE-SEMANTICS; Current instruction: go ahead with source-evidence review
+
+## Maruf — Prompt 005
+
+<a id="maruf-005"></a>
+<a id="p-56f4c3c58221"></a>
+<!-- record-id: P-56f4c3c58221 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T09:27:28Z -->
+
+**Member:** maruf
+
+**Tool:** Codex
+
+**Type:** push
+
+**Refined implementation prompt (AI-written):** Push the crop-evidence preparation branch to origin and record the actual remote delivery.
+
+**Purpose / AI contribution:** Publish the authorized branch with a normal non-force Git push and preserve its delivery evidence without advancing review or science gates.
+
+**Human contribution:** Maruf explicitly requested the push. No independent source approval, human review or merge was supplied.
+
+**Changed files:** docs/AI_USE.md; docs/tasks/CROP-EVIDENCE-PREP.json; docs/tasks/CROP-LINEAGE-REVIEW.json; docs/tasks/CROP-SOURCE-SEMANTICS.json; docs/PROGRESS.md; README.md
+
+**Actual outcome:** Git successfully created origin/maruf/crop-evidence-prep at source checkpoint 4c3a0f4 and configured upstream tracking. Independent review remains pending; the unrelated untracked prototype/app/api directory was not included.
+
+**Review / limitations:** Push is delivery only: no pull request, merge, scientific activation or agronomic approval is claimed.
+
+**Next action / owner:** Maruf/Fardin independently review the evidence and lineage; Maruf/Saim resolve the remaining source semantics and rights.
+
+**Task / source:** CROP-SOURCE-SEMANTICS; Current explicit instruction: push it now
+
+## Prachurjo — Prompt 009
+
+<a id="prachurjo-009"></a>
+<a id="p-3045a69ab65f"></a>
+<!-- record-id: P-3045a69ab65f -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T10:00:57Z -->
+
+**Member:** prachurjo
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Pull the latest main2 branch and merge Maruf’s crop-evidence branch before preparing the remaining frontend work.
+
+**Purpose / AI contribution:** Integrate the updated crop evidence with current climate and frontend work, preserve both command histories and verify the merged candidate.
+
+**Human contribution:** Prachurjo identified himself as the current contributor and explicitly requested the pull and merge.
+
+**Changed files:** docs/AI_USE.md; docs/tasks/CROP-EVIDENCE-PREP.json; generated README/PROGRESS; incoming crop evidence, builders and tests
+
+**Actual outcome:** Pulled main2 to bf61942 and integrated maruf/crop-evidence-prep at ffea11a, preserving both command histories. All 118 Python tests, 39 Node tests and crop rebuild/workflow checks passed; independent scientific review remains pending.
+
+**Review / limitations:** Local integration only; no crop rule activation or independent approval is inferred. No push performed.
+
+**Related context:** Public number reconciled from PRACHURJO-005 during branch integration; stable internal record ID and original facts preserved.
+
+**Next action / owner:** Prachurjo continues the existing result UI; Fardin connects reviewed scientific payloads.
+
+**Task / source:** CROP-EVIDENCE-PREP; Current explicit pull and merge instruction
 <!-- workflow:ai-records:end -->

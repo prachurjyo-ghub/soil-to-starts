@@ -1,6 +1,6 @@
 # Soil to Stars
 
-Explainable crop-rotation planning for Bangladesh for [NASA Space Apps 2026 — Field Shift](https://www.spaceappschallenge.org/2026/challenges/field-shift-adapting-farms-with-nasa-data/).
+Explainable crop-rotation planning for Bangladesh for [NASA Space Apps 2026 â€” Field Shift](https://www.spaceappschallenge.org/2026/challenges/field-shift-adapting-farms-with-nasa-data/).
 
 **Start your day with the [team task board](docs/PROGRESS.md).** It lists every work package, small checklist item, owner, prerequisites, errors, verification and next handoff. The repository's historical name is `soil-to-starts`; the product is **Soil to Stars**.
 
@@ -15,7 +15,7 @@ The development workflow is implemented locally: task checklists, generated prog
 
 Generated from task records; the detailed board is the team's daily starting point.
 
-**Accepted work packages: 0/41 · Implemented checklist items: 57/160.** Checked items can still await independent review and merge.
+**Accepted work packages: 0/44 · Implemented checklist items: 66/169.** Checked items can still await independent review and merge.
 
 | Member | First available action |
 | --- | --- |
@@ -95,7 +95,7 @@ tests/           development-helper tests; science/API tests added with implemen
 .github/          task/PR templates and CI definitions
 ```
 
-Scientific data flow: NASA/local sources → acquisition/QA → versioned local cache/fixtures → API + deterministic compute → provenance gate → frontend. The frontend never queries NASA for scientific results. Local prepared data supports the scientific demo; browser assets/fonts/maps need their own offline validation. Never cache restricted map tiles.
+Scientific data flow: NASA/local sources â†’ acquisition/QA â†’ versioned local cache/fixtures â†’ API + deterministic compute â†’ provenance gate â†’ frontend. The frontend never queries NASA for scientific results. Local prepared data supports the scientific demo; browser assets/fonts/maps need their own offline validation. Never cache restricted map tiles.
 
 ## Six owners
 

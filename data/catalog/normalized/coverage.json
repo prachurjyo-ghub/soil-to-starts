@@ -1,0 +1,4847 @@
+[
+  {
+    "crop": "Banana",
+    "season": "Unspecified",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-ed90f7f1254b83d1a465"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Banana",
+    "season": "Unspecified",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-0f29f97640e3ed22a42c"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Banana",
+    "season": "Unspecified",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Banana",
+    "season": "Unspecified",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Banana",
+    "season": "Unspecified",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Banana",
+    "season": "Unspecified",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Banana",
+    "season": "Unspecified",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Banana",
+    "season": "Unspecified",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-ff1e35ec75f2c7153e70"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Banana",
+    "season": "Unspecified",
+    "bamis_region": "Khulna",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Banana",
+    "season": "Unspecified",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-06da79a69b595b331a16"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Banana",
+    "season": "Unspecified",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Banana",
+    "season": "Unspecified",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [
+      "calendar-89bea2563a2e2070578d"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Banana",
+    "season": "Unspecified",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-c22ae810ddd15aae7e3b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Banana",
+    "season": "Unspecified",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Kharif",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-538f679eff17a5730fd4"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Kharif",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-cf264d8f7a178fae5030"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Kharif",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Kharif",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-ff7f3b1f38bd236fe569"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Kharif",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-a68efa4574349896f6ba"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Kharif",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Kharif",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Kharif",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-dd4851be21b9a304839e"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Kharif",
+    "bamis_region": "Khulna",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Kharif",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-dd2d59a660856cb09b0f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Kharif",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-bd30e875f308e569f3f1"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Kharif",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Kharif",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Kharif",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [
+      "calendar-f20205acee0e54c80aa1"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Rabi",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-424ae81f785517a403c4"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Rabi",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-04aae3e94e2f8a438330"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Rabi",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-47c2f0c794962f54099a",
+      "calendar-85020726b2e592f9617a"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Rabi",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-ccb8445667b534b10b7c"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Rabi",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-05aa945a626ecb88cd43"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Rabi",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Rabi",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Rabi",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-64d4fc69731d0d8652d4"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Rabi",
+    "bamis_region": "Khulna",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Rabi",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-a04e4a0ef6259eeb8d29"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Rabi",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-66ea0d5a5f2765dcfbe5"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Rabi",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Rabi",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Bottle Gourd",
+    "season": "Rabi",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [
+      "calendar-72f8671af290842a882b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Kharif",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-2c9a83b1591a51014c9d"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Kharif",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-fc6231e1994501771239"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Kharif",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-9ca660a791a9dca92fdd"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Kharif",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-a711dcb4875e0e03999f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Kharif",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-bcf5b8a6f537690e451f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Kharif",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Kharif",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Kharif",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-9752ff2e70a47ef4653b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Kharif",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-3a62ae10d7a6f7802e4e"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Kharif",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-faf92e01d37ae946e534"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Kharif",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-dba085e5182a200f51b4"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Kharif",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Kharif",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Kharif",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [
+      "calendar-bf10263c1b0abe889a62"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Rabi",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-f898233042a6a711378f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Rabi",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-bc93c78113370a04800b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Rabi",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-b4cab5d6623217922fc8"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Rabi",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-2d1c71be05411c2937dc"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Rabi",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-004c5c2f7592563d38e6"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Rabi",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Rabi",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Rabi",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-6eee3d68eda3c3b8e589"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Rabi",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-3780483524d22a4924b0"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Rabi",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-e10b6040137b23f0382a"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Rabi",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-a4b651c801dc03574fc1"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Rabi",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Rabi",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Brinjal",
+    "season": "Rabi",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [
+      "calendar-7d2846548eed221a1678"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Kharif",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-822dbd57ed3222f3ab9c"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Kharif",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-58a7fd5a9db8c07d89eb"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Kharif",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Kharif",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-4f2906b3753c5c4b4aa8"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Kharif",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Kharif",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-08f7c856c2b4377cd8d1"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Kharif",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-34209da46194ab3b6a1b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Kharif",
+    "bamis_region": "Jashore",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Kharif",
+    "bamis_region": "Khulna",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Kharif",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Kharif",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Kharif",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Kharif",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-793880bd6bb9494305d6"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Kharif",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [
+      "calendar-72ad3592e3a06d9c55a0"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Rabi",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-d396e713f1bb71c4fe0c"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Rabi",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-655170f80affef265904"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Rabi",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-21bb793f16f1abc9dd1d"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Rabi",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-f5b9fe589ec680776521"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Rabi",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Rabi",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-b9038746d65b12faafb2"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Rabi",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-effbe94eb21175b10441"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Rabi",
+    "bamis_region": "Jashore",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Rabi",
+    "bamis_region": "Khulna",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Rabi",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-165f44bba4fe53729b09"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Rabi",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-34952637aae11e4054d6"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Rabi",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Rabi",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-73b6d6f39d2511bd2234"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Chilli",
+    "season": "Rabi",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [
+      "calendar-b5794d03c95af7d8f1dc"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cotton",
+    "season": "Unspecified",
+    "bamis_region": "Barishal",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cotton",
+    "season": "Unspecified",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-cdd9a0ed50936e19c3e5"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cotton",
+    "season": "Unspecified",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cotton",
+    "season": "Unspecified",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cotton",
+    "season": "Unspecified",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-c1bf4eaa9b594eef4958"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cotton",
+    "season": "Unspecified",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-f706cad8c7a3796b771a"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cotton",
+    "season": "Unspecified",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cotton",
+    "season": "Unspecified",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-d7e527fd445d4ec5e321"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cotton",
+    "season": "Unspecified",
+    "bamis_region": "Khulna",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cotton",
+    "season": "Unspecified",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-5ba8e69d6af1799f6de6"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cotton",
+    "season": "Unspecified",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-d325f0d8574cd2f7dd28"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cotton",
+    "season": "Unspecified",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cotton",
+    "season": "Unspecified",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-cf6f0ea9dc6b87be5361"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cotton",
+    "season": "Unspecified",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Kharif",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-734ddf5032a6433312f3"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Kharif",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-c246d389f4515eef7713"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Kharif",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-fada4e443faa68ae49ac"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Kharif",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Kharif",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-bfeda3b5e9ab9f33e3c2"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Kharif",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Kharif",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-dd26092b3ea1ff91204d"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Kharif",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-0b4c7bf9a5d63a80269d"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Kharif",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-5c58a17beb9448ae6486"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Kharif",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Kharif",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Kharif",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Kharif",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Kharif",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Rabi",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-a8113fb0d547b18c5558"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Rabi",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-45db7f855c040b65419e"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Rabi",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-7eb247cdd1dfc31c7fb4"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Rabi",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Rabi",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-a27f76e4326842153c5a"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Rabi",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Rabi",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-29ca7d8d69980c18c642"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Rabi",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-798335a812acc5e145f0"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Rabi",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-f1edc2deb5de764bca9f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Rabi",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Rabi",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-ccb7cfb9408aaa880ce9"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Rabi",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Rabi",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Cucumber",
+    "season": "Rabi",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Garlic",
+    "season": "Rabi",
+    "bamis_region": "Barishal",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Garlic",
+    "season": "Rabi",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-66f04459b89a5e272bef"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Garlic",
+    "season": "Rabi",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Garlic",
+    "season": "Rabi",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-330ace9eed8ca8875a2a"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Garlic",
+    "season": "Rabi",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-0660a5fde838b9c72764"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Garlic",
+    "season": "Rabi",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Garlic",
+    "season": "Rabi",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-576ba385407ae143e09e"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Garlic",
+    "season": "Rabi",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-11b4af5685476211fbfc"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Garlic",
+    "season": "Rabi",
+    "bamis_region": "Khulna",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Garlic",
+    "season": "Rabi",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-c09c643239fc211bc3d4"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Garlic",
+    "season": "Rabi",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-b1985da69e527919103f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Garlic",
+    "season": "Rabi",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Garlic",
+    "season": "Rabi",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-7e5d8a7bee65373df54b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Garlic",
+    "season": "Rabi",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Kharif-1",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-d078ea15cb726a026849"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Kharif-1",
+    "bamis_region": "Bogura",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Kharif-1",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Kharif-1",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Kharif-1",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Kharif-1",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-d150c231ef8f2328a574"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Kharif-1",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-b914e97280403cf392f2"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Kharif-1",
+    "bamis_region": "Jashore",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Kharif-1",
+    "bamis_region": "Khulna",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Kharif-1",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Kharif-1",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-fee2803f9fd0c05855f3"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Kharif-1",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Kharif-1",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-04544b8bdf3266f6ea78"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Kharif-1",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Rabi",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-30a53d48d255becda247"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Rabi",
+    "bamis_region": "Bogura",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Rabi",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-9991e550d76c6eb520f4"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Rabi",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-3e3dcb89b18b17665ea9"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Rabi",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-223830f3bc6893ac5e2c"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Rabi",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Rabi",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-eedd8a1afb501369c8d8"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Rabi",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-2aea1a83366fc3c658d0"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Rabi",
+    "bamis_region": "Khulna",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Rabi",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Rabi",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-4f2af6bb6f2e5c3c030b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Rabi",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [
+      "calendar-47e7181ab811d262a6fb"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Rabi",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-80f03250719c83eff47a"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Groundnut",
+    "season": "Rabi",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [
+      "calendar-8298bee86385bcef57e6"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Guava",
+    "season": "Unspecified",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-e3dc7b0955283afc1a71"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Guava",
+    "season": "Unspecified",
+    "bamis_region": "Bogura",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Guava",
+    "season": "Unspecified",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Guava",
+    "season": "Unspecified",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Guava",
+    "season": "Unspecified",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-f7208b2b72b6d6e51704"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Guava",
+    "season": "Unspecified",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-baf4e4a05442056e210f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Guava",
+    "season": "Unspecified",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-259e31bfce04fa6bb7e8"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Guava",
+    "season": "Unspecified",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-3e62d45a83f66b8f5654"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Guava",
+    "season": "Unspecified",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-3f543944c7d6c28d62c6"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Guava",
+    "season": "Unspecified",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-022435bc3764e15b93ae"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Guava",
+    "season": "Unspecified",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-0c244446bb15b2896efe"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Guava",
+    "season": "Unspecified",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Guava",
+    "season": "Unspecified",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Guava",
+    "season": "Unspecified",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Jackfruit",
+    "season": "Unspecified",
+    "bamis_region": "Barishal",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Jackfruit",
+    "season": "Unspecified",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-3605b15f50cbcf7f0424"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jackfruit",
+    "season": "Unspecified",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-741d66d97c1e72f257b5"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jackfruit",
+    "season": "Unspecified",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Jackfruit",
+    "season": "Unspecified",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-0fd7f64b538194993ab6"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jackfruit",
+    "season": "Unspecified",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-4e0144593334f93b21a5"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jackfruit",
+    "season": "Unspecified",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Jackfruit",
+    "season": "Unspecified",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-a73a2ddec869b47854f0"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jackfruit",
+    "season": "Unspecified",
+    "bamis_region": "Khulna",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Jackfruit",
+    "season": "Unspecified",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-19ccbfea3928ed68255e"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jackfruit",
+    "season": "Unspecified",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-5ee3fe41825e6d04090a"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jackfruit",
+    "season": "Unspecified",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [
+      "calendar-f9881749dabea10e4a1a"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jackfruit",
+    "season": "Unspecified",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-3b016e59c16ca2f30d02"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jackfruit",
+    "season": "Unspecified",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Jujube",
+    "season": "Boro",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-9cb9f3a92fe301534cb3"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jujube",
+    "season": "Boro",
+    "bamis_region": "Bogura",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Jujube",
+    "season": "Boro",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-33a4a94bb798e90eae6f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jujube",
+    "season": "Boro",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Jujube",
+    "season": "Boro",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-c823b6859c3908c218ab"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jujube",
+    "season": "Boro",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Jujube",
+    "season": "Boro",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Jujube",
+    "season": "Boro",
+    "bamis_region": "Jashore",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Jujube",
+    "season": "Boro",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-72543209967aabb55feb"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jujube",
+    "season": "Boro",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Jujube",
+    "season": "Boro",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-5d8a818555f6eba7f939"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jujube",
+    "season": "Boro",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Jujube",
+    "season": "Boro",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Jujube",
+    "season": "Boro",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Jute",
+    "season": "Unspecified",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-834219791dbb8ce218ce"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jute",
+    "season": "Unspecified",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-02a6f1cce6e8510c1a5f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jute",
+    "season": "Unspecified",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Jute",
+    "season": "Unspecified",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-da08e55a1f9dcc980abe"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jute",
+    "season": "Unspecified",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-50db62bc5583a03abfb2"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jute",
+    "season": "Unspecified",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-ec5d252f8e7b8a412147"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jute",
+    "season": "Unspecified",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-05a19d625832a542b9de"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jute",
+    "season": "Unspecified",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-b48f5efa8ac394bc70db"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jute",
+    "season": "Unspecified",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-41cc6cb3f80699ac4dc3"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jute",
+    "season": "Unspecified",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-58c80f900162cceeaaf9"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jute",
+    "season": "Unspecified",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-11df1b563d1c17e32406"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jute",
+    "season": "Unspecified",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Jute",
+    "season": "Unspecified",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-b919d0e689bfa7ddbc2e"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Jute",
+    "season": "Unspecified",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Lentil",
+    "season": "Unspecified",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-f186a21fb4a1e2bcf2e7"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Lentil",
+    "season": "Unspecified",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-b46f5d47165279ba93a5"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Lentil",
+    "season": "Unspecified",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-c8c8d25bb4cbc698d1b0"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Lentil",
+    "season": "Unspecified",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-0fa7c8046f7288d7dec2"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Lentil",
+    "season": "Unspecified",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-b3515cb0b6a3fc1c86fd"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Lentil",
+    "season": "Unspecified",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-617f116cce75d1c0c728"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Lentil",
+    "season": "Unspecified",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-326df6945bc029dd0631"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Lentil",
+    "season": "Unspecified",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-e021cece1901b1349dcc"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Lentil",
+    "season": "Unspecified",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-e8aa06f9847bd940e33e"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Lentil",
+    "season": "Unspecified",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-d0abba79f226030f4f7f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Lentil",
+    "season": "Unspecified",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-172b06362c70e5f5200c"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Lentil",
+    "season": "Unspecified",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Lentil",
+    "season": "Unspecified",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-ff53d8b163e08f7e8709"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Lentil",
+    "season": "Unspecified",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [
+      "calendar-50f60e2bbcb4c4e12386"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Litchi",
+    "season": "Unspecified",
+    "bamis_region": "Barishal",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Litchi",
+    "season": "Unspecified",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-b39f91b2e0b4f5348045"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Litchi",
+    "season": "Unspecified",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Litchi",
+    "season": "Unspecified",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Litchi",
+    "season": "Unspecified",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Litchi",
+    "season": "Unspecified",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-d0340ef516974aa5ebce"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Litchi",
+    "season": "Unspecified",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Litchi",
+    "season": "Unspecified",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-daee36fd9ea64d440c79"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Litchi",
+    "season": "Unspecified",
+    "bamis_region": "Khulna",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Litchi",
+    "season": "Unspecified",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-36a08503244227833f09"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Litchi",
+    "season": "Unspecified",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-c5a28ebdb87d0084851b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Litchi",
+    "season": "Unspecified",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [
+      "calendar-358eff5a3e862b16c127"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Litchi",
+    "season": "Unspecified",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-dd6da1bc46519ddf03d9"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Litchi",
+    "season": "Unspecified",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Maize",
+    "season": "Kharif-1",
+    "bamis_region": "Barishal",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Maize",
+    "season": "Kharif-1",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-22e85313d24b3b72c78c"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Kharif-1",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Maize",
+    "season": "Kharif-1",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-3737cdf0926e41a23ab5"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Kharif-1",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-d2d1d0e3fc9fb838e165"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Kharif-1",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-7721cc3d71b115e268e0"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Kharif-1",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Maize",
+    "season": "Kharif-1",
+    "bamis_region": "Jashore",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Maize",
+    "season": "Kharif-1",
+    "bamis_region": "Khulna",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Maize",
+    "season": "Kharif-1",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-45e77eff893266e357ca"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Kharif-1",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-43170c7d6624425e6285"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Kharif-1",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [
+      "calendar-59b8eb9ced3a4b905a99"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Kharif-1",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-ddf3d4f6e41ac098fcf3"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Kharif-1",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Maize",
+    "season": "Rabi",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-67014c7b6a6e9ef6c872"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Rabi",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-4051f0b881baa7ca010e"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Rabi",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-7ab1e5dc162011aae4ca"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Rabi",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-c9489f7c01e2cd764f55"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Rabi",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-5be072b88a8c56258471"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Rabi",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-5de0fa4f420ff2342e37"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Rabi",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-6db8749f4059e11a13b4"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Rabi",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-ae7d812b862b8f01cd66"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Rabi",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-1daa37c0fda0c992e3bb"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Rabi",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-092a2541cb21f7e8bd4c"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Rabi",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-6fa5a455186d1699a5f3"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Rabi",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [
+      "calendar-ca18edd5e0171d6b603d"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Rabi",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-1fb08e9fdd1d623fa9e8"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Maize",
+    "season": "Rabi",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [
+      "calendar-5c8c192570df3a73f2c1"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mango",
+    "season": "Unspecified",
+    "bamis_region": "Barishal",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mango",
+    "season": "Unspecified",
+    "bamis_region": "Bogura",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mango",
+    "season": "Unspecified",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mango",
+    "season": "Unspecified",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mango",
+    "season": "Unspecified",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mango",
+    "season": "Unspecified",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-839d40ee7b1956163bd4"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mango",
+    "season": "Unspecified",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mango",
+    "season": "Unspecified",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-5e90dee49899373c29bc"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mango",
+    "season": "Unspecified",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-0d7eb7ba99fcd5c35497"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mango",
+    "season": "Unspecified",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mango",
+    "season": "Unspecified",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mango",
+    "season": "Unspecified",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [
+      "calendar-497b1b3cdc7c47f30fdd"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mango",
+    "season": "Unspecified",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-6c1828c0af42346a111c"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mango",
+    "season": "Unspecified",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Kharif-1",
+    "bamis_region": "Barishal",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Kharif-1",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-d287fd465168426dcfc3"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Kharif-1",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Kharif-1",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Kharif-1",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-26f85dec3269be19f01a"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Kharif-1",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Kharif-1",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Kharif-1",
+    "bamis_region": "Jashore",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Kharif-1",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-0bf61be79c9680d8640f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Kharif-1",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-0f9cf605e2d6bec03c28"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Kharif-1",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-5fc168c845a7d24bfd6d"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Kharif-1",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Kharif-1",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Kharif-1",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Rabi",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-96288057bf26fc5967ac"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Rabi",
+    "bamis_region": "Bogura",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Rabi",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-cb50580556da4179f01f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Rabi",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Rabi",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-a6ce2fd5f1a3c7213e84"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Rabi",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-589ee1701d5b0575aa1f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Rabi",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-6abf9fccb8c9f73cc8f7"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Rabi",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-108641dcb27f9ca2cc19"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Rabi",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-a855ad7f0c5aec30d4cf"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Rabi",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-db60cfc8cb543e381281"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Rabi",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Rabi",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Rabi",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-f3f04569287463146663"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mungbean",
+    "season": "Rabi",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mustard",
+    "season": "Unspecified",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-798541ac478371a70067"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mustard",
+    "season": "Unspecified",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-8cfa5c37f53a258389d6"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mustard",
+    "season": "Unspecified",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-6dfe11458a764e472eb4"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mustard",
+    "season": "Unspecified",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-0b58560cb3325db6a501"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mustard",
+    "season": "Unspecified",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-615fc8411b600bcbf040"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mustard",
+    "season": "Unspecified",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-55e313cd7a17b99c8a47"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mustard",
+    "season": "Unspecified",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-d182aa532e48f68d0ef4"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mustard",
+    "season": "Unspecified",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-3fbed3b9e72dff0df31e"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mustard",
+    "season": "Unspecified",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-b7c416e9b8d75c594cc2"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mustard",
+    "season": "Unspecified",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-beae89e0ad6c8443ee39"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mustard",
+    "season": "Unspecified",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-075146811f5710f6f831"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mustard",
+    "season": "Unspecified",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Mustard",
+    "season": "Unspecified",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-673df64a501f0c84c399"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Mustard",
+    "season": "Unspecified",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [
+      "calendar-b4809511ae7cec23a51c"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Onion",
+    "season": "Kharif",
+    "bamis_region": "Barishal",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Onion",
+    "season": "Kharif",
+    "bamis_region": "Bogura",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Onion",
+    "season": "Kharif",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Onion",
+    "season": "Kharif",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-78f9bb06f525847eb4c5"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Onion",
+    "season": "Kharif",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-5c014421c053cc7609c3"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Onion",
+    "season": "Kharif",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-ce64b9dddaabd15fd0f4"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Onion",
+    "season": "Kharif",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Onion",
+    "season": "Kharif",
+    "bamis_region": "Jashore",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Onion",
+    "season": "Kharif",
+    "bamis_region": "Khulna",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Onion",
+    "season": "Kharif",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Onion",
+    "season": "Kharif",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Onion",
+    "season": "Kharif",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Onion",
+    "season": "Kharif",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Onion",
+    "season": "Kharif",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Onion",
+    "season": "Rabi",
+    "bamis_region": "Barishal",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Onion",
+    "season": "Rabi",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-4525f0713910caadbaa9"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Onion",
+    "season": "Rabi",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-fc684f9133d4615d63ab"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Onion",
+    "season": "Rabi",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-61bb209fd9a42a232317"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Onion",
+    "season": "Rabi",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-a756a52740251bf5df1b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Onion",
+    "season": "Rabi",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-8958ae230526590abc72"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Onion",
+    "season": "Rabi",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-11a1e505a05ce043513e"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Onion",
+    "season": "Rabi",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-0f078b5413bce24fc00c"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Onion",
+    "season": "Rabi",
+    "bamis_region": "Khulna",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Onion",
+    "season": "Rabi",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Onion",
+    "season": "Rabi",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-383fa25bb2d5634097b1"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Onion",
+    "season": "Rabi",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Onion",
+    "season": "Rabi",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-c598ef941c868ff12874"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Onion",
+    "season": "Rabi",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Papaya",
+    "season": "Unspecified",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-ac1625af2f398a4af084"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Papaya",
+    "season": "Unspecified",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-f49712af5145f61e31a1"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Papaya",
+    "season": "Unspecified",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Papaya",
+    "season": "Unspecified",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Papaya",
+    "season": "Unspecified",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-60917e3bc3567f34c9cd"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Papaya",
+    "season": "Unspecified",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-649b2bffba6fe16fa637"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Papaya",
+    "season": "Unspecified",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Papaya",
+    "season": "Unspecified",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-56f343d34a9d2c86e37f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Papaya",
+    "season": "Unspecified",
+    "bamis_region": "Khulna",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Papaya",
+    "season": "Unspecified",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-dca17bbb6a258b0c3f4c"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Papaya",
+    "season": "Unspecified",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-b2586530a7236a229100"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Papaya",
+    "season": "Unspecified",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Papaya",
+    "season": "Unspecified",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Papaya",
+    "season": "Unspecified",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pineapple",
+    "season": "Unspecified",
+    "bamis_region": "Barishal",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pineapple",
+    "season": "Unspecified",
+    "bamis_region": "Bogura",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pineapple",
+    "season": "Unspecified",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-dfa85419797b2a63f02b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pineapple",
+    "season": "Unspecified",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pineapple",
+    "season": "Unspecified",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-63dba09b74ff3e247d2b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pineapple",
+    "season": "Unspecified",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pineapple",
+    "season": "Unspecified",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pineapple",
+    "season": "Unspecified",
+    "bamis_region": "Jashore",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pineapple",
+    "season": "Unspecified",
+    "bamis_region": "Khulna",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pineapple",
+    "season": "Unspecified",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-ca4dad82d23ffd0bb7da"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pineapple",
+    "season": "Unspecified",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pineapple",
+    "season": "Unspecified",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [
+      "calendar-6ced34066a740f66850b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pineapple",
+    "season": "Unspecified",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pineapple",
+    "season": "Unspecified",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [
+      "calendar-0ac239c607743c37d0f1"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Kharif",
+    "bamis_region": "Barishal",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Kharif",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-1972f4348c8822b10780"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Kharif",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Kharif",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-5f4859b49e5408fa1a7f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Kharif",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-6af847f8d983888f8868"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Kharif",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-d0b85439b1fc3f810f73"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Kharif",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Kharif",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-9cb01aa608bc3a24fb9d"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Kharif",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-fc70b40e2a06c20ac43d"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Kharif",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-8a000e672a79b06d6fd8",
+      "calendar-5203592a2ace3f48ee7a"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Kharif",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-b2cb4d7ceda65c5da276"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Kharif",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Kharif",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-f6b8aa4cc0ba2eb0f6dd"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Kharif",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Rabi",
+    "bamis_region": "Barishal",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Rabi",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-093fd1e387d5b903c9d2"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Rabi",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Rabi",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-7e7bed362344441b59d1"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Rabi",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-f0014411bb2fdced9a49"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Rabi",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Rabi",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Rabi",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-6ac113b9df3f2756e8e1"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Rabi",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-b54a4ff631561e3fcfcc"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Rabi",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Rabi",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-f506703808baf97aeb5b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Rabi",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Rabi",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pointed Gourd",
+    "season": "Rabi",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Potato",
+    "season": "Unspecified",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-7ca66522e5d2977bb4b5"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Potato",
+    "season": "Unspecified",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-06a3669e1b38ec320974"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Potato",
+    "season": "Unspecified",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-ef66a36ecc8a41519ba5"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Potato",
+    "season": "Unspecified",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-e522d77130928fc643b2"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Potato",
+    "season": "Unspecified",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-4040a05250448ebeddfe"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Potato",
+    "season": "Unspecified",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-d1ea50ed62b1b7c85d18"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Potato",
+    "season": "Unspecified",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-d9de26af6cabb5145e30"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Potato",
+    "season": "Unspecified",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-0d3c3ea5cc71707ef013"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Potato",
+    "season": "Unspecified",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-41ece96e391e26774545"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Potato",
+    "season": "Unspecified",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-18b05bb70a874151b449"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Potato",
+    "season": "Unspecified",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-f20c9020f7e82ae72fd2"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Potato",
+    "season": "Unspecified",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [
+      "calendar-687f5290265be2b6b527"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Potato",
+    "season": "Unspecified",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-bacceb153c95781c2711"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Potato",
+    "season": "Unspecified",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [
+      "calendar-62184c54aef68f92c334"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Kharif",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-dc15a41d0fffd7a327c3"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Kharif",
+    "bamis_region": "Bogura",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Kharif",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-d539f70562a729c91781"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Kharif",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Kharif",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-3da0d465b4fe711e8bad"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Kharif",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Kharif",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Kharif",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-a665f556af5fab246126"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Kharif",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-7d5a8bafc500ea4c8a8b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Kharif",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-18488e25880108229085"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Kharif",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Kharif",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Kharif",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Kharif",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [
+      "calendar-a88e64c838c60f902f6d"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Rabi",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-1a4afc244cc57e306f69"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Rabi",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-0244a45d52bf7b2c3be3"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Rabi",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-4edaf6170568071b6813"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Rabi",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-b9a3d81266058fcaf04c"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Rabi",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-ff9fdd868f07caf91605"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Rabi",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Rabi",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Rabi",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-ab9030694963ca0e56b3"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Rabi",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-e215cb35a759ce365757"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Rabi",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-4e843de5ad6f377745cd"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Rabi",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-07243f89cfa2a8067946",
+      "calendar-291ce80f4f305fffbd39"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Rabi",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Rabi",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Pumpkin",
+    "season": "Rabi",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [
+      "calendar-53986e3fade77bc07d93"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aman",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-73d2f0e59425e2b24747"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aman",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-d852ceb72b1cc4253140"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aman",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-3d411e538ec2c55bf5f9"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aman",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-6a8ef04c990dcd3bca92"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aman",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-892d675181a66493a9c8"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aman",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-1fec47dbf49ed4a40e47"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aman",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-b9bf065d7d01693fb890"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aman",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-a2137b482ccd495f1b93"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aman",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-81f303f32f3d6acaedf5"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aman",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aman",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-ebe33f79c08318d36951"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aman",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [
+      "calendar-94143a35c8a04280474c"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aman",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-12d4f533daa270ee959d"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aman",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [
+      "calendar-15714383a55e9901e12d"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aus",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-eea5d29c8909b77ee5dd"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aus",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-708f95497b7f1ab20ed3"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aus",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-608f6b3ee4f8f7093915"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aus",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-8ef4862d037b2a349260"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aus",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-1075f6e704ec746e420f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aus",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-6b7739ed969b5d181e6e"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aus",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-e09b379eae0fd38e891b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aus",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-c186ba32007ec9e1d31f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aus",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-b9b4d830fc0958fc36fe"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aus",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-ebf159fd8dc5cda2c193"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aus",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-ea5107d59f4e77443032"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aus",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [
+      "calendar-8d2f769bf974da59174e"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aus",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-8cd14c00e3d8ba49fe98"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Aus",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [
+      "calendar-9c88160f8f305d9865db"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Boro",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-86522a47dee6f3a86837"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Boro",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-3c0dbfed1953b24aaba3"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Boro",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-15724b8570c684a4395d"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Boro",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-08927f2ae832d569bd21"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Boro",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-5563d4b475cb895301ab"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Boro",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-78be4dff93095bc4812a"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Boro",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-955b21bc26f555c52d15"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Boro",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-9982c002a68900260de0"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Boro",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-ab69a8695591e9cfaab4"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Boro",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-d531e0f0ca3fba3ac68b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Boro",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-140a35178355d0a24725"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Boro",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [
+      "calendar-6d17b0e9914fbb1ced68"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Boro",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-fd6aef5a034df3cf6026"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Rice",
+    "season": "Boro",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [
+      "calendar-9140fb19dc1e6ff46d36"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Soybean",
+    "season": "Rabi",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-b7f6889f535ce4b013ca"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Soybean",
+    "season": "Rabi",
+    "bamis_region": "Bogura",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Soybean",
+    "season": "Rabi",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-e4acf10f59a1cf8b9c8c"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Soybean",
+    "season": "Rabi",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Soybean",
+    "season": "Rabi",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Soybean",
+    "season": "Rabi",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Soybean",
+    "season": "Rabi",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Soybean",
+    "season": "Rabi",
+    "bamis_region": "Jashore",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Soybean",
+    "season": "Rabi",
+    "bamis_region": "Khulna",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Soybean",
+    "season": "Rabi",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Soybean",
+    "season": "Rabi",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Soybean",
+    "season": "Rabi",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Soybean",
+    "season": "Rabi",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-df0a945c9ad038e5352e"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Soybean",
+    "season": "Rabi",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Sugarcane",
+    "season": "Unspecified",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-8fb9eefa683935e0a8ed"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Sugarcane",
+    "season": "Unspecified",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-25a60c3ca4d246e058fa"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Sugarcane",
+    "season": "Unspecified",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-325e71b15c6b11aa3854"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Sugarcane",
+    "season": "Unspecified",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-81de8f7bf49fec6a88af"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Sugarcane",
+    "season": "Unspecified",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-73a976154d7b136e3e4a"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Sugarcane",
+    "season": "Unspecified",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-2389624b16248e408e48"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Sugarcane",
+    "season": "Unspecified",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [
+      "calendar-cc4c92af25a19c61bd23"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Sugarcane",
+    "season": "Unspecified",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-81c517393ab43da33e83"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Sugarcane",
+    "season": "Unspecified",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-61f9c584aeb154e5890e"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Sugarcane",
+    "season": "Unspecified",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-4b5b9bf7bbd87c48fa6f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Sugarcane",
+    "season": "Unspecified",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-9dc4b4b3418d4cdf1f2a"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Sugarcane",
+    "season": "Unspecified",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [
+      "calendar-96b00c083254d15f9d7b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Sugarcane",
+    "season": "Unspecified",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-35b76caf881f6ed7be42"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Sugarcane",
+    "season": "Unspecified",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Kharif",
+    "bamis_region": "Barishal",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Kharif",
+    "bamis_region": "Bogura",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Kharif",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Kharif",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Kharif",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-f5024e49a4ada397907b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Kharif",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-b40ebefac06f336912c4"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Kharif",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Kharif",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-b832d9675688a45f9c55"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Kharif",
+    "bamis_region": "Khulna",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Kharif",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-876ec37ecc1b382f49ee"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Kharif",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-36be9d283fc6b5c5ef35"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Kharif",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Kharif",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Kharif",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Rabi",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-d8ecaffe0d28ae70fe96"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Rabi",
+    "bamis_region": "Bogura",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Rabi",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [
+      "calendar-8a26321d9b3ac72b683d"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Rabi",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-e407416e9893073a52b3"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Rabi",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-51072f45bccc431b69bf"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Rabi",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-57367f0b654c89f4fe4b"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Rabi",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Rabi",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-a47acf9d779e9171a44c"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Rabi",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-de276b0331f1bad34de6"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Rabi",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-b3db38fdc3e60b808574"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Rabi",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-6d00e683c586c516c1e1"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Rabi",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Rabi",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Tomato",
+    "season": "Rabi",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Wheat",
+    "season": "Unspecified",
+    "bamis_region": "Barishal",
+    "calendar_ids": [
+      "calendar-0e99f869eb42678a2a1d"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Wheat",
+    "season": "Unspecified",
+    "bamis_region": "Bogura",
+    "calendar_ids": [
+      "calendar-1beb5b215d140601284f"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Wheat",
+    "season": "Unspecified",
+    "bamis_region": "Chattogram",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Wheat",
+    "season": "Unspecified",
+    "bamis_region": "Cumilla",
+    "calendar_ids": [
+      "calendar-fa31ab498cafe7325118"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Wheat",
+    "season": "Unspecified",
+    "bamis_region": "Dhaka",
+    "calendar_ids": [
+      "calendar-471260f81185fd1edaa5"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Wheat",
+    "season": "Unspecified",
+    "bamis_region": "Dinajpur",
+    "calendar_ids": [
+      "calendar-16e29f03fcbfa2c83d2e"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Wheat",
+    "season": "Unspecified",
+    "bamis_region": "Faridpur",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Wheat",
+    "season": "Unspecified",
+    "bamis_region": "Jashore",
+    "calendar_ids": [
+      "calendar-146f55439783d12edd81"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Wheat",
+    "season": "Unspecified",
+    "bamis_region": "Khulna",
+    "calendar_ids": [
+      "calendar-48b03e7b6fd7f84d725c"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Wheat",
+    "season": "Unspecified",
+    "bamis_region": "Mymensingh",
+    "calendar_ids": [
+      "calendar-077c23b130ba4b35e706"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Wheat",
+    "season": "Unspecified",
+    "bamis_region": "Rajshahi",
+    "calendar_ids": [
+      "calendar-b19a046315c306de2c11"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Wheat",
+    "season": "Unspecified",
+    "bamis_region": "Rangamati",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  },
+  {
+    "crop": "Wheat",
+    "season": "Unspecified",
+    "bamis_region": "Rangpur",
+    "calendar_ids": [
+      "calendar-a2ed784fa3b18340e5ca"
+    ],
+    "evidence_status": "collected_context_only"
+  },
+  {
+    "crop": "Wheat",
+    "season": "Unspecified",
+    "bamis_region": "Sylhet",
+    "calendar_ids": [],
+    "evidence_status": "unavailable; not evidence of unsuitability"
+  }
+]
