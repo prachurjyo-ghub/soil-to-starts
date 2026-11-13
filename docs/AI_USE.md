@@ -1211,7 +1211,7 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 
 **Changed files:** data/climate/packages/v1.0.0/, scripts/setup_climate_data.py, tests/test_climate_git_setup.py, docs/data/CLIMATE_GITHUB_SETUP.md, data/climate/climate_git_distribution_receipt.json, prior pending teammate-delivery helper/tests/docs/receipt, README.md, cache/README.md, climate handoff/setup docs, docs/tasks/CLIMATE-GIT-DISTRIBUTION.json, docs/AI_USE.md and docs/PROGRESS.md
 
-**Actual outcome:** Committed Git-hosted climate delivery as ebbada9 and preserved the newer teammate commit in merge 38b97a4; all 113 tests and fresh local Git-clone setup passed. Automatic approval review rejected the archive push due to exact payload/destination authorization and unverified BAMIS redistribution rights; no upload occurred.
+**Actual outcome:** After explicit approval, pushed the exact v1.0.0 climate archive and setup to origin/main2 at 7faf144, preserving teammate work. GitHub accepted the 88,023,118-byte archive with its size warning; all 113 tests and fresh local-clone setup passed, and fresh GitHub-clone verification is running.
 
 **Review / limitations:** No scientific observations or mappings changed. The archive is below the GitHub 100 MiB file limit but triggers the documented size warning. Existing BAMIS rights and NASA notification limitations remain explicit; no scientific approval, actual recipient acceptance or app integration is claimed.
 

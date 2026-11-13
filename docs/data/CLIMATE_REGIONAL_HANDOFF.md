@@ -348,3 +348,11 @@ BAMIS mapping whose redistribution rights are unverified and requires explicit
 archive/destination authorization. No alternate upload or bypass was attempted.
 Local fresh-clone installation passed, but remote availability/fresh GitHub-clone
 verification are not claimed. See the current Git distribution receipt/status.
+
+
+Publication confirmation: after explicit user approval for the exact archive and
+GitHub destination, `git push origin main2` succeeded (`bf61942` → `7faf144`).
+The archive is now available through GitHub. The earlier automatic rejection and
+local-only records are historical; current distribution status is in the Git
+distribution receipt. No manual folder transfer is required. Owner authorization
+is not independent scientific approval or a new third-party license grant.

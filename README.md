@@ -20,7 +20,7 @@ Generated from task records; the detailed board is the team's daily starting poi
 | Member | First available action |
 | --- | --- |
 | Fardin | G0-CONTRACT / s01: Draft stable field, crop and source identifiers |
-| Saim | Review/collaborate on G0-CONTRACT |
+| Saim | CLIMATE-GIT-DISTRIBUTION / a3: Commit and push the authorized data/setup/docs to main2, verify a fresh GitHub clone and record actual delivery status without claiming application integration. |
 | Maruf | Review/collaborate on G0-CONTRACT |
 | Prachurjo | Review/collaborate on G0-CONTRACT, MEDIA-STORYBOARD |
 | Nadim | MEDIA-STORYBOARD / s01: Plan the shots and visual sequence |
@@ -54,9 +54,8 @@ Equivalent commands are documented in [CONTRIBUTING.md](CONTRIBUTING.md). `make 
 
 ## Climate data from this repository
 
-The unchanged v1.0.0 climate archive is committed on local `main2`; its GitHub
-push is blocked by automatic approval review pending exact payload/destination
-and BAMIS redistribution authorization. Once pushed, clone/pull and run:
+The unchanged v1.0.0 climate archive is included on GitHub `main2`. After
+cloning or pulling this branch, run:
 
 ```bash
 python3 scripts/setup_climate_data.py

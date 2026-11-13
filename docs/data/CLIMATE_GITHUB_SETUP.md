@@ -1,10 +1,10 @@
 # Clone-and-setup climate data through GitHub
 
-**Publication blocked:** implementation is committed locally and local Git-clone
-setup passed, but automatic approval review rejected the archive push before
-execution. The archive is not yet available from origin/main2. Exact user approval
-for this payload/destination and BAMIS redistribution permission are pending. The
-commands below become available remotely only after a successful authorized push.
+**Published:** Saim explicitly approved the exact archive/destination after the
+initial automatic-review rejection. The archive was successfully pushed to
+GitHub `main2` at `7faf144`; no manual transfer is needed. The original rejection
+is historical, and does not describe current availability. Independent scientific
+review and third-party terms remain separate from owner delivery authorization.
 
 Saim has authorized Git-hosted delivery on `main2`, replacing manual folder
 transfer as the current teammate workflow. This includes the unchanged v1.0.0
@@ -29,6 +29,8 @@ Setup verifies the archive, manifest and matching helper against the original
 producer receipt, extracts safely, verifies every payload checksum and runs the
 existing offline raw/registry/geometry checks with socket networking blocked.
 It fails explicitly on missing/corrupt data and never reacquires NASA data.
+Git attributes preserve the sealed manifest bytes and matching helper LF line
+endings across checkouts, including Windows CRLF configurations.
 Repeated setup verifies the same installed bytes; it does not overwrite modified
 files. For an incomplete/modified installation, inspect it or choose a fresh
 `--install-dir`; the script never deletes an old cache.
