@@ -14,7 +14,6 @@
     <a class="brand" href="index.html"><span class="brand-icon">✳</span><span>SOIL TO STARS<small>FIELD INTELLIGENCE STUDIO</small></span></a>
     <div class="field-switch">
       <small>YOUR FIELD</small>
-      <select id="field-select" aria-label="Select field"></select>
       <button data-action="new-field">＋ Add a field</button>
     </div>
     <nav id="nav"></nav>
@@ -29,7 +28,7 @@
       <div class="mobile-page-title"><b id="mobile-crumb">Set up your field</b></div>
       <div class="breadcrumb">Workspace <span>/</span> <b id="crumb">Overview</b></div>
       <div class="header-actions">
-        <span class="demo-dot">Demo environment</span>
+        <span class="demo-dot">Local evidence</span>
         <button id="theme" aria-label="Toggle dark mode">◐</button>
         <button data-action="export" class="small-button">Export plan ↗</button>
         <span class="avatar">RF</span>
@@ -37,9 +36,9 @@
     </header>
     <main id="main">
       <p role="status">Loading field intake… / জমির তথ্যের ফর্ম লোড হচ্ছে…</p>
-      <noscript>Enable JavaScript to complete the intake. No scientific planning service is connected.</noscript>
+      <noscript>Enable JavaScript to complete the intake and generate a local evidence report.</noscript>
     </main>
-    <footer>SOIL TO STARS <span>Frontend prototype · All environmental values and crop traits are illustrative.</span></footer>
+    <footer>SOIL TO STARS <span>NASA POWER weather archive · Crop planning remains a labelled prototype.</span></footer>
   </div>
 
   <nav id="mobile-tabbar" class="mobile-tabbar" aria-label="Primary">
@@ -65,21 +64,16 @@
         <nav id="mobile-more-nav" class="mobile-more-nav" aria-label="More destinations"></nav>
         <p class="mobile-more-group-label">Preferences &amp; actions</p>
         <div class="mobile-more-actions">
-          <div class="mobile-field-block">
-            <small class="mobile-field-label">Demo field</small>
-            <select id="mobile-field-select" aria-label="Select field" hidden></select>
-          </div>
+
           <button type="button" id="mobile-theme" class="mobile-more-action">Switch theme</button>
           <button type="button" data-action="export" class="mobile-more-action mobile-export">Export inputs</button>
           <button type="button" data-action="new-field" class="mobile-more-action">＋ Add a field</button>
           <a class="mobile-more-action mobile-home-link" href="index.html">← Back to homepage</a>
-          <p class="mobile-demo-status demo-dot">Demo environment</p>
+          <p class="mobile-demo-status demo-dot">Local evidence</p>
         </div>
       </div>
     </div>
   </div>
-
-  <dialog id="details"><div id="detail-content"></div></dialog>
   <div id="toast" role="status" aria-live="polite"></div>
   <script src="workspace.js"></script>
   <script src="polish.js"></script>

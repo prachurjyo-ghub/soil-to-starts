@@ -52,10 +52,7 @@
     rows.map(([slug,en,bn]) => Object.freeze({ id: 'bd-district-' + slug, en, bn, division, sourceId: directorySource.id }))
   ).sort((a,b) => a.en.localeCompare(b.en, 'en')));
   // Intake identities only: none of these records asserts regional suitability.
-  const crops = Object.freeze([
-    ['rice','Rice','ধান'], ['maize','Maize','ভুট্টা'], ['lentil','Lentil','মসুর'],
-    ['mustard','Mustard','সরিষা'], ['mungbean','Mungbean','মুগ'], ['sesame','Sesame','তিল'], ['jute','Jute','পাট']
-  ].map(([id,en,bn]) => Object.freeze({id,en,bn})));
+  const crops = Object.freeze([["banana", "Banana", "কলা"], ["bottle_gourd", "Bottle Gourd", "লাউ"], ["brinjal", "Brinjal", "বেগুন"], ["chilli", "Chilli", "মরিচ"], ["cotton", "Cotton", "তুলা"], ["cucumber", "Cucumber", "শসা"], ["garlic", "Garlic", "রসুন"], ["groundnut", "Groundnut", "চিনাবাদাম"], ["guava", "Guava", "পেয়ারা"], ["jackfruit", "Jackfruit", "কাঁঠাল"], ["jujube", "Jujube", "বরই"], ["jute", "Jute", "পাট"], ["lentil", "Lentil", "মসুর"], ["litchi", "Litchi", "লিচু"], ["maize", "Maize", "ভুট্টা"], ["mango", "Mango", "আম"], ["mungbean", "Mungbean", "মুগ"], ["mustard", "Mustard", "সরিষা"], ["onion", "Onion", "পেঁয়াজ"], ["papaya", "Papaya", "পেঁপে"], ["pineapple", "Pineapple", "আনারস"], ["pointed_gourd", "Pointed Gourd", "পটল"], ["potato", "Potato", "আলু"], ["pumpkin", "Pumpkin", "মিষ্টিকুমড়া"], ["rice", "Rice", "ধান"], ["sesame", "Sesame", "তিল"], ["soybean", "Soybean", "সয়াবিন"], ["sugarcane", "Sugarcane", "আখ"], ["tomato", "Tomato", "টমেটো"], ["wheat", "Wheat", "গম"]].map(([id,en,bn]) => Object.freeze({id,en,bn})));
   const seasons = Object.freeze([
     {id:'kharif_1',en:'Kharif I',bn:'খরিফ–১'}, {id:'kharif_2',en:'Kharif II',bn:'খরিফ–২'}, {id:'rabi',en:'Rabi',bn:'রবি'}
   ]);

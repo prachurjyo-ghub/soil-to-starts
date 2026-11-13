@@ -1,0 +1,117 @@
+{
+  "end": "2026-11-12",
+  "grid_ids": [
+    "88.125-24.5",
+    "88.125-26.0",
+    "88.75-23.5",
+    "88.75-24.0",
+    "88.75-24.5",
+    "88.75-25.0",
+    "88.75-25.5",
+    "88.75-26.0",
+    "88.75-26.5",
+    "89.375-22.5",
+    "89.375-23.0",
+    "89.375-23.5",
+    "89.375-24.0",
+    "89.375-24.5",
+    "89.375-25.0",
+    "89.375-25.5",
+    "89.375-26.0",
+    "90.0-22.0",
+    "90.0-22.5",
+    "90.0-23.0",
+    "90.0-23.5",
+    "90.0-24.0",
+    "90.0-24.5",
+    "90.0-25.0",
+    "90.625-22.5",
+    "90.625-23.0",
+    "90.625-23.5",
+    "90.625-24.0",
+    "90.625-24.5",
+    "90.625-25.0",
+    "91.25-23.0",
+    "91.25-23.5",
+    "91.25-24.0",
+    "91.25-24.5",
+    "91.25-25.0",
+    "91.875-21.5",
+    "91.875-22.5",
+    "91.875-23.0",
+    "91.875-24.5",
+    "91.875-25.0",
+    "92.5-22.0",
+    "92.5-23.0"
+  ],
+  "last_complete_date": "2026-11-10",
+  "limitations": [
+    "Recent POWER observations are regional meteorological context, not field sensors or forecasts. Source fill values remain missing."
+  ],
+  "payload_sha256": "49ec8673a826c47d9bf6a12847b49ebfe10f7ab34df43f037ccaf4762730d91f",
+  "retrieved_at_utc": "2026-11-13T20:24:46.167868+00:00",
+  "rows": 13272,
+  "schema": "recent-power.v1",
+  "sources": {
+    "PRECTOTCORR": {
+      "api": {
+        "name": "POWER Daily API",
+        "version": "v2.10.3"
+      },
+      "http_status": 200,
+      "raw_sha256": "79c4744480a5f788816642a582ff9fb4a7c894273729d6cc13de776f27ecae8f",
+      "sources": [
+        "GEOSIT",
+        "MERRA2"
+      ],
+      "unit": "mm/day",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=PRECTOTCORR&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20260101&end=20261112&format=JSON&time-standard=LST&units=metric"
+    },
+    "T2M": {
+      "api": {
+        "name": "POWER Daily API",
+        "version": "v2.10.3"
+      },
+      "http_status": 200,
+      "raw_sha256": "736018b008959b69928855bf986736341feafeacdf15db16fd84fba01688d95f",
+      "sources": [
+        "GEOSIT",
+        "MERRA2"
+      ],
+      "unit": "C",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20260101&end=20261112&format=JSON&time-standard=LST&units=metric"
+    },
+    "T2M_MAX": {
+      "api": {
+        "name": "POWER Daily API",
+        "version": "v2.10.3"
+      },
+      "http_status": 200,
+      "raw_sha256": "9eeada01ad468bd6609977ffa17c5b863fbd97b05430c9158bfe17df423125ee",
+      "sources": [
+        "GEOSIT",
+        "MERRA2",
+        "POWER"
+      ],
+      "unit": "C",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M_MAX&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20260101&end=20261112&format=JSON&time-standard=LST&units=metric"
+    },
+    "T2M_MIN": {
+      "api": {
+        "name": "POWER Daily API",
+        "version": "v2.10.3"
+      },
+      "http_status": 200,
+      "raw_sha256": "88fc901d1f19a1ad9397e2b724475e310aceff111092937b3ab71d130509ba85",
+      "sources": [
+        "MERRA2",
+        "GEOSIT",
+        "POWER"
+      ],
+      "unit": "C",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M_MIN&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20260101&end=20261112&format=JSON&time-standard=LST&units=metric"
+    }
+  },
+  "start": "2026-01-01",
+  "time_standard": "LST"
+}

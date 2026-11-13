@@ -21,11 +21,11 @@ def main():
             version = tuple(int(part) for part in result.stdout.strip().lstrip("v").split(".")[:2])
             if version < (20, 9):
                 failures.append("Node must satisfy the locked Next.js engine >=20.9.0")
-    for name in ("prototype/package-lock.json", "prototype/eslint.config.mjs", "AGENTS.md", "docs/PROGRESS.md", "docs/TEAM_PLAYBOOK.md"):
+    for name in ("prototype/package-lock.json", "prototype/eslint.config.mjs", "AGENTS.md", "docs/DEVELOPMENT.md"):
         if not (root / name).is_file():
             failures.append("Missing " + name)
     print("Frontend dependencies:", "installed" if (root / "prototype/node_modules").is_dir() else "run cd prototype && npm ci")
-    print("Science/API: planned; no working backend, NASA fixture or enforced OFFLINE flag is inferred.")
+    print("Local evidence API: same-origin Next.js routes plus Python stdlib/SQLite; run make backend. Crop-plan scoring still needs reviewed rules. Whole-app offline behavior requires separate verification.")
     print("GitHub settings/CI publication: not checked; local files do not establish remote protection.")
     for issue in failures:
         print("ERROR:", issue)

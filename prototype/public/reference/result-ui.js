@@ -7,10 +7,15 @@
 
   const esc = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));
   const text = (value, language = 'en') => typeof value === 'object' && value ? (value[language] || value.en || '') : String(value ?? '');
-  const human = value => String(value || '').replaceAll('_', ' ').replace(/\b\w/g, character => character.toUpperCase());
-  const formatDate = value => value ? new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${value}T00:00:00Z`)) : 'Not supplied';
+  const human = value => String(value ?? '').replaceAll('_', ' ').replace(/\b\w/g, character => character.toUpperCase());
+  const formatDate = value => {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(value || '')) return 'Not supplied';
+    const date = new Date(`${value}T00:00:00Z`);
+    return Number.isFinite(date.getTime()) && date.toISOString().slice(0, 10) === value ? new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }).format(date) : 'Not supplied';
+  };
   const planHasThreeSteps = plan => plan?.status === 'complete' && Array.isArray(plan.steps) && plan.steps.length === 3;
   const t = (language, en, bn) => language === 'bn' ? bn : en;
+  const sourceUrl = value => /^https?:\/\//i.test(String(value || '')) ? value : '#';
 
   const OPERATION_LEGEND = [
     ['preparation', 'Preparation', 'প্রস্তুতি'],
@@ -22,28 +27,33 @@
     ['transition', 'Transition', 'স্থানান্তর']
   ];
 
-  function receipt(fixture) {
+  function isExample(data) { return Boolean(data?.fixture_id) || data?.response?.data_mode === 'development_fixture'; }
+
+  function receipt(data) {
+    const fixture = isExample(data);
     return {
-      receipt_type: fixture ? 'development_fixture_example' : 'scientific_result',
-      fixture: Boolean(fixture),
+      receipt_type: fixture ? 'development_fixture_example' : data?.response?.analysis_mode==='source_evidence_report' ? 'local_evidence_report' : 'scientific_result',
+      fixture,
       warning: fixture ? 'Example export. Not scientific advice or NASA observations.' : undefined,
-      request: fixture?.request || null,
-      response: fixture?.response || null
+      request: data?.request || null,
+      response: data?.response || null
     };
   }
 
   function badge(status, label = status) {
-    return `<span class="result-badge result-badge--${esc(status || 'unknown')}">${esc(human(label || 'unknown'))}</span>`;
+    return `<span class="result-badge result-badge--${esc(status || 'unknown')}">${esc(human(label ?? 'unknown'))}</span>`;
   }
 
   function unavailableCard(title, reason, action = '') {
-    return `<section class="result-card result-empty" aria-labelledby="result-empty-title"><span class="result-empty__icon" aria-hidden="true">◎</span><div><p class="result-eyebrow">RESULT STATUS</p><h2 id="result-empty-title">${esc(title)}</h2><p>${esc(reason)}</p>${action}</div></section>`;
+    return `<section class="result-card result-empty" aria-label="${esc(title)}"><span class="result-empty__icon" aria-hidden="true">◎</span><div><p class="result-eyebrow">RESULT STATUS</p><h2>${esc(title)}</h2><p>${esc(reason)}</p>${action}</div></section>`;
   }
 
   function districtLabel(location, language = 'en') {
     if (!location) return t(language, 'Not supplied', 'দেওয়া হয়নি');
     if (location.district_label) return text(location.district_label, language);
     const id = location.district_id || '';
+    const district=globalThis.STS_INTAKE?.districts?.find(d=>d.id===id);
+    if(district)return language==='bn'?district.bn:district.en;
     return id.replace(/^bd-district-/, '').replaceAll('-', ' ') || t(language, 'Not supplied', 'দেওয়া হয়নি');
   }
 
@@ -75,7 +85,7 @@
     return `<div class="status-row"><span>${esc(label)}</span>${badge(value, value)}${explanation ? `<p>${esc(explanation)}</p>` : ''}</div>`;
   }
 
-  function genuineSummary(request, language = 'en') {
+  function genuineSummary(request, language = 'en', status = 'unavailable') {
     if (!request) {
       return unavailableCard(
         t(language, 'No submitted field yet', 'এখনও জমা দেওয়া জমি নেই'),
@@ -95,7 +105,7 @@
           <h2 id="field-summary-title">${esc(cropName)}</h2>
           <p class="result-summary-meta">${esc(districtLabel(location, language))} · ${esc(human(location.selection_method || 'unknown'))} · ${t(language, 'not scientific coverage', 'বৈজ্ঞানিক কভারেজ নয়')}</p>
         </div>
-        <div class="result-summary-status">${badge('unavailable', t(language, 'Planning Unavailable', 'পরিকল্পনা অনুপলব্ধ'))}<span>${esc(available)}</span></div>
+        <div class="result-summary-status">${badge('complete',t(language,'Inputs validated','ইনপুট যাচাই হয়েছে'))}<span>${esc(available)}</span></div>
       </div>
       <div class="result-chip-row">
         ${infoChip(t(language, 'Current crop', 'বর্তমান ফসল'), cropName, current.sown_on ? formatDate(current.sown_on) : t(language, 'Planting date not supplied', 'রোপণের তারিখ দেওয়া হয়নি'))}
@@ -109,7 +119,7 @@
           ${infoChip(t(language, 'History', 'আগের ফসল'), historySummary(request.crop_history, language), t(language, 'Farmer-reported input', 'কৃষকের দেওয়া তথ্য'))}
           ${infoChip(t(language, 'Usual practice', 'সাধারণ পরিকল্পনা'), baselineSummary(request.baseline, language), t(language, 'Assessed input, not a recommendation', 'মূল্যায়নের ইনপুট, সুপারিশ নয়'))}
         </div>
-        <div class="result-freshness"><span>●</span><b>${t(language, 'Inputs preserved', 'ইনপুট সংরক্ষিত')}</b><span>${t(language, 'No scientific result is connected', 'কোনো বৈজ্ঞানিক ফলাফল সংযুক্ত নেই')}</span></div>
+        <div class="result-freshness"><span>●</span><b>${t(language, 'Inputs preserved', 'ইনপুট সংরক্ষিত')}</b><span>${status === 'unavailable' ? t(language, 'No scientific result is connected', 'কোনো বৈজ্ঞানিক ফলাফল সংযুক্ত নেই') : t(language, 'Result follows the supplied service response', 'সরবরাহ করা সেবার প্রতিক্রিয়া অনুযায়ী ফলাফল')}</span></div>
       </details>
       <div class="result-actions"><button type="button" data-result-action="edit-inputs">${t(language, 'Edit inputs', 'তথ্য সম্পাদনা')}</button><button type="button" data-result-action="download-inputs">${t(language, 'Download input JSON', 'ইনপুট JSON ডাউনলোড')}</button></div>
     </section>`;
@@ -148,10 +158,16 @@
     </section>`;
   }
 
+  function warningExposure(exposure,language){
+    if(!exposure||exposure.status==='unavailable')return `<p class="result-limit">${t(language,'Observed warning comparison unavailable','পর্যবেক্ষিত সতর্কতার তুলনা অনুপলব্ধ')}: ${esc(human(exposure?.reason||'no matching source reference'))}</p>`;
+    return `<section class="warning-observations"><h3>${t(language,'Observed weather against published warning levels','প্রকাশিত সতর্কতা সীমার সঙ্গে পর্যবেক্ষিত আবহাওয়া')}</h3><p>${esc(exposure.start)} → ${esc(exposure.end)} · NASA POWER · LST · ${esc(exposure.grid_id)}</p><p>${esc(exposure.meaning)}</p><div class="result-chip-row">${exposure.indicators.map(i=>infoChip(i.label,i.exceedance_days===null?'Incomplete':`${i.exceedance_days} days`,`${i.valid_days}/${i.expected_days} observed days; ${i.missing_days} missing`)).join('')}</div><details><summary>${t(language,'Source and exceedance dates','উৎস ও সীমা অতিক্রমের তারিখ')}</summary><a href="${esc(sourceUrl(exposure.reference.source_url))}" target="_blank" rel="noopener">BAMIS ${esc(exposure.reference.section)} · page ${esc(exposure.reference.page)}</a>${exposure.indicators.map(i=>`<p><b>${esc(i.label)}</b>: ${esc(i.dates.join(', ')||'No observed exceedances')}. ${i.missing_days?'Missing days prevent a complete count.':''}</p>`).join('')}<p>${esc(exposure.reference.limitations.join(' '))}</p><code>${esc(exposure.reference.source_sha256)}</code></details></section>`;
+  }
+
   function vulnerability(assessment, language) {
     const checks = assessment?.checks || [];
     const stage = assessment?.stage ? human(assessment.stage) : t(language, 'unknown', 'জানা নেই');
-    const period = assessment?.assessment_period || t(language, 'not established', 'নির্ধারিত নয়');
+    const suppliedPeriod = assessment?.assessment_period;
+    const period = suppliedPeriod && typeof suppliedPeriod === 'object' ? `${suppliedPeriod.start || '—'} → ${suppliedPeriod.end || '—'}` : (suppliedPeriod || t(language, 'not established', 'নির্ধারিত নয়'));
     const statusLabel = assessment?.status === 'incomplete'
       ? t(language, 'Assessment incomplete', 'মূল্যায়ন অসম্পূর্ণ')
       : assessment?.status === 'complete'
@@ -174,6 +190,7 @@
           <p>${esc(text(assessment?.crop_label, language) || t(language, 'Not supplied', 'দেওয়া হয়নি'))} · ${t(language, 'Stage', 'পর্যায়')}: ${esc(stage)} · ${t(language, 'Assessment period', 'মূল্যায়নের সময়')}: ${esc(period)}</p>
         </div>
       </div>
+      ${warningExposure(assessment?.observed_warning_exposure,language)}
       <div class="check-grid">${checks.map(check => `<article class="check-tile check-tile--${esc(check.outcome)}"><div class="check-tile__head">${badge(check.outcome)}<h3>${esc(text(check.label, language))}</h3></div><p>${esc(check.missing_information || check.limitation || '')}</p></article>`).join('')}</div>
       <p class="result-limit"><b>${t(language, 'Limit:', 'সীমা:')}</b> ${esc(assessment?.limitation || 'Not assessed.')}</p>
     </section>`;
@@ -187,13 +204,13 @@
   }
 
   function indicatorRows(plan) {
-    return (plan.indicators || []).map(item => statusRow(item.label, item.value || item.status, item.explanation || '')).join('');
+    return (plan.indicators || []).map(item => statusRow(item.label, item.value ?? item.status, item.explanation || '')).join('');
   }
 
   function comparison(response, language, selectedPlan) {
     const plans = [response.baseline_assessment, ...(response.alternatives || [])].filter(Boolean);
     const missingSecond = (response.alternatives || []).length < 2;
-    const periodLine = `${response.comparison_period?.start || ''} → ${response.comparison_period?.end || ''} · ${response.comparison_period?.explanation || ''}${response.comparison_period?.policy_id ? ` · ${response.comparison_period.policy_id}${response.comparison_period.policy_version ? ` ${response.comparison_period.policy_version}` : ''}` : ''}`;
+    const periodLine = `${response.comparison_period?.start ? response.comparison_period.start+' → '+response.comparison_period.end+' · ' : ''}${response.comparison_period?.explanation || ''}${response.comparison_period?.policy_id ? ` · ${response.comparison_period.policy_id}${response.comparison_period.policy_version ? ` ${response.comparison_period.policy_version}` : ''}` : ''}`;
     return `<section class="result-card result-comparison" aria-labelledby="comparison-title">
       <div class="result-section-heading">
         <div>
@@ -210,16 +227,16 @@
             <div><small>${esc(role)}</small><h3>${esc(text(plan.label, language))}</h3></div>
             ${badge(plan.feasibility, plan.feasibility)}
           </div>
-          <p class="plan-card__period">${t(language, 'Completes', 'শেষ')} <b>${esc(plan.completion_date || 'Unknown')}</b> · ${plan.role === 'baseline' ? t(language, 'Flexible segments', 'নমনীয় অংশ') : `${(plan.steps || []).length}/3 ${t(language, 'future steps', 'ধাপ')}`}</p>
+          <p class="plan-card__period">${plan.completion_date ? t(language, 'Completes', 'শেষ') : t(language,'Completion date','শেষ হওয়ার তারিখ')} <b>${esc(plan.completion_date || t(language,'not established','নির্ধারিত নয়'))}</b> · ${plan.role === 'baseline' ? t(language, 'Flexible segments', 'নমনীয় অংশ') : `${(plan.steps || []).length}/3 ${t(language, 'future steps', 'ধাপ')}`}</p>
           <ul class="plan-crops plan-crops--compact">${planCrops(plan, language)}</ul>
           <div class="status-stack">${indicatorRows(plan)}</div>
           <details class="result-expand plan-card__details">
             <summary>${t(language, 'View details', 'বিস্তারিত দেখুন')}</summary>
             <div class="status-stack status-stack--muted">${(plan.indicators || []).map(item => `<p><b>${esc(item.label)}</b>: ${esc(item.explanation || '')}${item.unit ? ` (${esc(item.unit)})` : ''}</p>`).join('')}</div>
           </details>
-          ${plan.role !== 'baseline' ? `<button type="button" data-result-plan="${esc(plan.plan_id)}" aria-pressed="${plan.plan_id === selectedPlan}">${t(language, 'View operations timeline', 'টাইমলাইন দেখুন')}</button>` : ''}
+          ${plan.role !== 'baseline' ? `<button type="button" data-result-plan="${esc(plan.plan_id)}" aria-pressed="${plan.plan_id === selectedPlan}">${t(language, 'View operations timeline', 'টাইমলাইন দেখুন')}</button><button type="button" data-result-save="${esc(plan.plan_id)}">${t(language, 'Save plan snapshot', 'পরিকল্পনার কপি সংরক্ষণ')}</button>` : ''}
         </article>`;
-      }).join('')}${missingSecond ? `<article class="plan-card plan-card--missing"><span aria-hidden="true">＋</span><h3>${t(language, 'Second alternative unavailable', 'দ্বিতীয় বিকল্প অনুপলব্ধ')}</h3><p>${t(language, 'No distinct supported plan was supplied, so no filler or clone is shown.', 'সমর্থিত পৃথক পরিকল্পনা না থাকায় কোনো নকল পরিকল্পনা যোগ করা হয়নি।')}</p></article>` : ''}</div>
+      }).join('')}${missingSecond && !(response.alternatives||[]).length ? `<article class="plan-card plan-card--missing"><h3>${t(language,'First alternative unavailable','প্রথম বিকল্প অনুপলব্ধ')}</h3><p>${t(language,'No supported three-step alternative is ready. See the missing rule definitions below.','সমর্থিত তিন ধাপের বিকল্প প্রস্তুত নয়। নিচে অনুপস্থিত নিয়মের সংজ্ঞা দেখুন।')}</p></article>` : ''}${missingSecond ? `<article class="plan-card plan-card--missing"><span aria-hidden="true">＋</span><h3>${t(language, 'Second alternative unavailable', 'দ্বিতীয় বিকল্প অনুপলব্ধ')}</h3><p>${t(language, 'No distinct supported plan was supplied, so no filler or clone is shown.', 'সমর্থিত পৃথক পরিকল্পনা না থাকায় কোনো নকল পরিকল্পনা যোগ করা হয়নি।')}</p></article>` : ''}</div>
     </section>`;
   }
 
@@ -253,46 +270,54 @@
     </section>`;
   }
 
-  function chart(series, language) {
-    const values = series.values || [];
-    const months = language === 'bn'
-      ? ['জা', 'ফে', 'মা', 'এ', 'মে', 'জুন', 'জু', 'আ', 'সে', 'অ', 'ন', 'ডি']
-      : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    const min = Math.min(...values), max = Math.max(...values), range = max - min || 1;
-    const points = values.map((value, index) => `${40 + index * 46},${168 - ((value - min) / range) * 118}`).join(' ');
-    return `<svg class="result-chart" viewBox="0 0 600 210" role="img" aria-label="${esc(series.label)}">
-      <title>${esc(series.label)} · ${esc(series.unit)}</title>
-      ${[48, 88, 128, 168].map(y => `<line x1="40" x2="576" y1="${y}" y2="${y}"/>`).join('')}
-      <polyline points="${points}"/>
-      ${values.map((value, index) => `<circle tabindex="0" cx="${40 + index * 46}" cy="${168 - ((value - min) / range) * 118}" r="4.5"><title>${months[index]}: ${value} ${esc(series.unit)}</title></circle>`).join('')}
-      ${months.map((month, index) => `<text x="${40 + index * 46}" y="198" text-anchor="middle">${esc(month)}</text>`).join('')}
-    </svg>`;
+  function chart(series, language = 'en') {
+    const values = Array.isArray(series?.values) ? series.values : [];
+    const valid = values.filter(value => typeof value === 'number' && Number.isFinite(value));
+    if (!valid.length) return `<p class="result-limit">${t(language, 'No usable observations supplied. Missing values are not zero.', 'ব্যবহারযোগ্য তথ্য নেই। অনুপস্থিত মান শূন্য নয়।')}</p>`;
+    const labels = Array.isArray(series.dates) && series.dates.length === values.length ? series.dates : (Array.isArray(series.labels) && series.labels.length === values.length ? series.labels : values.map((_, i) => String(i + 1)));
+    let min = Math.min(...valid), max = Math.max(...valid);
+    const pad = max === min ? Math.max(1, Math.abs(min) * .05) : (max - min) * .05;
+    min -= pad; max += pad;
+    const x = i => values.length === 1 ? 310 : 58 + i * 512 / (values.length - 1);
+    const y = value => 170 - (value - min) / (max - min) * 125;
+    let path = '', gap = true;
+    const usable = value => typeof value === 'number' && Number.isFinite(value);
+    values.forEach((value, i) => { if (!usable(value)) { gap = true; return; } path += `${gap ? 'M' : 'L'}${x(i).toFixed(2)},${y(value).toFixed(2)} `; gap = false; });
+    const stride = Math.max(1, Math.ceil(values.length / 6));
+    return `<svg class="result-chart" viewBox="0 0 610 225" role="img" aria-label="${esc(series.label)} · ${esc(series.unit)}">
+      <title>${esc(series.label)} · ${esc(series.unit)}; ${t(language, 'gaps are missing observations', 'ফাঁক মানে অনুপস্থিত তথ্য')}</title>
+      ${[0,1,2,3].map(i => { const value = min + (max - min) * i / 3; return `<line x1="58" x2="570" y1="${y(value)}" y2="${y(value)}"/><text x="51" y="${y(value) + 4}" text-anchor="end">${esc(value.toFixed(1))}</text>`; }).join('')}
+      <path d="${path}" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      ${values.map((value, i) => usable(value) ? `<circle cx="${x(i)}" cy="${y(value)}" r="3"><title>${esc(labels[i])}: ${esc(value)} ${esc(series.unit)}</title></circle>` : '').join('')}
+      ${labels.map((label, i) => i % stride === 0 || i === labels.length - 1 ? `<text x="${x(i)}" y="203" text-anchor="middle">${esc(label)}</text>` : '').join('')}
+    </svg><details class="result-expand"><summary>${t(language, 'View chart values', 'চার্টের মান দেখুন')}</summary><div class="table-scroll"><table><thead><tr><th>${t(language, 'Date / supplied order', 'তারিখ / সরবরাহের ক্রম')}</th><th>${esc(series.unit)}</th></tr></thead><tbody>${values.map((value,i) => `<tr><td>${esc(labels[i])}</td><td>${usable(value) ? esc(value) : t(language, 'Missing', 'অনুপস্থিত')}</td></tr>`).join('')}</tbody></table></div></details>`;
   }
 
-  function climatePanel(climate, language, metric) {
-    if (!climate || climate.status !== 'complete') {
-      return `<section class="result-card" aria-labelledby="climate-title"><p class="result-eyebrow">05 · ${t(language, 'CLIMATE HISTORY', 'জলবায়ু ইতিহাস')}</p>${unavailableCard(t(language, 'Historical climate unavailable', 'ঐতিহাসিক জলবায়ু অনুপলব্ধ'), climate?.reason || 'No prepared chart/history payload was supplied.')}</section>`;
+  function climatePanel(climate, language, metric, fixture = true) {
+    if (!climate || !['complete', 'incomplete'].includes(climate.status) || !Array.isArray(climate.series) || !climate.series.some(series => series && typeof series.key === 'string' && Array.isArray(series.values))) {
+      return `<section class="result-card" aria-label="Historical climate"><p class="result-eyebrow">05 · ${t(language, 'CLIMATE HISTORY', 'জলবায়ু ইতিহাস')}</p>${unavailableCard(t(language, 'Historical climate unavailable', 'ঐতিহাসিক জলবায়ু অনুপলব্ধ'), climate?.reason || 'No prepared chart/history payload was supplied.')}</section>`;
     }
-    const selected = climate.series.find(series => series.key === metric) || climate.series[0];
-    const stats = (climate.comparison?.statistics || []).map(stat => `<li><b>${esc(human(stat.metric))} · ${esc(stat.window)}</b>: ${esc(String(stat.earlier_mean))} → ${esc(String(stat.recent_mean))} ${esc(stat.unit)} (Δ ${esc(String(stat.delta))})</li>`).join('');
+    const availableSeries = climate.series.filter(series => series && typeof series.key === 'string' && Array.isArray(series.values));
+    const selected = availableSeries.find(series => series.key === metric) || availableSeries[0];
+    const stats = (climate.comparison?.statistics || []).map(stat => `<li><b>${esc(human(stat.metric))} · ${esc(stat.window)}</b>: ${esc(String(stat.earlier_mean))} → ${esc(String(stat.recent_mean))} ${esc(stat.unit)} (Δ ${esc(String(stat.delta ?? stat.difference ?? 'Not supplied'))})</li>`).join('');
     return `<section class="result-card" aria-labelledby="climate-title">
       <div class="result-section-heading">
         <div>
           <p class="result-eyebrow">05 · ${t(language, 'HISTORICAL WEATHER', 'ঐতিহাসিক আবহাওয়া')}</p>
           <h2 id="climate-title">${t(language, 'Regional context, not a field measurement', 'আঞ্চলিক প্রেক্ষাপট, জমির মাপ নয়')}</h2>
         </div>
-        ${badge('fixture', 'Example data')}
+        ${badge(fixture ? 'fixture' : climate.status, fixture ? t(language, 'Example data', 'নমুনা তথ্য') : t(language, 'Supplied historical evidence', 'সরবরাহ করা ঐতিহাসিক প্রমাণ'))}
       </div>
-      <div class="chart-tabs" role="group" aria-label="Climate metric">${climate.series.map(series => `<button type="button" data-result-metric="${esc(series.key)}" aria-pressed="${series.key === selected.key}">${esc(series.key === 'precipitation' ? t(language, 'Rainfall', 'বৃষ্টিপাত') : t(language, 'Temperature', 'তাপমাত্রা'))}</button>`).join('')}</div>
+      <div class="chart-tabs" role="group" aria-label="Climate metric">${availableSeries.map(series => `<button type="button" data-result-metric="${esc(series.key)}" aria-pressed="${series.key === selected.key}">${esc(series.key === 'precipitation' ? t(language, 'Rainfall', 'বৃষ্টিপাত') : t(language, 'Temperature', 'তাপমাত্রা'))}</button>`).join('')}</div>
       <div class="chart-header"><div><small>${esc(selected.statistic)}</small><h3>${esc(selected.label)}</h3></div><b>${esc(selected.unit)}</b></div>
       <div class="chart-frame">${chart(selected, language)}</div>
       <div class="chart-meta">
         <span>${esc(climate.period.start)} → ${esc(climate.period.end)}</span>
         <span>${esc(climate.time_standard)}</span>
         <span>${esc(climate.missingness)}</span>
-        <span>${esc(climate.comparison.earlier)} → ${esc(climate.comparison.recent)}</span>
+        <span>${esc(climate.comparison?.earlier || t(language, 'Not supplied', 'দেওয়া হয়নি'))} → ${esc(climate.comparison?.recent || t(language, 'Not supplied', 'দেওয়া হয়নি'))}</span>
       </div>
-      <p class="chart-finding">${esc(climate.comparison.finding)}</p>
+      <p class="chart-finding">${esc(climate.comparison?.finding || t(language, 'Not supplied', 'দেওয়া হয়নি'))}</p>
       ${stats ? `<ul class="chart-stats">${stats}</ul>` : ''}
       <p class="result-limit"><b>${t(language, 'Note:', 'নোট:')}</b> ${t(language, 'Monthly mean daily maximum is not the absolute monthly maximum. Grid support is regional context, not a farm boundary average.', 'মাসিক গড় দৈনিক সর্বোচ্চ তাপমাত্রা মাসের পরম সর্বোচ্চ নয়। গ্রিড মান আঞ্চলিক প্রেক্ষাপট, জমির সীমার গড় নয়।')} ${esc((climate.limitations || []).join(' '))}</p>
     </section>`;
@@ -322,9 +347,24 @@
       </article>`).join('')}</div>
       <details class="result-expand source-drawer">
         <summary>${t(language, 'Sources and methods drawer', 'উৎস ও পদ্ধতির বিবরণ')}</summary>
-        ${(response.sources || []).map(source => `<article><h3>${esc(source.provider)}</h3><dl><dt>Dataset/version</dt><dd>${esc(source.product_version)}</dd><dt>Period</dt><dd>${esc(source.period)}</dd><dt>Spatial support</dt><dd>${esc(source.spatial_support)}</dd><dt>QA</dt><dd>${esc(source.qa)}</dd></dl><a href="${esc(source.url)}" target="_blank" rel="noopener">Official documentation ↗</a></article>`).join('')}
+        ${(response.sources || []).map(source => `<article><h3>${esc(source.provider)}</h3><dl><dt>Dataset/version</dt><dd>${esc(source.product_version)}</dd><dt>Period</dt><dd>${esc(source.period)}</dd><dt>Spatial support</dt><dd>${esc(source.spatial_support)}</dd><dt>QA</dt><dd>${esc(source.qa)}</dd></dl><a href="${esc(sourceUrl(source.url))}" target="_blank" rel="noopener">Official documentation ↗</a></article>`).join('')}
         <p><b>Versions:</b> contract ${esc(response.versions?.contract || 'unknown')} · catalogue ${esc(response.versions?.catalogue || 'unknown')} · method ${esc(response.versions?.method || 'unknown')}</p>
       </details>
+    </section>`;
+  }
+
+  function evidenceProfile(response, language) {
+    const p=response.evidence_profile;
+    if(!p)return '';
+    const context=p.crop_context,counts=p.counts;
+    return `<section class="result-card" aria-labelledby="local-evidence-title"><p class="result-eyebrow">${t(language,'YOUR LOCAL DATA PIPELINE','আপনার স্থানীয় তথ্য প্রক্রিয়া')}</p><h2 id="local-evidence-title">${t(language,'Your inputs and evidence are connected','আপনার ইনপুট ও প্রমাণ সংযুক্ত হয়েছে')}</h2><p>${t(language,'This report uses your saved field inputs, the matching BAMIS source region and archived NASA POWER weather. Evidence is available; crop plans remain incomplete until the required rules are defined.','এই রিপোর্টে সংরক্ষিত জমির তথ্য, সংশ্লিষ্ট বামিস উৎসের অঞ্চল ও নাসা পাওয়ারের আবহাওয়া ব্যবহার করা হয়েছে। প্রমাণ পাওয়া গেছে; প্রয়োজনীয় নিয়ম নির্ধারিত না হওয়া পর্যন্ত ফসল পরিকল্পনা অসম্পূর্ণ থাকবে।')}</p>
+      <div class="result-chip-row">${infoChip('Crop evidence',counts.crops+' labels / '+counts.calendars+' calendars')}${infoChip('Source entries',counts.calendar_entries)}${infoChip('Daily NASA rows',counts.weather_daily??0,'42 representative points; no field averaging')}${infoChip('BAMIS region',context.region_label,context.scientific_applicability)}${infoChip('Active reviewed rules',p.active_reviewed_rules)}</div>
+      <p>${t(language,'Storage','সংরক্ষণ')}: ${esc(p.storage)} · ${t(language,'Report ID','রিপোর্ট আইডি')}: <code>${esc(response.result_id||'—')}</code></p>
+      <details class="result-expand"><summary>${t(language,'How each input is used','প্রতিটি ইনপুটের ব্যবহার')}</summary>${(p.input_usage||[]).map(i=>`<p><code>${esc(i.field)}</code> — ${esc(i.usage)}</p>`).join('')}</details>
+      <details class="result-expand"><summary>${t(language,'Current crop: matched source calendars','বর্তমান ফসল: মিলে যাওয়া উৎস ক্যালেন্ডার')} (${context.current_crop_calendars.length})</summary>${context.current_crop_calendars.length?context.current_crop_calendars.map(c=>`<article><h3>${esc(c.season_label)} · ${esc(c.rice_system_label||'system not established')}</h3><p><code>${esc(c.calendar_id)}</code> · ${esc(c.source_id)} · page ${esc(c.source_page)}</p><p>Printed life span: ${esc(c.printed_life_span.min)}–${esc(c.printed_life_span.max)} days. Origin/end events: unresolved; not a field-clearance duration.</p>${c.example_source_column?`<p>Source stage: ${esc(c.example_source_column.growth_stage)} · printed month ${esc(c.example_source_column.printed_month)} · printed week ${esc(c.example_source_column.printed_week)}. No calendar dates inferred.</p><p>Printed normals (not tolerance thresholds): ${esc(JSON.stringify(c.example_source_column.printed_weather_normals))}</p>`:''}</article>`).join(''):`<p>${t(language,'No matching crop calendar was collected for this region. No other region was substituted.','এই অঞ্চলে মিলে যাওয়া ফসলের ক্যালেন্ডার সংগ্রহ করা হয়নি। অন্য অঞ্চল বসানো হয়নি।')}</p>`}</details>
+      <details class="result-expand"><summary>${t(language,'Regional crop evidence inventory — not recommendations','আঞ্চলিক ফসলের প্রমাণের তালিকা — পরামর্শ নয়')}</summary><div class="table-scroll"><table><thead><tr><th>Crop</th><th>Source calendars</th><th>Printed seasons</th><th>Decision status</th></tr></thead><tbody>${context.regional_catalogue.map(c=>`<tr><td>${esc(c.crop_label)}</td><td>${c.calendar_count}</td><td>${esc(c.seasons.join(', ')||'Not collected')}</td><td>Not assessed</td></tr>`).join('')}</tbody></table></div></details>
+      <details class="result-expand"><summary>${t(language,'How crop and NASA metrics are joined','ফসল ও নাসার পরিমাপক যেভাবে যুক্ত হয়')}</summary><div class="table-scroll"><table><thead><tr><th>BAMIS field</th><th>NASA parameter</th><th>Comparable now?</th><th>Missing definition</th></tr></thead><tbody>${p.metric_bridge.map(m=>`<tr><td>${esc(m.bamis_field)}</td><td>${esc(m.nasa_parameter||'No direct counterpart')}</td><td>${m.evaluable_now?'Yes':'No'}</td><td>${esc(m.missing_information)}</td></tr>`).join('')}</tbody></table></div></details>
+      <details class="result-expand"><summary>${t(language,'Weather over your reported field-occupancy dates','আপনার জানানো জমি ব্যবহারের সময়ের আবহাওয়া')}</summary><p>${t(language,'This is a reported-date context, not a reviewed crop stage. Only locally cached dates are calculated; missing days or future dates are not replaced by forecasts.','এটি জানানো তারিখের প্রেক্ষাপট, পর্যালোচিত ফসলের পর্যায় নয়। শুধু স্থানীয়ভাবে সংরক্ষিত তারিখের হিসাব হয়; অনুপস্থিত বা ভবিষ্যৎ তারিখে পূর্বাভাস বসানো হয় না।')}</p><pre>${esc(JSON.stringify(response.climate.reported_occupancy_window,null,2))}</pre></details><details class="result-expand"><summary>${t(language,'Model and training status','মডেল ও প্রশিক্ষণের অবস্থা')}</summary><p>${esc(p.model.regression_readiness)}</p><p>${esc(p.model.tuning)}</p></details>
     </section>`;
   }
 
@@ -341,10 +381,10 @@
           <p class="result-eyebrow">07A · ${t(language, 'INTENDED-CROP CHECK', 'প্রস্তাবিত ফসল যাচাই')}</p>
           <h3>${t(language, 'Check a crop with the same engine', 'একই নিয়মে ফসল যাচাই')}</h3>
           <div class="result-form-row">
-            <label>${t(language, 'Crop', 'ফসল')}<select id="intended-crop"><option value="">${t(language, 'Choose crop', 'ফসল বেছে নিন')}</option><option value="mustard">Mustard</option><option value="mungbean">Mungbean</option><option value="rice">Rice</option></select></label>
+            <label>${t(language, 'Crop', 'ফসল')}<select id="intended-crop"><option value="">${t(language, 'Choose crop', 'ফসল বেছে নিন')}</option>${(globalThis.STS_INTAKE?.crops||[]).map(c=>`<option value="${esc(c.id)}">${esc(language==='bn'?c.bn:c.en)}</option>`).join('')}</select></label>
             <label>${t(language, 'Planting date', 'রোপণের তারিখ')}<input id="intended-date" type="date"></label>
           </div>
-          <button type="button" data-result-action="intended-check">${t(language, 'Check availability', 'উপলব্ধতা যাচাই')}</button>
+          <button type="button" data-result-action="intended-check">${t(language, 'Check collected evidence', 'সংগৃহীত প্রমাণ দেখুন')}</button>
           <p class="result-limit" id="intended-status">${esc(response.intended_crop_assessment?.reason || 'Unavailable')}</p>
         </article>
         <article class="result-card">
@@ -359,15 +399,16 @@
   }
 
   function receiptPanel(data, language) {
+    const example = isExample(data);
     return `<section class="result-card result-receipt" aria-labelledby="receipt-title">
       <div>
         <p class="result-eyebrow">08 · ${t(language, 'PRINT & JSON RECEIPT', 'প্রিন্ট ও JSON')}</p>
-        <h2 id="receipt-title">${t(language, 'Keep the same example result', 'এই নমুনার একই তথ্য রাখুন')}</h2>
-        <p>${t(language, 'The export preserves the fixture label, statuses, limitations and source metadata.', 'রপ্তানিতে নমুনা লেবেল, অবস্থা, সীমাবদ্ধতা ও উৎস থাকবে।')}</p>
-        <p class="receipt-note"><b>Fingerprints:</b> not supplied. No identifier is invented by the frontend.</p>
+        <h2 id="receipt-title">${example ? t(language, 'Keep the same example result', 'এই নমুনার একই তথ্য রাখুন') : t(language, 'Keep your result and evidence', 'ফলাফল ও প্রমাণ সংরক্ষণ করুন')}</h2>
+        <p>${example ? t(language, 'The export preserves the fixture label, statuses, limitations and source metadata.', 'রপ্তানিতে নমুনা লেবেল, অবস্থা, সীমাবদ্ধতা ও উৎস থাকবে।') : t(language, 'Export preserves the supplied result, statuses, sources and limitations.', 'রপ্তানিতে সরবরাহ করা ফলাফল, অবস্থা, উৎস ও সীমা থাকবে।')}</p>
+        <p class="receipt-note"><b>Fingerprints:</b> ${esc(data.response.result_fingerprint ?? data.response.fingerprints?.result ?? 'Not supplied; no identifier invented')}.</p>
       </div>
       <div class="result-actions result-actions--end">
-        <button type="button" class="primary" data-result-action="download-receipt">${t(language, 'Download example JSON', 'নমুনা JSON ডাউনলোড')}</button>
+        <button type="button" class="primary" data-result-action="download-receipt">${example ? t(language, 'Download example JSON', 'নমুনা JSON ডাউনলোড') : t(language, 'Download result JSON', 'ফলাফলের JSON ডাউনলোড')}</button>
         <button type="button" data-result-action="print">${t(language, 'Print result', 'প্রিন্ট করুন')}</button>
       </div>
     </section>`;
@@ -391,10 +432,56 @@
     const enterFixtureMode = options.enterFixtureMode;
     const leaveFixtureMode = options.leaveFixtureMode;
     let data = null;
+    let genuine = null;
+    let viewGeneration = 0;
     let selectedPlan = null;
     let climateMetric = 'precipitation';
+    let weatherBundle = null, weatherLoading = false, weatherError = false, weatherDistrict = null, weatherMetric = 'T2M';
+    let scenario = null;
+    let restoring=false;
+    let restored=false;
+    let snapshot = null;
+    try { const item=JSON.parse(localStorage.getItem('sts-plan-snapshot-v1')); if(item?.version===1&&!item.example&&!isExample(item.data)&&item.data?.request&&['complete','incomplete'].includes(item.data?.response?.status)&&Array.isArray(item.data.response.alternatives)&&(item.plan_id==='evidence-report'&&item.data.response.analysis_mode==='source_evidence_report'||item.data.response.alternatives.some(p=>p.plan_id===item.plan_id&&planHasThreeSteps(p))))snapshot=item; } catch {}
+    function saveSnapshot(planId) {
+      const active=data||genuine;
+      const plan=planId==='evidence-report'&&!isExample(active)&&active?.response?.report_status==='complete'?{label:'Field evidence report'}:active?.response?.alternatives?.find(p=>p.plan_id===planId&&planHasThreeSteps(p));
+      if(!plan)return;
+      snapshot={version:1,plan_id:planId,label:text(plan.label),saved_at:new Date().toISOString(),example:isExample(active),data:JSON.parse(JSON.stringify(active))};
+      try {localStorage.setItem('sts-plan-snapshot-v1',JSON.stringify(snapshot));toast('Plan snapshot saved in this browser.');} catch {toast('Snapshot kept for this session; browser storage is unavailable.');}
+      navigate('saved');
+    }
+    function renderRoute(route,request,language='en') {
+      if(route==='climate'&&!weatherBundle&&!weatherLoading&&!weatherError){weatherLoading=true;globalThis.STS_CLIMATE_HISTORY.load().then(bundle=>{weatherBundle=bundle;weatherLoading=false;rerender();}).catch(()=>{weatherError=true;weatherLoading=false;rerender();});}
+      const active=data||(genuine&&JSON.stringify(genuine.request)===JSON.stringify(request)?genuine:null);
+      let html=globalThis.STS_WORKSPACE_PAGES.render(route,{ui:{chart,comparison,evidencePanel,evidenceProfile,operationTimeline,genuineSummary},language,active,request,selectedPlan,metric:weatherMetric,weather:globalThis.STS_CLIMATE_HISTORY,bundle:weatherBundle,district:weatherDistrict??request?.location?.district_id,saved:snapshot,scenario});
+      if(route==='climate'&&weatherError)html=html.replace(/<p role="status">[\s\S]*?<\/p>/,'<p role="alert">Local weather history could not load. / স্থানীয় আবহাওয়ার তথ্য লোড হয়নি।</p><button data-result-action="retry-weather">Retry / আবার চেষ্টা করুন</button>');
+      return html;
+    }
+    async function runScenario() {
+      if(data){toast('Example inputs cannot be submitted to the real service. Use your own field inputs.');return;}
+      const original=options.getSubmission?.();
+      if(!original)return;
+      const request=JSON.parse(JSON.stringify(original));
+      request.irrigation={...request.irrigation,access:document.getElementById('whatif-water').value};
+      request.priority=document.getElementById('whatif-priority').value;
+      const limits=document.getElementById('whatif-seasonal-limitations').value;
+      const seasons=[...document.querySelectorAll('[data-whatif-season]:checked')].map(el=>el.value);
+      request.irrigation.seasonal_limitations=request.irrigation.access==='rainfed'?'not_applicable':limits;
+      request.irrigation.limited_seasons=request.irrigation.access!=='rainfed'&&limits==='seasonal'?seasons:[];
+      if(request.irrigation.access!=='rainfed'&&(!['none','seasonal'].includes(limits)||limits==='seasonal'&&!seasons.length)){
+        scenario={request,state:'invalid_input',response:{status:'invalid_input',reason:'Choose seasonal irrigation limits and, when applicable, at least one limited season. / মৌসুমি সেচের সীমা এবং প্রযোজ্য হলে অন্তত একটি মৌসুম বেছে নিন।'}};rerender();return;
+      }
+      scenario={request,state:'loading'};rerender();
+      const token=viewGeneration;
+      // A scenario never runs through the fixture transport or changes original inputs.
+      const service=globalThis.STS_RESULT_ADAPTER.create({endpoints:globalThis.STS_RESULT_ENDPOINTS||{}});
+      const result=await service.requestPlanning({...request,request_kind:'scenario'});
+      if(token!==viewGeneration)return;
+      scenario={request,state:result.state,response:result.response};rerender();
+    }
 
     async function activateFixture(id) {
+      viewGeneration += 1;
       const firstActivation = !data;
       enterFixtureMode?.();
       adapter.enableFixture(id, true);
@@ -405,18 +492,19 @@
       rerender();
       if (firstActivation && typeof window !== 'undefined') window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     }
-    function deactivateFixture() { data = null; selectedPlan = null; adapter.disableFixture(); leaveFixtureMode?.(); }
-    function invalidate() { data = null; selectedPlan = null; adapter.disableFixture(); leaveFixtureMode?.(); }
+    function deactivateFixture() { viewGeneration += 1; data = null; selectedPlan = null; adapter.disableFixture(); leaveFixtureMode?.(); }
+    function invalidate() { viewGeneration += 1; scenario=null; weatherDistrict=null; genuine = null; data = null; selectedPlan = null; adapter.disableFixture(); leaveFixtureMode?.(); }
     function isFixture() { return Boolean(data); }
 
-    function renderFixture(language = 'en', options = {}) {
+    function renderData(data, language = 'en', options = {}) {
       if (!data) return '';
-      const showFixtureBanner = options.showFixtureBanner !== false;
+      const example = isExample(data);
+      const showFixtureBanner = example && options.showFixtureBanner !== false;
       const banner = showFixtureBanner ? fixturePicker(data.fixture_id, language) : '';
       const response = data.response;
       if (!['complete', 'incomplete'].includes(response.status)) {
-        const title = response.status === 'invalid_input' ? 'Example invalid input' : response.status === 'error' ? 'Example recoverable error' : 'Example service unavailable';
-        return `<div class="result-page" data-no-translate>${banner}${unavailableCard(title, response.reason || response.errors?.[0]?.label || 'No result is available.', response.recoverable ? '<button type="button" data-result-action="retry">Retry real service</button>' : '')}</div>`;
+        const title = `${example ? t(language, 'Example: ', 'নমুনা: ') : ''}${response.status === 'invalid_input' ? t(language, 'Check your inputs', 'আপনার তথ্য যাচাই করুন') : response.status === 'error' ? t(language, 'Service request failed', 'সেবার অনুরোধ ব্যর্থ') : t(language, 'Planning unavailable', 'পরিকল্পনা অনুপলব্ধ')}`;
+        return `<div class="result-page" data-no-translate>${banner}<header class="result-page-intro"><h1>${esc(title)}</h1></header>${!example ? genuineSummary(data.request, language, response.status) : ''}${unavailableCard(title, text(response.reason || response.errors?.[0]?.label, language) || t(language, 'No result is available.', 'কোনো ফলাফল পাওয়া যায়নি।'), response.recoverable ? '<button type="button" data-result-action="retry">Retry real service</button>' : '')}</div>`;
       }
       const plan = response.alternatives?.find(item => item.plan_id === selectedPlan) || response.alternatives?.[0];
       return `<div class="result-page" data-no-translate>${banner}
@@ -426,68 +514,128 @@
             <h1>${t(language, 'Your field decision, with the evidence beside it.', 'আপনার জমির সিদ্ধান্ত, প্রমাণসহ')}</h1>
             <p>${t(language, 'Plans, timing, reasons and unknowns stay together.', 'পরিকল্পনা, সময়, কারণ ও অজানা তথ্য এক জায়গায়।')}</p>
           </div>
-          <div class="result-page-intro__status">${badge(response.status)}<span>${esc(response.coverage?.label || '')}</span></div>
+          <div class="result-page-intro__status">${badge(response.report_status==='complete'?'complete':response.status,response.report_status==='complete'?t(language,'Evidence report ready','প্রমাণের রিপোর্ট প্রস্তুত'):response.status)}<span>${esc(response.coverage?.label || '')}</span></div>
         </section>
-        ${fieldSummary(data, language)}${vulnerability(response.current_crop_assessment, language)}${comparison(response, language, selectedPlan)}${operationTimeline(plan, language)}${climatePanel(response.climate, language, climateMetric)}${evidencePanel(response, language)}${toolsPanel(response, language)}${receiptPanel(data, language)}
+        ${example ? fieldSummary(data, language) : genuineSummary(data.request, language, response.status)}${restored&&!example?`<p class="result-limit">${t(language,'Restored saved report; generated at','সংরক্ষিত রিপোর্ট দেখানো হচ্ছে; তৈরি হয়েছে')} ${esc(response.generated_at_utc||'—')}. ${t(language,'Generate a new report after changing inputs or source data.','ইনপুট বা উৎসের তথ্য বদলালে নতুন রিপোর্ট তৈরি করুন।')} <button data-result-action="request-planning">${t(language,'Generate fresh report','নতুন রিপোর্ট তৈরি করুন')}</button></p>`:''}${!example&&response.report_status==='complete'?`<div class="result-actions"><button data-result-save="evidence-report">${t(language,'Save evidence report','প্রমাণের রিপোর্ট সংরক্ষণ')}</button></div>`:''}${evidenceProfile(response, language)}${vulnerability(response.current_crop_assessment, language)}${comparison(response, language, selectedPlan)}${operationTimeline(plan, language)}${climatePanel(response.climate, language, climateMetric, example)}${evidencePanel(response, language)}${toolsPanel(response, language)}${receiptPanel(data, language)}
       </div>`;
     }
 
+    function renderFixture(language = 'en', options = {}) { return renderData(data, language, options); }
+
+    async function submit(request) {
+      restored=false;
+      adapter.disableFixture(); leaveFixtureMode?.(); data = null;
+      const generation = ++viewGeneration;
+      genuine = { request, state: 'loading', response: { status: 'loading', data_mode: 'unavailable' } };
+      selectedPlan = null; rerender();
+      const result = await adapter.requestPlanning(request);
+      if (generation !== viewGeneration || result.ignored) return;
+      genuine = { request, state: result.state, response: result.response || { status: 'error', reason: 'Invalid response.' } };
+      selectedPlan = genuine.response.alternatives?.find(planHasThreeSteps)?.plan_id || null;
+      if(genuine.response.result_id&&typeof window!=='undefined'){try{localStorage.setItem('sts-last-assessment-v1',JSON.stringify({id:genuine.response.result_id,intake:request}));}catch{}}
+      rerender();
+    }
+
+    async function restore(request) {
+      if(restoring||genuine||!request||typeof window==='undefined')return;
+      let saved;try{saved=JSON.parse(localStorage.getItem('sts-last-assessment-v1'));}catch{return;}
+      if(!saved?.id||!/^[-0-9a-f]{36}$/.test(saved.id)||JSON.stringify(saved.intake)!==JSON.stringify(request))return;
+      restoring=true;const token=viewGeneration;
+      try{const response=await fetch('/api/results/'+saved.id,{cache:'no-store'});if(!response.ok)return;const body=await response.json();
+        const stable=v=>v&&typeof v==='object'?(Array.isArray(v)?v.map(stable):Object.fromEntries(Object.keys(v).sort().map(k=>[k,stable(v[k])]))):v;
+        if(token===viewGeneration&&!genuine&&body.result?.data_mode==='local_evidence'&&JSON.stringify(stable(body.intake))===JSON.stringify(stable(request))){genuine={request,state:body.result.status,response:body.result};restored=true;rerender();}
+      }catch{}finally{restoring=false;}
+    }
+
     function renderGenuine(request, language = 'en') {
+      if(!genuine&&!restoring)void restore(request);
+      if (genuine && JSON.stringify(genuine.request) === JSON.stringify(request)) {
+        if (genuine.state === 'loading') return `<div class="result-page" data-no-translate aria-busy="true">${genuineSummary(request, language, 'loading')}<p role="status">${t(language, 'Loading your assessment…', 'আপনার মূল্যায়ন লোড হচ্ছে…')}</p></div>`;
+        return renderData(genuine, language) + (!['complete','incomplete'].includes(genuine.response.status) ? `<div class="result-page" data-no-translate>${vulnerability({status:'incomplete',crop_label:request?.current?.crop_id,checks:[{outcome:'unknown',label:{en:'Heat exposure — not assessed',bn:'তাপের প্রভাব — মূল্যায়ন হয়নি'},missing_information:t(language,'Planting date, crop stage and reviewed temperature limits are required.','রোপণের তারিখ, ফসলের পর্যায় ও পর্যালোচিত তাপমাত্রার সীমা প্রয়োজন।')},{outcome:'unknown',label:{en:'Rainfall / water exposure — not assessed',bn:'বৃষ্টি / পানির প্রভাব — মূল্যায়ন হয়নি'},missing_information:t(language,'Stage-specific water requirements and irrigation context are required.','পর্যায়ভিত্তিক পানির চাহিদা ও সেচের প্রেক্ষাপট প্রয়োজন।')}],limitation:t(language,'Exposure calculations require reviewed crop-stage rules and matching weather data. No live diagnosis is available.','প্রভাবের হিসাবের জন্য পর্যালোচিত ফসলের পর্যায়ের নিয়ম ও সংশ্লিষ্ট আবহাওয়া প্রয়োজন। সরাসরি রোগ নির্ণয় নেই।')},language)}<a href="#climate">${t(language,'Explore NASA weather history','নাসার আবহাওয়ার ইতিহাস দেখুন')} ↗</a></div>` : '');
+      }
       return `<div class="result-page" data-no-translate>
         <section class="result-page-intro" aria-label="Result workspace">
           <div>
             <p class="result-eyebrow">SOIL TO STARS · RESULT WORKSPACE</p>
             <h1>${t(language, 'Your field inputs are ready.', 'আপনার জমির তথ্য প্রস্তুত।')}</h1>
-            <p>${t(language, 'The scientific planning service is not connected yet. Your answers remain preserved.', 'বৈজ্ঞানিক পরিকল্পনা সেবা এখনও সংযুক্ত নয়। আপনার উত্তর সংরক্ষিত আছে।')}</p>
+            <p>${t(language, 'Your answers are preserved. Generate a local evidence report to connect them to the crop catalogue and NASA archive.', 'আপনার উত্তর সংরক্ষিত আছে। ফসলের তালিকা ও নাসার সংরক্ষিত তথ্যের সাথে যুক্ত করতে স্থানীয় রিপোর্ট তৈরি করুন।')}</p>
           </div>
           ${badge('unavailable')}
         </section>
         ${genuineSummary(request, language)}
+        ${vulnerability({status:'incomplete',crop_label:request?.current?.crop_id||t(language,'No current crop supplied','বর্তমান ফসল দেওয়া হয়নি'),checks:[{outcome:'unknown',label:{en:'Heat exposure — not assessed',bn:'তাপের প্রভাব — মূল্যায়ন হয়নি'},missing_information:t(language,'Needs planting date, crop stage, reviewed crop threshold and a matching weather window.','রোপণের তারিখ, ফসলের পর্যায়, পর্যালোচিত সীমা ও সংশ্লিষ্ট আবহাওয়ার সময় প্রয়োজন।')},{outcome:'unknown',label:{en:'Rainfall / water exposure — not assessed',bn:'বৃষ্টি / পানির প্রভাব — মূল্যায়ন হয়নি'},missing_information:t(language,'Needs stage-specific water rules and irrigation context; historical rainfall alone cannot determine crop risk.','পর্যায়ভিত্তিক পানির নিয়ম ও সেচের প্রেক্ষাপট প্রয়োজন; শুধু ঐতিহাসিক বৃষ্টি দিয়ে ফসলের ঝুঁকি নির্ধারণ হয় না।')}],limitation:t(language,'Historical context is available in Climate insights. Crop exposure calculations are not connected; no live risk or diagnosis is claimed.','জলবায়ুর পাতায় ঐতিহাসিক প্রেক্ষাপট আছে। ফসলের প্রভাবের গণনা সংযুক্ত নয়; সরাসরি ঝুঁকি বা রোগ নির্ণয়ের দাবি করা হচ্ছে না।')}, language)}
+        <p><a href="#climate">${t(language,'Explore real NASA weather history','নাসার প্রকৃত আবহাওয়ার ইতিহাস দেখুন')} ↗</a></p>
         ${unavailableCard(
-          t(language, 'Planning and evidence unavailable', 'পরিকল্পনা ও প্রমাণ অনুপলব্ধ'),
-          t(language, 'No backend comparison, current-crop assessment, climate history, intended-crop check or replay payload is connected. A demo will never open automatically after this failure.', 'কোনো ব্যাকএন্ড তুলনা, বর্তমান ফসল মূল্যায়ন, জলবায়ু ইতিহাস, প্রস্তাবিত ফসল যাচাই বা পুনরায় পরীক্ষা সংযুক্ত নেই। ব্যর্থতার পর ডেমো স্বয়ংক্রিয়ভাবে খুলবে না।'),
-          `<button type="button" data-result-action="open-fixture">${t(language, 'Open isolated development fixture', 'আলাদা ডেভেলপমেন্ট ফিক্সচার খুলুন')}</button>`
+          t(language, 'Generate your local report', 'আপনার স্থানীয় রিপোর্ট তৈরি করুন'),
+          t(language, 'The local service saves your inputs and retrieves matching crop and weather evidence. Missing crop rules remain explicit; no demonstration data is substituted.', 'স্থানীয় সেবা আপনার ইনপুট সংরক্ষণ করে সংশ্লিষ্ট ফসল ও আবহাওয়ার প্রমাণ সংগ্রহ করে। অনুপস্থিত নিয়ম স্পষ্ট থাকে; নমুনা তথ্য বসানো হয় না।'),
+          `${request ? `<button type="button" data-result-action="request-planning">${t(language, 'Generate local report', 'স্থানীয় রিপোর্ট তৈরি করুন')}</button>` : ''}`
         )}
       </div>`;
     }
 
     function downloadReceipt() {
-      if (!data) return;
-      const blob = new Blob([JSON.stringify(receipt(data), null, 2)], { type: 'application/json' });
+      const active = data || genuine;
+      if (!active || active.state === 'loading') return;
+      const blob = new Blob([JSON.stringify(receipt(active), null, 2)], { type: 'application/json' });
       const url = URL.createObjectURL(blob), anchor = document.createElement('a');
-      anchor.href = url; anchor.download = `soil-to-stars-${data.fixture_id}-example.json`; anchor.click();
+      anchor.href = url; anchor.download = isExample(active) ? `soil-to-stars-${active.fixture_id}-example.json` : 'soil-to-stars-result.json'; anchor.click();
       setTimeout(() => URL.revokeObjectURL(url), 1000);
-      toast('Example receipt downloaded with fixture labels.');
+      toast(isExample(active) ? 'Example receipt downloaded with fixture labels.' : 'Result receipt downloaded with supplied evidence.');
     }
 
     function handleClick(button) {
+      if(button.dataset.resultSave){saveSnapshot(button.dataset.resultSave);return true;}
+      if(button.dataset.weatherMetric){weatherMetric=button.dataset.weatherMetric;rerender();return true;}
       if (button.dataset.resultMetric) { climateMetric = button.dataset.resultMetric; rerender(); return true; }
       if (button.dataset.resultPlan) { selectedPlan = button.dataset.resultPlan; rerender(); return true; }
       switch (button.dataset.resultAction) {
+        case 'run-scenario': void runScenario(); return true;
+        case 'reset-scenario': scenario=null; viewGeneration+=1; rerender(); return true;
+        case 'retry-weather': weatherError=false; rerender(); return true;
+        case 'download-saved': {
+          if(!snapshot)return true;
+          const url=URL.createObjectURL(new Blob([JSON.stringify(snapshot,null,2)],{type:'application/json'}));
+          const a=document.createElement('a');a.href=url;a.download=snapshot.example?'soil-to-stars-saved-example.json':'soil-to-stars-saved-result.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);return true;
+        }
+        case 'remove-snapshot': snapshot=null;try{localStorage.removeItem('sts-plan-snapshot-v1');}catch{}rerender();return true;
         case 'edit-inputs': deactivateFixture(); navigate('profile'); return true;
-        case 'open-fixture': void activateFixture('complete-comparison'); return true;
         case 'exit-fixture': deactivateFixture(); navigate('profile'); return true;
-        case 'download-inputs': downloadInputs(); return true;
+        case 'download-inputs':
+          if(typeof location!=='undefined'&&location.hash==='#saved'&&snapshot){
+            const url=URL.createObjectURL(new Blob([JSON.stringify(snapshot.data.request,null,2)],{type:'application/json'}));
+            const a=document.createElement('a');a.href=url;a.download='soil-to-stars-saved-inputs.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+          }else downloadInputs();
+          return true;
         case 'download-receipt': downloadReceipt(); return true;
         case 'print': window.print(); return true;
         case 'intended-check': {
           const status = document.querySelector('#intended-status');
-          if (status) status.textContent = 'Unavailable: no same-engine endpoint is connected. No browser score was calculated.';
+          if(status){
+            const crop=document.querySelector('#intended-crop')?.value,day=document.querySelector('#intended-date')?.value;
+            if(!crop||formatDate(day)==='Not supplied'){status.textContent='Choose a crop and a valid planting date. / ফসল ও সঠিক রোপণের তারিখ দিন।';return true;}
+            const context=(genuine||data)?.response?.evidence_profile?.crop_context;
+            const collected=context?.regional_catalogue?.find(c=>c.intake_crop_id===crop);
+            status.textContent=`${collected?.crop_label||crop}: ${collected?.calendar_count||0} collected source calendar(s) for ${context?.region_label||'this source region'}. Requested planting date: ${day}. Planting feasibility remains unassessed: event-defined crop, soil/water and operation rules are unresolved. No score calculated.`;
+          }
           return true;
         }
-        case 'retry': toast('No real endpoint is configured; fixture success was not activated.'); return true;
+        case 'request-planning': if (options.getSubmission?.()) void submit(options.getSubmission()); return true;
+        case 'retry': if (data) toast('No real endpoint is configured; fixture success was not activated.'); else if (genuine?.request) void submit(genuine.request); return true;
         default: return false;
       }
     }
     function handleChange(target) {
+      if(target.id==='whatif-water'){const fields=document.getElementById('whatif-irrigation-fields');if(fields)fields.hidden=target.value==='rainfed';return true;}
+      if(target.id==='whatif-seasonal-limitations'){const fields=document.getElementById('whatif-limited-seasons');if(fields)fields.hidden=target.value!=='seasonal';return true;}
+      if(target.matches('[data-weather-district]')){weatherDistrict=target.value;rerender();return true;}
       if (target.matches('[data-result-fixture]')) { void activateFixture(target.value); return true; }
       if (target.matches('[data-result-metric]')) { climateMetric = target.dataset.resultMetric; rerender(); return true; }
       return false;
     }
     function setMetric(metric) { climateMetric = metric; rerender(); }
 
-    return { activateFixture, deactivateFixture, invalidate, isFixture, renderFixture, renderGenuine, handleClick, handleChange, setMetric, downloadReceipt, getData: () => data };
+    return { restore, getSaved:()=>snapshot, renderRoute, submit, activateFixture, deactivateFixture, invalidate, isFixture, renderFixture, renderGenuine, handleClick, handleChange, setMetric, downloadReceipt, getData: () => data || genuine };
   }
 
-  return { create, receipt, planHasThreeSteps, genuineSummary };
+  return { create, receipt, planHasThreeSteps, genuineSummary, chart, climatePanel, vulnerability, indicatorRows, formatDate };
 });

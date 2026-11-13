@@ -1,3 +1,5 @@
+> Solo-development update (13 November 2026): docs/DEVELOPMENT.md governs work order. Old gate IDs, teammate assignments and approval/merge prerequisites below are historical planning references; they do not block solo implementation. Scientific definitions and evidence limits still apply.
+
 # Future implementation — after the accepted MVP
 
 Status: deferred options, not current release requirements or completed features. [MVP_SCOPE](MVP_SCOPE.md) is the mandatory-now context. Each future package depends on accepted G5 and retains an explicit activation blocker. G5 completion alone does not authorize or start any of these tracks. Choose one bounded issue, evidence needs and owner before removing its blocker.

@@ -1,0 +1,27 @@
+{
+  "schema": "publisher-warning-reference.v1",
+  "review_status": "source transcription visually verified; agronomic and farm applicability not independently validated",
+  "references": [
+    {
+      "id": "bamis-dhaka-mustard-warning-p1",
+      "crop_id": "mustard",
+      "region_id": "bamis-region-b43b1ac4cbe935f27ee1",
+      "source_id": "bamis_10981_5d1020fa",
+      "source_url": "https://www.bamis.gov.bd/res/public/calendars/2019/12/30/10981.pdf",
+      "source_sha256": "3bec21011db94f0154fa828e1fa4447ec97f373efd7186c3dc02ac51a7e08c7c",
+      "page": 1,
+      "section": "Weather Warning",
+      "conditions": [
+        {"id": "hot-day", "parameter": "T2M_MAX", "column": "t2m_max", "operator": ">", "threshold": 30, "unit": "degC", "label": "Daily maximum above 30°C"},
+        {"id": "cold-night", "parameter": "T2M_MIN", "column": "t2m_min", "operator": "<", "threshold": 10, "unit": "degC", "label": "Daily minimum below 10°C"},
+        {"id": "heavy-rain", "parameter": "PRECTOTCORR", "column": "precipitation_mm_day", "operator": ">", "threshold": 50, "unit": "mm/day", "label": "Daily rainfall above 50 mm"}
+      ],
+      "limitations": [
+        "Counts describe gridded weather relative to printed warning levels, not crop damage, suitability or a calibrated probability.",
+        "Applicable only as source-region mustard context; variety, growth stage and field microclimate remain unresolved.",
+        "Favorable weather, soil temperature, drought and disease rows are not substituted for these warning definitions.",
+        "No rule for rotation planning is activated by this reference."
+      ]
+    }
+  ]
+}

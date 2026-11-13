@@ -199,3 +199,8 @@ test('actual UI submit handler requires pin confirmation and supports either met
   assert.equal(saved.submitted.request.location.level,'district');assert.equal(saved.submitted.request.location.coordinates,null);
   assert.equal(saved.draft.mapPin,null);assert.equal(saved.draft.currentCrop,'rice');
 });
+
+test('unchecked radio values never become farmer answers on submit',()=>{
+ const h=uiHarness({version:1,draft:D.blankDraft()});h.submit([{name:'availabilityType',type:'radio',checked:false,value:'date'},{name:'availabilityType',type:'radio',checked:false,value:'window'},{name:'historyState',type:'radio',checked:false,value:'first_cultivation'},{name:'baselineState',type:'radio',checked:false,value:'no_established_rotation'}]);
+ const saved=JSON.parse(h.store.get('sts-farmer-intake-v1'));assert.equal(saved.draft.availabilityType,'');assert.equal(saved.draft.historyState,'');assert.equal(saved.draft.baselineState,'');assert.equal(h.submitted,null);
+});

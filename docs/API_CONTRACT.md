@@ -1,4 +1,8 @@
-# API contract — draft for G0 review
+> Runtime update — 13 November 2026: `docs/DATA_INTEGRATION.md` specifies the implemented local API (`/api/plan`, health, climate, current-crop and capability-based retrieval). Shared farmer-intake.v2 validation is enforced server-side. The intake now accepts 29 collected crop labels plus retained sesame (30 stable identities), without asserting suitability. SQLite evidence reports use `local-assessment.v1`; their `report_status: complete` is separate from `status/comparison_status: incomplete`. The historical scientific proposal below is not a claim that full rotation planning is implemented.
+
+> Solo-development update (13 November 2026): docs/DEVELOPMENT.md governs work order. Old gate IDs, teammate assignments and approval/merge prerequisites below are historical planning references; they do not block solo implementation. Scientific definitions and evidence limits still apply.
+
+# API contract — working scientific draft
 
 Status: **G0-CONTRACT/s01 draft, 1 November 2026 — ready for technical review after the recorded checks.** Field names and examples below are proposals, not a frozen schema; no endpoints, scientific acquisition or technical-owner sign-off are claimed. [MVP_SCOPE](MVP_SCOPE.md) governs mandatory behavior; [FUTURE_ROADMAP](FUTURE_ROADMAP.md) contains deferred options. Saim, Maruf and Prachurjo still review s02–s04; s05 freezes the agreed contract and s06 records independent review/main-branch acceptance before G1 implementation. This draft does not unlock those gates.
 
@@ -356,4 +360,4 @@ Proposed routes under `/api/v1`: GET health, regions, crops, sources, climate/hi
 
 Review cases: equal previous/current crops; repeats/fallow and explicit absence; unknown rice system/variety; supported vs unsupported combinations; optional soil report with essential unanswered fact; shared-policy selection before ranking; availability ranges; sowing/transplanting duration origins; maturity/final-harvest/clearance distinction; cross-year/leap-day windows; operation overlap/double counting; distinct alternatives with different completion dates; unallocated time; assessed infeasible baseline; one complete alternative in an incomplete bundle; source absence; intended-crop parity; replay/receipt reproduction.
 
-Only s01's **draft preparation** is delivered here. Owner agreement, schema freeze, scientific evidence, implementation and acceptance remain pending in [G0-CONTRACT](tasks/G0-CONTRACT.json). Local JSON/workflow checks verify document syntax and tracking, not agricultural validity.
+Only s01's **draft preparation** is delivered here. Owner agreement, schema freeze, scientific evidence, implementation and acceptance remain pending in [G0-CONTRACT](archive/team-workflow/docs/tasks/G0-CONTRACT.json). Local JSON/workflow checks verify document syntax and tracking, not agricultural validity.

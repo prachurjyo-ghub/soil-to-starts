@@ -1,10 +1,12 @@
+> Solo-development update (13 November 2026): docs/DEVELOPMENT.md governs work order. Old gate IDs, teammate assignments and approval/merge prerequisites below are historical planning references; they do not block solo implementation. Scientific definitions and evidence limits still apply.
+
 # UI/UX specification
 
 Status: target behavior, not implemented science. Current / and /workspace load supplied reference HTML/assets; inspect actual imports before editing unused components. Preserve the existing app. [MVP_SCOPE](MVP_SCOPE.md) defines mandatory capability; [FUTURE_ROADMAP](FUTURE_ROADMAP.md) holds expansion.
 
 ## Short farmer journey
 
-Latest intake requirement, authorized by Fardin on 30 October 2026: nationwide selection and meaningful required core answers supersede the older pilot-only wizard and general unknown response for these questions. See [INTAKE-UI](tasks/INTAKE-UI.json) and [intake contract](API_CONTRACT.md).
+Latest intake requirement, authorized by Fardin on 30 October 2026: nationwide selection and meaningful required core answers supersede the older pilot-only wizard and general unknown response for these questions. See [INTAKE-UI](archive/team-workflow/docs/tasks/INTAKE-UI.json) and [intake contract](API_CONTRACT.md).
 
 Location comes first with two labelled independent controls: **Choose on map** and **Search district by name**. The local EN/BN district selector works without WebGL, tiles or boundary loading and never assigns coordinates. The MapLibre map starts with Bangladesh in view and no selection; clicks/taps place a draggable pin, an explicit action confirms it, and the locally resolved district is displayed. Keyboard users can pan the map, explicitly place a pin at its center, move the focused pin with arrows, and confirm. No field polygon or area tools.
 

@@ -1,3 +1,5 @@
+> Solo-development update (13 November 2026): docs/DEVELOPMENT.md governs work order. Old gate IDs, teammate assignments and approval/merge prerequisites below are historical planning references; they do not block solo implementation. Scientific definitions and evidence limits still apply.
+
 # Data sources and provenance
 
 **Integration status: partial.** The workspace has a BAMIS regional crop-calendar lookup from a user-provided CSV. Its source readiness remains `candidate`: the lookup preserves source PDF/page identifiers and exposes calendar rows without ranking them. It does not produce a complete rotation. NASA/optional products and locally reviewed soil/sequence rules remain unintegrated unless stated otherwise.

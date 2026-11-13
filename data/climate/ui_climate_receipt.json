@@ -1,0 +1,7 @@
+{
+  "build_script_sha256": "9d0187d307f2c998d8ec743e24b534d9a88e4b872fc08c3aa4d0892331b2b4c5",
+  "compute_sha256": "5f18a383f046bab559be8b7fa290d7f531094f8955a7138e8ba161b1b95dfcec",
+  "payload_sha256": "9fd4167d43d2b3d5a15c8dc22adffad4f20a87531a2476957d4608a3340ac2b8",
+  "schema": "ui-climate-receipt.v1",
+  "source_archive_sha256": "4a0ba04c9c8beaa0a908e0b4d61cc23c6b90f87ad927bbe229405860eda6117b"
+}

@@ -1,3 +1,5 @@
+> Solo-development update (13 November 2026): docs/DEVELOPMENT.md governs work order. Old gate IDs, teammate assignments and approval/merge prerequisites below are historical planning references; they do not block solo implementation. Scientific definitions and evidence limits still apply.
+
 # Validation and release plan
 
 Status: development-helper tests exist; scientific/API/user-study checks below are planned acceptance, not passed results. Read [MVP_SCOPE](MVP_SCOPE.md); [future scope](FUTURE_ROADMAP.md) is not a release dependency.

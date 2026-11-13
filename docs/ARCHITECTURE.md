@@ -1,3 +1,5 @@
+> Solo-development update (13 November 2026): docs/DEVELOPMENT.md governs work order. Old gate IDs, teammate assignments and approval/merge prerequisites below are historical planning references; they do not block solo implementation. Scientific definitions and evidence limits still apply.
+
 # Field Shift pipeline and architecture
 
 **Status: design only.** The current Next.js app in `prototype/` uses illustrative values. No acquisition job, scientific compute service, API, or runtime agent is connected. This document defines how those parts should fit together when they are built.

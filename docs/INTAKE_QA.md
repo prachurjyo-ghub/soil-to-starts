@@ -1,3 +1,5 @@
+> Solo-development update (13 November 2026): docs/DEVELOPMENT.md governs work order. Old gate IDs, teammate assignments and approval/merge prerequisites below are historical planning references; they do not block solo implementation. Scientific definitions and evidence limits still apply.
+
 # INTAKE-UI verification
 
 **Regression note:** INTAKE-MAP subsequently changed shared location files and introduced schema/envelope v2. Earlier observations below are historical intake evidence, not proof of the new map. Current regression, provider details, browser limitations and changed files are in [LOCATION_QA](LOCATION_QA.md). Independent approval remains pending.
@@ -36,7 +38,7 @@ python3 scripts/workflow.py check
 
 The 18 Node tests use the production validator and UI controller, including their actual submit handler. They cover each required answer missing/whitespace/placeholder/malformed; every district ID; eight-division counts and source identity; no demo defaults; real calendar/leap dates; reversed/estimated windows; crop-date contradictions and chronological entries; equal previous/current crops; repeated baseline crops and fallow; empty field/first cultivation/no established rotation; seasonal irrigation dependencies; normalized provenance and unavailable status; genuine draft restoration; live-control re-reading; invalid edits preserving the last valid submission; linked errors and first-invalid focus with scrolling; EN/BN rendering and HTML escaping. The UI-controller tests use a small document/event harness, not an automated browser.
 
-Frontend lint excludes public/reference scripts; direct Node syntax checks and the behavior tests above cover those changed scripts separately. The production build and existing 46 Python workflow tests pass; the latter validate development records, not agriculture. Final exact check records are in [INTAKE-UI](tasks/INTAKE-UI.json).
+Frontend lint excludes public/reference scripts; direct Node syntax checks and the behavior tests above cover those changed scripts separately. The production build and existing 46 Python workflow tests pass; the latter validate development records, not agriculture. Final exact check records are in [INTAKE-UI](archive/team-workflow/docs/tasks/INTAKE-UI.json).
 
 ## Observed browser checks
 

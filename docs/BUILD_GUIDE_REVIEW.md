@@ -1,3 +1,5 @@
+> Solo-development update (13 November 2026): docs/DEVELOPMENT.md governs work order. Old gate IDs, teammate assignments and approval/merge prerequisites below are historical planning references; they do not block solo implementation. Scientific definitions and evidence limits still apply.
+
 # Review of the supplied build guide
 
 The attached `index (1).html` is an independent build guide for the 2026 NASA Space Apps Challenge Bangladesh. It is useful planning material, not the authoritative challenge statement or a source of validated agricultural results. This review focuses on its **Field Shift** section and shared architecture.

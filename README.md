@@ -1,130 +1,61 @@
+> Latest real-data audit (14 November 2026): see [QA_AUDIT](docs/QA_AUDIT.md). Product mock plans/rankings have been removed. Local evidence reports, recent observed-weather context and seasonal charts work; validated three-strategy crop planning remains incomplete.
+
 # Soil to Stars
 
-Explainable crop-rotation planning for Bangladesh for [NASA Space Apps 2026 â€” Field Shift](https://www.spaceappschallenge.org/2026/challenges/field-shift-adapting-farms-with-nasa-data/).
+Evidence-linked crop planning for Bangladesh for the NASA Space Apps Field Shift challenge.
+The repository is named `soil-to-starts`; the product is **Soil to Stars**.
 
-**Start your day with the [team task board](docs/PROGRESS.md).** It lists every work package, small checklist item, owner, prerequisites, errors, verification and next handoff. The repository's historical name is `soil-to-starts`; the product is **Soil to Stars**.
+Development is now maintained by one person. Start with [the UI-first checklist](docs/DEVELOPMENT.md).
+The former team task/approval system is retired; [historical contributions and records](docs/archive/team-workflow/README.md) remain available.
 
-## Honest current status
+## Current state
 
-The working product is a Next.js frontend demonstration at `/` and `/workspace`, backed by supplied reference HTML/assets. Its crop traits, scores, soil defaults and climate charts are illustrative. The React components also present in the tree are not all mounted by the current routes. NASA climate data is prepared and reproducible; use the Git-hosted setup below to install it locally. It is not integrated into the frontend/API, independently scientifically validated or an approved agronomic engine. No FastAPI service is implemented.
+The Next.js app has district/map intake, separate workspace destinations, saved result snapshots, result-layout development fixtures, and local NASA POWER weather-history charts with a scrolling homepage story. A local SQLite API now saves submissions and returns source-linked evidence reports. Complete crop plans and suitability/risk scoring still require reviewed crop rules and planning integration. Climate acquisition/preparation and a checksum-pinned data archive are implemented. Crop evidence is normalized and reproducible but its scientific rule definitions remain inactive. Displayed fixture values are examples, not agricultural recommendations.
 
-The development workflow is implemented locally: task checklists, generated progress, command-only AI logs, tests and CI definitions. Independent review, publication, scientific validation and submission remain separate gates. A green workflow check does not validate agricultural advice.
+## Run
 
-<!-- workflow:progress:start -->
-## Team progress and next steps
-
-Generated from task records; the detailed board is the team's daily starting point.
-
-**Accepted work packages: 0/44 · Implemented checklist items: 66/169.** Checked items can still await independent review and merge.
-
-| Member | First available action |
-| --- | --- |
-| Fardin | G0-CONTRACT / s01: Draft stable field, crop and source identifiers |
-| Saim | CLIMATE-GIT-DISTRIBUTION / a3: Commit and push the authorized data/setup/docs to main2, verify a fresh GitHub clone and record actual delivery status without claiming application integration. |
-| Maruf | Review/collaborate on G0-CONTRACT |
-| Prachurjo | Review/collaborate on G0-CONTRACT, MEDIA-STORYBOARD |
-| Nadim | MEDIA-STORYBOARD / s01: Plan the shots and visual sequence |
-| Hla | MEDIA-STORY / s01: Define the problem and audience |
-
-[Detailed progress, acceptance and blockers](docs/PROGRESS.md) · [Workflow commands](docs/WORKFLOW.md) · [AI use and contribution history](docs/AI_USE.md)
-
-<!-- workflow:progress:end -->
-
-## Run in five minutes
-
-Prerequisites: Git, Python 3.9+, Node.js satisfying the locked Next.js requirement (>=20.9.0), and npm. CI uses Node 24. No NASA key, Python packages or database is needed for the current frontend.
+Use Node satisfying the lockfile requirement (>=20.9.0), npm and Python 3.9+.
 
 ```bash
-python3 scripts/doctor.py
+make backend  # verifies/indexes local crop evidence and NASA daily data
 cd prototype
 npm ci
 npm run dev
 ```
 
-Open [the homepage](http://localhost:3000) or [the workspace](http://localhost:3000/workspace). Keep `package-lock.json`; do not upgrade dependencies incidentally. Installation needs network access or a populated package cache.
+Open http://localhost:3000 or http://localhost:3000/workspace. The sidebar destinations and local API use the same port. [Data integration](docs/DATA_INTEGRATION.md) describes the database, stable IDs, unit/period contracts and remaining scientific gaps.
 
-From the repository root:
+To regenerate the local historical-weather UI payload without network access: `python3 scripts/build_ui_climate.py` from the repository root. Statistical summaries live in `src/compute/climate_history.py`; crop planning is still unfinished.
+Dependency installation needs network access or an available package cache.
 
-```bash
-make check
-make build
-```
+## Checks
 
-Equivalent commands are documented in [CONTRIBUTING.md](CONTRIBUTING.md). `make check` runs workflow tests, record validation and frontend lint; `make build` performs the production build using the installed Next.js webpack option. Backend launch/science-test commands remain planned until their implementation PRs exist.
+From the repository root, `make check` runs evidence/unit tests, frontend tests and lint.
+`make build` performs the production build. See [contributing](CONTRIBUTING.md).
 
-## Climate data from this repository
-
-The unchanged v1.0.0 climate archive is included on GitHub `main2`. After
-cloning or pulling this branch, run:
+## Local climate data
 
 ```bash
 python3 scripts/setup_climate_data.py
 ```
 
-No manual folder transfer or NASA request is needed. Setup verifies and extracts
-all 2,618 payload files into ignored local storage and prints the prepared-data
-path. See [GitHub climate setup](docs/data/CLIMATE_GITHUB_SETUP.md) for validation,
-examples, reproducibility, attribution and known scientific/sharing limitations.
-This installs data; it does not automatically integrate the app/backend or make
-browser assets/maps offline.
+The versioned archive is in `data/climate/packages/v1.0.0/`. Setup verifies and extracts it without NASA requests. Expanded files remain in ignored cache. See [setup and scientific limits](docs/data/CLIMATE_GITHUB_SETUP.md). Installing the archive does not connect the API or make the whole browser app offline.
 
-## What we are building
-
-Start with one supported Bangladesh pilot. A short form records location, current harvest/field availability, recent crops/usual rotation, seasonal water access and a priority preset; relevant soil details may be unknown. Previous/current crops may match.
-
-**Mandatory now:** authentic POWER evidence and reviewed crop rules; deterministic three-future-crop alternatives compared with existing practice; a trade-off matrix, quick intended-crop check and evidence-linked rejection reasons; one historical stress replay; versioned receipt with basic print/JSON; a compact climate story after the first scientific flow; accessible EN/BN UI, verified offline science and an authorized published pilot. Aggregate scores are optional. These are team commitments, not extra NASA mandates.
-
-**Future only:** wider coverage, additional datasets/maps, long-duration crops, rich 3D/voice/PWA, broader projections, optional soil/fertilizer research, accounts/economics/sensors and runtime assistance. Future tasks remain blocked after the MVP until separately activated. No fertilizer tracking, nutrient-depletion simulation, numerical soil-restoration claims or runtime AI in MVP.
-
-Read the two contexts: **[Mandatory-now specification](docs/MVP_SCOPE.md)** and **[Future implementation roadmap](docs/FUTURE_ROADMAP.md)**. [Product details](docs/PRODUCT_SPEC.md) preserve sources, constraints and completion semantics. A complete comparison needs an assessed baseline and two distinct supported alternatives on a common horizon; missing evidence produces a useful incomplete/unavailable state, never filler crops.
-
-## Repository boundaries
+## Boundaries
 
 ```text
-prototype/        existing Next.js application; preserve routes/reference assets
-src/acquire/      implemented climate acquisition/preparation/package tools
-src/compute/      planned deterministic climate/agronomy/rotation/scenario logic
-src/api/          planned validation, transport and provenance gate
-src/agents/       future only; no MVP runtime AI
-cache/            ignored expanded data/installations; README retained
-data/climate/packages/  one versioned Git-hosted climate archive and metadata
-demo_fixtures/   small verified/licensed offline evidence when available
-docs/            specifications, team board, sources and truthful AI records
-scripts/         development workflow, diagnostics and PR validation
-tests/           development-helper tests; science/API tests added with implementation
-.github/          task/PR templates and CI definitions
+prototype/          mounted Next.js frontend
+src/acquire/        implemented NASA acquisition, QA and preparation
+src/compute/        deterministic science/rotation engine — unfinished
+src/api/            validation and result transport — unfinished
+data/               versioned evidence, geometry and climate package
+cache/              ignored expanded datasets
+demo_fixtures/      authentic permitted small fixtures when verified
+docs/               product/science references and solo checklist
+docs/archive/       historical team coordination; not active instructions
+tests/              executable behavior and evidence checks
 ```
 
-Scientific data flow: NASA/local sources â†’ acquisition/QA â†’ versioned local cache/fixtures â†’ API + deterministic compute â†’ provenance gate â†’ frontend. The frontend never queries NASA for scientific results. Local prepared data supports the scientific demo; browser assets/fonts/maps need their own offline validation. Never cache restricted map tiles.
+The product compares farmer-reported usual practice with two supported alternatives on a common period; complete alternatives contain three future main crops. Missing essential evidence means incomplete/unavailable. All 64 districts remain selectable without implying validated national coverage. No region is prioritized.
 
-## Six owners
-
-| Owner | Accountability |
-| --- | --- |
-| Fardin | Contracts, backend/API, rotation engine, integration and freeze |
-| Saim | NASA evidence, climate indicators, QA and reproducibility |
-| Maruf | Bangladesh crop/soil rules, source applicability and limitations |
-| Prachurjo | Existing frontend, maps/fallback, API integration, bilingual UX/access |
-| Nadim | Storyboard, video/motion, subtitles, exports and asset credits |
-| Hla | Story/script, narration, claims review, presentation and Q&A |
-
-Each person follows the [team playbook](docs/TEAM_PLAYBOOK.md), works on a bounded branch, records evidence and hands off through review. Equal responsibility does not mean equal commit counts. GitHub identities remain unconfirmed until real contribution evidence and an explicit name mapping exist.
-
-## Find the right document
-
-| Need | Read |
-| --- | --- |
-| What do I do next? | [Team task board](docs/PROGRESS.md) |
-| How do I update a task or command record? | [Workflow commands](docs/WORKFLOW.md) |
-| How do teammates coordinate? | [Team playbook](docs/TEAM_PLAYBOOK.md), [contributing](CONTRIBUTING.md) |
-| What is mandatory now / deferred? | [MVP scope](docs/MVP_SCOPE.md), [future roadmap](docs/FUTURE_ROADMAP.md) |
-| What exactly must the product do? | [Product](docs/PRODUCT_SPEC.md), [UI/UX](docs/UI_UX_SPEC.md) |
-| Where does data come from? | [Sources](docs/DATA_SOURCES.md), [references](docs/REFERENCES.md) |
-| How is science verified? | [Methodology](docs/METHODOLOGY.md), [validation](docs/VALIDATION.md) |
-| What are the API decisions? | [Draft API contract](docs/API_CONTRACT.md), [architecture](docs/ARCHITECTURE.md) |
-| What is required before judging? | [Submission](docs/SUBMISSION.md), [third-party notices](THIRD_PARTY_NOTICES.md) |
-| What did AI actually do? | [Combined AI-use and contribution history](docs/AI_USE.md) |
-
-AI assistance is declared per contribution, including tool and human review. Logs contain implementation/commit/push commands and actual work only; ordinary conversation, ideas and explanations are excluded. A manual contribution uses no invented AI prompt. Current user authorization controls commits, pushes and publication; these files do not authorize them.
-
-Source and asset rights must be reviewed before release. The code-license scope and known third-party items are recorded in [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Font/media clearance, official local/global submission requirements and agronomic evidence remain explicit board items. The supplied independent build guide is planning context, not NASA authority or validated observations.
+Read [product scope](docs/MVP_SCOPE.md), [API draft](docs/API_CONTRACT.md), [data sources](docs/DATA_SOURCES.md), [methodology](docs/METHODOLOGY.md), [validation](docs/VALIDATION.md), [AI use](docs/AI_USE.md), and [third-party notices](THIRD_PARTY_NOTICES.md) as needed. Optional future features remain deferred; old gate IDs describe history, not solo-development blockers.

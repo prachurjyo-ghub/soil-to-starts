@@ -1,0 +1,112 @@
+{
+  "checked_at_utc": "2026-11-13T20:14:00.716740+00:00",
+  "method": "predeclared dates; original regional bbox; exact mapped coordinates; raw daily values; tolerance 0.001",
+  "sample_scope": "publisher consistency sample only, not station/field validation",
+  "checks": [
+    {
+      "provider": "NASA POWER",
+      "date": "20010101",
+      "parameter": "T2M",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20010101&end=20010101&format=JSON&time-standard=LST&units=metric",
+      "http_status": 200,
+      "response_sha256": "59ad5df58e033065321be22b752c542b9e88c86a70a452cf7756b380be617b25",
+      "points_compared": 42,
+      "matches": 42,
+      "differences": [],
+      "publisher_api": {
+        "version": "v2.10.3",
+        "name": "POWER Daily API"
+      },
+      "status": "passed"
+    },
+    {
+      "provider": "NASA POWER",
+      "date": "20010101",
+      "parameter": "PRECTOTCORR",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=PRECTOTCORR&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20010101&end=20010101&format=JSON&time-standard=LST&units=metric",
+      "http_status": 200,
+      "response_sha256": "a91a976d85966e4e76161aca5417a418654cc5f96740da0fa01b930ecc4826e0",
+      "points_compared": 42,
+      "matches": 42,
+      "differences": [],
+      "publisher_api": {
+        "version": "v2.10.3",
+        "name": "POWER Daily API"
+      },
+      "status": "passed"
+    },
+    {
+      "provider": "NASA POWER",
+      "date": "20200615",
+      "parameter": "T2M",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20200615&end=20200615&format=JSON&time-standard=LST&units=metric",
+      "http_status": 200,
+      "response_sha256": "84faf369df6703adee69a636bd677836e67af27a29390da30f00c87861130690",
+      "points_compared": 42,
+      "matches": 42,
+      "differences": [],
+      "publisher_api": {
+        "version": "v2.10.3",
+        "name": "POWER Daily API"
+      },
+      "status": "passed"
+    },
+    {
+      "provider": "NASA POWER",
+      "date": "20200615",
+      "parameter": "PRECTOTCORR",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=PRECTOTCORR&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20200615&end=20200615&format=JSON&time-standard=LST&units=metric",
+      "http_status": 200,
+      "response_sha256": "daad31b071bf2eacd5002fdf14b1dd78ab702308e7ba8ffb443f0443116f97fc",
+      "points_compared": 42,
+      "matches": 42,
+      "differences": [],
+      "publisher_api": {
+        "version": "v2.10.3",
+        "name": "POWER Daily API"
+      },
+      "status": "passed"
+    },
+    {
+      "provider": "NASA POWER",
+      "date": "20251231",
+      "parameter": "T2M",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=T2M&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20251231&end=20251231&format=JSON&time-standard=LST&units=metric",
+      "http_status": 200,
+      "response_sha256": "c76ed69bafbd17ca66245d671123c573fc3c3f2eb5b1178253cd82a752bdef61",
+      "points_compared": 42,
+      "matches": 42,
+      "differences": [],
+      "publisher_api": {
+        "version": "v2.10.3",
+        "name": "POWER Daily API"
+      },
+      "status": "passed"
+    },
+    {
+      "provider": "NASA POWER",
+      "date": "20251231",
+      "parameter": "PRECTOTCORR",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/regional?parameters=PRECTOTCORR&community=AG&latitude-min=20.090609&latitude-max=27.134513&longitude-min=87.383628&longitude-max=93.305257&start=20251231&end=20251231&format=JSON&time-standard=LST&units=metric",
+      "http_status": 200,
+      "response_sha256": "6249a7cae8468c6e3ede15c53acc7b00c832d3033d719e6eef731b1abf88f591",
+      "points_compared": 42,
+      "matches": 42,
+      "differences": [],
+      "publisher_api": {
+        "version": "v2.10.3",
+        "name": "POWER Daily API"
+      },
+      "status": "passed"
+    },
+    {
+      "provider": "BAMIS",
+      "source_id": "bamis_10981_5d1020fa",
+      "url": "https://www.bamis.gov.bd/res/public/calendars/2019/12/30/10981.pdf",
+      "http_status": 200,
+      "sha256": "3bec21011db94f0154fa828e1fa4447ec97f373efd7186c3dc02ac51a7e08c7c",
+      "archive_source_sha256": "3bec21011db94f0154fa828e1fa4447ec97f373efd7186c3dc02ac51a7e08c7c",
+      "status": "passed"
+    }
+  ]
+}

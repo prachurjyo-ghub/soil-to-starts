@@ -14,6 +14,7 @@ export default function WorkspacePage() {
       <link rel="stylesheet" href="/reference/polish.css" />
       <link rel="stylesheet" href="/reference/bengali-fonts.css" />
       <link rel="stylesheet" href="/reference/i18n.css" />
+      <link rel="stylesheet" href="/reference/weather-story.css" />
       <link rel="stylesheet" href="/reference/workspace-fixes.css" />
       <link rel="stylesheet" href="/reference/results.css" />
       <IntakeMapRuntime />

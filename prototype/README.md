@@ -2,7 +2,7 @@
 
 Existing Next.js frontend demonstration. Current routes `/` and `/workspace` load supplied reference HTML/static scripts; additional React components are present but not all are mounted. Scores, traits, soil defaults and climate series are illustrative.
 
-Run `npm ci` then `npm run dev`. Check with `npm run lint` and `npm run build -- --webpack`; after a successful build use `npm run start`. Keep the lockfile. See the [root quick start](../README.md), [task board](../docs/PROGRESS.md) and nearest [instructions](AGENTS.md).
+Run `npm ci` then `npm run dev`. Check with `npm run lint` and `npm run build -- --webpack`; after a successful build use `npm run start`. Keep the lockfile. See the [root quick start](../README.md), [task board](../docs/DEVELOPMENT.md) and nearest [instructions](AGENTS.md).
 
 The targeted dependency patch is documented in [SECURITY.md](../SECURITY.md). Data/API/scientific behavior and fully offline browser support remain planned; no NASA key is required for this demo. Existing asset credits and rights-review work remain in the repository.
 

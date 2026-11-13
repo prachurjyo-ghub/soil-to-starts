@@ -1,0 +1,275 @@
+{
+  "schema_version": "crop-identities.v1",
+  "rows": [
+    {
+      "intake_id": "banana",
+      "source_crop_id": "crop-8ebd142a0358d050bde8",
+      "label": {
+        "en": "Banana",
+        "bn": "কলা"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "bottle_gourd",
+      "source_crop_id": "crop-4aa869540c6a2df5cce1",
+      "label": {
+        "en": "Bottle Gourd",
+        "bn": "লাউ"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "brinjal",
+      "source_crop_id": "crop-e98d84f0a8362e3bac8d",
+      "label": {
+        "en": "Brinjal",
+        "bn": "বেগুন"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "chilli",
+      "source_crop_id": "crop-0cc224e30c0591f7c0fd",
+      "label": {
+        "en": "Chilli",
+        "bn": "মরিচ"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "cotton",
+      "source_crop_id": "crop-cf24bedd9891d3283e76",
+      "label": {
+        "en": "Cotton",
+        "bn": "তুলা"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "cucumber",
+      "source_crop_id": "crop-0182400d6c5c4c7eec40",
+      "label": {
+        "en": "Cucumber",
+        "bn": "শসা"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "garlic",
+      "source_crop_id": "crop-249d2f29d78377e6aaab",
+      "label": {
+        "en": "Garlic",
+        "bn": "রসুন"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "groundnut",
+      "source_crop_id": "crop-c65b4ea1a90c7372f034",
+      "label": {
+        "en": "Groundnut",
+        "bn": "চিনাবাদাম"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "guava",
+      "source_crop_id": "crop-694f1461b2e3f118b2b3",
+      "label": {
+        "en": "Guava",
+        "bn": "পেয়ারা"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "jackfruit",
+      "source_crop_id": "crop-12eac1d225c410065ba2",
+      "label": {
+        "en": "Jackfruit",
+        "bn": "কাঁঠাল"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "jujube",
+      "source_crop_id": "crop-5c8d745e13bd27690f3e",
+      "label": {
+        "en": "Jujube",
+        "bn": "বরই"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "jute",
+      "source_crop_id": "crop-2122c94269cb2a589397",
+      "label": {
+        "en": "Jute",
+        "bn": "পাট"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "lentil",
+      "source_crop_id": "crop-7fefa18be3ea791e074e",
+      "label": {
+        "en": "Lentil",
+        "bn": "মসুর"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "litchi",
+      "source_crop_id": "crop-cad7196be19f30f5539c",
+      "label": {
+        "en": "Litchi",
+        "bn": "লিচু"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "maize",
+      "source_crop_id": "crop-088343e4a2f17021a95b",
+      "label": {
+        "en": "Maize",
+        "bn": "ভুট্টা"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "mango",
+      "source_crop_id": "crop-98e3d7294c814aad5500",
+      "label": {
+        "en": "Mango",
+        "bn": "আম"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "mungbean",
+      "source_crop_id": "crop-8e0c1c0dd0a07637f5ef",
+      "label": {
+        "en": "Mungbean",
+        "bn": "মুগ"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "mustard",
+      "source_crop_id": "crop-50aee317fbf797082a9c",
+      "label": {
+        "en": "Mustard",
+        "bn": "সরিষা"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "onion",
+      "source_crop_id": "crop-2e40a16113a78fcaaeec",
+      "label": {
+        "en": "Onion",
+        "bn": "পেঁয়াজ"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "papaya",
+      "source_crop_id": "crop-ac0d8495d2b24f32adfa",
+      "label": {
+        "en": "Papaya",
+        "bn": "পেঁপে"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "pineapple",
+      "source_crop_id": "crop-85711c75e5d0e35cafa8",
+      "label": {
+        "en": "Pineapple",
+        "bn": "আনারস"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "pointed_gourd",
+      "source_crop_id": "crop-71d7bbbc5e56097f190e",
+      "label": {
+        "en": "Pointed Gourd",
+        "bn": "পটল"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "potato",
+      "source_crop_id": "crop-b6f316b3a6e9ce2a80b6",
+      "label": {
+        "en": "Potato",
+        "bn": "আলু"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "pumpkin",
+      "source_crop_id": "crop-e04b5dc3b63e44214d72",
+      "label": {
+        "en": "Pumpkin",
+        "bn": "মিষ্টিকুমড়া"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "rice",
+      "source_crop_id": "crop-fc75ce67f8962f962cdf",
+      "label": {
+        "en": "Rice",
+        "bn": "ধান"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "sesame",
+      "source_crop_id": null,
+      "label": {
+        "en": "Sesame",
+        "bn": "তিল"
+      },
+      "identity_scope": "existing intake identity; no collected BAMIS crop record"
+    },
+    {
+      "intake_id": "soybean",
+      "source_crop_id": "crop-f508feca12c4803a592a",
+      "label": {
+        "en": "Soybean",
+        "bn": "সয়াবিন"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "sugarcane",
+      "source_crop_id": "crop-acc0bbd1e292c7eafb6d",
+      "label": {
+        "en": "Sugarcane",
+        "bn": "আখ"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "tomato",
+      "source_crop_id": "crop-17cb10aa8c765c077fbe",
+      "label": {
+        "en": "Tomato",
+        "bn": "টমেটো"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    },
+    {
+      "intake_id": "wheat",
+      "source_crop_id": "crop-f1681062f7a984348554",
+      "label": {
+        "en": "Wheat",
+        "bn": "গম"
+      },
+      "identity_scope": "source crop label only; variety/system/taxonomy not inferred"
+    }
+  ]
+}

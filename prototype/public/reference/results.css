@@ -216,3 +216,12 @@
 @media(prefers-reduced-motion:reduce){
   .result-page *{scroll-behavior:auto!important;transition:none!important;animation:none!important}
 }
+
+/* Actual chart payloads: retain readable axes and keyboard-accessible data tables. */
+.result-chart{color:var(--text,#24583e)}.result-chart text{fill:currentColor;font-size:10px}.result-chart path{stroke:#2c7655}.result-page table{width:100%;border-collapse:collapse}.result-page table td,.result-page table th{padding:8px;text-align:left;border-bottom:1px solid var(--result-line)}
+
+.result-card pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:.8rem;line-height:1.6}.result-card .table-scroll{max-width:100%;overflow-x:auto}
+
+.result-page{min-width:0;width:100%;grid-template-columns:minmax(0,1fr)}.result-page>*{min-width:0;max-width:100%;overflow-wrap:anywhere}
+/* Long evidence disclosure labels must wrap inside narrow result cards. */
+.result-expand{min-width:0;max-width:100%}.result-expand summary{max-width:100%;box-sizing:border-box;white-space:normal;overflow-wrap:anywhere}.result-card .table-scroll{width:100%;min-width:0}.result-card code{overflow-wrap:anywhere}

@@ -1,0 +1,38 @@
+name: Bounded team task
+description: Assign one clear outcome with evidence and a handoff.
+title: "[TASK] "
+body:
+  - type: input
+    id: task
+    attributes:
+      label: Local task/checklist ID
+      description: Use the board ID; do not invent an existing GitHub issue number.
+    validations:
+      required: true
+  - type: dropdown
+    id: owner
+    attributes:
+      label: Accountable owner
+      options: [Fardin, Saim, Maruf, Prachurjo, Nadim, Hla]
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome, files and prerequisites
+      description: State why, what changes, files in scope, and which accepted work must precede it.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance, sources and verification
+      description: List small observable checks, source/rights requirements and reproducible commands where implemented.
+    validations:
+      required: true
+  - type: textarea
+    id: handoff
+    attributes:
+      label: Risks, reviewer and next handoff
+    validations:
+      required: true

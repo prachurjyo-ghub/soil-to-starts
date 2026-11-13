@@ -1,6 +1,8 @@
+> Solo-development update (13 November 2026): docs/DEVELOPMENT.md governs work order. Old gate IDs, teammate assignments and approval/merge prerequisites below are historical planning references; they do not block solo implementation. Scientific definitions and evidence limits still apply.
+
 # Mandatory now — strengthened MVP
 
-Status: implementation specification approved for planning on 30 October 2026. These are team release commitments, not claims that every feature is individually required by NASA. None of the science/API features below is implemented merely because it appears here. [PROGRESS](PROGRESS.md) records actual evidence; [FUTURE_ROADMAP](FUTURE_ROADMAP.md) holds deferred work.
+Status: implementation specification approved for planning on 30 October 2026. These are team release commitments, not claims that every feature is individually required by NASA. None of the science/API features below is implemented merely because it appears here. [PROGRESS](DEVELOPMENT.md) records actual evidence; [FUTURE_ROADMAP](FUTURE_ROADMAP.md) holds deferred work.
 
 ## Product and boundaries
 

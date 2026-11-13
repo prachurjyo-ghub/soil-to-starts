@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "test:intake": "node --test ../tests/intake.test.cjs ../tests/location.test.cjs"
+    "test:intake": "node --test ../tests/intake.test.cjs ../tests/location.test.cjs",
+    "test:ui": "node --test ../tests/intake.test.cjs ../tests/location.test.cjs ../tests/result-ui.test.cjs ../tests/workspace-pages.test.cjs",
+    "test:api": "node --test ../tests/local-api.test.cjs"
   },
   "dependencies": {
     "maplibre-gl": "6.16.0",

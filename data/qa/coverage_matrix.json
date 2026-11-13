@@ -1,0 +1,217 @@
+{
+  "schema": "qa-coverage-matrix.v1",
+  "status": "passed",
+  "source_identity": "538008e54038962887191a0dde416654e6d2fe001814ab7353df9bb572385801",
+  "districts": 64,
+  "crop_labels": 30,
+  "counts": {
+    "requests": 1920,
+    "without_matching_calendar": 654,
+    "warning_unavailable": 1912,
+    "with_matching_calendar": 1266,
+    "warning_complete": 8
+  },
+  "source_warning_examples": [
+    {
+      "district": "bd-district-dhaka",
+      "crop": "mustard",
+      "period": [
+        "2026-11-01",
+        "2026-11-10"
+      ],
+      "counts": [
+        {
+          "id": "hot-day",
+          "days": 10,
+          "valid_days": 10
+        },
+        {
+          "id": "cold-night",
+          "days": 0,
+          "valid_days": 10
+        },
+        {
+          "id": "heavy-rain",
+          "days": 0,
+          "valid_days": 10
+        }
+      ]
+    },
+    {
+      "district": "bd-district-gazipur",
+      "crop": "mustard",
+      "period": [
+        "2026-11-01",
+        "2026-11-10"
+      ],
+      "counts": [
+        {
+          "id": "hot-day",
+          "days": 10,
+          "valid_days": 10
+        },
+        {
+          "id": "cold-night",
+          "days": 0,
+          "valid_days": 10
+        },
+        {
+          "id": "heavy-rain",
+          "days": 0,
+          "valid_days": 10
+        }
+      ]
+    },
+    {
+      "district": "bd-district-kishoreganj",
+      "crop": "mustard",
+      "period": [
+        "2026-11-01",
+        "2026-11-10"
+      ],
+      "counts": [
+        {
+          "id": "hot-day",
+          "days": 8,
+          "valid_days": 10
+        },
+        {
+          "id": "cold-night",
+          "days": 0,
+          "valid_days": 10
+        },
+        {
+          "id": "heavy-rain",
+          "days": 0,
+          "valid_days": 10
+        }
+      ]
+    },
+    {
+      "district": "bd-district-manikganj",
+      "crop": "mustard",
+      "period": [
+        "2026-11-01",
+        "2026-11-10"
+      ],
+      "counts": [
+        {
+          "id": "hot-day",
+          "days": 9,
+          "valid_days": 10
+        },
+        {
+          "id": "cold-night",
+          "days": 0,
+          "valid_days": 10
+        },
+        {
+          "id": "heavy-rain",
+          "days": 0,
+          "valid_days": 10
+        }
+      ]
+    },
+    {
+      "district": "bd-district-munshiganj",
+      "crop": "mustard",
+      "period": [
+        "2026-11-01",
+        "2026-11-10"
+      ],
+      "counts": [
+        {
+          "id": "hot-day",
+          "days": 10,
+          "valid_days": 10
+        },
+        {
+          "id": "cold-night",
+          "days": 0,
+          "valid_days": 10
+        },
+        {
+          "id": "heavy-rain",
+          "days": 0,
+          "valid_days": 10
+        }
+      ]
+    },
+    {
+      "district": "bd-district-narayanganj",
+      "crop": "mustard",
+      "period": [
+        "2026-11-01",
+        "2026-11-10"
+      ],
+      "counts": [
+        {
+          "id": "hot-day",
+          "days": 10,
+          "valid_days": 10
+        },
+        {
+          "id": "cold-night",
+          "days": 0,
+          "valid_days": 10
+        },
+        {
+          "id": "heavy-rain",
+          "days": 0,
+          "valid_days": 10
+        }
+      ]
+    },
+    {
+      "district": "bd-district-narsingdi",
+      "crop": "mustard",
+      "period": [
+        "2026-11-01",
+        "2026-11-10"
+      ],
+      "counts": [
+        {
+          "id": "hot-day",
+          "days": 10,
+          "valid_days": 10
+        },
+        {
+          "id": "cold-night",
+          "days": 0,
+          "valid_days": 10
+        },
+        {
+          "id": "heavy-rain",
+          "days": 0,
+          "valid_days": 10
+        }
+      ]
+    },
+    {
+      "district": "bd-district-tangail",
+      "crop": "mustard",
+      "period": [
+        "2026-11-01",
+        "2026-11-10"
+      ],
+      "counts": [
+        {
+          "id": "hot-day",
+          "days": 8,
+          "valid_days": 10
+        },
+        {
+          "id": "cold-night",
+          "days": 0,
+          "valid_days": 10
+        },
+        {
+          "id": "heavy-rain",
+          "days": 0,
+          "valid_days": 10
+        }
+      ]
+    }
+  ],
+  "scope": "Synthetic QA intake dates against actual local evidence. Identity, missingness and offline checks only, not agronomic accuracy validation."
+}

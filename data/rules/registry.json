@@ -1,0 +1,7 @@
+{
+  "schema_version": "crop-rules.v1",
+  "version": "review-pending-v1",
+  "activation_policy": "Only explicitly reviewed source-backed rules can be activated. Printed BAMIS weather normals are not crop thresholds. Do not infer preparation, harvest or clearance durations from calendar life span.",
+  "rules": [],
+  "comparison_policy": null
+}

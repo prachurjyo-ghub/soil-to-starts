@@ -1,13 +1,13 @@
 (function (root, factory) {
-  const api = factory(typeof module === 'object' && module.exports ? require('./result-fixtures.js') : root.STS_RESULT_FIXTURES);
+  const api = factory();
   if (typeof module === 'object' && module.exports) module.exports = api;
   if (root) root.STS_RESULT_ADAPTER = api;
-})(typeof globalThis !== 'undefined' ? globalThis : this, function (fixtures) {
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   'use strict';
 
   const STATES = Object.freeze(['idle', 'validating', 'loading', 'invalid_input', 'unavailable', 'incomplete', 'complete', 'error']);
   const ENDPOINTS = Object.freeze({
-    planning: null, currentCrop: null, climate: null, intendedCrop: null, replay: null
+    planning: '/api/plan', currentCrop: '/api/current-crop', climate: '/api/climate', intendedCrop: null, replay: null
   });
 
   function unavailable(kind, request) {
@@ -31,16 +31,17 @@
   }
 
   function create(options = {}) {
-    const fetchImpl = options.fetchImpl || (typeof fetch === 'function' ? fetch.bind(globalThis) : null);
+    const fixtures=options.fixtures || null;
+    const fetchImpl = Object.hasOwn(options, 'fetchImpl') ? options.fetchImpl : (typeof fetch === 'function' ? fetch.bind(globalThis) : null);
     const endpoints = { ...ENDPOINTS, ...(options.endpoints || {}) };
     let generation = 0;
     let fixtureId = null;
-    let controller = null;
+    const channels = new Map();
 
     function invalidate() {
       generation += 1;
-      controller?.abort();
-      controller = null;
+      for (const channel of channels.values()) channel.controller?.abort();
+      channels.clear();
     }
     function disableFixture() { fixtureId = null; invalidate(); }
     function enableFixture(id, explicit = false) {
@@ -53,14 +54,16 @@
     function activeFixture() { return fixtureId; }
 
     async function request(kind, payload) {
-      const requestGeneration = ++generation;
-      controller?.abort();
-      controller = typeof AbortController === 'function' ? new AbortController() : null;
+      const requestGeneration = generation;
+      channels.get(kind)?.controller?.abort();
+      const channel = { controller: typeof AbortController === 'function' ? new AbortController() : null };
+      channels.set(kind, channel);
+      const isCurrent = () => requestGeneration === generation && channels.get(kind) === channel;
 
       if (fixtureId) {
         const item = fixtures.fixture(fixtureId);
         const result = { kind, state: stateFrom(item.response), request: item.request, response: item.response, fixture: true, fixture_id: item.fixture_id, fixture_label: item.fixture_label, fixture_description: item.fixture_description };
-        return requestGeneration === generation ? result : { kind, state: 'stale', ignored: true };
+        return isCurrent() ? result : { kind, state: 'stale', ignored: true };
       }
 
       const endpoint = endpoints[kind];
@@ -68,16 +71,25 @@
       try {
         const response = await fetchImpl(endpoint, {
           method: 'POST', headers: { 'content-type': 'application/json' },
-          body: JSON.stringify(payload), signal: controller?.signal
+          body: JSON.stringify(payload), signal: channel.controller?.signal
         });
         const body = await response.json().catch(() => null);
-        if (requestGeneration !== generation) return { kind, state: 'stale', ignored: true };
+        if (!isCurrent()) return { kind, state: 'stale', ignored: true };
         if (!response.ok) {
           return { kind, state: response.status === 422 ? 'invalid_input' : 'error', request: payload, response: body || { status: 'error', reason: `HTTP ${response.status}` }, recoverable: response.status >= 500 };
         }
+        if (!body || typeof body !== 'object' || Array.isArray(body)) return { kind, state: 'error', request: payload, response: { status: 'error', reason: 'The service returned an invalid response.' }, recoverable: true };
+        if (body.data_mode === 'development_fixture') return { kind, state: 'error', request: payload, response: { status: 'error', reason: 'A genuine request cannot return development-fixture data.' } };
+        if (kind === 'planning' && body.status === 'complete') {
+          const alternatives = body.alternatives;
+          const valid = body.baseline_assessment && Array.isArray(alternatives) && alternatives.length >= 2
+            && new Set(alternatives.map(plan => plan?.plan_id)).size === alternatives.length
+            && alternatives.every(plan => plan?.plan_id && plan.status === 'complete' && Array.isArray(plan.steps) && plan.steps.length === 3);
+          if (!valid) return { kind, state: 'error', request: payload, response: { status: 'error', reason: 'The service returned an inconsistent complete comparison. No missing crops or plans were filled in.' } };
+        }
         return { kind, state: stateFrom(body), request: payload, response: body, fixture: false };
       } catch (error) {
-        if (requestGeneration !== generation || error?.name === 'AbortError') return { kind, state: 'stale', ignored: true };
+        if (!isCurrent() || error?.name === 'AbortError') return { kind, state: 'stale', ignored: true };
         return { kind, state: 'error', request: payload, response: { status: 'error', reason: 'The service request failed.', limitations: [String(error?.message || error)] }, recoverable: true };
       }
     }

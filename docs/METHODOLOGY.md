@@ -1,3 +1,7 @@
+> Implemented local evidence pipeline — 13 November 2026: the server now validates and saves inputs, joins crop/region/source identities, returns local NASA weather context and reports unresolved agronomic checks. Exact historical daily windows are supported after local indexing. Generic rule primitives are tested but no crop rule is activated. No regression target, trained crop model or complete three-crop plan is claimed. See DATA_INTEGRATION.md.
+
+> Solo-development update (13 November 2026): docs/DEVELOPMENT.md governs work order. Old gate IDs, teammate assignments and approval/merge prerequisites below are historical planning references; they do not block solo implementation. Scientific definitions and evidence limits still apply.
+
 # Field Shift methodology plan
 
 Status: proposed methods. The current frontend's illustrative logic is not this scientific engine. Read [MVP_SCOPE](MVP_SCOPE.md), [API_CONTRACT](API_CONTRACT.md) and [VALIDATION](VALIDATION.md) for release and contract requirements.

@@ -1,3 +1,5 @@
+> Solo-development update (13 November 2026): docs/DEVELOPMENT.md governs work order. Old gate IDs, teammate assignments and approval/merge prerequisites below are historical planning references; they do not block solo implementation. Scientific definitions and evidence limits still apply.
+
 # Product specification
 
 Status: intended behavior, rebaselined for the 30 October 2026 planning implementation. The board identifies actual implementation. [Mandatory-now context](MVP_SCOPE.md) and [future-only context](FUTURE_ROADMAP.md) supersede older scope wording; external challenge requirements remain separate from team product choices.

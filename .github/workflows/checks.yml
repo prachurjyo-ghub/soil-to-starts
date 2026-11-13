@@ -1,0 +1,38 @@
+name: Project checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - run: python3 -B -m unittest discover -s tests -p 'test_*.py' -v
+      - run: python3 scripts/build_crop_evidence.py --check
+      - run: python3 scripts/build_ui_climate.py --check
+  frontend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: prototype
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: prototype/package-lock.json
+      - run: npm ci
+      - run: npm run test:ui
+      - run: npm run test:api
+      - run: npm run lint -- --no-cache
+      - run: npm run build -- --webpack

@@ -1,3 +1,5 @@
+> Solo-development update (13 November 2026): docs/DEVELOPMENT.md governs work order. Old gate IDs, teammate assignments and approval/merge prerequisites below are historical planning references; they do not block solo implementation. Scientific definitions and evidence limits still apply.
+
 # INTAKE-MAP verification and handoff
 
 Fardin authorized this bounded location extension on 30 October 2026. Current science remains unavailable. The six required intake questions and their order are preserved; the mounted reference workspace now offers independent map-pin and district-search methods above them. Broader G0/G1D/G3 gates and independent human approval remain pending.
