@@ -78,3 +78,41 @@ test('invalidating a pending real request prevents stale overwrite', async () =>
   assert.equal(result.state, 'stale');
   assert.equal(result.ignored, true);
 });
+
+test('open-fixture activation enters fixture mode before render', async () => {
+  const adapter = adapterApi.create({ fetchImpl: null });
+  let fixtureMode = false;
+  let rendered = '';
+  const ui = uiApi.create({
+    adapter,
+    render: () => { rendered = fixtureMode ? ui.renderFixture('en') : ui.renderGenuine(null, 'en'); },
+    navigate: () => {},
+    toast: () => {},
+    downloadInputs: () => {},
+    enterFixtureMode: () => { fixtureMode = true; },
+    leaveFixtureMode: () => { fixtureMode = false; }
+  });
+  const openButton = { dataset: { resultAction: 'open-fixture' } };
+  assert.equal(ui.handleClick(openButton), true);
+  await Promise.resolve();
+  assert.equal(fixtureMode, true);
+  assert.match(rendered, /DEVELOPMENT FIXTURE/);
+  assert.match(rendered, /PLAN COMPARISON|Three positions/);
+});
+
+test('genuine summary keeps history and usual practice without inventing coverage', () => {
+  const html = uiApi.genuineSummary({
+    location: { district_id: 'bd-district-bogura', selection_method: 'district_search' },
+    current: { state: 'growing', crop_id: 'rice', sown_on: null },
+    availability: { kind: 'date', start: '2026-11-15', basis: 'farmer_estimate' },
+    crop_history: { state: 'entries', entries: [{ crop_id: 'mustard' }] },
+    baseline: { state: 'sequence', segments: [{ kind: 'crop', crop_id: 'rice' }, { kind: 'fallow' }] },
+    irrigation: { access: 'limited' },
+    priority: 'balanced'
+  }, 'en');
+  assert.match(html, /bogura/i);
+  assert.match(html, /Mustard/);
+  assert.match(html, /Rice → fallow/);
+  assert.match(html, /not scientific coverage/i);
+  assert.match(html, /Planning Unavailable/i);
+});

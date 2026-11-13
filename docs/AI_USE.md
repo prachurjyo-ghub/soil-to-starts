@@ -1218,4 +1218,72 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Next action / owner:** Commit the verified work, preserve the newer remote teammate commit, push main2 and test setup from a fresh GitHub clone.
 
 **Task / source:** CLIMATE-GIT-DISTRIBUTION; Saim explicitly requested GitHub-based climate delivery by committing and pushing instead of manual transfer
+
+## Prachurjo — Prompt 005
+
+<a id="prachurjo-005"></a>
+<a id="p-c74b4ce68a8a"></a>
+<!-- record-id: P-c74b4ce68a8a -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T10:29:09Z -->
+
+**Member:** prachurjo
+
+**Tool:** Cursor Composer
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Finish the mounted result-workspace frontend package Codex started, preserve intake truthfulness, and close remaining UI gaps without claiming scientific integration.
+
+**Purpose / AI contribution:** Complete Prachurjo's authorized independent frontend preparation after Codex hit its limit.
+
+**Human contribution:** Prachurjo authorized continuing from Codex's unfinished result-workspace package and confirmed frontend ownership.
+
+**Changed files:** prototype/public/reference/result-ui.js;prototype/public/reference/workspace.js;tests/result-ui.test.cjs;docs/FRONTEND_RESULTS_HANDOFF.md;docs/tasks/G1D.json;docs/AI_USE.md;docs/PROGRESS.md
+
+**Before → After:** Before: genuine Open isolated development fixture did not enter fixture mode, and the genuine summary omitted history/usual practice. After: fixture mode activates before render and the genuine summary shows the full preserved field context.
+
+**Actual outcome:** Fixed fixture-mode wiring and genuine summary completeness, expanded result tests to 10/10, and re-verified intake tests, lint, webpack build, and the production-mounted browser path. Homepage climate story and real API connection remain deferred.
+
+**Review / limitations:** G1D remains planned/waiting on G0-CONTRACT. No scientific acceptance, teammate review, commit or push was performed.
+
+**Next action / owner:** Prachurjo may commit when authorized; Fardin/Saim/Maruf review proposed payload needs before adapter connection.
+
+**Task / source:** G1D; Current user instruction to finish the Codex result-workspace frontend package
+
+## Prachurjo — Prompt 006
+
+<a id="prachurjo-006"></a>
+<a id="p-dc128d73572a"></a>
+<!-- record-id: P-dc128d73572a -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T10:59:18Z -->
+
+**Member:** prachurjo
+
+**Tool:** Cursor Composer
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Ship the farmer-friendly result UI, add a workspace-chrome mock result demo page, and prepare main2 for push.
+
+**Purpose / AI contribution:** Finish the frontend result redesign and provide a shareable mock result route without temporary QA banners.
+
+**Human contribution:** Prachurjo directed the redesign, demo-page chrome requirements, and authorized the GitHub push to main2.
+
+**Changed files:** prototype/public/reference/result-ui.js;prototype/public/reference/results.css;prototype/public/reference/workspace.js;prototype/public/reference/result-page.js;prototype/app/result-page/page.js;prototype/app/result-mock/page.js;tests/result-ui.test.cjs;docs/FRONTEND_RESULTS_HANDOFF.md;docs/tasks/G1D.json;docs/AI_USE.md;docs/PROGRESS.md
+
+**Before → After:** Before: temporary yellow mock banners and clipped intro header. After: compact result dashboard in workspace chrome at /result-page, synced with the main result renderer.
+
+**Actual outcome:** Result redesign, intro clipping fix, and /result-page demo with real sidebar/header were verified by lint, webpack build and result tests. Push to origin/main2 follows in the authorized delivery step.
+
+**Review / limitations:** Still illustrative mock data only; G1D remains waiting on G0. No scientific acceptance claimed.
+
+**Next action / owner:** Push main2 when the commit step succeeds.
+
+**Task / source:** G1D; Current user instruction to sync result UI, keep a demo result page with real chrome, and push main2
 <!-- workflow:ai-records:end -->

@@ -1,10 +1,17 @@
 # Frontend result-workspace handoff
 
-Status: local independent UI preparation on `main2`, 13 November 2026. The result
-components and fixture states are implemented in the mounted application. No
-scientific API, crop engine, reviewed crop catalogue or prepared climate package is
-connected. This handoff is not teammate approval, scientific acceptance, main-branch
-delivery, deployment or submission evidence.
+Status: local independent UI preparation on `main2`, 13 November 2026 (finish pass).
+The result components and fixture states are implemented in the mounted application.
+A finish pass fixed the genuine-page **Open isolated development fixture** path so
+fixture mode is entered before render, completed the genuine field summary
+(history/usual practice), redesigned the farmer-facing result layout, and added
+`/result-page` as a workspace-chrome demo of labelled mock results (no temporary
+yellow banners). No scientific API, crop engine, reviewed crop catalogue or prepared
+climate package is connected. This handoff is not teammate approval, scientific
+acceptance, main-branch delivery, deployment or submission evidence.
+
+Demo route: `/result-page` (legacy `/result-mock` redirects here). Genuine intake
+remains on `/workspace`.
 
 ## Mounted paths and changed surface
 
@@ -96,32 +103,35 @@ those rules active.
 
 ## Checks and screenshots
 
-Passed locally:
+Passed locally (finish pass, 13 November 2026):
 
-- `node --test tests/result-ui.test.cjs` — 8/8.
+- `node --test tests/result-ui.test.cjs` — 10/10 (adds open-fixture mode wiring and
+  genuine summary coverage).
 - `npm run test:intake` — 31/31 existing intake/location tests.
 - `npm run lint`.
 - `npm run build -- --webpack` — `/` and `/workspace` built successfully.
-- `node --check` for result, workspace and intake scripts.
-- `git diff --check`.
-- Headless Chromium production-build walkthrough — 1/1. It checked explicit
-  activation, complete/incomplete/error scenarios, no automatic successful retry,
-  Bangla mode, reduced motion, keyboard focus, print stylesheet, JSON label/parity,
-  and a 390×844 layout with no document-level horizontal overflow.
+- `node --check` for `result-ui.js` and `workspace.js`.
+- Production `next start` on `127.0.0.1:3010` mounted-browser walkthrough: intake
+  loads; explicit demo activation shows the labelled fixture workspace; incomplete
+  fixture shows the missing second alternative without filler; genuine `#overview`
+  unavailable state keeps planning unavailable until **Open isolated development
+  fixture** is clicked, after which the fixture workspace appears; no document-level
+  horizontal overflow at the tested narrow width.
 
 Local evidence (not committed assets):
 
-- `/private/tmp/soil-to-stars-result-desktop.png` — SHA-256
-  `55b26ffac75ee874a1cd2ae4572f456b5234f49a4f21abec92a5fa1c12957a07`.
-- `/private/tmp/soil-to-stars-result-mobile.png` — SHA-256
-  `7a95a96d400eef660c4ec12126d6603699882d9b9abf229b342f5cdd95df5300`.
-- `/private/tmp/soil-to-stars-result-receipt.json` — SHA-256
-  `0b784dbeb62e637f45c59b05659a0c3c4e71764b4ca3e70cc865949de9abf5ba`.
+- Prior Codex screenshots remain at `/private/tmp/soil-to-stars-result-desktop.png`
+  / `...-mobile.png` / `...-receipt.json` with the previously recorded hashes.
+- Finish-pass captures:
+  - `/private/tmp/soil-to-stars-result-desktop-finish.png` — SHA-256
+    `6d5afa62c44a10a3862fab57bf9a9041b317da987139d320c18249e5636c14a7`.
+  - `/private/tmp/soil-to-stars-result-mobile-finish.png` — SHA-256
+    `1d96fecd707231b0ac1f71dafe99c9384239241a60ed4a2c3bfe3e729d2ca246`.
 
-The browser run used a 390 px emulated viewport, not a physical phone or touch
-screen. Real map WebGL/tile failure was not rerun in this result walkthrough; the
-existing intake/location regression suite passed. Print styling was inspected by
-the browser test, but no physical printer/PDF viewer comparison was performed.
+The browser run used emulated viewports, not a physical phone or touch screen.
+Real map WebGL/tile failure was not rerun in this result walkthrough; the existing
+intake/location regression suite passed. Print styling exists in CSS, but no
+physical printer/PDF viewer comparison was performed in the finish pass.
 
 ## Remaining gaps and recommended resolution
 
@@ -131,10 +141,14 @@ the browser test, but no physical printer/PDF viewer comparison was performed.
   adapter and rerun unit/period/source review with Saim.
 - Replace fixture crop operations/checks with Fardin/Maruf payloads and perform
   plan/intended-crop parity tests.
+- Homepage compact weather story (instruction J / later G3-STORY) remains deferred
+  until accepted climate payloads exist; do not attach fixture charts as verified
+  NASA story scenes.
 - Complete professional EN/BN review for all detailed evidence/table terminology;
   the primary journey is bilingual, while fixture identifiers and some technical
   evidence labels intentionally remain English pending agreed translated keys.
 - Run the mounted flow on a physical phone over HTTPS and test real touch/map
   behavior before claiming phone/touch verification.
 - Obtain independent human review before changing G1D/G3/G3-REPORT to accepted or
-  done. Their dependency gates remain unchanged.
+  done. Their dependency gates remain unchanged. G1D stays planned/waiting on
+  G0-CONTRACT; this package is independent frontend preparation only.

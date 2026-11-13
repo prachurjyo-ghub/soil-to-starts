@@ -27,7 +27,7 @@ let route='profile',demoMode=false,metric='rain',chartYear='monthly',sim=null,se
 let resultsUI;
 const intake=window.STS_INTAKE_UI({render,onSubmit:submitted=>{resultsUI?.invalidate();demoMode=false;navigate(submitted?'overview':'profile');},onDemo:()=>{demoMode=true;navigate('overview');void resultsUI.activateFixture('complete-comparison');},toast});
 const resultAdapter=window.STS_RESULT_ADAPTER.create();
-resultsUI=window.STS_RESULT_UI.create({adapter:resultAdapter,render,navigate,toast,downloadInputs:()=>intake.download()});
+resultsUI=window.STS_RESULT_UI.create({adapter:resultAdapter,render,navigate,toast,downloadInputs:()=>intake.download(),enterFixtureMode:()=>{demoMode=true;},leaveFixtureMode:()=>{demoMode=false;}});
 function field(){return fields.find(f=>f.id===current)||fields[0];}
 function persist(){try{localStorage.setItem('sts-studio-v1',JSON.stringify({fields,current}));return true;}catch{toast('Storage unavailable. Changes remain in this session.');return false;}}
 function toast(message){$('#toast').textContent=message;$('#toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),3200);}
@@ -148,8 +148,8 @@ function render(){
  const exportLabel=demoMode?(bn?'নমুনা রপ্তানি':'Export demo'):(bn?'তথ্য রপ্তানি':'Export inputs');
  $$('[data-action="export"]').forEach(btn=>{btn.textContent=exportLabel;btn.disabled=!demoMode&&!intake.hasSubmission();});
  syncMobileChrome();
- if(!demoMode)$('#main').innerHTML=route==='profile'?intake.form():resultsUI.renderGenuine(intake.getSubmission());
- else {
+  if(!demoMode)$('#main').innerHTML=route==='profile'?intake.form():resultsUI.renderGenuine(intake.getSubmission(),bn?'bn':'en');
+  else {
   $('#main').innerHTML=route==='overview'?resultsUI.renderFixture(bn?'bn':'en'):`<div class="notice demo-separation" data-no-translate><b>${bn?'আলাদা নমুনা ডেমো · আপনার জমির তথ্য ব্যবহার করা হচ্ছে না।':'Separate illustrative demo · your intake answers are not used here.'}</b><button data-action="return-intake">${bn?'জমির তথ্যে ফিরুন':'Return to field inputs'}</button></div>`+({rotations,compare,simulator,climate,methodology,saved}[route])();
   if(route==='simulator')renderSim();
  }
