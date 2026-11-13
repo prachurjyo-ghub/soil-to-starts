@@ -2,6 +2,8 @@
 
 The multi-region collection is now preserved separately in [EVIDENCE_PACKAGE.md](EVIDENCE_PACKAGE.md), with normalized context, source-table identities, quarantine, rebuild scripts and candidate-rule compatibility. It retains all available regions without prioritizing Rajshahi. The existing files below remain unchanged and inactive; the research package does not expand executable recommendation coverage or modify the API contract.
 
+[Source-semantics review](source_review/README.md) compares every collected Lentil region and audits all 318 extracted documents for definition leads. Source gaps and interval wording remain inactive evidence; no dates or normal-weather aggregation are inferred.
+
 `rajshahi_crop_evidence_catalog.csv` is Maruf's first bounded G1B research package. It contains six inactive candidate records for the BAMIS Rajshahi calendar region: Aman rice, Boro rice, wheat, lentil, mustard and Kharif-1 mungbean.
 
 The records preserve the four-district BAMIS coverage, printed crop duration, complete standard-week span, source-PDF path and taxonomy source. Each `calendar_source_pdf` is relative to the user-provided `D:\Workplace\Nasa Space Apps\Dataset` folder; the PDFs are not copied into this repository. The week span describes the whole printed crop calendar; it is not an exact sowing window. `proposed_record_id` values are working research identifiers until Fardin supplies or approves the executable rule schema.

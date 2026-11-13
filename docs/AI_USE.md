@@ -1206,4 +1206,32 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Actual outcome:** Pinned three hash-sensitive paths to LF and restored their verified committed bytes without changing scientific values or source hashes. Registry regeneration, checkout filters with core.autocrlf enabled/disabled, and all 114 Python tests passed; CROP-EVIDENCE-PREP is now in_review with human review pending.
 
 **Task / source:** CROP-EVIDENCE-PREP; Current instruction: move to the next step
+
+## Maruf — Prompt 004
+
+<a id="maruf-004"></a>
+<a id="p-7f10a208f724"></a>
+<!-- record-id: P-7f10a208f724 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T09:19:13Z -->
+
+**Member:** maruf
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Continue source-evidence preparation by investigating calendar conflicts and weather-definition gaps across the preserved collection.
+
+**Purpose / AI contribution:** Audit all extracted documents for definition leads, compare every collected Lentil region, and document inspected original-source conflicts without inventing corrections or approving rules.
+
+**Human contribution:** Maruf authorized the next source-evidence step. No independent review or agronomic approval was supplied.
+
+**Changed files:** data/catalog/.gitattributes; data/catalog/README.md; data/catalog/EVIDENCE_DICTIONARY.md; scripts/audit_crop_source_semantics.py; tests/test_crop_source_semantics.py; data/catalog/source_review/; data/catalog/evidence_inputs/source_reviews.json; data/catalog/normalized/; data/catalog/EVIDENCE_PACKAGE.md; docs/tasks/CROP-SOURCE-SEMANTICS.json; docs/tasks/CROP-LINEAGE-REVIEW.json; docs/AI_USE.md; docs/PROGRESS.md; README.md
+
+**Actual outcome:** Audited all 318 extracted documents and 13 Lentil regions; original PDFs confirmed the same month-label gap in four regions, with no corrections inferred. Preserved 320 inactive temporal-wording leads and bounded official-source checks. All 118 Python tests and both byte-identical rebuilds passed; independent review and scientific definitions remain pending.
+
+**Task / source:** CROP-SOURCE-SEMANTICS; Current instruction: go ahead with source-evidence review
 <!-- workflow:ai-records:end -->

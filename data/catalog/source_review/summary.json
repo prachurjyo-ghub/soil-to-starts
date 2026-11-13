@@ -1,0 +1,28 @@
+{
+  "source_documents": 318,
+  "regions": 14,
+  "lentil_documents": 13,
+  "lentil_regions_with_month_label_gaps": [
+    "Dhaka",
+    "Faridpur",
+    "Mymensingh",
+    "Rajshahi"
+  ],
+  "definition_leads_by_kind": {},
+  "interval_wording_leads": 320,
+  "interval_roles": {
+    "crop_requirement_or_preference_context": 56,
+    "pest_or_disease_context": 175,
+    "weather_warning": 87,
+    "unclassified_source_context": 2
+  },
+  "executable_rules_added": 0,
+  "scientific_values_changed": 0,
+  "limitations": [
+    "English text patterns and original extraction only; OCR/language/layout gaps can hide definitions",
+    "Zero search matches never establishes absence of a definition",
+    "Source-role labels are review leads, not approved interpretation",
+    "Explicit interval wording in pest/warning text does not define calendar-normal aggregation",
+    "Month-label sequence gaps do not establish which printed value is wrong or a date mapping"
+  ]
+}

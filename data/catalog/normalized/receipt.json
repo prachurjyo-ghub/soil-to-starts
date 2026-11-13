@@ -41,7 +41,7 @@
       "method": "UTF-8 source bytes with CRLF normalized to LF"
     },
     "data/catalog/evidence_inputs/source_reviews.json": {
-      "sha256": "4f54e94a0cf52a9345b43eaa67a84db5de3c0babdccaf9daf509d0d28fb8dd06",
+      "sha256": "fe0c92483707ab2a94e416a5d5c4cd1465926c46a816bd3eea7a08151f6b3634",
       "method": "UTF-8 source bytes with CRLF normalized to LF"
     },
     "scripts/build_crop_evidence.py": {
@@ -77,7 +77,7 @@
     "rule_compatibility.json": "f6bfd1436137decc98f20a2854b80af7e9f94810a2a63d045ad9fe1aed7bc5d9",
     "source_artifacts.json": "5633876ebcd0012c82bcd3a574bf10f23b297b565ebb243b1344a1ca2ac9559d",
     "source_entries.jsonl": "1534996636fc3850ff0614ba175e995af2ed71740f313bed1d9350511ce841dd",
-    "source_reviews.json": "6d37e815448481e00c61485ac8ac1db322dd766f336275ec8a18048e9f750ece",
+    "source_reviews.json": "fe0c92483707ab2a94e416a5d5c4cd1465926c46a816bd3eea7a08151f6b3634",
     "weather_definitions.json": "e25a5e16dddf62917a9ce301d3a11e06041fed1b77c749791ffbdba54512062a",
     "weather_normals.jsonl": "c182b582292fc8571b366908d63bb8a9c87cfe3ff204c877aa143c6e07692ec2"
   }

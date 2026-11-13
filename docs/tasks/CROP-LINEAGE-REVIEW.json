@@ -6,7 +6,7 @@
   "phase": "G1",
   "status": "in_review",
   "depends_on": [],
-  "updated_at": "2026-11-13T09:13:58Z",
+  "updated_at": "2026-11-13T09:24:18Z",
   "acceptance": [
     {
       "id": "a1",
@@ -121,6 +121,10 @@
       "from": "in_review",
       "to": "in_review",
       "note": "Related preparation checkout blocker resolved: exact-path LF policy, unchanged pinned bytes, registry check and 114 full-suite tests passed. Lineage review remains pending."
+    },
+    {
+      "at": "2026-11-13T09:24:18Z",
+      "note": "Refreshed current handoff to distinguish the resolved checkout blocker from source-calendar semantics that remain under review."
     }
   ],
   "review": {
@@ -131,7 +135,7 @@
   "branch": "maruf/crop-evidence-prep",
   "issue": null,
   "next_action": "Maruf/Fardin independently review the 221 lineage resolutions and prior-ID mappings; then continue source-calendar semantics and rights review. No agronomic approval or API activation is implied.",
-  "handoff": "Maruf/Fardin independently review the 221 lineage resolutions and prior-ID mappings. Calendar-cycle interpretation and original climate verification blocker remain unresolved.",
+  "handoff": "Maruf/Fardin independently review the 221 source-column resolutions and prior-ID mappings. The climate checkout blocker is resolved; CROP-SOURCE-SEMANTICS now documents remaining calendar/definition gaps, without scientific activation.",
   "purpose": "Independent inspection of preserved local extraction lineage; this does not require or establish accepted executable rules, G0 agreement or a passing unrelated climate checkout.",
   "scope": "mvp"
 }

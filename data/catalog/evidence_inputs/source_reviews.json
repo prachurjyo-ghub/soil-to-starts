@@ -2,7 +2,10 @@
   {
     "review_id": "gourd-chattogram-26957",
     "source_pdf": "BAMIS_All_Crops/Gourd/Chattogram/26957.pdf",
-    "pages": [1, 4],
+    "pages": [
+      1,
+      4
+    ],
     "method": "Assistant inspection of original local PDF text and rendered page 4 on 2026-11-13; no independent human approval",
     "finding": "Page 1 has a Rabi title/header and duration 180-190 days. Page 4 has a Kharif title, a Rabi table header and duration 110-120 days. This is a printed title/header season conflict; the existing CSV classifies both as Rabi.",
     "disposition": "Preserve original CSV and both source-table identities. Do not relabel page 4 as an approved Kharif calendar or choose a duration until reviewed.",
@@ -11,7 +14,10 @@
   {
     "review_id": "pointed-gourd-mymensingh-27400",
     "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Mymensingh/27400.pdf",
-    "pages": [1, 2],
+    "pages": [
+      1,
+      2
+    ],
     "method": "Assistant inspection of both original local PDF pages as text and rendered images on 2026-11-13; no independent human approval",
     "finding": "Both pages print Kharif and duration 120-150 days. Page 1 spans weeks 5-25; page 2 spans 23-39, restarting the seedling stage. Their overlap represents separate printed calendar spans, not duplicate extraction rows.",
     "disposition": "Keep separate source calendars and the overlap. Whether these are separate planting cycles or variants is unresolved; no year/cycle offsets assigned.",
@@ -20,12 +26,58 @@
   {
     "review_id": "banana-dhaka-25595",
     "source_pdf": "BAMIS_All_Crops/Banana/Dhaka/25595.pdf",
-    "pages": [1],
+    "pages": [
+      1
+    ],
     "source_url": "https://www.bamis.gov.bd/res/calendars/2023/01/12/25595.pdf",
     "listing_url": "https://www.bamis.gov.bd/en/calendar/1/69/",
     "method": "Assistant inspected the original local rendered PDF and the published PDF text on 2026-11-13; listing checked through web search; no independent human approval",
     "finding": "The title prints Banana while the calendar header prints Papaya. The conflict is visible in the original PDF. The listing has seven regions; the retained CSV has six banana regions.",
     "disposition": "Retain the excluded document in the snapshot and quarantine. No OCR-error conclusion or Dhaka-unsuitability claim.",
     "next_owner": "Maruf: seek an authoritative corrected calendar before using the rows"
+  },
+  {
+    "review_id": "lentil-month-labels-dhaka-8731",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Dhaka/8731.pdf",
+    "pages": [
+      1
+    ],
+    "method": "Assistant inspected the original local PDF header rendering on 2026-11-13 after matching its SHA-256 to the frozen extraction; no independent human approval",
+    "finding": "The printed month row proceeds from December to February over the week-label reset 52 to 1, with February over labels 1-4 and March over 5-6. January is not printed. The same pattern occurs in four of the 13 collected Lentil regional calendars.",
+    "disposition": "Preserve all original months, week labels, weather and durations. Do not infer ISO weeks, change February to January, derive exact dates or substitute another region.",
+    "next_owner": "Maruf/Saim: obtain the source week convention and an authoritative correction or explanation; human review remains pending"
+  },
+  {
+    "review_id": "lentil-month-labels-faridpur-8729",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Faridpur/8729.pdf",
+    "pages": [
+      1
+    ],
+    "method": "Assistant inspected the original local PDF header rendering on 2026-11-13 after matching its SHA-256 to the frozen extraction; no independent human approval",
+    "finding": "The printed month row proceeds from December to February over the week-label reset 52 to 1, with February over labels 1-4 and March over 5-6. January is not printed. The same pattern occurs in four of the 13 collected Lentil regional calendars.",
+    "disposition": "Preserve all original months, week labels, weather and durations. Do not infer ISO weeks, change February to January, derive exact dates or substitute another region.",
+    "next_owner": "Maruf/Saim: obtain the source week convention and an authoritative correction or explanation; human review remains pending"
+  },
+  {
+    "review_id": "lentil-month-labels-mymensingh-8726",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Mymensingh/8726.pdf",
+    "pages": [
+      1
+    ],
+    "method": "Assistant inspected the original local PDF header rendering on 2026-11-13 after matching its SHA-256 to the frozen extraction; no independent human approval",
+    "finding": "The printed month row proceeds from December to February over the week-label reset 52 to 1, with February over labels 1-4 and March over 5-6. January is not printed. The same pattern occurs in four of the 13 collected Lentil regional calendars.",
+    "disposition": "Preserve all original months, week labels, weather and durations. Do not infer ISO weeks, change February to January, derive exact dates or substitute another region.",
+    "next_owner": "Maruf/Saim: obtain the source week convention and an authoritative correction or explanation; human review remains pending"
+  },
+  {
+    "review_id": "lentil-month-labels-rajshahi-8725",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Rajshahi/8725.pdf",
+    "pages": [
+      1
+    ],
+    "method": "Assistant inspected the original local PDF header rendering on 2026-11-13 after matching its SHA-256 to the frozen extraction; no independent human approval",
+    "finding": "The printed month row proceeds from December to February over the week-label reset 52 to 1, with February over labels 1-4 and March over 5-6. January is not printed. The same pattern occurs in four of the 13 collected Lentil regional calendars.",
+    "disposition": "Preserve all original months, week labels, weather and durations. Do not infer ISO weeks, change February to January, derive exact dates or substitute another region.",
+    "next_owner": "Maruf/Saim: obtain the source week convention and an authoritative correction or explanation; human review remains pending"
   }
 ]
