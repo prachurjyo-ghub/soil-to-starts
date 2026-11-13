@@ -1111,7 +1111,7 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 
 **Changed files:** README.md, docs/AI_USE.md, docs/PROGRESS.md, climate source/configuration/receipts, climate documentation and task records, acquisition/preparation/audit/packaging tests; ignored cache artifacts excluded
 
-**Actual outcome:** Verified the pending climate work with all 105 Python tests, workflow validation and whitespace checks passing. The remote main2 has no divergent commits; commit and push are pending.
+**Actual outcome:** Committed the completed climate source, receipts, tests and documentation as 159adfa and pushed it together with the four prior local commits to origin/main2. All 105 Python tests, workflow and whitespace checks passed; ignored raw/prepared caches and the handoff archive remain local.
 
 **Review / limitations:** Independent review and scientific/agronomic acceptance remain pending. The ignored raw/prepared cache and 88,023,118-byte archive are not uploaded by this Git push; no frontend files changed.
 
