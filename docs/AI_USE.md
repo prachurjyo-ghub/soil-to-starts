@@ -1344,4 +1344,68 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Next action / owner:** Commit and push the correction to origin/main2.
 
 **Task / source:** G1D; Current user correction: standalone local HTML preview, not a website route
+
+## Prachurjo — Prompt 009
+
+<a id="prachurjo-009"></a>
+<a id="p-7c7f7ec9b649"></a>
+<!-- record-id: P-7c7f7ec9b649 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T11:03:02Z -->
+
+**Member:** prachurjo
+
+**Tool:** Cursor Composer
+
+**Type:** push
+
+**Refined implementation prompt (AI-written):** Push the local HTML result-preview correction to origin/main2.
+
+**Purpose / AI contribution:** Replace the mistaken website route with a directory HTML file on the shared branch.
+
+**Human contribution:** Prachurjo required a local preview file instead of a live /result-page route.
+
+**Changed files:** prototype/reference/result-page.html;prototype/public/reference/result-page-preview.js;docs/AI_USE.md
+
+**Before → After:** Before: /result-page route on main2. After: route removed; local HTML preview committed as 0bbe4a1.
+
+**Actual outcome:** Pushed commit 0bbe4a1 to origin/main2. Live app routes are / and /workspace only.
+
+**Next action / owner:** Open prototype/reference/result-page.html locally to review the mock result chrome.
+
+**Task / source:** G1D; Current user correction: local HTML preview only
+
+## Prachurjo — Prompt 010
+
+<a id="prachurjo-010"></a>
+<a id="p-e49fed2fad8b"></a>
+<!-- record-id: P-e49fed2fad8b -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T11:57:01Z -->
+
+**Member:** prachurjo
+
+**Tool:** Cursor Composer
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Remove temporary result-page demo mocks and keep the integrated result UI on a new branch.
+
+**Purpose / AI contribution:** Ship the farmer-facing result workspace without the silent recording prototype route.
+
+**Human contribution:** Prachurjo asked to remove mock/prototype demo work, create ui-result-integrated, and push.
+
+**Changed files:** prototype/app/result-page/;prototype/public/reference/result-page.js;prototype/reference/result-page.html;prototype/public/reference/result-page-preview.js;prototype/public/reference/result-ui.js;prototype/public/reference/results.css;docs/FRONTEND_RESULTS_HANDOFF.md;docs/AI_USE.md
+
+**Before → After:** Before: temporary /result-page recording shell and local HTML mocks. After: /workspace-only result UI on branch ui-result-integrated.
+
+**Actual outcome:** Removed the demo route and recording presentation. Kept the integrated result UI on /workspace. Lint, build and result tests passed.
+
+**Next action / owner:** Push branch ui-result-integrated to origin.
+
+**Task / source:** G1D; Current user request: remove mock demo shell, branch ui-result-integrated, push
 <!-- workflow:ai-records:end -->

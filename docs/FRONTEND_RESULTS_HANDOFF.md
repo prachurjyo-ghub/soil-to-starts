@@ -1,18 +1,16 @@
 # Frontend result-workspace handoff
 
-Status: local independent UI preparation on `main2`, 13 November 2026 (finish pass).
-The result components and fixture states are implemented in the mounted application.
+Status: result UI integrated on branch `ui-result-integrated`, 13 November 2026.
+The result components and development-fixture states are mounted in `/workspace`.
 A finish pass fixed the genuine-page **Open isolated development fixture** path so
 fixture mode is entered before render, completed the genuine field summary
-(history/usual practice), redesigned the farmer-facing result layout, and added
-`/result-page` as a workspace-chrome demo of labelled mock results (no temporary
-yellow banners). No scientific API, crop engine, reviewed crop catalogue or prepared
-climate package is connected. This handoff is not teammate approval, scientific
-acceptance, main-branch delivery, deployment or submission evidence.
+(history/usual practice), and redesigned the farmer-facing result layout.
+Temporary recording/demo routes and presentation mocks were removed. No scientific
+API, crop engine, reviewed crop catalogue or prepared climate package is connected.
+This handoff is not teammate approval, scientific acceptance, main-branch delivery,
+deployment or submission evidence.
 
-Local preview file (not an app route): `prototype/reference/result-page.html`.
-Open that file to review the result UI with mock data inside the normal workspace
-chrome. Genuine intake remains on `/workspace`.
+Genuine intake and results remain on `/workspace` only.
 
 ## Mounted paths and changed surface
 
