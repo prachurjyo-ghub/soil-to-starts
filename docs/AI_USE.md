@@ -1526,4 +1526,102 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Next action / owner:** Prachurjo continues the existing result UI; Fardin connects reviewed scientific payloads.
 
 **Task / source:** CROP-EVIDENCE-PREP; Current explicit pull and merge instruction
+
+## Prachurjo — Prompt 011
+
+<a id="prachurjo-011"></a>
+<a id="p-7c7f7ec9b649"></a>
+<!-- record-id: P-7c7f7ec9b649 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T11:03:02Z -->
+
+**Member:** prachurjo
+
+**Tool:** Cursor Composer
+
+**Type:** push
+
+**Refined implementation prompt (AI-written):** Push the local HTML result-preview correction to origin/main2.
+
+**Purpose / AI contribution:** Replace the mistaken website route with a directory HTML file on the shared branch.
+
+**Human contribution:** Prachurjo required a local preview file instead of a live /result-page route.
+
+**Changed files:** prototype/reference/result-page.html;prototype/public/reference/result-page-preview.js;docs/AI_USE.md
+
+**Before → After:** Before: /result-page route on main2. After: route removed; local HTML preview committed as 0bbe4a1.
+
+**Actual outcome:** Pushed commit 0bbe4a1 to origin/main2. Live app routes are / and /workspace only.
+
+**Related context:** Public number reconciled from PRACHURJO-009 during branch integration; stable internal record ID and original facts preserved.
+
+**Next action / owner:** Open prototype/reference/result-page.html locally to review the mock result chrome.
+
+**Task / source:** G1D; Current user correction: local HTML preview only
+
+## Prachurjo — Prompt 010
+
+<a id="prachurjo-010"></a>
+<a id="p-e49fed2fad8b"></a>
+<!-- record-id: P-e49fed2fad8b -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T11:57:01Z -->
+
+**Member:** prachurjo
+
+**Tool:** Cursor Composer
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Remove temporary result-page demo mocks and keep the integrated result UI on a new branch.
+
+**Purpose / AI contribution:** Ship the farmer-facing result workspace without the silent recording prototype route.
+
+**Human contribution:** Prachurjo asked to remove mock/prototype demo work, create ui-result-integrated, and push.
+
+**Changed files:** prototype/app/result-page/;prototype/public/reference/result-page.js;prototype/reference/result-page.html;prototype/public/reference/result-page-preview.js;prototype/public/reference/result-ui.js;prototype/public/reference/results.css;docs/FRONTEND_RESULTS_HANDOFF.md;docs/AI_USE.md
+
+**Before → After:** Before: temporary /result-page recording shell and local HTML mocks. After: /workspace-only result UI on branch ui-result-integrated.
+
+**Actual outcome:** Removed the demo route and recording presentation. Kept the integrated result UI on /workspace. Lint, build and result tests passed.
+
+**Next action / owner:** Push branch ui-result-integrated to origin.
+
+**Task / source:** G1D; Current user request: remove mock demo shell, branch ui-result-integrated, push
+
+## Prachurjo — Prompt 012
+
+<a id="prachurjo-012"></a>
+<a id="p-e529c41d531b"></a>
+<!-- record-id: P-e529c41d531b -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T15:17:40Z -->
+
+**Member:** prachurjo
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Inspect local and latest remote changes, pull main, and merge pending project branches into main while preserving existing work.
+
+**Purpose / AI contribution:** Combine latest frontend work and the unpublished crop-evidence integration; resolve record-only conflicts and verify the assembled repository.
+
+**Human contribution:** The current contributor selected main as the target and requested checking local changes first.
+
+**Changed files:** Incoming crop-evidence/UI branch changes; docs/AI_USE.md; docs/tasks/CROP-EVIDENCE-PREP.json; generated README/PROGRESS
+
+**Actual outcome:** Updated main from origin and integrated local main2 plus ui-result-integrated. All 126 Python tests, 41 Node tests, byte-identical crop rebuild, frontend lint/build and workflow checks passed. Records are preserved; no scientific acceptance or push is claimed.
+
+**Review / limitations:** All remote branch tips will be checked for ancestry after the merge commit. Physical-device behavior and scientific data accuracy were not revalidated.
+
+**Next action / owner:** Main contains the combined work locally; publish only with authorization.
+
+**Task / source:** CROP-EVIDENCE-PREP; Current explicit main-branch pull and pending-merge request
 <!-- workflow:ai-records:end -->

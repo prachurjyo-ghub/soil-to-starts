@@ -560,7 +560,7 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-31T22:42:31Z`
 
 ### CROP-EVIDENCE-PREP — Normalize preserved multi-region crop evidence for review
 
-Owner: **Maruf** · State: `in_review` · Updated UTC: `2026-11-13T10:00:57Z`
+Owner: **Maruf** · State: `in_review` · Updated UTC: `2026-11-13T15:17:40Z`
 
 **Why:** Independent evidence preparation across the existing collection, without activating additional executable coverage or bypassing G0/G1B.
 

@@ -161,6 +161,8 @@
 .result-chart text{fill:var(--result-muted);font-size:11px}
 .chart-meta{display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:8px;color:var(--result-muted);font-size:.76rem}
 .chart-finding{margin:8px 0 0;font-size:.84rem}
+.chart-stats{margin:8px 0 0;padding-left:1.1rem;font-size:.82rem;color:var(--result-muted)}
+.chart-stats li{margin:4px 0}
 
 .result-limit{margin:12px 0 0;padding:10px 12px;border-left:3px solid #d1a135;border-radius:0 10px 10px 0;background:var(--result-warn-bg);color:var(--result-warn);font-size:.78rem}
 

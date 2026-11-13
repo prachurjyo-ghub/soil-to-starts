@@ -6,7 +6,7 @@
   "phase": "G1",
   "status": "in_review",
   "depends_on": [],
-  "updated_at": "2026-11-13T10:00:57Z",
+  "updated_at": "2026-11-13T15:17:40Z",
   "acceptance": [
     {
       "id": "a1",
@@ -220,6 +220,10 @@
     {
       "at": "2026-11-13T10:00:57Z",
       "note": "Prachurjo requested pulling main2 and merging Maruf crop evidence. Prepared integration of origin/maruf/crop-evidence-prep at ffea11a into main2 after pulling bf61942. Preserved all 41 pre-existing command records. All 118 Python tests, 39 Node result/intake/location tests, normalized byte-identical rebuild and workflow/whitespace checks passed. Scientific activation and independent approval remain pending; actual merge delivery is recorded by Git history."
+    },
+    {
+      "at": "2026-11-13T15:17:40Z",
+      "note": "User selected main for integration. Updated origin/main, merged local main2 as 55f1624, and integrated ui-result-integrated at 00655dd. Preserved command histories, reconciling duplicate independently allocated public numbers while retaining stable internal IDs. Combined candidate passed 126 Python tests, 41 Node tests, byte-identical crop rebuild, frontend lint/build and whitespace checks. No scientific approval or push inferred."
     }
   ],
   "review": {

@@ -154,10 +154,14 @@
     const period = assessment?.assessment_period || t(language, 'not established', 'নির্ধারিত নয়');
     const statusLabel = assessment?.status === 'incomplete'
       ? t(language, 'Assessment incomplete', 'মূল্যায়ন অসম্পূর্ণ')
-      : (assessment?.status || 'unavailable');
+      : assessment?.status === 'complete'
+        ? t(language, 'Assessment ready', 'মূল্যায়ন প্রস্তুত')
+        : (assessment?.status || 'unavailable');
     const leadTitle = assessment?.status === 'incomplete'
       ? t(language, 'Insufficient Data', 'পর্যাপ্ত তথ্য নেই')
-      : human(assessment?.status || 'unavailable');
+      : assessment?.status === 'complete'
+        ? t(language, 'Exposure checked for this crop', 'এই ফসলের প্রভাব যাচাই হয়েছে')
+        : human(assessment?.status || 'unavailable');
     return `<section class="result-card" aria-labelledby="vulnerability-title">
       <div class="result-section-heading">
         <div><p class="result-eyebrow">02 · ${t(language, 'CURRENT CROP', 'বর্তমান ফসল')}</p><h2 id="vulnerability-title">${t(language, 'Historical exposure assessment', 'ঐতিহাসিক প্রভাব মূল্যায়ন')}</h2></div>
@@ -256,8 +260,8 @@
       : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const min = Math.min(...values), max = Math.max(...values), range = max - min || 1;
     const points = values.map((value, index) => `${40 + index * 46},${168 - ((value - min) / range) * 118}`).join(' ');
-    return `<svg class="result-chart" viewBox="0 0 600 210" role="img" aria-label="${esc(series.label)} example chart">
-      <title>${esc(series.label)} · ${esc(series.unit)} · development fixture</title>
+    return `<svg class="result-chart" viewBox="0 0 600 210" role="img" aria-label="${esc(series.label)}">
+      <title>${esc(series.label)} · ${esc(series.unit)}</title>
       ${[48, 88, 128, 168].map(y => `<line x1="40" x2="576" y1="${y}" y2="${y}"/>`).join('')}
       <polyline points="${points}"/>
       ${values.map((value, index) => `<circle tabindex="0" cx="${40 + index * 46}" cy="${168 - ((value - min) / range) * 118}" r="4.5"><title>${months[index]}: ${value} ${esc(series.unit)}</title></circle>`).join('')}
@@ -270,6 +274,7 @@
       return `<section class="result-card" aria-labelledby="climate-title"><p class="result-eyebrow">05 · ${t(language, 'CLIMATE HISTORY', 'জলবায়ু ইতিহাস')}</p>${unavailableCard(t(language, 'Historical climate unavailable', 'ঐতিহাসিক জলবায়ু অনুপলব্ধ'), climate?.reason || 'No prepared chart/history payload was supplied.')}</section>`;
     }
     const selected = climate.series.find(series => series.key === metric) || climate.series[0];
+    const stats = (climate.comparison?.statistics || []).map(stat => `<li><b>${esc(human(stat.metric))} · ${esc(stat.window)}</b>: ${esc(String(stat.earlier_mean))} → ${esc(String(stat.recent_mean))} ${esc(stat.unit)} (Δ ${esc(String(stat.delta))})</li>`).join('');
     return `<section class="result-card" aria-labelledby="climate-title">
       <div class="result-section-heading">
         <div>
@@ -288,7 +293,8 @@
         <span>${esc(climate.comparison.earlier)} → ${esc(climate.comparison.recent)}</span>
       </div>
       <p class="chart-finding">${esc(climate.comparison.finding)}</p>
-      <p class="result-limit"><b>Important:</b> Monthly mean daily maximum is not the absolute monthly maximum. District context is not a district-area average. ${esc(climate.limitations.join(' '))}</p>
+      ${stats ? `<ul class="chart-stats">${stats}</ul>` : ''}
+      <p class="result-limit"><b>${t(language, 'Note:', 'নোট:')}</b> ${t(language, 'Monthly mean daily maximum is not the absolute monthly maximum. Grid support is regional context, not a farm boundary average.', 'মাসিক গড় দৈনিক সর্বোচ্চ তাপমাত্রা মাসের পরম সর্বোচ্চ নয়। গ্রিড মান আঞ্চলিক প্রেক্ষাপট, জমির সীমার গড় নয়।')} ${esc((climate.limitations || []).join(' '))}</p>
     </section>`;
   }
 
