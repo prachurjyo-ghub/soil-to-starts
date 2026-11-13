@@ -302,6 +302,40 @@ This standalone step fragment shows duration origins and distinct endpoint field
 }
 ```
 
+## Proposed current-crop assessment extension
+
+The mounted frontend now has an isolated presentation boundary for a current-crop
+historical-exposure assessment. This is a **proposed contract extension**, not an
+implemented endpoint or a change to the frozen meaning of the rotation response.
+Fardin, Saim and Maruf must review the transport, climate and crop-rule fields
+before real integration.
+
+A future response may carry `current_crop_assessment` beside the comparison, or a
+separate endpoint may return the same object. The frontend currently expects:
+
+```text
+status: complete | incomplete | unavailable | invalid_input
+crop_id, rice_system_id?, variety_id?, planting_or_transplanting_date?
+stage: {id, label_keys, basis, period}?   # never inferred from field availability
+assessment_period: {start, end, time_standard}?
+checks[]: check_id, outcome, label_keys, crop/stage/period, rule_id,
+          source_ids, evidence_ids, missing_information?, limitation?
+sources[], evidence[], versions, generated_at_utc, limitations[]
+```
+
+Checks may cover heat, cold, rainfall and water only when the relevant historical
+series, crop stage and reviewed requirement exist. `pass` means no conflict in the
+assessed scope; it is not a crop-health or success guarantee. Unknown stage/date or
+requirements produce `incomplete`/`unavailable` with the missing fact. This surface
+is historical exposure context, not live monitoring, disease diagnosis, a weather
+forecast or a risk percentage.
+
+The frontend adapter keeps replaceable operations for field validation/planning,
+current-crop assessment, climate history, intended-crop checking and historical
+replay. Their URLs remain `null` until Fardin defines real routes. Development
+fixtures use `data_mode: development_fixture`; they are never `verified_fixture`
+and never activate after a failed genuine request.
+
 ## Intended crop, replay, receipt and transport review
 
 Intended-crop assessment reuses exactly the planner's validation/check functions; return checked windows, evidence and missingness. It is not diagnosis of a growing crop. Historical replay identifies scenario/version, historical periods and the baseline run; hold non-climate inputs fixed and return comparable checks/rank changes. It is neither a future forecast nor observation of historical crop failure. One reviewed preset is sufficient.

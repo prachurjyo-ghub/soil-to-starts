@@ -313,6 +313,6 @@
       const blob=new Blob([JSON.stringify(state.submitted.request,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');
       a.href=url;a.download='soil-to-stars-field-inputs.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
     }
-    return {form,summary,download,beforeRender(){maps?.beforeRender();},afterRender(){void maps?.afterRender();refreshMapStatus();},hasSubmission:()=>!!state.submitted,newDraft(){state.draft=D.blankDraft();errors=[];persist();}};
+    return {form,summary,download,getSubmission:()=>state.submitted?.request?structuredClone(state.submitted.request):null,beforeRender(){maps?.beforeRender();},afterRender(){void maps?.afterRender();refreshMapStatus();},hasSubmission:()=>!!state.submitted,newDraft(){state.draft=D.blankDraft();errors=[];persist();}};
   };
 })();

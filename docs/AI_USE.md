@@ -1118,4 +1118,40 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Next action / owner:** Commit the verified source/evidence changes, push main2 and record the actual result.
 
 **Task / source:** CLIMATE-DATA-PACKAGE; Saim explicitly requested pushing all completed work to main2
+
+## Prachurjo — Prompt 004
+
+<a id="prachurjo-004"></a>
+<a id="p-8b2be819b449"></a>
+<!-- record-id: P-8b2be819b449 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T09:12:28Z -->
+
+**Member:** prachurjo
+
+**Tool:** Codex
+
+**Type:** implementation
+
+**Refined implementation prompt (AI-written):** Build the mounted frontend result workspace with replaceable API adapters, isolated labelled fixtures, explicit result states, accessible comparison and evidence views, and truthful scientific limitations.
+
+**Purpose / AI contribution:** Prepare the complete result UI while backend and crop-data contracts continue, without presenting fixtures as scientific results.
+
+**Human contribution:** Prachurjo supplied Fardin's authorization, frontend ownership and the required farmer journey, data boundaries, verification and handoff criteria.
+
+**Changed files:** prototype/app/workspace/page.js; prototype/public/reference/intake-ui.js; prototype/public/reference/workspace.js; prototype/public/reference/result-adapter.js; prototype/public/reference/result-fixtures.js; prototype/public/reference/result-ui.js; prototype/public/reference/results.css; tests/result-ui.test.cjs; docs/API_CONTRACT.md; docs/FRONTEND_RESULTS_HANDOFF.md
+
+**Before → After:** Before: genuine intake stopped at an unavailable summary and the output pages used legacy illustrative scorers. After: genuine inputs remain unavailable while a separate explicit fixture workspace exercises the complete output layout and states.
+
+**Actual outcome:** Implemented the local result workspace, adapter, six fixture scenarios, tests and handoff documentation. Focused UI tests, existing intake tests, lint, webpack build and a desktop/mobile browser walkthrough passed; real API/data integration, physical-phone testing and independent review remain pending.
+
+**Review / limitations:** No scientific/API acceptance, independent teammate review, physical-phone test, main-branch completion or deployment is claimed.
+
+**Related context:** G1D, G3 and G3-REPORT dependencies remain authoritative; this is independent frontend preparation.
+
+**Next action / owner:** Fardin, Saim and Maruf review the proposed payload needs; Prachurjo then connects accepted API and chart payloads and reruns parity, accessibility and physical-device checks.
+
+**Task / source:** G1D; Current user instruction authorized by Fardin for independent frontend construction.
 <!-- workflow:ai-records:end -->
