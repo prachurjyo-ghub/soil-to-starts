@@ -6,7 +6,7 @@
   "phase": "G1",
   "status": "in_review",
   "depends_on": [],
-  "updated_at": "2026-11-13T09:06:39Z",
+  "updated_at": "2026-11-13T09:07:44Z",
   "acceptance": [
     {
       "id": "a1",
@@ -62,7 +62,9 @@
   ],
   "blockers": [],
   "issues": [],
-  "evidence": [],
+  "evidence": [
+    "Local branch checkpoint 5ee0936 contains the evidence package and source-stage lineage work. No push, independent approval, main merge or executable scientific activation is claimed."
+  ],
   "history": [
     {
       "at": "2026-11-13T09:02:43Z",
@@ -109,6 +111,10 @@
     {
       "at": "2026-11-13T09:06:39Z",
       "note": "Check passed: 'C:\\Users\\BBB#12\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' scripts/build_crop_evidence.py --check"
+    },
+    {
+      "at": "2026-11-13T09:07:44Z",
+      "note": "Recorded actual local checkpoint 5ee0936 on maruf/crop-evidence-prep; existing review and climate-source blockers unchanged."
     }
   ],
   "review": {

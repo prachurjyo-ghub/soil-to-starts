@@ -1175,7 +1175,7 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 
 **Changed files:** scripts/build_crop_evidence.py; scripts/crop_evidence_lineage.py; tests/test_crop_evidence.py; data/catalog/normalized/; data/catalog/EVIDENCE_PACKAGE.md; data/catalog/EVIDENCE_DICTIONARY.md; docs/tasks/CROP-LINEAGE-REVIEW.json; docs/tasks/CROP-EVIDENCE-PREP.json; docs/AI_USE.md; docs/PROGRESS.md; README.md
 
-**Actual outcome:** Created local branch maruf/crop-evidence-prep and resolved all 221 initial column ambiguities by replaying original stage geometry, preserving alternatives and prior IDs. Nine evidence tests and byte-identical rebuild passed; independent review and the separate climate checkout blocker remain pending.
+**Actual outcome:** Local checkpoint 5ee0936 saved the evidence package on maruf/crop-evidence-prep, including all 221 source-stage lineage resolutions with alternatives and prior IDs. Nine evidence tests, deterministic rebuild and staged whitespace checks passed. Independent review and the existing climate checksum blocker remain pending; nothing was pushed.
 
 **Task / source:** CROP-LINEAGE-REVIEW; Current instruction: keep track in local branch and move to the next step
 <!-- workflow:ai-records:end -->

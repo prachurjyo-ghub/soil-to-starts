@@ -557,7 +557,7 @@ Owner: **Fardin** · State: `in_review` · Updated UTC: `2026-10-31T22:42:31Z`
 
 ### CROP-EVIDENCE-PREP — Normalize preserved multi-region crop evidence for review
 
-Owner: **Maruf** · State: `blocked` · Updated UTC: `2026-11-13T09:03:15Z`
+Owner: **Maruf** · State: `blocked` · Updated UTC: `2026-11-13T09:07:44Z`
 
 **Why:** Independent evidence preparation across the existing collection, without activating additional executable coverage or bypassing G0/G1B.
 
@@ -596,7 +596,7 @@ Owner: **Maruf** · State: `blocked` · Updated UTC: `2026-11-13T09:03:15Z`
 
 ### CROP-LINEAGE-REVIEW — Resolve preserved calendar-entry import lineage
 
-Owner: **Maruf** · State: `in_review` · Updated UTC: `2026-11-13T09:06:39Z`
+Owner: **Maruf** · State: `in_review` · Updated UTC: `2026-11-13T09:07:44Z`
 
 **Why:** Independent inspection of preserved local extraction lineage; this does not require or establish accepted executable rules, G0 agreement or a passing unrelated climate checkout.
 

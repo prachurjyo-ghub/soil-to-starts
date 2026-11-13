@@ -6,7 +6,7 @@
   "phase": "G1",
   "status": "blocked",
   "depends_on": [],
-  "updated_at": "2026-11-13T09:03:15Z",
+  "updated_at": "2026-11-13T09:07:44Z",
   "acceptance": [
     {
       "id": "a1",
@@ -117,7 +117,8 @@
   ],
   "issues": [],
   "evidence": [
-    "CROP-LINEAGE-REVIEW continuation on maruf/crop-evidence-prep resolved 221 initially ambiguous imported rows using original stage geometry; alternatives/prior IDs retained. Original climate checksum blocker remains open."
+    "CROP-LINEAGE-REVIEW continuation on maruf/crop-evidence-prep resolved 221 initially ambiguous imported rows using original stage geometry; alternatives/prior IDs retained. Original climate checksum blocker remains open.",
+    "Local branch checkpoint 5ee0936 contains the evidence package and source-stage lineage work. No push, independent approval, main merge or executable scientific activation is claimed."
   ],
   "history": [
     {
@@ -171,6 +172,10 @@
       "from": "in_progress",
       "to": "blocked",
       "note": "Saim/integration resolves byte-preserving climate checkout; rerun the full suite, then obtain independent review of the inactive evidence preparation. Maruf reviews source definitions, conflicts and rights; Fardin reviews research-schema mapping."
+    },
+    {
+      "at": "2026-11-13T09:07:44Z",
+      "note": "Recorded actual local checkpoint 5ee0936 on maruf/crop-evidence-prep; existing review and climate-source blockers unchanged."
     }
   ],
   "review": {
