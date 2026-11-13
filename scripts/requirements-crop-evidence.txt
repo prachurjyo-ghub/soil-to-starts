@@ -1,0 +1,4 @@
+# Only needed for rebuilding the flat CSV or re-extracting PDFs.
+# scripts/build_crop_evidence.py and import_crop_evidence.py are stdlib-only.
+openpyxl==3.1.5
+pymupdf==1.28.2

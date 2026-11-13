@@ -1,0 +1,1738 @@
+[
+  {
+    "group_id": "repetition-97bada176ae9318e9565",
+    "key": [
+      "Bottle Gourd",
+      "Rabi",
+      "Chattogram",
+      "14"
+    ],
+    "entry_ids": [
+      "entry-240fed0176aea8a473b0",
+      "entry-7224354c61eb050bf109"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-08de222b6defabceff66",
+    "key": [
+      "Bottle Gourd",
+      "Rabi",
+      "Chattogram",
+      "15"
+    ],
+    "entry_ids": [
+      "entry-73180e5a6118d4f8d306",
+      "entry-456640ec275783ad735c"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-c7632f5b3e9a736c9fff",
+    "key": [
+      "Bottle Gourd",
+      "Rabi",
+      "Chattogram",
+      "16"
+    ],
+    "entry_ids": [
+      "entry-ec1a15a72c331e0ecaf5",
+      "entry-1ec0e0eafee38f568c3d"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-eef203ed40e4119f7388",
+    "key": [
+      "Pointed Gourd",
+      "Kharif",
+      "Mymensingh",
+      "23"
+    ],
+    "entry_ids": [
+      "entry-5518b0126c641815d2db",
+      "entry-55c43b40c358b81387f5"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-b01d25a48bbe92df69a1",
+    "key": [
+      "Pointed Gourd",
+      "Kharif",
+      "Mymensingh",
+      "24"
+    ],
+    "entry_ids": [
+      "entry-a329fb7fe362f0d9bcd0",
+      "entry-bd0747b5f52c589d1f50"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-5aeb3f86fd16ec4a2e1a",
+    "key": [
+      "Pointed Gourd",
+      "Kharif",
+      "Mymensingh",
+      "25"
+    ],
+    "entry_ids": [
+      "entry-9d72683193e31b68f29f",
+      "entry-fcd2f40e5130bc47492d"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-07d77521ba02f38039cc",
+    "key": [
+      "Pumpkin",
+      "Rabi",
+      "Rajshahi",
+      "14"
+    ],
+    "entry_ids": [
+      "entry-3813ddba48f9e64ce37b",
+      "entry-8ab0c3ffe6c8f2bac38e"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-0fbdfc26ce2892e7d0d3",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Barishal",
+      "44"
+    ],
+    "entry_ids": [
+      "entry-9d9855f6530f90125365",
+      "entry-6a94469054f7f05e2abd"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-e1c9e5162f7935a4f34e",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Barishal",
+      "45"
+    ],
+    "entry_ids": [
+      "entry-4470bfb471231d9deb3d",
+      "entry-26756e5758347f5c89c3"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-5011e40fa83c81771fd9",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Barishal",
+      "46"
+    ],
+    "entry_ids": [
+      "entry-a8083fdf9c5a9d9c6d45",
+      "entry-52dd62fd3f890dcc7f09"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-b71b6d515289e9525d9a",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Barishal",
+      "47"
+    ],
+    "entry_ids": [
+      "entry-feaf1f5767e1b1be04ab",
+      "entry-954705d8fdafbb911a37"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-49b66414204b45866a99",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Barishal",
+      "48"
+    ],
+    "entry_ids": [
+      "entry-0b8477018fbb238cd431",
+      "entry-545bad1c612cfd24fdf7"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-e738126d01516d31ad6b",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Barishal",
+      "49"
+    ],
+    "entry_ids": [
+      "entry-99ba4993e2964e7a666e",
+      "entry-529ca105bce0f48f3262"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-28b5baa5d5b33bc9d6d4",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Barishal",
+      "50"
+    ],
+    "entry_ids": [
+      "entry-388084819d2c3bba6dad",
+      "entry-838b9bcecac95c38080b"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-07458ea92c7039dddc49",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Barishal",
+      "51"
+    ],
+    "entry_ids": [
+      "entry-d8e63ae7d008a9d60b53",
+      "entry-eefd7884d6272c88741a"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-8a8b28bdda84f6f39854",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Barishal",
+      "52"
+    ],
+    "entry_ids": [
+      "entry-0f58195fceac00910e60",
+      "entry-1cc625af8a3d4a804b73"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-fa1902ce3e9fb4cf32fd",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Bogura",
+      "1"
+    ],
+    "entry_ids": [
+      "entry-60f18fcc82e03cfcf046",
+      "entry-974b3f2ef6fe68b67609"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-474188951fa053e5cd45",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Bogura",
+      "2"
+    ],
+    "entry_ids": [
+      "entry-dc140c2362e2f4828be4",
+      "entry-e4daa917fe819be88b32"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-1c8c1da4e3cd90f1ac64",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Bogura",
+      "3"
+    ],
+    "entry_ids": [
+      "entry-a9e300081399d1a09ae6",
+      "entry-ca5f14e1969e24001f4c"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-2d8d8101a138a80b21b6",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Bogura",
+      "4"
+    ],
+    "entry_ids": [
+      "entry-2c1ef820b74b27deb2fa",
+      "entry-9a8c1f09af310a82eef4"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-2a9760bc4d1d7461d3b2",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Bogura",
+      "49"
+    ],
+    "entry_ids": [
+      "entry-165a399d33a619dc7dcd",
+      "entry-951d936519ce287a1601"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-0c53c342ab6867973e17",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Bogura",
+      "5"
+    ],
+    "entry_ids": [
+      "entry-65b7b391ee0e001f09b7",
+      "entry-ba5afaa9063526fc35db"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-86880fec65e2f0e7355d",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Bogura",
+      "50"
+    ],
+    "entry_ids": [
+      "entry-963bd5763414b224e161",
+      "entry-bc7cf2ed8e716c42cf10"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-5d4aab07227710cbf30f",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Bogura",
+      "51"
+    ],
+    "entry_ids": [
+      "entry-a334d0f0d013aa735933",
+      "entry-04a4f7361bb386f92124"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-c63b02a517da7fbbf4cf",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Bogura",
+      "52"
+    ],
+    "entry_ids": [
+      "entry-bb21c3f8eb99a0bcc47c",
+      "entry-039a55d653fe64ef0acc"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-74d7fa31d4ef3f2f7a53",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Chattogram",
+      "44"
+    ],
+    "entry_ids": [
+      "entry-6eaa15f5f52cd11a6443",
+      "entry-8ce6567fa388e99efe13"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-ee2ce7b334866a2fb2cf",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Chattogram",
+      "45"
+    ],
+    "entry_ids": [
+      "entry-ac91aec16ea82899cedc",
+      "entry-73f32db3ab2c1f305cbd"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-017fdd85ab9bfe4264fb",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Chattogram",
+      "46"
+    ],
+    "entry_ids": [
+      "entry-3b0688155554ca743f71",
+      "entry-e6cd3bee9b61d13df096"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-4bd5a1dfa3c8c0d1c45e",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Chattogram",
+      "47"
+    ],
+    "entry_ids": [
+      "entry-0d7b0915d61f4b02ddf9",
+      "entry-c366a7c1589fd3def488"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-4502f9e5566ee7073df4",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Chattogram",
+      "48"
+    ],
+    "entry_ids": [
+      "entry-9b4685aad16c4b7b3359",
+      "entry-e3dea2bbc8ad2c586866"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-adb1bd1738e035fbc9fe",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Chattogram",
+      "49"
+    ],
+    "entry_ids": [
+      "entry-114ef8cc2bad6c034111",
+      "entry-e62dba6cfbbde126b099"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-1100bb3fcc3125b3f161",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Chattogram",
+      "50"
+    ],
+    "entry_ids": [
+      "entry-7834c3c4963f5410ecef",
+      "entry-3dceec3c45d6e1a89443"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-4b06fc29f5670e5a9676",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Chattogram",
+      "51"
+    ],
+    "entry_ids": [
+      "entry-7a6ea5a68718cdad2415",
+      "entry-9abc4cf4fbde87edb13e"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-bc0dd921a6cc65a4b28b",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Chattogram",
+      "52"
+    ],
+    "entry_ids": [
+      "entry-6d4288ae37c58847e94d",
+      "entry-8f89e0fe909b83520169"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-77d1ab30134f34d00ea3",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Cumilla",
+      "44"
+    ],
+    "entry_ids": [
+      "entry-c86bd75abb8df79e8dfe",
+      "entry-d7e4939638f263fb1baf"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-e9594361bf557f726975",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Cumilla",
+      "45"
+    ],
+    "entry_ids": [
+      "entry-d89bc4b968a88662232c",
+      "entry-1319f386a8e69ddb9936"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-7e437f5e4a265f0bea55",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Cumilla",
+      "46"
+    ],
+    "entry_ids": [
+      "entry-c6d385ea2e461cd6d023",
+      "entry-5965c35f30b5ada87a2a"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-073b4fff9cb6ad9c5024",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Cumilla",
+      "47"
+    ],
+    "entry_ids": [
+      "entry-444de2db260d4e04f007",
+      "entry-705f686fadf440fc7c3a"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-db8560f36ea87d714732",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Cumilla",
+      "48"
+    ],
+    "entry_ids": [
+      "entry-c59b327ab8485e756f72",
+      "entry-5fea080a332b01d29e39"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-64b67e39ce0892249716",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Cumilla",
+      "49"
+    ],
+    "entry_ids": [
+      "entry-4c8631442173957929fa",
+      "entry-a2b02193510ba0c620ea"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-ec04479ed101b96241bf",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Cumilla",
+      "50"
+    ],
+    "entry_ids": [
+      "entry-23c5de8b113b1b60d7e1",
+      "entry-713d97beebda8def921e"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-39fc8a5ff75db125038b",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Cumilla",
+      "51"
+    ],
+    "entry_ids": [
+      "entry-24e9a9409d921edc55f8",
+      "entry-4133af36d777f674d10e"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-2c73fc0a788dc60873c0",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Cumilla",
+      "52"
+    ],
+    "entry_ids": [
+      "entry-5f7b5f495330e45cab83",
+      "entry-6d272b553abcf2907c45"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-36ccec7d2fa27861a656",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Dhaka",
+      "44"
+    ],
+    "entry_ids": [
+      "entry-d127917d6a49dd718311",
+      "entry-b91d694b94d7a26147df"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-cad0f6cb615a315aec96",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Dhaka",
+      "45"
+    ],
+    "entry_ids": [
+      "entry-771b64cbbda88711d214",
+      "entry-9ef1b07d7ce729aaf451"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-4fd7b481cc033e1eb28e",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Dhaka",
+      "46"
+    ],
+    "entry_ids": [
+      "entry-4c21991852d2ac0e0f3a",
+      "entry-c047ff5922c3fc3f18df"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-409882d71e2a7e6ecf0b",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Dhaka",
+      "47"
+    ],
+    "entry_ids": [
+      "entry-eb37f5125af6c7fa8554",
+      "entry-7139c0d939e8c72d9cec"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-3b06232f8a1378a9257c",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Dhaka",
+      "48"
+    ],
+    "entry_ids": [
+      "entry-569f349d24666ad22ea6",
+      "entry-26145a534e74c2b1bf7b"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-a11a67411a0dad0cd4f4",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Dhaka",
+      "49"
+    ],
+    "entry_ids": [
+      "entry-1640c9a4b8aa9529de56",
+      "entry-83348e01fd7ae89dae98"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-a8eb5f142a6db8c719c7",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Dhaka",
+      "50"
+    ],
+    "entry_ids": [
+      "entry-ab8ff65b825af3f831f1",
+      "entry-c0d9444e794306bb90ba"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-e6a057a736253b9ac01e",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Dhaka",
+      "51"
+    ],
+    "entry_ids": [
+      "entry-6460d8a6d2de363c22a9",
+      "entry-3ebecaf3e8bdc14fe5a1"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-bda91da1f3c00c21dc06",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Dhaka",
+      "52"
+    ],
+    "entry_ids": [
+      "entry-8bb0dcfe08923ae5c209",
+      "entry-beb270deecd1e287c01d"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-13b9e7def4c845071c33",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Dinajpur",
+      "44"
+    ],
+    "entry_ids": [
+      "entry-af3c54e368075b6da924",
+      "entry-ca949d9da7ef3f9c8a32"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-1a6261da66df8a513e15",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Dinajpur",
+      "45"
+    ],
+    "entry_ids": [
+      "entry-f0b22168a0a70721c154",
+      "entry-b443e9df1efa8ad69fbd"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-3d05dd2665a22a633df5",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Dinajpur",
+      "46"
+    ],
+    "entry_ids": [
+      "entry-92ee7db92225236ab310",
+      "entry-74386e154f5cb5f1ce99"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-d266db4efbb6c91bca82",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Dinajpur",
+      "47"
+    ],
+    "entry_ids": [
+      "entry-3071e8b6efda1000e0e9",
+      "entry-0d9a8c8129a1c2628d49"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-822f65a1fca48d97e410",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Dinajpur",
+      "48"
+    ],
+    "entry_ids": [
+      "entry-7e20e8e0c375f90fd844",
+      "entry-528936d9a20124589367"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-0abcfcb55da5f5c7b516",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Dinajpur",
+      "49"
+    ],
+    "entry_ids": [
+      "entry-808d5ceb46caaf71e87c",
+      "entry-3d80fcbaf5a5f558f595"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-b140921692e1a04fbdfc",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Dinajpur",
+      "50"
+    ],
+    "entry_ids": [
+      "entry-94a771a1d8ec97b8a89c",
+      "entry-7997c021a588682c1ede"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-2778e500d5495c9eac4e",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Dinajpur",
+      "51"
+    ],
+    "entry_ids": [
+      "entry-adf20321037f47eafc9b",
+      "entry-037b36f64c0bb8506f09"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-205c188994916cd42baa",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Dinajpur",
+      "52"
+    ],
+    "entry_ids": [
+      "entry-9fce36d730da7f2990b7",
+      "entry-412ec28c41af36be63a6"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-736f25e04ea86014b04b",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Faridpur",
+      "42"
+    ],
+    "entry_ids": [
+      "entry-d899bab13eef3e0dc653",
+      "entry-b5509bc2fdab7b339ab1"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-4851587609faecb866f4",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Faridpur",
+      "43"
+    ],
+    "entry_ids": [
+      "entry-c075b33b63a894aafa2a",
+      "entry-4d2dbd2b93d4ff6d81cb"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-6773bcd91c1bc45d3450",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Faridpur",
+      "44"
+    ],
+    "entry_ids": [
+      "entry-aad3f3fe07bd0ecee4c6",
+      "entry-8fed00225281ebc84be7"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-cd82fcd7fb59253aee40",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Faridpur",
+      "45"
+    ],
+    "entry_ids": [
+      "entry-e0e1b487de7ed7967ee9",
+      "entry-b09e8f0a311bb28146f7"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-d49deed25f702546845c",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Faridpur",
+      "46"
+    ],
+    "entry_ids": [
+      "entry-ec53db857cefdf2ab555",
+      "entry-ac0c46b02c0664f48ac0"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-6c20747ee935903a5b1c",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Faridpur",
+      "47"
+    ],
+    "entry_ids": [
+      "entry-af931579aa1ce8b209af",
+      "entry-7a055f9c9b29217d73e1"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-c051bfaf91bd20d3634a",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Faridpur",
+      "48"
+    ],
+    "entry_ids": [
+      "entry-1b8591a6431e18043231",
+      "entry-6a969c672e444e8c0a3e"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-73b94b16e174fa66118e",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Faridpur",
+      "49"
+    ],
+    "entry_ids": [
+      "entry-0b5adb91b6deb3e7d2dd",
+      "entry-f7ec7136f2527ceeb26f"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-25504b4c1fbd899d92ed",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Faridpur",
+      "50"
+    ],
+    "entry_ids": [
+      "entry-274f2a5255c14277e659",
+      "entry-26be68a49f234a524a92"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-e1641a8de2f2794812b4",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Jashore",
+      "40"
+    ],
+    "entry_ids": [
+      "entry-a0d9eacf35035e795aec",
+      "entry-ef8ff311e087b775fe00"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-c73627b96e4667e42c2a",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Jashore",
+      "41"
+    ],
+    "entry_ids": [
+      "entry-620debb40a29f6a56796",
+      "entry-3a08639d6db246a749dc"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-4af67553cacd77ddb981",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Jashore",
+      "42"
+    ],
+    "entry_ids": [
+      "entry-b26f8c79e11255eb7203",
+      "entry-6501c1134855c8cf27c7"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-dffd9f7b56cbec3c99c4",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Jashore",
+      "43"
+    ],
+    "entry_ids": [
+      "entry-0894b199839a62c96359",
+      "entry-78ff47126991c4e52447"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-cf668d69b6f2c7a1ce93",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Jashore",
+      "44"
+    ],
+    "entry_ids": [
+      "entry-cd21b2ea46d4352c6e6d",
+      "entry-2e290c8758d85dd14ad8"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-2c566e27809c9e327c0f",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Jashore",
+      "45"
+    ],
+    "entry_ids": [
+      "entry-ae4d9dc1862ae678c616",
+      "entry-710ff62a0739b7d02632"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-f71106becb976c820369",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Jashore",
+      "46"
+    ],
+    "entry_ids": [
+      "entry-b272c7140fe19a22b0c7",
+      "entry-e7aa94b9610507925592"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-7be384f3d2d9269e9d9d",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Jashore",
+      "47"
+    ],
+    "entry_ids": [
+      "entry-49bd022d5f111b92fee4",
+      "entry-1d14200c37b1c12858e3"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-077f9c51e8ae572201b7",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Jashore",
+      "48"
+    ],
+    "entry_ids": [
+      "entry-8b153ca1dd1756245a3e",
+      "entry-6b447e0dd9a93b9d8f91"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-ebf77540d18d3c239c77",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Khulna",
+      "1"
+    ],
+    "entry_ids": [
+      "entry-56906fd3a2d5d39bc77a",
+      "entry-a5a9c6e8118d6d0e8bb8"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-de457ba1a396f8b97a4e",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Khulna",
+      "2"
+    ],
+    "entry_ids": [
+      "entry-149c33b615e666c62089",
+      "entry-ef64055c068ba48fd832"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-52c3d92157b99d33c476",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Khulna",
+      "46"
+    ],
+    "entry_ids": [
+      "entry-f50cff9b326c4058070d",
+      "entry-3b47aeeafe2b70922b92"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-f1f183aa0d94fa3afb15",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Khulna",
+      "47"
+    ],
+    "entry_ids": [
+      "entry-c326941c1af5299f7405",
+      "entry-0c3ae8a0b8e73f9f85a4"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-bab1832d27071dac5af0",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Khulna",
+      "48"
+    ],
+    "entry_ids": [
+      "entry-a976cdd4b5bacbe110de",
+      "entry-0c16dfb969cdceff94da"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-9227139b7cb76a6183c0",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Khulna",
+      "49"
+    ],
+    "entry_ids": [
+      "entry-62b76618160cdad22ff8",
+      "entry-35dafac49d660e322058"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-1d2ac1682bde933e2fd7",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Khulna",
+      "50"
+    ],
+    "entry_ids": [
+      "entry-474834a66f95037dcc4d",
+      "entry-5ef90ee94a0eb2f16010"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-d7671ce0e3836882b056",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Khulna",
+      "51"
+    ],
+    "entry_ids": [
+      "entry-88d79f872ed63d6e2028",
+      "entry-9b011389236861f0d281"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-1ad2adbb7fde39ea014a",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Khulna",
+      "52"
+    ],
+    "entry_ids": [
+      "entry-0bec1bf518b4d41c9131",
+      "entry-81933255df375b73f54c"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-8921ed950dfd02b0ed4f",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Mymensingh",
+      "44"
+    ],
+    "entry_ids": [
+      "entry-94a01b2bac0abfc6e639",
+      "entry-75af5b70c24d5aa91c0f"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-aad47402747bf0db7bf2",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Mymensingh",
+      "45"
+    ],
+    "entry_ids": [
+      "entry-b7a9471fcb203619b058",
+      "entry-2b9d6ad8f78576dc7390"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-0636221c1206de25ba7f",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Mymensingh",
+      "46"
+    ],
+    "entry_ids": [
+      "entry-b79fcfdcf29c2716ccc5",
+      "entry-b0ebf60b4b432fd2552b"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-5de67697e82dfd0abe45",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Mymensingh",
+      "47"
+    ],
+    "entry_ids": [
+      "entry-24c1fd3d353b3723729a",
+      "entry-9892457b0732768ccac1"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-361de44d1b979a873ef1",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Mymensingh",
+      "48"
+    ],
+    "entry_ids": [
+      "entry-2de74f54f125a3baec3b",
+      "entry-b71127c6ca06f5d390aa"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-19c72d38ec3d2910b806",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Mymensingh",
+      "49"
+    ],
+    "entry_ids": [
+      "entry-e9420adfd3ce3326a4e7",
+      "entry-b993e5ad9a9e74d7b2cd"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-0d13c309c3e64472f3e7",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Mymensingh",
+      "50"
+    ],
+    "entry_ids": [
+      "entry-8a5c9fc208c52a99445f",
+      "entry-d4fd468af01d99e2b3f6"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-b34dd258813a75a2aa87",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Mymensingh",
+      "51"
+    ],
+    "entry_ids": [
+      "entry-5f93db49232c3b04d9f9",
+      "entry-6c1684a6d61a07f48479"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-de4a17ff3cd62ba740f9",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Mymensingh",
+      "52"
+    ],
+    "entry_ids": [
+      "entry-7374254dae7b9f66da89",
+      "entry-ac175add668173298b84"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-7f19fd4342a90cb2ad21",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rajshahi",
+      "42"
+    ],
+    "entry_ids": [
+      "entry-c2ef44302a8c8ba8733b",
+      "entry-4a00404f4c8a0166fe1e"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-95e56a0b955e224335f4",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rajshahi",
+      "43"
+    ],
+    "entry_ids": [
+      "entry-36422229b7b0f785187f",
+      "entry-1d995db86ee6cd412a93"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-ae52d1e8196acfa1322d",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rajshahi",
+      "44"
+    ],
+    "entry_ids": [
+      "entry-f02d86b319c2b6d5f42d",
+      "entry-995541fbe2c8e2b1ec8c"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-79124bea0aa32c349da4",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rajshahi",
+      "45"
+    ],
+    "entry_ids": [
+      "entry-c4dcb958c0218ca3374e",
+      "entry-210f5a59d9daed554d81"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-9e9ee89b488c4011619b",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rajshahi",
+      "46"
+    ],
+    "entry_ids": [
+      "entry-02e575fa6ca6397606e6",
+      "entry-417af67dddc617b08ee2"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-f83d567d48579e971b57",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rajshahi",
+      "47"
+    ],
+    "entry_ids": [
+      "entry-80cfcf34411d763d11ce",
+      "entry-2f5bcde32b297ee812af"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-5c85ddc341c9ce6b15e9",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rajshahi",
+      "48"
+    ],
+    "entry_ids": [
+      "entry-e223676cdf8f54c836bb",
+      "entry-f2c3cf77b390428e9723"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-bcb22f74671c2cd1efcb",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rajshahi",
+      "49"
+    ],
+    "entry_ids": [
+      "entry-4d7b254691237e7bd644",
+      "entry-1b77dd084df07b781dda"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-7016adbce401147f4785",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rajshahi",
+      "50"
+    ],
+    "entry_ids": [
+      "entry-d2658b98265d2836ed07",
+      "entry-c195f045b7d69609f720"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-d098612b47d253fd052c",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rangamati",
+      "44"
+    ],
+    "entry_ids": [
+      "entry-0e6bb1da749558f903ac",
+      "entry-73635e74ec61c9c352b2"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-5a177e6a0894122b542d",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rangamati",
+      "45"
+    ],
+    "entry_ids": [
+      "entry-661628a6363ff123c811",
+      "entry-7dc4b83dec16e8f7f309"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-9e4a70e36bf47611cdd9",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rangamati",
+      "46"
+    ],
+    "entry_ids": [
+      "entry-ddeb9ac72bee5e453072",
+      "entry-9545e7274ac0b867160f"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-b95928eb0a8e5a7ef694",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rangamati",
+      "47"
+    ],
+    "entry_ids": [
+      "entry-be75f46169aaf06f36b2",
+      "entry-cfd4ef229d2dea7878f5"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-5dea443e66f6118f8aef",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rangamati",
+      "48"
+    ],
+    "entry_ids": [
+      "entry-4ce813b9a9657cd4f4bc",
+      "entry-2eacc093975e41ecab9a"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-c5462115e39a4cde45cd",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rangamati",
+      "49"
+    ],
+    "entry_ids": [
+      "entry-e36e61f2b29ff829b9b0",
+      "entry-f6d7374cb768605b5d56"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-313116c2019662ab291b",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rangamati",
+      "50"
+    ],
+    "entry_ids": [
+      "entry-19345be0abbd1e4d517e",
+      "entry-7119f9fa39fdf0fb394f"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-858170c3450b858ed8bd",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rangamati",
+      "51"
+    ],
+    "entry_ids": [
+      "entry-39157104cb8d2a48bf46",
+      "entry-5e3ab34c323fba6f10d0"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-be67ce9bbd0db737e245",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rangamati",
+      "52"
+    ],
+    "entry_ids": [
+      "entry-03e7bc143d8a7deb84d1",
+      "entry-dc94b086620286842c7f"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-8a9b448e33c4430c67e7",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rangpur",
+      "44"
+    ],
+    "entry_ids": [
+      "entry-4b71c7587d03be0d6c99",
+      "entry-8572cf49a02af6d8498f"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-8201151c2bd73f39ed03",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rangpur",
+      "45"
+    ],
+    "entry_ids": [
+      "entry-d3543d37749fec97ec9f",
+      "entry-43514cfa7f360ca1cbd7"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-33f51341a339acc51055",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rangpur",
+      "46"
+    ],
+    "entry_ids": [
+      "entry-227147df6ad7526e6a54",
+      "entry-d69ed81616dce0729d3b"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-aa0c406a8adb97f8455a",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rangpur",
+      "47"
+    ],
+    "entry_ids": [
+      "entry-b393798425f792343251",
+      "entry-9d75ee253dec6c86d2f2"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-3d37608fffe757847fea",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rangpur",
+      "48"
+    ],
+    "entry_ids": [
+      "entry-46ccc04c7ca027afd2cf",
+      "entry-2ccec0ce852a25272b23"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-aec127ea048b7dd49260",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rangpur",
+      "49"
+    ],
+    "entry_ids": [
+      "entry-3d6f4c1aeba3490fa5a9",
+      "entry-2bacf42bb13758ead7a0"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-e3b995678d04a6f5e2c0",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rangpur",
+      "50"
+    ],
+    "entry_ids": [
+      "entry-22551026848ac7c25a07",
+      "entry-e804910b666c3b5e3655"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-02307865e8ed97188160",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rangpur",
+      "51"
+    ],
+    "entry_ids": [
+      "entry-b8755e1cfaee429246ab",
+      "entry-464d273aa0afb378ed5a"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  },
+  {
+    "group_id": "repetition-abf6354a7b5aa2facc5d",
+    "key": [
+      "Sugarcane",
+      "Unspecified",
+      "Rangpur",
+      "52"
+    ],
+    "entry_ids": [
+      "entry-9ac4294dbfe8ea421e30",
+      "entry-be0f610fd29d82ea757b"
+    ],
+    "status": "unresolved source alternatives; retained, never averaged or deduplicated"
+  }
+]

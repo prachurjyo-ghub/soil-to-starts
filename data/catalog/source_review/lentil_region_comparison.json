@@ -1,0 +1,1229 @@
+[
+  {
+    "source_id": "bamis_8733_32fc7400",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Barishal/8733.pdf",
+    "source_sha256": "52a21cc37716182512cae5e81dff9dc968d9f6fdaf8543a5a29da797274832c5",
+    "region": "Barishal",
+    "calendars": [
+      {
+        "source_table_id": "bamis_8733_32fc7400_p001_t001",
+        "source_page": 1,
+        "month_groups": [
+          {
+            "month_label_raw": "November",
+            "month_number": 11,
+            "standard_weeks": [
+              46,
+              47,
+              48
+            ],
+            "source_columns": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "month_label_raw": "December",
+            "month_number": 12,
+            "standard_weeks": [
+              49,
+              50,
+              51,
+              52
+            ],
+            "source_columns": [
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          {
+            "month_label_raw": "January",
+            "month_number": 1,
+            "standard_weeks": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "source_columns": [
+              8,
+              9,
+              10,
+              11
+            ]
+          },
+          {
+            "month_label_raw": "February",
+            "month_number": 2,
+            "standard_weeks": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "source_columns": [
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          {
+            "month_label_raw": "March",
+            "month_number": 3,
+            "standard_weeks": [
+              9,
+              10
+            ],
+            "source_columns": [
+              16,
+              17
+            ]
+          }
+        ],
+        "month_label_gaps": []
+      }
+    ],
+    "has_month_label_gap": false,
+    "status": "preserved source comparison; no cross-region substitution"
+  },
+  {
+    "source_id": "bamis_8734_785cc231",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Bogura/8734.pdf",
+    "source_sha256": "97a6cd3f544bae937896dd7b029eb9f699f481381579e3b2141bcc21081b0355",
+    "region": "Bogura",
+    "calendars": [
+      {
+        "source_table_id": "bamis_8734_785cc231_p001_t001",
+        "source_page": 1,
+        "month_groups": [
+          {
+            "month_label_raw": "November",
+            "month_number": 11,
+            "standard_weeks": [
+              45,
+              46,
+              47,
+              48
+            ],
+            "source_columns": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "month_label_raw": "December",
+            "month_number": 12,
+            "standard_weeks": [
+              49,
+              50,
+              51,
+              52
+            ],
+            "source_columns": [
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "month_label_raw": "January",
+            "month_number": 1,
+            "standard_weeks": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "source_columns": [
+              9,
+              10,
+              11,
+              12
+            ]
+          },
+          {
+            "month_label_raw": "February",
+            "month_number": 2,
+            "standard_weeks": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "source_columns": [
+              13,
+              14,
+              15,
+              16
+            ]
+          },
+          {
+            "month_label_raw": "Mar.",
+            "month_number": 3,
+            "standard_weeks": [
+              9
+            ],
+            "source_columns": [
+              17
+            ]
+          }
+        ],
+        "month_label_gaps": []
+      }
+    ],
+    "has_month_label_gap": false,
+    "status": "preserved source comparison; no cross-region substitution"
+  },
+  {
+    "source_id": "bamis_8722_7e0cbe12",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Chattogram/8722.pdf",
+    "source_sha256": "d6c6a3e3ea9fb7ec883f7c04d6d58c7ba93341acce9b923ad7aa5fd8cc77dff7",
+    "region": "Chattogram",
+    "calendars": [
+      {
+        "source_table_id": "bamis_8722_7e0cbe12_p001_t001",
+        "source_page": 1,
+        "month_groups": [
+          {
+            "month_label_raw": "October",
+            "month_number": 10,
+            "standard_weeks": [
+              41,
+              42,
+              43,
+              44
+            ],
+            "source_columns": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "month_label_raw": "November",
+            "month_number": 11,
+            "standard_weeks": [
+              45,
+              46,
+              47,
+              48
+            ],
+            "source_columns": [
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "month_label_raw": "December",
+            "month_number": 12,
+            "standard_weeks": [
+              49,
+              50,
+              51,
+              52
+            ],
+            "source_columns": [
+              9,
+              10,
+              11,
+              12
+            ]
+          },
+          {
+            "month_label_raw": "January",
+            "month_number": 1,
+            "standard_weeks": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "source_columns": [
+              13,
+              14,
+              15,
+              16
+            ]
+          },
+          {
+            "month_label_raw": "Feb",
+            "month_number": 2,
+            "standard_weeks": [
+              5
+            ],
+            "source_columns": [
+              17
+            ]
+          }
+        ],
+        "month_label_gaps": []
+      }
+    ],
+    "has_month_label_gap": false,
+    "status": "preserved source comparison; no cross-region substitution"
+  },
+  {
+    "source_id": "bamis_8732_0a9ae1bf",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Cumilla/8732.pdf",
+    "source_sha256": "8e9432699d937fd0c20de6f132c383c6d9f9b526d0843c5029ce59d6bddf148f",
+    "region": "Cumilla",
+    "calendars": [
+      {
+        "source_table_id": "bamis_8732_0a9ae1bf_p001_t001",
+        "source_page": 1,
+        "month_groups": [
+          {
+            "month_label_raw": "October",
+            "month_number": 10,
+            "standard_weeks": [
+              41,
+              42,
+              43,
+              44
+            ],
+            "source_columns": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "month_label_raw": "November",
+            "month_number": 11,
+            "standard_weeks": [
+              45,
+              46,
+              47,
+              48
+            ],
+            "source_columns": [
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "month_label_raw": "December",
+            "month_number": 12,
+            "standard_weeks": [
+              49,
+              50,
+              51,
+              52
+            ],
+            "source_columns": [
+              9,
+              10,
+              11,
+              12
+            ]
+          },
+          {
+            "month_label_raw": "January",
+            "month_number": 1,
+            "standard_weeks": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "source_columns": [
+              13,
+              14,
+              15,
+              16
+            ]
+          },
+          {
+            "month_label_raw": "Feb",
+            "month_number": 2,
+            "standard_weeks": [
+              5
+            ],
+            "source_columns": [
+              17
+            ]
+          }
+        ],
+        "month_label_gaps": []
+      }
+    ],
+    "has_month_label_gap": false,
+    "status": "preserved source comparison; no cross-region substitution"
+  },
+  {
+    "source_id": "bamis_8731_9526299a",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Dhaka/8731.pdf",
+    "source_sha256": "0096b33db71c515d3893335001d03c48340eb153da55e14499c4e1394f361cf7",
+    "region": "Dhaka",
+    "calendars": [
+      {
+        "source_table_id": "bamis_8731_9526299a_p001_t001",
+        "source_page": 1,
+        "month_groups": [
+          {
+            "month_label_raw": "October",
+            "month_number": 10,
+            "standard_weeks": [
+              42,
+              43,
+              44
+            ],
+            "source_columns": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "month_label_raw": "November",
+            "month_number": 11,
+            "standard_weeks": [
+              45,
+              46,
+              47,
+              48
+            ],
+            "source_columns": [
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          {
+            "month_label_raw": "December",
+            "month_number": 12,
+            "standard_weeks": [
+              49,
+              50,
+              51,
+              52
+            ],
+            "source_columns": [
+              8,
+              9,
+              10,
+              11
+            ]
+          },
+          {
+            "month_label_raw": "February",
+            "month_number": 2,
+            "standard_weeks": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "source_columns": [
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          {
+            "month_label_raw": "March",
+            "month_number": 3,
+            "standard_weeks": [
+              5,
+              6
+            ],
+            "source_columns": [
+              16,
+              17
+            ]
+          }
+        ],
+        "month_label_gaps": [
+          {
+            "before": "December",
+            "after": "February",
+            "before_last_week": 52,
+            "after_first_week": 1,
+            "omitted_month_numbers": [
+              1
+            ],
+            "disposition": "printed month-label gap; no corrected date/month or ISO-week interpretation assigned"
+          }
+        ]
+      }
+    ],
+    "has_month_label_gap": true,
+    "status": "preserved source comparison; no cross-region substitution"
+  },
+  {
+    "source_id": "bamis_8730_b31b3dc2",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Dinajpur/8730.pdf",
+    "source_sha256": "ad80d37643aa8afc55b66cd6c1e86b40ba1eb723f52f80c2f721e9338ec91413",
+    "region": "Dinajpur",
+    "calendars": [
+      {
+        "source_table_id": "bamis_8730_b31b3dc2_p001_t001",
+        "source_page": 1,
+        "month_groups": [
+          {
+            "month_label_raw": "October",
+            "month_number": 10,
+            "standard_weeks": [
+              41,
+              42,
+              43,
+              44
+            ],
+            "source_columns": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "month_label_raw": "November",
+            "month_number": 11,
+            "standard_weeks": [
+              45,
+              46,
+              47,
+              48
+            ],
+            "source_columns": [
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "month_label_raw": "December",
+            "month_number": 12,
+            "standard_weeks": [
+              49,
+              50,
+              51,
+              52
+            ],
+            "source_columns": [
+              9,
+              10,
+              11,
+              12
+            ]
+          },
+          {
+            "month_label_raw": "January",
+            "month_number": 1,
+            "standard_weeks": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "source_columns": [
+              13,
+              14,
+              15,
+              16
+            ]
+          },
+          {
+            "month_label_raw": "Feb",
+            "month_number": 2,
+            "standard_weeks": [
+              5
+            ],
+            "source_columns": [
+              17
+            ]
+          }
+        ],
+        "month_label_gaps": []
+      }
+    ],
+    "has_month_label_gap": false,
+    "status": "preserved source comparison; no cross-region substitution"
+  },
+  {
+    "source_id": "bamis_8729_a98b4b9e",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Faridpur/8729.pdf",
+    "source_sha256": "25da9247b4bbcf2611eb1b46c3546f0725527a364b9c83a63b9c255e912a257e",
+    "region": "Faridpur",
+    "calendars": [
+      {
+        "source_table_id": "bamis_8729_a98b4b9e_p001_t001",
+        "source_page": 1,
+        "month_groups": [
+          {
+            "month_label_raw": "October",
+            "month_number": 10,
+            "standard_weeks": [
+              42,
+              43,
+              44
+            ],
+            "source_columns": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "month_label_raw": "November",
+            "month_number": 11,
+            "standard_weeks": [
+              45,
+              46,
+              47,
+              48
+            ],
+            "source_columns": [
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          {
+            "month_label_raw": "December",
+            "month_number": 12,
+            "standard_weeks": [
+              49,
+              50,
+              51,
+              52
+            ],
+            "source_columns": [
+              8,
+              9,
+              10,
+              11
+            ]
+          },
+          {
+            "month_label_raw": "February",
+            "month_number": 2,
+            "standard_weeks": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "source_columns": [
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          {
+            "month_label_raw": "March",
+            "month_number": 3,
+            "standard_weeks": [
+              5,
+              6
+            ],
+            "source_columns": [
+              16,
+              17
+            ]
+          }
+        ],
+        "month_label_gaps": [
+          {
+            "before": "December",
+            "after": "February",
+            "before_last_week": 52,
+            "after_first_week": 1,
+            "omitted_month_numbers": [
+              1
+            ],
+            "disposition": "printed month-label gap; no corrected date/month or ISO-week interpretation assigned"
+          }
+        ]
+      }
+    ],
+    "has_month_label_gap": true,
+    "status": "preserved source comparison; no cross-region substitution"
+  },
+  {
+    "source_id": "bamis_8728_7ad616e2",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Jashore/8728.pdf",
+    "source_sha256": "7bd35ebe7d28013d946d7043f3c0054b125512b849b1765f741fcacb31e999be",
+    "region": "Jashore",
+    "calendars": [
+      {
+        "source_table_id": "bamis_8728_7ad616e2_p001_t001",
+        "source_page": 1,
+        "month_groups": [
+          {
+            "month_label_raw": "November",
+            "month_number": 11,
+            "standard_weeks": [
+              45,
+              46,
+              47,
+              48
+            ],
+            "source_columns": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "month_label_raw": "December",
+            "month_number": 12,
+            "standard_weeks": [
+              49,
+              50,
+              51,
+              52
+            ],
+            "source_columns": [
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "month_label_raw": "January",
+            "month_number": 1,
+            "standard_weeks": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "source_columns": [
+              9,
+              10,
+              11,
+              12
+            ]
+          },
+          {
+            "month_label_raw": "February",
+            "month_number": 2,
+            "standard_weeks": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "source_columns": [
+              13,
+              14,
+              15,
+              16
+            ]
+          },
+          {
+            "month_label_raw": "Mar.",
+            "month_number": 3,
+            "standard_weeks": [
+              9
+            ],
+            "source_columns": [
+              17
+            ]
+          }
+        ],
+        "month_label_gaps": []
+      }
+    ],
+    "has_month_label_gap": false,
+    "status": "preserved source comparison; no cross-region substitution"
+  },
+  {
+    "source_id": "bamis_8727_fc29c938",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Khulna/8727.pdf",
+    "source_sha256": "7d90fe77a0742c28bcfd5b6c81c5dfc5f363986ea7008c556f5fdaa67a869d0d",
+    "region": "Khulna",
+    "calendars": [
+      {
+        "source_table_id": "bamis_8727_fc29c938_p001_t001",
+        "source_page": 1,
+        "month_groups": [
+          {
+            "month_label_raw": "November",
+            "month_number": 11,
+            "standard_weeks": [
+              45,
+              46,
+              47,
+              48
+            ],
+            "source_columns": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "month_label_raw": "December",
+            "month_number": 12,
+            "standard_weeks": [
+              49,
+              50,
+              51,
+              52
+            ],
+            "source_columns": [
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "month_label_raw": "January",
+            "month_number": 1,
+            "standard_weeks": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "source_columns": [
+              9,
+              10,
+              11,
+              12
+            ]
+          },
+          {
+            "month_label_raw": "February",
+            "month_number": 2,
+            "standard_weeks": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "source_columns": [
+              13,
+              14,
+              15,
+              16
+            ]
+          },
+          {
+            "month_label_raw": "Mar",
+            "month_number": 3,
+            "standard_weeks": [
+              9
+            ],
+            "source_columns": [
+              17
+            ]
+          }
+        ],
+        "month_label_gaps": []
+      }
+    ],
+    "has_month_label_gap": false,
+    "status": "preserved source comparison; no cross-region substitution"
+  },
+  {
+    "source_id": "bamis_8726_7f7ba368",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Mymensingh/8726.pdf",
+    "source_sha256": "4895f9965c1b93e9d722b4c2d0e3b85823a09530e9ae30c203baea3a32e1990e",
+    "region": "Mymensingh",
+    "calendars": [
+      {
+        "source_table_id": "bamis_8726_7f7ba368_p001_t001",
+        "source_page": 1,
+        "month_groups": [
+          {
+            "month_label_raw": "October",
+            "month_number": 10,
+            "standard_weeks": [
+              42,
+              43,
+              44
+            ],
+            "source_columns": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "month_label_raw": "November",
+            "month_number": 11,
+            "standard_weeks": [
+              45,
+              46,
+              47,
+              48
+            ],
+            "source_columns": [
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          {
+            "month_label_raw": "December",
+            "month_number": 12,
+            "standard_weeks": [
+              49,
+              50,
+              51,
+              52
+            ],
+            "source_columns": [
+              8,
+              9,
+              10,
+              11
+            ]
+          },
+          {
+            "month_label_raw": "February",
+            "month_number": 2,
+            "standard_weeks": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "source_columns": [
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          {
+            "month_label_raw": "March",
+            "month_number": 3,
+            "standard_weeks": [
+              5,
+              6
+            ],
+            "source_columns": [
+              16,
+              17
+            ]
+          }
+        ],
+        "month_label_gaps": [
+          {
+            "before": "December",
+            "after": "February",
+            "before_last_week": 52,
+            "after_first_week": 1,
+            "omitted_month_numbers": [
+              1
+            ],
+            "disposition": "printed month-label gap; no corrected date/month or ISO-week interpretation assigned"
+          }
+        ]
+      }
+    ],
+    "has_month_label_gap": true,
+    "status": "preserved source comparison; no cross-region substitution"
+  },
+  {
+    "source_id": "bamis_8725_d6bc624f",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Rajshahi/8725.pdf",
+    "source_sha256": "42117b6b8895de9c6253fc82a78f74b55ea772b748b8bac2dc673fb356463b79",
+    "region": "Rajshahi",
+    "calendars": [
+      {
+        "source_table_id": "bamis_8725_d6bc624f_p001_t001",
+        "source_page": 1,
+        "month_groups": [
+          {
+            "month_label_raw": "October",
+            "month_number": 10,
+            "standard_weeks": [
+              42,
+              43,
+              44
+            ],
+            "source_columns": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "month_label_raw": "November",
+            "month_number": 11,
+            "standard_weeks": [
+              45,
+              46,
+              47,
+              48
+            ],
+            "source_columns": [
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          {
+            "month_label_raw": "December",
+            "month_number": 12,
+            "standard_weeks": [
+              49,
+              50,
+              51,
+              52
+            ],
+            "source_columns": [
+              8,
+              9,
+              10,
+              11
+            ]
+          },
+          {
+            "month_label_raw": "February",
+            "month_number": 2,
+            "standard_weeks": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "source_columns": [
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          {
+            "month_label_raw": "March",
+            "month_number": 3,
+            "standard_weeks": [
+              5,
+              6
+            ],
+            "source_columns": [
+              16,
+              17
+            ]
+          }
+        ],
+        "month_label_gaps": [
+          {
+            "before": "December",
+            "after": "February",
+            "before_last_week": 52,
+            "after_first_week": 1,
+            "omitted_month_numbers": [
+              1
+            ],
+            "disposition": "printed month-label gap; no corrected date/month or ISO-week interpretation assigned"
+          }
+        ]
+      }
+    ],
+    "has_month_label_gap": true,
+    "status": "preserved source comparison; no cross-region substitution"
+  },
+  {
+    "source_id": "bamis_8723_d31a1ce4",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Rangpur/8723.pdf",
+    "source_sha256": "9a7d04e458b1a45155114c933bcd654041097314e533bc77e7b92d2e3785d1b8",
+    "region": "Rangpur",
+    "calendars": [
+      {
+        "source_table_id": "bamis_8723_d31a1ce4_p001_t001",
+        "source_page": 1,
+        "month_groups": [
+          {
+            "month_label_raw": "October",
+            "month_number": 10,
+            "standard_weeks": [
+              42,
+              43,
+              44
+            ],
+            "source_columns": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "month_label_raw": "November",
+            "month_number": 11,
+            "standard_weeks": [
+              45,
+              46,
+              47,
+              48
+            ],
+            "source_columns": [
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          {
+            "month_label_raw": "December",
+            "month_number": 12,
+            "standard_weeks": [
+              49,
+              50,
+              51,
+              52
+            ],
+            "source_columns": [
+              8,
+              9,
+              10,
+              11
+            ]
+          },
+          {
+            "month_label_raw": "January",
+            "month_number": 1,
+            "standard_weeks": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "source_columns": [
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          {
+            "month_label_raw": "Feb",
+            "month_number": 2,
+            "standard_weeks": [
+              5,
+              6
+            ],
+            "source_columns": [
+              16,
+              17
+            ]
+          }
+        ],
+        "month_label_gaps": []
+      }
+    ],
+    "has_month_label_gap": false,
+    "status": "preserved source comparison; no cross-region substitution"
+  },
+  {
+    "source_id": "bamis_8724_67467ef6",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Sylhet/8724.pdf",
+    "source_sha256": "cd634092a539c587191a14c8ee22ce15a02787d39d3d560ce41ed8b3e5ce9f65",
+    "region": "Sylhet",
+    "calendars": [
+      {
+        "source_table_id": "bamis_8724_67467ef6_p001_t001",
+        "source_page": 1,
+        "month_groups": [
+          {
+            "month_label_raw": "October",
+            "month_number": 10,
+            "standard_weeks": [
+              41,
+              42,
+              43,
+              44
+            ],
+            "source_columns": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "month_label_raw": "November",
+            "month_number": 11,
+            "standard_weeks": [
+              45,
+              46,
+              47,
+              48
+            ],
+            "source_columns": [
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "month_label_raw": "December",
+            "month_number": 12,
+            "standard_weeks": [
+              49,
+              50,
+              51,
+              52
+            ],
+            "source_columns": [
+              9,
+              10,
+              11,
+              12
+            ]
+          },
+          {
+            "month_label_raw": "January",
+            "month_number": 1,
+            "standard_weeks": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "source_columns": [
+              13,
+              14,
+              15,
+              16
+            ]
+          },
+          {
+            "month_label_raw": "Feb",
+            "month_number": 2,
+            "standard_weeks": [
+              5
+            ],
+            "source_columns": [
+              17
+            ]
+          }
+        ],
+        "month_label_gaps": []
+      }
+    ],
+    "has_month_label_gap": false,
+    "status": "preserved source comparison; no cross-region substitution"
+  }
+]

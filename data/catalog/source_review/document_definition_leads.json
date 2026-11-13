@@ -1,0 +1,2864 @@
+[
+  {
+    "source_id": "bamis_25591_d97a6b54",
+    "source_pdf": "BAMIS_All_Crops/Banana/Barishal/25591.pdf",
+    "source_sha256": "4ecc70fdf934853e7ebbc0a401b3418c1e7fef23c01cbdc0102a9d351b6472e1",
+    "crop_folder": "Banana",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25593_6dba7d23",
+    "source_pdf": "BAMIS_All_Crops/Banana/Bogura/25593.pdf",
+    "source_sha256": "903a7ae2e52371659d7b509adb3074451a4d0255397b2cfd9159014835b507ba",
+    "crop_folder": "Banana",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25595_6f0f1b21",
+    "source_pdf": "BAMIS_All_Crops/Banana/Dhaka/25595.pdf",
+    "source_sha256": "c7b1ebfd643440396d6a154a0a58c4e13e051eb7607068d6692c8cd4a92a5ebf",
+    "crop_folder": "Banana",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25597_a51b5e61",
+    "source_pdf": "BAMIS_All_Crops/Banana/Jashore/25597.pdf",
+    "source_sha256": "b38aafc31751f414c6b7cd9a28bf3232c84e53dc332f1e1cdcc2760ab6ec3b07",
+    "crop_folder": "Banana",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25599_1ba0fb15",
+    "source_pdf": "BAMIS_All_Crops/Banana/Mymensingh/25599.pdf",
+    "source_sha256": "20bb160c989e03fba4af677e365552363caf5cab3a94af4281bfbc573a2b903d",
+    "crop_folder": "Banana",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25601_c544eee8",
+    "source_pdf": "BAMIS_All_Crops/Banana/Rangamati/25601.pdf",
+    "source_sha256": "344f901cd088df5b18f4841d8685c65034590094cf3313dd1892c60f57f0f1d3",
+    "crop_folder": "Banana",
+    "region": "Rangamati",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25603_20c8736e",
+    "source_pdf": "BAMIS_All_Crops/Banana/Rangpur/25603.pdf",
+    "source_sha256": "1bcb41a1734817ece1f6740683dabefa5574ef165f109c6676983a5945c4d6e1",
+    "crop_folder": "Banana",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27405_05f745d1",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Barishal/27405.pdf",
+    "source_sha256": "3de62e1b927c85b53b18d99b8a16672164ca5afeadf847bbc84d667fd6719357",
+    "crop_folder": "Brinjal",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27408_49f0247b",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Bogura/27408.pdf",
+    "source_sha256": "344082c831bd0b064c97e20ebe09ca59673b13afa05e24e23fd38e586f7e5982",
+    "crop_folder": "Brinjal",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27410_d1aaf135",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Chattogram/27410.pdf",
+    "source_sha256": "b8678fe860c0b6c77bf005df199927158b02373ae3d16b2d7525568b29f6d960",
+    "crop_folder": "Brinjal",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27411_3dbc83d3",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Cumilla/27411.pdf",
+    "source_sha256": "d894ec896ddd04f322ac152d929afafcd2d1e259b4d31c4895a1b2bbf1877b22",
+    "crop_folder": "Brinjal",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26537_934f46b6",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Dhaka/26537.pdf",
+    "source_sha256": "2cfeb54caf8daddf3b648cab1e83c3bc07913c32b89f09affc170b38ab9462f3",
+    "crop_folder": "Brinjal",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27414_afab4e2e",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Jashore/27414.pdf",
+    "source_sha256": "aa0c95fdbeb81d018538610c5deb53da92920b0118ba7f213a13347d60414b95",
+    "crop_folder": "Brinjal",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27416_63a321ad",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Khulna/27416.pdf",
+    "source_sha256": "863c5ca24c286cb4de249e62e466a6d6dd7f53c32a76bf1f54ca99044a414938",
+    "crop_folder": "Brinjal",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27417_0438e6b8",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Mymensingh/27417.pdf",
+    "source_sha256": "92631b6f959e93a9df09d87a0656cdd3ec8ebad31b67ac3c5e9b50377284bd64",
+    "crop_folder": "Brinjal",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27419_44d772f6",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Rajshahi/27419.pdf",
+    "source_sha256": "524109f8182fef790bbb5f28387098a961ad39d14cc3e8a09c904037101b699b",
+    "crop_folder": "Brinjal",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27422_a50ea303",
+    "source_pdf": "BAMIS_All_Crops/Brinjal/Sylhet/27422.pdf",
+    "source_sha256": "a07b69a8d287e70b4b843ce0a8a2a1fa87e4e5bf46d095bbb3cb1dee007ac6aa",
+    "crop_folder": "Brinjal",
+    "region": "Sylhet",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25110_b923ecda",
+    "source_pdf": "BAMIS_All_Crops/Cotton/Bogura/25110.pdf",
+    "source_sha256": "55ab1d48eb841ab3ffb4d6cd97190e66d35affa8ee74264b5a84504b9e88537b",
+    "crop_folder": "Cotton",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25112_7c88053b",
+    "source_pdf": "BAMIS_All_Crops/Cotton/Dhaka/25112.pdf",
+    "source_sha256": "af24b9a224d0b35e064b0b8ea452bcdf8f9819f0454caa66724481317f69de3b",
+    "crop_folder": "Cotton",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25114_241eb8ab",
+    "source_pdf": "BAMIS_All_Crops/Cotton/Dinajpur/25114.pdf",
+    "source_sha256": "e8e994a72983b501d72c26b39df092da06841ac99f0aa804d2e44419a1b19315",
+    "crop_folder": "Cotton",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25116_83177e1f",
+    "source_pdf": "BAMIS_All_Crops/Cotton/Jashore/25116.pdf",
+    "source_sha256": "aa0bfbc7e57ac5f153105e30d19d6ea00480b8a81e66ee8ebbe1e84085c81ed3",
+    "crop_folder": "Cotton",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25118_51a6202e",
+    "source_pdf": "BAMIS_All_Crops/Cotton/Mymensingh/25118.pdf",
+    "source_sha256": "b5ed3b17b4b911350b98af9b1cf68f1514058fea249ea6cc09a0dca920c782e0",
+    "crop_folder": "Cotton",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25120_fd2283db",
+    "source_pdf": "BAMIS_All_Crops/Cotton/Rajshahi/25120.pdf",
+    "source_sha256": "6c7d6272c13282fa1fda8878348a796b85c5d957de3d42fdbd2c16ebf4e28942",
+    "crop_folder": "Cotton",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25122_39e422ac",
+    "source_pdf": "BAMIS_All_Crops/Cotton/Rangpur/25122.pdf",
+    "source_sha256": "76c92384dbf01ad4dbd4ffd72174b0ba42a010b2a7c9ffdc640e38aaf568bb43",
+    "crop_folder": "Cotton",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26932_85126578",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Barishal/26932.pdf",
+    "source_sha256": "9ab9e8cf93cb40d0e14bd7590ef23a2165f548fb4a637bde34ecda24a499baf5",
+    "crop_folder": "Cucumber",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26983_d5f2cf66",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Bogura/26983.pdf",
+    "source_sha256": "29933179420c1fc35c9acf22138a0ab33fff86303d9cef92bdffb960e1bab4fd",
+    "crop_folder": "Cucumber",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26530_26548805",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Chattogram/26530.pdf",
+    "source_sha256": "60ddbbacbc6076400d802dfa1f05624ea29a21bf112dc96b4d5fe42530875bb9",
+    "crop_folder": "Cucumber",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26985_f3bd72b5",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Dhaka/26985.pdf",
+    "source_sha256": "c07f1cf2dca5cea9496eee260feb51d3463be758875cedd4e95ef9fba276629e",
+    "crop_folder": "Cucumber",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26992_15e300e6",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Faridpur/26992.pdf",
+    "source_sha256": "ddf5d06dc00283f6c2084192491026147b30732414b2c4eaa5d65adfed178063",
+    "crop_folder": "Cucumber",
+    "region": "Faridpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26997_ba08c38e",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Jashore/26997.pdf",
+    "source_sha256": "955e8c95a89959cf506c45e38c271e593de7f1ae2d1320430338c0d3e10c023b",
+    "crop_folder": "Cucumber",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26999_26d3f4d5",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Khulna/26999.pdf",
+    "source_sha256": "eee6ac8600e03ecbd4e2bfddc5b93321926801e11a62e804929fd918175d432e",
+    "crop_folder": "Cucumber",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27005_87c91086",
+    "source_pdf": "BAMIS_All_Crops/Cucumber/Rajshahi/27005.pdf",
+    "source_sha256": "01585dee00b98d2ea2a9596da20a923464cc326ec8ed72f80ca3d530e5e201b2",
+    "crop_folder": "Cucumber",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26512_76561ea6",
+    "source_pdf": "BAMIS_All_Crops/Garlic/Bogura/26512.pdf",
+    "source_sha256": "50704739ddad213525f7f686d9db7d20be14c5db7bcb307dd6ef2586b68bd950",
+    "crop_folder": "Garlic",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26514_68a303a5",
+    "source_pdf": "BAMIS_All_Crops/Garlic/Cumilla/26514.pdf",
+    "source_sha256": "454250601cf07cfc555a3547e66b61c18eb94b82e141efa4cee3e8336e8dc5fd",
+    "crop_folder": "Garlic",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26516_eb84692d",
+    "source_pdf": "BAMIS_All_Crops/Garlic/Dhaka/26516.pdf",
+    "source_sha256": "cad6fef282ef89e1d6d77b92b20db09ccb9dd47e04cbc01b3ad7d0225887e07e",
+    "crop_folder": "Garlic",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26518_16a2e18d",
+    "source_pdf": "BAMIS_All_Crops/Garlic/Dinajpur/26518.pdf",
+    "source_sha256": "33fd5e69b0ef4872e81239a63c92814031aa205234bba4a43ba671709027e5fd",
+    "crop_folder": "Garlic",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26520_f3191baa",
+    "source_pdf": "BAMIS_All_Crops/Garlic/Faridpur/26520.pdf",
+    "source_sha256": "8ca43f1d8beed8c5e1d0ef4a12fdc4b8fb7507113eb38812f2c099547d887064",
+    "crop_folder": "Garlic",
+    "region": "Faridpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26522_242c8495",
+    "source_pdf": "BAMIS_All_Crops/Garlic/Jashore/26522.pdf",
+    "source_sha256": "d6895202550559bee8427e0cf3b201d3f6105b4d1e0908f3d921b92c0f65a9b9",
+    "crop_folder": "Garlic",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26524_dcf98fd7",
+    "source_pdf": "BAMIS_All_Crops/Garlic/Mymensingh/26524.pdf",
+    "source_sha256": "5f2d01e76a3c9fcd37a5a954fea3d2bc08d01d3edeef6291708f6eb9da63b9d7",
+    "crop_folder": "Garlic",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26526_5c3343d1",
+    "source_pdf": "BAMIS_All_Crops/Garlic/Rajshahi/26526.pdf",
+    "source_sha256": "e2e59c576f14cfa1ceaa64c0c842cdd7b01567e07190d61e533006f29011473e",
+    "crop_folder": "Garlic",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26528_c646664d",
+    "source_pdf": "BAMIS_All_Crops/Garlic/Rangpur/26528.pdf",
+    "source_sha256": "aaf28ab2f050cbc52e56a08c24ac3aa890a4feb746fff7783231026b92f7ce78",
+    "crop_folder": "Garlic",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26953_cea21024",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Barishal/26953.pdf",
+    "source_sha256": "bc6ff5b006df6dc7c484cba51894040957e00829909ee4beaf62057248b17ace",
+    "crop_folder": "Gourd",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26955_a6ca6cdc",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Bogura/26955.pdf",
+    "source_sha256": "73123c1d5e6ee22cf033ac63184e30f229ce6c37c6c86b42f0523ffa69a8383d",
+    "crop_folder": "Gourd",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26957_d783db9a",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Chattogram/26957.pdf",
+    "source_sha256": "c472d0227fc04df0c55dfd33b265fa83fb6337cec256315a76ce8bd899e11ef9",
+    "crop_folder": "Gourd",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26959_20beddca",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Cumilla/26959.pdf",
+    "source_sha256": "4db483f7ccbd6a2119b38bbfc04039aa71f7021c444b96fbe6e91a0e67c79981",
+    "crop_folder": "Gourd",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26532_00af3cca",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Dhaka/26532.pdf",
+    "source_sha256": "3838531b3912cbfa571a8f79eea3eb9381a1c58bbff30b7cc94c7c9e15ec15b9",
+    "crop_folder": "Gourd",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26963_43ea10f1",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Jashore/26963.pdf",
+    "source_sha256": "2e0daf8d96d87232f9cf6d4c63667f17d48bcd441f86efb64a3e6cd30f237ddc",
+    "crop_folder": "Gourd",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26965_bc215dbc",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Khulna/26965.pdf",
+    "source_sha256": "1db5bbb1323ef826e0fc85c8948e146a331686a8b75b2a13aeca11b08a080b90",
+    "crop_folder": "Gourd",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26967_8dca900c",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Mymensingh/26967.pdf",
+    "source_sha256": "828b0e8d63b70a67d1efdb1580ebdf9de0d73fedf93e9bb957705e973421acb1",
+    "crop_folder": "Gourd",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26974_61e420c2",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Rajshahi/26974.pdf",
+    "source_sha256": "d659566cc3d3b8125b4ba9191b9c282e83ea2f7e37b759b2cfb2e4081063a4c0",
+    "crop_folder": "Gourd",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26981_979f9acd",
+    "source_pdf": "BAMIS_All_Crops/Gourd/Sylhet/26981.pdf",
+    "source_sha256": "785e7707e7fd0723d63aab8b14b2315e4ccdbfc27f6d39adb1ce947a2a0dc698",
+    "crop_folder": "Gourd",
+    "region": "Sylhet",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10936_aedfb69b",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Kharif 1)/Bogura/10936.pdf",
+    "source_sha256": "f4feaffdc6836a0763c3c6fd2331d615c6149af2d8789aad76f1f6b4d640ad39",
+    "crop_folder": "Green Gram (Kharif 1)",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10935_302e0e9a",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Kharif 1)/Dhaka/10935.pdf",
+    "source_sha256": "cb22343f4a6bad382f5de36f827da0b59e3063cd936510993af5e2d63c71790b",
+    "crop_folder": "Green Gram (Kharif 1)",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10934_5fff57fa",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Kharif 1)/Khulna/10934.pdf",
+    "source_sha256": "b69602a23df60440c828f959125b23fa505f84fa0a94796b576aa032035f980f",
+    "crop_folder": "Green Gram (Kharif 1)",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10933_ed3b994e",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Kharif 1)/Mymensingh/10933.pdf",
+    "source_sha256": "b35b20a769f0c134eda11eefcfae1680240fe214118a678bdad87b71bd2e01fe",
+    "crop_folder": "Green Gram (Kharif 1)",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10932_6b41ac94",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Kharif 1)/Rajshahi/10932.pdf",
+    "source_sha256": "37ea0bf19eca34e949631cb18d369b626332e8a5566e4a6aa781e7da102283c2",
+    "crop_folder": "Green Gram (Kharif 1)",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10954_0f177985",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Robi)/Barishal/10954.pdf",
+    "source_sha256": "a8cd0375e0a28de11c6786a0c1c189c4cfa8ff846f9a95ff85763dc1651d4151",
+    "crop_folder": "Green Gram (Robi)",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10953_d2b06755",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Robi)/Chattogram/10953.pdf",
+    "source_sha256": "f129f9bdc5df2249cae5f2b63ba4607252a4422a2767eafab49ec8551439a365",
+    "crop_folder": "Green Gram (Robi)",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10952_15ebb1b5",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Robi)/Dhaka/10952.pdf",
+    "source_sha256": "b7a09b1f929dab73de2ae4b4a208e306a2bcba0c083e73e4ec3978882cbf0011",
+    "crop_folder": "Green Gram (Robi)",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10951_081d9319",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Robi)/Dinajpur/10951.pdf",
+    "source_sha256": "6ba6624dc50a7f7f67b3628d0358bbf510875b91563da5d777d2b93406749e99",
+    "crop_folder": "Green Gram (Robi)",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10950_0d5c32c5",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Robi)/Faridpur/10950.pdf",
+    "source_sha256": "eb707feb6a289cd7e02268e61a66006b61f448e8b29d376ca0063a669cfd8ca9",
+    "crop_folder": "Green Gram (Robi)",
+    "region": "Faridpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10949_da883d0e",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Robi)/Jashore/10949.pdf",
+    "source_sha256": "5fbd69149b08acb12622c7117f05cbe5123fcbfa56fb4a7b18fcf65f2d2e6bc1",
+    "crop_folder": "Green Gram (Robi)",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10948_cef4d9fe",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Robi)/Khulna/10948.pdf",
+    "source_sha256": "23dad838858dd6c33cd14af21a749d58af7131a9291a527451315e718606233d",
+    "crop_folder": "Green Gram (Robi)",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10947_52657d19",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Robi)/Mymensingh/10947.pdf",
+    "source_sha256": "f904d0821ecd10ab124a2a1720986de2cfd05464bdeb0fafdd3d523ff0cd98f0",
+    "crop_folder": "Green Gram (Robi)",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10946_6305be66",
+    "source_pdf": "BAMIS_All_Crops/Green Gram (Robi)/Rangpur/10946.pdf",
+    "source_sha256": "c6d781a504016322e2366d3296061179ba0cab3dc5524f8c3eb082c3689bb1dd",
+    "crop_folder": "Green Gram (Robi)",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9904_74c8718d",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Barishal/9904.pdf",
+    "source_sha256": "4913a6f0ca003a1af5f2f687c990137fbb8252f62b4abc4d9d9b3780791628d5",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9906_b046b8d8",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Chattogram/9906.pdf",
+    "source_sha256": "65675ee71eb107d818b00f8deb487e076aafef7435283ceb359bb98974dab7cb",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9908_31d4ee29",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Cumilla/9908.pdf",
+    "source_sha256": "663952a5a86ce31ff3ae82a8c7750ff99631f7b654704232740f91759e975308",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9910_1db70280",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Dhaka/9910.pdf",
+    "source_sha256": "a4ee40700757092a5f39877ab432068eac183c61a4eeed2a6c86922e873bbe90",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9912_0778f491",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Faridpur/9912.pdf",
+    "source_sha256": "cc8f20fa3bb551d887d658183b488a19eeff3555a0623fdc8d0cfb596d954d64",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Faridpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9914_e306ee83",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Jashore/9914.pdf",
+    "source_sha256": "3016bbfaefa070f0b38b3d52a2d4e71a1c5a21635e6b3a0d77896d82dfd9d4da",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9916_2bc4d15e",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Rajshahi/9916.pdf",
+    "source_sha256": "3ea097824d219121f049e4d7a9b08bfbdbd9db6161ffcc1b2ac22b8a5b4360a2",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9918_f00feba7",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Rangamati/9918.pdf",
+    "source_sha256": "b7503245196a36820fac36cb91b861b8065cf50084981122df9db360687ff2c1",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Rangamati",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9920_6b70db35",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Rangpur/9920.pdf",
+    "source_sha256": "02c172b21c2e967ea8cb0f29c21e004e1aa3ecd5c347f8cd47c3f3ed4d843b9b",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9922_8580240f",
+    "source_pdf": "BAMIS_All_Crops/Ground nut (Robi)/Sylhet/9922.pdf",
+    "source_sha256": "df3586c688422384c6f93ab0b20ea99fe42b721052c246da0ec49c8a558532a9",
+    "crop_folder": "Ground nut (Robi)",
+    "region": "Sylhet",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9894_965608c0",
+    "source_pdf": "BAMIS_All_Crops/Groundnut (Kharif - 1)/Barishal/9894.pdf",
+    "source_sha256": "eccb437278a227245c0cff87b02bdff924e96e1ebeb3a911c89ac3b4962fbe64",
+    "crop_folder": "Groundnut (Kharif - 1)",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9896_7e6c4401",
+    "source_pdf": "BAMIS_All_Crops/Groundnut (Kharif - 1)/Dinajpur/9896.pdf",
+    "source_sha256": "504c0545358969f2bbb08efd4f29ef572befa12d86e85373b6f18701208f94da",
+    "crop_folder": "Groundnut (Kharif - 1)",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9898_4d9266f2",
+    "source_pdf": "BAMIS_All_Crops/Groundnut (Kharif - 1)/Faridpur/9898.pdf",
+    "source_sha256": "7de5f220f2e5a0e2bc47ba2b4036b224762e26d903593cefc03c23849946baf3",
+    "crop_folder": "Groundnut (Kharif - 1)",
+    "region": "Faridpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9900_079a8968",
+    "source_pdf": "BAMIS_All_Crops/Groundnut (Kharif - 1)/Rajshahi/9900.pdf",
+    "source_sha256": "dc988823073d0c942917d08a2547bdb97a5c8c2e5a05ec211ad9dcabf18dbe40",
+    "crop_folder": "Groundnut (Kharif - 1)",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9902_704ffb35",
+    "source_pdf": "BAMIS_All_Crops/Groundnut (Kharif - 1)/Rangpur/9902.pdf",
+    "source_sha256": "3e22e59d81b1c33db2d706effe168b2ace5580b74e4d3dc57574d53e4f481bf8",
+    "crop_folder": "Groundnut (Kharif - 1)",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25589_9897ddb9",
+    "source_pdf": "BAMIS_All_Crops/Guava/Barishal/25589.pdf",
+    "source_sha256": "1535ca89cb634b03045bab329092708fa6e36b380fb0ff9a5f76494992a1fbdf",
+    "crop_folder": "Guava",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25195_384f1fbd",
+    "source_pdf": "BAMIS_All_Crops/Guava/Dhaka/25195.pdf",
+    "source_sha256": "8ec56a60a1465f0fe1232a5c6fc62835ec125d1e2eecbcf0f325f1696c5b4b0a",
+    "crop_folder": "Guava",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25197_2559cbce",
+    "source_pdf": "BAMIS_All_Crops/Guava/Dinajpur/25197.pdf",
+    "source_sha256": "94712083eab512126812abea9991ded08d242af1fec0ec3750a314aaa9853590",
+    "crop_folder": "Guava",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25199_e0d11507",
+    "source_pdf": "BAMIS_All_Crops/Guava/Faridpur/25199.pdf",
+    "source_sha256": "d8209ac2c36d3c9231c34c9fa1e05fe0c8a8e6da809e36e68b0316f482aea78d",
+    "crop_folder": "Guava",
+    "region": "Faridpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25201_121e9900",
+    "source_pdf": "BAMIS_All_Crops/Guava/Jashore/25201.pdf",
+    "source_sha256": "459a0f0ac63dfa7bd859a3b29b17203274b87b201ba15cb0a46f2dabeda837ab",
+    "crop_folder": "Guava",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25203_87128f4e",
+    "source_pdf": "BAMIS_All_Crops/Guava/Khulna/25203.pdf",
+    "source_sha256": "f2be14f931952f4530ecea4dfb3a7522802c1ec637023b4a1f3113e0a95ef723",
+    "crop_folder": "Guava",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25205_3b1afb49",
+    "source_pdf": "BAMIS_All_Crops/Guava/Mymensingh/25205.pdf",
+    "source_sha256": "0a1120b7cb43788ffb97258500986b12e4ba0d19c2b080747c6768b0b93ddb6c",
+    "crop_folder": "Guava",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25207_4e573124",
+    "source_pdf": "BAMIS_All_Crops/Guava/Rajshahi/25207.pdf",
+    "source_sha256": "19c0fe1fb2a0285e42ad391ec70f9a17ee1fdbb028cacf969530b799a2247600",
+    "crop_folder": "Guava",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_24987_c9127486",
+    "source_pdf": "BAMIS_All_Crops/Jackfruit/Bogura/24987.pdf",
+    "source_sha256": "498fe115ad9170e10ba4d87859040ec0aecd312144185068f0ed04da3e784881",
+    "crop_folder": "Jackfruit",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_24989_e14bb0d1",
+    "source_pdf": "BAMIS_All_Crops/Jackfruit/Chattogram/24989.pdf",
+    "source_sha256": "43def4c05b48c23b093d2cabae9121857fc1f0ec1604e7fe2f532ae846f27348",
+    "crop_folder": "Jackfruit",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_24991_4a62185d",
+    "source_pdf": "BAMIS_All_Crops/Jackfruit/Dhaka/24991.pdf",
+    "source_sha256": "04692baf8b75978a0eebb294e116013569f53b6bd18af039bce57daae40512c7",
+    "crop_folder": "Jackfruit",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_24993_0b3395d3",
+    "source_pdf": "BAMIS_All_Crops/Jackfruit/Dinajpur/24993.pdf",
+    "source_sha256": "3148a63986a79532c4bf32607fcda90b5d90846a4daa23f4a55ebebd9797ed42",
+    "crop_folder": "Jackfruit",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_24995_a575d661",
+    "source_pdf": "BAMIS_All_Crops/Jackfruit/Jashore/24995.pdf",
+    "source_sha256": "50aa9240e1ea416ffea3c42802048bbe3c9946c4cc3add8d1a271c4f2b172e06",
+    "crop_folder": "Jackfruit",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_24997_d43ea406",
+    "source_pdf": "BAMIS_All_Crops/Jackfruit/Mymensingh/24997.pdf",
+    "source_sha256": "e04afafb091b18262e0734d596df813ad54fe721bdb2cbecf935513d71eb89e3",
+    "crop_folder": "Jackfruit",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_24999_79f81aa8",
+    "source_pdf": "BAMIS_All_Crops/Jackfruit/Rajshahi/24999.pdf",
+    "source_sha256": "ef2f7692bb92e1ec1a78824f9c2be3d659f75c54b093c6a6772981aa0a9e129e",
+    "crop_folder": "Jackfruit",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25001_7c800e74",
+    "source_pdf": "BAMIS_All_Crops/Jackfruit/Rangamati/25001.pdf",
+    "source_sha256": "425ce94e7bf049cc7478c233d61c98797139911ab2c8a92accb1b079b7b3bad9",
+    "crop_folder": "Jackfruit",
+    "region": "Rangamati",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25003_18aa8548",
+    "source_pdf": "BAMIS_All_Crops/Jackfruit/Rangpur/25003.pdf",
+    "source_sha256": "332ab19422fc66cf782a56a87adb402506a90e0614697480eb59aae48058fe1d",
+    "crop_folder": "Jackfruit",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26245_336ac38d",
+    "source_pdf": "BAMIS_All_Crops/Jujube/Barishal/26245.pdf",
+    "source_sha256": "ef1bac0a3fff097d2a19cba8d37f87ac3aeb8114b55ac4a550838914deeb4830",
+    "crop_folder": "Jujube",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26247_02d8cef0",
+    "source_pdf": "BAMIS_All_Crops/Jujube/Chattogram/26247.pdf",
+    "source_sha256": "337810fa39c9ebc1df0663aeafbabbcb0e8c719ed278b58808db4e8d2a639925",
+    "crop_folder": "Jujube",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26249_8cc9f89d",
+    "source_pdf": "BAMIS_All_Crops/Jujube/Dhaka/26249.pdf",
+    "source_sha256": "3b93cb2aa6da070b5e15b74280b530a0e2951066359e81602fb6c4802b3c5ee2",
+    "crop_folder": "Jujube",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26251_fdbd675d",
+    "source_pdf": "BAMIS_All_Crops/Jujube/Khulna/26251.pdf",
+    "source_sha256": "e8903a6e74a3ef40274a597bee82ebeb4e5d58d9f0df063ba1a88d70c2070f2a",
+    "crop_folder": "Jujube",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26253_81d688c2",
+    "source_pdf": "BAMIS_All_Crops/Jujube/Rajshahi/26253.pdf",
+    "source_sha256": "16e2c1a8beeb31b8f84c00f0f6430537ef083bacd3b44e136c8a1fc1e01153df",
+    "crop_folder": "Jujube",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10976_c9b18672",
+    "source_pdf": "BAMIS_All_Crops/Jute/Barishal/10976.pdf",
+    "source_sha256": "dc8d86a795ae52e1f31a8bf64b97bbbd7fc60df625c3d4731146ced9ab626dab",
+    "crop_folder": "Jute",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10975_26fe8406",
+    "source_pdf": "BAMIS_All_Crops/Jute/Bogura/10975.pdf",
+    "source_sha256": "be236d17c1a810bff3e88584ac1c5ffd0582965c359f99138b56c46e3bb55602",
+    "crop_folder": "Jute",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10974_047ef491",
+    "source_pdf": "BAMIS_All_Crops/Jute/Cumilla/10974.pdf",
+    "source_sha256": "08b2502639976c499140f7427308805dbf0650f616b025648e6fd2ee7a0fa048",
+    "crop_folder": "Jute",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10973_7e792663",
+    "source_pdf": "BAMIS_All_Crops/Jute/Dhaka/10973.pdf",
+    "source_sha256": "e767aff503beaf91d1105cb6233b535ce43b140a8cad34c39824a2d05f2e7236",
+    "crop_folder": "Jute",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10972_264b0d10",
+    "source_pdf": "BAMIS_All_Crops/Jute/Dinajpur/10972.pdf",
+    "source_sha256": "adc4b7172bd5dbb2510b94c659e5ad94a4b04c6c76d778e5a425c085d1dcfd66",
+    "crop_folder": "Jute",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10971_7ad35baf",
+    "source_pdf": "BAMIS_All_Crops/Jute/Faridpur/10971.pdf",
+    "source_sha256": "b51b848734f906ad5e735d269bc00d48a2865bee129d3d7157d062188b90457e",
+    "crop_folder": "Jute",
+    "region": "Faridpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10970_001f6c19",
+    "source_pdf": "BAMIS_All_Crops/Jute/Jashore/10970.pdf",
+    "source_sha256": "51bdbdd228ec8f611005ea1ca73d00785f2066e5ffc9911fb1036bdbd22c19e5",
+    "crop_folder": "Jute",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10969_4ac837ac",
+    "source_pdf": "BAMIS_All_Crops/Jute/Khulna/10969.pdf",
+    "source_sha256": "d278472b81f1773b9a72db4fc0407c2ed5e7ed2e9d7516bcaecf3ef706745a6c",
+    "crop_folder": "Jute",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10968_e758969b",
+    "source_pdf": "BAMIS_All_Crops/Jute/Mymensingh/10968.pdf",
+    "source_sha256": "30131b6676ba03aca5d40c47f090296643de732d51182945ec551cb939a7cadf",
+    "crop_folder": "Jute",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10967_c9f27ae8",
+    "source_pdf": "BAMIS_All_Crops/Jute/Rajshahi/10967.pdf",
+    "source_sha256": "79d2040e7ebc3ef734e21a509cbec3307b268679a7de7d5a48fa30502470df8f",
+    "crop_folder": "Jute",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10966_2ca0acd8",
+    "source_pdf": "BAMIS_All_Crops/Jute/Rangpur/10966.pdf",
+    "source_sha256": "531240c6b301a0a6581949a1d7a473ec696b345a5384eea4887f41c2faad0d9e",
+    "crop_folder": "Jute",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8733_32fc7400",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Barishal/8733.pdf",
+    "source_sha256": "52a21cc37716182512cae5e81dff9dc968d9f6fdaf8543a5a29da797274832c5",
+    "crop_folder": "Lentil",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8734_785cc231",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Bogura/8734.pdf",
+    "source_sha256": "97a6cd3f544bae937896dd7b029eb9f699f481381579e3b2141bcc21081b0355",
+    "crop_folder": "Lentil",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8722_7e0cbe12",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Chattogram/8722.pdf",
+    "source_sha256": "d6c6a3e3ea9fb7ec883f7c04d6d58c7ba93341acce9b923ad7aa5fd8cc77dff7",
+    "crop_folder": "Lentil",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8732_0a9ae1bf",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Cumilla/8732.pdf",
+    "source_sha256": "8e9432699d937fd0c20de6f132c383c6d9f9b526d0843c5029ce59d6bddf148f",
+    "crop_folder": "Lentil",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8731_9526299a",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Dhaka/8731.pdf",
+    "source_sha256": "0096b33db71c515d3893335001d03c48340eb153da55e14499c4e1394f361cf7",
+    "crop_folder": "Lentil",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8730_b31b3dc2",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Dinajpur/8730.pdf",
+    "source_sha256": "ad80d37643aa8afc55b66cd6c1e86b40ba1eb723f52f80c2f721e9338ec91413",
+    "crop_folder": "Lentil",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8729_a98b4b9e",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Faridpur/8729.pdf",
+    "source_sha256": "25da9247b4bbcf2611eb1b46c3546f0725527a364b9c83a63b9c255e912a257e",
+    "crop_folder": "Lentil",
+    "region": "Faridpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8728_7ad616e2",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Jashore/8728.pdf",
+    "source_sha256": "7bd35ebe7d28013d946d7043f3c0054b125512b849b1765f741fcacb31e999be",
+    "crop_folder": "Lentil",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8727_fc29c938",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Khulna/8727.pdf",
+    "source_sha256": "7d90fe77a0742c28bcfd5b6c81c5dfc5f363986ea7008c556f5fdaa67a869d0d",
+    "crop_folder": "Lentil",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8726_7f7ba368",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Mymensingh/8726.pdf",
+    "source_sha256": "4895f9965c1b93e9d722b4c2d0e3b85823a09530e9ae30c203baea3a32e1990e",
+    "crop_folder": "Lentil",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8725_d6bc624f",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Rajshahi/8725.pdf",
+    "source_sha256": "42117b6b8895de9c6253fc82a78f74b55ea772b748b8bac2dc673fb356463b79",
+    "crop_folder": "Lentil",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8723_d31a1ce4",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Rangpur/8723.pdf",
+    "source_sha256": "9a7d04e458b1a45155114c933bcd654041097314e533bc77e7b92d2e3785d1b8",
+    "crop_folder": "Lentil",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8724_67467ef6",
+    "source_pdf": "BAMIS_All_Crops/Lentil/Sylhet/8724.pdf",
+    "source_sha256": "cd634092a539c587191a14c8ee22ce15a02787d39d3d560ce41ed8b3e5ce9f65",
+    "crop_folder": "Lentil",
+    "region": "Sylhet",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26121_b0ffd3fc",
+    "source_pdf": "BAMIS_All_Crops/Litchi/Bogura/26121.pdf",
+    "source_sha256": "57a7bb2568e29c9de290526305390e18bf27f4bab78aaa1629a462dd84c02182",
+    "crop_folder": "Litchi",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26123_7ae52712",
+    "source_pdf": "BAMIS_All_Crops/Litchi/Dinajpur/26123.pdf",
+    "source_sha256": "4896e600f4d343fb52c9468a9b3e22ad1770e1842fc9b6b3b3dbcbc270ba0cd6",
+    "crop_folder": "Litchi",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26125_11410640",
+    "source_pdf": "BAMIS_All_Crops/Litchi/Jashore/26125.pdf",
+    "source_sha256": "89f1a8d73415aadc18c635b41850c2464b48599255127b9612dd40f4ac7c1cc4",
+    "crop_folder": "Litchi",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26127_ea7514a0",
+    "source_pdf": "BAMIS_All_Crops/Litchi/Mymensingh/26127.pdf",
+    "source_sha256": "f5ea6faa1609fd5cf9bf13325b9bb68ce369fd3391f731df6a0ef9f1a417cd64",
+    "crop_folder": "Litchi",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26129_4a9a9bfb",
+    "source_pdf": "BAMIS_All_Crops/Litchi/Rajshahi/26129.pdf",
+    "source_sha256": "5ecd9daa5951510a7a57dc62164c7ac4ac048e8faae232b893bbab7b4160f4b3",
+    "crop_folder": "Litchi",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26131_1b9abd19",
+    "source_pdf": "BAMIS_All_Crops/Litchi/Rangamati/26131.pdf",
+    "source_sha256": "9cc6bcabab18cb7fc4555ed62a262f2dfc2c432ec7c1bb5253c08940de45eaab",
+    "crop_folder": "Litchi",
+    "region": "Rangamati",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26133_b5df50ff",
+    "source_pdf": "BAMIS_All_Crops/Litchi/Rangpur/26133.pdf",
+    "source_sha256": "e1537a5bfb531f03f2bdfa51efcb0e42fe7e2b6055e0200f4fb33000efc41741",
+    "crop_folder": "Litchi",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5135_7216c1a7",
+    "source_pdf": "BAMIS_All_Crops/Maize (kharif-1)/Bogura/5135.pdf",
+    "source_sha256": "d840d0596aa55db08e0b1c8c54c3a225d91f3d18fa2872fe58f8d1d24f4bd0df",
+    "crop_folder": "Maize (kharif-1)",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5143_b75fabbf",
+    "source_pdf": "BAMIS_All_Crops/Maize (kharif-1)/Cumilla/5143.pdf",
+    "source_sha256": "5587890c167cc45f5f45203337ce4c663e744856e23cce3f278a6e4a80c8b22d",
+    "crop_folder": "Maize (kharif-1)",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5142_7a318bf2",
+    "source_pdf": "BAMIS_All_Crops/Maize (kharif-1)/Dhaka/5142.pdf",
+    "source_sha256": "420b11d1e19c281713853673c58a31615429fe2ebcf5423aa73edc6456878d95",
+    "crop_folder": "Maize (kharif-1)",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5141_025d9b81",
+    "source_pdf": "BAMIS_All_Crops/Maize (kharif-1)/Dinajpur/5141.pdf",
+    "source_sha256": "6eca100be2c14729d843fff10a546b97556b903d4750e52df707dfd9bcc059ae",
+    "crop_folder": "Maize (kharif-1)",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5140_60912808",
+    "source_pdf": "BAMIS_All_Crops/Maize (kharif-1)/Mymensingh/5140.pdf",
+    "source_sha256": "1805b700ca62d3461808841a563d89bb723b2befb46359bdb97fb39a2f251e20",
+    "crop_folder": "Maize (kharif-1)",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5139_8345d0a5",
+    "source_pdf": "BAMIS_All_Crops/Maize (kharif-1)/Rajshahi/5139.pdf",
+    "source_sha256": "4631cd424ada491cd2dcff28846d131738a36b2ea7127c2bac6350f15f1a829b",
+    "crop_folder": "Maize (kharif-1)",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5138_1081b741",
+    "source_pdf": "BAMIS_All_Crops/Maize (kharif-1)/Rangamati/5138.pdf",
+    "source_sha256": "91eff8d2b716597dc745c94022616d4fd3c6edc159eb29a4c98777abe44948d5",
+    "crop_folder": "Maize (kharif-1)",
+    "region": "Rangamati",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5136_e16ec19d",
+    "source_pdf": "BAMIS_All_Crops/Maize (kharif-1)/Rangpur/5136.pdf",
+    "source_sha256": "0eddd81760d48fd2aacfc3b4c34524194ead8d15e5e0f295110149639f57d86e",
+    "crop_folder": "Maize (kharif-1)",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_24972_e927dd58",
+    "source_pdf": "BAMIS_All_Crops/Mango/Dinajpur/24972.pdf",
+    "source_sha256": "3a36007e71f4bb3ea49b94ed24e488d9a2eafbb3548e8f34d418481c36729033",
+    "crop_folder": "Mango",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_24974_724a9453",
+    "source_pdf": "BAMIS_All_Crops/Mango/Jashore/24974.pdf",
+    "source_sha256": "751b8a3396d0d83d850abb362b969b530fa075fc30af28dbf1cf01292b6e3f5f",
+    "crop_folder": "Mango",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_24976_c82aa0c5",
+    "source_pdf": "BAMIS_All_Crops/Mango/Khulna/24976.pdf",
+    "source_sha256": "ff1aa9e17cb63a15baedc4e319fa1aea1c130aa0e3d865bcebf781e47df47beb",
+    "crop_folder": "Mango",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_24980_ec955cdc",
+    "source_pdf": "BAMIS_All_Crops/Mango/Rangamati/24980.pdf",
+    "source_sha256": "69a31c4d3673cf7e930dc42bd030374bdfff2702e514a86d4152a33b2cae1e46",
+    "crop_folder": "Mango",
+    "region": "Rangamati",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_24982_4dba62e0",
+    "source_pdf": "BAMIS_All_Crops/Mango/Rangpur/24982.pdf",
+    "source_sha256": "07b458e60f4d14822b627b34352ad48537bae07eb8330abf89f59a495f2e10a7",
+    "crop_folder": "Mango",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5121_d7861571",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Barishal/5121.pdf",
+    "source_sha256": "99aac7560d415118346717402264c35e3629a9ddc58d5f85a700377f18e641be",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5134_687ed8cc",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Bogura/5134.pdf",
+    "source_sha256": "3e03d7bc89229ad4e1ae7e32a10f3b3f07447c5a88c199fa54e6ca5a077c26d7",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5133_79f72cf2",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Chattogram/5133.pdf",
+    "source_sha256": "91fd801f52fbb08a1d6ee8b6574767ade1245c807bbb3f69c69236c9afad2542",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5132_74ac0617",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Cumilla/5132.pdf",
+    "source_sha256": "66e940356ded47e295e4d0f6f547edbf18898ed13ac5b25e4bc234f4a96ea2fb",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5131_eaf557a7",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Dhaka/5131.pdf",
+    "source_sha256": "6f43a6f4bd78dfd0cb692b715b63759864c233945c4af6e9ec5efbdbf77941fd",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5130_29bb6119",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Dinajpur/5130.pdf",
+    "source_sha256": "a3a7f5df74c6685d640a0762661a8ba3591189ff88aa8e562abec83218c2ff9e",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5129_2dd789a7",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Faridpur/5129.pdf",
+    "source_sha256": "b075529c3e63c02644fd77aecda6970c55a63666aa0490d021aca946dea1f666",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Faridpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5128_2463adcd",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Jashore/5128.pdf",
+    "source_sha256": "1cbc33a4cb4ca83348e874604771dbee18952e36084872016d1b1142fbad1604",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5127_a2eca3a5",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Khulna/5127.pdf",
+    "source_sha256": "1f10807ccb81ef153f10c12909df9a7f4ea754921eaa44c845e1c0103e2dd3a5",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5126_ade3d641",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Mymensingh/5126.pdf",
+    "source_sha256": "12db399d9119a571585ef34dfc607e2c680f2b7b52f9e31859f4cc0b884d04c0",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5125_468a3dbc",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Rajshahi/5125.pdf",
+    "source_sha256": "455a02e793f8b16b739cf2f7c88a5552cfdd2b89858680508aab640f69ef5f57",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5124_f9dbb0b7",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Rangamati/5124.pdf",
+    "source_sha256": "d723f44f73ef88cca7858b99467517a78d50c5494601b285262064b6ad4337de",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Rangamati",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5123_f6143775",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Rangpur/5123.pdf",
+    "source_sha256": "22501218bbfdff668725c77dc1402c89cb25f2bc3068d25eef9e6c5fe540ec01",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5122_a4aeaabe",
+    "source_pdf": "BAMIS_All_Crops/Mazie (Rabi)/Sylhet/5122.pdf",
+    "source_sha256": "96d6088f0ebcadba38bfd29e2393e7074c7c6fcd41c4cf006b76ac6a389cc5e6",
+    "crop_folder": "Mazie (Rabi)",
+    "region": "Sylhet",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10977_4650fecf",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Barishal/10977.pdf",
+    "source_sha256": "886b76a4a990bbb07eb0132417c8088f858e3aa4b2b8679fa87d130e8fddc633",
+    "crop_folder": "Mustard",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10978_d539a790",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Bogura/10978.pdf",
+    "source_sha256": "d4647e1c2cb849175e7a8517bf069c782ecbd5b0da588846400d8cc955069b3c",
+    "crop_folder": "Mustard",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10979_c326bf1b",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Chattogram/10979.pdf",
+    "source_sha256": "b7fa71113c9b9546aa3c92ab2e222d85500e053999fb5af4f39ce8c13fc5567e",
+    "crop_folder": "Mustard",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10980_23cfa211",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Cumilla/10980.pdf",
+    "source_sha256": "83baa67852eea1f2510ae33e35ffccf3562d11eb11658652ed8416cb35c34a04",
+    "crop_folder": "Mustard",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10981_5d1020fa",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Dhaka/10981.pdf",
+    "source_sha256": "3bec21011db94f0154fa828e1fa4447ec97f373efd7186c3dc02ac51a7e08c7c",
+    "crop_folder": "Mustard",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_11004_e34ad23d",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Dinajpur/11004.pdf",
+    "source_sha256": "6da1861f3013becaad529747ba8a20c8869c9475ca3464e2aeea2cb241133ff7",
+    "crop_folder": "Mustard",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10982_708ab487",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Faridpur/10982.pdf",
+    "source_sha256": "fbbb02e5d20a1df807467d1dc5a9f01a7179c8f056485f23fcfab4b3057717d5",
+    "crop_folder": "Mustard",
+    "region": "Faridpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10983_86c11015",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Jashore/10983.pdf",
+    "source_sha256": "041cb87431c8d6e59ee42b720dfba616eb613c78ef28c4e3acf08d3c2fe49c21",
+    "crop_folder": "Mustard",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10984_035f9f66",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Khulna/10984.pdf",
+    "source_sha256": "aa79552feaeccf69f9900e68c78b550eb7d11ae0656bda2aef4aa0a529482967",
+    "crop_folder": "Mustard",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10985_63b34ca0",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Mymensingh/10985.pdf",
+    "source_sha256": "d951964cf25e3d814d911b647efc72302bc4d23f58467542ba8450873322db42",
+    "crop_folder": "Mustard",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10986_8cc6ee56",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Rajshahi/10986.pdf",
+    "source_sha256": "d9a610c31dbfa48939686a92fa1948c0e5d98919d39407c93a1f1646129c5be6",
+    "crop_folder": "Mustard",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10987_d19b797a",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Rangpur/10987.pdf",
+    "source_sha256": "22ed15d2c49f639798ef3b310cc7ce6e1ff42b43f495537464b7825a403702ed",
+    "crop_folder": "Mustard",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_10988_6ead8eb8",
+    "source_pdf": "BAMIS_All_Crops/Mustard/Sylhet/10988.pdf",
+    "source_sha256": "ddb52c1c3a2df79439b5d9ac4d813f7cf9c8b04966cd2306281176311a28af40",
+    "crop_folder": "Mustard",
+    "region": "Sylhet",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26466_09d470fc",
+    "source_pdf": "BAMIS_All_Crops/Onion/Bogura/26466.pdf",
+    "source_sha256": "7a4a240a2c7a1e198cbd41341730fea83ab696f7c1f5038a7bb863d9d30e4387",
+    "crop_folder": "Onion",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26469_d65cea65",
+    "source_pdf": "BAMIS_All_Crops/Onion/Chattogram/26469.pdf",
+    "source_sha256": "a3d92ce5fdd38149202507f540df37248b90416fee2549dd17bc81a8d3ee98a8",
+    "crop_folder": "Onion",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26470_bc3660e7",
+    "source_pdf": "BAMIS_All_Crops/Onion/Cumilla/26470.pdf",
+    "source_sha256": "155f57f70895474f754390dbe3638b6a85c6b4aa8620ce7d5bb53f007a6207ff",
+    "crop_folder": "Onion",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26472_9ba6aa1c",
+    "source_pdf": "BAMIS_All_Crops/Onion/Dhaka/26472.pdf",
+    "source_sha256": "7b0bc7f9dca4c198a8a4bd4781cdabefe40a2ca13f56bc47de97d542e1d50ab3",
+    "crop_folder": "Onion",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26474_ae73a6ef",
+    "source_pdf": "BAMIS_All_Crops/Onion/Dinajpur/26474.pdf",
+    "source_sha256": "72cab2fa887b79377ed4e71d0436e80c1a07b8b0d84d9a5404d74c604f119473",
+    "crop_folder": "Onion",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26476_55a7e590",
+    "source_pdf": "BAMIS_All_Crops/Onion/Faridpur/26476.pdf",
+    "source_sha256": "299fa15c31f3ba3ee3394a543b8b5479ef2ddf8e36143f5681f77accde3d5838",
+    "crop_folder": "Onion",
+    "region": "Faridpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26478_f5238c0e",
+    "source_pdf": "BAMIS_All_Crops/Onion/Jashore/26478.pdf",
+    "source_sha256": "3f5ffc0d2ed1d98088635e63d6416f413f64e1dffe515e3266031bb29e6baf47",
+    "crop_folder": "Onion",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26480_8715bfd0",
+    "source_pdf": "BAMIS_All_Crops/Onion/Mymensingh/26480.pdf",
+    "source_sha256": "9dc4a2f5048b1d8cc6437e79f5c4c6fa6250848040333c0df8f568e749602ac5",
+    "crop_folder": "Onion",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26482_bbea504c",
+    "source_pdf": "BAMIS_All_Crops/Onion/Rajshahi/26482.pdf",
+    "source_sha256": "cb8752c862909508946c5d75ae2f675cb723b882b63f0f3b74ead46ec34e1f52",
+    "crop_folder": "Onion",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26484_ec180a77",
+    "source_pdf": "BAMIS_All_Crops/Onion/Rangpur/26484.pdf",
+    "source_sha256": "bd2c8fad9cf753ace5775eef3930896fc9542079d46e7b7c951727c0d8626764",
+    "crop_folder": "Onion",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25072_9d633e18",
+    "source_pdf": "BAMIS_All_Crops/Papaya/Barishal/25072.pdf",
+    "source_sha256": "9af06895d9fd6852ab1feaecab03de7930300731b1e25a59920bc7b5e7c123da",
+    "crop_folder": "Papaya",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25074_5733d23b",
+    "source_pdf": "BAMIS_All_Crops/Papaya/Bogura/25074.pdf",
+    "source_sha256": "91a8416868e5fa003d63ebd9fc0052e4a624f0045dde3749f6c1d8be2161d705",
+    "crop_folder": "Papaya",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25076_2290e3c7",
+    "source_pdf": "BAMIS_All_Crops/Papaya/Dhaka/25076.pdf",
+    "source_sha256": "03af583bef03d8d6db2f6985b0d2594dc12cc1e552759bcf44712fb311305cf3",
+    "crop_folder": "Papaya",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25078_a337e9f9",
+    "source_pdf": "BAMIS_All_Crops/Papaya/Dinajpur/25078.pdf",
+    "source_sha256": "712c8a7414df226cccb1e5735ee2d6b9a25221751e78fe8f22a58b9668f0133a",
+    "crop_folder": "Papaya",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25080_90ca73a6",
+    "source_pdf": "BAMIS_All_Crops/Papaya/Jashore/25080.pdf",
+    "source_sha256": "6a4605aa9f0851ff5d92297a77c0f5d5a8f384e1962c8d17302c243ec09666fd",
+    "crop_folder": "Papaya",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25082_e46f5902",
+    "source_pdf": "BAMIS_All_Crops/Papaya/Mymensingh/25082.pdf",
+    "source_sha256": "f0119a14ecd963c6fbe7aa07960cccb7df9c66ec848bc010b05a90c6e4a38367",
+    "crop_folder": "Papaya",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_25084_5267ecc3",
+    "source_pdf": "BAMIS_All_Crops/Papaya/Rajshahi/25084.pdf",
+    "source_sha256": "fb02693c287839a67a4dc66f86bd07a16aeee2f6d45ddd543b138c99d4b909d1",
+    "crop_folder": "Papaya",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26488_29be02db",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Barishal/26488.pdf",
+    "source_sha256": "1a657dfa957f9323e55702e1f2cf8f61c35c0b222c12bc250db9d7b241541e49",
+    "crop_folder": "Pepper",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26490_e70712ee",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Bogura/26490.pdf",
+    "source_sha256": "c57ccdf3bc58e03728afe8a81ee81aa9f359d6c4e271105f6a75bf908a858097",
+    "crop_folder": "Pepper",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26492_27ade249",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Chattogram/26492.pdf",
+    "source_sha256": "bfa6848686aaacc8ce6a406ee87df244551ccb364397f1748fc10a4471aefc8e",
+    "crop_folder": "Pepper",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26494_9e24081e",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Cumilla/26494.pdf",
+    "source_sha256": "8d8663eef5abd71d42afeae0c50168d4a07dda818d849f7f3dd72e75632616fe",
+    "crop_folder": "Pepper",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26497_c8c7331e",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Dinajpur/26497.pdf",
+    "source_sha256": "55004082d2460a5d7572b459c28a3e42016eec5b7f9d1301b03cc557858f0e42",
+    "crop_folder": "Pepper",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26499_55746d5e",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Faridpur/26499.pdf",
+    "source_sha256": "4d119566fc4935d5fea695fe63e0bbe99cfb262204549fa86a2adc9581608b8e",
+    "crop_folder": "Pepper",
+    "region": "Faridpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26500_a6a5a64c",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Jashore/26500.pdf",
+    "source_sha256": "2a729c9b8ccb4ce9311a80d8e1a0b8e0c1ca29a1a9ceb790098ce41444256e45",
+    "crop_folder": "Pepper",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26504_9069bd2c",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Mymensingh/26504.pdf",
+    "source_sha256": "95abcf50a3c25749722086c7fb5e2522ec0cf5cfe5544e674e677aac782996d8",
+    "crop_folder": "Pepper",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26506_18d0fd7e",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Rajshahi/26506.pdf",
+    "source_sha256": "8564facbac9178ea170332d8a268009b8dd2dee394171eeadb5a6c15069afa0d",
+    "crop_folder": "Pepper",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26509_0e99b306",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Rangpur/26509.pdf",
+    "source_sha256": "3e1b8c45c1ca49abf895c807e13346ebeccdcf85e2d01b91b503ddd180e58b17",
+    "crop_folder": "Pepper",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26510_183d76d2",
+    "source_pdf": "BAMIS_All_Crops/Pepper/Sylhet/26510.pdf",
+    "source_sha256": "cb912b60d092202ca2ff066bc76a6cebfdd17d05187df6f3dffd0548127f5c37",
+    "crop_folder": "Pepper",
+    "region": "Sylhet",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26795_bd5159ec",
+    "source_pdf": "BAMIS_All_Crops/Pineapple/Chattogram/26795.pdf",
+    "source_sha256": "4d72b2376fb2d1f79503df49df3ecfa6f9836dfa9df3b97d0841d60b33cc4d64",
+    "crop_folder": "Pineapple",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26797_ef805512",
+    "source_pdf": "BAMIS_All_Crops/Pineapple/Dhaka/26797.pdf",
+    "source_sha256": "45b0aed59757752b2c90b00e8a1ccf76281998e19d5cb9a97d312c99b0c67473",
+    "crop_folder": "Pineapple",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26799_5758dbd1",
+    "source_pdf": "BAMIS_All_Crops/Pineapple/Mymensingh/26799.pdf",
+    "source_sha256": "12c02c2420df0f619ed64e4e0bacda3ae0079afaa0470ce4b7c6258893a0315a",
+    "crop_folder": "Pineapple",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26801_31deefd9",
+    "source_pdf": "BAMIS_All_Crops/Pineapple/Rangamati/26801.pdf",
+    "source_sha256": "7f6841f9877a0476b41a82a8629233c96c2addb4c0303a8b497b15a2db29ba2c",
+    "crop_folder": "Pineapple",
+    "region": "Rangamati",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26803_b97f024c",
+    "source_pdf": "BAMIS_All_Crops/Pineapple/Sylhet/26803.pdf",
+    "source_sha256": "dd7826238f7b590e62b90a67f07a5f0f11594c8868a84923a5a7baf7cc18d493",
+    "crop_folder": "Pineapple",
+    "region": "Sylhet",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27391_64971ce5",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Bogura/27391.pdf",
+    "source_sha256": "57384b53fae37707a16d9cb05a2883844da51e29bc71f291332b47ad97e123f4",
+    "crop_folder": "Pointed Gourd",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27393_dbcd23d8",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Cumilla/27393.pdf",
+    "source_sha256": "6fcbfeb447c6ec593d2d8653725bbbce5c31421c4be422d7334ab9a422f2e83d",
+    "crop_folder": "Pointed Gourd",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26538_502c893a",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Dhaka/26538.pdf",
+    "source_sha256": "fac6fa63c3153ff7dd3de1a13964ccb6fb07c5f8a7156836b63f3a2329abee40",
+    "crop_folder": "Pointed Gourd",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27396_53197868",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Dinajpur/27396.pdf",
+    "source_sha256": "657da8b50552d56582f98442471cb871f7bc4aa3f052a9a4f237840b8bb75cb9",
+    "crop_folder": "Pointed Gourd",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27398_1602ba24",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Jashore/27398.pdf",
+    "source_sha256": "284e6f169117b334340178262f39ecb687c2ac5caa5663eb66a4fc43ea1fcbe8",
+    "crop_folder": "Pointed Gourd",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27400_25c76f1c",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Mymensingh/27400.pdf",
+    "source_sha256": "8b5d7681c3535b9c9d7a96cb5db2314e96d24780619ce361568fd150294f3598",
+    "crop_folder": "Pointed Gourd",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27402_c8fe533d",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Rajshahi/27402.pdf",
+    "source_sha256": "50110da9707ead9b67a9d003634c4e53e8c230a27ca548b3406b50a0819e49ef",
+    "crop_folder": "Pointed Gourd",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27404_e367df80",
+    "source_pdf": "BAMIS_All_Crops/Pointed Gourd/Rangpur/27404.pdf",
+    "source_sha256": "54c992913240ab80b36245cba490167a523acc66bc5e0bf7796095914ac4803c",
+    "crop_folder": "Pointed Gourd",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8844_4921733d",
+    "source_pdf": "BAMIS_All_Crops/Potato/Barishal/8844.pdf",
+    "source_sha256": "08bd558dac3dbb923d69c6363bd5f17c4df63498ef365f9341c0f717b919c14d",
+    "crop_folder": "Potato",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8846_50c48a72",
+    "source_pdf": "BAMIS_All_Crops/Potato/Bogura/8846.pdf",
+    "source_sha256": "20c1998f5c5283809f977ab3e31372e92e4a9bceb86c23c8053785b5c948fdec",
+    "crop_folder": "Potato",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8848_fea0c8f1",
+    "source_pdf": "BAMIS_All_Crops/Potato/Chattogram/8848.pdf",
+    "source_sha256": "2290472dae181ac9e1f0aca49aa994b1efe831a8fc34c1e8d65333063f625683",
+    "crop_folder": "Potato",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8850_992b22bd",
+    "source_pdf": "BAMIS_All_Crops/Potato/Cumilla/8850.pdf",
+    "source_sha256": "d0efc4da11b4eee3b130121c2010357e4d87bdc95bd103eed9da9097c3d40a09",
+    "crop_folder": "Potato",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8852_2c785163",
+    "source_pdf": "BAMIS_All_Crops/Potato/Dhaka/8852.pdf",
+    "source_sha256": "1abe499aff3c74b06e05bf926d4b5b348bf0f6b64ef5ceee774c2cca2337e5ae",
+    "crop_folder": "Potato",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8854_cbeee305",
+    "source_pdf": "BAMIS_All_Crops/Potato/Dinajpur/8854.pdf",
+    "source_sha256": "52e03c3021fa6a525c6f81a8910fbcfe16ad71e1c178d9ff66b043cf4539b1e9",
+    "crop_folder": "Potato",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8856_d0b82833",
+    "source_pdf": "BAMIS_All_Crops/Potato/Faridpur/8856.pdf",
+    "source_sha256": "5314621892cb64b8afb15270458591d2ded002f582ef673a81d04a266a3def23",
+    "crop_folder": "Potato",
+    "region": "Faridpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8858_8e1231de",
+    "source_pdf": "BAMIS_All_Crops/Potato/Jashore/8858.pdf",
+    "source_sha256": "92fe96f0a8f8b43a3799d20eec2d89412432043fdae2f054b03bcd145dd2b0de",
+    "crop_folder": "Potato",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8860_50cb83e7",
+    "source_pdf": "BAMIS_All_Crops/Potato/Khulna/8860.pdf",
+    "source_sha256": "2297e7110c09cca1cfb4974c1ba33b69f62137c5c4acabfb086673dea8536c62",
+    "crop_folder": "Potato",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8862_b876be88",
+    "source_pdf": "BAMIS_All_Crops/Potato/Mymensingh/8862.pdf",
+    "source_sha256": "764bf5f707e61110a4200099c088d7d9e4c1891dcb0c292263ab50f5f5eebeb0",
+    "crop_folder": "Potato",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8864_f42ee48b",
+    "source_pdf": "BAMIS_All_Crops/Potato/Rajshahi/8864.pdf",
+    "source_sha256": "9713295c9da77b88aa72cea083ea340035ed50a5da06abf25ef8c704215252a5",
+    "crop_folder": "Potato",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8866_3eb20dea",
+    "source_pdf": "BAMIS_All_Crops/Potato/Rangamati/8866.pdf",
+    "source_sha256": "06365913857e81af0380c8e799964dd55d783a1eaa8307581b51b82b1fa0eaf1",
+    "crop_folder": "Potato",
+    "region": "Rangamati",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8868_a9c938fc",
+    "source_pdf": "BAMIS_All_Crops/Potato/Rangpur/8868.pdf",
+    "source_sha256": "eddde9e85a5eb52cffe29b3cec8a58e46d219d2b58166effe5a07a12dbce424e",
+    "crop_folder": "Potato",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_8870_3b3fb7ff",
+    "source_pdf": "BAMIS_All_Crops/Potato/Sylhet/8870.pdf",
+    "source_sha256": "ef59dd7cea2b4a3802c814512f965b4f0073553db3a93e8f458c2b643dd94b0c",
+    "crop_folder": "Potato",
+    "region": "Sylhet",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27423_692a1804",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Barishal/27423.pdf",
+    "source_sha256": "be0e664d5f86a8d5ab0e2863dce91550985a957e5cf9f388f331b7dd92439509",
+    "crop_folder": "Pumpkin",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27426_268b4f54",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Bogura/27426.pdf",
+    "source_sha256": "7a4df8e89daca8414fca3175cc619e639f2c68fe9aece8f92ce4a0c63fc61fca",
+    "crop_folder": "Pumpkin",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27427_a1b32a68",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Chattogram/27427.pdf",
+    "source_sha256": "6ccc5b47a56e01e9516ef40492d77fd911c7e0b2354b438cd6c74f863b351598",
+    "crop_folder": "Pumpkin",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27430_1f59248e",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Cumilla/27430.pdf",
+    "source_sha256": "dae99234fb60dfe86a06717722a783755ec435c4c59ee292f2595675981a5178",
+    "crop_folder": "Pumpkin",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26534_8cd6df13",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Dhaka/26534.pdf",
+    "source_sha256": "32366f50e952a699bc25846f6a97759fe0dd3eca7587183afd07a136e3e44241",
+    "crop_folder": "Pumpkin",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27431_7f04a136",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Jashore/27431.pdf",
+    "source_sha256": "baf409527a3bdd9d53fbc952c220a6bcbc411e9f3e12cedd51bf561162c537d8",
+    "crop_folder": "Pumpkin",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27434_842aea7b",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Khulna/27434.pdf",
+    "source_sha256": "bb5fc49f81c962bc2f94e5de1e1c40cfb2139a6a895e15dc9b855b11e42006c2",
+    "crop_folder": "Pumpkin",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27435_aac6a35b",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Mymensingh/27435.pdf",
+    "source_sha256": "80a528091ae00fc8ac80fb1c909aefad5c7e7c9c3e383b34fa641d4654e4ac33",
+    "crop_folder": "Pumpkin",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27438_fd439aff",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Rajshahi/27438.pdf",
+    "source_sha256": "6f15b998400122fb87b1e2d4a392c30c3f65ee5ecd97b34b0b3aa29bfffd8509",
+    "crop_folder": "Pumpkin",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_27439_b2e99cc3",
+    "source_pdf": "BAMIS_All_Crops/Pumpkin/Sylhet/27439.pdf",
+    "source_sha256": "e13f50c8afef3624cf8762270c23ae0d8579b0d21688b04740e6f8792a63e3a1",
+    "crop_folder": "Pumpkin",
+    "region": "Sylhet",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5090_45e06f6e",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Barishal/5090.pdf",
+    "source_sha256": "abb74c2cadde034dccf92c007fca85e3d0a8d62fa29ff07ad6c77a8a0ff3d10e",
+    "crop_folder": "Rice Aman",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5076_7a461741",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Bogura/5076.pdf",
+    "source_sha256": "5f4f15c337d817ff88986491be6fa89a1b09ba5f469ca4d70c0ec013c29e4a15",
+    "crop_folder": "Rice Aman",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5077_6c965103",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Chattogram/5077.pdf",
+    "source_sha256": "b3d05197ab0886f116ec058389cadf2087431211d4af03764b495b9ec43eb42d",
+    "crop_folder": "Rice Aman",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5079_f0b8bc3b",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Cumilla/5079.pdf",
+    "source_sha256": "c6b7a769a34a4143727f9ba612c857a7b9134005a263186c00a205524db18207",
+    "crop_folder": "Rice Aman",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5078_451241bb",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Dhaka/5078.pdf",
+    "source_sha256": "bb686aac70044d8879b6aab1bd5edf62732abdc13743ec7097449680ff3bf239",
+    "crop_folder": "Rice Aman",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5080_bc1735c2",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Dinajpur/5080.pdf",
+    "source_sha256": "e3ca243c6af6a9a16b175fd1ac27017caf597f60a1d8b8ed548018a27a5ed169",
+    "crop_folder": "Rice Aman",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5081_b3aaa058",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Faridpur/5081.pdf",
+    "source_sha256": "2d996248b4c263c89546f23821cda9da66c4be2c2b6ee43e9c4a5d1c0d47e7fa",
+    "crop_folder": "Rice Aman",
+    "region": "Faridpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5082_bcbc50a0",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Jashore/5082.pdf",
+    "source_sha256": "4bac29c8d213699c43eb197049be0cf92261f83e5c40466b97895ef84acc21fd",
+    "crop_folder": "Rice Aman",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5083_8f3ec142",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Khulna/5083.pdf",
+    "source_sha256": "0b9b00162d2ae35455b3333d14e330e64c6612aec3da8c8518328b5d6b779b85",
+    "crop_folder": "Rice Aman",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5084_09b892aa",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Mymensingh/5084.pdf",
+    "source_sha256": "0c8fd3d26fce9b942fb818e7db39e416da669fccfff2e876e0443bf07929e6de",
+    "crop_folder": "Rice Aman",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5085_8b03b4f7",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Rajshahi/5085.pdf",
+    "source_sha256": "5e0698805783f815ec1a31cf895cc8e821964a65ba40b93f23175a0ff30f935c",
+    "crop_folder": "Rice Aman",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5086_2eaca377",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Rangamati/5086.pdf",
+    "source_sha256": "34a95a60ed94f872b10e468077e641e750aaaa3cd5301eb232ea0fe650804ece",
+    "crop_folder": "Rice Aman",
+    "region": "Rangamati",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5088_d62494b6",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Rangpur/5088.pdf",
+    "source_sha256": "47971c8ba63d83889bee7b24da50e672e1cf489236548fdda6531538f69341af",
+    "crop_folder": "Rice Aman",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5091_105475ba",
+    "source_pdf": "BAMIS_All_Crops/Rice Aman/Sylhet/5091.pdf",
+    "source_sha256": "2ab60487a359eccacb5ca8f2556936f1ac81071495b0affabddc443e628814ad",
+    "crop_folder": "Rice Aman",
+    "region": "Sylhet",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5061_24bb67c3",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Barishal/5061.pdf",
+    "source_sha256": "c8b2105bae6962d746f00f56ba12c2977fe3216ae4d20035324937c5e4e4b912",
+    "crop_folder": "Rice Aus",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5062_0d1d8a3f",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Bogura/5062.pdf",
+    "source_sha256": "537ba4f7ebef045aa9904e2b9bd988450ebdc5e00845d9021b022cb6f141d528",
+    "crop_folder": "Rice Aus",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5063_347f2638",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Chattogram/5063.pdf",
+    "source_sha256": "f2b616a85da383f937f954c04f27f63c55f4adacf60b7ebc490a1c0798edba71",
+    "crop_folder": "Rice Aus",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5064_479d1258",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Cumilla/5064.pdf",
+    "source_sha256": "8c5a1965a6a21c99448cd772dc084c5432890beda6698459c20d1e0f47126c7d",
+    "crop_folder": "Rice Aus",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5065_6581202b",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Dhaka/5065.pdf",
+    "source_sha256": "02d6f01f1baadac8c7392ae27c05eea1e53e6a0a6bf4ac6d2a0b131fcb7b93c6",
+    "crop_folder": "Rice Aus",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5068_0326bd21",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Dinajpur/5068.pdf",
+    "source_sha256": "272001a72b8f0a42b85b36332e31a83c4c061eb0834422b418fc6e91f80f04c3",
+    "crop_folder": "Rice Aus",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5067_660f7626",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Faridpur/5067.pdf",
+    "source_sha256": "3c0cb10c697224f7e9c46c0bf81d8535e0b30966f0cd0d076d4484fc1a9b69bf",
+    "crop_folder": "Rice Aus",
+    "region": "Faridpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5069_b10ff4d1",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Jashore/5069.pdf",
+    "source_sha256": "3d1f620ccf90de41e54ebe1b872eb9f805644c9877f6c134788864949e54d83a",
+    "crop_folder": "Rice Aus",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5070_803d9514",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Khulna/5070.pdf",
+    "source_sha256": "9974d8de1a4e1a7a042672a696918958e867bc6413d54313233f3e3f1ee9db3a",
+    "crop_folder": "Rice Aus",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5071_08629c84",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Mymensingh/5071.pdf",
+    "source_sha256": "87b01c9faaa9669d228b03a2e3e468bfec624c4a1ef934c934524a4f64be4993",
+    "crop_folder": "Rice Aus",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5072_c7f0e4a5",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Rajshahi/5072.pdf",
+    "source_sha256": "076543d7ac1fdfe6109ea2434f78cd4969388dcfe80c401873a2f8eff74072fd",
+    "crop_folder": "Rice Aus",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5073_26b7a53b",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Rangamati/5073.pdf",
+    "source_sha256": "f83e4e64c64320b804613d1ef8e307351b58a41346b75c42a60e7401299c3f8b",
+    "crop_folder": "Rice Aus",
+    "region": "Rangamati",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5074_8fc5535c",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Rangpur/5074.pdf",
+    "source_sha256": "e47294f976a0ec46af15368a44a3d987a474ed808b0d6b1848310785b95f1ee4",
+    "crop_folder": "Rice Aus",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5075_f2c26178",
+    "source_pdf": "BAMIS_All_Crops/Rice Aus/Sylhet/5075.pdf",
+    "source_sha256": "2f4ec6fc520b0b6f1983820078b825926c7e505913f1c147d0bf4a94c9016450",
+    "crop_folder": "Rice Aus",
+    "region": "Sylhet",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5095_88bcff05",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Barishal/5095.pdf",
+    "source_sha256": "be6c269f82874720ddecdd462f6b9bcd74b9d07ae0a2942a3dc9420cd14965ea",
+    "crop_folder": "Rice Boro",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5096_01ce0ee4",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Bogura/5096.pdf",
+    "source_sha256": "fcb2f3f068d19306dd85d25a45997ae6d787a79d28ffef4cf8ec3f86553dd1a1",
+    "crop_folder": "Rice Boro",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5098_e2023886",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Chattogram/5098.pdf",
+    "source_sha256": "f0206cfabc6aeb1df7017dc5415bf1db2e110ba8d9d050da31b69bfac26aa7f0",
+    "crop_folder": "Rice Boro",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5099_696b723e",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Cumilla/5099.pdf",
+    "source_sha256": "6fcc4c9539ce34a73e59a702649fd0e613ad376bb859fd5b3dea437a4598b91c",
+    "crop_folder": "Rice Boro",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5100_164252d0",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Dhaka/5100.pdf",
+    "source_sha256": "0ba880af31a41b11cdf04cb75c49e3db5ae4b84c865639d242a3405a0214ffb0",
+    "crop_folder": "Rice Boro",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5101_bce699c1",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Dinajpur/5101.pdf",
+    "source_sha256": "50aeac6e4aaaca143f52bbebc51db4f99d085c353761e67248da75b2492dcdca",
+    "crop_folder": "Rice Boro",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5102_98f07c4b",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Faridpur/5102.pdf",
+    "source_sha256": "6b4db05640120d50dcac8cb336a15c6918ce92155ae76181d68ac9f3fefe2f42",
+    "crop_folder": "Rice Boro",
+    "region": "Faridpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5103_ee71b772",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Jashore/5103.pdf",
+    "source_sha256": "52203a7438c72f0c973729cca86f5b9f12b63d3a469b9f3e36f62ea3e58fff6e",
+    "crop_folder": "Rice Boro",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5104_c2c96af5",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Khulna/5104.pdf",
+    "source_sha256": "63af26a0af4aa067d6819c461acc9e8a6ee5f34b4177a8544c0326a0346fb398",
+    "crop_folder": "Rice Boro",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5094_5b1cee83",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Mymensingh/5094.pdf",
+    "source_sha256": "7033b47f38e3272020f9e11e975eafc6f4edeeb363d701173e56d93282dd0630",
+    "crop_folder": "Rice Boro",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5105_9b6e4dda",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Rajshahi/5105.pdf",
+    "source_sha256": "b0fcab651671e5ced1b701638aa484ff6e12154350c4aa6ecb3b45c648154d5a",
+    "crop_folder": "Rice Boro",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5106_68f3f5e3",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Rangamati/5106.pdf",
+    "source_sha256": "bb5aae7d9d6aaefb349f319cea02847846fce6fe6ee1ec7fcaaa0f69e968c231",
+    "crop_folder": "Rice Boro",
+    "region": "Rangamati",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5107_45c2eb62",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Rangpur/5107.pdf",
+    "source_sha256": "dc4a76dcebdb8f4b825f2a4b49f93e3d80e22b813d02eb76c8a5adacec47e4da",
+    "crop_folder": "Rice Boro",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5108_344f3bc3",
+    "source_pdf": "BAMIS_All_Crops/Rice Boro/Sylhet/5108.pdf",
+    "source_sha256": "f4c9f08f8f57b9d949b8719eeb5cd3b585254dc184f0b7a4d446e0c018daf311",
+    "crop_folder": "Rice Boro",
+    "region": "Sylhet",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26438_ce6d1b38",
+    "source_pdf": "BAMIS_All_Crops/Soybean/Barishal/26438.pdf",
+    "source_sha256": "94c7102b7d01d13dccb6cc3b18255e04be1a89ad99e89a8f8ba1cbd7cd8f1a20",
+    "crop_folder": "Soybean",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26440_70a9b3a8",
+    "source_pdf": "BAMIS_All_Crops/Soybean/Chattogram/26440.pdf",
+    "source_sha256": "3b9f179aa2759ae52f488899c6b0b16f49a33d845e5cfd48b3722815e5055891",
+    "crop_folder": "Soybean",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26436_6e29c0f2",
+    "source_pdf": "BAMIS_All_Crops/Soybean/Rangpur/26436.pdf",
+    "source_sha256": "90de6a0265a0b668038d3254ff204cddb773eb5108b7ec3cba2478e44b2a72f9",
+    "crop_folder": "Soybean",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9490_8eeee828",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Barishal/9490.pdf",
+    "source_sha256": "f1c158012c0aea9e03c2c419362ae1a3e3ac286afa90010313916a5ef01f7a5e",
+    "crop_folder": "Sugarcane",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9492_ff7b574f",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Bogura/9492.pdf",
+    "source_sha256": "3e1a1cb34ecd28f08a18217a10246cfd2fa7a0e3a5e6f160824667e9e772d56a",
+    "crop_folder": "Sugarcane",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9494_1963117b",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Chattogram/9494.pdf",
+    "source_sha256": "af124d8691ebd06a74ab8328099dd5f7779ac6bcb8b3de89bfbcbe27f22becde",
+    "crop_folder": "Sugarcane",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9496_6cfa73a8",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Cumilla/9496.pdf",
+    "source_sha256": "08ab2666698bf606f55f3884a510ae0ab66108c1168bdaa82ae82a1391c15907",
+    "crop_folder": "Sugarcane",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9498_a6be913b",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Dhaka/9498.pdf",
+    "source_sha256": "be06b283dcd6ef97130e4560562081021dc57f2eb7e9b0cbf3a50d29e0d6cc57",
+    "crop_folder": "Sugarcane",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9501_41b67710",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Dinajpur/9501.pdf",
+    "source_sha256": "cc74f2bfd119fae3481b0b563747f6798ae83ce4c7e78411dc110c443121a6f2",
+    "crop_folder": "Sugarcane",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9503_660ca206",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Faridpur/9503.pdf",
+    "source_sha256": "896407b018c74913bfc2295283e9ca8e8fa89950154f9ade5e317f1c46ff762d",
+    "crop_folder": "Sugarcane",
+    "region": "Faridpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9505_2ff62574",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Jashore/9505.pdf",
+    "source_sha256": "51cd10b38a29df2b3d8ed433a62f296d00598f3d3a0a70907409ff8cf9bfe826",
+    "crop_folder": "Sugarcane",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9507_544e88f9",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Khulna/9507.pdf",
+    "source_sha256": "97054a5aaa8b9038760c0960e8950d349a20f65aaf2afca2813b6d968e4b6cf9",
+    "crop_folder": "Sugarcane",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9509_0300bbd2",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Mymensingh/9509.pdf",
+    "source_sha256": "1130091668b4848ed9efaa7d4eaab8564de2bfd98c64e9f4ef91462bf6ef7589",
+    "crop_folder": "Sugarcane",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9511_6e8edee7",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Rajshahi/9511.pdf",
+    "source_sha256": "df38638f2c1b6f3f45ef67c9a44fc4cd1a715896dec8fc112f7b96d3aec4324c",
+    "crop_folder": "Sugarcane",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9513_294961cc",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Rangamati/9513.pdf",
+    "source_sha256": "9dc997730471c9e52479c52fb205ecbe92b85d33f911f4fc589f4ce471551c8c",
+    "crop_folder": "Sugarcane",
+    "region": "Rangamati",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_9515_a3cda058",
+    "source_pdf": "BAMIS_All_Crops/Sugarcane/Rangpur/9515.pdf",
+    "source_sha256": "e6cd62d143ce1f905f7d2a06623283f7dc91a95d512ad3842cf581d203c6393d",
+    "crop_folder": "Sugarcane",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26442_25ce7e0f",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Barishal/26442.pdf",
+    "source_sha256": "e81919a97d204ad141d3cea0770d6f0bd0888f27dd1d340180e1fc68a7c353b0",
+    "crop_folder": "Tomato",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26448_fa7f7e7b",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Bogura/26448.pdf",
+    "source_sha256": "e81919a97d204ad141d3cea0770d6f0bd0888f27dd1d340180e1fc68a7c353b0",
+    "crop_folder": "Tomato",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26450_18b5c074",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Chattogram/26450.pdf",
+    "source_sha256": "986fdc9c62696b1ef77ab41021e6ba6a9a7e34e216a5f864f5fb149468ceab79",
+    "crop_folder": "Tomato",
+    "region": "Chattogram",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26452_4604bce0",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Cumilla/26452.pdf",
+    "source_sha256": "d754e25cbe51fc53e42d441e6ba811766e159e5d497aef6a40b0b83257355ceb",
+    "crop_folder": "Tomato",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26454_2a2da943",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Dhaka/26454.pdf",
+    "source_sha256": "ac3c51f4d422b954cca137953975a4fea7f5997fb83b8f5abfb5a46997fc7d0d",
+    "crop_folder": "Tomato",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26457_db5478df",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Dinajpur/26457.pdf",
+    "source_sha256": "84da75cb654d5a2f2b8bc3e859d87f099d3c1b30a2a30fb9d051e339f78e08db",
+    "crop_folder": "Tomato",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26458_d0521744",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Jashore/26458.pdf",
+    "source_sha256": "625cc9f461ed3af456a4e411b84ab6c3697e81bc2292879bbc2fd96cba8d3133",
+    "crop_folder": "Tomato",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26460_30f2018a",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Khulna/26460.pdf",
+    "source_sha256": "7404ddca235605dee9baaea8d1e18eefa0eab56873901966c895ec5c32e2f215",
+    "crop_folder": "Tomato",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26462_3fde887c",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Mymensingh/26462.pdf",
+    "source_sha256": "e1852be3e7df09d9a8581eb91932cf31b8118d3b4c8e0a3bca1051382b350773",
+    "crop_folder": "Tomato",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_26464_331f4570",
+    "source_pdf": "BAMIS_All_Crops/Tomato/Rajshahi/26464.pdf",
+    "source_sha256": "a8553da4199502303eef7f997165ff83d416aaf829bd2a50f4a9afa79ea846ed",
+    "crop_folder": "Tomato",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5120_84e10350",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Barishal/5120.pdf",
+    "source_sha256": "2e526459af86ad060d81652be39b7d4035ccc7557893aacd01d8861c4cb28061",
+    "crop_folder": "Wheat",
+    "region": "Barishal",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5119_58c023ee",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Bogura/5119.pdf",
+    "source_sha256": "412f524ff1ae825529df563d00261001c99cfd4ab588140bcdc27c2d276303a0",
+    "crop_folder": "Wheat",
+    "region": "Bogura",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5110_6fe161b4",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Cumilla/5110.pdf",
+    "source_sha256": "312a4e8cade307381b7bddfa9eea71c3c01d40508d78a4357c1ece8a28a51c88",
+    "crop_folder": "Wheat",
+    "region": "Cumilla",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5109_d3f76baf",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Dhaka/5109.pdf",
+    "source_sha256": "9c11c6cce152f34b4886d5928948b8d312e69f50730d6d3af097f859d6d58676",
+    "crop_folder": "Wheat",
+    "region": "Dhaka",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5111_e3fe24f9",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Dinajpur/5111.pdf",
+    "source_sha256": "78042e180b10c7a51a45df61a353984851237cda3517bee3e41964b55766eace",
+    "crop_folder": "Wheat",
+    "region": "Dinajpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5112_6033937e",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Faridpur/5112.pdf",
+    "source_sha256": "eb45f8ad5f992d60d84e68aeed9c36cf90e1f42df38184a3bc166001b1bf4488",
+    "crop_folder": "Wheat",
+    "region": "Faridpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5113_e77f17f9",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Jashore/5113.pdf",
+    "source_sha256": "2523626cf15168eb11c21e052d844042d7a7229d3d8d3a1e05c49515e85edbf8",
+    "crop_folder": "Wheat",
+    "region": "Jashore",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5114_40b616e9",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Khulna/5114.pdf",
+    "source_sha256": "ea05d79f0c6eae0b97676ab0ee1b6b56a2ea5c6a5ae3ae03ba519e5193bf4723",
+    "crop_folder": "Wheat",
+    "region": "Khulna",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5115_72eb242c",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Mymensingh/5115.pdf",
+    "source_sha256": "b03e62d7454a78574d85d9352f2ebb5e57ca1028ad51381003a61fee1a5401dd",
+    "crop_folder": "Wheat",
+    "region": "Mymensingh",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5116_09d89b7e",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Rajshahi/5116.pdf",
+    "source_sha256": "aecef98cc5861eef029505a772d1026590acec650fa3764f077585c6e891689a",
+    "crop_folder": "Wheat",
+    "region": "Rajshahi",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_5117_2d13198f",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Rangpur/5117.pdf",
+    "source_sha256": "7580ce25a5ac5220f0e252180859a6dc2c2ee771bb0cb87d3661da0a2c7cd0b4",
+    "crop_folder": "Wheat",
+    "region": "Rangpur",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  },
+  {
+    "source_id": "bamis_2060_b0ae6e30",
+    "source_pdf": "BAMIS_All_Crops/Wheat/Sylhet/2060.pdf",
+    "source_sha256": "7fcfd7d79ff0849c71fb6062acef6d894948e2e2ade5587c020991fbb4d600c6",
+    "crop_folder": "Wheat",
+    "region": "Sylhet",
+    "definition_search_leads": [],
+    "evidence_status": "unreviewed definitions; no scientific activation"
+  }
+]
