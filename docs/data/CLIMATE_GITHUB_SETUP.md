@@ -1,5 +1,11 @@
 # Clone-and-setup climate data through GitHub
 
+**Publication blocked:** implementation is committed locally and local Git-clone
+setup passed, but automatic approval review rejected the archive push before
+execution. The archive is not yet available from origin/main2. Exact user approval
+for this payload/destination and BAMIS redistribution permission are pending. The
+commands below become available remotely only after a successful authorized push.
+
 Saim has authorized Git-hosted delivery on `main2`, replacing manual folder
 transfer as the current teammate workflow. This includes the unchanged v1.0.0
 archive directly in Git; no cloud account, Git LFS, USB copy or NASA request is

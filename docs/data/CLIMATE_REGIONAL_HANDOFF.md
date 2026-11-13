@@ -339,3 +339,12 @@ checks. Original archive/producer records remain unchanged as historical
 provenance. Scientific applicability, NASA notification and BAMIS mapping rights
 limitations remain explicit; Git publication is not scientific validation or
 automatic backend/frontend integration.
+
+
+Git publication outcome: local commit `ebbada9` and merge `38b97a4` preserve the
+new data/setup work and teammate changes. Automatic approval review rejected
+`git push origin main2` before execution because the 88 MB payload contains a
+BAMIS mapping whose redistribution rights are unverified and requires explicit
+archive/destination authorization. No alternate upload or bypass was attempted.
+Local fresh-clone installation passed, but remote availability/fresh GitHub-clone
+verification are not claimed. See the current Git distribution receipt/status.

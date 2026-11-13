@@ -15,12 +15,12 @@ The development workflow is implemented locally: task checklists, generated prog
 
 Generated from task records; the detailed board is the team's daily starting point.
 
-**Accepted work packages: 0/41 · Implemented checklist items: 56/160.** Checked items can still await independent review and merge.
+**Accepted work packages: 0/41 · Implemented checklist items: 57/160.** Checked items can still await independent review and merge.
 
 | Member | First available action |
 | --- | --- |
 | Fardin | G0-CONTRACT / s01: Draft stable field, crop and source identifiers |
-| Saim | CLIMATE-GIT-DISTRIBUTION / a2: Provide safe idempotent offline setup after cloning and test it without pre-existing ignored caches; preserve sealed source/data and scientific limitations. |
+| Saim | Review/collaborate on G0-CONTRACT |
 | Maruf | Review/collaborate on G0-CONTRACT |
 | Prachurjo | Review/collaborate on G0-CONTRACT, MEDIA-STORYBOARD |
 | Nadim | MEDIA-STORYBOARD / s01: Plan the shots and visual sequence |
@@ -54,8 +54,9 @@ Equivalent commands are documented in [CONTRIBUTING.md](CONTRIBUTING.md). `make 
 
 ## Climate data from this repository
 
-The unchanged v1.0.0 climate archive is included on `main2`. After cloning or
-pulling this branch, run:
+The unchanged v1.0.0 climate archive is committed on local `main2`; its GitHub
+push is blocked by automatic approval review pending exact payload/destination
+and BAMIS redistribution authorization. Once pushed, clone/pull and run:
 
 ```bash
 python3 scripts/setup_climate_data.py

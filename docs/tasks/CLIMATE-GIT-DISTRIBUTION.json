@@ -4,9 +4,9 @@
   "owner": "Saim",
   "collaborators": [],
   "phase": "INDEPENDENT-PREPARATION",
-  "status": "in_progress",
+  "status": "blocked",
   "depends_on": [],
-  "updated_at": "2026-11-13T09:51:10Z",
+  "updated_at": "2026-11-13T09:55:16Z",
   "acceptance": [
     {
       "id": "a1",
@@ -19,14 +19,20 @@
     {
       "id": "a2",
       "text": "Provide safe idempotent offline setup after cloning and test it without pre-existing ignored caches; preserve sealed source/data and scientific limitations.",
-      "met": false,
-      "evidence": ""
+      "met": true,
+      "evidence": "One-command installer passed fresh local Git-clone setup at /private/tmp/soil-climate-repo-check.hQFGV1/repo with no pre-existing ignored caches. It verified/extracted all 2,618 payload files and validated 100 raw requests, registry and geometry roles with networking blocked. Repeated --verify-only passed; all 113 Python tests passed after preserving the newer teammate commit.",
+      "state": "done",
+      "blockers": []
     },
     {
       "id": "a3",
       "text": "Commit and push the authorized data/setup/docs to main2, verify a fresh GitHub clone and record actual delivery status without claiming application integration.",
       "met": false,
-      "evidence": ""
+      "evidence": "Implementation committed as ebbada9 and remote teammate work preserved in merge 38b97a4. Fresh local Git-clone setup passed; GitHub upload and fresh remote-clone checks were not run because push was rejected before execution.",
+      "state": "blocked",
+      "blockers": [
+        "Automatic approval review rejected git push origin main2: exact archive payload/destination authorization and permission to redistribute the included BAMIS mapping need explicit user confirmation."
+      ]
     }
   ],
   "checks": [
@@ -34,11 +40,13 @@
       "command": "python3 -B -m unittest discover -s tests -p 'test_*.py' -v",
       "cwd": ".",
       "result": "passed",
-      "evidence": "Exit 0. prompt_records_preserve_meaning_and_metadata (test_workflow.WorkflowTests) ... ok\ntest_member_logs_are_separate_and_pipe_safe (test_workflow.WorkflowTests) ... ok\ntest_outcome_limits_and_blank_fields_are_rejected_without_log_writes (test_workflow.WorkflowTests) ... ok\ntest_passing_check_does_not_automatically_accept_task (test_workflow.WorkflowTests) ... ok\ntest_pending_or_self_review_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_professional_docs_have_small_entrypoint_budgets (test_workflow.WorkflowTests) ... ok\ntest_prompt_amend_updates_outcome_without_extra_entry (test_workflow.WorkflowTests) ... ok\ntest_prompt_numbers_are_per_member_and_do_not_change_on_update (test_workflow.WorkflowTests) ... ok\ntest_public_numbers_use_next_available_maximum_and_scale_past_three_digits (test_workflow.WorkflowTests) ... ok\ntest_readonly_check_detects_stale_view (test_workflow.WorkflowTests) ... ok\ntest_real_git_ancestry_proof (test_workflow.WorkflowTests) ... ok\ntest_render_is_idempotent (test_workflow.WorkflowTests) ... ok\ntest_reopening_checklist_prerequisite_reopens_done_children (test_workflow.WorkflowTests) ... ok\ntest_start_blocked_task_does_not_modify_records (test_workflow.WorkflowTests) ... ok\ntest_unchecked_acceptance_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_unknown_dependency_rejected (test_workflow.WorkflowTests) ... ok\ntest_unmerged_commit_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_verify_accepts_explicit_project_subdirectory (test_workflow.WorkflowTests) ... ok\ntest_verify_executes_check_and_records_real_failure (test_workflow.WorkflowTests) ... ok\ntest_verify_refuses_directory_outside_project (test_workflow.WorkflowTests) ... ok\n\n----------------------------------------------------------------------\nRan 113 tests in 29.153s\n\nOK",
-      "run_at_utc": "2026-11-13T09:50:24Z"
+      "evidence": "Exit 0. _prompt_records_preserve_meaning_and_metadata (test_workflow.WorkflowTests) ... ok\ntest_member_logs_are_separate_and_pipe_safe (test_workflow.WorkflowTests) ... ok\ntest_outcome_limits_and_blank_fields_are_rejected_without_log_writes (test_workflow.WorkflowTests) ... ok\ntest_passing_check_does_not_automatically_accept_task (test_workflow.WorkflowTests) ... ok\ntest_pending_or_self_review_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_professional_docs_have_small_entrypoint_budgets (test_workflow.WorkflowTests) ... ok\ntest_prompt_amend_updates_outcome_without_extra_entry (test_workflow.WorkflowTests) ... ok\ntest_prompt_numbers_are_per_member_and_do_not_change_on_update (test_workflow.WorkflowTests) ... ok\ntest_public_numbers_use_next_available_maximum_and_scale_past_three_digits (test_workflow.WorkflowTests) ... ok\ntest_readonly_check_detects_stale_view (test_workflow.WorkflowTests) ... ok\ntest_real_git_ancestry_proof (test_workflow.WorkflowTests) ... ok\ntest_render_is_idempotent (test_workflow.WorkflowTests) ... ok\ntest_reopening_checklist_prerequisite_reopens_done_children (test_workflow.WorkflowTests) ... ok\ntest_start_blocked_task_does_not_modify_records (test_workflow.WorkflowTests) ... ok\ntest_unchecked_acceptance_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_unknown_dependency_rejected (test_workflow.WorkflowTests) ... ok\ntest_unmerged_commit_cannot_be_done (test_workflow.WorkflowTests) ... ok\ntest_verify_accepts_explicit_project_subdirectory (test_workflow.WorkflowTests) ... ok\ntest_verify_executes_check_and_records_real_failure (test_workflow.WorkflowTests) ... ok\ntest_verify_refuses_directory_outside_project (test_workflow.WorkflowTests) ... ok\n\n----------------------------------------------------------------------\nRan 113 tests in 1.713s\n\nOK",
+      "run_at_utc": "2026-11-13T09:53:52Z"
     }
   ],
-  "blockers": [],
+  "blockers": [
+    "Automatic approval review rejected upload of the 88 MB archive and unverified-rights BAMIS mapping to origin/main2; exact payload/destination and redistribution authorization are required."
+  ],
   "issues": [],
   "evidence": [],
   "history": [
@@ -56,6 +64,26 @@
       "at": "2026-11-13T09:51:10Z",
       "note": "Checklist a1: done",
       "evidence": "Copied the unchanged 88,023,118-byte archive to data/climate/packages/v1.0.0 with its original SHA-256 4a0ba04c9c8beaa0a908e0b4d61cc23c6b90f87ad927bbe229405860eda6117b, original manifest and checksum. One compressed archive is included; raw and expanded caches remain ignored. Official GitHub limits permit this file below 100 MiB with a warning above 50 MiB."
+    },
+    {
+      "at": "2026-11-13T09:53:52Z",
+      "note": "Check passed: python3 -B -m unittest discover -s tests -p 'test_*.py' -v"
+    },
+    {
+      "at": "2026-11-13T09:55:16Z",
+      "note": "Checklist a2: done",
+      "evidence": "One-command installer passed fresh local Git-clone setup at /private/tmp/soil-climate-repo-check.hQFGV1/repo with no pre-existing ignored caches. It verified/extracted all 2,618 payload files and validated 100 raw requests, registry and geometry roles with networking blocked. Repeated --verify-only passed; all 113 Python tests passed after preserving the newer teammate commit."
+    },
+    {
+      "at": "2026-11-13T09:55:16Z",
+      "note": "Checklist a3: blocked",
+      "evidence": "Implementation committed as ebbada9 and remote teammate work preserved in merge 38b97a4. Fresh local Git-clone setup passed; GitHub upload and fresh remote-clone checks were not run because push was rejected before execution."
+    },
+    {
+      "at": "2026-11-13T09:55:16Z",
+      "from": "in_progress",
+      "to": "blocked",
+      "note": "No force push or alternate upload was attempted. Local implementation and tests are complete; publication and remote clone verification remain blocked."
     }
   ],
   "review": {
@@ -65,6 +93,6 @@
   "merge_ref": null,
   "branch": null,
   "issue": null,
-  "next_action": "Copy sealed archive to versioned tracked package directory and implement safe clone setup.",
+  "next_action": "User explicitly approves the exact archive and GitHub destination and confirms mapping-sharing permission; then retry the rejected push and verify a fresh GitHub clone.",
   "handoff": "Record the next consumer and reproduction steps before review."
 }
