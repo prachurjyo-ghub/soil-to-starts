@@ -1286,4 +1286,30 @@ Read one entry with `python3 scripts/workflow.py log-show FARDIN-001`, or a memb
 **Next action / owner:** Push main2 when the commit step succeeds.
 
 **Task / source:** G1D; Current user instruction to sync result UI, keep a demo result page with real chrome, and push main2
+
+## Prachurjo — Prompt 007
+
+<a id="prachurjo-007"></a>
+<a id="p-d8e819ac2255"></a>
+<!-- record-id: P-d8e819ac2255 -->
+
+**Date:** 2026-11-13
+
+<!-- recorded-utc: 2026-11-13T10:59:33Z -->
+
+**Member:** prachurjo
+
+**Tool:** Cursor Composer
+
+**Type:** push
+
+**Refined implementation prompt (AI-written):** Push the farmer-friendly result UI and demo result page commit to origin/main2.
+
+**Changed files:** origin/main2
+
+**Actual outcome:** Pushed commit 3e7fce1 on main2 to origin/main2. The demo route is /result-page; genuine intake remains on /workspace.
+
+**Next action / owner:** Teammates can open /result-page for the mock result demo; Fardin/Saim/Maruf review still needed before scientific connection.
+
+**Task / source:** G1D; Current user instruction authorized push to main2
 <!-- workflow:ai-records:end -->
