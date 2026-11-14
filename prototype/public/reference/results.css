@@ -153,7 +153,7 @@
 .chart-tabs button[aria-pressed=true]{background:#295c45;border-color:#295c45;color:#fff}
 .chart-header{display:flex;justify-content:space-between;align-items:end;gap:10px;margin-bottom:4px}
 .chart-header h3{margin:2px 0}
-.chart-frame{max-height:320px}
+.chart-frame{min-width:0}
 .result-chart{display:block;width:100%;height:auto;max-height:320px}
 .result-chart line{stroke:var(--result-line)}
 .result-chart polyline{fill:none;stroke:#2c7655;stroke-width:3}
@@ -201,7 +201,7 @@
   .result-page-intro,.result-summary-top,.result-section-heading,.result-receipt{flex-direction:column}
   .result-page-intro__status,.result-summary-status{justify-items:start;text-align:left}
   .result-chip-row,.check-grid,.evidence-list,.result-tools,.result-expand__grid,.result-form-row{grid-template-columns:1fr}
-  .chart-frame,.result-chart{max-height:250px}
+  .result-chart{max-height:250px}
   .result-actions--end{justify-content:stretch}
   .result-actions--end button{width:100%}
   .result-page h2{font-size:1.05rem}
@@ -238,3 +238,5 @@
 .calendar-rotation-steps{padding-inline-start:1.4rem}
 .calendar-rotation-steps li{padding:.45rem .25rem;border-bottom:1px solid var(--result-line)}
 .calendar-rotation-steps span{display:block;color:var(--result-muted)}
+
+.rotation-alternative-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr))}

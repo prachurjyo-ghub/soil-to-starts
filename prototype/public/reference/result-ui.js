@@ -383,8 +383,8 @@
     return `<section class="result-card" aria-labelledby="rotation-comparison-title">
       <h2 id="rotation-comparison-title">${t(language, 'Compare crop rotations', 'ফসল আবর্তন তুলনা করুন')}</h2>
       <p>${t(language, 'Planning period', 'পরিকল্পনার সময়কাল')} · ${esc(formatDate(result.start))} – ${esc(formatDate(result.end))}</p>
-      <p>${t(language, 'Alternatives use three distinct crops with non-overlapping local calendar months. We prioritize a different first crop, earlier starts, then earlier finishes. Confirm actual sowing, harvest, land preparation and water needs before following a sequence.', 'বিকল্পে স্থানীয় ক্যালেন্ডারে সময় না মেলা তিনটি ভিন্ন ফসল রয়েছে। প্রথমে অন্য ফসল, তারপর আগে শুরু ও আগে শেষকে প্রাধান্য দেওয়া হয়। অনুসরণের আগে বপন, ফসল তোলা, জমি প্রস্তুতি ও পানির প্রয়োজন যাচাই করুন।')}</p>
-      <div class="plan-comparison-grid crop-option-grid">
+      <p>${t(language, 'Alternatives use three distinct crops with non-overlapping local calendar months. The first option favors an early start with a different crop. The next options favor different crop mixes. Confirm actual sowing, harvest, land preparation and water needs before following a sequence.', 'বিকল্পে স্থানীয় ক্যালেন্ডারে সময় না মেলা তিনটি ভিন্ন ফসল রয়েছে। প্রথম বিকল্পে অন্য ফসল ও আগে শুরু প্রাধান্য পায়। পরের বিকল্পে ভিন্ন ফসলের সমন্বয় প্রাধান্য পায়। অনুসরণের আগে বপন, ফসল তোলা, জমি প্রস্তুতি ও পানির প্রয়োজন যাচাই করুন।')}</p>
+      <div class="plan-comparison-grid crop-option-grid rotation-alternative-grid">
         ${reportedRotation(baseline, language, reportHref)}
         ${result.sequences.map(({steps}, index) => `<article class="plan-card">
           <h3>${esc(t(language, 'Alternative', 'বিকল্প'))} ${String.fromCharCode(65 + index)}</h3>
@@ -400,7 +400,7 @@
           </details>
         </article>`).join('')}
       </div>
-      ${result.sequences.length < 2 ? `<p>${t(language, 'The local calendars support fewer than two distinct three-crop sequences within this period.', 'এই সময়কালে স্থানীয় ক্যালেন্ডারে দুটি ভিন্ন তিন-ফসলের ক্রম পাওয়া যায়নি।')}</p>` : ''}
+      ${result.sequences.length < 3 ? `<p>${t(language, 'The local calendars support fewer than three distinct three-crop sequences within this period.', 'এই সময়কালে স্থানীয় ক্যালেন্ডারে তিনটি ভিন্ন তিন-ফসলের ক্রম পাওয়া যায়নি।')}</p>` : ''}
     </section>`;
   }
 
@@ -775,6 +775,16 @@
       const original=options.getSubmission?.();
       if(!original)return;
       const request=JSON.parse(JSON.stringify(original));
+      const ready = document.getElementById('whatif-ready-date').value;
+      if (!globalThis.STS_INTAKE.validDate(ready)) {
+        document.getElementById('whatif-ready-date').reportValidity();
+        return;
+      }
+      if (ready !== original.availability.end) {
+        request.availability = {...request.availability, kind: 'date', start: ready, end: ready, basis: 'expected'};
+        // Preserve the original rotation; its dates may precede the scenario.
+        request.baseline = {...request.baseline, state: 'no_established_rotation', segments: []};
+      }
       request.irrigation={...request.irrigation,access:document.getElementById('whatif-water').value};
       request.priority=document.getElementById('whatif-priority').value;
       const limits=document.getElementById('whatif-seasonal-limitations').value;
@@ -785,7 +795,7 @@
         scenario={request,state:'invalid_input',response:{status:'invalid_input',reason:'Choose seasonal irrigation limits and, when applicable, at least one limited season. / মৌসুমি সেচের সীমা এবং প্রযোজ্য হলে অন্তত একটি মৌসুম বেছে নিন।'}};rerender();return;
       }
       scenario={request,state:'loading'};rerender();
-      const token=viewGeneration;
+      const token=++viewGeneration;
       // A scenario never runs through the fixture transport or changes original inputs.
       const service=globalThis.STS_RESULT_ADAPTER.create({endpoints:globalThis.STS_RESULT_ENDPOINTS||{}});
       const result=await service.requestPlanning({...request,request_kind:'scenario'});

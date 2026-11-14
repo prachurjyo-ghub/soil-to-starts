@@ -67,15 +67,16 @@ test('regional crop options are distinct and display source timing ahead of the 
  await view.submit(body);
  const html = view.renderGenuine(body);
  assert.ok(html.indexOf('Compare crop rotations') < html.indexOf('Your usual crop order'));
- assert.equal(report.calendar_rotation.sequences.length,2);
+ assert.equal(report.calendar_rotation.sequences.length,3);
  for (const {steps} of report.calendar_rotation.sequences) {
    assert.equal(new Set(steps.map(step=>step.crop_id)).size,3);
    assert.ok(steps[0].calendar_start.slice(0,7)>=body.availability.end.slice(0,7));
    assert.ok(steps[2].calendar_end<=report.calendar_rotation.end);
    assert.ok(steps[0].calendar_end<steps[1].calendar_start && steps[1].calendar_end<steps[2].calendar_start);
  }
- assert.notDeepEqual(...report.calendar_rotation.sequences.map(plan=>plan.steps.map(step=>step.crop_id)));
+ assert.equal(new Set(report.calendar_rotation.sequences.map(plan=>plan.steps.map(step=>step.crop_id).join(','))).size,3);
  assert.match(html,/Alternative A/);
  assert.match(html,/Alternative B/);
+ assert.match(html,/Alternative C/);
  assert.deepEqual(report.alternatives,[]);
 });

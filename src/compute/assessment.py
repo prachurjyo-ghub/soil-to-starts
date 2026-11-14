@@ -9,7 +9,7 @@ from src.compute.exposure import assess_exposure
 from src.compute.crop_options import calendar_options
 from src.compute.rotation_replay import replay_trial
 
-VERSION='evidence-assessment.v8'
+VERSION='evidence-assessment.v9'
 
 def rows(db,sql,args=()):return [dict(r) for r in db.execute(sql,args)]
 def payloads(db,sql,args=()):return [json.loads(r['payload']) for r in db.execute(sql,args)]

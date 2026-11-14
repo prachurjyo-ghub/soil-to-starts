@@ -34,7 +34,7 @@ def month_span(entries):
 
 
 def calendar_options(db, context, intake, labels):
-    """Return the next three crops and up to two non-overlapping calendar sequences."""
+    """Return the next three crops and up to three non-overlapping calendar sequences."""
     ready = date.fromisoformat(intake['availability']['end'])
     if ready.year == 9999:
         return [], None
@@ -113,4 +113,15 @@ def rotation_sequences(occurrences, horizon_end, current):
                 if key not in best or score < best[key][0]:
                     best[key] = (score, (first, second, third))
     ranked = sorted(best.values(), key=lambda item: item[0])
-    return [{'steps': list(steps)} for _, steps in ranked[:2]]
+    selected = []
+    while ranked and len(selected) < 3:
+        def similarity(row):
+            crops = {step['crop_id'] for step in row[1]}
+            overlap = max((len(crops & ids) for ids, _ in selected), default=0)
+            repeated_first = any(row[1][0]['crop_id'] == steps[0]['crop_id'] for _, steps in selected)
+            return overlap, repeated_first, row[0]
+
+        choice = min(range(len(ranked)), key=lambda index: similarity(ranked[index]))
+        _, steps = ranked.pop(choice)
+        selected.append(({step['crop_id'] for step in steps}, steps))
+    return [{'steps': list(steps)} for _, steps in selected]
