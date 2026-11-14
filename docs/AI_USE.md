@@ -13,6 +13,7 @@ This disclosure covers how the Soil to Stars team used AI to develop the app and
 
 - **Codex.** Connect farmer inputs to archived NASA POWER weather and matched regional crop calendars. Preserve units, source IDs and unknown values, and test the results against local files.
 - **Codex.** Put the farmer’s answers first on the rotation screen and place the published Bogura trial in Data & methodology.
+- **Codex.** Show real BAMIS warning comparisons in the heat and water evidence cards, and explain missing data without turning weather observations into crop risk scores. Fardin identified the confusing Unknown cards and asked that the app use available source data.
 - **ChatGPT / Google Flow.** Show an adult farmer studying a field beneath changing skies, then cut to the app’s real climate visualization. Use a separate narration track.
 - **Image generation.** Isolate a realistic brown twig with a small green offshoot on a transparent background for use as a cursor.
 

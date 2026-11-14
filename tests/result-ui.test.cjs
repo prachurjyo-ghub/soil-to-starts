@@ -210,3 +210,54 @@ test('malformed dates and empty climate payloads remain readable', () => {
   assert.equal(uiApi.formatDate('2027-02-30'), 'Not supplied');
   assert.match(uiApi.climatePanel({ status: 'complete', series: [] }, 'en'), /Historical climate unavailable/);
 });
+
+
+test('field evidence cards show only applicable BAMIS comparisons and explain gaps', async () => {
+  const example = fixtures.fixture('complete-comparison');
+  const response = structuredClone(example.response);
+  response.status = 'incomplete';
+  response.data_mode = 'local_evidence';
+  response.checks = [
+    { check_id: 'heat-rule', outcome: 'unknown', label: { en: 'Heat compatibility not scored' } },
+    { check_id: 'water-rule', outcome: 'unknown', label: { en: 'Water compatibility not scored' } },
+    { check_id: 'rotation', outcome: 'unknown', label: { en: 'Rotation compatibility not scored' } },
+  ];
+  response.current_crop_assessment.checks = response.checks.slice(0, 2);
+  const reference = { source_url: 'https://www.bamis.gov.bd/', section: 'Weather Warning', page: 1, limitations: [] };
+  const hot = { id: 'hot-day', parameter: 'T2M_MAX', label: 'Daily maximum above 30°C', status: 'complete', matching_days: 0, dates: [], valid_days: 2, expected_days: 2 };
+  const cold = { id: 'cold-night', parameter: 'T2M_MIN', label: 'Daily minimum below 10°C', status: 'incomplete', matching_days: null, dates: [], valid_days: 1, expected_days: 2 };
+  const rain = { parameter: 'PRECTOTCORR', label: 'Daily rainfall within 10–15 mm', status: 'complete', matching_days: 1, dates: ['2025-01-01'], valid_days: 2, expected_days: 2 };
+  const adapter = testAdapter({ endpoints: { planning: '/plan' }, fetchImpl: async () => ({ ok: true, json: async () => response }) });
+  const ui = uiApi.create({ adapter, render() {}, navigate() {}, toast() {} });
+  async function renderEvidence(exposure, language = 'en') {
+    response.current_crop_assessment.observed_warning_exposure = exposure;
+    await ui.submit(example.request);
+    return ui.renderGenuine(example.request, language).split('id="evidence-title"')[1];
+  }
+  const exposure = { start: '2025-01-01', end: '2025-01-02', status: 'incomplete', reference };
+  let html = await renderEvidence({ ...exposure, indicators: [hot, cold, rain] });
+  assert.match(html, /Incomplete Observations.*Heat and cold checks/);
+  assert.match(html, />0 days</);
+  assert.match(html, /1\/2 days with data/);
+  assert.match(html, /Weather Compared.*Rain and water checks/);
+  assert.match(html, /1 Jan 2025 → 2 Jan 2025 · NASA POWER/);
+  assert.match(html, /BAMIS · Weather Warning · page 1/);
+  assert.match(html, /Rotation compatibility not scored/);
+
+  html = await renderEvidence({ ...exposure, status: 'complete', indicators: [rain] });
+  assert.match(html, /Comparison Unavailable.*Heat and cold checks/);
+  assert.match(html, /does not specify a temperature warning that can be matched to daily NASA data/);
+  assert.doesNotMatch(html, /Daily maximum above 30°C/);
+  assert.match(html, /Weather Compared.*Rain and water checks/);
+
+  html = await renderEvidence({ status: 'unavailable', reason: 'crop_window_has_no_cached_observations; future_weather_not_predicted' });
+  assert.match(html, /archive has no observations for the crop dates you entered/);
+  assert.doesNotMatch(html, /Weather Compared|>0 days</);
+
+  html = await renderEvidence({ ...exposure, status: 'complete', indicators: [hot] }, 'bn');
+  assert.match(html, /দিনের সর্বোচ্চ তাপমাত্রা ৩০°সে-এর বেশি/);
+
+  response.current_crop_assessment.status = 'not_applicable';
+  html = await renderEvidence({ status: 'unavailable', reason: 'no_current_crop' });
+  assert.doesNotMatch(html, /Heat and cold checks|Rain and water checks/);
+});

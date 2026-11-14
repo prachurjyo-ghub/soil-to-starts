@@ -158,34 +158,59 @@
     </section>`;
   }
 
-  function warningExposure(exposure, language) {
-    if (!exposure) return '';
-    if (exposure.status === 'unavailable') {
-      const reason = exposure.reason || '';
-      const message = reason.startsWith('sowing_date_required')
-        ? t(language, 'Add your planting date to check the available crop-window weather.', 'ফসলের সময়ের আবহাওয়া দেখতে রোপণের তারিখ দিন।')
-        : reason === 'no_source_verified_warning_reference_for_this_crop_and_source_region'
-          ? t(language, 'The source library has no comparable warning for this crop and region.', 'এই ফসল ও অঞ্চলের জন্য তুলনাযোগ্য সতর্কতা সংগ্রহে নেই।')
-          : t(language, 'Complete daily weather is needed to check the published warning.', 'প্রকাশিত সতর্কতা যাচাই করতে পূর্ণ দৈনিক আবহাওয়ার তথ্য দরকার।');
-      return `<p>${message}</p>`;
+  const WARNING_LABELS_BN = {
+    'hot-day': 'দিনের সর্বোচ্চ তাপমাত্রা ৩০°সে-এর বেশি',
+    'cold-night': 'দিনের সর্বনিম্ন তাপমাত্রা ১০°সে-এর কম',
+    'heavy-rain': 'দৈনিক বৃষ্টি ৫০ মিমির বেশি',
+  };
+
+  function warningIndicatorLabel(indicator, language) {
+    return t(language, indicator.label, indicator.label_bn || WARNING_LABELS_BN[indicator.id] || indicator.label);
+  }
+
+  function warningUnavailable(reason, language) {
+    if (reason?.startsWith('sowing_date_required')) {
+      return t(language, 'Add the planting date to check weather for this crop.', 'এই ফসলের আবহাওয়া যাচাই করতে রোপণের তারিখ দিন।');
     }
-    const label = indicator => text(indicator.label_bn ? {en: indicator.label, bn: indicator.label_bn} : indicator.label, language);
-    const counts = exposure.indicators.map(indicator => {
+    if (reason?.startsWith('crop_window_has_no_cached_observations')) {
+      return t(language, 'The saved NASA weather archive has no observations for the crop dates you entered.', 'আপনার দেওয়া ফসলের তারিখের জন্য সংরক্ষিত নাসার আবহাওয়ার পর্যবেক্ষণ নেই।');
+    }
+    if (reason === 'daily_weather_not_installed') {
+      return t(language, 'The daily NASA weather archive is not installed on this device.', 'এই ডিভাইসে নাসার দৈনিক আবহাওয়ার তথ্য ইনস্টল করা নেই।');
+    }
+    if (reason === 'no_complete_observed_weather') {
+      return t(language, 'There are no complete daily observations in the saved NASA weather for this area.', 'এই এলাকার সংরক্ষিত নাসার আবহাওয়ায় পূর্ণ দৈনিক পর্যবেক্ষণ নেই।');
+    }
+    return t(language, 'The source library has no comparable warning for this crop and region.', 'এই ফসল ও অঞ্চলের জন্য তুলনাযোগ্য সতর্কতা সংগ্রহে নেই।');
+  }
+
+  function warningIndicatorChips(indicators, language) {
+    return indicators.map(indicator => {
       const count = indicator.matching_days ?? indicator.exceedance_days;
       const value = Number.isInteger(count)
         ? `${count} ${t(language, 'days', 'দিন')}`
         : t(language, 'Incomplete observations', 'অসম্পূর্ণ পর্যবেক্ষণ');
-      return infoChip(label(indicator), value, `${indicator.valid_days}/${indicator.expected_days} ${t(language, 'days with data', 'দিনের তথ্য আছে')}`);
+      return infoChip(warningIndicatorLabel(indicator, language), value, `${indicator.valid_days}/${indicator.expected_days} ${t(language, 'days with data', 'দিনের তথ্য আছে')}`);
     }).join('');
+  }
+
+  function warningSource(exposure, language) {
+    const reference = exposure.reference;
+    return `<a href="${esc(sourceUrl(reference.source_url))}" target="_blank" rel="noopener">BAMIS · ${esc(reference.section)} · ${t(language, 'page', 'পৃষ্ঠা')} ${esc(reference.page)}</a>`;
+  }
+
+  function warningExposure(exposure, language) {
+    if (!exposure) return '';
+    if (exposure.status === 'unavailable') return `<p>${warningUnavailable(exposure.reason, language)}</p>`;
     return `<section class="warning-observations">
       <h3>${t(language, 'Daily weather compared with published warnings', 'প্রকাশিত সতর্কতার সঙ্গে দৈনিক আবহাওয়ার তুলনা')}</h3>
       <p>${esc(formatDate(exposure.start))} → ${esc(formatDate(exposure.end))} · NASA POWER</p>
-      <div class="result-chip-row">${counts}</div>
+      <div class="result-chip-row">${warningIndicatorChips(exposure.indicators, language)}</div>
       ${exposure.reference.id === 'bamis-chattogram-rabi-chilli-rain-p1' ? `<p>${t(language, 'The Rabi chilli calendar gives this rain range for flowering, fruiting and harvest. These counts cover the dates you entered. Your crop stage and field risk remain unknown.', 'রবি মরিচের ক্যালেন্ডারে ফুল, ফল ও ফসল তোলার পর্যায়ে এই বৃষ্টির পরিমাণ উল্লেখ আছে। গণনাটি আপনার দেওয়া তারিখের জন্য। ফসলের পর্যায় ও জমির ঝুঁকি অজানা।')}</p>` : ''}
       <details class="result-expand">
         <summary>${t(language, 'Source and matching dates', 'উৎস ও মিলে যাওয়া তারিখ')}</summary>
-        <a href="${esc(sourceUrl(exposure.reference.source_url))}" target="_blank" rel="noopener">BAMIS · ${esc(exposure.reference.section)} · ${t(language, 'page', 'পৃষ্ঠা')} ${esc(exposure.reference.page)}</a>
-        ${exposure.indicators.map(i => `<p><b>${esc(label(i))}</b> · ${esc(i.dates.join(', ') || t(language, 'No matching dates in the available observations', 'উপলব্ধ তথ্যে মিলে যাওয়া তারিখ নেই'))}</p>`).join('')}
+        ${warningSource(exposure, language)}
+        ${exposure.indicators.map(i => `<p><b>${esc(warningIndicatorLabel(i, language))}</b> · ${esc(i.dates.join(', ') || t(language, 'No matching dates in the available observations', 'উপলব্ধ তথ্যে মিলে যাওয়া তারিখ নেই'))}</p>`).join('')}
         <p>${esc(exposure.meaning)} ${esc(exposure.reference.limitations.join(' '))}</p>
       </details>
     </section>`;
@@ -338,7 +363,7 @@
         ${checks.length ? `<p>${t(language, 'Check the crop, soil moisture and drainage before adjusting irrigation. A field risk rating needs crop-stage and soil information.', 'সেচ বদলানোর আগে ফসল, মাটির আর্দ্রতা ও পানি নিষ্কাশন দেখুন। জমির ঝুঁকি নির্ধারণে ফসলের পর্যায় ও মাটির তথ্য দরকার।')}</p><details class="result-expand">
           <summary>${t(language, 'What these records can tell you about crop risk', 'এই তথ্য থেকে ফসলের ঝুঁকি সম্পর্কে যা জানা যায়')}</summary>
           <p>${t(language, 'Heat and water risk need crop-stage limits, soil and irrigation evidence. Use the dates and weather above as context when you discuss this crop with a local agriculture officer.', 'তাপ ও পানির ঝুঁকি জানতে ফসলের পর্যায়ভিত্তিক সীমা, মাটি ও সেচের তথ্য দরকার। স্থানীয় কৃষি কর্মকর্তার সঙ্গে আলোচনায় উপরের তারিখ ও আবহাওয়ার তথ্য ব্যবহার করুন।')}</p>
-          ${checks.map(check => `<p><b>${esc(text(check.label, language))}</b> · ${esc(check.missing_information || check.limitation || '')}</p>`).join('')}
+          ${checks.filter(check => !['heat-rule', 'water-rule'].includes(check.check_id)).map(check => `<p><b>${esc(text(check.label, language))}</b> · ${esc(check.missing_information || check.limitation || '')}</p>`).join('')}
         </details>` : ''}
       `}
     </section>`;
@@ -565,7 +590,39 @@
     </section>`;
   }
 
+  function weatherEvidenceCard(check, exposure, language) {
+    const heat = check.check_id === 'heat-rule';
+    const parameters = heat ? ['T2M_MAX', 'T2M_MIN'] : ['PRECTOTCORR'];
+    const indicators = (exposure?.indicators || []).filter(indicator => parameters.includes(indicator.parameter));
+    const complete = indicators.length > 0 && indicators.every(indicator => indicator.status === 'complete');
+    const hasReference = indicators.length > 0 && Boolean(exposure?.reference);
+    const state = complete ? 'complete' : 'unknown';
+    const title = heat ? t(language, 'Heat and cold checks', 'গরম ও ঠান্ডা যাচাই') : t(language, 'Rain and water checks', 'বৃষ্টি ও পানি যাচাই');
+    const label = complete ? t(language, 'Weather compared', 'আবহাওয়া তুলনা করা হয়েছে')
+      : hasReference ? t(language, 'Incomplete observations', 'অসম্পূর্ণ পর্যবেক্ষণ')
+        : t(language, 'Comparison unavailable', 'তুলনা করা যায়নি');
+    const unavailable = exposure?.status === 'unavailable' ? warningUnavailable(exposure.reason, language)
+      : exposure?.reference ? (heat
+        ? t(language, 'This calendar does not specify a temperature warning that can be matched to daily NASA data.', 'এই ক্যালেন্ডারে নাসার দৈনিক তথ্যের সঙ্গে মেলানোর মতো তাপমাত্রার সতর্কতা নেই।')
+        : t(language, 'This calendar has no rainfall warning that can be matched to daily NASA data.', 'এই ক্যালেন্ডারে নাসার দৈনিক তথ্যের সঙ্গে মেলানোর মতো বৃষ্টির সতর্কতা নেই।'))
+        : t(language, 'This report has no published warning comparison. Generate a fresh report to check available evidence.', 'এই রিপোর্টে প্রকাশিত সতর্কতার সঙ্গে তুলনা নেই। উপলব্ধ তথ্য যাচাই করতে নতুন রিপোর্ট তৈরি করুন।');
+    const limitation = heat
+      ? t(language, 'A crop heat-risk rating needs temperature limits for its growth stage. Regional weather alone cannot tell us if this crop was damaged.', 'তাপের ঝুঁকি জানতে ফসলের বৃদ্ধির পর্যায় অনুযায়ী তাপমাত্রার সীমা দরকার। এলাকার আবহাওয়া দিয়ে ফসলের ক্ষতি বোঝা যায় না।')
+      : t(language, 'Rain totals do not tell us whether this field needs irrigation. That also depends on the crop’s stage, soil moisture, drainage and irrigation.', 'শুধু বৃষ্টির পরিমাণ দিয়ে সেচের প্রয়োজন বোঝা যায় না। তা ফসলের পর্যায়, মাটির আর্দ্রতা, পানি নিষ্কাশন ও সেচের ওপরও নির্ভর করে।');
+    return `<article class="evidence-card evidence-card--${state}">
+      <div class="evidence-card__head">${badge(state, label)}<h3>${title}</h3></div>
+      ${hasReference ? `<p class="evidence-card__lead">${esc(formatDate(exposure.start))} → ${esc(formatDate(exposure.end))} · NASA POWER</p>
+        <div class="result-chip-row">${warningIndicatorChips(indicators, language)}</div><p>${warningSource(exposure, language)}</p>`
+        : `<p class="evidence-card__lead">${unavailable}</p>`}
+      <p class="evidence-card__lead">${limitation}</p>
+    </article>`;
+  }
+
   function evidencePanel(response, language) {
+    const assessment = response.current_crop_assessment;
+    const localReport = response.data_mode === 'local_evidence';
+    const isWeatherCheck = check => ['heat-rule', 'water-rule'].includes(check.check_id);
+    const checks = (response.checks || []).filter(check => !localReport || assessment?.status !== 'not_applicable' || !isWeatherCheck(check));
     return `<section class="result-card" aria-labelledby="evidence-title">
       <div class="result-section-heading">
         <div>
@@ -573,7 +630,9 @@
           <h2 id="evidence-title">${t(language, 'Why, why not, and what is missing', 'কেন, কেন নয়, কী তথ্য দরকার')}</h2>
         </div>
       </div>
-      <div class="evidence-list">${(response.checks || []).map(check => `<article class="evidence-card evidence-card--${esc(check.outcome)}">
+      <div class="evidence-list">${checks.map(check => localReport && isWeatherCheck(check)
+        ? weatherEvidenceCard(check, assessment?.observed_warning_exposure, language)
+        : `<article class="evidence-card evidence-card--${esc(check.outcome)}">
         <div class="evidence-card__head">${badge(check.outcome)}<h3>${esc(text(check.label, language))}</h3></div>
         <p class="evidence-card__lead">${esc(check.missing_information || check.limitation || human(check.outcome))}</p>
         <dl>
