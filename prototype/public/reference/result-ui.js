@@ -576,16 +576,13 @@
       <div class="evidence-list">${(response.checks || []).map(check => `<article class="evidence-card evidence-card--${esc(check.outcome)}">
         <div class="evidence-card__head">${badge(check.outcome)}<h3>${esc(text(check.label, language))}</h3></div>
         <p class="evidence-card__lead">${esc(check.missing_information || check.limitation || human(check.outcome))}</p>
-        <details class="result-expand">
-          <summary>${t(language, 'View technical evidence', 'কারিগরি বিস্তারিত')}</summary>
-          <dl>
-            <dt>Crop / stage</dt><dd>${esc(human(check.crop_id || 'not supplied'))} · ${esc(human(check.stage || 'not supplied'))}</dd>
-            <dt>Period</dt><dd>${esc(check.period || 'Not supplied')}</dd>
-            <dt>Rule</dt><dd><code>${esc(check.rule_id || 'Not supplied')}</code></dd>
-            <dt>Sources</dt><dd>${esc((check.source_ids || []).join(', ') || 'No source attached')}</dd>
-            <dt>Missing / limit</dt><dd>${esc(check.missing_information || check.limitation || 'None supplied')}</dd>
-          </dl>
-        </details>
+        <dl>
+          ${check.crop_id || check.stage ? `<dt>${t(language, 'Crop / stage', 'ফসল / পর্যায়')}</dt><dd>${esc([check.crop_id, check.stage].filter(Boolean).map(human).join(' · '))}</dd>` : ''}
+          ${check.period ? `<dt>${t(language, 'Period', 'সময়কাল')}</dt><dd>${esc(check.period)}</dd>` : ''}
+          ${check.rule_id ? `<dt>${t(language, 'Rule', 'নিয়ম')}</dt><dd><code>${esc(check.rule_id)}</code></dd>` : ''}
+          <dt>${t(language, 'Sources', 'উৎস')}</dt><dd>${esc((check.source_ids || []).join(', ') || t(language, 'Source unavailable', 'উৎস পাওয়া যায়নি'))}</dd>
+          ${check.missing_information && check.limitation && check.limitation !== check.missing_information ? `<dt>${t(language, 'Limit', 'সীমা')}</dt><dd>${esc(check.limitation)}</dd>` : ''}
+        </dl>
       </article>`).join('')}</div>
       <details class="result-expand source-drawer">
         <summary>${t(language, 'Sources and methods drawer', 'উৎস ও পদ্ধতির বিবরণ')}</summary>

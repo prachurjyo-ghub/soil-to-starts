@@ -57,3 +57,5 @@ The team supplied video frames showing the baseline, two three-crop alternatives
 Codex investigated the reported chart-table overlap, removed the height constraint from the expandable table, preferred different crop mixes for the three calendar alternatives, and added a field-ready date to What-if Studio. The user supplied the screenshot and requested more meaningful alternatives and scenario verification.
 
 Codex changed the regional crop calendar list so the season, published lifespan and source are visible without opening each crop. The user supplied the screenshot showing the repeated clicks.
+
+Codex used the supplied evidence-card screenshot to make technical details visible within each card, including source references and any separate limitation.
