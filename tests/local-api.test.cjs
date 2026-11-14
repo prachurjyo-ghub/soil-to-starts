@@ -28,3 +28,22 @@ test('real evidence reports save and restore without requiring invented alternat
  const view=make();await view.submit(input());view.handleClick({dataset:{resultSave:'evidence-report'}});assert.equal(view.getSaved().example,false);assert.equal(view.getSaved().data.response.alternatives.length,0);assert.equal(make().getSaved().data.response.result_id,report.result_id);
  }finally{delete global.localStorage;}
 });
+
+test('a saved season-based rotation appears before field details and past seasons are rejected', async () => {
+ const [api] = await modules;
+ const body = input();
+ body.baseline = {state:'sequence',segments:[{kind:'crop',crop_id:'brinjal',period:{kind:'season_year',season_id:'kharif_1',year:2025}}]};
+ assert.equal((await api.post(request(body),'plan')).status,422);
+ body.baseline.segments[0].period.year = 2027;
+ const response = await api.post(request(body),'plan');
+ assert.equal(response.status,200);
+ const report = await response.json();
+ assert.equal(report.baseline_assessment.segments[0].crop_id,'brinjal');
+ const ui = require('../prototype/public/reference/result-ui.js');
+ const adapter = require('../prototype/public/reference/result-adapter.js');
+ const view = ui.create({adapter:adapter.create({fetchImpl:async()=>({ok:true,json:async()=>report})}),render(){},navigate(){},toast(){}});
+ await view.submit(body);
+ const html = view.renderGenuine(body);
+ assert.match(html,/Brinjal<\/b><span>Kharif I 2027/);
+ assert.ok(html.indexOf('Your usual crop order') < html.indexOf('field-summary-title'));
+});

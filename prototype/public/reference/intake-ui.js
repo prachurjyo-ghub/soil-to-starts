@@ -49,7 +49,7 @@
     crop:['Crop','ফসল'], previousCrop:['Previous crop','আগের ফসল'], nextCrop:['Next crop','পরবর্তী ফসল'], fallowSegment:['Leave the field empty for a period','একটি সময় জমি খালি রাখা'],
     timing:['How will you describe this period?','এই সময়কাল কীভাবে জানাবেন?'],
     seasonYear:['By growing season and year','চাষের মৌসুম ও বছর দিয়ে'], dates:['By start and end dates','শুরু ও শেষের তারিখ দিয়ে'], season:['Growing season','চাষের মৌসুম'], year:['Season start year','মৌসুম শুরুর বছর'],
-    start:['Start date','শুরুর তারিখ'], end:['End date','শেষের তারিখ'], seasonHelp:['Enter entries in chronological order. For Rabi, use its starting year (e.g. 2025 for Rabi 2025–26). Season labels are reporting context, not planting advice.','সময়ের ক্রমে লিখুন। রবির জন্য শুরুর বছর দিন (যেমন রবি ২০২৫–২৬ এর জন্য ২০২৫)। মৌসুমের নাম তথ্যের প্রেক্ষাপট, বপনের পরামর্শ নয়।'],
+    start:['Start date','শুরুর তারিখ'], end:['End date','শেষের তারিখ'], seasonHelp:['Enter the rows in order. For this form, Kharif I means March–June, Kharif II July–October, and Rabi November–February. Enter the year the season starts. For example, enter 2026 for Rabi 2026–27. Use exact dates if you want a weather summary for a crop row.','সারিগুলো সময়ের ক্রমে দিন। এই ফর্মে খরিফ–১ মার্চ–জুন, খরিফ–২ জুলাই–অক্টোবর এবং রবি নভেম্বর–ফেব্রুয়ারি। মৌসুম শুরুর বছর লিখুন। যেমন রবি ২০২৬–২৭-এর জন্য ২০২৬। ফসলের সারির আবহাওয়ার সারাংশ চাইলে নির্দিষ্ট তারিখ দিন।'],
     add:['Add another crop','আরেকটি ফসল যোগ করুন'], addBaseline:['Add another crop or empty period','আরেকটি ফসল বা খালি সময় যোগ করুন'], remove:['Remove','সরান'], entry:['Entry','সারি'],
     q5:['Q5. What water access do you have?','প্রশ্ন ৫। পানির কী সুবিধা আছে?'], water:['Water access','পানির সুবিধা'], rainfed:['Rainfed','বৃষ্টিনির্ভর'], limited:['Limited irrigation','সীমিত সেচ'], reliable:['Reliable irrigation','নির্ভরযোগ্য সেচ'],
     seasonalLimits:['Are there seasonal irrigation limitations?','মৌসুমভেদে সেচের সীমাবদ্ধতা আছে কি?'], none:['No seasonal limitations reported','মৌসুমি সীমাবদ্ধতা নেই বলে জানাচ্ছি'], seasonal:['Yes, in specific seasons','হ্যাঁ, নির্দিষ্ট মৌসুমে'],
@@ -88,7 +88,7 @@
     entry_order:['Entries must be chronological, with no known date overlap or duplicate season.','সারিগুলো সময়ের ক্রমে দিন; জানা তারিখের ওভারল্যাপ বা একই মৌসুম পুনরাবৃত্তি গ্রহণযোগ্য নয়।'],
     history_after_availability:['Past history cannot end after field availability.','আগের ফসলের শেষ জমি পাওয়ার তারিখের পরে হতে পারে না।'],
     history_after_sowing:['Past history cannot end after the known current sowing date.','আগের ফসলের শেষ বর্তমান ফসলের জানা বপনের তারিখের পরে হতে পারে না।'],
-    baseline_before_availability:['The usual future sequence cannot start before field availability.','সাধারণ পরবর্তী ফসলক্রম জমি পাওয়ার আগে শুরু হতে পারে না।'],
+    baseline_before_availability:['Choose a season and year that includes or follows your field-ready date, or enter an exact start date on or after it.','জমি প্রস্তুতের তারিখ যে মৌসুমে পড়ে, সেই মৌসুম বা তার পরের মৌসুম ও বছর বেছে নিন। নির্দিষ্ট তারিখ দিলে জমি প্রস্তুতের দিন বা তার পরের দিন দিন।'],
     water:['Choose Rainfed, Limited irrigation or Reliable irrigation.','বৃষ্টিনির্ভর, সীমিত সেচ বা নির্ভরযোগ্য সেচ বেছে নিন।'], seasonal_limits:['Answer whether seasonal irrigation limitations apply.','মৌসুমি সেচের সীমাবদ্ধতা আছে কি না জানান।'],
     limited_seasons:['Select at least one applicable season.','প্রযোজ্য অন্তত একটি মৌসুম বেছে নিন।'], priority:['Choose a priority; none is selected for you.','একটি অগ্রাধিকার বেছে নিন; কোনোটি আগে থেকে বাছাই করা নেই।']
   };
@@ -305,7 +305,9 @@
       for(const control of e.target.elements)if(control.name&&control.name!=='districtSearch')capture(control);
       const result=D.validateAndNormalize(state.draft,boundaryIndex);
       errors=result.errors;
-      if(!result.ok){redraw(id(errors[0].field),false);return;}
+      if(!result.ok){redraw(id(errors[0].field),false);
+        document.getElementById(id(errors[0].field))?.scrollIntoView?.({block:'center'});
+        return;}
       state.submitted={answers:structuredClone(state.draft),request:result.request};state.pendingSubmission=null;persist();onSubmit(true);
     });
     function download() {

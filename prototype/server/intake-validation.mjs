@@ -31,7 +31,7 @@ export function validateIntake(raw){
   if(item.kind==='fallow'&&item.crop_id!==null)throw new InputError('Fallow has no crop ID');
   const p=item.period;
   if(!['dates','season_year'].includes(p.kind)||p.kind==='season_year'&&!Number.isInteger(p.year))throw new InputError('Invalid period');
-  return {cropId:item.kind==='fallow'?'fallow':item.crop_id,timing:p.kind,start:p.start,end:p.end,seasonId:p.season_id,year:p.year};
+  return {cropId:item.kind==='fallow'?'fallow':item.crop_id,timing:p.kind,start:p.start,end:p.end,seasonId:p.season_id,year:p.kind==='season_year'?String(p.year):undefined};
  });}
  const draft={...intake.blankDraft(),locationMethod:l.selection_method,districtId:l.district_id,currentCrop:c.state==='fallow'?'fallow':c.crop_id,currentSownOn:c.sown_on||'',availabilityType:a.kind,availableFrom:a.start,availableTo:a.end,availabilityBasis:a.basis,historyState:h.state,history:entries(h.entries,false),baselineState:b.state,baseline:entries(b.segments,true),water:raw.irrigation.access,seasonalLimits:raw.irrigation.seasonal_limitations,limitedSeasons:raw.irrigation.limited_seasons,priority:raw.priority};
  let geo;
