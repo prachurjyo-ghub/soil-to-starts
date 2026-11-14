@@ -1,6 +1,6 @@
-import json,sqlite3,unittest
+import sqlite3,unittest
 from src.api.daily_index import schema,records_to_sql
-from src.compute.weather import historical_window
+from src.compute.weather import comparable_season, historical_window
 class WeatherWindowTests(unittest.TestCase):
     def setUp(self):
         self.db=sqlite3.connect(':memory:');self.db.execute('CREATE TABLE weather_grids(id TEXT PRIMARY KEY)');self.db.execute("INSERT INTO weather_grids VALUES('90.625-24.0')");schema(self.db)
@@ -20,3 +20,20 @@ class WeatherWindowTests(unittest.TestCase):
         with self.assertRaises(ValueError):records_to_sql(r,{'90.625-24.0'})
     def test_extreme_source_values_are_not_clipped(self):
         r=self.record(rain=500);r['values']['T2M_MIN']=-2;self.insert(r);self.assertEqual(historical_window(self.db,'90.625-24.0','2001-01-01','2001-01-01','T2M_MIN')['value'],-2)
+
+    def test_future_dates_resolve_to_exact_past_windows_and_keep_zero(self):
+        for day, rain in [('2001-11-20', 0), ('2001-11-21', 0),
+                          ('2002-11-20', 6), ('2002-11-21', 10), ('2003-11-20', 80)]:
+            self.insert(self.record(day, rain))
+        result = comparable_season(self.db, '90.625-24.0', '2027-11-20', '2027-11-21')
+        self.assertEqual(result['years_used'], 2)
+        self.assertEqual(result['median']['rain_mm'], 8)
+        self.assertEqual([sample['rain_mm'] for sample in result['samples']], [0, 16])
+
+    def test_same_dates_can_cross_years_or_select_leap_years(self):
+        for day in ['2001-12-31', '2002-01-01', '2004-02-29']:
+            self.insert(self.record(day))
+        winter = comparable_season(self.db, '90.625-24.0', '2027-12-31', '2028-01-01')
+        self.assertEqual([sample['end'] for sample in winter['samples']], ['2002-01-01'])
+        leap = comparable_season(self.db, '90.625-24.0', '2028-02-29', '2028-02-29')
+        self.assertEqual([sample['year'] for sample in leap['samples']], [2004])

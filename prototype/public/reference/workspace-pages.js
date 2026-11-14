@@ -17,11 +17,12 @@ function render(route,ctx){
  if(route==='climate')content=`<section class="result-card"><h2>${t(l,'How has the weather shifted?','আবহাওয়া কীভাবে বদলেছে?')}</h2><p>${t(l,'Explore 25 years of archived NASA POWER temperature and rainfall. Select a district; compare two equal ten-year periods.','নাসা পাওয়ারের সংরক্ষিত ২৫ বছরের তাপমাত্রা ও বৃষ্টিপাত দেখুন। জেলা বেছে সমান দশ বছরের দুই সময়ের তুলনা করুন।')}</p>${weather.render(bundle,ctx.district,metric,l,ui.chart)}<a href="/#weather-story">${t(l,'Explore the scrolling weather story','স্ক্রল করে আবহাওয়ার গল্প দেখুন')} ↗</a></section>`;
  if(route==='compare'||route==='rotations'){
    const plan=response?.alternatives?.find(p=>p.plan_id===selectedPlan)||response?.alternatives?.[0];
-   content=has ? ui.comparison(response,l,selectedPlan,'#overview') : `<section class="result-card">
+   content=has ? ui.comparison(response,l,selectedPlan,'#overview',route==='compare') : `<section class="result-card">
      <h2>${t(l,'Start with your field','আপনার জমি দিয়ে শুরু করুন')}</h2>
      <p>${t(l,'Enter your field details to see your usual crop order and any crop calendars we have for your area.','আপনার সাধারণ ফসলের ক্রম ও এলাকার উপলব্ধ ফসলের ক্যালেন্ডার দেখতে জমির তথ্য দিন।')}</p>
      <a href="#profile">${t(l,'Set up your field','জমির তথ্য দিন')}</a>
    </section>`;
+   if(request&&!has)content=active?.state==='loading' ? `<p role="status">${t(l,'Preparing your field report…','জমির রিপোর্ট তৈরি হচ্ছে…')}</p>` : `<section class="result-card"><h2>${t(l,'Generate your field report','জমির রিপোর্ট তৈরি করুন')}</h2><button type="button" data-result-action="request-planning">${t(l,'Generate report','রিপোর্ট তৈরি করুন')}</button> <a href="#overview">${t(l,'Open your results','ফলাফল দেখুন')}</a></section>`;
    if(route==='rotations'&&(plan||active?.fixture_id))content+=ui.operationTimeline(plan,l);
    if(route==='compare'&&has)content+=`<details class="result-card result-expand"><summary>${t(l,'Why field planning is limited','জমির পরিকল্পনা সীমিত কেন')}</summary>${ui.evidencePanel(response,l)}</details>`;
  }

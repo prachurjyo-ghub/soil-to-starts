@@ -48,14 +48,16 @@ test('field planning shows the reported order, while the historical study appear
  const response = {
    status:'incomplete', data_mode:'local_evidence', alternatives:[],
    baseline_assessment:{role:'baseline',segments:[{label:{en:'Lentil',bn:'মসুর'},period:'2027-01-01 → 2027-03-01'}]},
-   evidence_profile:{crop_context:{regional_catalogue:[{crop_label:'Mustard',seasons:['Rabi']}]}}
+   evidence_profile:{crop_context:{regional_catalogue:[{crop_label:'Mustard',calendar_count:1,seasons:['Rabi']}]}}
  };
  const app = setup({adapter:adapter.create({fetchImpl:async()=>({ok:true,json:async()=>response})})});
  await app.submit(request);
  const rotations = app.renderRoute('rotations', request);
  assert.match(rotations,/Your usual crop order/);
  assert.match(rotations,/Lentil.*2027-01-01/);
- assert.match(rotations,/Mustard · Rabi/);
+ assert.match(rotations,/Mustard/);
+ assert.match(rotations,/Rabi/);
+ assert.match(app.renderRoute('compare', request),/data-calendar-choice/);
  assert.match(rotations,/Edit field answers/);
  assert.doesNotMatch(rotations,/Bogura|field study|First alternative unavailable/);
  assert.match(app.renderRoute('rotations', request,'bn'),/আপনার সাধারণ ফসলের ক্রম/);

@@ -4,11 +4,11 @@ import json
 from src.api.storage import metadata, counts
 from src.compute.rule_engine import executable
 from src.compute.metric_contract import METRICS, canonical_observation
-from src.compute.weather import historical_window
+from src.compute.weather import comparable_season, historical_window
 from src.compute.exposure import assess_exposure
 from src.compute.rotation_replay import replay_trial
 
-VERSION='evidence-assessment.v4'
+VERSION='evidence-assessment.v5'
 
 def rows(db,sql,args=()):return [dict(r) for r in db.execute(sql,args)]
 def payloads(db,sql,args=()):return [json.loads(r['payload']) for r in db.execute(sql,args)]
@@ -24,14 +24,19 @@ def climate_context(db,district):
 
 def crop_context(db,district,current):
     membership=district['membership'];region_id=membership['region_id']
+    aliases = {row['crop_id']: row['intake_id'] for row in
+               rows(db, 'SELECT intake_id,crop_id FROM crop_aliases WHERE crop_id IS NOT NULL')}
     grouped=[]
     for crop in rows(db,'SELECT id,label FROM crops ORDER BY label'):
         calendars=payloads(db,'SELECT payload FROM calendars WHERE crop_id=? AND region_id=? ORDER BY id',(crop['id'],region_id))
-        grouped.append({'crop_id':crop['id'],'crop_label':crop['label'],'intake_crop_id':next((r['intake_id'] for r in rows(db,'SELECT intake_id,crop_id FROM crop_aliases') if r['crop_id']==crop['id']),None),'region_id':region_id,'calendar_count':len(calendars),'calendar_ids':[c['calendar_id'] for c in calendars],'seasons':sorted({c['season_label'] for c in calendars}),'evidence_status':'collected_context_only' if calendars else 'not_collected_for_region','recommendation_status':'not_assessed'})
-    alias=db.execute('SELECT payload FROM crop_aliases WHERE intake_id=?',(current.get('crop_id'),)).fetchone()
-    requested=json.loads(alias[0])['label']['en'] if alias else None
-    match=next((c for c in grouped if c['crop_label']==requested),None)
-    calendars=payloads(db,'SELECT payload FROM calendars WHERE crop_id=? AND region_id=? ORDER BY id',(match['crop_id'],region_id)) if match else []
+        grouped.append({'crop_id':crop['id'],'crop_label':crop['label'],'intake_crop_id':aliases.get(crop['id']),'region_id':region_id,'calendar_count':len(calendars),'calendar_ids':[c['calendar_id'] for c in calendars],
+                        'calendars': [{'id': cal['calendar_id'], 'source_id': cal['source_id'],
+                                       'source_page': cal['source_page'], 'season': cal['season_label'],
+                                       'rice_system': cal.get('rice_system_label'),
+                                       'life_span_days': [cal['duration_min_days'], cal['duration_max_days']]}
+                                      for cal in calendars],'seasons':sorted({c['season_label'] for c in calendars}),'evidence_status':'collected_context_only' if calendars else 'not_collected_for_region','recommendation_status':'not_assessed'})
+    alias=db.execute('SELECT crop_id FROM crop_aliases WHERE intake_id=?',(current.get('crop_id'),)).fetchone()
+    calendars=payloads(db,'SELECT payload FROM calendars WHERE crop_id=? AND region_id=? ORDER BY id',(alias['crop_id'],region_id)) if alias and alias['crop_id'] else []
     samples=[]
     for cal in calendars:
         entry=db.execute('SELECT payload,weather_payload FROM calendar_entries WHERE calendar_id=? ORDER BY id LIMIT 1',(cal['calendar_id'],)).fetchone()
@@ -68,6 +73,12 @@ def assess(db,intake,source_identity):
                 },
             }
     climate['reported_occupancy_window'] = occupancy
+    climate['field_ready_season'] = comparable_season(
+        db, district['grid'], intake['availability']['start'], intake['availability']['end'])
+    climate['crop_season_reference'] = (
+        comparable_season(db, district['grid'], sowing, intake['availability']['end'])
+        if sowing and occupancy['status'] != 'available' else None
+    )
     exposure=assess_exposure(db,intake,crop['region_id'])
     source_ids=sorted({c['source_id'] for c in crop['current_crop_calendars']})
     checks=[check('heat-rule','Heat compatibility not scored','তাপমাত্রার উপযোগিতা স্কোর করা হয়নি','Reviewed crop/variety/stage temperature range and its matching daily statistic/window.',source_ids),check('water-rule','Water compatibility not scored','পানির উপযোগিতা স্কোর করা হয়নি','Reviewed stage-specific crop water requirement and irrigation treatment; printed calendar rainfall is not a tolerance.',source_ids),check('operations','Crop timing is not yet executable','ফসলের সময় এখনো গণনাযোগ্য নয়','Source-backed preparation, growth-event, harvest/collection and clearance durations plus a planting-window definition.',source_ids),check('rotation','Rotation compatibility not scored','ফসল আবর্তনের উপযোগিতা স্কোর করা হয়নি','Reviewed crop-family/sequence restrictions and applicable varieties; history alone cannot quantify nutrients.'),check('normal-definition','BAMIS and NASA statistics cannot be silently equated','বামিস ও নাসার পরিসংখ্যান সরাসরি এক করা যাবে না','BAMIS printed week/day mapping, normal statistic, reference period and spatial definition before numerical normal-to-normal comparison.',source_ids)]

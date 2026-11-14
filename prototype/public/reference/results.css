@@ -225,3 +225,7 @@
 .result-page{min-width:0;width:100%;grid-template-columns:minmax(0,1fr)}.result-page>*{min-width:0;max-width:100%;overflow-wrap:anywhere}
 /* Long evidence disclosure labels must wrap inside narrow result cards. */
 .result-expand{min-width:0;max-width:100%}.result-expand summary{max-width:100%;box-sizing:border-box;white-space:normal;overflow-wrap:anywhere}.result-card .table-scroll{width:100%;min-width:0}.result-card code{overflow-wrap:anywhere}
+
+.calendar-records{padding-inline-start:1.25rem;line-height:1.65;overflow-wrap:anywhere}
+.calendar-records small{display:block;color:var(--result-muted)}
+[data-calendar-choice]{display:block;width:100%;margin-block:8px;padding:8px;border:1px solid var(--result-line);border-radius:8px;background:var(--surface,#fff);color:inherit}

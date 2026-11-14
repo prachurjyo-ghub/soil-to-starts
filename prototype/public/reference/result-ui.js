@@ -175,6 +175,73 @@
       </ul></section>`;
   }
 
+  function historicalDateReport(result, language, title, heading = 'h2') {
+    if (!result) return '';
+    if (result.status !== 'available') {
+      const message = result.reason === 'window_exceeds_one_year'
+        ? t(language, 'Use a date range of up to one year for this historical comparison.', 'অতীতের সঙ্গে তুলনার জন্য সর্বোচ্চ এক বছরের তারিখ বেছে নিন।')
+        : t(language, 'There are no complete archive years for these dates in your district.', 'এই জেলার জন্য একই তারিখের পূর্ণ বছরের তথ্য নেই।');
+      return unavailableCard(title, message, '<a href="#climate">' + t(language, 'View district weather history', 'জেলার আবহাওয়ার ইতিহাস দেখুন') + '</a>');
+    }
+    const fmt = (value, unit) => `${new Intl.NumberFormat(language === 'bn' ? 'bn-BD' : 'en', {maximumFractionDigits: 2}).format(value)} ${unit}`;
+    return `<section class="result-card" aria-label="${esc(title)}">
+      <${heading}>${esc(title)}</${heading}>
+      <p>${esc(formatDate(result.start))} → ${esc(formatDate(result.end))} · NASA POWER · ${result.years_used} ${t(language, 'complete past years from the 2001–2025 archive', '২০০১–২০২৫ আর্কাইভের পূর্ণ বছরের তথ্য')}</p>
+      <div class="result-chip-row">
+        ${infoChip(t(language, 'Typical highest temperature', 'সাধারণ সর্বোচ্চ তাপমাত্রা'), fmt(result.median.high_c, '°C'))}
+        ${infoChip(t(language, 'Typical lowest temperature', 'সাধারণ সর্বনিম্ন তাপমাত্রা'), fmt(result.median.low_c, '°C'))}
+        ${infoChip(t(language, 'Typical total rain', 'সাধারণ মোট বৃষ্টি'), fmt(result.median.rain_mm, 'mm'))}
+      </div>
+      <p>${t(language, 'Typical means the middle value across past years for the same calendar dates. These are historical grid values. Future weather and crop suitability are unknown.', 'একই তারিখে অতীত বছরের মানগুলোর মাঝের মান দেখানো হয়েছে। এগুলো পুরোনো গ্রিড তথ্য। ভবিষ্যতের আবহাওয়া ও ফসলের উপযোগিতা অজানা।')}</p>
+      <details class="result-expand"><summary>${t(language, 'See each year', 'প্রতি বছরের তথ্য দেখুন')}</summary>
+        <div class="table-scroll"><table><thead><tr>
+          <th scope="col">${t(language, 'Dates', 'তারিখ')}</th><th scope="col">${t(language, 'High (°C)', 'সর্বোচ্চ (°C)')}</th><th scope="col">${t(language, 'Low (°C)', 'সর্বনিম্ন (°C)')}</th><th scope="col">${t(language, 'Rain (mm)', 'বৃষ্টি (মিমি)')}</th>
+        </tr></thead><tbody>${result.samples.map(row => `<tr><td>${esc(row.start)} → ${esc(row.end)}</td><td>${esc(row.high_c)}</td><td>${esc(row.low_c)}</td><td>${esc(row.rain_mm)}</td></tr>`).join('')}</tbody></table></div>
+      </details>
+    </section>`;
+  }
+
+  function calendarName(record, language) {
+    const season = record.season === 'Unspecified' || !record.season
+      ? t(language, 'Season unspecified', 'মৌসুম উল্লেখ নেই') : record.season;
+    return record.rice_system && record.rice_system !== season ? record.rice_system + ' · ' + season : season;
+  }
+
+  function calendarDetails(crop, language) {
+    const records = crop.calendars || (crop.seasons || []).map(season => ({season}));
+    return `<ul class="calendar-records">${records.map(record => {
+      const [min, max] = record.life_span_days || [];
+      const duration = Number.isFinite(min) && Number.isFinite(max)
+        ? `${min === max ? min : min + '–' + max} ${t(language, 'days printed in calendar', 'ক্যালেন্ডারে উল্লেখিত দিন')}`
+        : t(language, 'Duration unavailable', 'সময়কাল পাওয়া যায়নি');
+      const reference = record.source_id
+        ? `<small>${esc(record.source_id)} · ${t(language, 'page', 'পৃষ্ঠা')} ${esc(record.source_page)}</small>` : '';
+      return `<li><b>${esc(calendarName(record, language))}</b> · ${esc(duration)} ${reference}</li>`;
+    }).join('')}</ul>`;
+  }
+
+  function regionalCalendarPanel(response, language, compare) {
+    const context = response.evidence_profile?.crop_context;
+    const crops = (context?.regional_catalogue || []).filter(crop => crop.calendar_count > 0);
+    const title = compare ? t(language, 'Compare local crop calendars', 'স্থানীয় ফসলের ক্যালেন্ডার তুলনা') : t(language, 'Crop calendars for your area', 'আপনার এলাকার ফসলের ক্যালেন্ডার');
+    if (!crops.length) return unavailableCard(title, t(language, 'No crop calendars were found for this region in the bundled records.', 'সংরক্ষিত তথ্যে এই অঞ্চলের ফসলের ক্যালেন্ডার পাওয়া যায়নি।'));
+    const currentCalendarId = context.current_crop_calendars?.[0]?.calendar_id;
+    const currentIndex = Math.max(0, crops.findIndex(crop => crop.calendar_ids?.includes(currentCalendarId)));
+    const selected = [currentIndex, currentIndex === 0 && crops.length > 1 ? 1 : 0];
+    const selectors = compare ? selected.map((initial, slot) => `<div>
+      <label>${slot === 0 ? t(language, 'First crop', 'প্রথম ফসল') : t(language, 'Second crop', 'দ্বিতীয় ফসল')}
+        <select data-calendar-choice aria-controls="calendar-choice-${slot}">${crops.map((crop, i) => `<option value="${i}"${i === initial ? ' selected' : ''}>${esc(crop.crop_label)}</option>`).join('')}</select>
+      </label>
+      <div id="calendar-choice-${slot}">${crops.map((crop, i) => `<div data-calendar-option${i === initial ? '' : ' hidden'}>${calendarDetails(crop, language)}</div>`).join('')}</div>
+    </div>`).join('') : '';
+    return `<section class="result-card">
+      <h2>${esc(title)}</h2><p>${esc(context.region_label)} · BAMIS</p>
+      <p>${t(language, 'Compare the seasons and crop lifespans printed in local records. Ask a local agriculture officer about exact planting and harvest dates for your field.', 'স্থানীয় নথিতে উল্লেখিত মৌসুম ও ফসলের জীবনকাল তুলনা করুন। আপনার জমির রোপণ ও ফসল তোলার সঠিক তারিখ স্থানীয় কৃষি কর্মকর্তার কাছে জেনে নিন।')}</p>
+      ${compare ? `<div class="check-grid">${selectors}</div>` : `<ul>${crops.map(crop => `<li><details class="result-expand"><summary>${esc(crop.crop_label)}</summary>${calendarDetails(crop, language)}</details></li>`).join('')}</ul>`}
+      <p><a href="https://www.bamis.gov.bd/en/calendar" target="_blank" rel="noopener">${t(language, 'Open BAMIS source calendars', 'বামিসের মূল ক্যালেন্ডার দেখুন')}</a></p>
+    </section>`;
+  }
+
   function cropWeather(window, language) {
     if (!window || !Object.hasOwn(window, 'latest_observed')) return '';
     if (window.status !== 'available') {
@@ -190,7 +257,7 @@
       }).join('')}</ul>`;
   }
 
-  function vulnerability(assessment, language, occupancy) {
+  function vulnerability(assessment, language, occupancy, seasonalReference) {
     const checks = assessment?.checks || [];
     const stage = assessment?.stage ? human(assessment.stage) : t(language, 'unknown', 'জানা নেই');
     const suppliedPeriod = assessment?.assessment_period;
@@ -218,6 +285,7 @@
         </div>
       </div>
       ${cropWeather(occupancy, language)}
+      ${historicalDateReport(seasonalReference, language, t(language, 'Past weather over the same crop dates', 'ফসলের একই তারিখে অতীতের আবহাওয়া'), 'h3')}
       ${warningExposure(assessment?.observed_warning_exposure,language)}
       <div class="check-grid">${checks.map(check => `<article class="check-tile check-tile--${esc(check.outcome)}"><div class="check-tile__head">${badge(check.outcome)}<h3>${esc(text(check.label, language))}</h3></div><p>${esc(check.missing_information || check.limitation || '')}</p></article>`).join('')}</div>
       <p class="result-limit"><b>${t(language, 'Limit:', 'সীমা:')}</b> ${esc(assessment?.limitation || 'Not assessed.')}</p>
@@ -235,12 +303,11 @@
     return (plan.indicators || []).map(item => statusRow(item.label, item.value ?? item.status, item.explanation || '')).join('');
   }
 
-  function comparison(response, language, selectedPlan, reportHref = '#rotations') {
+  function comparison(response, language, selectedPlan, reportHref = '#rotations', compare = false) {
     const plans = [response.baseline_assessment, ...(response.alternatives || [])].filter(Boolean);
     const missingSecond = (response.alternatives || []).length < 2;
     if (response.data_mode === 'local_evidence' && !(response.alternatives || []).length) {
       const baseline = response.baseline_assessment;
-      const catalogue = response.evidence_profile?.crop_context?.regional_catalogue || [];
       return `<section class="result-card" aria-labelledby="reported-plan-title">
         <h2 id="reported-plan-title">${t(language, 'Your usual crop order', 'আপনার সাধারণ ফসলের ক্রম')}</h2>
         ${baseline?.segments?.length
@@ -250,12 +317,9 @@
           ${reportHref === '#overview' ? `<a href="#overview">${t(language, 'See your weather and crop report', 'আবহাওয়া ও ফসলের রিপোর্ট দেখুন')}</a>` : ''}
         </div>
         <p class="result-limit">${t(language, 'We need verified local planting and harvest guidance to suggest a new crop order for this field.', 'এই জমির জন্য নতুন ফসলের ক্রম সাজাতে স্থানীয় রোপণ ও ফসল তোলার যাচাই করা তথ্য দরকার।')}</p>
-        ${reportHref === '#overview' && catalogue.length ? `<details class="result-expand">
-          <summary>${t(language, 'See crop calendars collected for your area', 'আপনার এলাকার সংগৃহীত ফসলের ক্যালেন্ডার দেখুন')}</summary>
-          <p>${t(language, 'These are reference calendars. Ask a local agriculture officer which dates and crops suit your field.', 'এগুলো তথ্যসূত্রের ক্যালেন্ডার। আপনার জমির জন্য উপযুক্ত ফসল ও তারিখ স্থানীয় কৃষি কর্মকর্তার কাছে জেনে নিন।')}</p>
-          <ul>${catalogue.map(crop => `<li>${esc(crop.crop_label)}${crop.seasons?.length ? ` · ${esc(crop.seasons.join(', '))}` : ''}</li>`).join('')}</ul>
-        </details>` : ''}
-      </section>`;
+      </section>${reportHref === '#overview'
+        ? historicalDateReport(response.climate?.field_ready_season, language, t(language, 'Past weather around your field-ready dates', 'জমি প্রস্তুতের তারিখের অতীত আবহাওয়া')) + regionalCalendarPanel(response, language, compare)
+        : `<p><a href="#rotations">${t(language, 'See your field-ready dates and local calendars', 'জমি প্রস্তুতের তারিখ ও স্থানীয় ক্যালেন্ডার দেখুন')}</a></p>`}`;
     }
     const periodLine = `${response.comparison_period?.start ? response.comparison_period.start+' → '+response.comparison_period.end+' · ' : ''}${response.comparison_period?.explanation || ''}${response.comparison_period?.policy_id ? ` · ${response.comparison_period.policy_id}${response.comparison_period.policy_version ? ` ${response.comparison_period.policy_version}` : ''}` : ''}`;
     return `<section class="result-card result-comparison" aria-labelledby="comparison-title">
@@ -634,7 +698,7 @@
           </div>
           <div class="result-page-intro__status">${badge(response.report_status==='complete'?'complete':response.status,response.report_status==='complete'?t(language,'Evidence report ready','প্রমাণের রিপোর্ট প্রস্তুত'):response.status)}<span>${esc(response.coverage?.label || '')}</span></div>
         </section>
-        ${example ? fieldSummary(data, language) : genuineSummary(data.request, language, response.status)}${restored&&!example?`<p class="result-limit">${t(language,'Restored saved report; generated at','সংরক্ষিত রিপোর্ট দেখানো হচ্ছে; তৈরি হয়েছে')} ${esc(response.generated_at_utc||'—')}. ${t(language,'Generate a new report after changing inputs or source data.','ইনপুট বা উৎসের তথ্য বদলালে নতুন রিপোর্ট তৈরি করুন।')} <button data-result-action="request-planning">${t(language,'Generate fresh report','নতুন রিপোর্ট তৈরি করুন')}</button></p>`:''}${!example&&response.report_status==='complete'?`<div class="result-actions"><button data-result-save="evidence-report">${t(language,'Save evidence report','প্রমাণের রিপোর্ট সংরক্ষণ')}</button></div>`:''}${response.data_mode === 'local_evidence' ? fieldInputsUsed(language, response.evidence_profile?.crop_context) : ''}${vulnerability(response.current_crop_assessment, language, response.climate?.reported_occupancy_window)}${comparison(response, language, selectedPlan)}${plan || example ? operationTimeline(plan, language) : ''}${climatePanel(response.climate, language, climateMetric, example)}<details class="result-card result-expand"><summary>${t(language, 'Sources and technical details', 'উৎস ও কারিগরি বিবরণ')}</summary>${evidenceProfile(response, language)}${evidencePanel(response, language)}</details>${toolsPanel(response, language)}${receiptPanel(data, language)}
+        ${example ? fieldSummary(data, language) : genuineSummary(data.request, language, response.status)}${restored&&!example?`<p class="result-limit">${t(language,'Restored saved report; generated at','সংরক্ষিত রিপোর্ট দেখানো হচ্ছে; তৈরি হয়েছে')} ${esc(response.generated_at_utc||'—')}. ${t(language,'Generate a new report after changing inputs or source data.','ইনপুট বা উৎসের তথ্য বদলালে নতুন রিপোর্ট তৈরি করুন।')} <button data-result-action="request-planning">${t(language,'Generate fresh report','নতুন রিপোর্ট তৈরি করুন')}</button></p>`:''}${!example&&response.report_status==='complete'?`<div class="result-actions"><button data-result-save="evidence-report">${t(language,'Save evidence report','প্রমাণের রিপোর্ট সংরক্ষণ')}</button></div>`:''}${response.data_mode === 'local_evidence' ? historicalDateReport(response.climate?.field_ready_season, language, t(language, 'Past weather around your field-ready dates', 'জমি প্রস্তুতের তারিখের অতীত আবহাওয়া')) + fieldInputsUsed(language, response.evidence_profile?.crop_context) : ''}${vulnerability(response.current_crop_assessment, language, response.climate?.reported_occupancy_window, response.climate?.crop_season_reference)}${comparison(response, language, selectedPlan)}${plan || example ? operationTimeline(plan, language) : ''}${climatePanel(response.climate, language, climateMetric, example)}<details class="result-card result-expand"><summary>${t(language, 'Sources and technical details', 'উৎস ও কারিগরি বিবরণ')}</summary>${evidenceProfile(response, language)}${evidencePanel(response, language)}</details>${toolsPanel(response, language)}${receiptPanel(data, language)}
       </div>`;
     }
 
@@ -661,7 +725,9 @@
       restoring=true;const token=viewGeneration;
       try{const response=await fetch('/api/results/'+saved.id,{cache:'no-store'});if(!response.ok)return;const body=await response.json();
         const stable=v=>v&&typeof v==='object'?(Array.isArray(v)?v.map(stable):Object.fromEntries(Object.keys(v).sort().map(k=>[k,stable(v[k])]))):v;
-        if(token===viewGeneration&&!genuine&&body.result?.data_mode==='local_evidence'&&JSON.stringify(stable(body.intake))===JSON.stringify(stable(request))){genuine={request,state:body.result.status,response:body.result};restored=true;rerender();}
+        if(token===viewGeneration&&!genuine&&body.result?.data_mode==='local_evidence'&&JSON.stringify(stable(body.intake))===JSON.stringify(stable(request))){
+          if (!Object.hasOwn(body.result.climate || {}, 'field_ready_season')) { void submit(request); return; }
+          genuine={request,state:body.result.status,response:body.result};restored=true;rerender();}
       }catch{}finally{restoring=false;}
     }
 
@@ -750,6 +816,13 @@
       }
     }
     function handleChange(target) {
+      if (target.matches('[data-calendar-choice]')) {
+        const records = document.getElementById(target.getAttribute('aria-controls'));
+        records?.querySelectorAll('[data-calendar-option]').forEach((record, index) => {
+          record.hidden = index !== Number(target.value);
+        });
+        return true;
+      }
       if(target.id==='whatif-water'){const fields=document.getElementById('whatif-irrigation-fields');if(fields)fields.hidden=target.value==='rainfed';return true;}
       if(target.id==='whatif-seasonal-limitations'){const fields=document.getElementById('whatif-limited-seasons');if(fields)fields.hidden=target.value!=='seasonal';return true;}
       if(target.matches('[data-weather-district]')){weatherDistrict=target.value;rerender();return true;}

@@ -21,3 +21,27 @@ This disclosure covers how the Soil to Stars team used AI to develop the app and
 Published datasets and research are credited in the [README](../README.md) and bundled source records. Weather calculations, source joins and supported warning checks run as deterministic code. The running app uses no generative model to create crop values or recommendations.
 
 Screen recordings show the app. Generated farm scenes are illustrative. CapCut was the planned editor. The final voice-over tool and media watermarking and metadata could not be confirmed from the repository records. Credit the exact voice tool in the video description and metadata if generated narration is present, and verify visible AI labels on generated shots before submission.
+
+## Decisions and contributions by the team
+
+| Contribution | What the team supplied or decided | How to inspect the work |
+| --- | --- | --- |
+| Product and integration | Fardin set the Bangladesh-wide district scope, chose to combine farmer inputs with NASA weather and local crop evidence, and made the final integration and submission decisions. | [README and workflow](../README.md), [assessment source](../src/compute/assessment.py) |
+| Climate acquisition | Saim collected and prepared NASA POWER data and supplied the archive and handoff records. | [Packaged climate manifest](../data/climate/packages/v1.0.0/PACKAGE_MANIFEST.json), [daily index and parity checks](../src/api/daily_index.py) |
+| Regional crop research | Maruf collected regional crop records, preserving distinctions between regions, seasons and source tables. | [Evidence package](../data/catalog/EVIDENCE_PACKAGE.md), [evidence dictionary](../data/catalog/EVIDENCE_DICTIONARY.md) |
+| Workspace | Prachurjo contributed the farmer-facing interface, navigation and result layouts that the team iterated on. | [Workspace route](../prototype/app/workspace/page.js), [result rendering](../prototype/public/reference/result-ui.js) |
+| Presentation | The team directed the project narrative, selected demonstration scenes and used footage of the running app to show the product. Nadim and Hla were assigned presentation work covering motion and narration respectively. | [Short demonstration](https://www.youtube.com/watch?v=2CR_mM3GDlw), [long presentation](https://www.youtube.com/watch?v=LOkSu0I2Ack) |
+
+## How the AI-assisted work was checked
+
+1. **Source handling.** Codex helped implement stable district and crop IDs, date aggregation, and source tracking. Original documents and publisher observations remain the evidence. The implementation preserves missing values and gives each reported window a source and spatial context.
+2. **Calculation and scope.** For date windows extending beyond cached observations, the code uses the same calendar dates from past archive years and reports the median across complete windows. It handles leap days and cross-year windows explicitly. The user can inspect every contributing annual result. No model estimates future weather or invents planting and harvest dates.
+3. **Crop comparison.** The team wanted decisions to stay tied to the farmer's area. The interface matches the region first and shows the source's seasons, lifespans and page references. Only a source-backed, applicable warning enters an exposure count. The tool shows why uncertainty remains when the reference is missing.
+4. **Technical checks.** Verification includes automated tests and a production build. The nationwide audit generated 1,984 reports from the real archive, recomputed source statistics and compared every crop match in that audit with its SQLite source rows. Browser checks submitted the Barishal example, switched from banana to rice in the comparison, and verified the Bangla view. The calculation and results are inspectable in [weather computation](../src/compute/weather.py), [weather tests](../tests/test_weather_windows.py), [workspace tests](../tests/workspace-pages.test.cjs) and exported reports. These checks cover software and data handling. Independent agronomic validation remains separate.
+5. **Media disclosure.** Google Flow was used for illustrative farming scenes. The screen-recorded app and NASA-derived charts are identified separately in the project. The final narration tool, visible marks and uploaded audio metadata are still unverified in this repository.
+
+## Final implementation instruction
+
+> Fix the missing field answers across Bangladesh, verify the calculations and screens on the bundled evidence, and expand the submission documents to explain the project's creativity, impact, AI tools and human contributions.
+
+Codex added the date-matched historical summaries and interactive two-crop calendar comparison, then checked the generated reports against the source data. The maintainer set the nationwide scope and supplied the demonstrated Barishal case.
