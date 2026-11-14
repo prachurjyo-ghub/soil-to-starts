@@ -221,9 +221,10 @@ test('field evidence cards show only applicable BAMIS comparisons and explain ga
     { check_id: 'heat-rule', outcome: 'unknown', label: { en: 'Heat compatibility not scored' } },
     { check_id: 'water-rule', outcome: 'unknown', label: { en: 'Water compatibility not scored' } },
     { check_id: 'rotation', outcome: 'unknown', label: { en: 'Rotation compatibility not scored' } },
+    { check_id: 'operations', outcome: 'unknown', source_ids: ['bamis-example-page'], label: { en: 'Crop timing is not yet executable' } },
   ];
   response.current_crop_assessment.checks = response.checks.slice(0, 2);
-  const reference = { source_url: 'https://www.bamis.gov.bd/', section: 'Weather Warning', page: 1, limitations: [] };
+  const reference = { id: 'bamis-chattogram-rabi-chilli-rain-p1', source_url: 'https://www.bamis.gov.bd/', section: 'Weather Warning', page: 1, limitations: [] };
   const hot = { id: 'hot-day', parameter: 'T2M_MAX', label: 'Daily maximum above 30°C', status: 'complete', matching_days: 0, dates: [], valid_days: 2, expected_days: 2 };
   const cold = { id: 'cold-night', parameter: 'T2M_MIN', label: 'Daily minimum below 10°C', status: 'incomplete', matching_days: null, dates: [], valid_days: 1, expected_days: 2 };
   const rain = { parameter: 'PRECTOTCORR', label: 'Daily rainfall within 10–15 mm', status: 'complete', matching_days: 1, dates: ['2025-01-01'], valid_days: 2, expected_days: 2 };
@@ -242,13 +243,36 @@ test('field evidence cards show only applicable BAMIS comparisons and explain ga
   assert.match(html, /Weather Compared.*Rain and water checks/);
   assert.match(html, /1 Jan 2025 → 2 Jan 2025 · NASA POWER/);
   assert.match(html, /BAMIS · Weather Warning · page 1/);
-  assert.match(html, /Rotation compatibility not scored/);
+  assert.match(html, /Which crop should follow\?/);
+  assert.match(html, /When can I plant and harvest\?/);
+  assert.match(html, /<summary>Source IDs<\/summary><p>bamis-example-page<\/p>/);
+  assert.doesNotMatch(html, /Source unavailable|not yet executable|Rotation compatibility not scored/);
+  assert.match(html, />1 day</);
+  assert.doesNotMatch(html, />1 days</);
+  assert.match(html, /without assuming your chilli was at one of those stages/);
 
   html = await renderEvidence({ ...exposure, status: 'complete', indicators: [rain] });
   assert.match(html, /Comparison Unavailable.*Heat and cold checks/);
   assert.match(html, /does not specify a temperature warning that can be matched to daily NASA data/);
   assert.doesNotMatch(html, /Daily maximum above 30°C/);
   assert.match(html, /Weather Compared.*Rain and water checks/);
+
+  const occupancy = {status: 'available', start: exposure.start, end: exposure.end, latest_observed: exposure.end, metrics: {
+    T2M_MAX: {status: 'complete', value: 33.6, unit: 'degC'},
+    T2M_MIN: {status: 'unknown', value: null, unit: 'degC'},
+    PRECTOTCORR: {status: 'complete', value: 0, unit: 'mm'},
+  }};
+  response.climate.reported_occupancy_window = occupancy;
+  html = await renderEvidence({ ...exposure, status: 'complete', indicators: [rain] });
+  assert.match(html, /Weather Recorded.*Heat and cold checks/);
+  assert.match(html, /Hottest daily high<\/small><b>33\.6 °C/);
+  assert.doesNotMatch(html, /Coldest daily low/);
+  assert.match(html, /does not specify a temperature warning/);
+  assert.match(html, /Weather Compared.*Rain and water checks/);
+  html = await renderEvidence({ status: 'unavailable', reason: 'no_source_verified_warning_reference_for_this_crop_and_source_region' });
+  assert.match(html, /Total rain<\/small><b>0 mm/);
+  assert.doesNotMatch(html, /Weather Compared/);
+  response.climate.reported_occupancy_window = {status: 'unavailable'};
 
   html = await renderEvidence({ status: 'unavailable', reason: 'crop_window_has_no_cached_observations; future_weather_not_predicted' });
   assert.match(html, /archive has no observations for the crop dates you entered/);
