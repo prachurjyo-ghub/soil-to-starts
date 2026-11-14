@@ -265,7 +265,7 @@
     return `<section class="result-card">
       <h2>${esc(title)}</h2><p>${esc(context.region_label)} · BAMIS</p>
       <p>${t(language, 'Compare the seasons and crop lifespans printed in local records. Ask a local agriculture officer about exact planting and harvest dates for your field.', 'স্থানীয় নথিতে উল্লেখিত মৌসুম ও ফসলের জীবনকাল তুলনা করুন। আপনার জমির রোপণ ও ফসল তোলার সঠিক তারিখ স্থানীয় কৃষি কর্মকর্তার কাছে জেনে নিন।')}</p>
-      ${compare ? `<div class="check-grid">${selectors}</div>` : `<ul>${crops.map(crop => `<li><details class="result-expand"><summary>${esc(crop.crop_label)}</summary>${calendarDetails(crop, language)}</details></li>`).join('')}</ul>`}
+      ${compare ? `<div class="check-grid">${selectors}</div>` : `<ul class="crop-calendar-list" role="list">${crops.map(crop => `<li><h3>${esc(crop.crop_label)}</h3>${calendarDetails(crop, language)}</li>`).join('')}</ul>`}
       <p><a href="https://www.bamis.gov.bd/en/calendar" target="_blank" rel="noopener">${t(language, 'Open BAMIS source calendars', 'বামিসের মূল ক্যালেন্ডার দেখুন')}</a></p>
     </section>`;
   }

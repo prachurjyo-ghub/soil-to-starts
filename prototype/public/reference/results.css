@@ -240,3 +240,9 @@
 .calendar-rotation-steps span{display:block;color:var(--result-muted)}
 
 .rotation-alternative-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr))}
+
+.crop-calendar-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:10px;list-style:none;margin:1rem 0;padding:0}
+.crop-calendar-list>li{min-width:0;padding:.8rem 1rem;border:1px solid var(--result-line);border-radius:10px}
+.crop-calendar-list h3{margin:0 0 .35rem}
+.crop-calendar-list .calendar-records{list-style:none;margin:0;padding:0}
+.crop-calendar-list .calendar-records li+li{margin-top:.45rem}

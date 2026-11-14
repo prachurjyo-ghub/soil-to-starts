@@ -55,3 +55,5 @@ Codex added the date-matched historical summaries and interactive two-crop calen
 The team supplied video frames showing the baseline, two three-crop alternatives and an operations table. Codex adapted the comparison layout to two evidence-based calendar sequences within a common horizon. It used month spans from the actual sources and kept test operation dates out of field results.
 
 Codex investigated the reported chart-table overlap, removed the height constraint from the expandable table, preferred different crop mixes for the three calendar alternatives, and added a field-ready date to What-if Studio. The user supplied the screenshot and requested more meaningful alternatives and scenario verification.
+
+Codex changed the regional crop calendar list so the season, published lifespan and source are visible without opening each crop. The user supplied the screenshot showing the repeated clicks.
