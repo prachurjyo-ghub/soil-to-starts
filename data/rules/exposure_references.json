@@ -22,6 +22,33 @@
         "Favorable weather, soil temperature, drought and disease rows are not substituted for these warning definitions.",
         "No rule for rotation planning is activated by this reference."
       ]
+    },
+    {
+      "id": "bamis-chattogram-rabi-chilli-rain-p1",
+      "crop_id": "chilli",
+      "region_id": "bamis-region-6ea3e0d639bcb4308340",
+      "source_id": "bamis_26492_27ade249",
+      "source_url": "https://www.bamis.gov.bd/res/public/calendars/2023/03/16/26492.pdf",
+      "source_sha256": "bfa6848686aaacc8ce6a406ee87df244551ccb364397f1748fc10a4471aefc8e",
+      "page": 1,
+      "section": "Weather Warning",
+      "conditions": [
+        {
+          "id": "rain-in-published-range",
+          "parameter": "PRECTOTCORR",
+          "column": "precipitation_mm_day",
+          "operator": "between_inclusive",
+          "threshold": 10,
+          "upper_threshold": 15,
+          "unit": "mm/day",
+          "label": "Daily rainfall within 10–15 mm",
+          "label_bn": "দৈনিক বৃষ্টি ১০–১৫ মিমি"
+        }
+      ],
+      "limitations": [
+        "The source is a Rabi chilli calendar and places this rainfall range under flowering, fruiting and harvesting. The count matches rainfall amounts over the reported dates. The crop stage, season applicability and timing of early rainfall are not inferred.",
+        "Amounts above 15 mm are outside this printed range, with no safety conclusion. The temperature statements lack a matching exposure duration or statistic, so no heat or crop risk is scored."
+      ]
     }
   ]
 }

@@ -44,7 +44,11 @@ def handle(message,db_path=None):
             sql='SELECT r.result_json,s.intake_json,s.id AS sid FROM results r JOIN submissions s ON s.id=r.submission_id WHERE '+('r.id=?' if operation=='result' else 's.id=? ORDER BY r.created_at_utc DESC LIMIT 1')
             row=db.execute(sql,(key,)).fetchone()
             if not row:return {'http_status':404,'body':{'status':'not_found'}}
-            return {'http_status':200,'body':{'intake':json.loads(row['intake_json']),'result':json.loads(row['result_json']),'submission_id':row['sid']}}
+            result = json.loads(row['result_json'])
+            body = {'intake':json.loads(row['intake_json']), 'result':result, 'submission_id':row['sid']}
+            if result.get('versions', {}).get('method') != VERSION or result.get('versions', {}).get('catalogue') != identity:
+                body['refresh_required'] = True
+            return {'http_status':200,'body':body}
         if operation not in ['plan','climate','current_crop']:return {'http_status':400,'body':{'status':'invalid_input','reason':'Unsupported operation'}}
         intake=message.get('intake');validate_shape(intake,db)
         output=assess(db,intake,identity)

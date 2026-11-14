@@ -3,6 +3,17 @@ from datetime import date,timedelta
 import json
 from src.api.storage import ROOT,metadata
 
+def matches_condition(value, condition):
+    operator, threshold = condition['operator'], condition['threshold']
+    if operator == '>':
+        return value > threshold
+    if operator == '<':
+        return value < threshold
+    if operator == 'between_inclusive':
+        return threshold <= value <= condition['upper_threshold']
+    raise ValueError('Unsupported publisher warning operator')
+
+
 def assess_exposure(db,intake,region_id,today=None):
     today=today or date.today()
     unavailable=lambda reason:{'status':'unavailable','reason':reason,'indicators':[],'meaning':'No crop damage or probability inferred.'}
@@ -23,7 +34,7 @@ def assess_exposure(db,intake,region_id,today=None):
     indicators=[]
     for condition in reference['conditions']:
         valid=[r for r in observations if r[condition['column']] is not None]
-        hit=[r['date'] for r in valid if (r[condition['column']]>condition['threshold'] if condition['operator']=='>' else r[condition['column']]<condition['threshold'])]
+        hit=[r['date'] for r in valid if matches_condition(r[condition['column']], condition)]
         complete=len(valid)==expected
-        indicators.append({k:v for k,v in condition.items() if k!='column'}|{'status':'complete' if complete else 'incomplete','exceedance_days':len(hit) if complete else None,'observed_exceedance_days':len(hit),'valid_days':len(valid),'expected_days':expected,'dates':hit,'missing_days':expected-len(valid)})
-    return {'status':'complete' if all(i['status']=='complete' for i in indicators) else 'incomplete','start':start,'end':end,'as_of':latest,'grid_id':grid,'time_standard':'LST','spatial_support':'district-anchor NASA grid, not field measurements','indicators':indicators,'reference':reference,'weather_source_ids':['nasa-power-regional-2001-2025']+(['nasa-power-recent-2026'] if end>'2025-12-31' else []),'meaning':'Observed warning-level exceedance counts, not a vulnerability score, diagnosis, crop loss or forecast.'}
+        indicators.append({k:v for k,v in condition.items() if k!='column'}|{'status':'complete' if complete else 'incomplete','matching_days':len(hit) if complete else None,'exceedance_days':len(hit) if complete and condition['operator'] != 'between_inclusive' else None,'observed_exceedance_days':len(hit) if condition['operator'] != 'between_inclusive' else None,'valid_days':len(valid),'expected_days':expected,'dates':hit,'missing_days':expected-len(valid)})
+    return {'status':'complete' if all(i['status']=='complete' for i in indicators) else 'incomplete','start':start,'end':end,'as_of':latest,'grid_id':grid,'time_standard':'LST','spatial_support':'district-anchor NASA grid, not field measurements','indicators':indicators,'reference':reference,'weather_source_ids':['nasa-power-regional-2001-2025']+(['nasa-power-recent-2026'] if end>'2025-12-31' else []),'meaning':'Counts compare historical grid weather to published values. Field risk, crop damage and future conditions cannot be determined from these counts.'}

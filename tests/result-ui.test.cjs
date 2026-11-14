@@ -100,7 +100,7 @@ test('genuine summary keeps history and usual practice without inventing coverag
   assert.match(html, /bogura/i);
   assert.match(html, /Mustard/);
   assert.match(html, /Rice → fallow/);
-  assert.match(html, /not scientific coverage/i);
+  assert.match(html, /District weather grid/i);
   assert.match(html, /Inputs Validated/i);
 });
 

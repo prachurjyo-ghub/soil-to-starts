@@ -103,7 +103,7 @@
         <div>
           <p class="result-eyebrow">01 · ${t(language, 'FIELD SUMMARY', 'জমির সারাংশ')}</p>
           <h2 id="field-summary-title">${esc(cropName)}</h2>
-          <p class="result-summary-meta">${esc(districtLabel(location, language))} · ${esc(human(location.selection_method || 'unknown'))} · ${t(language, 'not scientific coverage', 'বৈজ্ঞানিক কভারেজ নয়')}</p>
+          <p class="result-summary-meta">${esc(districtLabel(location, language))} · ${location.selection_method === 'map_pin' ? t(language, 'Map pin', 'ম্যাপ পিন') : t(language, 'District weather grid', 'জেলার আবহাওয়া গ্রিড')}</p>
         </div>
         <div class="result-summary-status">${badge('complete',t(language,'Inputs validated','ইনপুট যাচাই হয়েছে'))}<span>${esc(available)}</span></div>
       </div>
@@ -136,7 +136,7 @@
         <div>
           <p class="result-eyebrow">01 · ${t(language, 'FIELD SUMMARY', 'জমির সারাংশ')}</p>
           <h2 id="field-summary-title">${esc(cropName)}</h2>
-          <p class="result-summary-meta">${esc(text(request.location.district_label, language))} · ${esc(human(request.location.selection_method))} · ${t(language, 'not scientific coverage', 'বৈজ্ঞানিক কভারেজ নয়')}</p>
+          <p class="result-summary-meta">${esc(text(request.location.district_label, language))} · ${esc(human(request.location.selection_method))}</p>
         </div>
         <div class="result-summary-status">${badge(response.status, response.status)}<span>${esc(comparison)}</span></div>
       </div>
@@ -158,9 +158,37 @@
     </section>`;
   }
 
-  function warningExposure(exposure,language){
-    if(!exposure||exposure.status==='unavailable')return `<p class="result-limit">${t(language,'Observed warning comparison unavailable','পর্যবেক্ষিত সতর্কতার তুলনা অনুপলব্ধ')}: ${esc(human(exposure?.reason||'no matching source reference'))}</p>`;
-    return `<section class="warning-observations"><h3>${t(language,'Observed weather against published warning levels','প্রকাশিত সতর্কতা সীমার সঙ্গে পর্যবেক্ষিত আবহাওয়া')}</h3><p>${esc(exposure.start)} → ${esc(exposure.end)} · NASA POWER · LST · ${esc(exposure.grid_id)}</p><p>${esc(exposure.meaning)}</p><div class="result-chip-row">${exposure.indicators.map(i=>infoChip(i.label,i.exceedance_days===null?'Incomplete':`${i.exceedance_days} days`,`${i.valid_days}/${i.expected_days} observed days; ${i.missing_days} missing`)).join('')}</div><details><summary>${t(language,'Source and exceedance dates','উৎস ও সীমা অতিক্রমের তারিখ')}</summary><a href="${esc(sourceUrl(exposure.reference.source_url))}" target="_blank" rel="noopener">BAMIS ${esc(exposure.reference.section)} · page ${esc(exposure.reference.page)}</a>${exposure.indicators.map(i=>`<p><b>${esc(i.label)}</b>: ${esc(i.dates.join(', ')||'No observed exceedances')}. ${i.missing_days?'Missing days prevent a complete count.':''}</p>`).join('')}<p>${esc(exposure.reference.limitations.join(' '))}</p><code>${esc(exposure.reference.source_sha256)}</code></details></section>`;
+  function warningExposure(exposure, language) {
+    if (!exposure) return '';
+    if (exposure.status === 'unavailable') {
+      const reason = exposure.reason || '';
+      const message = reason.startsWith('sowing_date_required')
+        ? t(language, 'Add your planting date to check the available crop-window weather.', 'ফসলের সময়ের আবহাওয়া দেখতে রোপণের তারিখ দিন।')
+        : reason === 'no_source_verified_warning_reference_for_this_crop_and_source_region'
+          ? t(language, 'The source library has no comparable warning for this crop and region.', 'এই ফসল ও অঞ্চলের জন্য তুলনাযোগ্য সতর্কতা সংগ্রহে নেই।')
+          : t(language, 'Complete daily weather is needed to check the published warning.', 'প্রকাশিত সতর্কতা যাচাই করতে পূর্ণ দৈনিক আবহাওয়ার তথ্য দরকার।');
+      return `<p>${message}</p>`;
+    }
+    const label = indicator => text(indicator.label_bn ? {en: indicator.label, bn: indicator.label_bn} : indicator.label, language);
+    const counts = exposure.indicators.map(indicator => {
+      const count = indicator.matching_days ?? indicator.exceedance_days;
+      const value = Number.isInteger(count)
+        ? `${count} ${t(language, 'days', 'দিন')}`
+        : t(language, 'Incomplete observations', 'অসম্পূর্ণ পর্যবেক্ষণ');
+      return infoChip(label(indicator), value, `${indicator.valid_days}/${indicator.expected_days} ${t(language, 'days with data', 'দিনের তথ্য আছে')}`);
+    }).join('');
+    return `<section class="warning-observations">
+      <h3>${t(language, 'Daily weather compared with published warnings', 'প্রকাশিত সতর্কতার সঙ্গে দৈনিক আবহাওয়ার তুলনা')}</h3>
+      <p>${esc(formatDate(exposure.start))} → ${esc(formatDate(exposure.end))} · NASA POWER</p>
+      <div class="result-chip-row">${counts}</div>
+      ${exposure.reference.id === 'bamis-chattogram-rabi-chilli-rain-p1' ? `<p>${t(language, 'The Rabi chilli calendar gives this rain range for flowering, fruiting and harvest. These counts cover the dates you entered. Your crop stage and field risk remain unknown.', 'রবি মরিচের ক্যালেন্ডারে ফুল, ফল ও ফসল তোলার পর্যায়ে এই বৃষ্টির পরিমাণ উল্লেখ আছে। গণনাটি আপনার দেওয়া তারিখের জন্য। ফসলের পর্যায় ও জমির ঝুঁকি অজানা।')}</p>` : ''}
+      <details class="result-expand">
+        <summary>${t(language, 'Source and matching dates', 'উৎস ও মিলে যাওয়া তারিখ')}</summary>
+        <a href="${esc(sourceUrl(exposure.reference.source_url))}" target="_blank" rel="noopener">BAMIS · ${esc(exposure.reference.section)} · ${t(language, 'page', 'পৃষ্ঠা')} ${esc(exposure.reference.page)}</a>
+        ${exposure.indicators.map(i => `<p><b>${esc(label(i))}</b> · ${esc(i.dates.join(', ') || t(language, 'No matching dates in the available observations', 'উপলব্ধ তথ্যে মিলে যাওয়া তারিখ নেই'))}</p>`).join('')}
+        <p>${esc(exposure.meaning)} ${esc(exposure.reference.limitations.join(' '))}</p>
+      </details>
+    </section>`;
   }
 
   function fieldInputsUsed(language, context) {
@@ -250,51 +278,51 @@
         : t(language, 'There are no complete cached observations in the reported crop window.', 'জানানো ফসলের সময়ে পূর্ণ সংরক্ষিত পর্যবেক্ষণ নেই।');
       return `<p>${message} ${window.latest_observed ? esc(window.latest_observed) + ' · ' : ''}<a href="#climate">${t(language, 'View district weather history', 'জেলার আবহাওয়ার ইতিহাস দেখুন')}</a></p>`;
     }
-    return `<p><b>${t(language, 'Observed weather during your crop window', 'ফসলের সময়ে পর্যবেক্ষিত আবহাওয়া')}</b> · ${esc(window.start)} → ${esc(window.end)} · NASA POWER</p>
+    return `<p><b>${t(language, 'Recorded weather since planting', 'ফসলের সময়ে পর্যবেক্ষিত আবহাওয়া')}</b> · ${esc(window.start)} → ${esc(window.end)} · NASA POWER</p>
       <ul>${[['T2M_MAX','Highest daily temperature','সর্বোচ্চ দৈনিক তাপমাত্রা'],['T2M_MIN','Lowest daily temperature','সর্বনিম্ন দৈনিক তাপমাত্রা'],['PRECTOTCORR','Total rainfall','মোট বৃষ্টি']].map(([key,en,bn])=>{
         const metric=window.metrics[key];
-        return `<li>${t(language,en,bn)} · ${Number.isFinite(metric.value)?esc(metric.value.toFixed(1)+' '+metric.unit):t(language,'Incomplete observations','অসম্পূর্ণ পর্যবেক্ষণ')}</li>`;
+        return `<li>${t(language,en,bn)} · ${Number.isFinite(metric.value)?esc(metric.value.toFixed(1)+' '+(metric.unit === 'degC' ? '°C' : metric.unit)):t(language,'Incomplete observations','অসম্পূর্ণ পর্যবেক্ষণ')}</li>`;
       }).join('')}</ul>`;
   }
 
   function vulnerability(assessment, language, occupancy, seasonalReference) {
     const checks = assessment?.checks || [];
-    const stage = assessment?.stage ? human(assessment.stage) : t(language, 'unknown', 'জানা নেই');
-    const suppliedPeriod = assessment?.assessment_period;
-    const period = suppliedPeriod && typeof suppliedPeriod === 'object' ? `${suppliedPeriod.start || '—'} → ${suppliedPeriod.end || '—'}` : (suppliedPeriod || t(language, 'not established', 'নির্ধারিত নয়'));
-    const statusLabel = assessment?.status === 'incomplete'
-      ? t(language, 'Assessment incomplete', 'মূল্যায়ন অসম্পূর্ণ')
-      : assessment?.status === 'complete'
-        ? t(language, 'Assessment ready', 'মূল্যায়ন প্রস্তুত')
-        : (assessment?.status || 'unavailable');
-    const leadTitle = assessment?.status === 'incomplete'
-      ? t(language, 'Insufficient Data', 'পর্যাপ্ত তথ্য নেই')
-      : assessment?.status === 'complete'
-        ? t(language, 'Exposure checked for this crop', 'এই ফসলের প্রভাব যাচাই হয়েছে')
-        : human(assessment?.status || 'unavailable');
+    const fallow = assessment?.status === 'not_applicable';
+    const hasWeather = assessment?.status === 'complete' || [occupancy, seasonalReference].some(item => item?.status === 'available');
+    const period = assessment?.assessment_period;
+    const title = t(language, 'Weather for your current crop', 'বর্তমান ফসলের আবহাওয়া');
+    const status = fallow ? t(language, 'No crop reported', 'বর্তমান ফসল নেই')
+      : hasWeather ? t(language, 'Weather evidence ready', 'আবহাওয়ার তথ্য প্রস্তুত')
+      : t(language, 'Crop dates need weather data', 'ফসলের তারিখের আবহাওয়ার তথ্য প্রয়োজন');
     return `<section class="result-card" aria-labelledby="vulnerability-title">
       <div class="result-section-heading">
-        <div><p class="result-eyebrow">02 · ${t(language, 'CURRENT CROP', 'বর্তমান ফসল')}</p><h2 id="vulnerability-title">${t(language, 'Historical exposure assessment', 'ঐতিহাসিক প্রভাব মূল্যায়ন')}</h2></div>
-        ${badge(assessment?.status || 'unavailable', statusLabel)}
+        <div><h2 id="vulnerability-title">${title}</h2><p>${esc(text(assessment?.crop_label, language))}</p></div>
+        ${badge(hasWeather ? 'complete' : 'unknown', status)}
       </div>
-      <div class="assessment-strip">
-        <span class="assessment-strip__icon" aria-hidden="true">◎</span>
-        <div>
-          <b>${esc(leadTitle)}</b>
-          <p>${esc(text(assessment?.crop_label, language) || t(language, 'Not supplied', 'দেওয়া হয়নি'))} · ${t(language, 'Stage', 'পর্যায়')}: ${esc(stage)} · ${t(language, 'Assessment period', 'মূল্যায়নের সময়')}: ${esc(period)}</p>
-        </div>
-      </div>
-      ${cropWeather(occupancy, language)}
-      ${historicalDateReport(seasonalReference, language, t(language, 'Past weather over the same crop dates', 'ফসলের একই তারিখে অতীতের আবহাওয়া'), 'h3')}
-      ${warningExposure(assessment?.observed_warning_exposure,language)}
-      <div class="check-grid">${checks.map(check => `<article class="check-tile check-tile--${esc(check.outcome)}"><div class="check-tile__head">${badge(check.outcome)}<h3>${esc(text(check.label, language))}</h3></div><p>${esc(check.missing_information || check.limitation || '')}</p></article>`).join('')}</div>
-      <p class="result-limit"><b>${t(language, 'Limit:', 'সীমা:')}</b> ${esc(assessment?.limitation || 'Not assessed.')}</p>
+      ${fallow ? `<p><a href="#climate">${t(language, 'See your district weather history', 'জেলার আবহাওয়ার ইতিহাস দেখুন')}</a></p>` : `
+        ${assessment?.stage ? `<p>${t(language, 'Reported stage', 'জানানো পর্যায়')} · ${esc(human(assessment.stage))}</p>` : ''}
+        ${period?.start && period?.end && !assessment?.observed_warning_exposure?.start ? `<p>${esc(period.start)} → ${esc(period.end)}</p>` : ''}
+        ${cropWeather(occupancy, language)}
+        ${historicalDateReport(seasonalReference, language, t(language, 'Past weather over the same crop dates', 'ফসলের একই তারিখে অতীতের আবহাওয়া'), 'h3')}
+        ${warningExposure(assessment?.observed_warning_exposure, language)}
+        ${checks.length ? `<details class="result-expand">
+          <summary>${t(language, 'What these records can tell you about crop risk', 'এই তথ্য থেকে ফসলের ঝুঁকি সম্পর্কে যা জানা যায়')}</summary>
+          <p>${t(language, 'Heat and water risk need crop-stage limits, soil and irrigation evidence. Use the dates and weather above as context when you discuss this crop with a local agriculture officer.', 'তাপ ও পানির ঝুঁকি জানতে ফসলের পর্যায়ভিত্তিক সীমা, মাটি ও সেচের তথ্য দরকার। স্থানীয় কৃষি কর্মকর্তার সঙ্গে আলোচনায় উপরের তারিখ ও আবহাওয়ার তথ্য ব্যবহার করুন।')}</p>
+          ${checks.map(check => `<p><b>${esc(text(check.label, language))}</b> · ${esc(check.missing_information || check.limitation || '')}</p>`).join('')}
+        </details>` : ''}
+      `}
     </section>`;
   }
 
   function planCrops(plan, language) {
     if (plan.role === 'baseline') {
-      return (plan.segments || []).map(item => `<li><b>${esc(text(item.label, language))}</b><span>${esc(item.period || '')}</span></li>`).join('');
+      return (plan.segments || []).map(item => {
+        const weather = item.historical_weather;
+        const summary = weather?.status === 'available'
+          ? `<small>${weather.years_used} ${t(language, 'past windows', 'অতীত সময়কাল')} · ${t(language, 'median high / low / total rain', 'সর্বোচ্চ / সর্বনিম্ন / মোট বৃষ্টির মাঝের মান')} · ${esc(weather.median.high_c)} °C / ${esc(weather.median.low_c)} °C / ${esc(weather.median.rain_mm)} mm</small>`
+          : '';
+        return `<li><b>${esc(text(item.label, language))}</b><span>${esc(item.period || '')}</span>${summary}</li>`;
+      }).join('');
     }
     return (plan.steps || []).map((item, index) => `<li><span>${String(index + 1).padStart(2, '0')}</span><b>${esc(text(item.crop_label, language))}</b><small>${esc(item.field_clearance_window?.latest || '')}</small></li>`).join('');
   }
@@ -311,7 +339,7 @@
       return `<section class="result-card" aria-labelledby="reported-plan-title">
         <h2 id="reported-plan-title">${t(language, 'Your usual crop order', 'আপনার সাধারণ ফসলের ক্রম')}</h2>
         ${baseline?.segments?.length
-          ? `<p>${t(language, 'From the answers you entered.', 'আপনার দেওয়া উত্তর থেকে।')}</p><ol class="plan-crops">${planCrops(baseline, language)}</ol>`
+          ? `<p>${t(language, 'The order comes from your answers. Weather summaries use the same calendar dates from past years.', 'ক্রমটি আপনার উত্তর থেকে নেওয়া হয়েছে। আবহাওয়ার তথ্য অতীতের একই তারিখ থেকে নেওয়া হয়েছে।')}</p><ol class="plan-crops">${planCrops(baseline, language)}</ol>`
           : `<p>${t(language, 'You haven’t entered a usual crop order. If you have one, you can add it in your field setup.', 'আপনি সাধারণ ফসলের ক্রম দেননি। জানা থাকলে জমির তথ্যে যোগ করতে পারেন।')}</p>`}
         <div class="result-actions"><button type="button" data-result-action="edit-inputs">${t(language, 'Edit field answers', 'জমির তথ্য বদলান')}</button>
           ${reportHref === '#overview' ? `<a href="#overview">${t(language, 'See your weather and crop report', 'আবহাওয়া ও ফসলের রিপোর্ট দেখুন')}</a>` : ''}
@@ -693,10 +721,10 @@
         <section class="result-page-intro" aria-label="Result workspace">
           <div>
             <p class="result-eyebrow">SOIL TO STARS · RESULT WORKSPACE</p>
-            <h1>${t(language, 'Your field decision, with the evidence beside it.', 'আপনার জমির সিদ্ধান্ত, প্রমাণসহ')}</h1>
-            <p>${t(language, 'Plans, timing, reasons and unknowns stay together.', 'পরিকল্পনা, সময়, কারণ ও অজানা তথ্য এক জায়গায়।')}</p>
+            <h1>${t(language, 'Your field report', 'আপনার জমির রিপোর্ট')}</h1>
+            <p>${t(language, 'Review the weather for your dates and compare crop calendars for your region.', 'আপনার তারিখের আবহাওয়া দেখুন ও এলাকার ফসলের ক্যালেন্ডার তুলনা করুন।')}</p>
           </div>
-          <div class="result-page-intro__status">${badge(response.report_status==='complete'?'complete':response.status,response.report_status==='complete'?t(language,'Evidence report ready','প্রমাণের রিপোর্ট প্রস্তুত'):response.status)}<span>${esc(response.coverage?.label || '')}</span></div>
+          <div class="result-page-intro__status">${badge(response.report_status==='complete'?'complete':response.status,response.report_status==='complete'?t(language,'Evidence report ready','প্রমাণের রিপোর্ট প্রস্তুত'):response.status)}<span>${response.data_mode === 'local_evidence' ? t(language, 'Historical NASA weather and regional crop records', 'নাসার অতীত আবহাওয়া ও আঞ্চলিক ফসলের তথ্য') : esc(response.coverage?.label || '')}</span></div>
         </section>
         ${example ? fieldSummary(data, language) : genuineSummary(data.request, language, response.status)}${restored&&!example?`<p class="result-limit">${t(language,'Restored saved report; generated at','সংরক্ষিত রিপোর্ট দেখানো হচ্ছে; তৈরি হয়েছে')} ${esc(response.generated_at_utc||'—')}. ${t(language,'Generate a new report after changing inputs or source data.','ইনপুট বা উৎসের তথ্য বদলালে নতুন রিপোর্ট তৈরি করুন।')} <button data-result-action="request-planning">${t(language,'Generate fresh report','নতুন রিপোর্ট তৈরি করুন')}</button></p>`:''}${!example&&response.report_status==='complete'?`<div class="result-actions"><button data-result-save="evidence-report">${t(language,'Save evidence report','প্রমাণের রিপোর্ট সংরক্ষণ')}</button></div>`:''}${response.data_mode === 'local_evidence' ? historicalDateReport(response.climate?.field_ready_season, language, t(language, 'Past weather around your field-ready dates', 'জমি প্রস্তুতের তারিখের অতীত আবহাওয়া')) + fieldInputsUsed(language, response.evidence_profile?.crop_context) : ''}${vulnerability(response.current_crop_assessment, language, response.climate?.reported_occupancy_window, response.climate?.crop_season_reference)}${comparison(response, language, selectedPlan)}${plan || example ? operationTimeline(plan, language) : ''}${climatePanel(response.climate, language, climateMetric, example)}<details class="result-card result-expand"><summary>${t(language, 'Sources and technical details', 'উৎস ও কারিগরি বিবরণ')}</summary>${evidenceProfile(response, language)}${evidencePanel(response, language)}</details>${toolsPanel(response, language)}${receiptPanel(data, language)}
       </div>`;
@@ -726,7 +754,7 @@
       try{const response=await fetch('/api/results/'+saved.id,{cache:'no-store'});if(!response.ok)return;const body=await response.json();
         const stable=v=>v&&typeof v==='object'?(Array.isArray(v)?v.map(stable):Object.fromEntries(Object.keys(v).sort().map(k=>[k,stable(v[k])]))):v;
         if(token===viewGeneration&&!genuine&&body.result?.data_mode==='local_evidence'&&JSON.stringify(stable(body.intake))===JSON.stringify(stable(request))){
-          if (!Object.hasOwn(body.result.climate || {}, 'field_ready_season')) { void submit(request); return; }
+          if (body.refresh_required || !Object.hasOwn(body.result.climate || {}, 'field_ready_season')) { void submit(request); return; }
           genuine={request,state:body.result.status,response:body.result};restored=true;rerender();}
       }catch{}finally{restoring=false;}
     }

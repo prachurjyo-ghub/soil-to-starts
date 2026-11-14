@@ -36,3 +36,23 @@ class RecentWeatherQA(unittest.TestCase):
         rows=[{'date':f'{year}-01','coverage':'complete','value':0,'valid_days':31,'expected_days':31} for year in range(2001,2011)]
         self.assertEqual(seasonal_profile(rows,'PRECTOTCORR')[0]['periods'][0]['mean'],0)
         rows[0]['value']=None;self.assertIsNone(seasonal_profile(rows,'PRECTOTCORR')[0]['periods'][0]['mean'])
+    def test_chattogram_chilli_rainfall_matches_inclusive_range(self):
+        district = json.loads(self.db.execute(
+            "SELECT payload FROM districts WHERE id='bd-district-chattogram'").fetchone()[0])
+        grid = district['grid']
+        region = district['membership']['region_id']
+        rain = [9.9, 10, 15, 15.1]
+        self.db.executemany(
+            'INSERT INTO weather_daily VALUES(?,?,?,?,?,?,?)',
+            [(grid, f'2026-01-0{i}', 20, 15, 30, value, '{}')
+             for i, value in enumerate(rain, 1)])
+        request = {'current': {'state':'growing', 'crop_id':'chilli', 'sown_on':'2026-01-01'},
+                   'location': {'district_id':'bd-district-chattogram'},
+                   'availability': {'end':'2026-01-04'}}
+        result = assess_exposure(self.db, request, region, today=date(2026, 1, 5))
+        self.assertEqual(result['status'], 'complete')
+        self.assertEqual(len(result['indicators']), 1)
+        indicator = result['indicators'][0]
+        self.assertEqual(indicator['matching_days'], 2)
+        self.assertEqual(indicator['dates'], ['2026-01-02', '2026-01-03'])
+        self.assertIsNone(indicator['exceedance_days'])

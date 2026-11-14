@@ -47,7 +47,7 @@ If port 3000 is in use, stop the other server or pass a free port to the same st
 **Barishal · Banana.** Use district search, enter a planting date of **14 November 2026** and a field-ready window of **20–30 November 2026**. Choose first cultivation, no usual rotation, rainfed and balanced for this walkthrough.
 
 1. **Your results** shows the historical weather for 20–30 November. Expand **See each year** to inspect the underlying windows. In the current-crop section, the report explains the observation cutoff and shows historical weather for the same crop dates.
-2. **Rotation plans** shows the reported crop order, the date-window weather and crop calendars for Barishal. **Compare plans** lets you change either crop and check how the recorded seasons and lifespans differ. **Data & methodology** contains the optional Bogura research case.
+2. **Rotation plans** shows the reported crop order, the date-window weather and crop calendars for Barishal. Steps with explicit dates also show historical weather for their own date windows. **Compare plans** lets you change either crop and check how the recorded seasons and lifespans differ. **Data & methodology** contains the optional Bogura research case.
 3. Change the district, then change the date window. The app recomputes from the matching grid and dates. Districts mapped to the same grid can legitimately share a weather result. Changing the crop changes the crop-source lookup. Water access and priorities are retained for review. Save the report or export its JSON and inspect the source IDs, representative grid and year-by-year values.
 
 ## The evidence behind the report
@@ -55,7 +55,7 @@ If port 3000 is in use, stop the other server or pass a free port to the same st
 | Source | How we use it |
 | --- | --- |
 | [NASA POWER Daily](https://power.larc.nasa.gov/docs/services/api/temporal/daily/) | Archived gridded 2 m air temperature and precipitation support the historical charts and date-window summaries. Each district maps to a representative grid point. Districts can share a grid point. |
-| [Bangladesh Agro-Meteorological Information Service crop calendars](https://www.bamis.gov.bd/en/calendar) | The app matches documented regional calendars to crop and region. Printed weather normals describe source conditions. A warning comparison requires an explicitly applicable source and matching weather statistic. |
+| [Bangladesh Agro-Meteorological Information Service crop calendars](https://www.bamis.gov.bd/en/calendar) | The app matches documented regional calendars to crop and region. Printed weather normals describe source conditions. A warning comparison requires a matching crop, region and weather statistic. For Chattogram chilli, the report counts observed days within the published 10–15 mm daily rain range and explains the source's crop-stage limits. |
 | [Hasan et al., Bogura field study](https://hnpublication.com/upload/ijacr/2022-11-3001.pdf#page=3) | An optional research example shows published crop sequences beside NASA POWER summaries for the documented dates. |
 | [geoBoundaries Bangladesh ADM2](data/admin/README.md) | Local district boundaries support district selection and pin matching. |
 

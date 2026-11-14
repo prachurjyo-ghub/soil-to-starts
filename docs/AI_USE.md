@@ -45,3 +45,5 @@ Screen recordings show the app. Generated farm scenes are illustrative. CapCut w
 > Fix the missing field answers across Bangladesh, verify the calculations and screens on the bundled evidence, and expand the submission documents to explain the project's creativity, impact, AI tools and human contributions.
 
 Codex added the date-matched historical summaries and interactive two-crop calendar comparison, then checked the generated reports against the source data. The maintainer set the nationwide scope and supplied the demonstrated Barishal case.
+
+**Release follow-up.** Fardin supplied the failing GitHub check and the Chattogram chilli report. Codex inspected the runner logs, made climate aggregation reproducible across Python versions, and matched the English BAMIS source PDF to the archive checksum. The report now shows the count of days in the published daily rainfall range, with the crop-stage limits beside it. Heat risk and prospective rotations still require additional evidence.

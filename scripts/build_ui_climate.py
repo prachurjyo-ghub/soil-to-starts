@@ -42,7 +42,9 @@ if __name__=='__main__':
     data=build()
     receipt=(json.dumps({'schema':'ui-climate-receipt.v1','payload_sha256':sha(data),'source_archive_sha256':json.loads(data)['archive_sha256'],'build_script_sha256':sha(Path(__file__).read_bytes()),'compute_sha256':sha((ROOT/'src/compute/climate_history.py').read_bytes())},sort_keys=True,indent=2)+'\n').encode()
     if '--check' in sys.argv:
-        if not OUTPUT.exists() or OUTPUT.read_bytes()!=data or not RECEIPT.exists() or RECEIPT.read_bytes()!=receipt: raise SystemExit('UI climate payload is stale; run python3 scripts/build_ui_climate.py')
+        for path, expected_bytes in ((OUTPUT, data), (RECEIPT, receipt)):
+            if not path.exists() or path.read_bytes() != expected_bytes:
+                raise SystemExit(f'{path.relative_to(ROOT)} does not reproduce (expected SHA-256 {sha(expected_bytes)}); run python3 scripts/build_ui_climate.py')
         print('PASS: UI climate payload reproduces from pinned local archive')
     else:
         OUTPUT.parent.mkdir(parents=True,exist_ok=True);OUTPUT.write_bytes(data);RECEIPT.write_bytes(receipt);print(f'Wrote {OUTPUT.name}: {len(data)} bytes')
