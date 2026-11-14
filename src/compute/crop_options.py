@@ -34,10 +34,10 @@ def month_span(entries):
 
 
 def calendar_options(db, context, intake, labels):
-    """Return up to three distinct crops with an upcoming seasonal calendar."""
+    """Return the next three crops and up to two non-overlapping calendar sequences."""
     ready = date.fromisoformat(intake['availability']['end'])
     if ready.year == 9999:
-        return []
+        return [], None
     current = intake['current'].get('crop_id')
     entries = {}
     for row in db.execute(
@@ -46,6 +46,7 @@ def calendar_options(db, context, intake, labels):
     ):
         entries.setdefault(row[0], []).append(json.loads(row[1]))
     candidates = []
+    occurrences = []
     for crop in context['regional_catalogue']:
         for record in crop['calendars']:
             if record['season'] not in {'Rabi', 'Kharif-1', 'Kharif', 'Aus', 'Aman', 'Boro'}:
@@ -58,17 +59,22 @@ def calendar_options(db, context, intake, labels):
             # Use its next first month, or the current one when the land is ready within it.
             year = ready.year + (month < ready.month)
             end_offset = month - 1 + duration - 1
-            end_year, end_month = year + end_offset // 12, end_offset % 12 + 1
-            if end_year > 9999:
-                continue
-            start = date(year, month, 1)
-            end = date(end_year, end_month, monthrange(end_year, end_month)[1])
-            candidates.append({
-                **record, 'crop_id': crop['crop_id'], 'crop_label': labels.get(crop['intake_crop_id'], crop['crop_label']),
-                'region': context['region_label'], 'calendar_start': start.isoformat(),
-                'calendar_end': end.isoformat(), 'different_from_current': bool(current and crop['intake_crop_id'] != current),
-                'first_month_overlaps_field_ready': year == ready.year and month == ready.month,
-            })
+            end_month = end_offset % 12 + 1
+            for occurrence_year in range(year, min(year + 2, 10000)):
+                end_year = occurrence_year + end_offset // 12
+                if end_year > 9999:
+                    continue
+                start = date(occurrence_year, month, 1)
+                end = date(end_year, end_month, monthrange(end_year, end_month)[1])
+                occurrence = {
+                    **record, 'crop_id': crop['crop_id'], 'crop_label': labels.get(crop['intake_crop_id'], crop['crop_label']),
+                    'region': context['region_label'], 'calendar_start': start.isoformat(),
+                    'calendar_end': end.isoformat(), 'different_from_current': bool(current and crop['intake_crop_id'] != current),
+                    'first_month_overlaps_field_ready': occurrence_year == ready.year and month == ready.month,
+                }
+                occurrences.append(occurrence)
+                if occurrence_year == year:
+                    candidates.append(occurrence)
     candidates.sort(key=lambda item: (
         bool(current) and not item['different_from_current'], item['calendar_start'], item['id']))
     distinct = {}
@@ -76,4 +82,35 @@ def calendar_options(db, context, intake, labels):
         distinct.setdefault(option['crop_id'], option)
         if len(distinct) == 3:
             break
-    return list(distinct.values())
+    horizon_month = (ready.month - 2) % 12 + 1
+    horizon_year = min(9999, ready.year + (1 if ready.month == 1 else 2))
+    horizon_end = date(horizon_year, horizon_month, monthrange(horizon_year, horizon_month)[1]).isoformat()
+    scenarios = rotation_sequences(occurrences, horizon_end, current)
+    return list(distinct.values()), {
+        'start': ready.isoformat(), 'end': horizon_end, 'sequences': scenarios,
+    }
+
+
+def rotation_sequences(occurrences, horizon_end, current):
+    eligible = sorted(
+        (item for item in occurrences if item['calendar_end'] <= horizon_end),
+        key=lambda item: (item['calendar_start'], item['calendar_end'], item['id']),
+    )
+    best = {}
+    for first in eligible:
+        for second in eligible:
+            if second['calendar_start'] <= first['calendar_end'] or second['crop_id'] == first['crop_id']:
+                continue
+            for third in eligible:
+                key = (first['crop_id'], second['crop_id'], third['crop_id'])
+                if third['calendar_start'] <= second['calendar_end'] or len(set(key)) != 3:
+                    continue
+                score = (
+                    bool(current) and not first['different_from_current'],
+                    first['calendar_start'], third['calendar_end'],
+                    tuple(item['id'] for item in (first, second, third)),
+                )
+                if key not in best or score < best[key][0]:
+                    best[key] = (score, (first, second, third))
+    ranked = sorted(best.values(), key=lambda item: item[0])
+    return [{'steps': steps} for _, steps in ranked[:2]]

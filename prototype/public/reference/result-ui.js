@@ -371,11 +371,41 @@
     return (plan.indicators || []).map(item => statusRow(item.label, item.value ?? item.status, item.explanation || '')).join('');
   }
 
-  function rotationOptions(options, language) {
-    if (!Array.isArray(options)) return '';
-    const month = date => new Intl.DateTimeFormat(language === 'bn' ? 'bn-BD' : 'en', {
+  function calendarMonth(date, language) {
+    return new Intl.DateTimeFormat(language === 'bn' ? 'bn-BD' : 'en', {
       month: 'short', year: 'numeric', timeZone: 'UTC',
     }).format(new Date(date + 'T00:00:00Z'));
+  }
+
+  function calendarRotations(result, baseline, language, reportHref) {
+    if (!result) return reportedRotation(baseline, language, reportHref);
+    const dateRange = step => `${calendarMonth(step.calendar_start, language)} – ${calendarMonth(step.calendar_end, language)}`;
+    return `<section class="result-card" aria-labelledby="rotation-comparison-title">
+      <h2 id="rotation-comparison-title">${t(language, 'Compare crop rotations', 'ফসল আবর্তন তুলনা করুন')}</h2>
+      <p>${t(language, 'Planning period', 'পরিকল্পনার সময়কাল')} · ${esc(formatDate(result.start))} – ${esc(formatDate(result.end))}</p>
+      <p>${t(language, 'Alternatives use three distinct crops with non-overlapping local calendar months. We prioritize a different first crop, earlier starts, then earlier finishes. Confirm actual sowing, harvest, land preparation and water needs before following a sequence.', 'বিকল্পে স্থানীয় ক্যালেন্ডারে সময় না মেলা তিনটি ভিন্ন ফসল রয়েছে। প্রথমে অন্য ফসল, তারপর আগে শুরু ও আগে শেষকে প্রাধান্য দেওয়া হয়। অনুসরণের আগে বপন, ফসল তোলা, জমি প্রস্তুতি ও পানির প্রয়োজন যাচাই করুন।')}</p>
+      <div class="plan-comparison-grid crop-option-grid">
+        ${reportedRotation(baseline, language, reportHref)}
+        ${result.sequences.map(({steps}, index) => `<article class="plan-card">
+          <h3>${esc(t(language, 'Alternative', 'বিকল্প'))} ${String.fromCharCode(65 + index)}</h3>
+          <ol class="calendar-rotation-steps">${steps.map(step => `<li>
+            <strong>${esc(text(step.crop_label, language))}</strong>
+            <span>${esc(dateRange(step))}</span>
+            <span>${esc(calendarName(step, language))}</span>
+          </li>`).join('')}</ol>
+          <details class="result-expand"><summary>${t(language, 'Why these crops and dates?', 'এই ফসল ও তারিখ কেন?')}</summary>
+            <ul>${steps.map((step, i) => `<li><b>${esc(text(step.crop_label, language))}</b> · ${i ? t(language, 'Its calendar opens after the previous crop’s printed months end.', 'আগের ফসলের উল্লেখিত মাস শেষ হওয়ার পর এর ক্যালেন্ডার শুরু।') : step.first_month_overlaps_field_ready ? t(language, 'The calendar opens in your field-ready month.', 'জমি প্রস্তুতের মাসে ক্যালেন্ডার শুরু।') : t(language, 'The calendar opens after your field-ready month.', 'জমি প্রস্তুতের মাসের পরে ক্যালেন্ডার শুরু।')}
+              ${calendarDetails({calendars:[step]}, language)}</li>`).join('')}</ul>
+            <a href="https://www.bamis.gov.bd/en/calendar" target="_blank" rel="noopener">BAMIS · ${esc(steps[0].region)}</a>
+          </details>
+        </article>`).join('')}
+      </div>
+      ${result.sequences.length < 2 ? `<p>${t(language, 'The local calendars support fewer than two distinct three-crop sequences within this period.', 'এই সময়কালে স্থানীয় ক্যালেন্ডারে দুটি ভিন্ন তিন-ফসলের ক্রম পাওয়া যায়নি।')}</p>` : ''}
+    </section>`;
+  }
+
+  function rotationOptions(options, language) {
+    if (!Array.isArray(options)) return '';
     return `<section class="result-card" aria-labelledby="crop-options-title">
       <h2 id="crop-options-title">${t(language, 'Crop options for your next rotation', 'পরবর্তী আবর্তনের ফসলের বিকল্প')}</h2>
       <p>${t(language, 'These options use local seasonal calendars and your field-ready date. Different crops from your current crop are shown first, then earlier calendar starts. Each card is one possible next crop. Confirm planting dates and field suitability locally.', 'এই বিকল্পগুলো স্থানীয় ফসলের ক্যালেন্ডার ও জমি প্রস্তুতের তারিখ থেকে নেওয়া। প্রতিটি কার্ড একটি সম্ভাব্য পরবর্তী ফসল। স্থানীয়ভাবে রোপণের তারিখ ও জমির উপযোগিতা নিশ্চিত করুন।')}</p>
@@ -386,7 +416,7 @@
           ? (min === max ? min : min + '–' + max) + ' ' + t(language, 'days in the source', 'উৎসে উল্লেখিত দিন') : '';
         return `<article class="plan-card">
           <h3>${esc(text(item.crop_label, language))}</h3>
-          <p><strong>${esc(month(item.calendar_start))} – ${esc(month(item.calendar_end))}</strong></p>
+          <p><strong>${esc(calendarMonth(item.calendar_start, language))} – ${esc(calendarMonth(item.calendar_end, language))}</strong></p>
           <p>${esc(calendarName(item, language))}${duration ? ' · ' + esc(duration) : ''}</p>
           <p>${item.first_month_overlaps_field_ready
             ? t(language, 'The calendar begins in your field-ready month. Check the local planting window with an agriculture officer.', 'ক্যালেন্ডারটি জমি প্রস্তুতের মাসে শুরু।')
@@ -418,7 +448,7 @@
     const plans = [response.baseline_assessment, ...(response.alternatives || [])].filter(Boolean);
     const missingSecond = (response.alternatives || []).length < 2;
     if (response.data_mode === 'local_evidence' && !(response.alternatives || []).length) {
-      return `${rotationOptions(response.calendar_options, language)}${reportedRotation(response.baseline_assessment, language, reportHref)}${reportHref === '#overview'
+      return `${calendarRotations(response.calendar_rotation, response.baseline_assessment, language, reportHref)}${response.calendar_rotation?.sequences.length ? "" : rotationOptions(response.calendar_options, language)}${reportHref === '#overview'
         ? historicalDateReport(response.climate?.field_ready_season, language, t(language, 'Past weather around your field-ready dates', 'জমি প্রস্তুতের তারিখের অতীত আবহাওয়া')) + regionalCalendarPanel(response, language, compare)
         : `<p><a href="#rotations">${t(language, 'See your field-ready dates and local calendars', 'জমি প্রস্তুতের তারিখ ও স্থানীয় ক্যালেন্ডার দেখুন')}</a></p>`}`;
     }
