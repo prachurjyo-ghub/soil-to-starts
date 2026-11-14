@@ -1,61 +1,56 @@
-> Latest real-data audit (14 November 2026): see [QA_AUDIT](docs/QA_AUDIT.md). Product mock plans/rankings have been removed. Local evidence reports, recent observed-weather context and seasonal charts work; validated three-strategy crop planning remains incomplete.
-
 # Soil to Stars
 
-Evidence-linked crop planning for Bangladesh for the NASA Space Apps Field Shift challenge.
-The repository is named `soil-to-starts`; the product is **Soil to Stars**.
+**Field Shift · NASA Space Apps Challenge · Bangladesh**
 
-Development is now maintained by one person. Start with [the UI-first checklist](docs/DEVELOPMENT.md).
-The former team task/approval system is retired; [historical contributions and records](docs/archive/team-workflow/README.md) remain available.
+Soil to Stars helps farmers and agricultural advisers explore how seasonal weather has changed and see what local crop records say about the crops they grow. Choose a district or drop a pin, describe your field, and get a report that brings historical NASA weather and regional crop evidence together in English or Bangla.
 
-## Current state
+[Watch the short project demo](https://www.youtube.com/watch?v=2CR_mM3GDlw) · [Watch the second project video](https://www.youtube.com/watch?v=LOkSu0I2Ack) · [Read our AI disclosure](docs/AI_USE.md)
 
-The Next.js app has district/map intake, separate workspace destinations, saved result snapshots, result-layout development fixtures, and local NASA POWER weather-history charts with a scrolling homepage story. A local SQLite API now saves submissions and returns source-linked evidence reports. Complete crop plans and suitability/risk scoring still require reviewed crop rules and planning integration. Climate acquisition/preparation and a checksum-pinned data archive are implemented. Crop evidence is normalized and reproducible but its scientific rule definitions remain inactive. Displayed fixture values are examples, not agricultural recommendations.
+## Run the submission
 
-## Run
-
-Use Node satisfying the lockfile requirement (>=20.9.0), npm and Python 3.9+.
+Install Git, Make, Node.js 24 with npm, and Python 3.10 or newer with SQLite support. Run these commands in a terminal with access to the npm registry for the first install.
 
 ```bash
-make backend  # verifies/indexes local crop evidence and NASA daily data
-cd prototype
-npm ci
-npm run dev
+git clone --branch main https://github.com/prachurjyo-ghub/soil-to-starts.git
+cd soil-to-starts
+npm --prefix prototype ci
+make backend
+make build
+npm --prefix prototype start -- --hostname 127.0.0.1 --port 3000
 ```
 
-Open http://localhost:3000 or http://localhost:3000/workspace. The sidebar destinations and local API use the same port. [Data integration](docs/DATA_INTEGRATION.md) describes the database, stable IDs, unit/period contracts and remaining scientific gaps.
+Open [http://localhost:3000](http://localhost:3000) and select **Open workspace**. The first backend setup verifies the bundled data and builds the local SQLite indexes, which can take several minutes. You can reuse those indexes on subsequent starts. The evidence pipeline needs no NASA key, account, separate server, or live NASA request. For a fully local field-selection flow use **District search**. The optional street basemap needs a connection.
 
-To regenerate the local historical-weather UI payload without network access: `python3 scripts/build_ui_climate.py` from the repository root. Statistical summaries live in `src/compute/climate_history.py`; crop planning is still unfinished.
-Dependency installation needs network access or an available package cache.
+If port 3000 is in use, stop the other server or pass a free port to the same start command. To check prerequisites run `make doctor`. To run the test suites and lint use `make check`.
 
-## Checks
+## Try a field report
 
-From the repository root, `make check` runs evidence/unit tests, frontend tests and lint.
-`make build` performs the production build. See [contributing](CONTRIBUTING.md).
+1. Open **Set up your field**. Choose a district, enter the current crop and when the land will be ready, and fill in the remaining questions. The app accepts all 64 districts. Available crop evidence varies by crop and region.
+2. Submit the form. **Your results** shows what matches your answers, the historical weather window and which checks have evidence. Save the report to this browser or download the source-linked JSON.
+3. Open **Climate insights** to compare archived rainfall and air temperature between 2001–2010 and 2016–2025. **Rotation plans** displays your reported crop order and the crop calendars available for your area. **Data & methodology** includes a separately labelled published trial from Bogura.
 
-## Local climate data
+## The evidence behind the report
 
-```bash
-python3 scripts/setup_climate_data.py
-```
+| Source | How we use it |
+| --- | --- |
+| [NASA POWER Daily](https://power.larc.nasa.gov/docs/services/api/temporal/daily/) | Archived gridded 2 m air temperature and precipitation support the historical charts and date-window summaries. Each district maps to a representative grid point. Districts can share a grid point. |
+| [Bangladesh Agro-Meteorological Information Service crop calendars](https://www.bamis.gov.bd/en/calendar) | The app matches documented regional calendars to crop and region. Printed weather normals describe source conditions. A warning comparison requires an explicitly applicable source and matching weather statistic. |
+| [Hasan et al., Bogura field study](https://hnpublication.com/upload/ijacr/2022-11-3001.pdf#page=3) | An optional research example shows published crop sequences beside NASA POWER summaries for the documented dates. |
+| [geoBoundaries Bangladesh ADM2](data/admin/README.md) | Local district boundaries support district selection and pin matching. |
 
-The versioned archive is in `data/climate/packages/v1.0.0/`. Setup verifies and extracts it without NASA requests. Expanded files remain in ignored cache. See [setup and scientific limits](docs/data/CLIMATE_GITHUB_SETUP.md). Installing the archive does not connect the API or make the whole browser app offline.
+Farmer-entered dates can change the historical weather window, and the crop and district determine which evidence matches. Water access, priorities, and history stay in the report for review. A district-grid summary represents historical regional weather. Field-specific suitability scores, calibrated crop vulnerability and personalized three-crop recommendations require additional verified agronomy and field validation.
 
-## Boundaries
+## How it fits together
 
 ```text
-prototype/          mounted Next.js frontend
-src/acquire/        implemented NASA acquisition, QA and preparation
-src/compute/        deterministic science/rotation engine — unfinished
-src/api/            validation and result transport — unfinished
-data/               versioned evidence, geometry and climate package
-cache/              ignored expanded datasets
-demo_fixtures/      authentic permitted small fixtures when verified
-docs/               product/science references and solo checklist
-docs/archive/       historical team coordination; not active instructions
-tests/              executable behavior and evidence checks
+Field setup → same-origin Next.js API → Python + local SQLite
+                                         ├─ NASA POWER observations
+                                         └─ Regional crop evidence
+                         ← source-linked field report
 ```
 
-The product compares farmer-reported usual practice with two supported alternatives on a common period; complete alternatives contain three future main crops. Missing essential evidence means incomplete/unavailable. All 64 districts remain selectable without implying validated national coverage. No region is prioritized.
+The web app lives in `prototype/`. The ingestion, deterministic calculations and local API live in `src/`. Packaged inputs, dictionaries and source receipts live in `data/` and `docs/data/`. User submissions stay on the machine running the local server, and saved report snapshots stay in the browser.
 
-Read [product scope](docs/MVP_SCOPE.md), [API draft](docs/API_CONTRACT.md), [data sources](docs/DATA_SOURCES.md), [methodology](docs/METHODOLOGY.md), [validation](docs/VALIDATION.md), [AI use](docs/AI_USE.md), and [third-party notices](THIRD_PARTY_NOTICES.md) as needed. Optional future features remain deferred; old gate IDs describe history, not solo-development blockers.
+**Team** · Fardin, Saim, Maruf, Prachurjo, Nadim and Hla.
+
+[Apache-2.0 license](LICENSE) · [Third-party notices and asset credits](THIRD_PARTY_NOTICES.md) · [AI use and human contributions](docs/AI_USE.md)

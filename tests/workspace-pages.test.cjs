@@ -43,3 +43,22 @@ test('published UI contains no mock dataset or fabricated ranking runtime',()=>{
 test('seasonal chart includes all twelve months and accessible source values',()=>{
  const d=bundle.districts[0];const html=weather.render(bundle,d.id,'PRECTOTCORR','en',ui.chart);assert.match(html,/How the seasons changed/);assert.match(html,/mm\/month/);assert.equal((html.match(/class="season-month"/g)||[]).length,12);assert.match(html,/<caption>/);
 });
+test('field planning shows the reported order, while the historical study appears only in methodology', async () => {
+ const request = fixtures.fixture('complete-comparison').request;
+ const response = {
+   status:'incomplete', data_mode:'local_evidence', alternatives:[],
+   baseline_assessment:{role:'baseline',segments:[{label:{en:'Lentil',bn:'মসুর'},period:'2027-01-01 → 2027-03-01'}]},
+   evidence_profile:{crop_context:{regional_catalogue:[{crop_label:'Mustard',seasons:['Rabi']}]}}
+ };
+ const app = setup({adapter:adapter.create({fetchImpl:async()=>({ok:true,json:async()=>response})})});
+ await app.submit(request);
+ const rotations = app.renderRoute('rotations', request);
+ assert.match(rotations,/Your usual crop order/);
+ assert.match(rotations,/Lentil.*2027-01-01/);
+ assert.match(rotations,/Mustard · Rabi/);
+ assert.match(rotations,/Edit field answers/);
+ assert.doesNotMatch(rotations,/Bogura|field study|First alternative unavailable/);
+ assert.match(app.renderRoute('rotations', request,'bn'),/আপনার সাধারণ ফসলের ক্রম/);
+ assert.match(app.renderRoute('methodology', request),/See an example from a field study/);
+ assert.doesNotMatch(app.renderRoute('methodology', request),/What farmers tried in Bogura/);
+});

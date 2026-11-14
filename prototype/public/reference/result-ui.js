@@ -163,7 +163,34 @@
     return `<section class="warning-observations"><h3>${t(language,'Observed weather against published warning levels','প্রকাশিত সতর্কতা সীমার সঙ্গে পর্যবেক্ষিত আবহাওয়া')}</h3><p>${esc(exposure.start)} → ${esc(exposure.end)} · NASA POWER · LST · ${esc(exposure.grid_id)}</p><p>${esc(exposure.meaning)}</p><div class="result-chip-row">${exposure.indicators.map(i=>infoChip(i.label,i.exceedance_days===null?'Incomplete':`${i.exceedance_days} days`,`${i.valid_days}/${i.expected_days} observed days; ${i.missing_days} missing`)).join('')}</div><details><summary>${t(language,'Source and exceedance dates','উৎস ও সীমা অতিক্রমের তারিখ')}</summary><a href="${esc(sourceUrl(exposure.reference.source_url))}" target="_blank" rel="noopener">BAMIS ${esc(exposure.reference.section)} · page ${esc(exposure.reference.page)}</a>${exposure.indicators.map(i=>`<p><b>${esc(i.label)}</b>: ${esc(i.dates.join(', ')||'No observed exceedances')}. ${i.missing_days?'Missing days prevent a complete count.':''}</p>`).join('')}<p>${esc(exposure.reference.limitations.join(' '))}</p><code>${esc(exposure.reference.source_sha256)}</code></details></section>`;
   }
 
-  function vulnerability(assessment, language) {
+  function fieldInputsUsed(language, context) {
+    return `<section class="result-card"><h2>${t(language, 'How your answers shape this report', 'আপনার উত্তর কীভাবে রিপোর্ট বদলায়')}</h2>
+      <p>${context?.current_crop_calendars?.length
+        ? esc(context.region_label) + ' · ' + context.current_crop_calendars.length + ' ' + t(language, 'matching crop calendar records', 'মিলে যাওয়া ফসলের ক্যালেন্ডার')
+        : t(language, 'The local library has no matching calendar for this crop and region.', 'এই ফসল ও অঞ্চলের ক্যালেন্ডার স্থানীয় তথ্যভান্ডারে নেই।')}</p>
+      <ul>
+        <li>${t(language, 'District selects the local NASA weather grid and crop calendar region. Some districts share a grid.', 'জেলা অনুযায়ী নাসার আবহাওয়া গ্রিড ও ফসলের ক্যালেন্ডার অঞ্চল বেছে নেওয়া হয়। কয়েকটি জেলার গ্রিড একই।')}</li>
+        <li>${t(language, 'Crop selects matching calendar records. Planting and field-ready dates determine the days checked in the weather archive.', 'ফসল অনুযায়ী ক্যালেন্ডার মেলে। রোপণ ও জমি প্রস্তুতের তারিখ অনুযায়ী আবহাওয়ার দিন বেছে নেওয়া হয়।')}</li>
+        <li>${t(language, 'Your crop history, usual crops, irrigation and priority are saved in the field profile. Irrigation and priority currently do not change the calculations or rank crops.', 'ফসলের ইতিহাস, প্রচলিত ফসল, সেচ ও অগ্রাধিকার জমির তথ্যে থাকে। সেচ ও অগ্রাধিকার এখন হিসাব বা ফসলের ক্রম বদলায় না।')}</li>
+      </ul></section>`;
+  }
+
+  function cropWeather(window, language) {
+    if (!window || !Object.hasOwn(window, 'latest_observed')) return '';
+    if (window.status !== 'available') {
+      const message = window.start && window.latest_observed && window.start > window.latest_observed
+        ? t(language, 'Your planting date is after the latest complete NASA data for this district.', 'আপনার রোপণের তারিখ এই জেলার সর্বশেষ পূর্ণ নাসা তথ্যের পরে।')
+        : t(language, 'There are no complete cached observations in the reported crop window.', 'জানানো ফসলের সময়ে পূর্ণ সংরক্ষিত পর্যবেক্ষণ নেই।');
+      return `<p>${message} ${window.latest_observed ? esc(window.latest_observed) + ' · ' : ''}<a href="#climate">${t(language, 'View district weather history', 'জেলার আবহাওয়ার ইতিহাস দেখুন')}</a></p>`;
+    }
+    return `<p><b>${t(language, 'Observed weather during your crop window', 'ফসলের সময়ে পর্যবেক্ষিত আবহাওয়া')}</b> · ${esc(window.start)} → ${esc(window.end)} · NASA POWER</p>
+      <ul>${[['T2M_MAX','Highest daily temperature','সর্বোচ্চ দৈনিক তাপমাত্রা'],['T2M_MIN','Lowest daily temperature','সর্বনিম্ন দৈনিক তাপমাত্রা'],['PRECTOTCORR','Total rainfall','মোট বৃষ্টি']].map(([key,en,bn])=>{
+        const metric=window.metrics[key];
+        return `<li>${t(language,en,bn)} · ${Number.isFinite(metric.value)?esc(metric.value.toFixed(1)+' '+metric.unit):t(language,'Incomplete observations','অসম্পূর্ণ পর্যবেক্ষণ')}</li>`;
+      }).join('')}</ul>`;
+  }
+
+  function vulnerability(assessment, language, occupancy) {
     const checks = assessment?.checks || [];
     const stage = assessment?.stage ? human(assessment.stage) : t(language, 'unknown', 'জানা নেই');
     const suppliedPeriod = assessment?.assessment_period;
@@ -190,6 +217,7 @@
           <p>${esc(text(assessment?.crop_label, language) || t(language, 'Not supplied', 'দেওয়া হয়নি'))} · ${t(language, 'Stage', 'পর্যায়')}: ${esc(stage)} · ${t(language, 'Assessment period', 'মূল্যায়নের সময়')}: ${esc(period)}</p>
         </div>
       </div>
+      ${cropWeather(occupancy, language)}
       ${warningExposure(assessment?.observed_warning_exposure,language)}
       <div class="check-grid">${checks.map(check => `<article class="check-tile check-tile--${esc(check.outcome)}"><div class="check-tile__head">${badge(check.outcome)}<h3>${esc(text(check.label, language))}</h3></div><p>${esc(check.missing_information || check.limitation || '')}</p></article>`).join('')}</div>
       <p class="result-limit"><b>${t(language, 'Limit:', 'সীমা:')}</b> ${esc(assessment?.limitation || 'Not assessed.')}</p>
@@ -207,9 +235,28 @@
     return (plan.indicators || []).map(item => statusRow(item.label, item.value ?? item.status, item.explanation || '')).join('');
   }
 
-  function comparison(response, language, selectedPlan) {
+  function comparison(response, language, selectedPlan, reportHref = '#rotations') {
     const plans = [response.baseline_assessment, ...(response.alternatives || [])].filter(Boolean);
     const missingSecond = (response.alternatives || []).length < 2;
+    if (response.data_mode === 'local_evidence' && !(response.alternatives || []).length) {
+      const baseline = response.baseline_assessment;
+      const catalogue = response.evidence_profile?.crop_context?.regional_catalogue || [];
+      return `<section class="result-card" aria-labelledby="reported-plan-title">
+        <h2 id="reported-plan-title">${t(language, 'Your usual crop order', 'আপনার সাধারণ ফসলের ক্রম')}</h2>
+        ${baseline?.segments?.length
+          ? `<p>${t(language, 'From the answers you entered.', 'আপনার দেওয়া উত্তর থেকে।')}</p><ol class="plan-crops">${planCrops(baseline, language)}</ol>`
+          : `<p>${t(language, 'You haven’t entered a usual crop order. If you have one, you can add it in your field setup.', 'আপনি সাধারণ ফসলের ক্রম দেননি। জানা থাকলে জমির তথ্যে যোগ করতে পারেন।')}</p>`}
+        <div class="result-actions"><button type="button" data-result-action="edit-inputs">${t(language, 'Edit field answers', 'জমির তথ্য বদলান')}</button>
+          ${reportHref === '#overview' ? `<a href="#overview">${t(language, 'See your weather and crop report', 'আবহাওয়া ও ফসলের রিপোর্ট দেখুন')}</a>` : ''}
+        </div>
+        <p class="result-limit">${t(language, 'We need verified local planting and harvest guidance to suggest a new crop order for this field.', 'এই জমির জন্য নতুন ফসলের ক্রম সাজাতে স্থানীয় রোপণ ও ফসল তোলার যাচাই করা তথ্য দরকার।')}</p>
+        ${reportHref === '#overview' && catalogue.length ? `<details class="result-expand">
+          <summary>${t(language, 'See crop calendars collected for your area', 'আপনার এলাকার সংগৃহীত ফসলের ক্যালেন্ডার দেখুন')}</summary>
+          <p>${t(language, 'These are reference calendars. Ask a local agriculture officer which dates and crops suit your field.', 'এগুলো তথ্যসূত্রের ক্যালেন্ডার। আপনার জমির জন্য উপযুক্ত ফসল ও তারিখ স্থানীয় কৃষি কর্মকর্তার কাছে জেনে নিন।')}</p>
+          <ul>${catalogue.map(crop => `<li>${esc(crop.crop_label)}${crop.seasons?.length ? ` · ${esc(crop.seasons.join(', '))}` : ''}</li>`).join('')}</ul>
+        </details>` : ''}
+      </section>`;
+    }
     const periodLine = `${response.comparison_period?.start ? response.comparison_period.start+' → '+response.comparison_period.end+' · ' : ''}${response.comparison_period?.explanation || ''}${response.comparison_period?.policy_id ? ` · ${response.comparison_period.policy_id}${response.comparison_period.policy_version ? ` ${response.comparison_period.policy_version}` : ''}` : ''}`;
     return `<section class="result-card result-comparison" aria-labelledby="comparison-title">
       <div class="result-section-heading">
@@ -368,6 +415,46 @@
     </section>`;
   }
 
+  function trialReplay(replay, language) {
+    if (replay?.status !== 'historical_case_available') return '';
+    const metrics = [
+      ['T2M_MAX', 'Highest daily maximum (°C)', 'সর্বোচ্চ দৈনিক তাপমাত্রা (°C)'],
+      ['T2M_MIN', 'Lowest daily minimum (°C)', 'সর্বনিম্ন দৈনিক তাপমাত্রা (°C)'],
+      ['PRECTOTCORR', 'Total rain (mm)', 'মোট বৃষ্টি (মিমি)']
+    ];
+    return `<section class="result-card" aria-label="${t(language, 'Historical rotation comparison', 'ঐতিহাসিক ফসল আবর্তন তুলনা')}">
+      <h2>${t(language, 'What farmers tried in Bogura', 'বগুড়ায় কৃষকেরা যা চাষ করেছিলেন')}</h2>
+      <p>${t(language, 'Published field study · 2015–16', 'প্রকাশিত মাঠ গবেষণা · ২০১৫–১৬')}</p>
+      <div class="result-chip-row" style="margin-block:1rem">
+      ${replay.patterns.map(pattern => {
+        const control = pattern.role === 'trial_control';
+        const names = {'Mustard':'সরিষা','Boro rice':'বোরো ধান','Transplanted Aus rice':'রোপা আউশ ধান','Mungbean':'মুগ ডাল'};
+        const crops = pattern.crops.map(crop => language === 'bn' ? names[crop.crop] || crop.crop : crop.crop);
+        const sequence = control ? t(language, 'Fallow → Boro rice → Fallow', 'পতিত → বোরো ধান → পতিত') : crops.join(' → ');
+        return infoChip(control ? t(language, 'Usual practice in the trial', 'পরীক্ষায় প্রচলিত চাষ') : t(language, 'Other crops tested', 'পরীক্ষায় অন্য ফসল'), sequence);
+      }).join('')}
+      </div>
+      <p class="result-limit">${t(language, 'These crops were grown at the research site. For records matched to your district and crop, open your field report.', 'এই ফসলগুলো গবেষণার জমিতে চাষ করা হয়েছিল। আপনার জেলা ও ফসলের তথ্য দেখতে জমির রিপোর্ট খুলুন।')} <a href="#overview">${t(language, 'Open field report', 'জমির রিপোর্ট খুলুন')}</a></p>
+      <details class="result-expand"><summary>${t(language, 'See planting dates, harvest dates and weather', 'রোপণ, ফসল তোলা ও আবহাওয়া দেখুন')}</summary>
+      <p>${esc(replay.site)} · ${esc(formatDate(replay.horizon.start))} → ${esc(formatDate(replay.horizon.end))} · NASA POWER · ${esc(replay.grid_id)}</p>
+      ${replay.patterns.map(pattern => `<article>
+        <h3>${esc(pattern.id)}</h3>
+        ${pattern.notes ? `<p>${esc(pattern.notes)}</p>` : ''}
+        <div class="table-scroll"><table><thead><tr>
+          <th scope="col">${t(language, 'Crop / variety', 'ফসল / জাত')}</th>
+          <th scope="col">${t(language, 'Field dates', 'জমির তারিখ')}</th>
+          ${metrics.map(([, en, bn]) => `<th scope="col">${t(language, en, bn)}</th>`).join('')}
+        </tr></thead><tbody>${pattern.crops.map(crop => `<tr>
+          <th scope="row">${esc(crop.crop)} · ${esc(crop.variety)}</th>
+          <td>${esc(crop.event)} ${esc(formatDate(crop.start))} → ${esc(crop.harvest ? formatDate(crop.harvest) : t(language, 'Harvest unresolved', 'ফসল তোলার তারিখ অমীমাংসিত'))}</td>
+          ${metrics.map(([key]) => `<td>${Number.isFinite(crop.weather[key]?.value) ? esc(crop.weather[key].value.toFixed(1)) : t(language, 'Unavailable', 'অনুপলব্ধ')}</td>`).join('')}
+        </tr>`).join('')}</tbody></table></div>
+      </article>`).join('')}
+      <p><a href="${esc(sourceUrl(replay.source_url))}" target="_blank" rel="noopener">${esc(replay.citation)}</a></p>
+      </details>
+    </section>`;
+  }
+
   function toolsPanel(response, language) {
     return `<section class="result-tools-section" aria-label="Tools and data">
       <div class="result-section-heading result-section-heading--plain">
@@ -386,13 +473,6 @@
           </div>
           <button type="button" data-result-action="intended-check">${t(language, 'Check collected evidence', 'সংগৃহীত প্রমাণ দেখুন')}</button>
           <p class="result-limit" id="intended-status">${esc(response.intended_crop_assessment?.reason || 'Unavailable')}</p>
-        </article>
-        <article class="result-card">
-          <p class="result-eyebrow">07B · ${t(language, 'HISTORICAL REPLAY', 'ঐতিহাসিক পুনরায় পরীক্ষা')}</p>
-          <h3>${t(language, 'Same field, documented historical period', 'একই জমি, নথিভুক্ত সময়কাল')}</h3>
-          <p>${esc(response.historical_replay?.reason || 'No replay payload supplied.')}</p>
-          <button type="button" data-result-action="replay" disabled>${t(language, 'Replay unavailable', 'পুনরায় পরীক্ষা অনুপলব্ধ')}</button>
-          <p class="result-limit">No browser-made drought multiplier or future-weather slider is used.</p>
         </article>
       </div>
     </section>`;
@@ -438,6 +518,44 @@
     let climateMetric = 'precipitation';
     let weatherBundle = null, weatherLoading = false, weatherError = false, weatherDistrict = null, weatherMetric = 'T2M';
     let scenario = null;
+    let publicTrial = null;
+    let trialOpen = false;
+    let trialState = 'idle';
+    function loadPublicTrial() {
+      if (trialState !== 'idle') return;
+      trialState = 'loading';
+      fetch('/data/bogura-trial.json')
+        .then(response => {
+          if (!response.ok) throw new Error('Trial unavailable');
+          return response.json();
+        })
+        .then(trial => {
+          if (trial.status !== 'historical_case_available') throw new Error('Invalid trial');
+          publicTrial = trial;
+          trialState = 'ready';
+        })
+        .catch(() => { trialState = 'error'; })
+        .finally(rerender);
+    }
+
+    function trialPanel(language) {
+      const toggle = `<button type="button" data-result-action="toggle-trial" aria-expanded="${trialOpen}" aria-controls="rotation-study">${trialOpen
+        ? t(language, 'Hide example', 'উদাহরণ লুকান')
+        : t(language, 'See an example from a field study', 'মাঠ গবেষণার একটি উদাহরণ দেখুন')}</button>`;
+      return `<section class="result-card">${toggle}<div id="rotation-study"${trialOpen ? '' : ' hidden'}>${trialOpen ? trialContent(language) : ''}</div></section>`;
+    }
+
+    function trialContent(language) {
+      if (publicTrial) return trialReplay(publicTrial, language);
+      if (trialState === 'error') {
+        return unavailableCard(
+          t(language, 'Historical trial could not load', 'ঐতিহাসিক মাঠপরীক্ষা লোড হয়নি'),
+          t(language, 'Try loading it again.', 'আবার লোড করার চেষ্টা করুন।'),
+          `<button data-result-action="retry-trial">${t(language, 'Retry', 'আবার চেষ্টা করুন')}</button>`
+        );
+      }
+      return `<p role="status">${t(language, 'Loading historical trial…', 'ঐতিহাসিক মাঠপরীক্ষা লোড হচ্ছে…')}</p>`;
+    }
     let restoring=false;
     let restored=false;
     let snapshot = null;
@@ -453,7 +571,7 @@
     function renderRoute(route,request,language='en') {
       if(route==='climate'&&!weatherBundle&&!weatherLoading&&!weatherError){weatherLoading=true;globalThis.STS_CLIMATE_HISTORY.load().then(bundle=>{weatherBundle=bundle;weatherLoading=false;rerender();}).catch(()=>{weatherError=true;weatherLoading=false;rerender();});}
       const active=data||(genuine&&JSON.stringify(genuine.request)===JSON.stringify(request)?genuine:null);
-      let html=globalThis.STS_WORKSPACE_PAGES.render(route,{ui:{chart,comparison,evidencePanel,evidenceProfile,operationTimeline,genuineSummary},language,active,request,selectedPlan,metric:weatherMetric,weather:globalThis.STS_CLIMATE_HISTORY,bundle:weatherBundle,district:weatherDistrict??request?.location?.district_id,saved:snapshot,scenario});
+      let html=globalThis.STS_WORKSPACE_PAGES.render(route,{ui:{chart,comparison,trialPanel,evidencePanel,evidenceProfile,operationTimeline,genuineSummary},language,active,request,selectedPlan,metric:weatherMetric,weather:globalThis.STS_CLIMATE_HISTORY,bundle:weatherBundle,district:weatherDistrict??request?.location?.district_id,saved:snapshot,scenario});
       if(route==='climate'&&weatherError)html=html.replace(/<p role="status">[\s\S]*?<\/p>/,'<p role="alert">Local weather history could not load. / স্থানীয় আবহাওয়ার তথ্য লোড হয়নি।</p><button data-result-action="retry-weather">Retry / আবার চেষ্টা করুন</button>');
       return html;
     }
@@ -516,7 +634,7 @@
           </div>
           <div class="result-page-intro__status">${badge(response.report_status==='complete'?'complete':response.status,response.report_status==='complete'?t(language,'Evidence report ready','প্রমাণের রিপোর্ট প্রস্তুত'):response.status)}<span>${esc(response.coverage?.label || '')}</span></div>
         </section>
-        ${example ? fieldSummary(data, language) : genuineSummary(data.request, language, response.status)}${restored&&!example?`<p class="result-limit">${t(language,'Restored saved report; generated at','সংরক্ষিত রিপোর্ট দেখানো হচ্ছে; তৈরি হয়েছে')} ${esc(response.generated_at_utc||'—')}. ${t(language,'Generate a new report after changing inputs or source data.','ইনপুট বা উৎসের তথ্য বদলালে নতুন রিপোর্ট তৈরি করুন।')} <button data-result-action="request-planning">${t(language,'Generate fresh report','নতুন রিপোর্ট তৈরি করুন')}</button></p>`:''}${!example&&response.report_status==='complete'?`<div class="result-actions"><button data-result-save="evidence-report">${t(language,'Save evidence report','প্রমাণের রিপোর্ট সংরক্ষণ')}</button></div>`:''}${evidenceProfile(response, language)}${vulnerability(response.current_crop_assessment, language)}${comparison(response, language, selectedPlan)}${operationTimeline(plan, language)}${climatePanel(response.climate, language, climateMetric, example)}${evidencePanel(response, language)}${toolsPanel(response, language)}${receiptPanel(data, language)}
+        ${example ? fieldSummary(data, language) : genuineSummary(data.request, language, response.status)}${restored&&!example?`<p class="result-limit">${t(language,'Restored saved report; generated at','সংরক্ষিত রিপোর্ট দেখানো হচ্ছে; তৈরি হয়েছে')} ${esc(response.generated_at_utc||'—')}. ${t(language,'Generate a new report after changing inputs or source data.','ইনপুট বা উৎসের তথ্য বদলালে নতুন রিপোর্ট তৈরি করুন।')} <button data-result-action="request-planning">${t(language,'Generate fresh report','নতুন রিপোর্ট তৈরি করুন')}</button></p>`:''}${!example&&response.report_status==='complete'?`<div class="result-actions"><button data-result-save="evidence-report">${t(language,'Save evidence report','প্রমাণের রিপোর্ট সংরক্ষণ')}</button></div>`:''}${response.data_mode === 'local_evidence' ? fieldInputsUsed(language, response.evidence_profile?.crop_context) : ''}${vulnerability(response.current_crop_assessment, language, response.climate?.reported_occupancy_window)}${comparison(response, language, selectedPlan)}${plan || example ? operationTimeline(plan, language) : ''}${climatePanel(response.climate, language, climateMetric, example)}<details class="result-card result-expand"><summary>${t(language, 'Sources and technical details', 'উৎস ও কারিগরি বিবরণ')}</summary>${evidenceProfile(response, language)}${evidencePanel(response, language)}</details>${toolsPanel(response, language)}${receiptPanel(data, language)}
       </div>`;
     }
 
@@ -591,6 +709,13 @@
       switch (button.dataset.resultAction) {
         case 'run-scenario': void runScenario(); return true;
         case 'reset-scenario': scenario=null; viewGeneration+=1; rerender(); return true;
+        case 'toggle-trial':
+          trialOpen = !trialOpen;
+          if (trialOpen) loadPublicTrial();
+          rerender();
+          document.querySelector('[data-result-action="toggle-trial"]')?.focus();
+          return true;
+        case 'retry-trial': trialState='idle'; loadPublicTrial(); rerender(); return true;
         case 'retry-weather': weatherError=false; rerender(); return true;
         case 'download-saved': {
           if(!snapshot)return true;

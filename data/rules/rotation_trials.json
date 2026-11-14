@@ -1,0 +1,36 @@
+{
+  "version": "bogura-2015-16.v1",
+  "district_id": "bd-district-bogura",
+  "site": "BARI On-Farm Research Division station, Bogura, AEZ 3",
+  "source_url": "https://hnpublication.com/upload/ijacr/2022-11-3001.pdf#page=3",
+  "citation": "Hasan et al. (2022), Journal of Contemporary Agriculture and Bioscience 1(1), Tables 2–3, pp. 3–4, CC BY 4.0",
+  "horizon": {"start": "2015-10-24", "end": "2016-07-18"},
+  "patterns": [
+    {
+      "id": "CP4",
+      "role": "trial_control",
+      "crops": [
+        {"crop": "Boro rice", "variety": "BRRI dhan28", "event": "transplanting", "start": "2016-01-22", "harvest": null}
+      ],
+      "notes": "Reported post-Aman sequence: fallow → Boro rice → fallow. Table 3 prints the Boro harvest year as 2021, outside the 2015–16 trial. The harvest date and weather over that crop window are unresolved."
+    },
+    {
+      "id": "CP1",
+      "role": "trial_alternative",
+      "crops": [
+        {"crop": "Mustard", "variety": "BARI Sarisha-14", "event": "sowing", "start": "2015-10-26", "harvest": "2016-01-14"},
+        {"crop": "Boro rice", "variety": "BRRI dhan28", "event": "transplanting", "start": "2016-01-22", "harvest": "2016-05-10"},
+        {"crop": "Transplanted Aus rice", "variety": "Parija", "event": "transplanting", "start": "2016-05-12", "harvest": "2016-07-18"}
+      ]
+    },
+    {
+      "id": "CP3",
+      "role": "trial_alternative",
+      "crops": [
+        {"crop": "Mustard", "variety": "BARI Sarisha-15", "event": "sowing", "start": "2015-10-26", "harvest": "2016-01-18"},
+        {"crop": "Mungbean", "variety": "BARI Mung-6", "event": "sowing", "start": "2016-02-25", "harvest": "2016-04-25"},
+        {"crop": "Transplanted Aus rice", "variety": "Parija", "event": "transplanting", "start": "2016-05-12", "harvest": "2016-07-18"}
+      ]
+    }
+  ]
+}

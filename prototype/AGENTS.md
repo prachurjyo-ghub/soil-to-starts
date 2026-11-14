@@ -10,10 +10,4 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 ## Frontend scope
 
-Keep the existing app/routes and supplied reference design. Current routes load reference HTML and static scripts; inspect imports before editing unused React components. Read only relevant product/UI/API sections and the solo checklist. Preserve the generated Next.js instruction block above.
-
-Use configured dependencies and lockfile. Real scientific UI consumes the approved API; never query NASA directly or hide a failing API behind demo constants. Preserve EN/BN, mobile/keyboard/reduced-motion access and map fallback. Mark illustrative scores/soil/charts clearly. Static reference CSS/font loading has narrow lint exceptions until a visual/rights-reviewed migration; do not broaden them to hide app errors.
-
-Follow MVP_SCOPE for the short intake, comparison/quick check, receipt and compact story; FUTURE_ROADMAP is deferred. No runtime-generated advice, fertilizer form or scientific success fallback.
-
-Run `npm run lint` and `npm run build -- --webpack` after relevant changes. Record remaining warnings and actual results. Only action commands and actual work go in prompt logs; discussions are excluded. Update docs/DEVELOPMENT.md and compact implementation evidence in docs/AI_USE.md. No retired team helper or approval gate is required.
+Read the root README and the mounted reference HTML and scripts before changing the workspace. Preserve the local API, bilingual UI, district-search fallback, accessibility and source attribution. Run the relevant UI/API tests, lint and production build. Record substantive implementation assistance in `docs/AI_USE.md`.

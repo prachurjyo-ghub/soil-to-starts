@@ -1,0 +1,357 @@
+{
+  "version": "bogura-2015-16.v1",
+  "district_id": "bd-district-bogura",
+  "site": "BARI On-Farm Research Division station, Bogura, AEZ 3",
+  "source_url": "https://hnpublication.com/upload/ijacr/2022-11-3001.pdf#page=3",
+  "citation": "Hasan et al. (2022), Journal of Contemporary Agriculture and Bioscience 1(1), Tables 2–3, pp. 3–4, CC BY 4.0",
+  "horizon": {
+    "start": "2015-10-24",
+    "end": "2016-07-18"
+  },
+  "patterns": [
+    {
+      "id": "CP4",
+      "role": "trial_control",
+      "crops": [
+        {
+          "crop": "Boro rice",
+          "variety": "BRRI dhan28",
+          "event": "transplanting",
+          "start": "2016-01-22",
+          "harvest": null,
+          "intercrop_days": null,
+          "weather": {}
+        }
+      ],
+      "notes": "Reported post-Aman sequence: fallow → Boro rice → fallow. Table 3 prints the Boro harvest year as 2021, outside the 2015–16 trial. The harvest date and weather over that crop window are unresolved."
+    },
+    {
+      "id": "CP1",
+      "role": "trial_alternative",
+      "crops": [
+        {
+          "crop": "Mustard",
+          "variety": "BARI Sarisha-14",
+          "event": "sowing",
+          "start": "2015-10-26",
+          "harvest": "2016-01-14",
+          "intercrop_days": null,
+          "weather": {
+            "T2M_MAX": {
+              "status": "complete",
+              "value": 29.8,
+              "days": 81,
+              "parameter": "T2M_MAX",
+              "unit": "degC",
+              "statistic": "maximum",
+              "start": "2015-10-26",
+              "end": "2016-01-14",
+              "grid_id": "89.375-25.0",
+              "time_standard": "LST",
+              "threshold_inferred": false,
+              "meaning": "historical weather window, not crop suitability or a future prediction"
+            },
+            "T2M_MIN": {
+              "status": "complete",
+              "value": 8.51,
+              "days": 81,
+              "parameter": "T2M_MIN",
+              "unit": "degC",
+              "statistic": "minimum",
+              "start": "2015-10-26",
+              "end": "2016-01-14",
+              "grid_id": "89.375-25.0",
+              "time_standard": "LST",
+              "threshold_inferred": false,
+              "meaning": "historical weather window, not crop suitability or a future prediction"
+            },
+            "PRECTOTCORR": {
+              "status": "complete",
+              "value": 1.6300000000000001,
+              "days": 81,
+              "parameter": "PRECTOTCORR",
+              "unit": "mm",
+              "statistic": "sum",
+              "start": "2015-10-26",
+              "end": "2016-01-14",
+              "grid_id": "89.375-25.0",
+              "time_standard": "LST",
+              "threshold_inferred": false,
+              "meaning": "historical weather window, not crop suitability or a future prediction"
+            }
+          }
+        },
+        {
+          "crop": "Boro rice",
+          "variety": "BRRI dhan28",
+          "event": "transplanting",
+          "start": "2016-01-22",
+          "harvest": "2016-05-10",
+          "intercrop_days": 7,
+          "weather": {
+            "T2M_MAX": {
+              "status": "complete",
+              "value": 42.88,
+              "days": 110,
+              "parameter": "T2M_MAX",
+              "unit": "degC",
+              "statistic": "maximum",
+              "start": "2016-01-22",
+              "end": "2016-05-10",
+              "grid_id": "89.375-25.0",
+              "time_standard": "LST",
+              "threshold_inferred": false,
+              "meaning": "historical weather window, not crop suitability or a future prediction"
+            },
+            "T2M_MIN": {
+              "status": "complete",
+              "value": 7.42,
+              "days": 110,
+              "parameter": "T2M_MIN",
+              "unit": "degC",
+              "statistic": "minimum",
+              "start": "2016-01-22",
+              "end": "2016-05-10",
+              "grid_id": "89.375-25.0",
+              "time_standard": "LST",
+              "threshold_inferred": false,
+              "meaning": "historical weather window, not crop suitability or a future prediction"
+            },
+            "PRECTOTCORR": {
+              "status": "complete",
+              "value": 176.93999999999997,
+              "days": 110,
+              "parameter": "PRECTOTCORR",
+              "unit": "mm",
+              "statistic": "sum",
+              "start": "2016-01-22",
+              "end": "2016-05-10",
+              "grid_id": "89.375-25.0",
+              "time_standard": "LST",
+              "threshold_inferred": false,
+              "meaning": "historical weather window, not crop suitability or a future prediction"
+            }
+          }
+        },
+        {
+          "crop": "Transplanted Aus rice",
+          "variety": "Parija",
+          "event": "transplanting",
+          "start": "2016-05-12",
+          "harvest": "2016-07-18",
+          "intercrop_days": 1,
+          "weather": {
+            "T2M_MAX": {
+              "status": "complete",
+              "value": 37.92,
+              "days": 68,
+              "parameter": "T2M_MAX",
+              "unit": "degC",
+              "statistic": "maximum",
+              "start": "2016-05-12",
+              "end": "2016-07-18",
+              "grid_id": "89.375-25.0",
+              "time_standard": "LST",
+              "threshold_inferred": false,
+              "meaning": "historical weather window, not crop suitability or a future prediction"
+            },
+            "T2M_MIN": {
+              "status": "complete",
+              "value": 25.18,
+              "days": 68,
+              "parameter": "T2M_MIN",
+              "unit": "degC",
+              "statistic": "minimum",
+              "start": "2016-05-12",
+              "end": "2016-07-18",
+              "grid_id": "89.375-25.0",
+              "time_standard": "LST",
+              "threshold_inferred": false,
+              "meaning": "historical weather window, not crop suitability or a future prediction"
+            },
+            "PRECTOTCORR": {
+              "status": "complete",
+              "value": 815.5600000000001,
+              "days": 68,
+              "parameter": "PRECTOTCORR",
+              "unit": "mm",
+              "statistic": "sum",
+              "start": "2016-05-12",
+              "end": "2016-07-18",
+              "grid_id": "89.375-25.0",
+              "time_standard": "LST",
+              "threshold_inferred": false,
+              "meaning": "historical weather window, not crop suitability or a future prediction"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "CP3",
+      "role": "trial_alternative",
+      "crops": [
+        {
+          "crop": "Mustard",
+          "variety": "BARI Sarisha-15",
+          "event": "sowing",
+          "start": "2015-10-26",
+          "harvest": "2016-01-18",
+          "intercrop_days": null,
+          "weather": {
+            "T2M_MAX": {
+              "status": "complete",
+              "value": 29.8,
+              "days": 85,
+              "parameter": "T2M_MAX",
+              "unit": "degC",
+              "statistic": "maximum",
+              "start": "2015-10-26",
+              "end": "2016-01-18",
+              "grid_id": "89.375-25.0",
+              "time_standard": "LST",
+              "threshold_inferred": false,
+              "meaning": "historical weather window, not crop suitability or a future prediction"
+            },
+            "T2M_MIN": {
+              "status": "complete",
+              "value": 8.51,
+              "days": 85,
+              "parameter": "T2M_MIN",
+              "unit": "degC",
+              "statistic": "minimum",
+              "start": "2015-10-26",
+              "end": "2016-01-18",
+              "grid_id": "89.375-25.0",
+              "time_standard": "LST",
+              "threshold_inferred": false,
+              "meaning": "historical weather window, not crop suitability or a future prediction"
+            },
+            "PRECTOTCORR": {
+              "status": "complete",
+              "value": 1.6300000000000001,
+              "days": 85,
+              "parameter": "PRECTOTCORR",
+              "unit": "mm",
+              "statistic": "sum",
+              "start": "2015-10-26",
+              "end": "2016-01-18",
+              "grid_id": "89.375-25.0",
+              "time_standard": "LST",
+              "threshold_inferred": false,
+              "meaning": "historical weather window, not crop suitability or a future prediction"
+            }
+          }
+        },
+        {
+          "crop": "Mungbean",
+          "variety": "BARI Mung-6",
+          "event": "sowing",
+          "start": "2016-02-25",
+          "harvest": "2016-04-25",
+          "intercrop_days": 37,
+          "weather": {
+            "T2M_MAX": {
+              "status": "complete",
+              "value": 42.88,
+              "days": 61,
+              "parameter": "T2M_MAX",
+              "unit": "degC",
+              "statistic": "maximum",
+              "start": "2016-02-25",
+              "end": "2016-04-25",
+              "grid_id": "89.375-25.0",
+              "time_standard": "LST",
+              "threshold_inferred": false,
+              "meaning": "historical weather window, not crop suitability or a future prediction"
+            },
+            "T2M_MIN": {
+              "status": "complete",
+              "value": 16.44,
+              "days": 61,
+              "parameter": "T2M_MIN",
+              "unit": "degC",
+              "statistic": "minimum",
+              "start": "2016-02-25",
+              "end": "2016-04-25",
+              "grid_id": "89.375-25.0",
+              "time_standard": "LST",
+              "threshold_inferred": false,
+              "meaning": "historical weather window, not crop suitability or a future prediction"
+            },
+            "PRECTOTCORR": {
+              "status": "complete",
+              "value": 103.18,
+              "days": 61,
+              "parameter": "PRECTOTCORR",
+              "unit": "mm",
+              "statistic": "sum",
+              "start": "2016-02-25",
+              "end": "2016-04-25",
+              "grid_id": "89.375-25.0",
+              "time_standard": "LST",
+              "threshold_inferred": false,
+              "meaning": "historical weather window, not crop suitability or a future prediction"
+            }
+          }
+        },
+        {
+          "crop": "Transplanted Aus rice",
+          "variety": "Parija",
+          "event": "transplanting",
+          "start": "2016-05-12",
+          "harvest": "2016-07-18",
+          "intercrop_days": 16,
+          "weather": {
+            "T2M_MAX": {
+              "status": "complete",
+              "value": 37.92,
+              "days": 68,
+              "parameter": "T2M_MAX",
+              "unit": "degC",
+              "statistic": "maximum",
+              "start": "2016-05-12",
+              "end": "2016-07-18",
+              "grid_id": "89.375-25.0",
+              "time_standard": "LST",
+              "threshold_inferred": false,
+              "meaning": "historical weather window, not crop suitability or a future prediction"
+            },
+            "T2M_MIN": {
+              "status": "complete",
+              "value": 25.18,
+              "days": 68,
+              "parameter": "T2M_MIN",
+              "unit": "degC",
+              "statistic": "minimum",
+              "start": "2016-05-12",
+              "end": "2016-07-18",
+              "grid_id": "89.375-25.0",
+              "time_standard": "LST",
+              "threshold_inferred": false,
+              "meaning": "historical weather window, not crop suitability or a future prediction"
+            },
+            "PRECTOTCORR": {
+              "status": "complete",
+              "value": 815.5600000000001,
+              "days": 68,
+              "parameter": "PRECTOTCORR",
+              "unit": "mm",
+              "statistic": "sum",
+              "start": "2016-05-12",
+              "end": "2016-07-18",
+              "grid_id": "89.375-25.0",
+              "time_standard": "LST",
+              "threshold_inferred": false,
+              "meaning": "historical weather window, not crop suitability or a future prediction"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "status": "historical_case_available",
+  "grid_id": "89.375-25.0",
+  "source_id": "nasa-power-regional-2001-2025",
+  "reason": "The trial uses its published dates. Weather values describe the representative NASA grid. Field preparation and clearance dates were unreported, and the trial control has an unresolved harvest date."
+}

@@ -21,7 +21,7 @@ def main():
             version = tuple(int(part) for part in result.stdout.strip().lstrip("v").split(".")[:2])
             if version < (20, 9):
                 failures.append("Node must satisfy the locked Next.js engine >=20.9.0")
-    for name in ("prototype/package-lock.json", "prototype/eslint.config.mjs", "AGENTS.md", "docs/DEVELOPMENT.md"):
+    for name in ("prototype/package-lock.json", "prototype/eslint.config.mjs", "README.md", "docs/AI_USE.md"):
         if not (root / name).is_file():
             failures.append("Missing " + name)
     print("Frontend dependencies:", "installed" if (root / "prototype/node_modules").is_dir() else "run cd prototype && npm ci")

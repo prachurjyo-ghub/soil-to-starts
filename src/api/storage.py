@@ -19,7 +19,7 @@ def fingerprint(value):
 
 def paths(root):
     base = root / 'data/catalog/normalized'
-    return [base/name for name in CATALOG_FILES] + [root/'prototype/public/data/climate-history.json', root/'data/rules/registry.json', root/'data/integration/crop_aliases.json', root/'data/climate/ui_climate_receipt.json', base/'receipt.json', root/'data/climate/recent/receipt.json', root/'data/climate/recent/power-recent.jsonl.gz', root/'data/rules/exposure_references.json']
+    return [base/name for name in CATALOG_FILES] + [root/'prototype/public/data/climate-history.json', root/'data/rules/registry.json', root/'data/integration/crop_aliases.json', root/'data/climate/ui_climate_receipt.json', base/'receipt.json', root/'data/climate/recent/receipt.json', root/'data/climate/recent/power-recent.jsonl.gz', root/'data/rules/exposure_references.json', root/'data/rules/rotation_trials.json']
 
 def source_identity(root=ROOT):
     base=root/'data/catalog/normalized'
