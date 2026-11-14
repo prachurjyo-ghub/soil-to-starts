@@ -285,12 +285,41 @@
       }).join('')}</ul>`;
   }
 
-  function vulnerability(assessment, language, occupancy, seasonalReference) {
+  function cropWeatherChanges(occupancy, reference, language) {
+    if (reference?.status !== 'available') return '';
+    const rows = [
+      ['T2M_MAX', 'high_c', 'Hottest day', 'উষ্ণতম দিন', '°C'],
+      ['PRECTOTCORR', 'rain_mm', 'Total rain', 'মোট বৃষ্টি', 'mm'],
+    ];
+    const fmt = value => new Intl.NumberFormat(language === 'bn' ? 'bn-BD' : 'en', {
+      maximumFractionDigits: 1, signDisplay: 'exceptZero',
+    }).format(value);
+    const tiles = rows.map(([parameter, key, en, bn, unit]) => {
+      const observed = occupancy?.metrics?.[parameter]?.value;
+      const typical = reference.median[key];
+      if (!Number.isFinite(observed) || !Number.isFinite(typical)) return '';
+      const difference = Math.round((observed - typical) * 10) / 10;
+      const action = key === 'high_c'
+        ? t(language, 'Check current forecasts and look for wilting during hot spells.', 'গরমের সময় বর্তমান পূর্বাভাস দেখুন এবং গাছ ঢলে পড়ছে কি না পরীক্ষা করুন।')
+        : difference > 0
+          ? t(language, 'Check for standing water and check soil moisture before adding irrigation.', 'পানি জমেছে কি না দেখুন এবং সেচের আগে মাটির আর্দ্রতা পরীক্ষা করুন।')
+          : t(language, 'Check moisture around the roots before deciding whether to irrigate.', 'সেচ দেওয়ার আগে শিকড়ের আশপাশের মাটির আর্দ্রতা পরীক্ষা করুন।');
+      return infoChip(t(language, en, bn), fmt(difference) + ' ' + unit, action);
+    }).join('');
+    return tiles ? `<div class="crop-weather-check">
+      <h3>${t(language, 'Compared with the same dates in past years', 'অতীতের একই তারিখের সঙ্গে তুলনা')}</h3>
+      <div class="check-grid">${tiles}</div>
+      <p>${reference.years_used} ${t(language, 'complete past windows. The differences describe regional weather. Crop stress and irrigation needs depend on what you observe in the field.', 'টি পূর্ণ অতীত সময়কাল। পার্থক্যগুলো এলাকার আবহাওয়া দেখায়। ফসলের চাপ ও সেচের প্রয়োজন জমিতে যা দেখছেন তার ওপর নির্ভর করে।')}</p>
+      <a href="https://www.fao.org/4/X0490E/x0490e0e.htm" target="_blank" rel="noopener">${t(language, 'FAO guidance on soil moisture and irrigation', 'মাটির আর্দ্রতা ও সেচ নিয়ে এফএও নির্দেশনা')}</a>
+    </div>` : '';
+  }
+
+  function vulnerability(assessment, language, occupancy, seasonalReference, observedReference) {
     const checks = assessment?.checks || [];
     const fallow = assessment?.status === 'not_applicable';
     const hasWeather = assessment?.status === 'complete' || [occupancy, seasonalReference].some(item => item?.status === 'available');
     const period = assessment?.assessment_period;
-    const title = t(language, 'Weather for your current crop', 'বর্তমান ফসলের আবহাওয়া');
+    const title = t(language, 'Current crop weather and risk checks', 'বর্তমান ফসলের আবহাওয়া ও ঝুঁকি যাচাই');
     const status = fallow ? t(language, 'No crop reported', 'বর্তমান ফসল নেই')
       : hasWeather ? t(language, 'Weather evidence ready', 'আবহাওয়ার তথ্য প্রস্তুত')
       : t(language, 'Crop dates need weather data', 'ফসলের তারিখের আবহাওয়ার তথ্য প্রয়োজন');
@@ -303,9 +332,10 @@
         ${assessment?.stage ? `<p>${t(language, 'Reported stage', 'জানানো পর্যায়')} · ${esc(human(assessment.stage))}</p>` : ''}
         ${period?.start && period?.end && !assessment?.observed_warning_exposure?.start ? `<p>${esc(period.start)} → ${esc(period.end)}</p>` : ''}
         ${cropWeather(occupancy, language)}
+        ${cropWeatherChanges(occupancy, observedReference, language)}
         ${historicalDateReport(seasonalReference, language, t(language, 'Past weather over the same crop dates', 'ফসলের একই তারিখে অতীতের আবহাওয়া'), 'h3')}
         ${warningExposure(assessment?.observed_warning_exposure, language)}
-        ${checks.length ? `<details class="result-expand">
+        ${checks.length ? `<p>${t(language, 'Check the crop, soil moisture and drainage before adjusting irrigation. A field risk rating needs crop-stage and soil information.', 'সেচ বদলানোর আগে ফসল, মাটির আর্দ্রতা ও পানি নিষ্কাশন দেখুন। জমির ঝুঁকি নির্ধারণে ফসলের পর্যায় ও মাটির তথ্য দরকার।')}</p><details class="result-expand">
           <summary>${t(language, 'What these records can tell you about crop risk', 'এই তথ্য থেকে ফসলের ঝুঁকি সম্পর্কে যা জানা যায়')}</summary>
           <p>${t(language, 'Heat and water risk need crop-stage limits, soil and irrigation evidence. Use the dates and weather above as context when you discuss this crop with a local agriculture officer.', 'তাপ ও পানির ঝুঁকি জানতে ফসলের পর্যায়ভিত্তিক সীমা, মাটি ও সেচের তথ্য দরকার। স্থানীয় কৃষি কর্মকর্তার সঙ্গে আলোচনায় উপরের তারিখ ও আবহাওয়ার তথ্য ব্যবহার করুন।')}</p>
           ${checks.map(check => `<p><b>${esc(text(check.label, language))}</b> · ${esc(check.missing_information || check.limitation || '')}</p>`).join('')}
@@ -318,6 +348,7 @@
     if (plan.role === 'baseline') {
       return (plan.segments || []).map(item => {
         const weather = item.historical_weather;
+        const seasonMonths = {kharif_1: t(language, 'March–June', 'মার্চ–জুন'), kharif_2: t(language, 'July–October', 'জুলাই–অক্টোবর'), rabi: t(language, 'November–February', 'নভেম্বর–ফেব্রুয়ারি')};
         const seasonNames = {
           kharif_1: t(language, 'Kharif I', 'খরিফ–১'),
           kharif_2: t(language, 'Kharif II', 'খরিফ–২'),
@@ -330,7 +361,7 @@
         const summary = weather?.status === 'available'
           ? `<small>${weather.years_used} ${t(language, 'past windows', 'অতীত সময়কাল')} · ${t(language, 'median high / low / total rain', 'সর্বোচ্চ / সর্বনিম্ন / মোট বৃষ্টির মাঝের মান')} · ${esc(weather.median.high_c)} °C / ${esc(weather.median.low_c)} °C / ${esc(weather.median.rain_mm)} mm</small>`
           : '';
-        return `<li><b>${esc(text(item.label, language))}</b><span>${esc(periodLabel || '')}</span>${summary}</li>`;
+        return `<li><b>${esc(text(item.label, language))}</b><span>${esc(periodLabel || '')}${season ? ' · ' + seasonMonths[season[1]] : ''}</span>${summary}</li>`;
       }).join('');
     }
     return (plan.steps || []).map((item, index) => `<li><span>${String(index + 1).padStart(2, '0')}</span><b>${esc(text(item.crop_label, language))}</b><small>${esc(item.field_clearance_window?.latest || '')}</small></li>`).join('');
@@ -338,6 +369,36 @@
 
   function indicatorRows(plan) {
     return (plan.indicators || []).map(item => statusRow(item.label, item.value ?? item.status, item.explanation || '')).join('');
+  }
+
+  function rotationOptions(options, language) {
+    if (!Array.isArray(options)) return '';
+    const month = date => new Intl.DateTimeFormat(language === 'bn' ? 'bn-BD' : 'en', {
+      month: 'short', year: 'numeric', timeZone: 'UTC',
+    }).format(new Date(date + 'T00:00:00Z'));
+    return `<section class="result-card" aria-labelledby="crop-options-title">
+      <h2 id="crop-options-title">${t(language, 'Crop options for your next rotation', 'পরবর্তী আবর্তনের ফসলের বিকল্প')}</h2>
+      <p>${t(language, 'These options use local seasonal calendars and your field-ready date. Different crops from your current crop are shown first, then earlier calendar starts. Each card is one possible next crop. Confirm planting dates and field suitability locally.', 'এই বিকল্পগুলো স্থানীয় ফসলের ক্যালেন্ডার ও জমি প্রস্তুতের তারিখ থেকে নেওয়া। প্রতিটি কার্ড একটি সম্ভাব্য পরবর্তী ফসল। স্থানীয়ভাবে রোপণের তারিখ ও জমির উপযোগিতা নিশ্চিত করুন।')}</p>
+      ${options.length < 3 ? `<p>${t(language, 'Fewer than three local seasonal calendars have clear month ranges for distinct crops.', 'ভিন্ন ফসলের স্পষ্ট মাসের তথ্যসহ তিনটির কম স্থানীয় ক্যালেন্ডার পাওয়া গেছে।')}</p>` : ''}
+      <div class="plan-comparison-grid crop-option-grid">${options.map(item => {
+        const [min, max] = item.life_span_days;
+        const duration = Number.isFinite(min) && Number.isFinite(max)
+          ? (min === max ? min : min + '–' + max) + ' ' + t(language, 'days in the source', 'উৎসে উল্লেখিত দিন') : '';
+        return `<article class="plan-card">
+          <h3>${esc(text(item.crop_label, language))}</h3>
+          <p><strong>${esc(month(item.calendar_start))} – ${esc(month(item.calendar_end))}</strong></p>
+          <p>${esc(calendarName(item, language))}${duration ? ' · ' + esc(duration) : ''}</p>
+          <p>${item.first_month_overlaps_field_ready
+            ? t(language, 'The calendar begins in your field-ready month. Check the local planting window with an agriculture officer.', 'ক্যালেন্ডারটি জমি প্রস্তুতের মাসে শুরু।')
+            : t(language, 'Its next calendar starts after your field-ready month.', 'জমি প্রস্তুতের মাসের পর এই ক্যালেন্ডারটির পরবর্তী শুরু।')}
+            ${item.different_from_current ? t(language, 'It is a different crop from the one growing now.', 'বর্তমানে চাষ করা ফসল থেকে এটি আলাদা।') : ''}</p>
+          <details class="result-expand"><summary>${t(language, 'Calendar source and timing', 'ক্যালেন্ডারের উৎস ও সময়')}</summary>
+            <p>${t(language, 'This range covers the first and last printed months. The listed lifespan comes from the source and can differ from the full calendar span.', 'এই সময়সীমা ক্যালেন্ডারের প্রথম ও শেষ মাস দেখায়। উল্লেখিত জীবনকাল সম্পূর্ণ ক্যালেন্ডারের সময়সীমা থেকে আলাদা হতে পারে।')}</p>
+            <a href="https://www.bamis.gov.bd/en/calendar" target="_blank" rel="noopener">BAMIS · ${esc(item.region)}</a> · ${esc(item.source_id)} · ${t(language, 'page', 'পৃষ্ঠা')} ${esc(item.source_page)}
+          </details>
+        </article>`;
+      }).join('')}</div>
+    </section>`;
   }
 
   function reportedRotation(baseline, language, reportHref) {
@@ -357,7 +418,7 @@
     const plans = [response.baseline_assessment, ...(response.alternatives || [])].filter(Boolean);
     const missingSecond = (response.alternatives || []).length < 2;
     if (response.data_mode === 'local_evidence' && !(response.alternatives || []).length) {
-      return `${reportedRotation(response.baseline_assessment, language, reportHref)}${reportHref === '#overview'
+      return `${rotationOptions(response.calendar_options, language)}${reportedRotation(response.baseline_assessment, language, reportHref)}${reportHref === '#overview'
         ? historicalDateReport(response.climate?.field_ready_season, language, t(language, 'Past weather around your field-ready dates', 'জমি প্রস্তুতের তারিখের অতীত আবহাওয়া')) + regionalCalendarPanel(response, language, compare)
         : `<p><a href="#rotations">${t(language, 'See your field-ready dates and local calendars', 'জমি প্রস্তুতের তারিখ ও স্থানীয় ক্যালেন্ডার দেখুন')}</a></p>`}`;
     }
@@ -734,12 +795,14 @@
           <div>
             <p class="result-eyebrow">SOIL TO STARS · RESULT WORKSPACE</p>
             <h1>${t(language, 'Your field report', 'আপনার জমির রিপোর্ট')}</h1>
-            <p>${t(language, 'Review the weather for your dates and compare crop calendars for your region.', 'আপনার তারিখের আবহাওয়া দেখুন ও এলাকার ফসলের ক্যালেন্ডার তুলনা করুন।')}</p>
+            <p>${t(language, 'Review your next-crop options and the weather for your field dates.', 'আপনার তারিখের আবহাওয়া দেখুন ও এলাকার ফসলের ক্যালেন্ডার তুলনা করুন।')}</p>
+            ${response.data_mode === 'local_evidence' ? `<button type="button" data-result-action="jump-to-crop-weather">${t(language, 'Jump to current crop weather and risk checks', 'বর্তমান ফসলের আবহাওয়া ও ঝুঁকি যাচাই দেখুন')}</button>` : ''}
           </div>
           <div class="result-page-intro__status">${badge(response.report_status==='complete'?'complete':response.status,response.report_status==='complete'?t(language,'Evidence report ready','প্রমাণের রিপোর্ট প্রস্তুত'):response.status)}<span>${response.data_mode === 'local_evidence' ? t(language, 'Historical NASA weather and regional crop records', 'নাসার অতীত আবহাওয়া ও আঞ্চলিক ফসলের তথ্য') : esc(response.coverage?.label || '')}</span></div>
         </section>
         ${comparison(response, language, selectedPlan)}
-        ${example ? fieldSummary(data, language) : genuineSummary(data.request, language, response.status)}${restored&&!example?`<p class="result-limit">${t(language,'Restored saved report; generated at','সংরক্ষিত রিপোর্ট দেখানো হচ্ছে; তৈরি হয়েছে')} ${esc(response.generated_at_utc||'—')}. ${t(language,'Generate a new report after changing inputs or source data.','ইনপুট বা উৎসের তথ্য বদলালে নতুন রিপোর্ট তৈরি করুন।')} <button data-result-action="request-planning">${t(language,'Generate fresh report','নতুন রিপোর্ট তৈরি করুন')}</button></p>`:''}${!example&&response.report_status==='complete'?`<div class="result-actions"><button data-result-save="evidence-report">${t(language,'Save evidence report','প্রমাণের রিপোর্ট সংরক্ষণ')}</button></div>`:''}${response.data_mode === 'local_evidence' ? historicalDateReport(response.climate?.field_ready_season, language, t(language, 'Past weather around your field-ready dates', 'জমি প্রস্তুতের তারিখের অতীত আবহাওয়া')) + fieldInputsUsed(language, response.evidence_profile?.crop_context) : ''}${vulnerability(response.current_crop_assessment, language, response.climate?.reported_occupancy_window, response.climate?.crop_season_reference)}${plan || example ? operationTimeline(plan, language) : ''}${climatePanel(response.climate, language, climateMetric, example)}<details class="result-card result-expand"><summary>${t(language, 'Sources and technical details', 'উৎস ও কারিগরি বিবরণ')}</summary>${evidenceProfile(response, language)}${evidencePanel(response, language)}</details>${toolsPanel(response, language)}${receiptPanel(data, language)}
+        ${vulnerability(response.current_crop_assessment, language, response.climate?.reported_occupancy_window, response.climate?.crop_season_reference, response.climate?.crop_observed_reference)}
+        ${example ? fieldSummary(data, language) : genuineSummary(data.request, language, response.status)}${restored&&!example?`<p class="result-limit">${t(language,'Restored saved report; generated at','সংরক্ষিত রিপোর্ট দেখানো হচ্ছে; তৈরি হয়েছে')} ${esc(response.generated_at_utc||'—')}. ${t(language,'Generate a new report after changing inputs or source data.','ইনপুট বা উৎসের তথ্য বদলালে নতুন রিপোর্ট তৈরি করুন।')} <button data-result-action="request-planning">${t(language,'Generate fresh report','নতুন রিপোর্ট তৈরি করুন')}</button></p>`:''}${!example&&response.report_status==='complete'?`<div class="result-actions"><button data-result-save="evidence-report">${t(language,'Save evidence report','প্রমাণের রিপোর্ট সংরক্ষণ')}</button></div>`:''}${response.data_mode === 'local_evidence' ? historicalDateReport(response.climate?.field_ready_season, language, t(language, 'Past weather around your field-ready dates', 'জমি প্রস্তুতের তারিখের অতীত আবহাওয়া')) + fieldInputsUsed(language, response.evidence_profile?.crop_context) : ''}${plan || example ? operationTimeline(plan, language) : ''}${climatePanel(response.climate, language, climateMetric, example)}<details class="result-card result-expand"><summary>${t(language, 'Sources and technical details', 'উৎস ও কারিগরি বিবরণ')}</summary>${evidenceProfile(response, language)}${evidencePanel(response, language)}</details>${toolsPanel(response, language)}${receiptPanel(data, language)}
       </div>`;
     }
 
@@ -830,6 +893,15 @@
           const a=document.createElement('a');a.href=url;a.download=snapshot.example?'soil-to-stars-saved-example.json':'soil-to-stars-saved-result.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);return true;
         }
         case 'remove-snapshot': snapshot=null;try{localStorage.removeItem('sts-plan-snapshot-v1');}catch{}rerender();return true;
+        case 'jump-to-crop-weather': {
+          const heading = document.getElementById('vulnerability-title');
+          if (heading) {
+            heading.tabIndex = -1;
+            heading.focus({preventScroll: true});
+            heading.scrollIntoView({block: 'center'});
+          }
+          return true;
+        }
         case 'edit-inputs': deactivateFixture(); navigate('profile'); return true;
         case 'exit-fixture': deactivateFixture(); navigate('profile'); return true;
         case 'download-inputs':

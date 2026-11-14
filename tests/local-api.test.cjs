@@ -47,3 +47,26 @@ test('a saved season-based rotation appears before field details and past season
  assert.match(html,/Brinjal<\/b><span>Kharif I 2027/);
  assert.ok(html.indexOf('Your usual crop order') < html.indexOf('field-summary-title'));
 });
+
+test('regional crop options are distinct and display source timing ahead of the reported order', async () => {
+ const [api] = await modules;
+ const body = input();
+ const report = await (await api.post(request(body),'plan')).json();
+ const options = report.calendar_options;
+ assert.equal(options.length,3);
+ assert.equal(new Set(options.map(option=>option.crop_id)).size,3);
+ for (const option of options) {
+   assert.equal(option.region,'Dhaka');
+   assert.ok(option.calendar_start.slice(0,7)>=body.availability.end.slice(0,7));
+   const crop = report.evidence_profile.crop_context.regional_catalogue.find(c=>c.crop_id===option.crop_id);
+   assert.ok(crop.calendars.some(record=>record.id===option.id&&record.source_id===option.source_id));
+ }
+ const ui = require('../prototype/public/reference/result-ui.js');
+ const adapter = require('../prototype/public/reference/result-adapter.js');
+ const view = ui.create({adapter:adapter.create({fetchImpl:async()=>({ok:true,json:async()=>report})}),render(){},navigate(){},toast(){}});
+ await view.submit(body);
+ const html = view.renderGenuine(body);
+ assert.ok(html.indexOf('Crop options for your next rotation') < html.indexOf('Your usual crop order'));
+ assert.equal((html.match(/<summary>Calendar source and timing<\/summary>/g)||[]).length,3);
+ assert.deepEqual(report.alternatives,[]);
+});

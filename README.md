@@ -89,3 +89,8 @@ The web app lives in `prototype/`. The ingestion, deterministic calculations and
 **Team** · Fardin, Saim, Maruf, Prachurjo, Nadim and Hla.
 
 [Apache-2.0 license](LICENSE) · [Third-party notices and asset credits](THIRD_PARTY_NOTICES.md) · [AI use and human contributions](docs/AI_USE.md)
+
+
+The top of the field report shows up to three distinct local seasonal crops to consider for the next rotation step. The shortlist takes the later field-ready date when the farmer gives a range, prioritizes crops different from the current one, and then orders the candidates by the next start month in the BAMIS calendar. Each card shows the published month span, crop lifespan and source reference. These are seasonal comparisons. A crop's exact planting and harvest dates and its fit for the field require local confirmation.
+
+Below the options and reported sequence, **Current crop weather and risk checks** compares recorded high temperature and rainfall against the same dates in past years when the archive has coverage. It shows field checks for soil moisture, drainage and heat. Published warning-day counts remain limited to matching crop and region references. [FAO soil moisture and irrigation guidance](https://www.fao.org/4/X0490E/x0490e0e.htm)

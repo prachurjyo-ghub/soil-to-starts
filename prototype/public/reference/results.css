@@ -229,3 +229,9 @@
 .calendar-records{padding-inline-start:1.25rem;line-height:1.65;overflow-wrap:anywhere}
 .calendar-records small{display:block;color:var(--result-muted)}
 [data-calendar-choice]{display:block;width:100%;margin-block:8px;padding:8px;border:1px solid var(--result-line);border-radius:8px;background:var(--surface,#fff);color:inherit}
+
+.crop-option-grid{margin-top:14px}
+.crop-option-grid .plan-card{min-width:0}
+.crop-option-grid .plan-card p + p{margin-top:.5rem}
+.crop-weather-check{margin-block:14px}
+.crop-weather-check .check-grid{margin-block:8px}

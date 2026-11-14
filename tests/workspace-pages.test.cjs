@@ -30,7 +30,7 @@ test('climate loads independently from planning and uses the selected district',
  const old=global.STS_CLIMATE_HISTORY;global.STS_CLIMATE_HISTORY={...weather,load:async()=>bundle};try{const app=setup(),request={location:{district_id:bundle.districts[1].id}};app.renderRoute('climate',request);await new Promise(r=>setImmediate(r));const html=app.renderRoute('climate',request);assert.match(html,/How has the weather shifted/);assert.match(html,/Annual mean air temperature/);assert.doesNotMatch(html,/Planning and evidence unavailable/);}finally{global.STS_CLIMATE_HISTORY=old;}
 });
 test('current-crop vulnerability remains visible after an unavailable planning request',async()=>{
- const app=setup(),request={current:{crop_id:'rice'}};assert.match(app.renderGenuine(request),/Heat exposure — not assessed/);await app.submit(request);assert.match(app.renderGenuine(request),/Weather for your current crop/);assert.doesNotMatch(app.renderGenuine(request),/High risk/);
+ const app=setup(),request={current:{crop_id:'rice'}};assert.match(app.renderGenuine(request),/Heat exposure — not assessed/);await app.submit(request);assert.match(app.renderGenuine(request),/Current crop weather and risk checks/);assert.doesNotMatch(app.renderGenuine(request),/High risk/);
 });
 test('what-if controls retain canonical IDs and do not modify original inputs',()=>{
  const request=fixtures.fixture('complete-comparison').request,original=JSON.stringify(request),html=pages.render('simulator',{ui,request,language:'en'});assert.match(html,/value="soil_rotation"/);assert.doesNotMatch(html,/Climate stress test|LIVE RANKING/);assert.equal(JSON.stringify(request),original);
