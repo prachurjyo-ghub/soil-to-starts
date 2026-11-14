@@ -113,4 +113,4 @@ def rotation_sequences(occurrences, horizon_end, current):
                 if key not in best or score < best[key][0]:
                     best[key] = (score, (first, second, third))
     ranked = sorted(best.values(), key=lambda item: item[0])
-    return [{'steps': steps} for _, steps in ranked[:2]]
+    return [{'steps': list(steps)} for _, steps in ranked[:2]]
